@@ -22,6 +22,7 @@ import com.sutliff.pocket.data.ChatMessage
 import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.datastore.saveInferenceConfig
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 data class ToolCallState(
     val toolCallId: String,
@@ -37,7 +38,7 @@ enum class ToolStatus { Running, Completed, Failed }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(onNavigateToSettings: () -> Unit) {
-    val context = remember { LocalContext.current }
+    val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }
@@ -53,11 +54,13 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     val listState = rememberLazyListState()
     val sessionManager = remember { AgentSessionManager(context) }
 
-    LaunchedEffect(Unit) {
-        config = com.sutliff.pocket.datastore.readConfig(context)
+    // Initialize config eagerly at composition time (runBlocking is safe here, not in a suspend lambda)
+    remember(context) {
+        runBlocking {
+            config = com.sutliff.pocket.datastore.readConfig(context)
+        }
         sessionManager.updateConfig(config)
-        val session = sessionManager.createSession()
-        currentSessionId = session.id
+        currentSessionId = sessionManager.createSession().id
     }
 
     LaunchedEffect(messages.size, streamingText, toolCallStates.size) {

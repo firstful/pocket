@@ -18,18 +18,22 @@ import androidx.compose.ui.unit.dp
 import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.datastore.saveInferenceConfig
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(onNavigateBack: () -> Unit) {
-    val context = remember { LocalContext.current }
+    val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }
     var showApiKey by remember { mutableStateOf(false) }
 
-    LaunchedEffect(Unit) {
-        config = com.sutliff.pocket.datastore.readConfig(context)
+    // Initialize config eagerly at composition time (runBlocking is safe here, not in a suspend lambda)
+    remember(context) {
+        runBlocking {
+            config = com.sutliff.pocket.datastore.readConfig(context)
+        }
     }
 
     fun saveConfig() {
