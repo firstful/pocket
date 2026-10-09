@@ -37,7 +37,7 @@ enum class ToolStatus { Running, Completed, Failed }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(onNavigateToSettings: () -> Unit) {
-    val context = LocalContext.current
+    val context = LocalContext.current.applicationContext
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }
