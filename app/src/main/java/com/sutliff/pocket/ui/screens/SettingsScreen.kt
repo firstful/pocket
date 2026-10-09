@@ -29,9 +29,7 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
     var showApiKey by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
-        scope.launch {
-            config = com.sutliff.pocket.datastore.readConfig(context)
-        }
+        config = com.sutliff.pocket.datastore.readConfig(context)
     }
 
     fun saveConfig() {

@@ -54,12 +54,10 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     val sessionManager = remember { AgentSessionManager(context) }
 
     LaunchedEffect(Unit) {
-        scope.launch {
-            config = com.sutliff.pocket.datastore.readConfig(context)
-            sessionManager.updateConfig(config)
-            val session = sessionManager.createSession()
-            currentSessionId = session.id
-        }
+        config = com.sutliff.pocket.datastore.readConfig(context)
+        sessionManager.updateConfig(config)
+        val session = sessionManager.createSession()
+        currentSessionId = session.id
     }
 
     LaunchedEffect(messages.size, streamingText, toolCallStates.size) {
