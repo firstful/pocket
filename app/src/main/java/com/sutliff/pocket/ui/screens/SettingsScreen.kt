@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(onNavigateBack: () -> Unit) {
-    val context = LocalContext.current.applicationContext
+    val context = remember { LocalContext.current }
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }
