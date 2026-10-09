@@ -5,6 +5,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.annotation.DisallowComposableCalls
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
@@ -17,6 +18,7 @@ private val Context.dataStore by preferencesDataStore(name = "agent_config")
 
 private val INFERENCE_CONFIG_KEY = stringPreferencesKey("inference_config")
 
+@DisallowComposableCalls
 suspend fun saveInferenceConfig(context: Context, config: InferenceConfig) {
     val json = Json { ignoreUnknownKeys = true }
     val jsonString = json.encodeToString(InferenceConfig.serializer(), config)
@@ -25,6 +27,7 @@ suspend fun saveInferenceConfig(context: Context, config: InferenceConfig) {
     }
 }
 
+@DisallowComposableCalls
 suspend fun getInferenceConfig(context: Context): Flow<InferenceConfig> {
     return context.dataStore.data.map { prefs ->
         val jsonString = prefs[INFERENCE_CONFIG_KEY] ?: ""
@@ -37,6 +40,7 @@ suspend fun getInferenceConfig(context: Context): Flow<InferenceConfig> {
     }
 }
 
+@DisallowComposableCalls
 suspend fun readConfig(context: Context): InferenceConfig {
     return getInferenceConfig(context).first()
 }
