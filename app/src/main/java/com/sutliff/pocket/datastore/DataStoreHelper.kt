@@ -3,7 +3,7 @@ package com.sutliff.pocket.datastore
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
-import androidx.datastore.preferences.core.stringPreferenceKey
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
@@ -16,7 +16,7 @@ import com.sutliff.pocket.data.InferenceConfig
 
 private val Context.dataStore by preferencesDataStore(name = "agent_config")
 
-private val INFERENCE_CONFIG_KEY = stringPreferenceKey("inference_config")
+private val INFERENCE_CONFIG_KEY = stringPreferencesKey("inference_config")
 
 suspend fun saveInferenceConfig(context: Context, config: InferenceConfig) {
     val json = Json { ignoreUnknownKeys = true }
