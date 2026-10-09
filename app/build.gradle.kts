@@ -4,21 +4,72 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21"
 }
 
+import java.io.ByteArrayOutputStream
+
+val gitCommitCount: Int = try {
+    ByteArrayOutputStream().use { baos ->
+        project.exec {
+            commandLine("git", "-C", project.rootDir.parent, "rev-list", "--count", "HEAD")
+            standardOutput = baos
+        }
+        baos.toString().trim().toInt()
+    }
+} catch (_: Exception) { 1 }
+
+val gitCommitHash: String = try {
+    ByteArrayOutputStream().use { baos ->
+        project.exec {
+            commandLine("git", "-C", project.rootDir.parent, "rev-parse", "--short", "HEAD")
+            standardOutput = baos
+        }
+        baos.toString().trim()
+    }
+} catch (_: Exception) { "unknown" }
+
+// ── Release signing (CI-provided env; local builds stay unsigned) ──
+val ksFile = System.getenv("ANDROID_KEYSTORE_FILE")?.takeIf { it.isNotBlank() }
+val ksStorePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD") ?: ""
+val ksKeyAlias = System.getenv("ANDROID_KEY_ALIAS") ?: "sutliff"
+val ksKeyPassword = System.getenv("ANDROID_KEY_PASSWORD") ?: ksStorePassword
+val hasKeystore = ksFile != null && File(ksFile).exists()
+
 android {
     namespace = "com.sutliff.pocket"
     compileSdk = 34
+
+    signingConfigs {
+        if (hasKeystore) {
+            create("release") {
+                storeFile = File(ksFile!!)
+                storePassword = ksStorePassword
+                keyAlias = ksKeyAlias
+                keyPassword = ksKeyPassword
+            }
+        }
+    }
 
     defaultConfig {
         applicationId = "com.sutliff.pocket"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = gitCommitCount
+        versionName = "1.0.$gitCommitCount-$gitCommitHash"
+
+        buildConfigField("String", "TELEMETRY_URL", "\"${project.findProperty("telemetryUrl") ?: "https://telemetry.ffilt.us/"}\"")
+        buildConfigField("String", "GIT_HASH", "\"$gitCommitHash\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            if (hasKeystore) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
