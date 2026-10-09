@@ -28,7 +28,7 @@ class SmsTriggerReceiver : BroadcastReceiver() {
 
         // Load trigger rules from DataStore
         scope.launch {
-            val config = DataStoreHelper.readConfig(context)
+            val config = readConfig(context)
             val rules = loadTriggerRules(context)
 
             for (rule in rules) {

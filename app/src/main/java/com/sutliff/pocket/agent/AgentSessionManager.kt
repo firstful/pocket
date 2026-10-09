@@ -84,12 +84,13 @@ class AgentSessionManager(private val context: Context) {
 
         var rounds = 0
         val maxRounds = 10
+        var contentBuilder = StringBuilder()
 
         while (rounds < maxRounds) {
             val stream = client.streamChat(currentMessages, tools)
-            val contentBuilder = StringBuilder()
             val toolCalls = mutableListOf<ToolCall>()
 
+            contentBuilder = StringBuilder()
             stream.collect { chunk ->
                 chunk.choices.firstOrNull()?.delta?.let { delta ->
                     delta.content?.let {

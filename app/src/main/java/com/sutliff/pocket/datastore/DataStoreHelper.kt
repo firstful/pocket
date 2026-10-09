@@ -16,7 +16,7 @@ import com.sutliff.pocket.data.InferenceConfig
 
 private val Context.dataStore by preferencesDataStore(name = "agent_config")
 
-private val INFERENCE_CONFIG_KEY = stringPreferenceKey("inference_config")
+private val INFERENCE_CONFIG_KEY = stringPreferencesKey("inference_config")
 
 suspend fun saveInferenceConfig(context: Context, config: InferenceConfig) {
     val json = Json { ignoreUnknownKeys = true }

@@ -19,6 +19,7 @@ import android.telephony.SmsManager
 import android.telephony.TelephonyManager
 import androidx.core.content.ContextCompat
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.add
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
@@ -90,19 +91,14 @@ class BatteryTool : Tool {
             val bm = ctx.context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
             val level = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
             val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATUS)
-            val plugged = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATUS) == BatteryManager.BATTERY_STATUS_CHARGING
+            val plugged = status == BatteryManager.BATTERY_STATUS_CHARGING
             val statusStr = when (status) {
                 BatteryManager.BATTERY_STATUS_CHARGING -> "charging"
                 BatteryManager.BATTERY_STATUS_DISCHARGING -> "discharging"
                 BatteryManager.BATTERY_STATUS_FULL -> "full"
                 else -> "unknown"
             }
-            val pluggedStr = when (plugged) {
-                BatteryManager.BATTERY_PLUGGED_AC -> "AC"
-                BatteryManager.BATTERY_PLUGGED_USB -> "USB"
-                BatteryManager.BATTERY_PLUGGED_WIRELESS -> "wireless"
-                else -> "unplugged"
-            }
+            val pluggedStr = if (plugged) "AC" else "unplugged"
             buildString {
                 appendLine("Level: $level%")
                 appendLine("Status: $statusStr")
@@ -261,7 +257,7 @@ class NotificationTool : Tool {
                 put("description", "Notification body text")
             }
         }
-        putJsonArray("required") { add("title"); add("body") }
+        putJsonArray("required") { add(JsonPrimitive("title")); add(JsonPrimitive("body")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -307,7 +303,7 @@ class SmsReplyTool : Tool {
                 put("description", "SMS body text")
             }
         }
-        putJsonArray("required") { add("to"); add("message") }
+        putJsonArray("required") { add(JsonPrimitive("to")); add(JsonPrimitive("message")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -340,7 +336,7 @@ class ContactsTool : Tool {
                 put("description", "Name to search for")
             }
         }
-        putJsonArray("required") { add("query") }
+        putJsonArray("required") { add(JsonPrimitive("query")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -445,7 +441,7 @@ class LaunchAppTool : Tool {
                 put("description", "Package name (e.g., com.android.chrome)")
             }
         }
-        putJsonArray("required") { add("package") }
+        putJsonArray("required") { add(JsonPrimitive("package")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -477,7 +473,7 @@ class TorchTool : Tool {
                 put("description", "on or off")
             }
         }
-        putJsonArray("required") { add("state") }
+        putJsonArray("required") { add(JsonPrimitive("state")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -521,7 +517,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
                     put("description", "Working directory")
                 }
             }
-            putJsonArray("required") { add("command") }
+            putJsonArray("required") { add(JsonPrimitive("command")) }
         }
         override fun execute(args: Map<String, String>): String {
             val command = args["command"] ?: return "Error: no command"
@@ -558,7 +554,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
                     put("description", "Max bytes (default 8192)")
                 }
             }
-            putJsonArray("required") { add("path") }
+            putJsonArray("required") { add(JsonPrimitive("path")) }
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"
@@ -590,7 +586,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
                     put("description", "Directory path")
                 }
             }
-            putJsonArray("required") { add("path") }
+            putJsonArray("required") { add(JsonPrimitive("path")) }
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"
@@ -623,7 +619,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
                     put("description", "Append instead of overwrite")
                 }
             }
-            putJsonArray("required") { add("path"); add("content") }
+            putJsonArray("required") { add(JsonPrimitive("path")); add(JsonPrimitive("content")) }
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"
@@ -651,7 +647,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
                     put("description", "Path to check")
                 }
             }
-            putJsonArray("required") { add("path") }
+            putJsonArray("required") { add(JsonPrimitive("path")) }
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"

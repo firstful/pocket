@@ -32,13 +32,14 @@ class HeadlessAgentRuntime(
 
         var currentMessages = messages
         var rounds = 0
+        var contentBuilder = StringBuilder()
         val maxRounds = 10
 
         while (rounds < maxRounds) {
             val stream = client.streamChat(currentMessages, tools)
-            val contentBuilder = StringBuilder()
             val toolCalls = mutableListOf<ToolCall>()
 
+            contentBuilder = StringBuilder()
             stream.collect { chunk ->
                 chunk.choices.firstOrNull()?.delta?.let { delta ->
                     delta.content?.let { contentBuilder.append(it) }

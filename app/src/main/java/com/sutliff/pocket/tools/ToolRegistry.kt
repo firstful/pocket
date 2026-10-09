@@ -6,6 +6,8 @@ import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
 import kotlinx.serialization.json.putJsonArray
+import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.add
 
 interface Tool {
     val name: String
@@ -57,7 +59,7 @@ class ExecTool : Tool {
                 put("description", "Working directory")
             }
         }
-        putJsonArray("required") { add("command") }
+        putJsonArray("required") { add(JsonPrimitive("command")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -96,7 +98,7 @@ class FsReadTool : Tool {
                 put("description", "Max bytes to read (default 8192)")
             }
         }
-        putJsonArray("required") { add("path") }
+        putJsonArray("required") { add(JsonPrimitive("path")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -129,7 +131,7 @@ class FsListTool : Tool {
                 put("description", "Directory path to list")
             }
         }
-        putJsonArray("required") { add("path") }
+        putJsonArray("required") { add(JsonPrimitive("path")) }
     }
 
     override fun execute(args: Map<String, String>): String {
@@ -163,7 +165,7 @@ class FsWriteTool : Tool {
                 put("description", "Append instead of overwrite")
             }
         }
-        putJsonArray("required") { add("path"); add("content") }
+        putJsonArray("required") { add(JsonPrimitive("path")); add(JsonPrimitive("content")) }
     }
 
     override fun execute(args: Map<String, String>): String {
