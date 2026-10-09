@@ -1,0 +1,10 @@
+# Pocket — native Android agent runtime app.
+name: pocket
+apk:
+  package: com.sutliff.pocket
+  name: Pocket
+  task: assembleRelease
+  storeDir: Pocket
+  publisher: reed
+  extraProps:
+    telemetryUrl: https://telemetry.ffilt.us/
