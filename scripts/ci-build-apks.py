@@ -68,7 +68,7 @@ def main() -> int:
     app_cfg = manifest["apk"]
     pkg = app_cfg["package"]
     store_dir = app_cfg["storeDir"]
-    task = app.get("task", "assembleRelease")
+    task = app_cfg.get("task", "assembleRelease")
 
     print(f"=== build Pocket (app:{task}) ===", flush=True)
     cmd = ["./gradlew", f":app:{task}", "--no-daemon"]
