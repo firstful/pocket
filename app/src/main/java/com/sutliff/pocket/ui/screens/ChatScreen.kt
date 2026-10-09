@@ -23,6 +23,7 @@ import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.datastore.saveInferenceConfig
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import com.sutliff.pocket.appContext
 
 data class ToolCallState(
     val toolCallId: String,
@@ -38,7 +39,7 @@ enum class ToolStatus { Running, Completed, Failed }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ChatScreen(onNavigateToSettings: () -> Unit) {
-    val context = LocalContext.current
+    val context = appContext()
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }

@@ -19,11 +19,12 @@ import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.datastore.saveInferenceConfig
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import com.sutliff.pocket.appContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(onNavigateBack: () -> Unit) {
-    val context = LocalContext.current
+    val context = appContext()
     val scope = rememberCoroutineScope()
 
     var config by remember { mutableStateOf(InferenceConfig()) }
