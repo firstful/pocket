@@ -19,6 +19,7 @@ import android.telephony.SmsManager
 import android.telephony.TelephonyManager
 import androidx.core.content.ContextCompat
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.add
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
@@ -89,7 +90,7 @@ class BatteryTool : Tool {
             val bm = ctx.context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
             val level = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
             val status = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATUS)
-            val plugged = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_PLUGGED)
+            val plugged = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_STATUS) == BatteryManager.BATTERY_STATUS_CHARGING
             val statusStr = when (status) {
                 BatteryManager.BATTERY_STATUS_CHARGING -> "charging"
                 BatteryManager.BATTERY_STATUS_DISCHARGING -> "discharging"
@@ -525,7 +526,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         override fun execute(args: Map<String, String>): String {
             val command = args["command"] ?: return "Error: no command"
             return try {
-                val process = ProcessBuilder(command.split(" ").toTypedArray())
+                val process = ProcessBuilder(*command.split(" ").toTypedArray())
                     .directory(java.io.File(args["cwd"] ?: "/root"))
                     .redirectErrorStream(true)
                     .start()
@@ -657,7 +658,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
             val file = java.io.File(path)
             if (!file.exists()) return "Not found: $path"
             val type = if (file.isDirectory) "directory" else "file"
-            "$path exists ($type, ${file.length()} bytes)"
+            return "$path exists ($type, ${file.length()} bytes)"
         }
     })
 

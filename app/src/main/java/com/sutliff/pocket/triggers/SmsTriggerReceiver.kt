@@ -5,10 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.provider.Telephony
 import android.util.Log
-import com.sutliff.pocket.bridge.AgentBridgeService
-import com.sutliff.pocket.datastore.DataStoreHelper
+import com.sutliff.pocket.datastore.readConfig
 import com.sutliff.pocket.runtime.HeadlessAgentRuntime
-import com.sutliff.pocket.tools.DefaultToolRegistry
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -64,9 +62,9 @@ class SmsTriggerReceiver : BroadcastReceiver() {
         scope.launch {
             try {
                 val runtime = HeadlessAgentRuntime(
-                    inferenceConfig = DataStoreHelper.readConfig(context),
-                    toolRegistry = DefaultToolRegistry(),
-                    workingDir = context.filesDir.absolutePath
+                    inferenceConfig = readConfig(context),
+                    workingDir = context.filesDir.absolutePath,
+                    appContext = context
                 )
                 runtime.run(
                     sessionId = "sms_${System.currentTimeMillis()}",

@@ -12,10 +12,10 @@ import kotlinx.serialization.json.*
 class HeadlessAgentRuntime(
     private val inferenceConfig: InferenceConfig,
     private val workingDir: String,
-    private val appContext: android.content.Context
+    private val appContext: android.content.Context,
+    private val toolRegistry: ToolRegistry = AndroidToolRegistry(ToolContext(appContext, workingDir))
 ) {
     private val json = Json { ignoreUnknownKeys = true }
-    private val toolRegistry: ToolRegistry = AndroidToolRegistry(ToolContext(appContext, workingDir))
 
     suspend fun run(
         sessionId: String,
