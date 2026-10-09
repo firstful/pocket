@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: [android]
+    runs-on: [self-hosted]
     container:
       image: cimg/android:2026.07-node
       options: --user root -v gradle-cache:/root/.gradle
