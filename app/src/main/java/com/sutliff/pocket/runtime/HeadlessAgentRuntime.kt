@@ -17,7 +17,7 @@ class HeadlessAgentRuntime(
     private val json = Json { ignoreUnknownKeys = true }
     private val toolRegistry: ToolRegistry = AndroidToolRegistry(ToolContext(appContext, workingDir))
 
-    fun run(
+    suspend fun run(
         sessionId: String,
         prompt: String,
         onComplete: (String) -> Unit
@@ -73,7 +73,6 @@ class HeadlessAgentRuntime(
                 } else {
                     "Error: Unknown tool '${toolCall.function.name}'"
                 }
-
                 currentMessages = currentMessages.toMutableList().apply {
                     add(ChatMessage(
                         role = "tool",

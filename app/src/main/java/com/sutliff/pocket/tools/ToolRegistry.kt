@@ -2,6 +2,10 @@ package com.sutliff.pocket.tools
 
 import com.sutliff.pocket.data.*
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.put
+import kotlinx.serialization.json.putJsonObject
+import kotlinx.serialization.json.putJsonArray
 
 interface Tool {
     val name: String
@@ -9,6 +13,7 @@ interface Tool {
     val parameters: JsonObject
     fun execute(args: Map<String, String>): String
 }
+
 
 class ToolRegistry {
     private val tools = mutableMapOf<String, Tool>()
@@ -34,12 +39,10 @@ class ToolRegistry {
 
 // ── Built-in Tools (run on Android, shell out to proot env) ──────────────────
 
-class ExecTool {
-    companion object {
-        private const val PROOT_DIR = "proot"
-        private const val ALPINE_DIR = "alpine"
-    }
+private const val PROOT_DIR = "proot"
+private const val ALPINE_DIR = "alpine"
 
+class ExecTool : Tool {
     override val name = "exec"
     override val description = "Execute a shell command in the Alpine Linux proot environment."
     override val parameters = buildJsonObject {
@@ -57,11 +60,11 @@ class ExecTool {
         putJsonArray("required") { add("command") }
     }
 
-    fun execute(args: Map<String, String>, appDir: String): String {
+    override fun execute(args: Map<String, String>): String {
         val command = args["command"] ?: return "Error: no command"
         val cwd = args["cwd"] ?: "/root"
         return try {
-            val process = ProcessBuilder(command.split(" ").toTypedArray())
+            val process = ProcessBuilder(*command.split(" ").toTypedArray())
                 .directory(java.io.File(cwd))
                 .redirectErrorStream(true)
                 .start()
@@ -74,7 +77,7 @@ class ExecTool {
     }
 }
 
-class FsReadTool {
+class FsReadTool : Tool {
     override val name = "fs_read"
     override val description = "Read a file from the filesystem. Supports offset/limit for large files."
     override val parameters = buildJsonObject {
@@ -96,7 +99,7 @@ class FsReadTool {
         putJsonArray("required") { add("path") }
     }
 
-    fun execute(args: Map<String, String>): String {
+    override fun execute(args: Map<String, String>): String {
         val path = args["path"] ?: return "Error: no path"
         val offset = args["offset"]?.toInt() ?: 0
         val limit = args["limit"]?.toInt() ?: 8192
@@ -115,7 +118,7 @@ class FsReadTool {
     }
 }
 
-class FsListTool {
+class FsListTool : Tool {
     override val name = "fs_list"
     override val description = "List directory contents on the filesystem."
     override val parameters = buildJsonObject {
@@ -129,7 +132,7 @@ class FsListTool {
         putJsonArray("required") { add("path") }
     }
 
-    fun execute(args: Map<String, String>): String {
+    override fun execute(args: Map<String, String>): String {
         val path = args["path"] ?: return "Error: no path"
         val dir = java.io.File(path)
         if (!dir.exists() || !dir.isDirectory) return "Not a directory: $path"
@@ -141,7 +144,44 @@ class FsListTool {
     }
 }
 
-class HealthCheckTool {
+class FsWriteTool : Tool {
+    override val name = "fs_write"
+    override val description = "Write content to a file."
+    override val parameters = buildJsonObject {
+        put("type", "object")
+        putJsonObject("properties") {
+            putJsonObject("path") {
+                put("type", "string")
+                put("description", "File path")
+            }
+            putJsonObject("content") {
+                put("type", "string")
+                put("description", "Content to write")
+            }
+            putJsonObject("append") {
+                put("type", "boolean")
+                put("description", "Append instead of overwrite")
+            }
+        }
+        putJsonArray("required") { add("path"); add("content") }
+    }
+
+    override fun execute(args: Map<String, String>): String {
+        val path = args["path"] ?: return "Error: no path"
+        val content = args["content"] ?: ""
+        val append = args["append"]?.toBoolean() ?: false
+        return try {
+            val file = java.io.File(path)
+            file.parentFile?.mkdirs()
+            java.io.FileWriter(file, append).use { it.write(content) }
+            "Wrote ${content.length} chars to $path"
+        } catch (e: Exception) {
+            "Error: ${e.message}"
+        }
+    }
+}
+
+class HealthCheckTool : Tool {
     override val name = "health"
     override val description = "Check the proot Alpine environment and filesystem health."
     override val parameters = buildJsonObject {
@@ -149,7 +189,8 @@ class HealthCheckTool {
         putJsonObject("properties") {}
     }
 
-    fun execute(args: Map<String, String>, appDir: String): String {
+    override fun execute(args: Map<String, String>): String {
+        val appDir = "/data/local/tmp/pocket"
         val prootDir = java.io.File(appDir, PROOT_DIR)
         val alpineDir = java.io.File(appDir, ALPINE_DIR)
         return buildString {
@@ -161,56 +202,12 @@ class HealthCheckTool {
     }
 }
 
-fun DefaultToolRegistry(): com.sutliff.pocket.tools.ToolRegistry {
-    val registry = com.sutliff.pocket.tools.ToolRegistry()
-    registry.register(object : Tool {
-        override val name = "exec"
-        override val description = "Execute a shell command in the Alpine Linux proot environment."
-        override val parameters = buildJsonObject {
-            put("type", "object")
-            putJsonObject("properties") {
-                putJsonObject("command") {
-                    put("type", "string")
-                    put("description", "Shell command to execute")
-                }
-                putJsonObject("cwd") {
-                    put("type", "string")
-                    put("description", "Working directory")
-                }
-            }
-            putJsonArray("required") { add("command") }
-        }
-        override fun execute(args: Map<String, String>): String {
-            return "exec: ${args["command"]}"
-        }
-    })
-    registry.register(object : Tool {
-        override val name = "fs_read"
-        override val description = "Read a file from the filesystem."
-        override val parameters = buildJsonObject {
-            put("type", "object")
-            putJsonObject("properties") {
-                putJsonObject("path") {
-                    put("type", "string")
-                    put("description", "Absolute file path")
-                }
-            }
-            putJsonArray("required") { add("path") }
-        }
-        override fun execute(args: Map<String, String>): String {
-            return "fs_read: ${args["path"]}"
-        }
-    })
-    registry.register(object : Tool {
-        override val name = "health"
-        override val description = "Check environment health."
-        override val parameters = buildJsonObject {
-            put("type", "object")
-            putJsonObject("properties") {}
-        }
-        override fun execute(args: Map<String, String>): String {
-            return "health: ok"
-        }
-    })
+fun DefaultToolRegistry(): ToolRegistry {
+    val registry = ToolRegistry()
+    registry.register(ExecTool())
+    registry.register(FsReadTool())
+    registry.register(FsListTool())
+    registry.register(FsWriteTool())
+    registry.register(HealthCheckTool())
     return registry
 }

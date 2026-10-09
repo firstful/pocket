@@ -67,7 +67,7 @@ class AgentSessionManager(private val context: Context) {
         File(sessionsDir, "$sessionId.json").delete()
     }
 
-    fun run(
+    suspend fun run(
         sessionId: String,
         userMessage: String,
         onEvent: (AgentEvent) -> Unit
