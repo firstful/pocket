@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
     id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
@@ -9,7 +10,7 @@ import java.io.ByteArrayOutputStream
 val gitCommitCount: Int = try {
     ByteArrayOutputStream().use { baos ->
         project.exec {
-            commandLine("git", "-C", project.rootDir.parent, "rev-list", "--count", "HEAD")
+            commandLine("git", "-C", project.rootDir, "rev-list", "--count", "HEAD")
             standardOutput = baos
         }
         baos.toString().trim().toInt()
@@ -19,7 +20,7 @@ val gitCommitCount: Int = try {
 val gitCommitHash: String = try {
     ByteArrayOutputStream().use { baos ->
         project.exec {
-            commandLine("git", "-C", project.rootDir.parent, "rev-parse", "--short", "HEAD")
+            commandLine("git", "-C", project.rootDir, "rev-parse", "--short", "HEAD")
             standardOutput = baos
         }
         baos.toString().trim()
