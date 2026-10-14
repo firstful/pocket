@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import com.sutliff.pocket.bridge.AgentBridgeService
+import com.sutliff.pocket.telemetry.Telemetry
 
 class BootReceiver : BroadcastReceiver() {
     private val TAG = "BootReceiver"
@@ -12,6 +13,7 @@ class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED) {
             Log.d(TAG, "Boot completed, starting AgentBridgeService")
+            Telemetry.log(context, "boot_completed")
             context.startService(Intent(context, AgentBridgeService::class.java))
         }
     }

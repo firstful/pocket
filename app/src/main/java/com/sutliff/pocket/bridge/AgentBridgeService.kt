@@ -13,6 +13,7 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.sutliff.pocket.MainActivity
 import com.sutliff.pocket.R
+import com.sutliff.pocket.telemetry.Telemetry
 import com.sutliff.pocket.agent.AgentEvent
 import com.sutliff.pocket.agent.AgentSessionManager
 import com.sutliff.pocket.data.InferenceConfig
@@ -53,6 +54,7 @@ class AgentBridgeService : Service() {
         createNotificationChannel()
         startForeground(notificationId, buildNotification())
         scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+        Telemetry.log(this, "bridge_service_create")
         Log.d(TAG, "AgentBridgeService created")
     }
 
@@ -110,6 +112,7 @@ class AgentBridgeService : Service() {
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Agent session failed", e)
+                Telemetry.logError(applicationContext, "AgentBridgeService", e)
                 updateSessionStatus(sessionId, SessionStatus.Failed)
             }
         }

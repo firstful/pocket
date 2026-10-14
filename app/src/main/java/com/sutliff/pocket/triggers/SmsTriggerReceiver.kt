@@ -7,6 +7,7 @@ import android.provider.Telephony
 import android.util.Log
 import com.sutliff.pocket.datastore.readConfig
 import com.sutliff.pocket.runtime.HeadlessAgentRuntime
+import com.sutliff.pocket.telemetry.Telemetry
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -34,6 +35,7 @@ class SmsTriggerReceiver : BroadcastReceiver() {
             for (rule in rules) {
                 if (rule.matches(sender, fullBody)) {
                     Log.d(TAG, "Trigger matched: ${rule.name}, starting agent session")
+                    Telemetry.log(context, "sms_trigger_matched", mapOf("rule" to rule.name))
                     startAgentSession(context, rule, sender, fullBody)
                     break
                 }
@@ -76,6 +78,7 @@ class SmsTriggerReceiver : BroadcastReceiver() {
                 )
             } catch (e: Exception) {
                 Log.e(TAG, "Agent session failed", e)
+                Telemetry.logError(context, "SmsTriggerReceiver", e)
             }
         }
     }

@@ -24,6 +24,7 @@ import com.sutliff.pocket.datastore.saveInferenceConfig
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import com.sutliff.pocket.appContext
+import com.sutliff.pocket.telemetry.Telemetry
 
 data class ToolCallState(
     val toolCallId: String,
@@ -72,6 +73,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
 
     fun sendMessage(text: String) {
         if (text.isBlank() || isStreaming) return
+        Telemetry.log(context, "chat_send")
         val userMsg = ChatMessage(role = "user", content = text)
         messages = messages + userMsg
         inputText = ""
@@ -116,6 +118,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                 }
             } catch (e: Exception) {
                 errorMessage = e.message ?: "Unknown error"
+                Telemetry.logError(context, "ChatScreen", e)
             } finally {
                 isStreaming = false
                 streamingText = ""
