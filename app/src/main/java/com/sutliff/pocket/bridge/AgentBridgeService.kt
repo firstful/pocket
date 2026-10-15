@@ -133,12 +133,12 @@ class AgentBridgeService : Service() {
         }
     }
 
-    private fun buildNotification(): android.app.Notification? {
+    private fun buildNotification(): android.app.Notification {
         val count = activeSessions.size
-        if (count == 0) return null
-
-        val title = "$count session${if (count != 1) "s" else ""} running"
-        val content = activeSessions.values.joinToString(", ") { it.title.take(30) }
+        val title = if (count == 0) "Pocket is ready"
+                    else "$count session${if (count != 1) "s" else ""} running"
+        val content = if (count == 0) "Agent bridge active"
+                      else activeSessions.values.joinToString(", ") { it.title.take(30) }
 
         val intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -161,12 +161,7 @@ class AgentBridgeService : Service() {
 
     private fun updateNotification() {
         val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        val notification = buildNotification()
-        if (notification != null) {
-            nm.notify(notificationId, notification)
-        } else {
-            nm.cancel(notificationId)
-        }
+        nm.notify(notificationId, buildNotification())
     }
 
     override fun onDestroy() {
