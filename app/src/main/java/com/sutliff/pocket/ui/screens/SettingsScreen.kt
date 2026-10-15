@@ -70,7 +70,7 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
                 value = config.baseUrl,
                 onValueChange = { config = config.copy(baseUrl = it); saveConfig() },
                 label = { Text("Base URL") },
-                placeholder = { Text("http://192.168.1.100:8080/v1") },
+                placeholder = { Text("http://llm.homelab.internal/v1") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )
@@ -96,7 +96,7 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
                 value = config.model,
                 onValueChange = { config = config.copy(model = it); saveConfig() },
                 label = { Text("Model") },
-                placeholder = { Text("llama3-8b-instruct") },
+                placeholder = { Text("auto") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )

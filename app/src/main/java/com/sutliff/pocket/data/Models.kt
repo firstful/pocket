@@ -4,9 +4,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class InferenceConfig(
-    val baseUrl: String = "http://192.168.1.100:8080/v1",
-    val apiKey: String = "",
-    val model: String = "llama3-8b-instruct",
+    val baseUrl: String = "http://llm.homelab.internal/v1",
+    val apiKey: String = "dummy",
+    val model: String = "auto",
     val systemPrompt: String = "You are a helpful assistant running in an Alpine Linux environment on Android.",
     val temperature: Float = 0.7f,
     val maxTokens: Int = 4096,
