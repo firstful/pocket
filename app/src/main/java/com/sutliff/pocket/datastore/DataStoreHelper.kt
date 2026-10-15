@@ -40,3 +40,16 @@ suspend fun getInferenceConfig(context: Context): Flow<InferenceConfig> {
 suspend fun readConfig(context: Context): InferenceConfig {
     return getInferenceConfig(context).first()
 }
+
+private val CURRENT_SESSION_ID_KEY = stringPreferencesKey("current_session_id")
+
+/** Last active session id, persisted so the app can resume it across restarts. */
+suspend fun getCurrentSessionId(context: Context): String? {
+    return context.dataStore.data.first()[CURRENT_SESSION_ID_KEY]
+}
+
+suspend fun setCurrentSessionId(context: Context, sessionId: String) {
+    context.dataStore.edit { prefs ->
+        prefs[CURRENT_SESSION_ID_KEY] = sessionId
+    }
+}

@@ -39,7 +39,10 @@ class InferenceClient(private val config: InferenceConfig) {
 
     fun streamChat(
         messages: List<ChatMessage>,
-        tools: List<ToolDefinition>? = null
+        tools: List<ToolDefinition>? = null,
+        // Optional phase observer: SENDING = request written / waiting for response headers,
+        // WAITING = connected, waiting for the first token. Invoked on the flow's IO dispatcher.
+        onPhase: ((AgentStatus) -> Unit)? = null
     ): Flow<StreamChunk> = flow {
         val requestBody = buildChatRequest(messages, tools, stream = true)
         val request = Request.Builder()
@@ -52,10 +55,12 @@ class InferenceClient(private val config: InferenceConfig) {
             .post(requestBody.toString().toRequestBody("application/json".toMediaType()))
             .build()
 
+        onPhase?.invoke(AgentStatus.SENDING)
         val response = client.newCall(request).execute()
         if (!response.isSuccessful) {
             throw IOException("HTTP ${response.code}: ${response.body?.string()}")
         }
+        onPhase?.invoke(AgentStatus.WAITING)
 
         val source = response.body?.source() ?: throw IOException("Empty response body")
 

@@ -76,3 +76,28 @@ data class ToolFunction(
     val description: String,
     val parameters: kotlinx.serialization.json.JsonObject? = null
 )
+
+/**
+ * Explicit send-pipeline state surfaced in the chat UI.
+ *
+ * IDLE               – nothing in flight
+ * WAITING_FOR_NETWORK – device offline / no route to the gateway; messages are queued
+ * SENDING            – request written (or being written), waiting for response headers
+ * WAITING            – connected, waiting for the first streamed token
+ * STREAMING          – receiving content deltas
+ */
+enum class AgentStatus {
+    IDLE,
+    WAITING_FOR_NETWORK,
+    SENDING,
+    WAITING,
+    STREAMING
+}
+
+/** A user message composed while offline (or while a backlog existed), stored durably until it is sent. */
+@Serializable
+data class QueuedMessage(
+    val sessionId: String,
+    val text: String,
+    val timestamp: Long
+)
