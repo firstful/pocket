@@ -2,6 +2,8 @@ package com.sutliff.pocket
 
 import androidx.activity.ComponentActivity
 import android.os.Bundle
+import android.content.Intent
+import com.sutliff.pocket.bridge.AgentBridgeService
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -30,6 +32,15 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         Telemetry.log(this, "main_activity_resume")
+        if (AgentApp.bridgeStartPending) {
+            try {
+                startService(Intent(this, AgentBridgeService::class.java))
+                AgentApp.bridgeStartPending = false
+                Telemetry.log(this, "bridge_service_start_retried")
+            } catch (e: Exception) {
+                Telemetry.logError(this, "bridge_start_retry_blocked", e)
+            }
+        }
     }
 
     override fun onPause() {
