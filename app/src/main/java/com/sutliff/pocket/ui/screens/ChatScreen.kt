@@ -443,7 +443,11 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                 if (session != null) {
                     val msgIdx = session.messages.indexOfFirst { it === original }
                     if (msgIdx >= 0) {
-                        sessionManager.updateMessage(currentSessionId, msgIdx, newText)
+                        // Update message in session by recreating it
+                        val updated = session.copy(messages = session.messages.toMutableList().apply {
+                            set(msgIdx, session.messages[msgIdx].copy(content = newText))
+                        })
+                        sessionManager.saveSession(updated)
                     }
                 }
             } catch (e: Exception) { /* ignore */ }

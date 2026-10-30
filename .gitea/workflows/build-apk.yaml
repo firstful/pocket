@@ -46,6 +46,7 @@ jobs:
         env:
           APPSTORE_PUBLISH_TOKEN: ${{ secrets.APPSTORE_PUBLISH_TOKEN }}
           APPSTORE_URL: http://apps.ffilt.us
+          GRADLE_OPTS: -Xmx1024m -XX:MaxMetaspaceSize=256m
         run: |
           python3 scripts/ci-build-apks.py
 
