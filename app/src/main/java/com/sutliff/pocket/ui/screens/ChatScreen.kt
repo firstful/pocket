@@ -709,7 +709,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                                 message = entry.message,
                                 queued = entry.queued,
                                 queuedAt = entry.queuedAt,
-                                onEdit = if (entry.message.role == "user") { { _ -> editingMessage = entry.message; editingText = entry.message.content } } else null
+                                onEdit = if (entry.message.role == "user") { { _ -> inputText = entry.message.content; Toast.makeText(context, "Edit and resend", Toast.LENGTH_SHORT).show() } } else null
                             )
                             is TimelineEntry.Tool -> {
                                 val toolState = toolCallStates[entry.toolCallId]
@@ -848,29 +848,6 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             },
             confirmButton = {
                 TextButton(onClick = { showShortcuts = false }) { Text("Close") }
-            }
-        )
-    }
-    if (editingMessage != null) {
-        AlertDialog(
-            onDismissRequest = { editingMessage = null },
-            title = { Text("Edit message") },
-            text = {
-                OutlinedTextField(
-                    value = editingText,
-                    onValueChange = { editingText = it },
-                    modifier = Modifier.fillMaxWidth(),
-                    maxLines = 4
-                )
-            },
-            confirmButton = {
-                TextButton(onClick = {
-                    editingMessage?.let { editMessage(it, editingText) }
-                    editingMessage = null
-                }) { Text("Save & resend") }
-            },
-            dismissButton = {
-                TextButton(onClick = { editingMessage = null }) { Text("Cancel") }
             }
         )
     }
