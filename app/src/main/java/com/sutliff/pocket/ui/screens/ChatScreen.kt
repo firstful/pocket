@@ -130,6 +130,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var showSessionDrawer by remember { mutableStateOf(false) }
     var showShortcuts by remember { mutableStateOf(false) }
+    var lastUserMessage by remember { mutableStateOf("") }
     var toolCallStates by remember { mutableStateOf<Map<String, ToolCallState>>(emptyMap()) }
     var sessions by remember { mutableStateOf<List<ChatSession>>(emptyList()) }
     var queuedMessages by remember { mutableStateOf<List<QueuedMessage>>(emptyList()) }
@@ -358,9 +359,43 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         }
     }
 
+    fun regenerate() {
+        if (lastUserMessage.isBlank() || isBusy || isFlushing || !isReady) return
+        Telemetry.log(context, "chat_regenerate")
+        // Remove the last assistant message from timeline for visual feedback
+        val lastAssistantIdx = timeline.indexOfLast { it is TimelineEntry.Msg && (it as TimelineEntry.Msg).message.role == "assistant" }
+        if (lastAssistantIdx >= 0) {
+            timeline = timeline.toMutableList().apply { removeAt(lastAssistantIdx) }
+        }
+        scope.launch { performSend(lastUserMessage, null) }
+    }
+
+    fun exportSession() {
+        scope.launch {
+            val session = sessionManager.loadSession(currentSessionId) ?: return@launch
+            val md = buildString {
+                appendLine("# ${session.title}")
+                appendLine()
+                for (msg in session.messages) {
+                    when (msg.role) {
+                        "user" -> { appendLine("**You:** ${msg.content}"); appendLine() }
+                        "assistant" -> { appendLine("**Assistant:** ${msg.content}"); appendLine() }
+                        "tool" -> { appendLine("> Tool result: ${msg.content.take(200)}"); appendLine() }
+                        "system" -> { appendLine("_System: ${msg.content}_"); appendLine() }
+                    }
+                }
+            }
+            val cm = context.getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+            cm.setPrimaryClip(android.content.ClipData.newPlainText("session", md))
+            Toast.makeText(context, "Session exported to clipboard", Toast.LENGTH_SHORT).show()
+            Telemetry.log(context, "session_export")
+        }
+    }
+
     fun sendMessage(text: String) {
         if (text.isBlank() || isBusy || isFlushing || !isReady) return
         Telemetry.log(context, "chat_send")
+        lastUserMessage = text
         inputText = ""
         val mustQueue = !isOnline || queuedMessages.isNotEmpty() || currentSessionId.isEmpty()
         if (mustQueue && currentSessionId.isNotEmpty()) {
@@ -574,6 +609,12 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         IconButton(onClick = { showShortcuts = true }) {
                             Icon(Icons.Default.Info, contentDescription = "Keyboard shortcuts")
                         }
+                        IconButton(onClick = { regenerate() }, enabled = lastUserMessage.isNotBlank() && !isBusy) {
+                            Icon(Icons.Default.Refresh, contentDescription = "Regenerate last response")
+                        }
+                        IconButton(onClick = { exportSession() }) {
+                            Icon(Icons.Default.Share, contentDescription = "Export session")
+                        }
                     }
                 )
             }
@@ -588,12 +629,25 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         color = MaterialTheme.colorScheme.errorContainer,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text(
-                            text = err,
-                            color = MaterialTheme.colorScheme.onErrorContainer,
-                            modifier = Modifier.padding(12.dp),
-                            style = MaterialTheme.typography.bodySmall
-                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(12.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text(
+                                text = err,
+                                color = MaterialTheme.colorScheme.onErrorContainer,
+                                modifier = Modifier.weight(1f),
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                            if (lastUserMessage.isNotBlank()) {
+                                TextButton(onClick = { regenerate() }) {
+                                    Text("Retry", color = MaterialTheme.colorScheme.onErrorContainer)
+                                }
+                            }
+                        }
                     }
                 }
 
