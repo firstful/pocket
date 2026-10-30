@@ -10,7 +10,10 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import android.widget.Toast
 import androidx.compose.material3.*
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -804,6 +807,7 @@ fun MessageBubble(
     val isUser = message.role == "user"
     val isSystem = message.role == "system"
     val isTool = message.role == "tool"
+    val context = androidx.compose.ui.platform.LocalContext.current
 
     val containerColor = when {
         isUser -> MaterialTheme.colorScheme.primary
@@ -826,7 +830,15 @@ fun MessageBubble(
         Surface(
             color = containerColor,
             shape = MaterialTheme.shapes.medium,
-            modifier = Modifier.widthIn(max = 320.dp)
+            modifier = Modifier
+                .widthIn(max = 320.dp)
+                .clickable {
+                    if (message.content.isNotBlank()) {
+                        val cm = context.getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+                        cm.setPrimaryClip(android.content.ClipData.newPlainText("message", message.content))
+                        Toast.makeText(context, "Copied", Toast.LENGTH_SHORT).show()
+                    }
+                }
         ) {
             Column(modifier = Modifier.padding(12.dp)) {
                 if (isStreaming && !statusLabel.isNullOrBlank()) {
