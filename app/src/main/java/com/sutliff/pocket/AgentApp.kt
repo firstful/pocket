@@ -9,6 +9,7 @@ class AgentApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
         Telemetry.log(this, "app_create")
         // Start the bridge service on app launch. On Android 12+ this can be
         // rejected when the process is restored in the background (install /
@@ -24,6 +25,8 @@ class AgentApp : Application() {
     }
 
     companion object {
+        @Volatile
+        var instance: AgentApp? = null
         /** Set when the initial service start was rejected; retried from MainActivity.onResume. */
         @Volatile
         var bridgeStartPending: Boolean = false

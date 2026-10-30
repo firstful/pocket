@@ -10,7 +10,8 @@ data class InferenceConfig(
     val systemPrompt: String = "You are a helpful assistant running in an Alpine Linux environment on Android.",
     val temperature: Float = 0.7f,
     val maxTokens: Int = 4096,
-    val stream: Boolean = true
+    val stream: Boolean = true,
+    val darkMode: Int = 0
 )
 
 @Serializable
@@ -19,7 +20,8 @@ data class ChatMessage(
     val content: String,
     val name: String? = null,
     val toolCalls: List<ToolCall>? = null,
-    val toolCallId: String? = null
+    val toolCallId: String? = null,
+    val timestamp: Long = System.currentTimeMillis()
 )
 
 @Serializable

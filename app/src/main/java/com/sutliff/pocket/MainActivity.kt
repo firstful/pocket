@@ -9,6 +9,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.lifecycleScope
+import com.sutliff.pocket.datastore.getInferenceConfig
 import com.sutliff.pocket.ui.AppNavigation
 import com.sutliff.pocket.ui.theme.PocketTheme
 import com.sutliff.pocket.telemetry.Telemetry
@@ -18,13 +22,25 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Telemetry.log(this, "main_activity_create")
         setContent {
-            PocketTheme {
+            val config by getInferenceConfig(this).collectAsState(initial = com.sutliff.pocket.data.InferenceConfig())
+            val darkTheme = when (config.darkMode) {
+                1 -> true
+                2 -> false
+                else -> androidx.compose.foundation.isSystemInDarkTheme()
+            }
+            PocketTheme(darkTheme = darkTheme) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
                     AppNavigation()
                 }
+            }
+        }
+        // Kick off proot environment download in background
+        lifecycleScope.launch {
+            kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                com.sutliff.pocket.runtime.ProotManager(this@MainActivity).ensureReady()
             }
         }
     }

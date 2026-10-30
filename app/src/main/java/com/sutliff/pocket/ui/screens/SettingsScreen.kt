@@ -173,6 +173,26 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
                 )
             }
 
+            // Dark mode toggle
+            Text("Appearance", style = MaterialTheme.typography.titleMedium)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text("Dark mode")
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    val labels = listOf("System", "Dark", "Light")
+                    labels.forEachIndexed { idx, label ->
+                        FilterChip(
+                            selected = config.darkMode == idx,
+                            onClick = { config = config.copy(darkMode = idx); saveConfig() },
+                            label = { Text(label) }
+                        )
+                    }
+                }
+            }
+
             Spacer(modifier = Modifier.height(16.dp))
 
             // Save button

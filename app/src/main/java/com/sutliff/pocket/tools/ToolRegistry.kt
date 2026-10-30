@@ -65,9 +65,24 @@ class ExecTool : Tool {
     override fun execute(args: Map<String, String>): String {
         val command = args["command"] ?: return "Error: no command"
         val cwd = args["cwd"] ?: "/root"
+        val ctx = com.sutliff.pocket.AgentApp.instance
+        if (ctx != null) {
+            val pm = com.sutliff.pocket.runtime.ProotManager(ctx)
+            if (pm.isReady()) {
+                return try {
+                    val pb = ProcessBuilder(pm.buildCommand(command))
+                    val process = pb.redirectErrorStream(true).start()
+                    val output = process.inputStream.bufferedReader().readText()
+                    val exitCode = process.waitFor()
+                    "Exit code: $exitCode\n$output"
+                } catch (e: Exception) {
+                    "Error: ${e.message}"
+                }
+            }
+        }
+        // Fallback: run on host Android
         return try {
             val process = ProcessBuilder(*command.split(" ").toTypedArray())
-                .directory(java.io.File(cwd))
                 .redirectErrorStream(true)
                 .start()
             val output = process.inputStream.bufferedReader().readText()

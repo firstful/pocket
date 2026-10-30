@@ -737,6 +737,40 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                                 enabled = isReady && !isBusy && !isFlushing
                             )
                             Spacer(modifier = Modifier.width(8.dp))
+                            IconButton(
+                                onClick = {
+                                    val recognizer = android.speech.SpeechRecognizer.createSpeechRecognizer(context)
+                                    val intent = android.content.Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                                        putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                                        putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, "Speak…")
+                                    }
+                                    recognizer.setRecognitionListener(object : android.speech.RecognitionListener {
+                                        override fun onReadyForSpeech(params: android.os.Bundle?) {}
+                                        override fun onBeginningOfSpeech() {}
+                                        override fun onRmsChanged(rmsdB: Float) {}
+                                        override fun onBufferReceived(buffer: ByteArray?) {}
+                                        override fun onEndOfSpeech() {}
+                                        override fun onError(error: Int) {
+                                            Toast.makeText(context, "Speech error", Toast.LENGTH_SHORT).show()
+                                            recognizer.destroy()
+                                        }
+                                        override fun onResults(results: android.os.Bundle?) {
+                                            val matches = results?.getStringArrayList(android.speech.SpeechRecognizer.RESULTS_RECOGNITION)
+                                            if (!matches.isNullOrEmpty()) {
+                                                inputText = matches[0]
+                                            }
+                                            recognizer.destroy()
+                                        }
+                                        override fun onPartialResults(partialResults: android.os.Bundle?) {}
+                                        override fun onEvent(eventType: Int, params: android.os.Bundle?) {}
+                                    })
+                                    recognizer.startListening(intent)
+                                },
+                                enabled = isReady && !isBusy && !isFlushing
+                            ) {
+                                Icon(Icons.Default.Mic, contentDescription = "Voice input")
+                            }
+                            Spacer(modifier = Modifier.width(8.dp))
                             FilledIconButton(
                                 onClick = { sendMessage(inputText) },
                                 enabled = isReady && !isBusy && !isFlushing && inputText.isNotBlank()
@@ -941,6 +975,14 @@ fun MessageBubble(
                     color = contentColor,
                     style = MaterialTheme.typography.bodyMedium
                 )
+                if (!isStreaming && message.content.isNotBlank()) {
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = formatSessionTime(message.timestamp),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = contentColor.copy(alpha = 0.5f)
+                    )
+                }
             }
         }
     }
@@ -1081,6 +1123,12 @@ fun SessionDrawerContent(
     onDelete: (com.sutliff.pocket.data.ChatSession) -> Unit,
     onClose: () -> Unit
 ) {
+    var searchQuery by remember { mutableStateOf("") }
+    val filtered = remember(sessions, searchQuery) {
+        if (searchQuery.isBlank()) sessions
+        else sessions.filter { it.title.contains(searchQuery, ignoreCase = true) ||
+            it.messages.any { m -> m.content.contains(searchQuery, ignoreCase = true) } }
+    }
     Column(modifier = Modifier.fillMaxHeight()) {
         Row(
             modifier = Modifier
@@ -1094,17 +1142,28 @@ fun SessionDrawerContent(
                 Icon(Icons.Default.Close, contentDescription = "Close")
             }
         }
+        OutlinedTextField(
+            value = searchQuery,
+            onValueChange = { searchQuery = it },
+            placeholder = { Text("Search sessions…") },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp),
+            singleLine = true,
+            leadingIcon = { Icon(Icons.Default.Search, contentDescription = "Search") }
+        )
+        Spacer(modifier = Modifier.height(8.dp))
         HorizontalDivider()
-        if (sessions.isEmpty()) {
+        if (filtered.isEmpty()) {
             Text(
-                text = "No sessions yet",
+                text = if (searchQuery.isBlank()) "No sessions yet" else "No matching sessions",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(16.dp)
             )
         }
         LazyColumn {
-            items(sessions) { session ->
+            items(filtered) { session ->
                 val isCurrent = session.id == currentSessionId
                 ListItem(
                     headlineContent = {
