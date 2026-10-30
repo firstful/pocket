@@ -16,6 +16,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -131,6 +132,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var showSessionDrawer by remember { mutableStateOf(false) }
     var showShortcuts by remember { mutableStateOf(false) }
     var lastUserMessage by remember { mutableStateOf("") }
+    var isOnline by remember { mutableStateOf(true) }
     var toolCallStates by remember { mutableStateOf<Map<String, ToolCallState>>(emptyMap()) }
     var sessions by remember { mutableStateOf<List<ChatSession>>(emptyList()) }
     var queuedMessages by remember { mutableStateOf<List<QueuedMessage>>(emptyList()) }
@@ -600,6 +602,13 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         }
                     },
                     actions = {
+                        // Connection status indicator
+                        Icon(
+                            imageVector = Icons.Default.Circle,
+                            contentDescription = if (isOnline) "Online" else "Offline",
+                            tint = if (isOnline) Color(0xFF4CAF50) else Color(0xFFF44336),
+                            modifier = Modifier.size(10.dp).padding(end = 4.dp)
+                        )
                         IconButton(onClick = { newSession() }) {
                             Icon(Icons.Default.Add, contentDescription = "New chat")
                         }
@@ -1167,41 +1176,60 @@ fun SessionDrawerContent(
             )
         }
         LazyColumn {
-            items(filtered) { session ->
-                val isCurrent = session.id == currentSessionId
-                ListItem(
-                    headlineContent = {
-                        Text(
-                            text = session.title.ifBlank { "Untitled session" },
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            fontWeight = if (isCurrent) FontWeight.Bold else null
-                        )
-                    },
-                    supportingContent = {
-                        val messageCount = session.messages.size
-                        Text(
-                            text = "${formatSessionTime(session.updatedAt)} · $messageCount messages",
-                            style = MaterialTheme.typography.bodySmall
-                        )
-                    },
-                    leadingContent = if (isCurrent) {
-                        {
-                            Icon(
-                                imageVector = Icons.Default.Check,
-                                contentDescription = "Current session",
-                                tint = MaterialTheme.colorScheme.primary
-                            )
-                        }
-                    } else null,
-                    trailingContent = {
-                        IconButton(onClick = { onDelete(session) }) {
-                            Icon(Icons.Default.Delete, contentDescription = "Delete session")
+            items(filtered, key = { it.id }) { session ->
+                val dismissState = rememberSwipeToDismissBoxState(
+                    confirmValueChange = { value ->
+                        if (value == SwipeToDismissBoxValue.EndToStart) {
+                            onDelete(session)
+                            true
+                        } else false
+                    }
+                )
+                SwipeToDismissBox(
+                    state = dismissState,
+                    backgroundContent = {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(MaterialTheme.colorScheme.errorContainer)
+                                .padding(horizontal = 16.dp),
+                            contentAlignment = Alignment.CenterEnd
+                        ) {
+                            Icon(Icons.Default.Delete, contentDescription = "Delete", tint = MaterialTheme.colorScheme.onErrorContainer)
                         }
                     },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onSelect(session) }
+                    content = {
+                        val isCurrent = session.id == currentSessionId
+                        ListItem(
+                            headlineContent = {
+                                Text(
+                                    text = session.title.ifBlank { "Untitled session" },
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    fontWeight = if (isCurrent) FontWeight.Bold else null
+                                )
+                            },
+                            supportingContent = {
+                                val messageCount = session.messages.size
+                                Text(
+                                    text = "${formatSessionTime(session.updatedAt)} · $messageCount messages",
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            },
+                            leadingContent = if (isCurrent) {
+                                {
+                                    Icon(
+                                        imageVector = Icons.Default.Check,
+                                        contentDescription = "Current session",
+                                        tint = MaterialTheme.colorScheme.primary
+                                    )
+                                }
+                            } else null,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clickable { onSelect(session) }
+                        )
+                    }
                 )
             }
         }
