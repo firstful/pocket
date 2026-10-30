@@ -2,6 +2,7 @@ package com.sutliff.pocket.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -132,7 +133,6 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var showSessionDrawer by remember { mutableStateOf(false) }
     var showShortcuts by remember { mutableStateOf(false) }
     var lastUserMessage by remember { mutableStateOf("") }
-    var isOnline by remember { mutableStateOf(true) }
     var toolCallStates by remember { mutableStateOf<Map<String, ToolCallState>>(emptyMap()) }
     var sessions by remember { mutableStateOf<List<ChatSession>>(emptyList()) }
     var queuedMessages by remember { mutableStateOf<List<QueuedMessage>>(emptyList()) }
