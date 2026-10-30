@@ -772,7 +772,11 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                             }
                             Spacer(modifier = Modifier.width(8.dp))
                             FilledIconButton(
-                                onClick = { sendMessage(inputText) },
+                                onClick = {
+                                    val vibrator = context.getSystemService(android.content.Context.VIBRATOR_SERVICE) as? android.os.Vibrator
+                                    vibrator?.vibrate(android.os.VibrationEffect.createOneShot(50, android.os.VibrationEffect.DEFAULT_AMPLITUDE))
+                                    sendMessage(inputText)
+                                },
                                 enabled = isReady && !isBusy && !isFlushing && inputText.isNotBlank()
                             ) {
                                 Icon(Icons.Default.Send, contentDescription = "Send")
