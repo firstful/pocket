@@ -522,6 +522,13 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         override fun execute(args: Map<String, String>): String {
             val command = args["command"] ?: return "Error: no command"
             val pm = com.sutliff.pocket.runtime.ProotManager(ctx.context)
+            if (!pm.isReady()) {
+                kotlinx.coroutines.runBlocking {
+                    kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                        pm.ensureReady()
+                    }
+                }
+            }
             if (pm.isReady()) {
                 return try {
                     val pb = ProcessBuilder(pm.buildCommand(command))

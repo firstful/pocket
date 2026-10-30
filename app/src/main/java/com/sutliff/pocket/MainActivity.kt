@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.runtime.produceState
 import kotlinx.coroutines.flow.first
 import androidx.compose.runtime.getValue
-import androidx.lifecycle.lifecycleScope
 import com.sutliff.pocket.datastore.getInferenceConfig
 import com.sutliff.pocket.ui.AppNavigation
 import com.sutliff.pocket.ui.theme.PocketTheme
@@ -38,12 +37,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     AppNavigation()
                 }
-            }
-        }
-        // Kick off proot environment download in background
-        lifecycleScope.launch {
-            kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-                com.sutliff.pocket.runtime.ProotManager(this@MainActivity).ensureReady()
             }
         }
     }
