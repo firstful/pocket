@@ -133,6 +133,8 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var showSessionDrawer by remember { mutableStateOf(false) }
     var showShortcuts by remember { mutableStateOf(false) }
     var lastUserMessage by remember { mutableStateOf("") }
+    var editingMessage by remember { mutableStateOf<ChatMessage?>(null) }
+    var editingText by remember { mutableStateOf("") }
     var toolCallStates by remember { mutableStateOf<Map<String, ToolCallState>>(emptyMap()) }
     var sessions by remember { mutableStateOf<List<ChatSession>>(emptyList()) }
     var queuedMessages by remember { mutableStateOf<List<QueuedMessage>>(emptyList()) }
@@ -424,8 +426,36 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         scope.launch { performSend(text, null) }
     }
 
-    fun newSession() {
+    fun editMessage(original: ChatMessage, newText: String) {
+        if (newText.isBlank()) return
         scope.launch {
+            // Replace the message content in the timeline
+            val idx = timeline.indexOfFirst { it is TimelineEntry.Msg && (it as TimelineEntry.Msg).message === original }
+            if (idx >= 0) {
+                val entry = timeline[idx] as TimelineEntry.Msg
+                timeline = timeline.toMutableList().apply {
+                    set(idx, entry.copy(message = entry.message.copy(content = newText)))
+                }
+            }
+            // Persist to session
+            try {
+                val session = sessionManager.loadSession(currentSessionId)
+                if (session != null) {
+                    val msgIdx = session.messages.indexOfFirst { it === original }
+                    if (msgIdx >= 0) {
+                        sessionManager.updateMessage(currentSessionId, msgIdx, newText)
+                    }
+                }
+            } catch (e: Exception) { /* ignore */ }
+            Telemetry.log(context, "message_edit")
+            // Re-send to agent
+            inputText = newText
+            lastUserMessage = newText
+            scope.launch { performSend(newText, null) }
+        }
+    }
+
+    fun newSession() {
             val session = sessionManager.createSession()
             currentSessionId = session.id
             setCurrentSessionId(context, session.id)
@@ -674,7 +704,8 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                             is TimelineEntry.Msg -> MessageBubble(
                                 message = entry.message,
                                 queued = entry.queued,
-                                queuedAt = entry.queuedAt
+                                queuedAt = entry.queuedAt,
+                                onEdit = if (entry.message.role == "user") { { _ -> editingMessage = entry.message; editingText = entry.message.content } } else null
                             )
                             is TimelineEntry.Tool -> {
                                 val toolState = toolCallStates[entry.toolCallId]
@@ -816,6 +847,29 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             }
         )
     }
+    if (editingMessage != null) {
+        AlertDialog(
+            onDismissRequest = { editingMessage = null },
+            title = { Text("Edit message") },
+            text = {
+                OutlinedTextField(
+                    value = editingText,
+                    onValueChange = { editingText = it },
+                    modifier = Modifier.fillMaxWidth(),
+                    maxLines = 4
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    editingMessage?.let { editMessage(it, editingText) }
+                    editingMessage = null
+                }) { Text("Save & resend") }
+            },
+            dismissButton = {
+                TextButton(onClick = { editingMessage = null }) { Text("Cancel") }
+            }
+        )
+    }
 }
 
 /** Status chip (+ optional queued counter and progress line) shown right above the input. */
@@ -903,7 +957,8 @@ fun MessageBubble(
     isStreaming: Boolean = false,
     queued: Boolean = false,
     queuedAt: Long = 0L,
-    statusLabel: String? = null
+    statusLabel: String? = null,
+    onEdit: ((String) -> Unit)? = null
 ) {
     val isUser = message.role == "user"
     val isSystem = message.role == "system"
@@ -990,11 +1045,43 @@ fun MessageBubble(
                 )
                 if (!isStreaming && message.content.isNotBlank()) {
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = formatSessionTime(message.timestamp),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = contentColor.copy(alpha = 0.5f)
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = formatSessionTime(message.timestamp),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = contentColor.copy(alpha = 0.5f)
+                        )
+                        if (isUser && onEdit != null) {
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Icon(
+                                imageVector = Icons.Default.Edit,
+                                contentDescription = "Edit message",
+                                modifier = Modifier
+                                    .size(14.dp)
+                                    .clickable { onEdit(message.content) },
+                                tint = contentColor.copy(alpha = 0.5f)
+                            )
+                        }
+                        // Copy code blocks if present
+                        val codeBlocks = remember(message.content) {
+                            Regex("```[^\\n]*\\n(.*?)```", RegexOption.DOT_MATCHES_ALL).findAll(message.content).map { it.groupValues[1].trim() }.toList()
+                        }
+                        if (codeBlocks.isNotEmpty()) {
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Icon(
+                                imageVector = Icons.Default.ContentCopy,
+                                contentDescription = "Copy code",
+                                modifier = Modifier
+                                    .size(14.dp)
+                                    .clickable {
+                                        val cm = context.getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+                                        cm.setPrimaryClip(android.content.ClipData.newPlainText("code", codeBlocks.joinToString("\n\n")))
+                                        Toast.makeText(context, "Code copied", Toast.LENGTH_SHORT).show()
+                                    },
+                                tint = contentColor.copy(alpha = 0.5f)
+                            )
+                        }
+                    }
                 }
             }
         }
