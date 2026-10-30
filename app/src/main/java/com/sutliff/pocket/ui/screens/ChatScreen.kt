@@ -467,6 +467,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     }
 
     fun newSession() {
+        scope.launch {
             val session = sessionManager.createSession()
             currentSessionId = session.id
             setCurrentSessionId(context, session.id)
