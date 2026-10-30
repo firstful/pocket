@@ -14,6 +14,15 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.isCtrlPressed
+import androidx.compose.ui.input.key.isShiftPressed
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -128,6 +137,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     val listState = rememberLazyListState()
     val sessionManager = remember { AgentSessionManager(context) }
     val outbox = remember { OutboxStore(context) }
+    val inputFocus = remember { FocusRequester() }
 
     val isBusy =
         status == AgentStatus.SENDING || status == AgentStatus.WAITING || status == AgentStatus.STREAMING
@@ -492,6 +502,13 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         onDispose { monitor.unregister() }
     }
 
+    // ── auto-focus input when ready ──────────────────────────────────────────
+    LaunchedEffect(isReady) {
+        if (isReady) {
+            try { inputFocus.requestFocus() } catch (e: Exception) { /* ignore */ }
+        }
+    }
+
     // ── autoscroll to the newest entry ───────────────────────────────────────
     LaunchedEffect(timeline.size, streamingText, status) {
         val count = timeline.size +
@@ -516,6 +533,24 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         }
     ) {
         Scaffold(
+            modifier = Modifier.onKeyEvent { event ->
+                if (event.type != KeyEventType.KeyDown) return@onKeyEvent false
+                if (event.isCtrlPressed) {
+                    when (event.key) {
+                        Key.N -> { newSession(); true }
+                        Key.Comma -> { onNavigateToSettings(); true }
+                        Key.K -> { inputFocus.requestFocus(); true }
+                        else -> false
+                    }
+                } else {
+                    when (event.key) {
+                        Key.Escape -> {
+                            if (showSessionDrawer) { showSessionDrawer = false; true } else false
+                        }
+                        else -> false
+                    }
+                }
+            },
             topBar = {
                 TopAppBar(
                     title = { Text("Pocket") },
@@ -611,7 +646,26 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                             OutlinedTextField(
                                 value = inputText,
                                 onValueChange = { inputText = it },
-                                modifier = Modifier.weight(1f),
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .focusRequester(inputFocus)
+                                    .onKeyEvent { event ->
+                                        if (event.type != KeyEventType.KeyDown) return@onKeyEvent false
+                                        if (event.key == Key.Enter) {
+                                            if (event.isShiftPressed) {
+                                                // Shift+Enter: insert newline (default behavior)
+                                                false
+                                            } else {
+                                                // Enter: send
+                                                if (inputText.isNotBlank() && isReady && !isBusy && !isFlushing) {
+                                                    sendMessage(inputText)
+                                                }
+                                                true
+                                            }
+                                        } else {
+                                            false
+                                        }
+                                    },
                                 placeholder = {
                                     Text(if (isReady) "Message…" else "Loading…")
                                 },
