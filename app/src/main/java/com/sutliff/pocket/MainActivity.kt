@@ -9,7 +9,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.produceState
+import kotlinx.coroutines.flow.first
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.lifecycleScope
 import com.sutliff.pocket.datastore.getInferenceConfig
@@ -22,7 +23,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Telemetry.log(this, "main_activity_create")
         setContent {
-            val config by getInferenceConfig(this).collectAsState(initial = com.sutliff.pocket.data.InferenceConfig())
+            val config by produceState(initialValue = com.sutliff.pocket.data.InferenceConfig()) {
+                value = com.sutliff.pocket.datastore.getInferenceConfig(this@MainActivity).first()
+            }
             val darkTheme = when (config.darkMode) {
                 1 -> true
                 2 -> false
