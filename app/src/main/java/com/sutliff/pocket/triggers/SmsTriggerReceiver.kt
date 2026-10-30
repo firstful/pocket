@@ -73,7 +73,32 @@ class SmsTriggerReceiver : BroadcastReceiver() {
                     prompt = prompt,
                     onComplete = { result ->
                         Log.d(TAG, "Agent session completed: ${result.take(200)}")
-                        // TODO: Send SMS reply or notification
+                        // Send SMS reply with the result (truncated to SMS limits)
+                        try {
+                            val reply = result.trim().take(1400) // multi-part safe
+                            val sms = android.telephony.SmsManager.getDefault()
+                            if (reply.length > 160) {
+                                val parts = sms.divideMessage(reply)
+                                sms.sendMultipartTextMessage(sender, null, parts, null, null)
+                            } else {
+                                sms.sendTextMessage(sender, null, reply, null, null)
+                            }
+                            Log.d(TAG, "SMS reply sent to $sender")
+                            Telemetry.log(context, "sms_reply_sent", mapOf("to" to sender))
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Failed to send SMS reply", e)
+                            // Fall back to a notification
+                            try {
+                                val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
+                                val notification = android.app.Notification.Builder(context, "agent_notifications")
+                                    .setContentTitle("Pocket agent reply")
+                                    .setContentText(result.take(100))
+                                    .setSmallIcon(android.R.drawable.ic_dialog_info)
+                                    .setAutoCancel(true)
+                                    .build()
+                                nm.notify(System.currentTimeMillis().toInt(), notification)
+                            } catch (ignored: Exception) { }
+                        }
                     }
                 )
             } catch (e: Exception) {
