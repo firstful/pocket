@@ -126,6 +126,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var streamingText by remember { mutableStateOf("") }
     var errorMessage by remember { mutableStateOf<String?>(null) }
     var showSessionDrawer by remember { mutableStateOf(false) }
+    var showShortcuts by remember { mutableStateOf(false) }
     var toolCallStates by remember { mutableStateOf<Map<String, ToolCallState>>(emptyMap()) }
     var sessions by remember { mutableStateOf<List<ChatSession>>(emptyList()) }
     var queuedMessages by remember { mutableStateOf<List<QueuedMessage>>(emptyList()) }
@@ -540,6 +541,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         Key.N -> { newSession(); true }
                         Key.Comma -> { onNavigateToSettings(); true }
                         Key.K -> { inputFocus.requestFocus(); true }
+                        Key.Slash -> { if (event.isCtrlPressed) { showShortcuts = true; true } else false }
                         else -> false
                     }
                 } else {
@@ -565,6 +567,9 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         }
                         IconButton(onClick = onNavigateToSettings) {
                             Icon(Icons.Default.Settings, contentDescription = "Settings")
+                        }
+                        IconButton(onClick = { showShortcuts = true }) {
+                            Icon(Icons.Default.Info, contentDescription = "Keyboard shortcuts")
                         }
                     }
                 )
@@ -686,6 +691,26 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                 }
             }
         }
+    }
+    if (showShortcuts) {
+        AlertDialog(
+            onDismissRequest = { showShortcuts = false },
+            title = { Text("Keyboard shortcuts") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text("Enter — send message")
+                    Text("Shift+Enter — new line")
+                    Text("Ctrl+N — new session")
+                    Text("Ctrl+, — settings")
+                    Text("Ctrl+K — focus input")
+                    Text("Ctrl+/ — this help")
+                    Text("Esc — close session drawer")
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = { showShortcuts = false }) { Text("Close") }
+            }
+        )
     }
 }
 

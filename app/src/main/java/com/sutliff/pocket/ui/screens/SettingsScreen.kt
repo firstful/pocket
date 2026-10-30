@@ -11,6 +11,14 @@ import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.input.key.Key
+import androidx.compose.ui.input.key.KeyEventType
+import androidx.compose.ui.input.key.isCtrlPressed
+import androidx.compose.ui.input.key.key
+import androidx.compose.ui.input.key.onKeyEvent
+import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -44,6 +52,15 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
     }
 
     Scaffold(
+        modifier = Modifier.onKeyEvent { event ->
+            if (event.type != KeyEventType.KeyDown) return@onKeyEvent false
+            when (event.key) {
+                Key.Escape -> { onNavigateBack(); true }
+                else -> {
+                    if (event.isCtrlPressed && event.key == Key.S) { saveConfig(); onNavigateBack(); true } else false
+                }
+            }
+        },
         topBar = {
             TopAppBar(
                 title = { Text("Settings") },
