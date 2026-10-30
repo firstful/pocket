@@ -96,6 +96,26 @@ class AgentSessionManager(private val context: Context) {
         }
     }
 
+    fun pinSession(sessionId: String) {
+        val f = File(sessionsDir, "$sessionId.json")
+        if (f.exists()) {
+            try {
+                val session = json.decodeFromString<ChatSession>(f.readText())
+                f.writeText(json.encodeToString(session.copy(pinned = true)))
+            } catch (e: Exception) { /* ignore */ }
+        }
+    }
+
+    fun unpinSession(sessionId: String) {
+        val f = File(sessionsDir, "$sessionId.json")
+        if (f.exists()) {
+            try {
+                val session = json.decodeFromString<ChatSession>(f.readText())
+                f.writeText(json.encodeToString(session.copy(pinned = false)))
+            } catch (e: Exception) { /* ignore */ }
+        }
+    }
+
     fun deleteSession(sessionId: String) {
         File(sessionsDir, "$sessionId.json").delete()
     }

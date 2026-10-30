@@ -44,7 +44,8 @@ data class ChatSession(
     val messages: List<ChatMessage> = emptyList(),
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis(),
-    val archived: Boolean = false
+    val archived: Boolean = false,
+    val pinned: Boolean = false
 )
 
 @Serializable
