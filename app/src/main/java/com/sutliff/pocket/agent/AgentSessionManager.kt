@@ -60,8 +60,40 @@ class AgentSessionManager(private val context: Context) {
             ?.mapNotNull { f ->
                 try { json.decodeFromString<ChatSession>(f.readText()) } catch (e: Exception) { null }
             }
+            ?.filter { !it.archived }
             ?.sortedByDescending { it.updatedAt }
             ?: emptyList()
+    }
+
+    fun listArchivedSessions(): List<ChatSession> {
+        return sessionsDir.listFiles()
+            ?.filter { it.extension == "json" }
+            ?.mapNotNull { f ->
+                try { json.decodeFromString<ChatSession>(f.readText()) } catch (e: Exception) { null }
+            }
+            ?.filter { it.archived }
+            ?.sortedByDescending { it.updatedAt }
+            ?: emptyList()
+    }
+
+    fun archiveSession(sessionId: String) {
+        val f = File(sessionsDir, "$sessionId.json")
+        if (f.exists()) {
+            try {
+                val session = json.decodeFromString<ChatSession>(f.readText())
+                f.writeText(json.encodeToString(session.copy(archived = true)))
+            } catch (e: Exception) { /* ignore */ }
+        }
+    }
+
+    fun unarchiveSession(sessionId: String) {
+        val f = File(sessionsDir, "$sessionId.json")
+        if (f.exists()) {
+            try {
+                val session = json.decodeFromString<ChatSession>(f.readText())
+                f.writeText(json.encodeToString(session.copy(archived = false)))
+            } catch (e: Exception) { /* ignore */ }
+        }
     }
 
     fun deleteSession(sessionId: String) {

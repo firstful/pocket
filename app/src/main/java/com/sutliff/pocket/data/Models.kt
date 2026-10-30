@@ -43,7 +43,8 @@ data class ChatSession(
     val title: String,
     val messages: List<ChatMessage> = emptyList(),
     val createdAt: Long = System.currentTimeMillis(),
-    val updatedAt: Long = System.currentTimeMillis()
+    val updatedAt: Long = System.currentTimeMillis(),
+    val archived: Boolean = false
 )
 
 @Serializable

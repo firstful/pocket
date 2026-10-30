@@ -426,6 +426,13 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         scope.launch { performSend(text, null) }
     }
 
+    fun switchSession(direction: Int) {
+        val idx = sessions.indexOfFirst { it.id == currentSessionId }
+        if (idx < 0 || sessions.isEmpty()) return
+        val newIdx = (idx + direction).coerceIn(0, sessions.lastIndex)
+        if (newIdx != idx) loadSession(sessions[newIdx].id)
+    }
+
     fun editMessage(original: ChatMessage, newText: String) {
         if (newText.isBlank()) return
         scope.launch {
@@ -536,6 +543,11 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             setCurrentSessionId(context, session.id)
             applySession(session)
             refreshQueued(session.id)
+            // Auto-archive sessions older than 7 days
+            val cutoff = System.currentTimeMillis() - 7 * 24 * 60 * 60 * 1000L
+            for (s in sessionManager.listSessions() + sessionManager.listArchivedSessions()) {
+                if (s.updatedAt < cutoff && !s.archived) sessionManager.archiveSession(s.id)
+            }
             refreshSessions()
             isReady = true
             Telemetry.log(
@@ -615,6 +627,8 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         Key.N -> { newSession(); true }
                         Key.Comma -> { onNavigateToSettings(); true }
                         Key.K -> { inputFocus.requestFocus(); true }
+                        Key.DirectionLeft -> { switchSession(-1); true }
+                        Key.DirectionRight -> { switchSession(1); true }
                         Key.Slash -> { if (event.isCtrlPressed) { showShortcuts = true; true } else false }
                         else -> false
                     }
@@ -842,6 +856,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                     Text("Ctrl+N — new session")
                     Text("Ctrl+, — settings")
                     Text("Ctrl+K — focus input")
+                    Text("Ctrl+Left/Right — swap sessions")
                     Text("Ctrl+/ — this help")
                     Text("Esc — close session drawer")
                 }
@@ -1032,7 +1047,7 @@ fun MessageBubble(
                             style = MaterialTheme.typography.labelSmall,
                             color = contentColor.copy(alpha = 0.5f)
                         )
-                        if (isUser && onEdit != null) {
+                        if (message.role == "user" && onEdit != null) {
                             Spacer(modifier = Modifier.width(8.dp))
                             Icon(
                                 imageVector = Icons.Default.Edit,
