@@ -426,13 +426,6 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         scope.launch { performSend(text, null) }
     }
 
-    fun switchSession(direction: Int) {
-        val idx = sessions.indexOfFirst { it.id == currentSessionId }
-        if (idx < 0 || sessions.isEmpty()) return
-        val newIdx = (idx + direction).coerceIn(0, sessions.lastIndex)
-        if (newIdx != idx) loadSession(sessions[newIdx].id)
-    }
-
     fun editMessage(original: ChatMessage, newText: String) {
         if (newText.isBlank()) return
         scope.launch {
@@ -503,6 +496,13 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             Telemetry.log(context, "session_switch")
             if (isOnline && queuedMessages.isNotEmpty()) flushQueue()
         }
+    }
+
+    fun switchSession(direction: Int) {
+        val idx = sessions.indexOfFirst { it.id == currentSessionId }
+        if (idx < 0 || sessions.isEmpty()) return
+        val newIdx = (idx + direction).coerceIn(0, sessions.lastIndex)
+        if (newIdx != idx) loadSession(sessions[newIdx].id)
     }
 
     fun deleteSession(session: ChatSession) {
