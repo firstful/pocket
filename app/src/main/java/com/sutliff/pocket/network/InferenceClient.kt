@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.serialization.json.*
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
+import android.util.Log
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
 import java.util.concurrent.TimeUnit
@@ -56,27 +57,31 @@ class InferenceClient(private val config: InferenceConfig) {
             .build()
 
         onPhase?.invoke(AgentStatus.SENDING)
+        Log.d("PocketNet", "streamChat: executing request url=${config.baseUrl}/chat/completions")
         val response = client.newCall(request).execute()
+        Log.d("PocketNet", "streamChat: response code=${response.code}")
         if (!response.isSuccessful) {
             throw IOException("HTTP ${response.code}: ${response.body?.string()}")
         }
         onPhase?.invoke(AgentStatus.WAITING)
 
         val source = response.body?.source() ?: throw IOException("Empty response body")
-
+        var lineCount = 0
         while (!source.exhausted()) {
             val line = source.readUtf8Line() ?: break
+            lineCount++
             if (line.startsWith("data: ")) {
                 val data = line.removePrefix("data: ").trim()
-                if (data == "[DONE]") break
+                if (data == "[DONE]") { Log.d("PocketNet", "streamChat: [DONE] after $lineCount lines"); break }
                 try {
                     val chunk = json.decodeFromString(StreamChunk.serializer(), data)
                     emit(chunk)
                 } catch (e: Exception) {
-                    // skip malformed chunks
+                    Log.w("PocketNet", "streamChat: skip malformed chunk: ${e.message}")
                 }
             }
         }
+        Log.d("PocketNet", "streamChat: loop done, lines=$lineCount")
     }.flowOn(Dispatchers.IO)
 
     fun nonStreamChat(

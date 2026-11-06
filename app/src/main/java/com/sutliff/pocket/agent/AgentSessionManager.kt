@@ -1,6 +1,7 @@
 package com.sutliff.pocket.agent
 
 import android.content.Context
+import android.util.Log
 import com.sutliff.pocket.data.*
 import com.sutliff.pocket.network.InferenceClient
 import com.sutliff.pocket.tools.AndroidToolRegistry
@@ -169,26 +170,36 @@ class AgentSessionManager(private val context: Context) {
             var autoIdCounter = 0
 
             contentBuilder = StringBuilder()
-            stream.collect { chunk ->
-                chunk.choices.firstOrNull()?.delta?.let { delta ->
-                    delta.content?.let {
-                        contentBuilder.append(it)
-                        onEvent(AgentEvent.ContentDelta(it))
-                    }
-                    delta.toolCalls?.forEach { fragment ->
-                        val explicitId = fragment.id
-                        val key = if (explicitId.isNotBlank()) {
-                            lastToolId = explicitId
-                            explicitId
-                        } else {
-                            lastToolId
-                                ?: "call_auto_${autoIdCounter++}".also { generated -> lastToolId = generated }
+            try {
+                stream.collect { chunk ->
+                    try {
+                        chunk.choices.firstOrNull()?.delta?.let { delta ->
+                            delta.content?.let {
+                                contentBuilder.append(it)
+                                onEvent(AgentEvent.ContentDelta(it))
+                            }
+                            delta.toolCalls?.forEach { fragment ->
+                                val explicitId = fragment.id
+                                val key = if (explicitId.isNotBlank()) {
+                                    lastToolId = explicitId
+                                    explicitId
+                                } else {
+                                    lastToolId
+                                        ?: "call_auto_${autoIdCounter++}".also { generated -> lastToolId = generated }
+                                }
+                                val merged = mergeToolCall(toolCalls[key], fragment.copy(id = key))
+                                toolCalls[key] = merged
+                                onEvent(AgentEvent.ToolCallStart(merged))
+                            }
                         }
-                        val merged = mergeToolCall(toolCalls[key], fragment.copy(id = key))
-                        toolCalls[key] = merged
-                        onEvent(AgentEvent.ToolCallStart(merged))
+                    } catch (e: Exception) {
+                        Log.e("PocketAgent", "stream.collect inner error", e)
+                        onEvent(AgentEvent.Error(e.message ?: "stream error"))
                     }
                 }
+            } catch (e: Exception) {
+                Log.e("PocketAgent", "stream.collect outer error", e)
+                onEvent(AgentEvent.Error(e.message ?: "connection error"))
             }
 
             if (toolCalls.isEmpty()) {
