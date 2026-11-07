@@ -1,6 +1,7 @@
 package com.sutliff.pocket.data
 
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.SerialName
 
 @Serializable
 data class InferenceConfig(
@@ -26,15 +27,15 @@ data class ChatMessage(
 
 @Serializable
 data class ToolCall(
-    val id: String,
+    val id: String = "",
     val type: String = "function",
     val function: FunctionCall
 )
 
 @Serializable
 data class FunctionCall(
-    val name: String,
-    val arguments: String
+    val name: String = "",
+    val arguments: String = ""
 )
 
 @Serializable
@@ -65,7 +66,7 @@ data class StreamChoice(
 data class DeltaContent(
     val role: String? = null,
     val content: String? = null,
-    val toolCalls: List<ToolCall>? = null
+    @SerialName("tool_calls") val toolCalls: List<ToolCall>? = null
 )
 
 @Serializable
