@@ -13,9 +13,16 @@ val gitCommitCount: Int = try {
             commandLine("git", "-C", project.rootDir, "rev-list", "--count", "HEAD")
             standardOutput = baos
         }
-        baos.toString().trim().toInt()
+        val count = baos.toString().trim().toInt()
+        // Shallow clone (fetch-depth: 1) makes the count 1 forever; the store
+        // derives versionCode from the APK itself and rejects non-increasing
+        // installs, so a stuck code is a silent permanent "up to date".
+        check(count >= 2) { "git commit count $count < 2 — shallow clone? use fetch-depth: 0" }
+        count
     }
-} catch (_: Exception) { 1 }
+} catch (e: Exception) {
+    throw IllegalStateException("versionCode derivation failed — refusing to publish versionCode=1", e)
+}
 
 val gitCommitHash: String = try {
     ByteArrayOutputStream().use { baos ->
