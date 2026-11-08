@@ -43,6 +43,7 @@ import com.sutliff.pocket.datastore.setCurrentSessionId
 import com.sutliff.pocket.network.NetworkMonitor
 import com.sutliff.pocket.network.isNetworkAvailable
 import com.sutliff.pocket.telemetry.Telemetry
+import dev.jeziellago.compose.markdowntext.MarkdownText
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -597,11 +598,21 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         }
     }
 
-    // ── autoscroll to the newest entry ───────────────────────────────────────
-    LaunchedEffect(timeline.size, streamingText, status) {
+    // ── near-bottom tracking for auto-scroll / jump-to-current ───────────────
+    val isNearBottom by remember {
+        derivedStateOf {
+            val info = listState.layoutInfo
+            val total = info.totalItemsCount
+            val lastVisible = info.visibleItemsInfo.lastOrNull()?.index ?: -1
+            total == 0 || lastVisible >= total - 2
+        }
+    }
+
+    // ── autoscroll to the newest entry (only when already near bottom) ───────
+    LaunchedEffect(timeline.size, streamingText, status, isNearBottom) {
         val count = timeline.size +
             if (status != AgentStatus.IDLE || streamingText.isNotEmpty()) 1 else 0
-        if (count > 0) {
+        if (count > 0 && isNearBottom) {
             listState.animateScrollToItem(count - 1)
         }
     }
@@ -709,39 +720,61 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                     }
                 }
 
-                LazyColumn(
-                    state = listState,
+                Box(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
-                        .padding(horizontal = 12.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                    contentPadding = PaddingValues(vertical = 8.dp)
                 ) {
-                    items(timeline.size) { index ->
-                        when (val entry = timeline[index]) {
-                            is TimelineEntry.Msg -> MessageBubble(
-                                message = entry.message,
-                                queued = entry.queued,
-                                queuedAt = entry.queuedAt,
-                                onEdit = if (entry.message.role == "user") { { _ -> inputText = entry.message.content; Toast.makeText(context, "Edit and resend", Toast.LENGTH_SHORT).show() } } else null
-                            )
-                            is TimelineEntry.Tool -> {
-                                val toolState = toolCallStates[entry.toolCallId]
-                                if (toolState != null) {
-                                    ToolCallBubble(toolState)
+                    LazyColumn(
+                        state = listState,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(horizontal = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                        contentPadding = PaddingValues(vertical = 8.dp)
+                    ) {
+                        items(timeline.size) { index ->
+                            when (val entry = timeline[index]) {
+                                is TimelineEntry.Msg -> MessageBubble(
+                                    message = entry.message,
+                                    queued = entry.queued,
+                                    queuedAt = entry.queuedAt,
+                                    onEdit = if (entry.message.role == "user") { { _ -> inputText = entry.message.content; Toast.makeText(context, "Edit and resend", Toast.LENGTH_SHORT).show() } } else null
+                                )
+                                is TimelineEntry.Tool -> {
+                                    val toolState = toolCallStates[entry.toolCallId]
+                                    if (toolState != null) {
+                                        ToolCallBubble(toolState)
+                                    }
                                 }
+                            }
+                        }
+
+                        if (status != AgentStatus.IDLE || streamingText.isNotEmpty()) {
+                            item {
+                                MessageBubble(
+                                    message = ChatMessage(role = "assistant", content = streamingText),
+                                    isStreaming = true,
+                                    statusLabel = statusText(status)
+                                )
                             }
                         }
                     }
 
-                    if (status != AgentStatus.IDLE || streamingText.isNotEmpty()) {
-                        item {
-                            MessageBubble(
-                                message = ChatMessage(role = "assistant", content = streamingText),
-                                isStreaming = true,
-                                statusLabel = statusText(status)
-                            )
+                    if (!isNearBottom) {
+                        FloatingActionButton(
+                            onClick = {
+                                scope.launch {
+                                    val count = timeline.size +
+                                        if (status != AgentStatus.IDLE || streamingText.isNotEmpty()) 1 else 0
+                                    if (count > 0) listState.animateScrollToItem(count - 1)
+                                }
+                            },
+                            modifier = Modifier
+                                .align(Alignment.BottomEnd)
+                                .padding(16.dp)
+                        ) {
+                            Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Jump to current")
                         }
                     }
                 }
@@ -1035,10 +1068,14 @@ fun MessageBubble(
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                 }
-                Text(
-                    text = message.content.ifEmpty { if (isStreaming) "..." else "" },
-                    color = contentColor,
-                    style = MaterialTheme.typography.bodyMedium
+                val displayContent = message.content.ifEmpty { if (isStreaming) "..." else "" }
+                MarkdownText(
+                    markdown = displayContent,
+                    style = MaterialTheme.typography.bodyMedium.copy(color = contentColor),
+                    linkColor = contentColor,
+                    isTextSelectable = true,
+                    maxLines = Int.MAX_VALUE,
+                    disableLinkMovementMethod = false
                 )
                 if (!isStreaming && message.content.isNotBlank()) {
                     Spacer(modifier = Modifier.height(4.dp))
