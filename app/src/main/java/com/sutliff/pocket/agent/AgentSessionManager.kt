@@ -5,6 +5,7 @@ import android.util.Log
 import com.sutliff.pocket.data.*
 import com.sutliff.pocket.network.InferenceClient
 import com.sutliff.pocket.network.RookClient
+import com.sutliff.pocket.permissions.SmsPermissions
 import com.sutliff.pocket.tools.AndroidToolRegistry
 import com.sutliff.pocket.tools.ToolContext
 import com.sutliff.pocket.tools.ToolRegistry
@@ -151,6 +152,16 @@ class AgentSessionManager(private val context: Context) {
         currentMessages = meta.messages.toMutableList()
         currentMessages.add(ChatMessage(role = "user", content = userMessage))
 
+        // Inject SMS opt-in state as a system note ahead of the per-turn messages so the
+        // model can explain the disabled-by-default behaviour instead of silently failing.
+        val smsNote = ChatMessage(
+            role = "system",
+            content = "SMS tools are disabled by default. If the user asks for SMS tasks, " +
+                "instruct them to enable it in Settings > SMS permissions. " +
+                "Current SMS state: ${SmsPermissions.stateLabel(context)}."
+        )
+        val messagesForModel = listOf(smsNote) + currentMessages
+
         // ── Rook subagent route: @rook prefix → Hermes gateway Responses API ──
         val trimmed = userMessage.trim()
         if (trimmed.startsWith("@rook", ignoreCase = true)) {
@@ -191,9 +202,11 @@ class AgentSessionManager(private val context: Context) {
         var rounds = 0
         val maxRounds = 10
         var contentBuilder = StringBuilder()
+        // Wire list: never persisted, rebuilt each run() so it never leaks into session JSON.
+        var wireMessages: List<ChatMessage> = messagesForModel
 
         while (rounds < maxRounds) {
-            val stream = client.streamChat(currentMessages, tools, onPhase = onStatus)
+            val stream = client.streamChat(wireMessages, tools, onPhase = onStatus)
 
             // Tool calls arrive as fragmented deltas (id+name first, then argument tails,
             // possibly with blank ids). Accumulate them per call, in arrival order, so the UI
@@ -252,6 +265,7 @@ class AgentSessionManager(private val context: Context) {
                 toolCalls = toolCalls.values.toList()
             )
             currentMessages.add(assistantMsg)
+            wireMessages = wireMessages + assistantMsg
             onEvent(AgentEvent.MessageComplete(assistantMsg))
 
             for (toolCall in toolCalls.values) {
@@ -269,11 +283,13 @@ class AgentSessionManager(private val context: Context) {
                     "Error: Unknown tool '${toolCall.function.name}'"
                 }
 
-                currentMessages.add(ChatMessage(
+                val toolMsg = ChatMessage(
                     role = "tool",
                     content = result,
                     toolCallId = toolCall.id
-                ))
+                )
+                currentMessages.add(toolMsg)
+                wireMessages = wireMessages + toolMsg
                 onEvent(AgentEvent.ToolCallResult(toolCall.id, result))
             }
 

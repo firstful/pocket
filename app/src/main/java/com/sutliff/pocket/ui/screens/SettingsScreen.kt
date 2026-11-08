@@ -26,9 +26,13 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.datastore.saveInferenceConfig
+import com.sutliff.pocket.permissions.SmsPermissions
+import com.sutliff.pocket.telemetry.Telemetry
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import com.sutliff.pocket.appContext
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -38,6 +42,16 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
 
     var config by remember { mutableStateOf(InferenceConfig()) }
     var showApiKey by remember { mutableStateOf(false) }
+    var smsGranted by remember(context) { mutableStateOf(SmsPermissions.isGranted(context)) }
+    var smsNotice by remember { mutableStateOf<String?>(null) }
+
+    val smsPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { _ ->
+        smsGranted = SmsPermissions.isGranted(context)
+        smsNotice = if (smsGranted) "SMS permissions granted." else "SMS is disabled — toggle again to retry."
+        Telemetry.log(context, "sms_opt_in", mapOf("granted" to smsGranted.toString()))
+    }
 
     // Initialize config eagerly at composition time (runBlocking is safe here, not in a suspend lambda)
     remember(context) {
@@ -192,6 +206,42 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
                         )
                     }
                 }
+            }
+
+            // SMS permissions (opt-in, disabled by default)
+            Text("SMS permissions", style = MaterialTheme.typography.titleMedium)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text("SMS tools")
+                    Text(
+                        text = if (smsGranted) "Granted — SMS tools are enabled." else "Disabled by default. SMS tools are opt-in.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                Switch(
+                    checked = smsGranted,
+                    onCheckedChange = { enable ->
+                        if (enable) {
+                            smsPermissionLauncher.launch(SmsPermissions.REQUIRED_PERMISSIONS)
+                        } else {
+                            smsNotice = "To disable SMS, revoke it in Android Settings > Apps > Pocket > Permissions > SMS."
+                            smsGranted = SmsPermissions.isGranted(context)
+                        }
+                    }
+                )
+            }
+            Text(
+                text = "State: ${SmsPermissions.stateLabel(context)}",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            smsNotice?.let { notice ->
+                Text(notice, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
 
             Spacer(modifier = Modifier.height(16.dp))

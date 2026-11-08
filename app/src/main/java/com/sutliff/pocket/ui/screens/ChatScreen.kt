@@ -143,6 +143,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
     var isReady by remember { mutableStateOf(false) }
     var isFlushing by remember { mutableStateOf(false) }
     var flushJob by remember { mutableStateOf<Job?>(null) }
+    var streamJob by remember { mutableStateOf<Job?>(null) }
 
     val listState = rememberLazyListState()
     val sessionManager = remember { AgentSessionManager(context) }
@@ -362,6 +363,19 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                 isFlushing = false
             }
         }
+        streamJob = flushJob
+    }
+
+    /** Cancels the active streaming turn (Stop button). Safe to call when idle. */
+    fun stopStreaming() {
+        val job = streamJob ?: flushJob
+        if (job?.isActive == true) {
+            job.cancel()
+            Telemetry.log(context, "chat_stop")
+            streamingText = ""
+            status = AgentStatus.IDLE
+        }
+        streamJob = null
     }
 
     fun regenerate() {
@@ -372,7 +386,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
         if (lastAssistantIdx >= 0) {
             timeline = timeline.toMutableList().apply { removeAt(lastAssistantIdx) }
         }
-        scope.launch { performSend(lastUserMessage, null) }
+        streamJob = scope.launch { performSend(lastUserMessage, null) }
     }
 
     fun exportSession() {
@@ -424,7 +438,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             return
         }
         timeline = timeline + TimelineEntry.Msg(ChatMessage(role = "user", content = text))
-        scope.launch { performSend(text, null) }
+        streamJob = scope.launch { performSend(text, null) }
     }
 
     fun editMessage(original: ChatMessage, newText: String) {
@@ -456,7 +470,7 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
             // Re-send to agent
             inputText = newText
             lastUserMessage = newText
-            scope.launch { performSend(newText, null) }
+            streamJob = scope.launch { performSend(newText, null) }
         }
     }
 
@@ -797,6 +811,16 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                                 .padding(start = 8.dp, end = 8.dp, bottom = 8.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
+                            if (isBusy || isFlushing) {
+                                FilledTonalButton(
+                                    onClick = { stopStreaming() },
+                                    modifier = Modifier.padding(end = 8.dp)
+                                ) {
+                                    Icon(Icons.Default.Close, contentDescription = "Stop")
+                                    Spacer(modifier = Modifier.width(4.dp))
+                                    Text("Stop")
+                                }
+                            }
                             OutlinedTextField(
                                 value = inputText,
                                 onValueChange = { inputText = it },
