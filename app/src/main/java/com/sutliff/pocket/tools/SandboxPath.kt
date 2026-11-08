@@ -1,3 +1,5 @@
+package com.sutliff.pocket.tools
+
 /**
  * Map Android-host paths that are not writable by the app (e.g. /tmp) to an
  * app-owned directory under cacheDir, so fs_read/fs_list/fs_write/fs_exists
