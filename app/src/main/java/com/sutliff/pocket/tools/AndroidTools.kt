@@ -15,9 +15,11 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import android.provider.ContactsContract
 import android.provider.Settings
+import android.provider.Telephony
 import android.telephony.SmsManager
 import android.telephony.TelephonyManager
 import androidx.core.content.ContextCompat
+import com.sutliff.pocket.permissions.SmsPermissions
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.add
@@ -311,6 +313,10 @@ class SmsReplyTool : Tool {
     }
 
     fun execute(args: Map<String, String>, ctx: ToolContext): String {
+        // Opt-in gate: review Safety for full policy
+        if (!SmsPermissions.isGranted(ctx.context)) {
+            return SmsPermissions.DISABLED_MESSAGE
+        }
         return try {
             val to = args["to"] ?: return "No phone number"
             val message = args["message"] ?: return "No message"
@@ -318,10 +324,105 @@ class SmsReplyTool : Tool {
             sms.sendTextMessage(to, null, message, null, null)
             "SMS sent to $to"
         } catch (e: SecurityException) {
-            "Permission denied: ${e.message}"
+            SmsPermissions.DISABLED_MESSAGE
         } catch (e: Exception) {
             "Error: ${e.message}"
         }
+    }
+}
+
+class SmsReadTool : Tool {
+    override val name = "sms_read"
+    override val description = "Read SMS messages from the device (requires SMS enabled in Settings > SMS permissions)."
+    override val parameters = buildJsonObject {
+        put("type", "object")
+        putJsonObject("properties") {
+            putJsonObject("address") {
+                put("type", "string")
+                put("description", "Optional phone number to filter by (e.g. 6143540146)")
+            }
+            putJsonObject("limit") {
+                put("type", "integer")
+                put("description", "Max messages to return (default 20)")
+            }
+        }
+    }
+
+    override fun execute(args: Map<String, String>): String {
+        return "SMS tool requires ToolContext — use SmsReadToolCtx"
+    }
+
+    fun execute(args: Map<String, String>, ctx: ToolContext): String {
+        if (!SmsPermissions.isGranted(ctx.context)) {
+            return SmsPermissions.DISABLED_MESSAGE
+        }
+        return try {
+            val address = args["address"]?.takeIf { it.isNotBlank() }
+            val limit = args["limit"]?.toIntOrNull()?.coerceIn(1, 100) ?: 20
+            val projection = arrayOf(
+                Telephony.Sms._ID,
+                Telephony.Sms.ADDRESS,
+                Telephony.Sms.BODY,
+                Telephony.Sms.DATE,
+                Telephony.Sms.TYPE
+            )
+            val selection = address?.let { "${Telephony.Sms.ADDRESS} LIKE ?" }
+            val selectionArgs = address?.let { arrayOf("%$address%") }
+            val cursor = try {
+                ctx.context.contentResolver.query(
+                    Telephony.Sms.CONTENT_URI,
+                    projection,
+                    selection,
+                    selectionArgs,
+                    "${Telephony.Sms.DATE} DESC"
+                )
+            } catch (e: SecurityException) {
+                return SmsPermissions.DISABLED_MESSAGE
+            }
+            val results = mutableListOf<String>()
+            cursor?.use {
+                while (it.moveToNext() && results.size < limit) {
+                    val id = it.getLong(0)
+                    val addr = it.getString(1) ?: ""
+                    val body = it.getString(2) ?: ""
+                    val date = it.getLong(3)
+                    val type = it.getInt(4)
+                    val typeStr = if (type == Telephony.Sms.MESSAGE_TYPE_INBOX) "inbox" else "sent"
+                    results.add("[$id] $addr ($typeStr, $date): $body")
+                }
+            }
+            if (results.isEmpty()) {
+                return "No SMS messages found" + (address?.let { " for $it" } ?: "")
+            }
+            results.joinToString("\n")
+        } catch (e: SecurityException) {
+            SmsPermissions.DISABLED_MESSAGE
+        } catch (e: Exception) {
+            "Error: ${e.message}"
+        }
+    }
+}
+
+class SmsInboxTool : Tool {
+    override val name = "sms_inbox"
+    override val description = "List recent SMS inbox messages."
+    override val parameters = buildJsonObject {
+        put("type", "object")
+        putJsonObject("properties") {
+            putJsonObject("limit") {
+                put("type", "integer")
+                put("description", "Max messages to return (default 20)")
+            }
+        }
+    }
+
+    override fun execute(args: Map<String, String>): String {
+        return "SMS tool requires ToolContext — use SmsInboxToolCtx"
+    }
+
+    fun execute(args: Map<String, String>, ctx: ToolContext): String {
+        // Delegate to SmsReadTool for consistent permission gating and query logic.
+        return SmsReadTool().execute(mapOf("limit" to (args["limit"] ?: "20")), ctx)
     }
 }
 
@@ -736,6 +837,22 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         override val description = smsReplyTool.description
         override val parameters = smsReplyTool.parameters
         override fun execute(args: Map<String, String>): String = smsReplyTool.execute(args, ctx)
+    })
+
+    val smsReadTool = SmsReadTool()
+    registry.register(object : Tool {
+        override val name = smsReadTool.name
+        override val description = smsReadTool.description
+        override val parameters = smsReadTool.parameters
+        override fun execute(args: Map<String, String>): String = smsReadTool.execute(args, ctx)
+    })
+
+    val smsInboxTool = SmsInboxTool()
+    registry.register(object : Tool {
+        override val name = smsInboxTool.name
+        override val description = smsInboxTool.description
+        override val parameters = smsInboxTool.parameters
+        override fun execute(args: Map<String, String>): String = smsInboxTool.execute(args, ctx)
     })
 
     val contactsTool = ContactsTool()
