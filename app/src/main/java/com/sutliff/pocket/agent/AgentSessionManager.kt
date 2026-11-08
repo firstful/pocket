@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import com.sutliff.pocket.data.*
 import com.sutliff.pocket.network.InferenceClient
+import com.sutliff.pocket.network.RookClient
 import com.sutliff.pocket.tools.AndroidToolRegistry
 import com.sutliff.pocket.tools.ToolContext
 import com.sutliff.pocket.tools.ToolRegistry
@@ -149,6 +150,38 @@ class AgentSessionManager(private val context: Context) {
         }
         currentMessages = meta.messages.toMutableList()
         currentMessages.add(ChatMessage(role = "user", content = userMessage))
+
+        // ── Rook subagent route: @rook prefix → Hermes gateway Responses API ──
+        val trimmed = userMessage.trim()
+        if (trimmed.startsWith("@rook", ignoreCase = true)) {
+            val rookInput = trimmed.substring(5).trim().ifEmpty { "Hello" }
+            val rookClient = RookClient()
+            val contentBuilder = StringBuilder()
+            try {
+                onStatus(AgentStatus.SENDING)
+                rookClient.streamResponses(rookInput, onPhase = onStatus).collect { delta ->
+                    contentBuilder.append(delta)
+                    onEvent(AgentEvent.ContentDelta(delta))
+                }
+                val finalMsg = ChatMessage(role = "assistant", content = contentBuilder.toString())
+                currentMessages.add(finalMsg)
+                onEvent(AgentEvent.MessageComplete(finalMsg))
+                saveCurrentSession()
+            } catch (e: Exception) {
+                Log.e("PocketAgent", "rook stream error", e)
+                onEvent(AgentEvent.Error(e.message ?: "Rook connection error"))
+                // persist whatever we got
+                if (contentBuilder.isNotEmpty()) {
+                    val partial = ChatMessage(role = "assistant", content = contentBuilder.toString())
+                    currentMessages.add(partial)
+                    onEvent(AgentEvent.MessageComplete(partial))
+                }
+                saveCurrentSession()
+            } finally {
+                onStatus(AgentStatus.IDLE)
+            }
+            return
+        }
 
         val config = currentConfig
         val toolRegistry = AndroidToolRegistry(ToolContext(context, context.filesDir.absolutePath))

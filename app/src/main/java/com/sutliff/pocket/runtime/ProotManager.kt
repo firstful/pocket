@@ -20,12 +20,18 @@ class ProotManager(private val context: Context) {
 
     fun isReady(): Boolean = prootBin.exists() && alpineRoot.exists() && File(alpineRoot, "bin/sh").exists()
 
+    private val provisionMarker = File(rootDir, ".provisioned")
+
     suspend fun ensureReady(): Boolean = withContext(Dispatchers.IO) {
-        if (isReady()) return@withContext true
+        if (isReady()) {
+            if (!provisionMarker.exists()) provisionPackages()
+            return@withContext true
+        }
         rootDir.mkdirs()
         try {
             if (!prootBin.exists()) downloadProot()
             if (!alpineRoot.exists()) downloadAlpine()
+            if (isReady() && !provisionMarker.exists()) provisionPackages()
             true
         } catch (e: Exception) {
             Log.e(TAG, "Failed to set up proot environment", e)
@@ -79,6 +85,24 @@ class ProotManager(private val context: Context) {
         } else {
             // Fallback: use GZIP + basic tar parsing (limited)
             throw Exception("tar not available on this device")
+        }
+    }
+
+    private fun provisionPackages() {
+        if (!isReady()) return
+        try {
+            val cmd = "apk add --no-cache bash python3 curl wget ripgrep grep jq git 2>&1 | tail -20"
+            val pb = ProcessBuilder(buildCommand(cmd))
+            val process = pb.redirectErrorStream(true).start()
+            process.waitFor()
+            val out = process.inputStream.bufferedReader().readText()
+            Log.d(TAG, "provision output: $out")
+            // Also ensure /tmp exists inside rootfs
+            val tmp = File(alpineRoot, "tmp")
+            tmp.mkdirs()
+            provisionMarker.writeText("1")
+        } catch (e: Exception) {
+            Log.e(TAG, "Provision failed", e)
         }
     }
 

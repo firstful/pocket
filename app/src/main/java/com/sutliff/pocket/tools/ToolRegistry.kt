@@ -207,7 +207,8 @@ class HealthCheckTool : Tool {
     }
 
     override fun execute(args: Map<String, String>): String {
-        val appDir = "/data/local/tmp/pocket"
+        val app = com.sutliff.pocket.AgentApp.instance
+        val appDir = app?.filesDir?.absolutePath ?: "/data/local/tmp/pocket"
         val prootDir = java.io.File(appDir, PROOT_DIR)
         val alpineDir = java.io.File(appDir, ALPINE_DIR)
         return buildString {

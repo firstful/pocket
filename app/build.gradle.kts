@@ -58,6 +58,7 @@ android {
 
         buildConfigField("String", "TELEMETRY_URL", "\"${project.findProperty("telemetryUrl") ?: "https://telemetry.ffilt.us/"}\"")
         buildConfigField("String", "GIT_HASH", "\"$gitCommitHash\"")
+        buildConfigField("String", "API_SERVER_KEY", "\"${project.findProperty("apiServerKey") ?: System.getenv("API_SERVER_KEY") ?: ""}\"")
     }
 
     buildFeatures {

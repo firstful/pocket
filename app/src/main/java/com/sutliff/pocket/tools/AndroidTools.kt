@@ -542,9 +542,12 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
             }
             // Fallback: run on host Android
             return try {
-                val process = ProcessBuilder(*command.split(" ").toTypedArray())
-                    .directory(java.io.File(args["cwd"] ?: "/root"))
+                val process = ProcessBuilder("/system/bin/sh", "-c", command)
+                    .directory(ctx.context.cacheDir)
                     .redirectErrorStream(true)
+                    .apply {
+                        environment()["PATH"] = "/system/bin:/system/xbin:/vendor/bin:" + (environment()["PATH"] ?: "")
+                    }
                     .start()
                 val output = process.inputStream.bufferedReader().readText()
                 val exitCode = process.waitFor()
@@ -581,7 +584,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
             val offset = args["offset"]?.toInt() ?: 0
             val limit = args["limit"]?.toInt() ?: 8192
             return try {
-                val file = java.io.File(path)
+                val file = resolveSandboxPath(path, ctx)
                 if (!file.exists()) return "File not found: $path"
                 val raf = java.io.RandomAccessFile(file, "r")
                 raf.seek(offset.toLong())
@@ -610,7 +613,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"
-            val dir = java.io.File(path)
+            val dir = resolveSandboxPath(path, ctx)
             if (!dir.exists() || !dir.isDirectory) return "Not a directory: $path"
             return dir.listFiles()?.joinToString("\n") { f ->
                 val type = if (f.isDirectory) "DIR" else "FILE"
@@ -646,7 +649,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
             val content = args["content"] ?: ""
             val append = args["append"]?.toBoolean() ?: false
             return try {
-                val file = java.io.File(path)
+                val file = resolveSandboxPath(path, ctx)
                 file.parentFile?.mkdirs()
                 java.io.FileWriter(file, append).use { it.write(content) }
                 "Wrote ${content.length} chars to $path"
@@ -671,7 +674,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         }
         override fun execute(args: Map<String, String>): String {
             val path = args["path"] ?: return "Error: no path"
-            val file = java.io.File(path)
+            val file = resolveSandboxPath(path, ctx)
             if (!file.exists()) return "Not found: $path"
             val type = if (file.isDirectory) "directory" else "file"
             return "$path exists ($type, ${file.length()} bytes)"
