@@ -3,10 +3,14 @@ package com.sutliff.pocket.telemetry
 import android.content.Context
 import android.util.Log
 import com.sutliff.pocket.BuildConfig
+import com.sutliff.pocket.data.TelemetryConfig
+import com.sutliff.pocket.datastore.getTelemetryConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.json.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -16,16 +20,23 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * Best-effort, fire-and-forget raw-string telemetry.
+ * Generic OpenTelemetry (OTEL) Logs exporter (todo #423 follow-up).
  *
- * - Body is a minimal plain string capped at 2KB (server allows 4KB).
- * - One in-flight POST at a time; callers enqueue and never block.
- * - No retries beyond the initial attempt; failures are dropped.
- * - No PII: never device id, model, or build fingerprint.
+ * - [TelemetryConfig.endpoint] empty or [TelemetryConfig.format] != "otlp_json" => OFF (no-op).
+ * - When configured, events are POSTed as an OTEL Logs JSON envelope:
+ *     { resourceLogs: [ { resource: { attributes: [ {key:"service.name", value:{stringValue:"pocket"}} ] },
+ *                        scopeLogs: [ { scope: {name:"com.sutliff.pocket"}, logRecords: [
+ *                          { timeUnixNano, severityText, body:{stringValue: event},
+ *                            attributes: [ {key, value:{stringValue}} ... ] } ] } ] } ] }
+ * - Fire-and-forget, one in-flight POST, bounded queue (128, drop-oldest), no retries.
+ * - No PII: never device id, model, or build fingerprint. Attribute values are
+ *   sanitized to a single token (no whitespace) and truncated.
+ * - Config is cached in memory and refreshed from DataStore on every log() call
+ *   (read is cheap; DataStore caches the file). The cached value is volatile.
  */
 object Telemetry {
     private const val TAG = "Telemetry"
-    private const val MAX_BODY_BYTES = 2048
+    private const val MAX_BODY_BYTES = 4096
     private const val MAX_QUEUE = 128
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -38,18 +49,32 @@ object Telemetry {
     private val queue = ConcurrentLinkedQueue<String>()
     private val inFlight = AtomicBoolean(false)
 
-    fun log(context: Context, event: String, extras: Map<String, String> = emptyMap()) {
-        // Build body without any PII (no device id / model / build).
-        val version = try { BuildConfig.VERSION_NAME } catch (_: Throwable) { "unknown" }
-        val ts = System.currentTimeMillis()
-        val sb = StringBuilder()
-        sb.append("pocket ").append(sanitize(version))
-        sb.append(" event=").append(sanitize(event))
-        sb.append(" ts=").append(ts)
-        for ((k, v) in extras) {
-            sb.append(' ').append(sanitize(k)).append('=').append(sanitize(v))
+    @Volatile
+    private var cachedConfig: TelemetryConfig = TelemetryConfig()
+
+    @Volatile
+    private var cachedContext: Context? = null
+
+    /** Refresh the cached config from DataStore. Safe to call from any thread. */
+    private fun refreshConfig(context: Context) {
+        cachedContext = context.applicationContext
+        try {
+            val cfg = runBlocking { getTelemetryConfig(context) }
+            cachedConfig = cfg
+        } catch (e: Exception) {
+            Log.d(TAG, "telemetry config read failed: ${e.message}")
         }
-        enqueue(capToBytes(sb.toString(), MAX_BODY_BYTES))
+    }
+
+    fun log(context: Context, event: String, extras: Map<String, String> = emptyMap()) {
+        refreshConfig(context)
+        val cfg = cachedConfig
+        if (!isEnabled(cfg)) return // empty endpoint OR unknown format = OFF (no-op)
+
+        val version = try { BuildConfig.VERSION_NAME } catch (_: Throwable) { "unknown" }
+        val tsNanos = System.currentTimeMillis() * 1_000_000L
+        val bodyJson = buildOtlpJson(version, tsNanos, event, extras)
+        enqueue(capToBytes(bodyJson, MAX_BODY_BYTES))
     }
 
     fun logError(context: Context, tag: String, throwable: Throwable) {
@@ -62,6 +87,60 @@ object Telemetry {
                 "msg" to (throwable.message ?: "").take(120)
             )
         )
+    }
+
+    /** Exposed for Settings/tests; also used by [log] internally. */
+    fun isEnabled(cfg: TelemetryConfig = cachedConfig): Boolean =
+        cfg.endpoint.isNotBlank() && cfg.format.trim().lowercase() == "otlp_json"
+
+    /** Build the OTEL Logs JSON envelope string for a single log record. */
+    fun buildOtlpJson(version: String, tsNanos: Long, event: String, extras: Map<String, String>): String {
+        val attrs = mutableListOf<Pair<String, String>>()
+        attrs += "version" to sanitize(version)
+        attrs += "event" to sanitize(event)
+        for ((k, v) in extras) {
+            attrs += sanitize(k) to sanitize(v)
+        }
+        val attrElements = attrs.map { (k, v) ->
+            buildJsonObject {
+                put("key", k)
+                putJsonObject("value") { put("stringValue", v) }
+            }
+        }
+        val record = buildJsonObject {
+            put("timeUnixNano", tsNanos.toString())
+            // severity: INFO for normal events, ERROR for the error event name.
+            put("severityText", if (event == "error") "ERROR" else "INFO")
+            putJsonObject("body") { put("stringValue", sanitize(event)) }
+            putJsonArray("attributes") { attrElements.forEach { add(it) } }
+        }
+        val envelope = buildJsonObject {
+            putJsonArray("resourceLogs") {
+                add(
+                    buildJsonObject {
+                        putJsonObject("resource") {
+                            putJsonArray("attributes") {
+                                add(
+                                    buildJsonObject {
+                                        put("key", "service.name")
+                                        putJsonObject("value") { put("stringValue", "pocket") }
+                                    }
+                                )
+                            }
+                        }
+                        putJsonArray("scopeLogs") {
+                            add(
+                                buildJsonObject {
+                                    putJsonObject("scope") { put("name", "com.sutliff.pocket") }
+                                    putJsonArray("logRecords") { add(record) }
+                                }
+                            )
+                        }
+                    }
+                )
+            }
+        }
+        return envelope.toString()
     }
 
     private fun sanitize(value: String): String =
@@ -82,15 +161,19 @@ object Telemetry {
             inFlight.set(false)
             return
         }
-        val url = try { BuildConfig.TELEMETRY_URL } catch (_: Throwable) { "https://telemetry.ffilt.us/" }
+        val cfg = cachedConfig
+        if (!isEnabled(cfg)) {
+            inFlight.set(false)
+            if (!queue.isEmpty()) drain()
+            return
+        }
         scope.launch {
             try {
                 val request = Request.Builder()
-                    .url(url)
-                    .post(body.toRequestBody("text/plain; charset=utf-8".toMediaType()))
+                    .url(cfg.endpoint.trim())
+                    .post(body.toRequestBody("application/json; charset=utf-8".toMediaType()))
                     .build()
                 client.newCall(request).execute().use { response ->
-                    // best-effort: ignore response body
                     response.body?.string()
                 }
             } catch (e: Throwable) {
@@ -106,7 +189,6 @@ object Telemetry {
         val bytes = s.toByteArray(Charsets.UTF_8)
         if (bytes.size <= maxBytes) return s
         var end = maxBytes
-        // walk back to a UTF-8 char boundary
         while (end > 0 && (bytes[end].toInt() and 0xC0) == 0x80) end--
         return String(bytes, 0, end, Charsets.UTF_8)
     }

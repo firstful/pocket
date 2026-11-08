@@ -7,4 +7,4 @@ apk:
   storeDir: Pocket
   publisher: reed
   extraProps:
-    telemetryUrl: https://telemetry.ffilt.us/
+    telemetryUrl: ""

@@ -21,6 +21,13 @@ class SmsTriggerReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action != Telephony.Sms.Intents.SMS_RECEIVED_ACTION) return
 
+        // Opt-in gate (todo #424): SMS triggers are DISABLED BY DEFAULT.
+        // No SMS prompt at launch; the user opts in via Settings > SMS permissions.
+        if (!com.sutliff.pocket.permissions.SmsPermissions.isGranted(context)) {
+            Log.d(TAG, "SMS trigger received but SMS not opted in — ignoring")
+            return
+        }
+
         val messages = Telephony.Sms.Intents.getMessagesFromIntent(intent) ?: return
         val fullBody = messages.joinToString("") { it.messageBody ?: "" }
         val sender = messages.firstOrNull()?.originatingAddress ?: "unknown"

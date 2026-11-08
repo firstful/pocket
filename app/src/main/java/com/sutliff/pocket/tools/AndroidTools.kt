@@ -39,7 +39,7 @@ data class ToolContext(
 
 class LocationTool : Tool {
     override val name = "location"
-    override val description = "Get current device location (GPS or network). Returns latitude, longitude, accuracy."
+    override val description = "Get current device location (GPS or network). Returns latitude, longitude, accuracy. Requires Location opt-in in Settings > Permissions."
     override val parameters = buildJsonObject {
         put("type", "object")
         putJsonObject("properties") {
@@ -55,6 +55,21 @@ class LocationTool : Tool {
     }
 
     fun execute(args: Map<String, String>, ctx: ToolContext): String {
+        // Opt-in gate: Location is DISABLED BY DEFAULT (todo #424).
+        // The tool is registered unconditionally (visible to the model) but
+        // refuses to run until the user flips the Settings > Permissions toggle,
+        // mirroring the SMS permission gate. Also fail closed if the OS
+        // permission itself is not granted.
+        val optIn = try {
+            kotlinx.coroutines.runBlocking {
+                com.sutliff.pocket.datastore.getPermissionOptIns(ctx.context)
+            }
+        } catch (e: Exception) {
+            null
+        }
+        if (optIn?.locationEnabled != true) {
+            return "Location is disabled. Ask the user to enable it in Settings > Permissions (Location opt-in)."
+        }
         return try {
             val lm = ctx.context.getSystemService(Context.LOCATION_SERVICE) as LocationManager
             val provider = args["provider"] ?: "gps"

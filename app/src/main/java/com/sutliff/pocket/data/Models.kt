@@ -16,6 +16,55 @@ data class InferenceConfig(
 )
 
 @Serializable
+data class TelemetryConfig(
+    /** Empty = telemetry off (no-op). Non-empty = OTLP receiver endpoint URL. */
+    val endpoint: String = "",
+    /** "otlp_json" (OpenTelemetry Logs JSON) or "off" (hard disable, overrides endpoint). */
+    val format: String = TelemetryConfig.FORMAT_OTLP_JSON
+) {
+    companion object {
+        const val FORMAT_OTLP_JSON = "otlp_json"
+        const val FORMAT_OFF = "off"
+    }
+}
+
+/**
+ * A generic remote (OpenAI-shaped) agent backend, e.g. Hermes /v1/responses
+ * or OpenClaw. Configured by the user in Settings and stored in DataStore —
+ * no secret is baked into the APK (the old BuildConfig.API_SERVER_KEY field
+ * has been removed; [apiKey] is user-entered and lives only on-device).
+ *
+ * @param name      short id; surfaced to the primary LLM as tool `remote_<name>`
+ *                  (sanitized: lowercase a-z0-9_). Looked up by `rook`/`hermes` for @rook.
+ * @param baseUrl   host root WITHOUT a trailing /v1 (e.g. http://host:8642);
+ *                  a trailing /v1 is stripped defensively.
+ * @param endpoint  "responses" (/v1/responses, SSE deltas) or
+ *                  "chat_completions" (/v1/chat/completions, SSE deltas).
+ * @param model     model id sent to the backend.
+ * @param apiKey    bearer token, user-entered. Empty = no Authorization header.
+ * @param enabled   disabled remotes are not exposed as tools.
+ */
+@Serializable
+data class RemoteAgent(
+    val name: String,
+    val baseUrl: String,
+    val endpoint: String = "responses",
+    val model: String,
+    val apiKey: String = "",
+    val enabled: Boolean = true
+)
+
+/** Opt-in toggles for sensitive device access. ALL default OFF. */
+@Serializable
+data class PermissionOptIns(
+    val notificationListenerEnabled: Boolean = false,
+    val locationEnabled: Boolean = false,
+    // SMS opt-in is tracked via runtime permission state (SmsPermissions.isGranted)
+    // and intentionally has no DataStore flag: the permission grant IS the opt-in.
+    val smsEnabled: Boolean = false
+)
+
+@Serializable
 data class ChatMessage(
     val role: String,
     val content: String,

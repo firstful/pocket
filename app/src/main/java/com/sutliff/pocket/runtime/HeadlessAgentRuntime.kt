@@ -1,8 +1,10 @@
 package com.sutliff.pocket.runtime
 
 import com.sutliff.pocket.data.*
+import com.sutliff.pocket.datastore.getEnabledRemoteAgents
 import com.sutliff.pocket.network.InferenceClient
 import com.sutliff.pocket.tools.AndroidToolRegistry
+import com.sutliff.pocket.tools.RemoteAgentTool
 import com.sutliff.pocket.tools.ToolContext
 import com.sutliff.pocket.tools.ToolRegistry
 import kotlinx.coroutines.flow.Flow
@@ -12,10 +14,17 @@ import kotlinx.serialization.json.*
 class HeadlessAgentRuntime(
     private val inferenceConfig: InferenceConfig,
     private val workingDir: String,
-    private val appContext: android.content.Context,
-    private val toolRegistry: ToolRegistry = AndroidToolRegistry(ToolContext(appContext, workingDir))
+    private val appContext: android.content.Context
 ) {
     private val json = Json { ignoreUnknownKeys = true }
+    private val toolRegistry: ToolRegistry by lazy {
+        AndroidToolRegistry(ToolContext(appContext, workingDir)).apply {
+            try {
+                val remotes = kotlinx.coroutines.runBlocking { getEnabledRemoteAgents(appContext) }
+                remotes.forEach { remote -> register(RemoteAgentTool(remote)) }
+            } catch (e: Exception) { /* ignore — built-ins still work */ }
+        }
+    }
 
     suspend fun run(
         sessionId: String,

@@ -13,17 +13,15 @@ import android.util.Log
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 
-import com.sutliff.pocket.BuildConfig
-
 /**
  * Client for the Hermes gateway OpenAI *Responses* API used to talk to Rook.
- * Endpoint: http://hermes-gateway.homelab.internal:8642/v1/responses, model hermes-agent, auth via API_SERVER_KEY (BuildConfig).
+ * Endpoint: http://hermes-gateway.homelab.internal:8642/v1/responses, model hermes-agent, auth via user-entered apiKey (NO secret in BuildConfig).
  *
  * Exposes a streaming flow of text deltas (strings) plus a non-streaming helper.
  */
 class RookClient(
     val baseUrl: String = "http://hermes-gateway.homelab.internal:8642",
-    private val apiKey: String = BuildConfig.API_SERVER_KEY,
+    private val apiKey: String = "",
     private val model: String = "hermes-agent"
 ) {
     private val client = OkHttpClient.Builder()

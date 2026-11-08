@@ -18,6 +18,22 @@ class NotificationTriggerService : NotificationListenerService() {
 
     override fun onNotificationPosted(sbn: StatusBarNotification?) {
         if (sbn == null) return
+        // Opt-in gate (todo #424): notification triggers are DISABLED BY DEFAULT.
+        // Both the DataStore flag AND the system Notification Listener grant are
+        // required; Settings > Permissions explains the blast radius.
+        val optIn = try {
+            kotlinx.coroutines.runBlocking {
+                com.sutliff.pocket.datastore.getPermissionOptIns(applicationContext)
+            }
+        } catch (e: Exception) {
+            null
+        }
+        if (optIn?.notificationListenerEnabled != true ||
+            !com.sutliff.pocket.permissions.NotificationOptIns.isListenerEnabled(applicationContext)
+        ) {
+            Log.d(TAG, "Notification received but notification opt-in off — ignoring")
+            return
+        }
         val pkg = sbn.packageName ?: return
         val extras = sbn.notification?.extras ?: return
         val title = extras.getString("android.title") ?: ""

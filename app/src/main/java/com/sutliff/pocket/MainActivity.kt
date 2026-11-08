@@ -17,19 +17,13 @@ import com.sutliff.pocket.ui.AppNavigation
 import com.sutliff.pocket.ui.theme.PocketTheme
 import com.sutliff.pocket.telemetry.Telemetry
 
-import androidx.activity.result.contract.ActivityResultContracts
-import android.Manifest
-import android.content.pm.PackageManager
-import androidx.core.content.ContextCompat
-
 class MainActivity : ComponentActivity() {
-    private val permissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { /* grants handled by tools via Settings if denied */ }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requestDangerousPermissions()
+        // Opt-in permissions (todo #424): NO launch-time prompt. SMS/location/
+        // notifications are disabled by default and granted only from
+        // Settings > Permissions. Declared manifest permissions are NOT
+        // requested here.
         Telemetry.log(this, "main_activity_create")
         setContent {
             val config by produceState(initialValue = com.sutliff.pocket.data.InferenceConfig()) {
@@ -48,21 +42,6 @@ class MainActivity : ComponentActivity() {
                     AppNavigation()
                 }
             }
-        }
-    }
-
-    private fun requestDangerousPermissions() {
-        val perms = arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.READ_CONTACTS,
-            Manifest.permission.SEND_SMS
-        )
-        val needed = perms.filter {
-            ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
-        }
-        if (needed.isNotEmpty()) {
-            permissionLauncher.launch(needed.toTypedArray())
         }
     }
 

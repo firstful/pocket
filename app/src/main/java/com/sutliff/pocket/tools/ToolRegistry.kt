@@ -229,3 +229,41 @@ fun DefaultToolRegistry(): ToolRegistry {
     registry.register(HealthCheckTool())
     return registry
 }
+
+/** Sanitizes a remote-agent name into a valid tool-name suffix (a-z, 0-9, _). */
+private fun sanitizeRemoteName(name: String): String {
+    val cleaned = name.lowercase().map { c -> if (c in 'a'..'z' || c in '0'..'9' || c == '_') c else '_' }.joinToString("")
+    return cleaned.trim('_').ifEmpty { "agent" }
+}
+
+/**
+ * Tool that delegates to any configured [RemoteAgent] (generic registry entry).
+ * Exposed to the primary LLM as `remote_<name>`. Executes a blocking
+ * non-streaming call and returns the full assistant text.
+ */
+class RemoteAgentTool(private val remote: RemoteAgent) : Tool {
+    override val name: String = "remote_${sanitizeRemoteName(remote.name)}"
+    override val description: String =
+        "Delegate a task to the remote agent '${remote.name}' (${remote.endpoint}, model ${remote.model}). " +
+            "Provide a self-contained prompt/task description."
+    override val parameters = buildJsonObject {
+        put("type", "object")
+        putJsonObject("properties") {
+            putJsonObject("prompt") {
+                put("type", "string")
+                put("description", "Complete task/prompt for the remote agent")
+            }
+        }
+        putJsonArray("required") { add(JsonPrimitive("prompt")) }
+    }
+
+    override fun execute(args: Map<String, String>): String {
+        val prompt = args["prompt"]?.takeIf { it.isNotBlank() }
+            ?: return "Error: no prompt provided for remote '${remote.name}'"
+        return try {
+            com.sutliff.pocket.network.RemoteAgentClient(remote).nonStream(prompt)
+        } catch (e: Exception) {
+            "Error from remote '${remote.name}': ${e.message}"
+        }
+    }
+}

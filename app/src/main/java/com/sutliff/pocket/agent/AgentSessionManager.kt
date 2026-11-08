@@ -3,10 +3,16 @@ package com.sutliff.pocket.agent
 import android.content.Context
 import android.util.Log
 import com.sutliff.pocket.data.*
+import com.sutliff.pocket.datastore.BuiltinHermes
+import com.sutliff.pocket.datastore.getEnabledRemoteAgents
+import com.sutliff.pocket.datastore.getPermissionOptIns
+import com.sutliff.pocket.datastore.resolveRemoteAgent
 import com.sutliff.pocket.network.InferenceClient
-import com.sutliff.pocket.network.RookClient
+import com.sutliff.pocket.network.RemoteAgentClient
+import com.sutliff.pocket.permissions.NotificationOptIns
 import com.sutliff.pocket.permissions.SmsPermissions
 import com.sutliff.pocket.tools.AndroidToolRegistry
+import com.sutliff.pocket.tools.RemoteAgentTool
 import com.sutliff.pocket.tools.ToolContext
 import com.sutliff.pocket.tools.ToolRegistry
 import kotlinx.coroutines.flow.Flow
@@ -152,25 +158,36 @@ class AgentSessionManager(private val context: Context) {
         currentMessages = meta.messages.toMutableList()
         currentMessages.add(ChatMessage(role = "user", content = userMessage))
 
-        // Inject SMS opt-in state as a system note ahead of the per-turn messages so the
-        // model can explain the disabled-by-default behaviour instead of silently failing.
-        val smsNote = ChatMessage(
-            role = "system",
-            content = "SMS tools are disabled by default. If the user asks for SMS tasks, " +
-                "instruct them to enable it in Settings > SMS permissions. " +
-                "Current SMS state: ${SmsPermissions.stateLabel(context)}."
-        )
-        val messagesForModel = listOf(smsNote) + currentMessages
+        // ── Opt-in state as system notes: SMS / location / notifications ──
+        // Models explain the disabled-by-default behaviour instead of silently failing.
+        val optIns = getPermissionOptIns(context)
+        val notes = mutableListOf<String>()
+        notes += SmsPermissions.systemPromptNote(context)
+        notes += "Location tool is ${if (optIns.locationEnabled) "enabled" else "disabled"} by default. " +
+            "Tell the user to enable it in Settings > Permissions if they ask for location tasks."
+        notes += "Notification-listener triggers are ${if (optIns.notificationListenerEnabled && NotificationOptIns.isListenerEnabled(context)) "enabled" else "disabled"} by default. " +
+            "If the user asks to act on notifications, instruct them to enable Notification access in Settings > Permissions (grants system Notification Listener access, which can read all app notifications)."
+        val messagesForModel = listOf(ChatMessage(role = "system", content = notes.joinToString("\n"))) + currentMessages
 
-        // ── Rook subagent route: @rook prefix → Hermes gateway Responses API ──
+        // ── Remote-agent route: @rook prefix → registry entry (rook/hermes) ──
         val trimmed = userMessage.trim()
         if (trimmed.startsWith("@rook", ignoreCase = true)) {
             val rookInput = trimmed.substring(5).trim().ifEmpty { "Hello" }
-            val rookClient = RookClient()
+            val remote = resolveRemoteAgent(context, "rook")
+            val client = if (remote != null) RemoteAgentClient(remote) else null
+            if (client == null || remote == null) {
+                onEvent(AgentEvent.Error("No remote agent 'rook' configured. Add one in Settings > Remote Agents (name + base URL + API key), or use the built-in Hermes defaults."))
+                saveCurrentSession()
+                onStatus(AgentStatus.IDLE)
+                return
+            }
+            if (remote.apiKey.isEmpty()) {
+                Log.w("PocketAgent", "remote 'rook' has empty apiKey — request will be unauthenticated")
+            }
             val contentBuilder = StringBuilder()
             try {
                 onStatus(AgentStatus.SENDING)
-                rookClient.streamResponses(rookInput, onPhase = onStatus).collect { delta ->
+                client.streamResponses(rookInput, onPhase = onStatus).collect { delta ->
                     contentBuilder.append(delta)
                     onEvent(AgentEvent.ContentDelta(delta))
                 }
@@ -179,7 +196,7 @@ class AgentSessionManager(private val context: Context) {
                 onEvent(AgentEvent.MessageComplete(finalMsg))
                 saveCurrentSession()
             } catch (e: Exception) {
-                Log.e("PocketAgent", "rook stream error", e)
+                Log.e("PocketAgent", "remote 'rook' stream error", e)
                 onEvent(AgentEvent.Error(e.message ?: "Rook connection error"))
                 // persist whatever we got
                 if (contentBuilder.isNotEmpty()) {
@@ -195,7 +212,11 @@ class AgentSessionManager(private val context: Context) {
         }
 
         val config = currentConfig
-        val toolRegistry = AndroidToolRegistry(ToolContext(context, context.filesDir.absolutePath))
+        val toolRegistry: ToolRegistry = AndroidToolRegistry(ToolContext(context, context.filesDir.absolutePath ))
+        // Expose every enabled remote as a tool (remote_<name>) appended to the built-ins.
+        getEnabledRemoteAgents(context).forEach { remote ->
+            toolRegistry.register(RemoteAgentTool(remote))
+        }
         val client = InferenceClient(config)
         val tools = toolRegistry.getToolDefinitions()
 
