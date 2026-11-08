@@ -22,7 +22,7 @@ import com.sutliff.pocket.BuildConfig
  * Exposes a streaming flow of text deltas (strings) plus a non-streaming helper.
  */
 class RookClient(
-    val baseUrl = "http://hermes-gateway.homelab.internal:8642"
+    val baseUrl: String = "http://hermes-gateway.homelab.internal:8642",
     private val apiKey: String = BuildConfig.API_SERVER_KEY,
     private val model: String = "hermes-agent"
 ) {
