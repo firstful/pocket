@@ -6,12 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonPrimitive
-import kotlinx.serialization.json.buildJsonObject
-import kotlinx.serialization.json.content
-import kotlinx.serialization.json.jsonPrimitive
-import kotlinx.serialization.json.put
+import kotlinx.serialization.json.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -173,8 +168,8 @@ class RemoteAgentClient(private val agent: RemoteAgent) {
             val choices = obj["choices"]?.jsonArray
             val first = choices?.firstOrNull()?.jsonObject ?: return null
             val delta = first["delta"]?.jsonObject ?: return null
-            val el: JsonElement? = delta["content"]
-            return (el as? JsonPrimitive)?.contentOrNull()
+            val el: JsonPrimitive? = delta["content"] as? JsonPrimitive
+            return el?.content
         }
         val type = obj["type"]?.jsonPrimitive?.content
         if (type == "response.output_text.delta") {
