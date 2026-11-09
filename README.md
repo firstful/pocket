@@ -74,9 +74,12 @@ pocket/
 
 Inference config stored in DataStore. Set via:
 - `adb shell` + `am broadcast` to update DataStore
-- Or add a settings activity later
+- The in-app Settings screen
+- A **seeded build** (personal only): drop `app/src/main/assets/config.seed.json`
+  (see `config.seed.example.json`) before building; it is applied on first launch.
+  The file is gitignored and must never be committed — it can carry API keys.
 
-Default: `http://192.168.1.100:8080/v1`, model `llama3-8b-instruct`
+Default: `http://llm.homelab.internal/v1`, model `auto`
 
 ## SMS Triggers
 

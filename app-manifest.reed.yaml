@@ -1,0 +1,11 @@
+# Pocket (Reed's personal seeded build) — contains preloaded config incl. API key.
+# NEVER publish this APK to the public store; installed only on Reed's device(s).
+name: pocket
+apk:
+  package: com.sutliff.pocket
+  name: Pocket (Reed)
+  task: assembleRelease
+  storeDir: Pocket-Reed
+  publisher: reed
+  extraProps:
+    telemetryUrl: ""

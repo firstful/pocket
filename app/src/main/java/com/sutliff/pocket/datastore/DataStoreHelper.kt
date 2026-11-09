@@ -16,7 +16,7 @@ import com.sutliff.pocket.data.TelemetryConfig
 import com.sutliff.pocket.data.PermissionOptIns
 import com.sutliff.pocket.data.RemoteAgent
 
-private val Context.dataStore by preferencesDataStore(name = "agent_config")
+val Context.dataStore by preferencesDataStore(name = "agent_config")
 
 private val INFERENCE_CONFIG_KEY = stringPreferencesKey("inference_config")
 private val REMOTE_AGENTS_KEY = stringPreferencesKey("remote_agents")

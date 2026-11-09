@@ -3,6 +3,7 @@ package com.sutliff.pocket
 import android.app.Application
 import android.content.Intent
 import com.sutliff.pocket.bridge.AgentBridgeService
+import com.sutliff.pocket.datastore.seedConfigBlocking
 import com.sutliff.pocket.telemetry.Telemetry
 
 class AgentApp : Application() {
@@ -10,6 +11,9 @@ class AgentApp : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        // Apply a build-time seed config (assets/config.seed.json) if present & new.
+        // No-op on the public build (no asset). See datastore/SeedConfig.kt.
+        seedConfigBlocking(this)
         Telemetry.log(this, "app_create")
         // Start the bridge service on app launch. On Android 12+ this can be
         // rejected when the process is restored in the background (install /

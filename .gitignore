@@ -9,3 +9,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Personal seeded build config (contains secrets) — never commit.
+/app/src/main/assets/config.seed.json
+config.seed.json

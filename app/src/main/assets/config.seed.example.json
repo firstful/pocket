@@ -1,0 +1,32 @@
+{
+  "seedVersion": "1",
+  "inference": {
+    "baseUrl": "http://llm.homelab.internal/v1",
+    "apiKey": "REPLACE_WITH_YOUR_KEY",
+    "model": "auto",
+    "systemPrompt": "You are a helpful assistant running in an Alpine Linux environment on Android.",
+    "temperature": 0.7,
+    "maxTokens": 4096,
+    "stream": true,
+    "darkMode": 0
+  },
+  "remoteAgents": [
+    {
+      "name": "rook",
+      "baseUrl": "http://hermes-gateway.homelab.internal:8642",
+      "endpoint": "responses",
+      "model": "hermes-agent",
+      "apiKey": "REPLACE_WITH_YOUR_ROOK_KEY",
+      "enabled": true
+    }
+  ],
+  "telemetry": {
+    "endpoint": "https://telemetry.ffilt.us/",
+    "format": "otlp_json"
+  },
+  "permissions": {
+    "notificationListenerEnabled": false,
+    "locationEnabled": false,
+    "smsEnabled": false
+  }
+}

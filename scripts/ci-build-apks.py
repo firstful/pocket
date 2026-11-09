@@ -12,7 +12,7 @@ import sys
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-APP_MANIFEST = os.path.join(ROOT, "app-manifest.yaml")
+APP_MANIFEST = os.path.join(ROOT, os.environ.get("APP_MANIFEST", "app-manifest.yaml"))
 
 
 def find_apk() -> str | None:

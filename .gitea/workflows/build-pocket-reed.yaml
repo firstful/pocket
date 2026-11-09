@@ -1,0 +1,65 @@
+name: build-pocket-reed
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [android]
+    container:
+      image: cimg/android:2026.07-node
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pyyaml
+        run: |
+          set -e
+          apt-get install -y -qq python3-yaml || { apt-get update -qq && apt-get install -y -qq python3-yaml; }
+          python3 -c "import yaml; print('pyyaml OK', yaml.__version__)"
+
+      - name: Decode signing keystore
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          echo "$ANDROID_KEYSTORE_B64" | base64 -d > /tmp/keystore.jks
+          chmod 600 /tmp/keystore.jks
+          echo "ANDROID_KEYSTORE_FILE=/tmp/keystore.jks" >> "$GITHUB_ENV"
+          echo "ANDROID_KEYSTORE_PASSWORD=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}" >> "$GITHUB_ENV"
+          echo "ANDROID_KEY_ALIAS=${{ secrets.ANDROID_KEY_ALIAS }}" >> "$GITHUB_ENV"
+          echo "ANDROID_KEY_PASSWORD=${{ secrets.ANDROID_KEY_PASSWORD }}" >> "$GITHUB_ENV"
+
+      - name: Inject seeded config (from secret)
+        env:
+          POCKET_SEED_CONFIG_B64: ${{ secrets.POCKET_SEED_CONFIG_B64 }}
+        run: |
+          set -e
+          if [ -z "$POCKET_SEED_CONFIG_B64" ]; then
+            echo "::error::POCKET_SEED_CONFIG_B64 secret not set"; exit 1
+          fi
+          mkdir -p app/src/main/assets
+          echo "$POCKET_SEED_CONFIG_B64" | base64 -d > app/src/main/assets/config.seed.json
+          python3 -c "import json; json.load(open('app/src/main/assets/config.seed.json')); print('seed JSON valid')"
+          # Never let the seed leak into the repo / logs.
+          grep -q "apiKey" app/src/main/assets/config.seed.json && echo "seed contains apiKey (expected)"
+
+      - name: Build + publish (seeded, private store dir)
+        env:
+          APP_MANIFEST: app-manifest.reed.yaml
+          APPSTORE_PUBLISH_TOKEN: ${{ secrets.APPSTORE_PUBLISH_TOKEN }}
+          APPSTORE_URL: http://apps.ffilt.us
+          GRADLE_OPTS: -Xmx1024m -XX:MaxMetaspaceSize=256m
+        run: |
+          python3 scripts/ci-build-apks.py
+
+      - name: Verify signatures
+        run: |
+          APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
+          found=0
+          for APK in $(find app -name "*.apk" -path "*release*" ! -name "*unsigned*"); do
+            echo "--- $APK ---"
+            "$APKSIGNER" verify --print-certs "$APK" | head -4
+            found=1
+          done
+          [ "$found" = "1" ] || { echo "::error::no release APKs to verify"; exit 1; }
