@@ -910,6 +910,10 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
         override fun execute(args: Map<String, String>): String = torchTool.execute(args, ctx)
     })
 
+    // Web tools (ephemeral WebView, no context needed — uses AgentApp.instance)
+    registry.register(WebSearchTool())
+    registry.register(WebFetchTool())
+
     // Health check
     registry.register(object : Tool {
         override val name = "health"
