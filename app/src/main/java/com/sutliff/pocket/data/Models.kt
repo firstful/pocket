@@ -69,8 +69,8 @@ data class ChatMessage(
     val role: String,
     val content: String,
     val name: String? = null,
-    val toolCalls: List<ToolCall>? = null,
-    val toolCallId: String? = null,
+    @SerialName("tool_calls") val toolCalls: List<ToolCall>? = null,
+    @SerialName("tool_call_id") val toolCallId: String? = null,
     val timestamp: Long = System.currentTimeMillis()
 )
 

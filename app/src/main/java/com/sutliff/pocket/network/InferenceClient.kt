@@ -11,6 +11,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import android.util.Log
 import okhttp3.RequestBody.Companion.toRequestBody
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import com.sutliff.pocket.telemetry.Telemetry
 import java.io.IOException
 import java.util.concurrent.TimeUnit
@@ -74,6 +75,9 @@ class InferenceClient(private val config: InferenceConfig) {
     private val json = Json {
         ignoreUnknownKeys = true
         encodeDefaults = true
+        // Drop nulls so the gateway never sees tool_calls:null / timestamp etc.
+        // (it 400s on "cannot preserve this message field across protocols").
+        explicitNulls = false
     }
 
     /** Request-serialization instance: no null fields on the wire. */
