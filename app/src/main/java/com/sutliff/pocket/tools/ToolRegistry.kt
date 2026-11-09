@@ -227,6 +227,8 @@ fun DefaultToolRegistry(): ToolRegistry {
     registry.register(FsListTool())
     registry.register(FsWriteTool())
     registry.register(HealthCheckTool())
+    registry.register(WebSearchTool())
+    registry.register(WebFetchTool())
     return registry
 }
 
