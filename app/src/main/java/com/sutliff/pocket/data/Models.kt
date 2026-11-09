@@ -78,7 +78,11 @@ data class ChatMessage(
 data class ToolCall(
     val id: String = "",
     val type: String = "function",
-    val function: FunctionCall
+    val function: FunctionCall,
+    // OpenAI streams parallel tool calls as index-ordered fragments; capture
+    // the index so ordering is preserved across deltas (2nd positional field
+    // is avoided: Room/Persistence may map by position — append-only).
+    val index: Int = 0
 )
 
 @Serializable
