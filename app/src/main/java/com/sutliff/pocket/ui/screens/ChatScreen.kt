@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import com.sutliff.pocket.agent.AgentEvent
 import com.sutliff.pocket.agent.AgentSessionManager
 import com.sutliff.pocket.appContext
+import com.sutliff.pocket.BuildConfig
 import com.sutliff.pocket.data.*
 import com.sutliff.pocket.datastore.getCurrentSessionId
 import com.sutliff.pocket.datastore.readConfig
@@ -676,6 +677,12 @@ fun ChatScreen(onNavigateToSettings: () -> Unit) {
                         }
                     },
                     actions = {
+                        Text(
+                            text = BuildConfig.VERSION_NAME.substringBefore('-'),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(end = 4.dp)
+                        )
                         // Connection status indicator
                         Icon(
                             imageVector = Icons.Default.Circle,
