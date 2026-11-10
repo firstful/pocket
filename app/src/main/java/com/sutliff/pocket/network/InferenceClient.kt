@@ -41,6 +41,7 @@ class JsonObjectBuilder {
 data class WireMsg(
     val role: String,
     val content: String,
+    val name: String? = null,
     @SerialName("tool_calls") val toolCalls: List<WireToolCall>? = null,
     @SerialName("tool_call_id") val toolCallId: String? = null
 )
@@ -223,21 +224,35 @@ class InferenceClient(private val config: InferenceConfig) {
         // wireJson has explicitNulls=false so absent tool_calls/tool_call_id are
         // omitted entirely — the gateway's stateful-history validator rejects
         // null toolCalls fields even on non-assistant messages.
+        val toolNameById = mutableMapOf<String, String>()
+        messages.forEach { m ->
+            m.toolCalls?.forEach { tc ->
+                val id = tc.id.takeIf { it.isNotBlank() } ?: return@forEach
+                val name = tc.function.name.takeIf { it.isNotBlank() } ?: return@forEach
+                toolNameById[id] = name
+            }
+        }
         val wireMessages = messages.map { m ->
+            val resolvedToolCallId = m.toolCallId?.takeIf { it.isNotBlank() }
+            val resolvedName = m.name?.takeIf { it.isNotBlank() }
+                ?: if (m.role == "tool") resolvedToolCallId?.let { toolNameById[it] } else null
             WireMsg(
                 role = m.role,
                 content = m.content,
-                toolCalls = m.toolCalls?.takeIf { it.isNotEmpty() }?.map { tc ->
+                name = resolvedName,
+                toolCalls = m.toolCalls?.takeIf { it.isNotEmpty() }?.mapNotNull { tc ->
+                    val id = tc.id.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+                    val fnName = tc.function.name.takeIf { it.isNotBlank() } ?: return@mapNotNull null
                     WireToolCall(
-                        id = tc.id,
-                        type = tc.type,
+                        id = id,
+                        type = tc.type.ifBlank { "function" },
                         function = WireFunction(
-                            name = tc.function.name,
+                            name = fnName,
                             arguments = tc.function.arguments
                         )
                     )
-                },
-                toolCallId = m.toolCallId?.takeIf { it.isNotBlank() }
+                }?.takeIf { it.isNotEmpty() },
+                toolCallId = resolvedToolCallId
             )
         }
         return JsonObjectBuilder()
