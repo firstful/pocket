@@ -1,0 +1,25 @@
+=== TS 20261110T120736Z PID 24093 ===
+=== FOCUS ===
+  mCurrentFocus=Window{5a5d4ff u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== WebSearch/PocketNet/streamChat/tool/lines ===
+3:11-10 07:07:44.787 24093 24108 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+348:11-10 07:07:45.822 24093 24108 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+349:11-10 07:07:45.822 24093 24108 D PocketNet: streamChat: first data (250 bytes): {"error":{"type":"server_error","message":"Streaming response failed: [500] Internal server error: Cannot resolve tool name for tool_call_id=None. Either 'tool_calls[].function.name' in assistant message or 'name' in tool message must be provided."}}
+350:11-10 07:07:45.823 24093 24108 D PocketNet: streamChat: loop done, lines=2 data=1
+=== PID tail ===
+11-10 07:07:44.787 24093 24108 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 07:07:44.843 24093 24093 D InsetsController: hide(ime())
+11-10 07:07:44.843 24093 24093 I ImeTracker: com.sutliff.pocket:a1ae98d8: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 07:07:44.843 24093 24093 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 07:07:44.843 24093 24093 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-10 07:07:44.843 24093 24129 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 07:07:44.844 24093 24093 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-10 07:07:44.851 24093 24093 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 07:07:44.864 24093 24093 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 07:07:44.898 24093 24093 I ImeTracker: com.sutliff.pocket:e90444d4: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 07:07:44.900 24093 24093 D InsetsController: hide(ime())
+11-10 07:07:44.900 24093 24093 I ImeTracker: com.google.android.inputmethod.latin:6eac79e3: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 07:07:44.949 24093 24093 I ImeTracker: system_server:2d8c5f91: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 07:07:45.822 24093 24108 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 07:07:45.822 24093 24108 D PocketNet: streamChat: first data (250 bytes): {"error":{"type":"server_error","message":"Streaming response failed: [500] Internal server error: Cannot resolve tool name for tool_call_id=None. Either 'tool_calls[].function.name' in assistant message or 'name' in tool message must be provided."}}
+11-10 07:07:45.823 24093 24108 D PocketNet: streamChat: loop done, lines=2 data=1

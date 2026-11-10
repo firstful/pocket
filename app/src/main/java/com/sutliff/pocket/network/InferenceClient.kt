@@ -232,26 +232,32 @@ class InferenceClient(private val config: InferenceConfig) {
                 toolNameById[id] = name
             }
         }
-        val wireMessages = messages.map { m ->
+        val wireMessages = messages.mapNotNull { m ->
             val resolvedToolCallId = m.toolCallId?.takeIf { it.isNotBlank() }
             val resolvedName = m.name?.takeIf { it.isNotBlank() }
                 ?: if (m.role == "tool") resolvedToolCallId?.let { toolNameById[it] } else null
+            // Drop malformed tool results: gateway requires tool_call_id and resolvable name.
+            if (m.role == "tool" && (resolvedToolCallId == null || resolvedName == null)) {
+                Log.w("PocketNet", "wire: dropping malformed tool message (missing id/name)")
+                return@mapNotNull null
+            }
+            val cleanedToolCalls = m.toolCalls?.takeIf { it.isNotEmpty() }?.mapNotNull { tc ->
+                val id = tc.id.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+                val fnName = tc.function.name.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+                WireToolCall(
+                    id = id,
+                    type = tc.type.ifBlank { "function" },
+                    function = WireFunction(
+                        name = fnName,
+                        arguments = tc.function.arguments
+                    )
+                )
+            }?.takeIf { it.isNotEmpty() }
             WireMsg(
                 role = m.role,
                 content = m.content,
                 name = resolvedName,
-                toolCalls = m.toolCalls?.takeIf { it.isNotEmpty() }?.mapNotNull { tc ->
-                    val id = tc.id.takeIf { it.isNotBlank() } ?: return@mapNotNull null
-                    val fnName = tc.function.name.takeIf { it.isNotBlank() } ?: return@mapNotNull null
-                    WireToolCall(
-                        id = id,
-                        type = tc.type.ifBlank { "function" },
-                        function = WireFunction(
-                            name = fnName,
-                            arguments = tc.function.arguments
-                        )
-                    )
-                }?.takeIf { it.isNotEmpty() },
+                toolCalls = cleanedToolCalls,
                 toolCallId = resolvedToolCallId
             )
         }
