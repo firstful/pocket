@@ -1,0 +1,4 @@
+=== Foreground ===
+    topResumedActivity=ActivityRecord{216763415 u0 com.sutliff.pocket/.MainActivity t29143}
+  mCurrentFocus=Window{7f3002c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== Crashes ===

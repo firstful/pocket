@@ -1,0 +1,7 @@
+=== WebSearch/WebFetch logcat ===
+440:11-10 01:09:11.487 14229 14243 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+818:11-10 01:09:12.538 14229 14243 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+819:11-10 01:09:12.538 14229 14243 D PocketNet: streamChat: first data (250 bytes): {"error":{"type":"server_error","message":"Streaming response failed: [500] Internal server error: Cannot resolve tool name for tool_call_id=None. Either 'tool_calls[].function.name' in assistant message or 'name' in tool message must be provided."}}
+820:11-10 01:09:12.539 14229 14243 D PocketNet: streamChat: loop done, lines=2 data=1
+917:11-10 01:09:29.926  2362  2554 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+=== Focus ===

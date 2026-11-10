@@ -1,0 +1,9 @@
+=== UI snippet ===
+35:<node index="1" text="" resource-id="" class="android.widget.EditText" package="com.sutliff.pocket" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="true" password="false" selected="false" bounds="[153,912][1959,1059]" drawing-order="0" hint=""
+36:<node index="0" text="Message…" resource-id="" class="android.widget.TextView" package="com.sutliff.pocket" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[195,954][406,1017]" drawing-order="0" hint="" /
+=== PocketNet/streamChat ===
+7:11-10 01:08:44.293 14229 14243 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+349:11-10 01:08:45.417 14229 14243 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+350:11-10 01:08:45.418 14229 14243 D PocketNet: streamChat: first data (250 bytes): {"error":{"type":"server_error","message":"Streaming response failed: [500] Internal server error: Cannot resolve tool name for tool_call_id=None. Either 'tool_calls[].function.name' in assistant message or 'name' in tool message must be provided."}}
+351:11-10 01:08:45.420 14229 14243 D PocketNet: streamChat: loop done, lines=2 data=1
+=== Focus ===
