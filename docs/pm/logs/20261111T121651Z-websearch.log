@@ -1,0 +1,249 @@
+--------- beginning of main
+11-11 07:15:36.005 14778 14778 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_14778
+11-11 07:15:36.010 14778 14778 I Zygote  : Process 14778 created for com.sutliff.pocket
+11-11 07:15:36.010 14778 14778 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-11 07:15:36.014 14778 14778 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-11 07:15:36.022 14778 14778 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-11 07:15:36.078 14778 14778 D nativeloader: Configuring clns-9 for other apk /data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64:/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-11 07:15:36.091 14778 14778 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: Currently set values for:
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-11 07:15:36.092 14778 14778 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-11 07:15:36.097 14778 14778 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-11 07:15:36.098 14778 14778 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-11 07:15:36.098 14778 14778 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-11 07:15:36.107 14778 14778 D BootReceiver: Boot completed, starting AgentBridgeService
+11-11 07:15:36.109 14778 14795 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-11 07:15:36.110 14778 14795 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64'
+11-11 07:15:36.112 14778 14795 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a'
+11-11 07:15:36.134 14778 14778 D AgentBridgeService: AgentBridgeService created
+11-11 07:15:36.153 14778 14778 I HWUI    : Using FreeType backend (prop=Auto)
+11-11 07:15:36.163 14778 14778 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-11 07:15:36.172 14778 14778 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-11 07:15:36.172 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.172 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.202 14778 14778 I Surface : Creating surface for consumer unnamed-14778-0 with slotExpansion=1 for 64 slots
+11-11 07:15:36.202 14778 14778 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-11 07:15:36.319 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.327 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.331 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.359 14778 14778 D InsetsController: show(ime())
+11-11 07:15:36.360 14778 14778 I ImeTracker: com.sutliff.pocket:0b42696b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:15:36.360 14778 14778 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-11 07:15:36.379 14778 14778 D InsetsController: show(ime())
+11-11 07:15:36.380 14778 14778 I ImeTracker: com.sutliff.pocket:59b2caf0: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-11 07:15:36.385 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:15:36.386 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.386 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.396 14778 14778 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-11 07:15:36.399 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:15:36.399 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.399 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.415 14778 14778 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-11 07:15:36.416 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.416 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.628 14778 14778 I ImeTracker: com.sutliff.pocket:180e303c: onShown
+11-11 07:15:41.293 14778 14840 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-11 07:16:10.267 14778 14778 D InsetsController: show(ime())
+11-11 07:16:10.268 14778 14778 I ImeTracker: com.sutliff.pocket:96a45c8c: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:16:10.268 14778 14778 I ImeTracker: com.sutliff.pocket:96a45c8c: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-11 07:16:10.278 14778 14778 I ImeTracker: com.sutliff.pocket:ad293bdc: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-11 07:16:10.279 14778 14778 D InsetsController: show(ime())
+11-11 07:16:10.279 14778 14778 I ImeTracker: com.sutliff.pocket:ad293bdc: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-11 07:16:24.073 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.073 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.073 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.073 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.092 14778 14792 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:16:24.130 14778 14778 D InsetsController: hide(ime())
+11-11 07:16:24.130 14778 14778 I ImeTracker: com.sutliff.pocket:3424c91e: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:16:24.130 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:16:24.130 14778 14778 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-11 07:16:24.130 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:16:24.131 14778 14778 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-11 07:16:24.135 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:16:24.145 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:16:24.172 14778 14778 I ImeTracker: com.sutliff.pocket:e8f80ecf: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:16:24.208 14778 14778 D InsetsController: hide(ime())
+11-11 07:16:24.208 14778 14778 I ImeTracker: com.google.android.inputmethod.latin:4d3557c0: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-11 07:16:24.241 14778 14778 I ImeTracker: system_server:b8739a9c: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:16:24.721 14778 14792 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:16:24.722 14778 14792 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-4a8f99e2-47b3-431f-ae44-6d9f4d66d24f","object":"chat.completion.chunk","created":1794399382,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:16:24.968 14778 14792 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-11 07:16:24.969 14778 14792 D PocketNet: streamChat: loop done, lines=25 data=12
+11-11 07:16:24.972 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.972 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.972 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.972 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:24.981 14778 14792 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:16:25.541 14778 14792 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:16:25.542 14778 14792 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-cad7ef19-5ad2-4368-a03d-6e278e609e11","object":"chat.completion.chunk","created":1794399383,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:16:25.756 14778 14792 D PocketNet: streamChat: [DONE] after 27 lines (13 data)
+11-11 07:16:25.756 14778 14792 D PocketNet: streamChat: loop done, lines=27 data=13
+11-11 07:16:25.757 14778 14778 D WebFetchTool: start url=https://wttr.in/?format=3 max_chars=4000
+11-11 07:16:25.759 14778 14778 E WebFetchTool: exception: null
+11-11 07:16:25.759 14778 14778 E WebFetchTool: android.os.NetworkOnMainThreadException
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.tools.WebFetchTool.execute(WebTools.kt:188)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:16:25.759 14778 14778 E WebFetchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:16:25.760 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:25.760 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:25.760 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:25.760 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:25.766 14778 14792 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:16:26.138 14778 14792 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:16:26.139 14778 14792 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-cf7e37a1-84b1-4378-9370-27564ce672b4","object":"chat.completion.chunk","created":1794399384,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:16:26.422 14778 14792 D PocketNet: streamChat: [DONE] after 27 lines (13 data)
+11-11 07:16:26.422 14778 14792 D PocketNet: streamChat: loop done, lines=27 data=13
+11-11 07:16:26.423 14778 14778 D WebFetchTool: start url=https://wttr.in/ max_chars=4000
+11-11 07:16:26.424 14778 14778 E WebFetchTool: exception: null
+11-11 07:16:26.424 14778 14778 E WebFetchTool: android.os.NetworkOnMainThreadException
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.tools.WebFetchTool.execute(WebTools.kt:188)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:16:26.424 14778 14778 E WebFetchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:16:26.425 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:26.425 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:26.425 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:26.425 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:26.444 14778 14792 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:16:26.975 14778 14792 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:16:26.975 14778 14792 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-87865572-fa37-47b6-9a27-a97264578674","object":"chat.completion.chunk","created":1794399385,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:16:27.232 14778 14792 D PocketNet: streamChat: [DONE] after 31 lines (15 data)
+11-11 07:16:27.232 14778 14792 D PocketNet: streamChat: loop done, lines=31 data=15
+11-11 07:16:27.232 14778 14778 D WebFetchTool: start url=https://www.google.com max_chars=4000
+11-11 07:16:27.234 14778 14778 E WebFetchTool: exception: null
+11-11 07:16:27.234 14778 14778 E WebFetchTool: android.os.NetworkOnMainThreadException
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.tools.WebFetchTool.execute(WebTools.kt:188)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:16:27.234 14778 14778 E WebFetchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:16:27.235 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:27.235 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:27.235 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:27.235 14778 14792 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:16:27.259 14778 14792 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:16:28.101 14778 14792 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:16:28.102 14778 14792 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-83335636-a2d1-423e-bb38-f086af79864b","object":"chat.completion.chunk","created":1794399386,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:16:29.504 14778 14792 D PocketNet: streamChat: [DONE] after 83 lines (41 data)
+11-11 07:16:29.504 14778 14792 D PocketNet: streamChat: loop done, lines=83 data=41
+11-11 07:16:37.404 14778 14782 I .sutliff.pocket: Background young concurrent mark compact GC freed 10096KB AllocSpace bytes, 52(1364KB) LOS objects, 98% free, 4539KB/256MB, paused 96us,3.682ms total 110.650ms

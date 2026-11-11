@@ -1,0 +1,377 @@
+--------- beginning of main
+11-11 07:10:05.526 14401 14401 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_14401
+11-11 07:10:05.532 14401 14401 I Zygote  : Process 14401 created for com.sutliff.pocket
+11-11 07:10:05.532 14401 14401 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-11 07:10:05.536 14401 14401 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-11 07:10:05.540 14401 14401 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-11 07:10:05.549 14401 14401 D nativeloader: Configuring clns-9 for other apk /data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64:/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-11 07:10:05.552 14401 14401 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment: Currently set values for:
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-11 07:10:05.553 14401 14401 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-11 07:10:05.555 14401 14401 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-11 07:10:05.556 14401 14401 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-11 07:10:05.556 14401 14401 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-11 07:10:05.567 14401 14401 D BootReceiver: Boot completed, starting AgentBridgeService
+11-11 07:10:05.569 14401 14417 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-11 07:10:05.570 14401 14417 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64'
+11-11 07:10:05.570 14401 14417 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a'
+11-11 07:10:05.597 14401 14401 D AgentBridgeService: AgentBridgeService created
+11-11 07:10:05.619 14401 14401 I HWUI    : Using FreeType backend (prop=Auto)
+11-11 07:10:05.632 14401 14401 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-11 07:10:05.641 14401 14401 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-11 07:10:05.641 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:05.641 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:05.672 14401 14401 I Surface : Creating surface for consumer unnamed-14401-0 with slotExpansion=1 for 64 slots
+11-11 07:10:05.672 14401 14401 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-11 07:10:05.793 14401 14401 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:10:05.803 14401 14401 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:10:05.807 14401 14401 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:10:05.833 14401 14401 D InsetsController: show(ime())
+11-11 07:10:05.834 14401 14401 I ImeTracker: com.sutliff.pocket:372a1770: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:10:05.834 14401 14401 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-11 07:10:05.849 14401 14401 D InsetsController: show(ime())
+11-11 07:10:05.850 14401 14401 I ImeTracker: com.sutliff.pocket:47811a33: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-11 07:10:05.856 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:05.856 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:10:05.856 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:05.857 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:05.862 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:05.881 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:10:05.881 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:10:05.896 14401 14401 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-11 07:10:05.899 14401 14401 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-11 07:10:06.112 14401 14401 I ImeTracker: com.sutliff.pocket:f4c2c666: onShown
+11-11 07:10:11.260 14401 14460 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-11 07:10:22.287 14401 14401 D InsetsController: show(ime())
+11-11 07:10:22.288 14401 14401 I ImeTracker: com.sutliff.pocket:a90a9dbc: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:10:22.288 14401 14401 I ImeTracker: com.sutliff.pocket:a90a9dbc: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-11 07:10:22.292 14401 14401 I ImeTracker: com.sutliff.pocket:6335b0d5: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-11 07:10:22.293 14401 14401 D InsetsController: show(ime())
+11-11 07:10:22.293 14401 14401 I ImeTracker: com.sutliff.pocket:6335b0d5: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-11 07:10:31.029 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:31.029 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:31.029 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:31.029 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:31.044 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:10:31.103 14401 14401 D InsetsController: hide(ime())
+11-11 07:10:31.103 14401 14401 I ImeTracker: com.sutliff.pocket:a40df6ce: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:10:31.104 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:31.104 14401 14401 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-11 07:10:31.104 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:31.104 14401 14401 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-11 07:10:31.107 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:31.108 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:31.128 14401 14401 I ImeTracker: com.sutliff.pocket:e67ecfca: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:10:31.146 14401 14401 D InsetsController: hide(ime())
+11-11 07:10:31.146 14401 14401 I ImeTracker: com.google.android.inputmethod.latin:87b34c13: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-11 07:10:31.179 14401 14401 I ImeTracker: system_server:2af458fa: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:10:31.633 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:10:31.633 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-37628bcd-022c-404e-84ab-5465e2e63e9d","object":"chat.completion.chunk","created":1794399029,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:10:31.688 14401 14414 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-11 07:10:31.688 14401 14414 D PocketNet: streamChat: loop done, lines=17 data=8
+11-11 07:10:48.800 14401 14401 D InsetsController: show(ime())
+11-11 07:10:48.800 14401 14401 I ImeTracker: com.sutliff.pocket:16428f16: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:10:48.801 14401 14401 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-11 07:10:48.807 14401 14401 I ImeTracker: com.sutliff.pocket:7ecaa725: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-11 07:10:48.807 14401 14401 D InsetsController: show(ime())
+11-11 07:10:48.807 14401 14401 I ImeTracker: com.sutliff.pocket:7ecaa725: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-11 07:10:48.834 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:10:48.834 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:10:48.862 14401 14401 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-11 07:10:49.088 14401 14401 I ImeTracker: com.sutliff.pocket:16428f16: onShown
+11-11 07:10:57.418 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:57.418 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:57.418 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:57.418 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:57.431 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:10:57.467 14401 14401 D InsetsController: hide(ime())
+11-11 07:10:57.467 14401 14401 I ImeTracker: com.sutliff.pocket:b1fa6014: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:10:57.467 14401 14401 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:57.468 14401 14401 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-11 07:10:57.468 14401 14401 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-11 07:10:57.472 14401 14436 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:10:57.472 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:57.480 14401 14401 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:10:57.498 14401 14401 I ImeTracker: com.sutliff.pocket:6645e868: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:10:57.508 14401 14401 D InsetsController: hide(ime())
+11-11 07:10:57.508 14401 14401 I ImeTracker: com.google.android.inputmethod.latin:6ead9449: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-11 07:10:57.558 14401 14401 I ImeTracker: system_server:cb276e43: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-11 07:10:58.054 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:10:58.055 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-2581b04d-e8bf-49a5-910b-bd85602fc16d","object":"chat.completion.chunk","created":1794399056,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:10:58.122 14401 14414 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-11 07:10:58.122 14401 14414 D PocketNet: streamChat: loop done, lines=17 data=8
+11-11 07:10:58.123 14401 14401 D WebSearchTool: start query_len=13 max_results=8
+11-11 07:10:58.127 14401 14401 E WebSearchTool: exception: null
+11-11 07:10:58.127 14401 14401 E WebSearchTool: android.os.NetworkOnMainThreadException
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:77)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:10:58.127 14401 14401 E WebSearchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:10:58.127 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.127 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.127 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.127 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.146 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:10:58.770 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:10:58.771 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-0974419d-7fda-43eb-b00c-45fac7b0115d","object":"chat.completion.chunk","created":1794399057,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:10:58.795 14401 14414 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-11 07:10:58.795 14401 14414 D PocketNet: streamChat: loop done, lines=19 data=9
+11-11 07:10:58.796 14401 14401 D WebSearchTool: start query_len=22 max_results=8
+11-11 07:10:58.798 14401 14401 E WebSearchTool: exception: null
+11-11 07:10:58.798 14401 14401 E WebSearchTool: android.os.NetworkOnMainThreadException
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:77)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:10:58.798 14401 14401 E WebSearchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:10:58.799 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.799 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.799 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.799 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:58.822 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:10:59.383 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:10:59.384 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-63448321-c11c-44ac-a366-c51e6b9988b4","object":"chat.completion.chunk","created":1794399057,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:10:59.488 14401 14414 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-11 07:10:59.489 14401 14414 D PocketNet: streamChat: loop done, lines=17 data=8
+11-11 07:10:59.489 14401 14401 D WebSearchTool: start query_len=15 max_results=8
+11-11 07:10:59.491 14401 14401 E WebSearchTool: exception: null
+11-11 07:10:59.491 14401 14401 E WebSearchTool: android.os.NetworkOnMainThreadException
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:77)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:10:59.491 14401 14401 E WebSearchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:10:59.491 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:59.491 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:59.491 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:59.491 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:10:59.496 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:11:00.305 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:11:00.305 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-614a539f-26a6-448d-bc18-c3306d2b8b36","object":"chat.completion.chunk","created":1794399058,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:11:00.358 14401 14414 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-11 07:11:00.359 14401 14414 D PocketNet: streamChat: loop done, lines=17 data=8
+11-11 07:11:00.359 14401 14401 D WebSearchTool: start query_len=7 max_results=8
+11-11 07:11:00.360 14401 14401 E WebSearchTool: exception: null
+11-11 07:11:00.360 14401 14401 E WebSearchTool: android.os.NetworkOnMainThreadException
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:77)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:11:00.360 14401 14401 E WebSearchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:11:00.361 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:00.361 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:00.361 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:00.361 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:00.381 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:11:00.897 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:11:00.898 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-56144e9e-477b-4fb6-a51b-bef7761b1fbc","object":"chat.completion.chunk","created":1794399059,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:11:01.082 14401 14414 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-11 07:11:01.082 14401 14414 D PocketNet: streamChat: loop done, lines=21 data=10
+11-11 07:11:01.083 14401 14401 D WebSearchTool: start query_len=21 max_results=8
+11-11 07:11:01.085 14401 14401 E WebSearchTool: exception: null
+11-11 07:11:01.085 14401 14401 E WebSearchTool: android.os.NetworkOnMainThreadException
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1907)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:115)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at java.net.InetAddress.getAllByName(InetAddress.java:1154)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.Dns$Companion$DnsSystem.lookup(Dns.kt:49)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.kt:169)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.kt:131)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.kt:73)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:205)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:77)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager.run(AgentSessionManager.kt:302)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$1.invokeSuspend(AgentSessionManager.kt:18)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:28)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:100)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.performTrampolineDispatch(AndroidUiDispatcher.android.kt:81)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher.access$performTrampolineDispatch(AndroidUiDispatcher.android.kt:41)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at androidx.compose.ui.platform.AndroidUiDispatcher$dispatchCallback$1.run(AndroidUiDispatcher.android.kt:57)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.os.Looper.loop(Looper.java:398)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 07:11:01.085 14401 14401 E WebSearchTool: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 07:11:01.086 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:01.086 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:01.086 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:01.086 14401 14414 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-11 07:11:01.089 14401 14414 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-11 07:11:01.745 14401 14414 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-11 07:11:01.745 14401 14414 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-b13c0c98-f98f-4ff5-a8ed-ea4ade76fabe","object":"chat.completion.chunk","created":1794399059,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-11 07:11:03.545 14401 14414 D PocketNet: streamChat: [DONE] after 57 lines (28 data)
+11-11 07:11:03.545 14401 14414 D PocketNet: streamChat: loop done, lines=57 data=28

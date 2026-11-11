@@ -1,0 +1,50 @@
+--------- beginning of main
+11-11 07:15:36.005 14778 14778 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_14778
+11-11 07:15:36.010 14778 14778 I Zygote  : Process 14778 created for com.sutliff.pocket
+11-11 07:15:36.010 14778 14778 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-11 07:15:36.014 14778 14778 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-11 07:15:36.022 14778 14778 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-11 07:15:36.078 14778 14778 D nativeloader: Configuring clns-9 for other apk /data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64:/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-11 07:15:36.091 14778 14778 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: Currently set values for:
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-11 07:15:36.091 14778 14778 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-11 07:15:36.092 14778 14778 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-11 07:15:36.097 14778 14778 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-11 07:15:36.098 14778 14778 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-11 07:15:36.098 14778 14778 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-11 07:15:36.107 14778 14778 D BootReceiver: Boot completed, starting AgentBridgeService
+11-11 07:15:36.109 14778 14795 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-11 07:15:36.110 14778 14795 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/lib/arm64'
+11-11 07:15:36.112 14778 14795 D vulkan  : searching for layers in '/data/app/~~t-TffNcf-YdfWFi6w57zYg==/com.sutliff.pocket-1vcY2IzDWwH2S98StAEVWw==/base.apk!/lib/arm64-v8a'
+11-11 07:15:36.134 14778 14778 D AgentBridgeService: AgentBridgeService created
+11-11 07:15:36.153 14778 14778 I HWUI    : Using FreeType backend (prop=Auto)
+11-11 07:15:36.163 14778 14778 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-11 07:15:36.172 14778 14778 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-11 07:15:36.172 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.172 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.202 14778 14778 I Surface : Creating surface for consumer unnamed-14778-0 with slotExpansion=1 for 64 slots
+11-11 07:15:36.202 14778 14778 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-11 07:15:36.319 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.327 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.331 14778 14778 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 07:15:36.359 14778 14778 D InsetsController: show(ime())
+11-11 07:15:36.360 14778 14778 I ImeTracker: com.sutliff.pocket:0b42696b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 07:15:36.360 14778 14778 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-11 07:15:36.379 14778 14778 D InsetsController: show(ime())
+11-11 07:15:36.380 14778 14778 I ImeTracker: com.sutliff.pocket:59b2caf0: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-11 07:15:36.385 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:15:36.386 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.386 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.396 14778 14778 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-11 07:15:36.399 14778 14778 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 07:15:36.399 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.399 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 07:15:36.415 14778 14778 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-11 07:15:36.416 14778 14778 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.416 14778 14814 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 07:15:36.628 14778 14778 I ImeTracker: com.sutliff.pocket:180e303c: onShown
+11-11 07:15:41.293 14778 14840 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
