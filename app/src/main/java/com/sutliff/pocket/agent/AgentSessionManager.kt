@@ -15,8 +15,10 @@ import com.sutliff.pocket.tools.AndroidToolRegistry
 import com.sutliff.pocket.tools.RemoteAgentTool
 import com.sutliff.pocket.tools.ToolContext
 import com.sutliff.pocket.tools.ToolRegistry
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.*
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.decodeFromString
@@ -299,7 +301,7 @@ class AgentSessionManager(private val context: Context) {
                             v.jsonPrimitive.content
                         }
                     }
-                    tool.execute(args)
+                    withContext(Dispatchers.IO) { tool.execute(args) }
                 } else {
                     "Error: Unknown tool '${toolCall.function.name}'"
                 }
