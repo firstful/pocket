@@ -1,0 +1,238 @@
+--------- beginning of main
+11-10 19:03:03.751 21640 21640 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_21640
+11-10 19:03:03.755 21640 21640 I Zygote  : Process 21640 created for com.sutliff.pocket
+11-10 19:03:03.755 21640 21640 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-10 19:03:03.759 21640 21640 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-10 19:03:03.766 21640 21640 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-10 19:03:03.774 21640 21640 D nativeloader: Configuring clns-9 for other apk /data/app/~~Uh_suzWaz71pVzn09uOQag==/com.sutliff.pocket-IDtjaRrAMuZ9sOY5s24-Sg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~Uh_suzWaz71pVzn09uOQag==/com.sutliff.pocket-IDtjaRrAMuZ9sOY5s24-Sg==/lib/arm64:/data/app/~~Uh_suzWaz71pVzn09uOQag==/com.sutliff.pocket-IDtjaRrAMuZ9sOY5s24-Sg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-10 19:03:03.778 21640 21640 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-10 19:03:03.778 21640 21640 V GraphicsEnvironment: Currently set values for:
+11-10 19:03:03.779 21640 21640 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-10 19:03:03.779 21640 21640 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-10 19:03:03.779 21640 21640 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-10 19:03:03.779 21640 21640 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-10 19:03:03.779 21640 21640 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-10 19:03:03.781 21640 21640 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-10 19:03:03.782 21640 21640 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-10 19:03:03.782 21640 21640 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-10 19:03:03.792 21640 21640 D BootReceiver: Boot completed, starting AgentBridgeService
+11-10 19:03:03.796 21640 21657 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-10 19:03:03.797 21640 21657 D vulkan  : searching for layers in '/data/app/~~Uh_suzWaz71pVzn09uOQag==/com.sutliff.pocket-IDtjaRrAMuZ9sOY5s24-Sg==/lib/arm64'
+11-10 19:03:03.797 21640 21657 D vulkan  : searching for layers in '/data/app/~~Uh_suzWaz71pVzn09uOQag==/com.sutliff.pocket-IDtjaRrAMuZ9sOY5s24-Sg==/base.apk!/lib/arm64-v8a'
+11-10 19:03:03.821 21640 21640 D AgentBridgeService: AgentBridgeService created
+11-10 19:03:03.843 21640 21640 I HWUI    : Using FreeType backend (prop=Auto)
+11-10 19:03:03.847 21640 21640 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-10 19:03:03.856 21640 21640 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-10 19:03:03.856 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:03.856 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:03.886 21640 21640 I Surface : Creating surface for consumer unnamed-21640-0 with slotExpansion=1 for 64 slots
+11-10 19:03:03.886 21640 21640 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-10 19:03:03.971 21640 21640 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-10 19:03:03.980 21640 21640 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-10 19:03:03.984 21640 21640 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-10 19:03:04.011 21640 21640 D InsetsController: show(ime())
+11-10 19:03:04.011 21640 21640 I ImeTracker: com.sutliff.pocket:455dc953: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:03:04.012 21640 21640 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-10 19:03:04.027 21640 21640 D InsetsController: show(ime())
+11-10 19:03:04.029 21640 21640 I ImeTracker: com.sutliff.pocket:c87afc50: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-10 19:03:04.034 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:03:04.034 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@c629832
+11-10 19:03:04.034 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@c629832
+11-10 19:03:04.049 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:04.049 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:03:04.049 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:04.065 21640 21640 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-10 19:03:04.070 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@c629832
+11-10 19:03:04.071 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@c629832
+11-10 19:03:04.085 21640 21640 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-10 19:03:04.294 21640 21640 I ImeTracker: com.sutliff.pocket:d74eb5c5: onShown
+11-10 19:03:08.872 21640 21722 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-10 19:03:25.548 21640 21640 D InsetsController: show(ime())
+11-10 19:03:25.549 21640 21640 I ImeTracker: com.sutliff.pocket:94ff62bc: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:03:25.549 21640 21640 I ImeTracker: com.sutliff.pocket:94ff62bc: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-10 19:03:25.554 21640 21640 I ImeTracker: com.sutliff.pocket:8e0a4b7f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-10 19:03:25.554 21640 21640 D InsetsController: show(ime())
+11-10 19:03:25.555 21640 21640 I ImeTracker: com.sutliff.pocket:8e0a4b7f: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-10 19:03:31.766 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:03:31.766 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:03:31.766 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:03:31.766 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:03:31.783 21640 21656 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 19:03:31.825 21640 21640 D InsetsController: hide(ime())
+11-10 19:03:31.825 21640 21640 I ImeTracker: com.sutliff.pocket:6e9b5d3e: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:03:31.825 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:31.825 21640 21640 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-10 19:03:31.825 21640 21640 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-10 19:03:31.826 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:03:31.832 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:03:31.845 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:03:31.863 21640 21640 I ImeTracker: com.sutliff.pocket:c9f74d6d: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 19:03:31.874 21640 21640 D InsetsController: hide(ime())
+11-10 19:03:31.874 21640 21640 I ImeTracker: com.google.android.inputmethod.latin:aaa7c788: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 19:03:31.924 21640 21640 I ImeTracker: system_server:7aebb6a0: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 19:03:32.410 21640 21656 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 19:03:32.411 21640 21656 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-d1d4a17f-ab5a-4005-acf4-6ed702195b80","object":"chat.completion.chunk","created":1794355411,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-10 19:03:33.017 21640 21656 D PocketNet: streamChat: [DONE] after 41 lines (20 data)
+11-10 19:03:33.017 21640 21656 D PocketNet: streamChat: loop done, lines=41 data=20
+11-10 19:04:01.443 21640 21640 D InsetsController: show(ime())
+11-10 19:04:01.444 21640 21640 I ImeTracker: com.sutliff.pocket:1a5cbf1b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:04:01.444 21640 21640 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-10 19:04:01.449 21640 21640 I ImeTracker: com.sutliff.pocket:2e4a784f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-10 19:04:01.450 21640 21640 D InsetsController: show(ime())
+11-10 19:04:01.450 21640 21640 I ImeTracker: com.sutliff.pocket:2e4a784f: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-10 19:04:01.470 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@c629832
+11-10 19:04:01.471 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@c629832
+11-10 19:04:01.515 21640 21640 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-10 19:04:01.741 21640 21640 I ImeTracker: com.sutliff.pocket:1a5cbf1b: onShown
+11-10 19:04:10.249 21640 21640 D InsetsController: show(ime())
+11-10 19:04:10.249 21640 21640 I ImeTracker: com.sutliff.pocket:7d0efc10: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:04:10.249 21640 21640 I ImeTracker: com.sutliff.pocket:7d0efc10: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-10 19:04:10.252 21640 21640 I ImeTracker: com.sutliff.pocket:153ce189: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-10 19:04:10.253 21640 21640 D InsetsController: show(ime())
+11-10 19:04:10.253 21640 21640 I ImeTracker: com.sutliff.pocket:153ce189: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-10 19:04:10.272 21640 21640 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-10 19:04:10.272 21640 21640 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-10 19:04:10.276 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@7cc40b1
+11-10 19:04:10.276 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@7cc40b1
+11-10 19:04:10.279 21640 21640 I Surface : Creating surface for consumer unnamed-21640-1 with slotExpansion=1 for 64 slots
+11-10 19:04:10.279 21640 21640 I Surface : Creating surface for consumer VRI[Pop-Up Window]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+11-10 19:04:10.657 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-10 19:04:27.779 21640 21645 W .sutliff.pocket: Cleared Reference was only reachable from finalizer (only reported once)
+11-10 19:04:34.508 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:04:34.508 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:04:34.508 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:04:34.508 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:04:34.537 21640 21656 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 19:04:34.563 21640 21640 D InsetsController: hide(ime())
+11-10 19:04:34.563 21640 21640 I ImeTracker: com.sutliff.pocket:53ccede2: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-10 19:04:34.563 21640 21640 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:04:34.563 21640 21640 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-10 19:04:34.564 21640 21682 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-10 19:04:34.564 21640 21640 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-10 19:04:34.586 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:04:34.586 21640 21640 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-10 19:04:34.602 21640 21640 I ImeTracker: com.sutliff.pocket:c955beb9: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 19:04:34.615 21640 21640 D InsetsController: hide(ime())
+11-10 19:04:34.615 21640 21640 I ImeTracker: com.google.android.inputmethod.latin:00fd9c7a: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 19:04:34.664 21640 21640 I ImeTracker: system_server:ef1ec95a: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-10 19:04:35.282 21640 21656 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 19:04:35.282 21640 21656 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-3dda186d-eba2-4430-825c-3a491fa650c1","object":"chat.completion.chunk","created":1794355474,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-10 19:04:35.556 21640 21656 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-10 19:04:35.556 21640 21656 D PocketNet: streamChat: loop done, lines=23 data=11
+11-10 19:04:35.557 21640 21640 D WebSearchTool: start query_len=19 max_results=8 url=https://www.google.com/search?q=Android+APK+signing&hl=en&num=10
+11-10 19:04:53.932 21640 21642 I .sutliff.pocket: Thread[2,tid=21642,WaitingInMainSignalCatcherLoop,Thread*=0xb400007722e552c0,peer=0x2003340,"Signal Catcher"]: reacting to signal 3
+11-10 19:04:53.932 21640 21642 I .sutliff.pocket: 
+11-10 19:04:54.157 21640 21642 I .sutliff.pocket: Wrote stack traces to tombstoned
+11-10 19:05:05.559 21640 21640 D WebSearchTool: latch completed=false duration_ms=30003 pageFinished=false
+11-10 19:05:05.560 21640 21640 E WebSearchTool: Error: search timed out after 30s (query_len=19)
+11-10 19:05:05.565 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:05.565 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:05.565 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:05.565 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:05.584 21640 21640 I WebViewFactory: Loading com.google.android.webview version 157.0.8103.38 (code 810303803)
+11-10 19:05:05.586 21640 21640 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=71c0e84c mResDir=null mSplitDirs=[] mOverlayDirs=[] mLibDirs=[/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk,/system/framework/android.test.base.jar,/system_ext/framework/androidx.window.extensions.jar] mDisplayId=0 mOverrideConfig=v37 mCompatInfo={420dpi always-compat} mLoaders=[]}
+11-10 19:05:05.587 21640 21640 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-10 19:05:05.587 21640 21640 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-10 19:05:05.588 21640 21656 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 19:05:05.592 21640 21640 D nativeloader: Configuring clns-10 for other apk /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/lib/arm64:/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+11-10 19:05:05.617 21640 21640 I cr_WVCFactoryProvider: version=157.0.8103.38 (810303803) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
+11-10 19:05:05.619 21640 21640 D nativeloader: Load /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-10 19:05:05.621 21640 21640 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-10 19:05:05.623 21640 22233 I chromium: [1110/190505.622671:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+11-10 19:05:05.623 21640 22233 I chromium: [1110/190505.623773:INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+11-10 19:05:05.625 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->isContentSafetyEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.625 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/webkit/WebViewDelegate;->isNativeWebViewZygoteEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.625 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;-><init>(Landroid/content/LocusId;Ljava/lang/String;)V (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.625 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setUri(Landroid/net/Uri;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.625 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setData(Landroid/os/ParcelFileDescriptor;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.626 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->build()Landroid/app/contentsafety/ClassifiableContent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.626 21640 21640 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->createContentRestrictedIntent(Landroid/content/LocusId;)Landroid/content/Intent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-10 19:05:05.630 21640 21640 I cr_LibraryLoader: Successfully loaded native library
+11-10 19:05:05.631 21640 21640 I cr_CachingUmaRecorder: Flushed 47 samples from 22 histograms, 0 samples were dropped.
+11-10 19:05:05.632 21640 21640 I cr_ChildProcLH: ScopedServiceBindingBatch.tryActivate: false
+11-10 19:05:05.633 21640 21640 I cr_CombinedPProvider: #registerProvider() provider:WV.rj@e88f496 isPolicyCacheEnabled:false policyProvidersSize:0
+11-10 19:05:05.633 21640 21640 I cr_PolicyProvider: #setManagerAndSource() 0
+11-10 19:05:05.634 21640 22232 I cr_policy: registerReceiver succeeded after 0ms
+11-10 19:05:05.634 21640 21640 I cr_DisplayManager: Is Display Topology available: false
+11-10 19:05:05.648 21640 21640 I cr_CombinedPProvider: #linkNativeInternal() 1
+11-10 19:05:05.648 21640 21640 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-10 19:05:05.648 21640 21640 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-10 19:05:05.648 21640 21640 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-10 19:05:05.648 21640 21640 I cr_CombinedPProvider: #flushPolicies()
+11-10 19:05:05.715 21640 21640 D WebSearchTool: WindowManager attach failed (using detached container): Unable to add window -- token null is not valid; is your activity running?
+11-10 19:05:05.716 21640 21640 D WebSearchTool: loading search URL
+11-10 19:05:05.722 21640 22248 W cr_media: BLUETOOTH_CONNECT permission is missing.
+11-10 19:05:05.723 21640 22248 W cr_media: getBluetoothAdapter() requires BLUETOOTH permission
+11-10 19:05:05.723 21640 22248 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+11-10 19:05:05.725 21640 22248 D AudioSystem: onNewService: media.audio_policy service obtained 0xb400007752ea78a0
+11-10 19:05:05.727 21640 22248 D AudioSystem: getService: IAudioPolicyService retrieved: 0xb400007752ea78a0  cached: 0xb400007752ea78a0
+11-10 19:05:05.737 21640 21640 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-10 19:05:05.737 21640 21640 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-10 19:05:05.737 21640 21640 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-10 19:05:05.737 21640 21640 I cr_CombinedPProvider: #flushPolicies()
+11-10 19:05:05.738 21640 21640 I Choreographer: Skipped 1812 frames!  The application may be doing too much work on its main thread.
+11-10 19:05:05.738 21640 22281 I CameraManagerGlobal: Connecting to camera service
+11-10 19:05:05.755 21640 21640 D WebSearchTool: WebView destroyed
+11-10 19:05:05.772 21640 21749 I HWUI    : Davey! duration=30187ms; Flags=0, FrameTimelineVsyncId=3043543, IntendedVsync=291936947213143, Vsync=291967115295367, InputEventId=1435642070, HandleInputStart=291967119532127, AnimationStart=291967119538190, PerformTraversalsStart=291967129841453, DrawStart=291967129904157, FrameDeadline=291936980508187, FrameStartTime=291967119337913, FrameInterval=16649052, WorkloadTarget=16600000, AnimationTime=291967115295367, AnimationCounter=-1, SyncQueued=291967132581281, SyncStart=291967132662417, IssueDrawCommandsStart=291967132805402, SwapBuffers=291967134356549, FrameCompleted=291967134929832, DequeueBufferDuration=11434, QueueBufferDuration=137817, GpuCompleted=291967134929832, SwapBuffersCompleted=291967134547508, DisplayPresentTime=291914564828976, CommandSubmissionCompleted=291967134356549, 
+11-10 19:05:05.782 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:05:05.782 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:05:05.789 21640 21640 D InsetsController: hide(ime())
+11-10 19:05:05.789 21640 21640 I ImeTracker: com.sutliff.pocket:a9ad6265: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 19:05:05.855 21640 22255 W cr_VAUtil: Unknown profile: 8 for codec video/hevc
+11-10 19:05:06.209 21640 21656 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 19:05:06.209 21640 21656 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-32f3c6bd-0321-47d9-b78a-2e4c01791610","object":"chat.completion.chunk","created":1794355505,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-10 19:05:06.280 21640 21656 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-10 19:05:06.280 21640 21656 D PocketNet: streamChat: loop done, lines=19 data=9
+11-10 19:05:06.286 21640 21640 D WebSearchTool: start query_len=34 max_results=8 url=https://www.google.com/search?q=Android+APK+signing+best+practices&hl=en&num=10
+11-10 19:05:23.012 21640 21642 I .sutliff.pocket: Thread[2,tid=21642,WaitingInMainSignalCatcherLoop,Thread*=0xb400007722e552c0,peer=0x2003340,"Signal Catcher"]: reacting to signal 3
+11-10 19:05:23.012 21640 21642 I .sutliff.pocket: 
+11-10 19:05:23.360 21640 21642 I .sutliff.pocket: Wrote stack traces to tombstoned
+11-10 19:05:36.288 21640 21640 D WebSearchTool: latch completed=false duration_ms=30001 pageFinished=false
+11-10 19:05:36.288 21640 21640 E WebSearchTool: Error: search timed out after 30s (query_len=34)
+11-10 19:05:36.292 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:36.292 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:36.292 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:36.292 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:05:36.317 21640 21656 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 19:05:36.317 21640 21640 D WebSearchTool: WindowManager attach failed (using detached container): Unable to add window -- token null is not valid; is your activity running?
+11-10 19:05:36.317 21640 21640 D WebSearchTool: loading search URL
+11-10 19:05:36.323 21640 21640 I Choreographer: Skipped 1802 frames!  The application may be doing too much work on its main thread.
+11-10 19:05:36.328 21640 22181 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-10 19:05:36.328 21640 22181 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-10 19:05:36.355 21640 21640 D WebSearchTool: WebView destroyed
+11-10 19:05:36.359 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:05:36.359 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:05:36.360 21640 22327 I HWUI    : Davey! duration=30061ms; Flags=0, FrameTimelineVsyncId=3044667, IntendedVsync=291967671353146, Vsync=291997701868752, InputEventId=1732526132, HandleInputStart=291997704689653, AnimationStart=291997704695553, PerformTraversalsStart=291997717956865, DrawStart=291997718025835, FrameDeadline=291967698443687, FrameStartTime=291997704424272, FrameInterval=16665103, WorkloadTarget=16600000, AnimationTime=291997701868752, AnimationCounter=-1, SyncQueued=291997730009355, SyncStart=291997730088986, IssueDrawCommandsStart=291997730224728, SwapBuffers=291997731939490, FrameCompleted=291997732504350, DequeueBufferDuration=14201, QueueBufferDuration=208048, GpuCompleted=291997732504350, SwapBuffersCompleted=291997732216387, DisplayPresentTime=291922344799561, CommandSubmissionCompleted=291997731939490, 
+11-10 19:05:36.362 21640 21640 D InsetsController: hide(ime())
+11-10 19:05:36.362 21640 21640 I ImeTracker: com.sutliff.pocket:fc305da2: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 19:05:37.135 21640 21656 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 19:05:37.135 21640 21656 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-c85aea45-806f-40ef-9154-18086d33c5ca","object":"chat.completion.chunk","created":1794355536,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-10 19:05:37.440 21640 21656 D PocketNet: streamChat: [DONE] after 29 lines (14 data)
+11-10 19:05:37.440 21640 21656 D PocketNet: streamChat: loop done, lines=29 data=14
+11-10 19:05:37.441 21640 21640 D WebSearchTool: start query_len=19 max_results=8 url=https://www.google.com/search?q=APK+signing+Android&hl=en&num=10
+11-10 19:05:49.563 21640 21642 I .sutliff.pocket: Thread[2,tid=21642,WaitingInMainSignalCatcherLoop,Thread*=0xb400007722e552c0,peer=0x2003340,"Signal Catcher"]: reacting to signal 3
+11-10 19:05:49.563 21640 21642 I .sutliff.pocket: 
+11-10 19:05:49.976 21640 21642 I .sutliff.pocket: Wrote stack traces to tombstoned
+11-10 19:06:07.443 21640 21640 D WebSearchTool: latch completed=false duration_ms=30002 pageFinished=false
+11-10 19:06:07.444 21640 21640 E WebSearchTool: Error: search timed out after 30s (query_len=19)
+11-10 19:06:07.450 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:06:07.450 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:06:07.450 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:06:07.450 21640 21656 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-10 19:06:07.471 21640 21656 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-10 19:06:07.476 21640 21640 D WebSearchTool: WindowManager attach failed (using detached container): Unable to add window -- token null is not valid; is your activity running?
+11-10 19:06:07.477 21640 21640 D WebSearchTool: loading search URL
+11-10 19:06:07.480 21640 21640 I Choreographer: Skipped 1803 frames!  The application may be doing too much work on its main thread.
+11-10 19:06:07.497 21640 21640 E libbinder.IPCThreadState: Binder transaction failure. id: 22376971, cmd: BR_DEAD_REPLY (29189), error: -22 (Invalid argument)
+11-10 19:06:07.504 21640 21640 D ActivityThread: Too many transaction errors, throttling transaction error callback.
+11-10 19:06:07.505 21640 21640 D WebSearchTool: WebView destroyed
+11-10 19:06:07.508 21640 21841 I HWUI    : Davey! duration=30052ms; Flags=0, FrameTimelineVsyncId=3046038, IntendedVsync=291998827951468, Vsync=292028855111665, InputEventId=1992216757, HandleInputStart=292028862170015, AnimationStart=292028862175834, PerformTraversalsStart=292028873466280, DrawStart=292028873556978, FrameDeadline=291998861138417, FrameStartTime=292028861758068, FrameInterval=16653999, WorkloadTarget=16600000, AnimationTime=292028855111665, AnimationCounter=-1, SyncQueued=292028877721122, SyncStart=292028877786429, IssueDrawCommandsStart=292028877919934, SwapBuffers=292028879436657, FrameCompleted=292028880064099, DequeueBufferDuration=13224, QueueBufferDuration=165812, GpuCompleted=292028880064099, SwapBuffersCompleted=292028879667452, DisplayPresentTime=291936607901375, CommandSubmissionCompleted=292028879436657, 
+11-10 19:06:07.509 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:06:07.509 21640 21640 W ConnectivityManager.CallbackHandler: callback not found for CALLBACK_AVAILABLE message
+11-10 19:06:07.511 21640 21640 D InsetsController: hide(ime())
+11-10 19:06:07.511 21640 21640 I ImeTracker: com.sutliff.pocket:ce5df47b: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-10 19:06:08.368 21640 21656 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-10 19:06:08.369 21640 21656 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-06871a26-0d23-44f9-89df-e67a4978ecdb","object":"chat.completion.chunk","created":1794355567,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-10 19:06:10.112 21640 21656 D PocketNet: streamChat: [DONE] after 99 lines (49 data)
+11-10 19:06:10.112 21640 21656 D PocketNet: streamChat: loop done, lines=99 data=49

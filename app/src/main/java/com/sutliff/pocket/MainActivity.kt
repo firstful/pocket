@@ -47,6 +47,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
+        AgentApp.foregroundActivity = java.lang.ref.WeakReference(this)
         Telemetry.log(this, "main_activity_resume")
         if (AgentApp.bridgeStartPending) {
             try {
@@ -61,6 +62,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onPause() {
         super.onPause()
+        if (AgentApp.foregroundActivity?.get() === this) AgentApp.foregroundActivity = null
         Telemetry.log(this, "main_activity_pause")
     }
 }

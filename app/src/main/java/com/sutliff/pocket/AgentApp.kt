@@ -1,7 +1,9 @@
 package com.sutliff.pocket
 
+import android.app.Activity
 import android.app.Application
 import android.content.Intent
+import java.lang.ref.WeakReference
 import com.sutliff.pocket.bridge.AgentBridgeService
 import com.sutliff.pocket.datastore.seedConfigBlocking
 import com.sutliff.pocket.telemetry.Telemetry
@@ -31,6 +33,10 @@ class AgentApp : Application() {
     companion object {
         @Volatile
         var instance: AgentApp? = null
+        /** Foreground Activity (if any) — used to host detached WebViews so
+         *  their renderer is not suspended (see WebTools). */
+        @Volatile
+        var foregroundActivity: WeakReference<Activity>? = null
         /** Set when the initial service start was rejected; retried from MainActivity.onResume. */
         @Volatile
         var bridgeStartPending: Boolean = false

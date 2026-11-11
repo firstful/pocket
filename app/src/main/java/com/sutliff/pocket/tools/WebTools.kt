@@ -76,12 +76,14 @@ class WebSearchTool : Tool {
             var webView: WebView? = null
             var container: FrameLayout? = null
             try {
-                container = FrameLayout(app).apply {
+                val hostActivity = com.sutliff.pocket.AgentApp.foregroundActivity?.get()
+                val context = hostActivity ?: app
+                container = FrameLayout(context).apply {
                     layoutParams = FrameLayout.LayoutParams(1, 1)
                     visibility = android.view.View.VISIBLE
                 }
                 containerHolder[0] = container
-                webView = WebView(app).apply {
+                webView = WebView(context).apply {
                     layoutParams = ViewGroup.LayoutParams(1, 1)
                     settings.javaScriptEnabled = true
                     settings.domStorageEnabled = true
@@ -93,19 +95,35 @@ class WebSearchTool : Tool {
                 }
                 webViewHolder[0] = webView
                 container.addView(webView)
-                // Attach container so the renderer is not fully detached
-                try {
-                    val wm = app.getSystemService(Context.WINDOW_SERVICE) as android.view.WindowManager
-                    val params = android.view.WindowManager.LayoutParams(
-                        1, 1,
-                        android.view.WindowManager.LayoutParams.TYPE_APPLICATION_PANEL,
-                        android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
-                        android.graphics.PixelFormat.TRANSLUCENT
-                    )
-                    wm.addView(container, params)
-                    Log.d(tag, "WebView attached to WindowManager (1x1)")
-                } catch (e: Exception) {
-                    Log.d(tag, "WindowManager attach failed (using detached container): ${e.message}")
+                // Attach container to a real window so the renderer runs.
+                // Prefer the foreground Activity's content view (has a token);
+                // fall back to WindowManager, then detached.
+                var attached = false
+                if (hostActivity != null) {
+                    try {
+                        val root = hostActivity.findViewById<android.view.ViewGroup>(android.R.id.content)
+                        root?.addView(container, FrameLayout.LayoutParams(1, 1))
+                        attached = true
+                        Log.d(tag, "WebView attached to Activity content view (1x1)")
+                    } catch (e: Exception) {
+                        Log.d(tag, "Activity attach failed: ${e.message}")
+                    }
+                }
+                if (!attached) {
+                    try {
+                        val wm = context.getSystemService(Context.WINDOW_SERVICE) as android.view.WindowManager
+                        val params = android.view.WindowManager.LayoutParams(
+                            1, 1,
+                            android.view.WindowManager.LayoutParams.TYPE_APPLICATION_PANEL,
+                            android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                            android.graphics.PixelFormat.TRANSLUCENT
+                        )
+                        wm.addView(container, params)
+                        attached = true
+                        Log.d(tag, "WebView attached to WindowManager (1x1)")
+                    } catch (e: Exception) {
+                        Log.d(tag, "WindowManager attach failed (using detached container): ${e.message}")
+                    }
                 }
 
                 webView.webViewClient = object : WebViewClient() {
@@ -336,12 +354,14 @@ class WebFetchTool : Tool {
             var webView: WebView? = null
             var container: FrameLayout? = null
             try {
-                container = FrameLayout(app).apply {
+                val hostActivity = com.sutliff.pocket.AgentApp.foregroundActivity?.get()
+                val context = hostActivity ?: app
+                container = FrameLayout(context).apply {
                     layoutParams = FrameLayout.LayoutParams(1, 1)
                     visibility = android.view.View.VISIBLE
                 }
                 containerHolder[0] = container
-                webView = WebView(app).apply {
+                webView = WebView(context).apply {
                     layoutParams = ViewGroup.LayoutParams(1, 1)
                     settings.javaScriptEnabled = true
                     settings.domStorageEnabled = true
@@ -352,18 +372,32 @@ class WebFetchTool : Tool {
                 }
                 webViewHolder[0] = webView
                 container.addView(webView)
-                try {
-                    val wm = app.getSystemService(Context.WINDOW_SERVICE) as android.view.WindowManager
-                    val params = android.view.WindowManager.LayoutParams(
-                        1, 1,
-                        android.view.WindowManager.LayoutParams.TYPE_APPLICATION_PANEL,
-                        android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
-                        android.graphics.PixelFormat.TRANSLUCENT
-                    )
-                    wm.addView(container, params)
-                    Log.d(tag, "WebView attached to WindowManager (1x1)")
-                } catch (e: Exception) {
-                    Log.d(tag, "WindowManager attach failed (detached container): ${e.message}")
+                var attached = false
+                if (hostActivity != null) {
+                    try {
+                        val root = hostActivity.findViewById<android.view.ViewGroup>(android.R.id.content)
+                        root?.addView(container, FrameLayout.LayoutParams(1, 1))
+                        attached = true
+                        Log.d(tag, "WebView attached to Activity content view (1x1)")
+                    } catch (e: Exception) {
+                        Log.d(tag, "Activity attach failed: ${e.message}")
+                    }
+                }
+                if (!attached) {
+                    try {
+                        val wm = context.getSystemService(Context.WINDOW_SERVICE) as android.view.WindowManager
+                        val params = android.view.WindowManager.LayoutParams(
+                            1, 1,
+                            android.view.WindowManager.LayoutParams.TYPE_APPLICATION_PANEL,
+                            android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                            android.graphics.PixelFormat.TRANSLUCENT
+                        )
+                        wm.addView(container, params)
+                        attached = true
+                        Log.d(tag, "WebView attached to WindowManager (1x1)")
+                    } catch (e: Exception) {
+                        Log.d(tag, "WindowManager attach failed (detached container): ${e.message}")
+                    }
                 }
 
                 webView.webViewClient = object : WebViewClient() {
