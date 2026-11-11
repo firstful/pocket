@@ -1,0 +1,782 @@
+--------- beginning of main
+11-11 01:14:00.217 11725 11725 D LauncherStateManager: StateManager.cancelAnimation: animation ongoing: true, partial trace:
+11-11 01:14:00.217 11725 11725 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.reapplyState(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:39)
+11-11 01:14:00.217 11725 11725 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:168)
+11-11 01:14:00.217 11725 11725 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:135)
+11-11 01:14:00.217 11725 11725 D ScalingWorkspaceRevealAnim: onAnimationCancel
+11-11 01:14:00.217 11725 11725 D ScalingWorkspaceRevealAnim: onAnimationEnd, workspace and hotseat are visible
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: Unexpected invisibility after animation end: workspace.isVisible=true, workspace.alpha=1.0, hotseat.isVisible=false, hotseat.alpha=1.0
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: java.lang.Exception
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.quickstep.util.ScalingWorkspaceRevealAnim$4.run(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:123)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.anim.AnimatorListeners$1.onAnimationEnd(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:2)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator$AnimatorListener.onAnimationEnd(Animator.java:773)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator$AnimatorCaller$$ExternalSyntheticLambda1.call(D8$$SyntheticClass:0)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.callOnList(Animator.java:731)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyListeners(Animator.java:629)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyEndListeners(Animator.java:654)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.completeEndAnimation(Animator.java:697)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.completeEndAnimation(AnimatorSet.java:1474)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyEndListenersFromEndAnimation(Animator.java:686)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimation(AnimatorSet.java:1464)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimation(AnimatorSet.java:1447)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimationAndNotifyEndListenersImmediately(AnimatorSet.java:437)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.cancel(AnimatorSet.java:425)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.statemanager.StateManager$AnimationState.reset(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:66)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.statemanager.StateManager.cancelAnimation(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:70)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.statemanager.StateManager.reapplyState(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:39)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:168)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:135)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.LauncherAnimationRunner$$ExternalSyntheticLambda2.run(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:71)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.handleCallback(Handler.java:1082)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.os.Looper.loopOnce(Looper.java:295)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.os.Looper.loop(Looper.java:398)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at android.app.ActivityThread.main(ActivityThread.java:9569)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at java.lang.reflect.Method.invoke(Native Method)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+11-11 01:14:00.217 11725 11725 E ScalingWorkspaceRevealAnim: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:918)
+11-11 01:14:00.218 11725 11725 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1083)/@0xeaf4a88 applyImmediately: false
+11-11 01:14:00.218 11725 11725 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{6a77846 V.ED..... ......ID 0,0-2400,1080 #7f0a0498 app:id/workspace}, com.android.launcher3.Hotseat{817ba07 I.ED..... ......ID 0,901-2400,1080 #7f0a01f8 app:id/hotseat}]
+11-11 01:14:00.218 11725 11725 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: false state: Normal stateManager.getState(): Normal
+11-11 01:14:00.218 11725 11725 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1083)/@0xeaf4a88 applyImmediately: false
+11-11 01:14:00.218 11725 11725 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{6a77846 V.ED..... ......ID 0,0-2400,1080 #7f0a0498 app:id/workspace}, com.android.launcher3.Hotseat{817ba07 V.ED..... ......ID 0,901-2400,1080 #7f0a01f8 app:id/hotseat}]
+11-11 01:14:00.219 11725 11725 D KeyboardInsetsHandler: setState, toState:Normal StateManager(mLastStableState:Normal, mCurrentStableState:Normal, mState:Normal, mRestState:null, isInTransition:false)
+11-11 01:14:00.219 11725 11725 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+11-11 01:14:00.236   566   566 W HwBinder:566_3: type=1400 audit(0.0:12227): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-11 01:14:00.236   566   566 W HwBinder:566_3: type=1400 audit(0.0:12228): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-11 01:14:00.236   566   566 W HwBinder:566_3: type=1400 audit(0.0:12229): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-11 01:14:00.219 11725 11725 D KeyboardStateManager: isImeShown: false
+11-11 01:14:00.219 11725 11725 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_user_active] -[state_transition_active]
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: StateManager.onStateTransitionEnd: state: Normal
+11-11 01:14:00.219 11725 11725 D RecentsView: reset - mEnableDrawingLiveTile: false, mRecentsAnimationController: null
+11-11 01:14:00.219 11725 11725 D ActivityAllAppsContainerView: rebindAdapters: force: false
+11-11 01:14:00.219 11725 11725 D ActivityAllAppsContainerView: rebindAdapters: Not needed.
+11-11 01:14:00.219 11725 11725 D ConnectorProvider: Connector disabled by gantry flag.
+11-11 01:14:00.219 11725 11725 D ConnectorProvider: Connector disabled by gantry flag.
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: StateManager.cancelAnimation: animation ongoing: false, partial trace:
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.setCurrentAnimation(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:59)
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:757)
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:135)
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: StateManager.createAtomicAnimation: fromState: Normal, toState: Normal, partial trace:
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:19)
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:10)
+11-11 01:14:00.219 11725 11725 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:798)
+11-11 01:14:00.219 11725 11725 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: true state: Normal stateManager.getState(): Normal
+11-11 01:14:00.219 11725 11725 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+11-11 01:14:00.219 11725 11725 D b/311077782: LauncherAnimationRunner.setAnimation
+11-11 01:14:00.220  2199  2418 D WallpaperService: onSurfaceChanged(android.service.wallpaper.WallpaperService$Engine$1@a4345ab, 2, 2166, 4800): com.android.systemui.wallpapers.ImageWallpaper$CanvasEngine@b20f408
+11-11 01:14:00.220  2199  2418 D WallpaperService: onSurfaceRedrawNeeded(android.service.wallpaper.WallpaperService$Engine$1@a4345ab): com.android.systemui.wallpapers.ImageWallpaper$CanvasEngine@b20f408
+11-11 01:14:00.225  3065  4842 I fpwf    : (REDACTED) HDM. appOpsListener %s %s
+11-11 01:14:00.225  3065  4842 I fpwf    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-11 01:14:00.228 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.229 11725 11725 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused|state_user_active] +[state_window_focused]
+11-11 01:14:00.229 11725 11725 D ExtendedEditText: onWindowFocusChanged: hasWindowFocus=true
+11-11 01:14:00.230   651   651 W powerhal-libperfmgr: Sess(274), cannot resume, already active
+11-11 01:14:00.231  2882  2882 I SubtypeOperator: SubtypeOperator$1.onBindInput():53 
+11-11 01:14:00.234  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-11 01:14:00.234  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-11 01:14:00.234  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=0
+11-11 01:14:00.234  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@e00168a, lastModifier=2, keyCodes=[56], actions=[0]}
+11-11 01:14:00.234  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@5a3d4fb, lastModifier=0, keyCodes=[317], actions=[0]}
+11-11 01:14:00.234  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@d549ad4, lastModifier=2, keyCodes=[56], actions=[0]}
+11-11 01:14:00.234  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@82ab47d, lastModifier=0, keyCodes=[317], actions=[0]}
+11-11 01:14:00.234  2882  4998 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-11 01:14:00.235  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.235  2882  4998 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-11 01:14:00.239   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+11-11 01:14:00.240   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-11 01:14:00.240   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-11 01:14:00.240   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-11 01:14:00.240   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
+11-11 01:14:00.240   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-11 01:14:00.240   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-11 01:14:00.240   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-11 01:14:00.247 26187 26187 I Finsky  : [2] SCH: job service start with id 9020.
+11-11 01:14:00.236   566   566 W HwBinder:566_3: type=1400 audit(0.0:12230): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-11 01:14:00.253 26187  4921 I Finsky  : [252] SCH: Satisfied jobs for 9020 are: 12-1
+11-11 01:14:00.255 26187  5052 I Finsky  : [254] SCH: Job 12-1 starting
+11-11 01:14:00.256 26187 26187 I Finsky  : [2] WM::SCH: Logging work start for 12-1
+11-11 01:14:00.256 26187 26187 I Finsky  : [2] [ContentSync] job started
+11-11 01:14:00.256 26187  5055 I Finsky  : [255] PSR: Package cache is empty, setup cache.
+11-11 01:14:00.260  8195  8195 W TimedProcessReaper: Current importance is: 230
+11-11 01:14:00.269  2199  2213 W System  : A resource failed to call release. 
+11-11 01:14:00.269  2199  2213 W System  : A resource failed to call release. 
+11-11 01:14:00.269  2199  2213 W System  : A resource failed to call release. 
+11-11 01:14:00.269  2199  2213 W System  : A resource failed to call release. 
+11-11 01:14:00.274  1701  3319 W ApplicationInfo: Large ApplicationInfo parcel: size=16876 package=com.google.android.googlequicksearchbox splits=5 sharedLibs=8 resDirs=1 overlayPaths=1
+11-11 01:14:00.274  1701  3319 W PackageInfo: Large parcel: size=23440 pkg=com.google.android.googlequicksearchbox uid=10166 sig=1108(1) prevAllowSquashing=false
+11-11 01:14:00.274  1701  3319 W ParceledListSlice: Element #23 is 23440 bytes.
+11-11 01:14:00.303  8195  8199 W .apps.safetyhub: Reducing the number of considered missed Gc histogram windows from 2007 to 100
+11-11 01:14:00.320  8195  8219 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=7b4c485f-0939-45f3-8779-59079ffee736, class=com.google.apps.tiktok.contrib.work.TikTokListenableWorker, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,TikTokWorker#com.google.android.apps.safetyhub.appactions.tipsentryenabler.PixelTipsEntryFeatureStateWorker } ]
+11-11 01:14:00.355  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:am start -n com.sutliff.pocket/.MainActivity'
+11-11 01:14:00.395 26187  5055 W Finsky  : [255] SLM: no metadata property com.android.vending.derived.apk.id found for shared library com.google.android.trichromelibrary_782700531:
+11-11 01:14:00.395 26187  5055 W Finsky  : [255] SLM: no metadata property com.android.vending.sdk.version.patch found for shared library com.google.android.trichromelibrary_782700531:
+--------- beginning of system
+11-11 01:14:00.396  1701  2819 W ActivityTaskManager: callingPackage for (uid=2000, pid=5059) has no WPC
+11-11 01:14:00.397  1701  2819 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@942e2680 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-11 01:14:00.400 11725 11725 D RecentsView: onTaskDisplayChanged: 29146, new displayId = 0
+11-11 01:14:00.402  2362   794 W Binder  : Caught a RuntimeException from the binder stub implementation.
+11-11 01:14:00.402  2362   794 W Binder  : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+11-11 01:14:00.402  2362   794 W Binder  : 	at com.google.android.apps.pixel.impulse.statesources.AppTaskStateSource$AppTaskPlatformConnection$AppTaskListener.onTaskCreated(go/retraceme 4bc30d8d067a1f3650f5e99a47d5a1dea2f2b23e820917d6b31aa96b18eed416:0)
+11-11 01:14:00.402  2362   794 W Binder  : 	at android.app.ITaskStackListener$Stub.onTransact(ITaskStackListener.java:443)
+11-11 01:14:00.402  2362   794 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:00.402  2362   794 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:00.402  1701  2819 I ActivityTaskManager: Add Task{a89fe21 #29145 type=standard A=10494:com.sutliff.pocket} to hidden list because adding Task{c332b05 #29146 type=standard A=10494:com.sutliff.pocket}
+11-11 01:14:00.402  1701  2819 D CorePackageUpdate: onRecentTaskRemoved Removing task: 29145
+11-11 01:14:00.402  1701  2819 D CorePackageUpdate: Couldn't find a persistent state for task= 29145
+11-11 01:14:00.403 11725 11725 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused|state_user_active] -[]
+11-11 01:14:00.403  1701  2819 V ActivityTaskManager: TaskLaunchParamsModifier: phase=2 task=Task{c332b05 #29146 type=standard A=10494:com.sutliff.pocket} activity=ActivityRecord{29505148 u0 com.sutliff.pocket/.MainActivity t-1} display-from-task=0 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@96050829 inherit-from-task=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@96050829 default-portrait freeform-size-mismatch=Rect(946, 145 - 1328, 1009)
+11-11 01:14:00.403  1701  2819 I ActivityTaskManager: START u0 {flg=0x10000000 xflg=0x5 cmp=com.sutliff.pocket/.MainActivity} with LAUNCH_MULTIPLE from uid 2000 (com.android.shell) (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+11-11 01:14:00.403 11725 11725 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused] -[state_user_active]
+11-11 01:14:00.403 11725 11725 D BaseActivity: Launcher flags updated: [state_started|state_window_focused] -[state_resumed|state_deferred_resumed]
+11-11 01:14:00.403  1701  1788 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@942e2680 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-11 01:14:00.403 11725 11725 W SplitSelectStateCtor: Missing session instanceIds
+11-11 01:14:00.403 11725 11725 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-11 01:14:00.403  2199  2225 V WindowManagerShell: Transition requested (#85): android.os.BinderProxy@e3175d6 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29146 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=314101784 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@67a9057} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(132, 0 - 0, 0) topActivityInfo=ActivityInfo{4742744 com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(946, 145 - 1328, 1009) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(132, 0 - 2274, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 85 }
+11-11 01:14:00.403  2199  2225 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+11-11 01:14:00.404  1701  2819 I AppsFilter: interaction: PackageSetting{4abaa8b com.google.android.microdroid.empty_payload/10260} -> PackageSetting{f1a3f26 com.sutliff.pocket/10494} BLOCKED
+11-11 01:14:00.405  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-11 01:14:00.405  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-11 01:14:00.407  1701  2819 V WindowManager: Defer transition id=85 for TaskFragmentTransaction=android.os.Binder@4c47280
+11-11 01:14:00.408 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.408 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.410  1701  2819 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.411  1701  2993 V WindowManager: Continue transition id=85 for TaskFragmentTransaction=android.os.Binder@4c47280
+11-11 01:14:00.415   985   985 D Zygote  : Forked child process 5062
+11-11 01:14:00.416  1701  1801 I ActivityManager: Start proc 5062:com.sutliff.pocket/u0a494 for next-top-activity {com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+11-11 01:14:00.420  5062  5062 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_5062
+11-11 01:14:00.421  2199  2234 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@618fe6a
+11-11 01:14:00.421  2199  2236 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@618fe6a
+11-11 01:14:00.422  1701  2542 D CoreBackPreview: Window{a500cfe u0 Splash Screen com.sutliff.pocket}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f17b1ae, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-11 01:14:00.422  1701  2993 D WindowManager: setClientSurface Surface(name=VRI-Splash Screen com.sutliff.pocket#1099)/@0xfcddb4f for a500cfe Splash Screen com.sutliff.pocket
+11-11 01:14:00.423  2199  2234 I Surface : Creating surface for consumer unnamed-2199-254 with slotExpansion=1 for 64 slots
+11-11 01:14:00.424  2199  2234 I Surface : Creating surface for consumer VRI[pocket]#176(BLAST Consumer)176 with slotExpansion=1 for 64 slots
+11-11 01:14:00.425  5062  5062 I Zygote  : Process 5062 created for com.sutliff.pocket
+11-11 01:14:00.425  5062  5062 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-11 01:14:00.429  1701  1789 V SharedSurfaceAnimation: Checking SharedSurface matching for: ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}, user= 0
+11-11 01:14:00.429  1701  1789 V SharedSurfaceAnimation:   No matching provider found.
+11-11 01:14:00.430  5062  5062 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-11 01:14:00.431  1701  1785 V WindowManager: Sent Transition (#85) createdAt=11-11 01:14:00.398 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29146 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=314101784 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{4306712 Task{c332b05 #29146 type=standard A=10494:com.sutliff.pocket}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(132, 0 - 0, 0) topActivityInfo=ActivityInfo{1ef8ee3 com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(946, 145 - 1328, 1009) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(132, 0 - 2274, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 85 }
+11-11 01:14:00.431  1701  1785 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+11-11 01:14:00.431  1701  1785 V WindowManager:     info={id=85 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-11 01:14:00.431  1701  1785 V WindowManager:         {WCT{RemoteToken{4306712 Task{c332b05 #29146 type=standard A=10494:com.sutliff.pocket}}} m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29146#1096)/@0x6313aba sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-11 01:14:00.431  1701  1785 V WindowManager:         {WCT{RemoteToken{c021872 Task{1e6685d #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#45)/@0x6c06528 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-11 01:14:00.431  1701  1785 V WindowManager:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{397b170}#55)/@0x23c6382 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0}
+11-11 01:14:00.431  1701  1785 V WindowManager:     ]}
+11-11 01:14:00.431  2199  2887 V WindowManagerShell: onTransitionReady(transaction=7305739395905)
+11-11 01:14:00.432  2199  2225 V WindowManagerShell: onTransitionReady (#85) android.os.BinderProxy@e3175d6: {id=85 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-11 01:14:00.432  2199  2225 V WindowManagerShell:         {m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29146#1096)/@0xf0bced3 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-11 01:14:00.432  2199  2225 V WindowManagerShell:         {m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#45)/@0xb3d8a10 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-11 01:14:00.432  2199  2225 V WindowManagerShell:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{397b170}#55)/@0x1a4d909 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0}
+11-11 01:14:00.432  2199  2225 V WindowManagerShell:     ]}
+11-11 01:14:00.432  2199  2225 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #85
+11-11 01:14:00.432  2199  2225 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=29146
+11-11 01:14:00.432  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=29146, isFocusedOnDisplay=true, isFocusedGlobally=true
+11-11 01:14:00.432  2199  2225 V RecentTasksController: Notify recent tasks changed: 2
+11-11 01:14:00.432  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=1, isFocusedOnDisplay=false, isFocusedGlobally=false
+11-11 01:14:00.432 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.433  1701  1889 W UserManagerService: Requested status bar icon for non-badged user 0
+11-11 01:14:00.433  1701  2819 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.433  2199  2225 V WindowManagerShell: Transition (#85) android.os.BinderProxy@e3175d6@0 ready while (#84) android.os.BinderProxy@9c8ff67@0 is still animating. Notify the animating transition in case they can be merged
+11-11 01:14:00.433  2199  2225 V WindowManagerShell:    Requesting merge (#85) into remote: RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@adeb26c, appThread = android.app.IApplicationThread$Stub$Proxy@6b71035, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }
+11-11 01:14:00.434  2199  2225 V ShellTaskOrganizer: Task appeared taskId=29146 listener=FullscreenTaskListener
+11-11 01:14:00.434  2199  2225 V ShellTaskOrganizer: Fullscreen Task Appeared: #29146
+11-11 01:14:00.434  2199  2225 D ShellPackageUpdate: PackageUpdateController: Setting handlePackageUpdate for task: 29146
+11-11 01:14:00.434  1701  2993 E TransitionChain: Can't collect into a chain with no transition
+11-11 01:14:00.434  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-11 01:14:00.434  2199  2864 V WindowManagerShell: Received remote transition finished callback for (#84)
+11-11 01:14:00.434  2199  2225 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#84) android.os.BinderProxy@9c8ff67@0
+11-11 01:14:00.434 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.436  5062  5062 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-11 01:14:00.436  1701  2993 E libbinder.IPCThreadState: Binder transaction failure. id: 23221768, cmd: BR_DEAD_REPLY (29189), error: -22 (Invalid argument)
+11-11 01:14:00.436  1701  2993 W ActivityManager: pid 1701 system sent binder code 7 with flags 1 and got error -32
+11-11 01:14:00.436  1701  2993 D ActivityManager: Too many transaction errors, throttling transaction error callback.
+11-11 01:14:00.436  1701  2993 W WindowManager: Exception thrown during dispatchAppVisibility Window{409e36f u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity EXITING}
+11-11 01:14:00.436  1701  2993 W WindowManager: android.os.DeadObjectException
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:674)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.view.IWindow$Stub$Proxy.dispatchAppVisibility(IWindow.java:603)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.WindowState.sendAppVisibilityToClients(WindowState.java:3485)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.WindowContainer.sendAppVisibilityToClients(WindowContainer.java:1254)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.WindowToken.setClientVisible(WindowToken.java:392)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.ActivityRecord.commitVisibility(ActivityRecord.java:5821)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.Transition.finishTransition(Transition.java:1659)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.TransitionController.finishTransition(TransitionController.java:1238)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.finishTransition(WindowOrganizerController.java:530)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.window.IWindowOrganizerController$Stub.onTransact(IWindowOrganizerController.java:265)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.onTransact(WindowOrganizerController.java:236)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:00.436  1701  2993 W WindowManager: 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:00.436  1701  2993 W Process : Unable to open /proc/4920/status
+11-11 01:14:00.436  1701  1785 V WindowManager: Finish Transition (#84): created at 11-11 01:14:00.156 collect-started=0.069ms request-sent=0.185ms started=5.742ms ready=42.397ms sent=45.548ms commit=20.839ms finished=278.78ms
+11-11 01:14:00.438  2199  2225 V WindowManagerShell: Playing animation for (#85) android.os.BinderProxy@e3175d6@0
+11-11 01:14:00.438  2199  2225 D ShellSplitScreen: startAnimation: transition=85 isSplitActive=false
+11-11 01:14:00.438  2199  2225 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-11 01:14:00.438  2199  2225 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+11-11 01:14:00.438  2199  2225 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=85 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29146#1096)/@0xf0bced3 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#45)/@0xb3d8a10 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{397b170}#55)/@0x1a4d909 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0}]}
+11-11 01:14:00.438  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@39f8e7d windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@a07f172, appThread = android.app.IApplicationThread$Stub$Proxy@11eb9c3, debugName = overlayBackTransition, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@39f8e7d windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-11 01:14:00.438  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@680b240, appThread = android.app.IApplicationThread$Stub$Proxy@89b9579, debugName = LauncherToDream, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-11 01:14:00.439  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@65fb2be, appThread = android.app.IApplicationThread$Stub$Proxy@c292f1f, debugName = QuickstepDisplayMove, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} }}
+11-11 01:14:00.439  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@adeb26c, appThread = android.app.IApplicationThread$Stub$Proxy@6b71035, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-11 01:14:00.439  2199  2225 V WindowManagerShell:  Delegate animation for (#85) to null
+11-11 01:14:00.439  2199  2225 V WindowManagerShell: start default transition animation, info = {id=85 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29146#1096)/@0xf0bced3 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#45)/@0xb3d8a10 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{397b170}#55)/@0x1a4d909 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0}]}
+11-11 01:14:00.439  1701  2993 W UserManagerService: Requested status bar icon for non-badged user 0
+11-11 01:14:00.439  1701  2993 W UserManagerService: Requested status bar icon for non-badged user 0
+11-11 01:14:00.440 11725 11725 D RecentsView: onTaskRemoved: 29145, not handling task stack changes
+11-11 01:14:00.440 11725 11725 D RecentsView: onTaskRemoved: 29145, not handling task stack changes
+11-11 01:14:00.440  2199  2225 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@dbfeb27 animAttr=0x13 type=OPEN isEntrance=false
+11-11 01:14:00.441  2199  2225 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@ab612c3 animAttr=0x12 type=OPEN isEntrance=true
+11-11 01:14:00.441  2199  2225 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@fdf7165
+11-11 01:14:00.441  2199  2225 V ShellTaskOrganizer: Task vanished taskId=29145
+11-11 01:14:00.441  2199  2225 V ShellTaskOrganizer: Fullscreen Task Vanished: #29145
+11-11 01:14:00.441  2199  2225 D ShellPackageUpdate: PackageUpdateController: Removing handlePackageUpdate for task: 29145
+11-11 01:14:00.442  1701  2993 E WindowOrganizerController: Attempting to externally change a non-organized container: Task{a89fe21 #29145 type=standard A=10494:com.sutliff.pocket}={handlePackageUpdate:false,} playercount=2 taskorg=android.window.ITaskOrganizer$Stub$Proxy@483c208
+11-11 01:14:00.442  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-11 01:14:00.442  2199  2225 D ShellDesktopMode: AppToWebRepository: Task 29145 is vanishing. Removing task data from repository
+11-11 01:14:00.442 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.442  2199  2225 V AppCompat: SingleSurfaceLetterboxController: [29146]
+11-11 01:14:00.442  2199  2225 V AppCompat: MultiSurfaceLetterboxController: []
+11-11 01:14:00.442  2199  2225 V AppCompat: LetterboxInputController: [29146]
+11-11 01:14:00.442  2199  2225 V AppCompat: RoundedCornersLetterboxController: {}
+11-11 01:14:00.443  1701  2053 W InputDispatcher: channel 'Embedded{LetterboxInputDetector of Surface(name=Task=29145#991)/@0x3e414ce}' ~ Consumer closed input channel or an error occurred.  events=0x9
+11-11 01:14:00.443  1701  2053 E InputDispatcher: channel 'Embedded{LetterboxInputDetector of Surface(name=Task=29145#991)/@0x3e414ce}' ~ Channel is unrecoverably broken and will be disposed!
+11-11 01:14:00.443  1701  2819 W WindowManager: Failed looking up window session=Session{f1dd8a6 2199:u0a10227} callers=com.android.server.wm.WindowManagerService.removeClientToken:2355 com.android.server.wm.Session.remove:282 android.view.IWindowSession$Stub.onTransact:693 
+11-11 01:14:00.443 11725 11725 D BaseActivity: Launcher flags updated: [state_started] -[state_window_focused]
+11-11 01:14:00.443 11725 11725 D ExtendedEditText: onWindowFocusChanged: hasWindowFocus=false
+11-11 01:14:00.443 11725 11725 D ExtendedEditText: resetConnectionAndPendingStates
+11-11 01:14:00.443 11725 11725 D ExtendedEditText: resetConnectionState
+11-11 01:14:00.446  5062  5062 D nativeloader: Configuring clns-9 for other apk /data/app/~~zaHmWj01HRmBLZqSIIbYzA==/com.sutliff.pocket-JeTdSdqXWJbBcEEKM8XRtA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~zaHmWj01HRmBLZqSIIbYzA==/com.sutliff.pocket-JeTdSdqXWJbBcEEKM8XRtA==/lib/arm64:/data/app/~~zaHmWj01HRmBLZqSIIbYzA==/com.sutliff.pocket-JeTdSdqXWJbBcEEKM8XRtA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+11-11 01:14:00.448  5062  5062 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-11 01:14:00.448  5062  5062 V GraphicsEnvironment: Currently set values for:
+11-11 01:14:00.448  5062  5062 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-11 01:14:00.448  5062  5062 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-11 01:14:00.448  5062  5062 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-11 01:14:00.448  5062  5062 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-11 01:14:00.449  5062  5062 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-11 01:14:00.451  5062  5062 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-11 01:14:00.452  5062  5062 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-11 01:14:00.452  5062  5062 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-11 01:14:00.461  1701  2993 D CorePackageUpdate: Couldn't find a persistent state for task= 29146
+11-11 01:14:00.463  5062  5062 D BootReceiver: Boot completed, starting AgentBridgeService
+11-11 01:14:00.464  1701  2819 I BroadcastQueue: BOOT_COMPLETED_BROADCAST_COMPLETION_LATENCY_REPORTED action:android.intent.action.BOOT_COMPLETED dispatchLatency:1 completeLatency:29 dispatchRealLatency:1 completeRealLatency:29 receiversSize:1 userId:0 userType:android.os.usertype.full.SYSTEM
+11-11 01:14:00.465  5062  5079 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-11 01:14:00.466  5062  5079 D vulkan  : searching for layers in '/data/app/~~zaHmWj01HRmBLZqSIIbYzA==/com.sutliff.pocket-JeTdSdqXWJbBcEEKM8XRtA==/lib/arm64'
+11-11 01:14:00.466  5062  5079 D vulkan  : searching for layers in '/data/app/~~zaHmWj01HRmBLZqSIIbYzA==/com.sutliff.pocket-JeTdSdqXWJbBcEEKM8XRtA==/base.apk!/lib/arm64-v8a'
+11-11 01:14:00.471   562   562 E BpTransactionCompletedListener: Failed to transact (-32)
+11-11 01:14:00.489  1701  2993 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.493  1701  2993 I ActivityManager: Background started FGS: Allowed [callingPackage: com.sutliff.pocket; callingUid: 10494; uidState: TOP ; uidBFSL: [BFSL]; BFGS denied: false; intent: Intent { xflg=0x4 cmp=com.sutliff.pocket/.bridge.AgentBridgeService }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null; isBindService:false]
+11-11 01:14:00.494  1701  2993 W ForegroundServiceTypeLoggerModule: Foreground service start for UID: 10494 does not have any types
+11-11 01:14:00.495  5062  5062 D AgentBridgeService: AgentBridgeService created
+11-11 01:14:00.507  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-11 01:14:00.507 11725 11725 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-11 01:14:00.509  2199  2225 V RecentTasksController: generateList(getRecentTasks)
+11-11 01:14:00.509  2199  2225 V RecentTasksController: initializeDesksMap - desktop windowing not available
+11-11 01:14:00.509  2199  2225 V RecentTasksController: Added fullscreen task: 29146
+11-11 01:14:00.509  2199  2225 V RecentTasksController: Added fullscreen task: 29121
+11-11 01:14:00.509  2199  2225 V RecentTasksController: Added fullscreen task: 29122
+11-11 01:14:00.509  2199  2225 V RecentTasksController: generateList - complete
+11-11 01:14:00.509 11725 11741 D PreloadThumbnailUseCase: Preloading thumbnails for task ids: [[id=29122 windowingMode=0 user=0 lastActiveTime=17669 lastFocusedTime=0] null, [id=29121 windowingMode=0 user=0 lastActiveTime=17670 lastFocusedTime=0] null, [id=29146 windowingMode=1 user=0 lastActiveTime=314101843 lastFocusedTime=314101813] null]
+11-11 01:14:00.517  5062  5062 I HWUI    : Using FreeType backend (prop=Auto)
+11-11 01:14:00.522  5062  5062 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-11 01:14:00.531  1701  1889 D ConnectivityService: requestNetwork for uid/pid:10494/5062 activeRequest: null callbackRequest: 10731 [NetworkRequest [ REQUEST id=10732, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|UNAVAIL
+11-11 01:14:00.532  5062  5062 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-11 01:14:00.532  5062  5062 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 01:14:00.532  5062  5098 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 01:14:00.532  1701  1889 D CoreBackPreview: Window{3ac75d2 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f7eafd7, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-11 01:14:00.533  1701  2086 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=10732, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-11 01:14:00.533  1701  2086 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=10732, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-11 01:14:00.533  1701  2086 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=10732, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-11 01:14:00.534  1701  2086 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=10732, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-11 01:14:00.534  1701  2098 D ConnectivityService: NetReassign [10732 : null → 104] [c 0] [a 1] [i 2]
+11-11 01:14:00.538 11725 11725 D WorkspaceRevealAnim: onAnimationEnd: workspace alpha = 1.0
+11-11 01:14:00.563  1701  1889 D WindowManager: setClientSurface Surface(name=VRI-com.sutliff.pocket/com.sutliff.pocket.MainActivity#1107)/@0xab3bc89 for 3ac75d2 com.sutliff.pocket/com.sutliff.pocket.MainActivity
+11-11 01:14:00.565  5062  5062 I Surface : Creating surface for consumer unnamed-5062-0 with slotExpansion=1 for 64 slots
+11-11 01:14:00.565  5062  5062 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-11 01:14:00.592  1701  1785 I ActivityTaskManager: Displayed com.sutliff.pocket/.MainActivity for user 0: +194ms
+11-11 01:14:00.652  5062  5062 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 01:14:00.661  5062  5062 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 01:14:00.665  5062  5062 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-11 01:14:00.668  1701  1889 I PackageManager: getInstalledPackages: callingUid=10132 flags=134217728 updatedFlags=135004160 userId=0
+11-11 01:14:00.692  5062  5062 D InsetsController: show(ime())
+11-11 01:14:00.693  5062  5062 I ImeTracker: com.sutliff.pocket:e6864f57: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-11 01:14:00.693  5062  5062 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-11 01:14:00.694  1701  2993 I ImeTracker: com.sutliff.pocket:e6864f57: onFailed at PHASE_SERVER_UPDATE_CLIENT_VISIBILITY
+11-11 01:14:00.700  1701  2064 I ImeTracker: com.sutliff.pocket:40cfa469: onRequestShow at ORIGIN_SERVER reason SHOW_RESTORE_IME_VISIBILITY fromUser false userId 0 displayId 0
+11-11 01:14:00.700  2882  2882 I SubtypeOperator: SubtypeOperator$1.onUnbindInput():64 
+11-11 01:14:00.701  2882  2882 I SubtypeOperator: SubtypeOperator$1.onBindInput():53 
+11-11 01:14:00.701  1701  2819 I ImeTracker: com.sutliff.pocket:7978f65f: onRequestShow at ORIGIN_SERVER reason ATTACH_NEW_INPUT fromUser false userId 0 displayId 0
+11-11 01:14:00.702  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-11 01:14:00.702  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=168], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-11 01:14:00.702  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=0
+11-11 01:14:00.702  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@d549ad4, lastModifier=2, keyCodes=[56], actions=[0]}
+11-11 01:14:00.702  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@82ab47d, lastModifier=0, keyCodes=[317], actions=[0]}
+11-11 01:14:00.702  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@f0d4fc3, lastModifier=2, keyCodes=[56], actions=[0]}
+11-11 01:14:00.702  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@aca9040, lastModifier=0, keyCodes=[317], actions=[0]}
+11-11 01:14:00.702  2882  4991 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-11 01:14:00.703   651   651 W powerhal-libperfmgr: Sess(274), cannot resume, already active
+11-11 01:14:00.703  1701  1889 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-11 01:14:00.703  1701  2819 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.703  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-11 01:14:00.704  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-11 01:14:00.704  2882  4991 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-11 01:14:00.704  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-11 01:14:00.704  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=false
+11-11 01:14:00.704  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: en-US, ime_english_united_states
+11-11 01:14:00.704  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-11 01:14:00.704  2882  2882 I AbstractIme: AbstractIme.onActivate():111 LatinIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}, IncognitoMode = false, DeviceLocked = false
+11-11 01:14:00.704  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.704  2882  2882 I Delight5Facilitator: Delight5Facilitator.initializeForIme():748 initializeForIme() : Locale = [en_US], layout = qwerty
+11-11 01:14:00.704  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-11 01:14:00.704  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-11 01:14:00.705  1701  2542 I ImeTracker: system_server:c9db8776: onRequestShow at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-11 01:14:00.705  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.705  2882  2882 I LatinIme: LatinIme.resetInputContext():2700 resetInputContext(): reason=1, externalEditsInfo=ExternalEditsInfo{action=0, offset=-1, textLength=0, originalTextLength=0, hasEdits=false}
+11-11 01:14:00.705  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.705  1701  1788 I ImeTracker: system_server:c9db8776: onCancelled at PHASE_SERVER_ALREADY_VISIBLE
+11-11 01:14:00.705  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-11 01:14:00.705  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=ime_english_united_states, language=en-US, languageTag=en-US, processedConditions={device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row=false}, className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, label=0, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=US, displayAppCompletions=true, extraValues=pun{#0x7f0b02e7=TypedValue{t=0x3/d=0x0 "com.google.android.apps.inputmethod.libs.latin5.LatinIme"}}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=true, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=0, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@1), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=true}
+11-11 01:14:00.705  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=ime_english_united_states, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-11 01:14:00.706  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.706  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.706  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.706  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPrimeKeyboard@86d44d
+11-11 01:14:00.706  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-11 01:14:00.707  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.707  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=true, enable_scrub_move=true, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=true, enable_secondary_symbols=false, enable_number_row=false}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=2}, className=.latin.keyboard.LatinPrimeKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e03a5, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@5a3f418, BODY=pfv@dbe6e71, FLOATING_CANDIDATES=pfv@c21a456}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.37 fontWeightAdjustment=0}
+11-11 01:14:00.707  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-11 01:14:00.708  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=landscape_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@1b31b79
+11-11 01:14:00.708  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-11 01:14:00.708  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-11 01:14:00.708  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.708  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-11 01:14:00.708  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-11 01:14:00.709  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.709  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-11 01:14:00.709  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-11 01:14:00.709  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-11 01:14:00.709  2882  2882 I OnBackCallbackManagerExtension: OnBackCallbackManagerExtension.updateDispositionForBack():226 setBackDisposition: 0
+11-11 01:14:00.709  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onActivate():63 onActivate() [UD]
+11-11 01:14:00.709  2882  4888 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@b942c5b, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@cfcccf8, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@f873ed2, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@a25eba3, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.709  2882  4888 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@de705d1, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.709  5062  5062 D InsetsController: show(ime())
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@fc95836, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@3032ea0, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.709  2882  4990 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-11 01:14:00.709  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@4fca59, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.710  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.710  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-11 01:14:00.710  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-11 01:14:00.710  2882  2882 D ImeBackCallbackSender: Register OnBackInvokedCallback with priority=-1 at app window (packageName=com.sutliff.pocket)
+11-11 01:14:00.710  2882  4892 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-11 01:14:00.710  5062  5062 I ImeTracker: com.sutliff.pocket:40cfa469: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-11 01:14:00.711  1701  1889 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-11 01:14:00.711  1701  1889 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-11 01:14:00.711  2882  2882 I Surface : Creating surface for consumer unnamed-2882-40 with slotExpansion=1 for 64 slots
+11-11 01:14:00.712  1701  2064 I ImeTracker: com.sutliff.pocket:4e5c9444: onRequestShow at ORIGIN_SERVER reason ATTACH_NEW_INPUT fromUser false userId 0 displayId 0
+11-11 01:14:00.712  2882  4990 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.712  2882  4990 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.712  1701  2542 D WindowManager: setClientSurface Surface(name=VRI-InputMethod#1112)/@0xfdfa6d2 for 1a6faa9 InputMethod
+11-11 01:14:00.712  2882  2882 I Surface : Creating surface for consumer VRI[InputMethod]#40(BLAST Consumer)40 with slotExpansion=1 for 64 slots
+11-11 01:14:00.712  2882  5001 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-11 01:14:00.712  2882  5001 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-11 01:14:00.712  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.712  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.713  2882  5001 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.713  2882  5001 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.713  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-11 01:14:00.713  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-11 01:14:00.713  2882  5001 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-11 01:14:00.713  2882  5001 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-11 01:14:00.713  2882  4888 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-11 01:14:00.714  2882  5001 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=1.6e+05, interactionType=FIELD_CHANGE [SD]
+11-11 01:14:00.714  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processBeginSession():292 Begin training cache session: /
+11-11 01:14:00.715  5062  5062 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 01:14:00.715  2882  4892 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-11 01:14:00.716  5062  5062 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 01:14:00.716  5062  5098 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 01:14:00.716  2882  4990 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-11 01:14:00.716  1701  2813 D CoreBackPreview: Window{3ac75d2 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@2a3f0fc, mPriority=0, mIsAnimationCallback=true, mOverrideBehavior=0}
+11-11 01:14:00.717  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-11 01:14:00.717  2882  4892 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.717  2882  4892 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.717  2882  4892 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-11 01:14:00.717  2882  4892 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-11 01:14:00.719  2882  4990 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.719  2882  4990 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.719  2882  4990 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-11 01:14:00.724  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{1be5844 V.E...... ........ 0,0-2142,108}
+11-11 01:14:00.724  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.724  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{93a3ce9 V.E...... ........ 0,0-2142,452}
+11-11 01:14:00.725  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.725  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():98 Not show new language banner: no change in enabled input method entries
+11-11 01:14:00.725  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-11 01:14:00.725  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1857 onFinishInputView(true)
+11-11 01:14:00.726  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-11 01:14:00.726  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@f873ed2, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@a25eba3, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@b621dda, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@e7b520b, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@3032ea0, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@4fca59, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@d0378e8, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.726  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@4c15b01, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.726  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.726  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-11 01:14:00.727  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-11 01:14:00.727  2882  4888 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-11 01:14:00.727  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-11 01:14:00.727  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@37b6c0c was not registered for notification class qbc
+11-11 01:14:00.727  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-11 01:14:00.727  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-11 01:14:00.727  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-11 01:14:00.727  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.727  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 LatinIme.onDeactivate()
+11-11 01:14:00.728  2882  2882 I PrimesLoggerHolder: FrameMetricServiceImpl.stopAsFuture():215 Measurement not found: OnConfigurationChanged
+11-11 01:14:00.728  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-11 01:14:00.728  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-11 01:14:00.728  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=168], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-11 01:14:00.728  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=0
+11-11 01:14:00.728  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-11 01:14:00.728  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-11 01:14:00.728  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-11 01:14:00.729  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=false
+11-11 01:14:00.729  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: en-US, ime_english_united_states
+11-11 01:14:00.729  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-11 01:14:00.729  2882  2882 I AbstractIme: AbstractIme.onActivate():111 LatinIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}, IncognitoMode = false, DeviceLocked = false
+11-11 01:14:00.729  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.729  1701  1889 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-11 01:14:00.729  2882  2882 I Delight5Facilitator: Delight5Facilitator.initializeForIme():748 initializeForIme() : Locale = [en_US], layout = qwerty
+11-11 01:14:00.729  2882  4990 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-11 01:14:00.730  2882  4990 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-11 01:14:00.730  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-11 01:14:00.730  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 520, left: 132, bottom: 1080, right: 2274}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-11 01:14:00.731  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-11 01:14:00.731  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-11 01:14:00.732  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():751 End training cache session: /
+11-11 01:14:00.732  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.checkInputActions():1123 checkInputActions: no text change
+11-11 01:14:00.732  2882  3214 W NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.logInputActionCollection():913 checkInputActions failed
+11-11 01:14:00.732  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.resolveConversationId():1273 Use dominating conversation id:  with count 3 / 3, all conversation ids: []
+11-11 01:14:00.732  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():804 No input action collection / expression events / mozc commands in this session, skip logging.
+11-11 01:14:00.732  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.732  2882  2882 I LatinIme: LatinIme.resetInputContext():2700 resetInputContext(): reason=1, externalEditsInfo=ExternalEditsInfo{action=0, offset=-1, textLength=0, originalTextLength=0, hasEdits=false}
+11-11 01:14:00.732  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-11 01:14:00.733  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-11 01:14:00.733  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=ime_english_united_states, language=en-US, languageTag=en-US, processedConditions={device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row=false}, className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, label=0, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=US, displayAppCompletions=true, extraValues=pun{#0x7f0b02e7=TypedValue{t=0x3/d=0x0 "com.google.android.apps.inputmethod.libs.latin5.LatinIme"}}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=true, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=0, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@1), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=true}
+11-11 01:14:00.733  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=ime_english_united_states, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-11 01:14:00.733  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.733  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.733  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-11 01:14:00.733  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPrimeKeyboard@86d44d
+11-11 01:14:00.733  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-11 01:14:00.734  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-11 01:14:00.734  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-11 01:14:00.734  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.734  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-11 01:14:00.735  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=true, enable_scrub_move=true, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=true, enable_secondary_symbols=false, enable_number_row=false}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=2}, className=.latin.keyboard.LatinPrimeKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e03a5, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@5a3f418, BODY=pfv@dbe6e71, FLOATING_CANDIDATES=pfv@c21a456}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.37 fontWeightAdjustment=0}
+11-11 01:14:00.735  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processBeginSession():292 Begin training cache session: /
+11-11 01:14:00.735  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.736  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-11 01:14:00.736  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=landscape_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@72d6939
+11-11 01:14:00.736  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-11 01:14:00.736  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-11 01:14:00.736  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-11 01:14:00.736  5062  5062 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-11 01:14:00.736  5062  5062 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 01:14:00.736  5062  5098 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-11 01:14:00.736  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.736  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.736  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.736  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.737  1701  2819 D CoreBackPreview: Window{3ac75d2 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f80e514, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-11 01:14:00.737  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.737  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.737  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-11 01:14:00.737  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-11 01:14:00.737  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.737  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-11 01:14:00.737  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-11 01:14:00.737  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-11 01:14:00.737  2882  2882 I OnBackCallbackManagerExtension: OnBackCallbackManagerExtension.updateDispositionForBack():226 setBackDisposition: 0
+11-11 01:14:00.737  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onActivate():63 onActivate() [UD]
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@b621dda, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e7b520b, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@d39151, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.738  2882  4998 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@601bdb6, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@d0378e8, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@4c15b01, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@74f6ab7, lastModifier=2, keyCodes=[32], actions=[0]}
+11-11 01:14:00.738  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@fde6224, lastModifier=0, keyCodes=[319], actions=[0]}
+11-11 01:14:00.738  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.739  2882  4892 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-11 01:14:00.739  2882  5001 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-11 01:14:00.739  2882  4888 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-11 01:14:00.738  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-11 01:14:00.739  2882  2882 D ImeBackCallbackSender: Register OnBackInvokedCallback with priority=-1 at app window (packageName=com.sutliff.pocket)
+11-11 01:14:00.740  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-11 01:14:00.740  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-11 01:14:00.740  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-11 01:14:00.740  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-11 01:14:00.740  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-11 01:14:00.740  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.740  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.740  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-11 01:14:00.741  5062  5062 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-11 01:14:00.741  2882  4892 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.741  2882  4892 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.741  2882  4892 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-11 01:14:00.741  2882  4892 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-11 01:14:00.742  2882  4991 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.742  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.742  2882  4991 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.742  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-11 01:14:00.742  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-11 01:14:00.742  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-11 01:14:00.742  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-11 01:14:00.742  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.742  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.742  2882  4991 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-11 01:14:00.743  2882  4991 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-11 01:14:00.743  2882  5001 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-11 01:14:00.743  2882  4991 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=1.6e+05, interactionType=FIELD_CHANGE [SD]
+11-11 01:14:00.743  2882  4991 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-11 01:14:00.743  2882  5001 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-11 01:14:00.744  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.744  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.744  5062  5062 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9063983
+11-11 01:14:00.745  5062  5098 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9063983
+11-11 01:14:00.745  1701  2813 D CoreBackPreview: Window{3ac75d2 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@7aaa6ba, mPriority=0, mIsAnimationCallback=true, mOverrideBehavior=0}
+11-11 01:14:00.746  2882  4888 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.746  2882  4888 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.746  2882  4888 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-11 01:14:00.746  2882  4888 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-11 01:14:00.747  2882  5001 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-11 01:14:00.747  2882  5001 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-11 01:14:00.747  2882  5001 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-11 01:14:00.749  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{1be5844 V.E...... ........ 0,0-2142,108}
+11-11 01:14:00.749  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.749  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{93a3ce9 V.E...... ........ 0,0-2142,452}
+11-11 01:14:00.749  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-11 01:14:00.749  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():98 Not show new language banner: no change in enabled input method entries
+11-11 01:14:00.750  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-11 01:14:00.750  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-11 01:14:00.750  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.750  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.750  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-11 01:14:00.750  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-11 01:14:00.750  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-11 01:14:00.750  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-11 01:14:00.751  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-11 01:14:00.754  2199  2225 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#85) android.os.BinderProxy@e3175d6@0
+11-11 01:14:00.757  1701  1785 V WindowManager: Finish Transition (#85): created at 11-11 01:14:00.398 collect-started=0.048ms request-sent=4.482ms started=5.307ms ready=29.976ms sent=31.39ms commit=26.978ms finished=358.046ms
+11-11 01:14:00.757  2199  2418 D WallpaperService: onVisibilityChanged(false): com.android.systemui.wallpapers.ImageWallpaper$CanvasEngine@b20f408
+11-11 01:14:00.757  2199  2225 V WindowManagerShell: Track 0 became idle
+11-11 01:14:00.757  2199  2225 V WindowManagerShell: All active transition animations finished
+11-11 01:14:00.758 11725 11725 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-11 01:14:00.759  1701  2542 W UserManagerService: Requested status bar icon for non-badged user 0
+11-11 01:14:00.759  1701  2542 W UserManagerService: Requested status bar icon for non-badged user 0
+11-11 01:14:00.760  5062  5062 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-11 01:14:00.771 11725 11725 D SmartspaceInteractor: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+11-11 01:14:00.774 11725 11725 D BaseActivity: Launcher flags updated: [] -[state_started]
+11-11 01:14:00.774 11725 11725 D BaseDepthController: setSurface:
+11-11 01:14:00.774 11725 11725 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-11 01:14:00.774 11725 11725 D BaseDepthController: 	mBaseSurface: null
+11-11 01:14:00.774 11725 11725 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-11 01:14:00.774  3098  3531 I AiAiEcho: (REDACTED) %s No tracked ambient data found for ID: %s; for event type: %d, skipping event processing.
+11-11 01:14:00.775 11725 11725 D LauncherStateManager: StateManager.goToState: fromState: Normal, toState: Normal, partial trace:
+11-11 01:14:00.775 11725 11725 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:26)
+11-11 01:14:00.775 11725 11725 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:35)
+11-11 01:14:00.775 11725 11725 D LauncherStateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:31)
+11-11 01:14:00.775 11725 11725 D LauncherStateManager: StateManager.onRepeatStateSetAborted: state: Normal
+11-11 01:14:00.775 11725 11725 D KeyboardStateManager: hideKeyboard
+11-11 01:14:00.775 11725 11725 D KeyboardStateManager: isImeShown: false
+11-11 01:14:00.775 11725 11725 D StatsLog: LAUNCHER_ONSTOP
+11-11 01:14:00.775 11725 11725 D StatsLog: LAUNCHER_GOOGLE_SEARCH_RESTORE_LIST_SIZE_AFTER_ACTIVITY_RESTART
+11-11 01:14:00.776  1701  2542 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-11 01:14:00.776  1701  2542 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-11 01:14:00.810  1701  2813 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-11 01:14:00.810  1701  2813 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-11 01:14:00.847 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.uprobestats' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:00.905  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-11 01:14:00.933  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-11 01:14:00.955  5062  5062 I ImeTracker: com.sutliff.pocket:7978f65f: onShown
+11-11 01:14:00.977  2199  2234 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-11 01:14:00.991 19752 20662 I FontLog : (REDACTED) Received query %s, URI %s
+11-11 01:14:00.992 19752 20662 I FontLog : (REDACTED) Query [%s] resolved to %s
+11-11 01:14:00.993 19752 20662 I FontLog : (REDACTED) Fetch %s end status %s
+11-11 01:14:00.995 19752 20662 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+11-11 01:14:01.000 19752 20662 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+11-11 01:14:01.123 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.uwb' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.124 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.bt' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.125 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.widevine.nonupdatable' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.145 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.gmssystem' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.195  1701  2013 D HintManagerService: Duplicate messages for 10192
+11-11 01:14:01.206 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.apex.cts.shim' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.226 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.appsearch' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.228 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.art' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.244 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.profiling' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.258 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.mediaprovider' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.263 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.pixel.camera.hal' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.263 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.crashrecovery' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.263 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.resolv' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.271 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.configinfrastructure' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.271 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.media' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.303 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.sdkext' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.312 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.hardware.biometrics.fingerprint.virtual' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.312 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.adservices' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.312 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.tethering' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.338 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.cellbroadcast' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.339 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.pixel.wifi.ext' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.343 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.rkpd' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.350  3065  4842 I fpwf    : (REDACTED) HDM. appOpsListener %s %s
+11-11 01:14:01.350  3065  4842 I fpwf    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-11 01:14:01.388 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.pixel.euicc.update' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.392 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.compos' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.393 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.tzdata6' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.399 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.permission' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.409 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.wifi' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:01.415 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.telephonycore' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.080 19752  4794 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-11 01:14:02.080 19752  4794 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-11 01:14:02.201  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-11 01:14:02.598  1226 29329 W libbinder.Binder: Binder transaction to android.os.IInstalld, function: getAppSize, code: 12, took 1172ms. Data bytes: 328 Reply bytes: 56 Flags: 16
+11-11 01:14:02.598  1701  2369 W libbinder.Binder: Binder transaction to android.app.usage.IStorageStatsManager, function: UNKNOWN_FUNCTION_NAME, code: 7, took 1172ms. Data bytes: 200 Reply bytes: 124 Flags: 18
+11-11 01:14:02.599 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.media.swcodec' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.675 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.adbd' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.700 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.i18n' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.711 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.conscrypt' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.736 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.neuralnetworks' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.737 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.webapp' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.738 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.runtime' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.740 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.ipsec' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.741 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.devicelock' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.746 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.ondevicepersonalization' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.751 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.healthfitness' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.771 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.extservices' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.771 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.virt' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.786 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.nfcservices' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.804 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.os.statsd' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.809 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.npumanager' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.823 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.google.android.scheduling' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.830 26187 26187 W Finsky  : [2] STU: Failed to get storage stats for package 'com.android.hardware.biometrics.face.virtual' (1601: Error getting stats: android.content.pm.PackageManager.NameNotFoundException)
+11-11 01:14:02.843 26187 26187 I Finsky  : [2] App states replicator found 45 unowned apps
+11-11 01:14:02.914  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-11 01:14:02.915  1701  1756 I system_server: Background young concurrent mark compact GC freed 54MB AllocSpace bytes, 23(696KB) LOS objects, 85% free, 74MB/512MB, paused 232us,9.741ms total 99.432ms
+11-11 01:14:02.919  1701  1758 W System  : A resource failed to call HardwareBuffer.close. 
+11-11 01:14:02.929 26187 26221 I Finsky  : [165] playLoggingServerUrl: https://play.googleapis.com/play/log
+11-11 01:14:02.929 26187 26221 I Finsky  : [165] playLoggingServerTimestampUrl: https://play.googleapis.com/play/log/timestamp
+11-11 01:14:02.996  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-11 01:14:02.996  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-11 01:14:02.996  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-11 01:14:03.180 19752 20186 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.android.vending, Service: oauth2:https://www.googleapis.com/auth/googleplay [CONTEXT service_id=343 ]
+11-11 01:14:03.180 19752 20186 W Auth    : broy: Long live credential not available.
+11-11 01:14:03.180 19752 20186 W Auth    : 	at anaj.a(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):1199)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at anaq.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):26)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at anao.a(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):643)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at anan.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):133)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at afft.d(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):971)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at amtm.getAuthToken(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):354)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at deuu.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):8)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at cocj.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):168)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:03.180 19752 20186 W Auth    : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:03.180 19752 20186 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-11 01:14:03.197 19752 20186 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-11 01:14:03.197 19752 20186 W Auth    : [ChimeraGetToken] exception while trying to fetch auth tokens for app=com.google.android.gsf, scope=oauth2:https://www.googleapis.com/auth/googleplay [CONTEXT service_id=153 ]
+11-11 01:14:03.197 19752 20186 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-11 01:14:03.197 19752 20186 W Auth    : 	at anan.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):322)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at afft.d(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):971)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at amtm.getAuthToken(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):354)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at deuu.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):8)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at cocj.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):168)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:03.197 19752 20186 W Auth    : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:03.197 19752 20186 W Auth    : [GmsAccountAuthenticatorImpl] error status while fetching token:BadAuthentication [CONTEXT service_id=343 ]
+11-11 01:14:03.212 26187  5055 I Finsky  : [255] Completed 1 account content syncs with 0 successful.
+11-11 01:14:03.213 26187 26187 I Finsky  : [2] [ContentSync] Installation state replication failed, parameters=Id: 12-1, CT: 1794377624632, Constraints: [{ L: 15000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }].
+11-11 01:14:03.213 26187 26187 I Finsky  : [2] [ContentSync] Scheduling replication attempt 0.
+11-11 01:14:03.213 26187 26187 I Finsky  : [2] SCH: jobFinished: 12-1. TimeElapsed: 2958ms.
+11-11 01:14:03.214 26187 26187 I Finsky  : [2] WM::SCH: Logging work end for 12-1
+11-11 01:14:03.220 26187  4921 I Finsky  : [252] SCH: Attempting to reschedule job: Id: 12-1, Constraints: [{ L: 20000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.224 26187 26221 I Finsky  : [165] SCH: Scheduling phonesky job Id: 1-1337, CT: 1794354174396, Constraints: [{ L: 43103280, D: 86303280, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.224 26187 26221 I Finsky  : [165] SCH: Scheduling phonesky job Id: 34-5344, CT: 1794310978211, Constraints: [{ L: 604800000, D: 2516206952, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.224 26187 26221 I Finsky  : [165] SCH: Scheduling phonesky job Id: 34-5350, CT: 1794314698434, Constraints: [{ L: 79199698, D: 1375199698, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.224 26187 26221 I Finsky  : [165] SCH: Scheduling phonesky job Id: 34-5351, CT: 1794314698991, Constraints: [{ L: 604800000, D: 2591999535, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.226 26187 26223 I Finsky  : [167] SCH: Scheduling 1 system job(s)
+11-11 01:14:03.227 26187 26223 I Finsky  : [167] SCH: Scheduling system job Id: 9037, L: 16254906, D: 62834450, C: false, I: false, N: 1
+11-11 01:14:03.231 26187  5052 I Finsky  : [254] SCH: job service finished with id 9020.
+11-11 01:14:03.250  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1794377640990
+11-11 01:14:03.257 26187  5113 I PlayCommon: [259] Preparing logs for uploading
+11-11 01:14:03.263 26187 26214 I Finsky  : [158] WM::SCH: Logging work initialize for 12-1
+11-11 01:14:03.265 26187 26220 I Finsky  : [164] SCH: Scheduling phonesky job Id: 12-1, CT: 1794377643220, Constraints: [{ L: 20000, D: 86400000, C: CHARGING_NONE, I: IDLE_NONE, N: NET_ANY, B: BATTERY_ANY }]
+11-11 01:14:03.267 19752 20186 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.android.vending, Service: oauth2:https://www.googleapis.com/auth/googleplay [CONTEXT service_id=343 ]
+11-11 01:14:03.267 19752 20186 W Auth    : broy: Long live credential not available.
+11-11 01:14:03.267 19752 20186 W Auth    : 	at anaj.a(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):1199)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at anaq.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):26)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at anao.a(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):643)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at anan.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):133)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at afft.d(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):971)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at amtm.getAuthToken(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):354)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at deuu.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):8)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at cocj.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):168)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:03.267 19752 20186 W Auth    : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:03.267 19752 20186 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-11 01:14:03.268 26187 26223 I Finsky  : [167] SCH: Scheduling 1 system job(s)
+11-11 01:14:03.268 26187 26223 I Finsky  : [167] SCH: Scheduling system job Id: 9037, L: 19952, D: 62834408, C: false, I: false, N: 1
+11-11 01:14:03.273 19752 20186 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-11 01:14:03.274 19752 20186 W Auth    : [ChimeraGetToken] exception while trying to fetch auth tokens for app=com.google.android.gsf, scope=oauth2:https://www.googleapis.com/auth/googleplay [CONTEXT service_id=153 ]
+11-11 01:14:03.274 19752 20186 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-11 01:14:03.274 19752 20186 W Auth    : 	at anan.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):322)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at afft.d(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):971)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at amtm.getAuthToken(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):354)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:248)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:250)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at deuu.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):8)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.os.Binder.transact(Binder.java:1190)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at cocj.onTransact(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):168)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-11 01:14:03.274 19752 20186 W Auth    : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-11 01:14:03.274 19752 20186 W Auth    : [GmsAccountAuthenticatorImpl] error status while fetching token:BadAuthentication [CONTEXT service_id=343 ]
+11-11 01:14:03.280 26187  5113 W PlayCommon: [259] Deferring log upload because couldn't retrieve auth token
+11-11 01:14:03.719  2362  2675 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-11 01:14:04.437  1701  2012 D ActivityManager: freezing 2914 com.google.android.permissioncontroller
+11-11 01:14:04.447  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-11 01:14:04.451  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-11 01:14:04.451  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10254} in 8ms
+11-11 01:14:04.586  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys activity activities'
+11-11 01:14:04.653  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
