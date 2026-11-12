@@ -1,0 +1,9 @@
+11-12 07:06:26.465 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 07:06:26.465 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 07:06:26.465 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 07:06:26.465 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 07:06:26.486 18446 18473 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-12 07:06:27.280 18446 18473 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 07:06:27.281 18446 18473 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-5a527983-1cfa-4a45-b920-168459487545","object":"chat.completion.chunk","created":1794485186,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 07:06:27.385 18446 18473 D PocketNet: streamChat: [DONE] after 13 lines (6 data)
+11-12 07:06:27.385 18446 18473 D PocketNet: streamChat: loop done, lines=13 data=6
