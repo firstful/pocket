@@ -1,0 +1,8 @@
+=== Launch QA vc84 ===
+timestamp: 20261112T060635Z
+PID=18446
+--- topResumedActivity ---
+    topResumedActivity=ActivityRecord{252638135 u0 com.sutliff.pocket/.MainActivity t29157}
+  ResumedActivity: ActivityRecord{252638135 u0 com.sutliff.pocket/.MainActivity t29157}
+--- logcat FATAL/AndroidRuntime/Exception (pid) ---
+--- logcat tail (all) filtered crash ---

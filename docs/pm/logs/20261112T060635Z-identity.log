@@ -1,0 +1,11 @@
+=== Identity QA vc84 ===
+timestamp: 20261112T060635Z
+--- getprop ro.product.model ---
+Pixel 6a
+--- getprop ro.serialno ---
+27271JEGR25574
+--- dumpsys package versionCode ---
+    versionCode=84 minSdk=26 targetSdk=34
+    versionName=1.0.84-519d4e7
+    lastUpdateTime=2026-11-11 07:23:20
+      firstInstallTime=2026-10-14 16:37:12

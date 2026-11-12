@@ -1,0 +1,9 @@
+=== web_search QA vc84 ===
+timestamp: 20261112T060635Z
+PID=18446
+--- key logcat lines (WebSearchTool) ---
+11-12 01:08:02.350 18446 18473 D WebSearchTool: start query_len=21 max_results=8
+11-12 01:08:03.452 18446 18473 D WebSearchTool: response code=200 html_len=27770 duration_ms=1099
+11-12 01:08:03.467 18446 18473 D WebSearchTool: parsed titles=10 snippets=10
+11-12 01:08:03.479 18446 18473 D WebSearchTool: done result_count=8 duration_ms=1099
+--- crash lines ---

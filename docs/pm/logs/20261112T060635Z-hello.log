@@ -1,0 +1,34 @@
+=== Hello stream QA vc84 ===
+timestamp: 20261112T060635Z
+PID=18446
+--- key logcat lines (streamChat / loop done) ---
+11-12 01:07:08.815 18446 18473 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-12 01:07:09.572 18446 18473 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 01:07:09.572 18446 18473 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-9b70a584-169b-417a-b933-81d4399eafdc","object":"chat.completion.chunk","created":1794463628,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 01:07:09.672 18446 18473 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-12 01:07:09.672 18446 18473 D PocketNet: streamChat: loop done, lines=19 data=9
+--- full pid logcat (tail 200) ---
+--------- beginning of main
+11-12 01:07:08.797 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 01:07:08.797 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 01:07:08.797 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 01:07:08.797 18446 18473 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 01:07:08.815 18446 18473 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+--------- beginning of system
+11-12 01:07:08.868 18446 18446 D InsetsController: hide(ime())
+11-12 01:07:08.868 18446 18446 I ImeTracker: com.sutliff.pocket:91235894: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-12 01:07:08.868 18446 18446 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@76b7ab0
+11-12 01:07:08.868 18446 18446 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-12 01:07:08.868 18446 18522 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@76b7ab0
+11-12 01:07:08.870 18446 18446 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-12 01:07:08.872 18446 18446 W RemoteInputConnectionImpl: getSurroundingText on inactive InputConnection
+11-12 01:07:08.898 18446 18446 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 01:07:08.898 18446 18446 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 01:07:08.914 18446 18446 I ImeTracker: com.sutliff.pocket:f1b0c496: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 01:07:08.942 18446 18446 D InsetsController: hide(ime())
+11-12 01:07:08.942 18446 18446 I ImeTracker: com.google.android.inputmethod.latin:fdf66f97: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-12 01:07:08.991 18446 18446 I ImeTracker: system_server:05d772be: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 01:07:09.572 18446 18473 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 01:07:09.572 18446 18473 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-9b70a584-169b-417a-b933-81d4399eafdc","object":"chat.completion.chunk","created":1794463628,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 01:07:09.672 18446 18473 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-12 01:07:09.672 18446 18473 D PocketNet: streamChat: loop done, lines=19 data=9
