@@ -42,3 +42,18 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - web_fetch HTTP 403 from some sites (accuweather) is site-side; not a bug. Consider UA/headers or fallback.
 - OTEL telemetry end-to-end not exercised this run (endpoint unset by default); verify separately if needed.
 - Untracked screenshot `docs/pm/screenshots/20261111T061848Z-settings.png` from prior run committed with this update.
+
+## Run 2026-11-13 (vc84 `1.0.84-519d4e7`, CI run 1540 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc84 installed from store (sha e9298782…). Store version matches HEAD code SHA 519d4e7. Evidence: `docs/pm/logs/20261113T060530Z-identity.log`.
+- Note: device was reported unreachable by the pre-run script at 192.168.1.147:45357 but reconnected successfully this run via `adb connect` (mDNS service unchanged). No IP/port drift beyond the transient failure.
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime. Evidence: `docs/pm/logs/20261113T060530Z-launch.log`, `docs/pm/screenshots/20261113T060530Z-launch.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream … [DONE] after 15 lines (7 data), loop done, lines=15 data=7`. No gateway error. Evidence: `docs/pm/logs/20261113T060530Z-hello.logcat.txt`, `docs/pm/screenshots/20261113T060530Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=7 … response code=200 html_len=28097 duration_ms=1551 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1551`. Follow-up stream `loop done, lines=59 data=29`. No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261113T060530Z-websearch.logcat.txt`, `docs/pm/screenshots/20261113T060530Z-websearch.png`.
+- No new permission dialogs observed (`mCurrentFocus` stayed Pocket throughout).
+- OTEL not exercised (endpoint unset by default) — consistent with prior runs; no regression suspected.
+- Homelab MCP todo board: no open Pocket-related todos (open board scanned; #423/#424/#425 closed in prior run).
+
+### Shipped
+- No code changes this run. HEAD 78c6ccf is docs-only ahead of CI/build SHA 519d4e7; store tip vc84 matches.
