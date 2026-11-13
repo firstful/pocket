@@ -1,0 +1,5 @@
+ts=20261113T120324Z
+mCurrentFocus=  mCurrentFocus=Window{ee62ff u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+mFocusedApp=  mFocusedApp=ActivityRecord{113722447 u0 com.sutliff.pocket/.MainActivity t29162}
+permission_dialogs_found=none (no system permission dialog appeared during checks)
+notes=No GrantPermissions/AlertDialog focus changes; mCurrentFocus remained com.sutliff.pocket/.MainActivity throughout.

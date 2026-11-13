@@ -1,0 +1,24 @@
+=== Hello logcat (PID=24438) ===
+--------- beginning of main
+11-12 19:04:12.171 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:04:12.171 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:04:12.171 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:04:12.171 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:04:12.211 24438 24478 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+--------- beginning of system
+11-12 19:04:12.266 24438 24438 D InsetsController: hide(ime())
+11-12 19:04:12.266 24438 24438 I ImeTracker: com.sutliff.pocket:3139a036: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-12 19:04:12.266 24438 24438 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-12 19:04:12.266 24438 24438 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-12 19:04:12.267 24438 24438 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-12 19:04:12.267 24438 24566 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-12 19:04:12.277 24438 24438 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 19:04:12.277 24438 24438 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 19:04:12.291 24438 24438 I ImeTracker: com.sutliff.pocket:7725b5b2: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 19:04:12.321 24438 24438 D InsetsController: hide(ime())
+11-12 19:04:12.321 24438 24438 I ImeTracker: com.google.android.inputmethod.latin:6c3fa016: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-12 19:04:12.368 24438 24438 I ImeTracker: system_server:7f590f60: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 19:04:12.930 24438 24478 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 19:04:12.931 24438 24478 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-9eb65e97-e07c-40ce-935b-8708ac800120","object":"chat.completion.chunk","created":1794528251,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 19:04:12.970 24438 24478 D PocketNet: streamChat: [DONE] after 13 lines (6 data)
+11-12 19:04:12.970 24438 24478 D PocketNet: streamChat: loop done, lines=13 data=6

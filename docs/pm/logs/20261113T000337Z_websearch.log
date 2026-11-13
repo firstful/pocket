@@ -1,0 +1,50 @@
+=== Web search logcat (PID=24438) ===
+--------- beginning of main
+11-12 19:05:02.914 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:02.914 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:02.914 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:02.914 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:02.933 24438 24478 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+--------- beginning of system
+11-12 19:05:02.969 24438 24438 D InsetsController: hide(ime())
+11-12 19:05:02.969 24438 24438 I ImeTracker: com.sutliff.pocket:e814c204: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-12 19:05:02.969 24438 24438 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-12 19:05:02.969 24438 24438 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-12 19:05:02.970 24438 24566 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@f9b41ba
+11-12 19:05:02.970 24438 24438 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-12 19:05:02.979 24438 24438 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 19:05:02.979 24438 24438 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-12 19:05:02.998 24438 24438 I ImeTracker: com.sutliff.pocket:00645377: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 19:05:03.043 24438 24438 D InsetsController: hide(ime())
+11-12 19:05:03.043 24438 24438 I ImeTracker: com.google.android.inputmethod.latin:689fec6e: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-12 19:05:03.075 24438 24438 I ImeTracker: system_server:56fd2817: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-12 19:05:06.487 24438 24478 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 19:05:06.487 24438 24478 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-137ecbcd-32d4-4b4c-9682-258a056eff4d","object":"chat.completion.chunk","created":1794528304,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 19:05:06.649 24438 24478 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-12 19:05:06.649 24438 24478 D PocketNet: streamChat: loop done, lines=25 data=12
+11-12 19:05:06.650 24438 24478 D WebSearchTool: start query_len=21 max_results=8
+11-12 19:05:08.198 24438 24478 D WebSearchTool: response code=200 html_len=27473 duration_ms=1547
+11-12 19:05:08.213 24438 24478 D WebSearchTool: parsed titles=10 snippets=10
+11-12 19:05:08.214 24438 24478 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-12 19:05:08.223 24438 24478 D WebSearchTool: done result_count=8 duration_ms=1547
+11-12 19:05:08.231 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:08.231 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:08.231 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:08.231 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:08.260 24438 24478 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-12 19:05:09.050 24438 24478 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 19:05:09.050 24438 24478 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-01ce5143-7526-43c0-adde-b13e4a7e3944","object":"chat.completion.chunk","created":1794528307,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 19:05:09.055 24438 24478 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-12 19:05:09.055 24438 24478 D PocketNet: streamChat: loop done, lines=21 data=10
+11-12 19:05:09.057 24438 24478 D WebFetchTool: start url=https://forecast.weather.gov/zipcity.php?inputstring=Columbus%2COH max_chars=4000
+11-12 19:05:09.835 24438 24478 D WebFetchTool: response code=200 html_len=49758 duration_ms=777
+11-12 19:05:09.896 24438 24478 D WebFetchTool: done cleaned_len=4038 duration_ms=777
+11-12 19:05:09.898 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:09.898 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:09.898 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:09.898 24438 24478 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-12 19:05:09.907 24438 24478 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-12 19:05:11.455 24438 24478 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-12 19:05:11.456 24438 24478 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-b2e9ac64-5729-4378-b2f7-81951fd326da","object":"chat.completion.chunk","created":1794528308,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-12 19:05:12.074 24438 24478 D PocketNet: streamChat: [DONE] after 89 lines (44 data)
+11-12 19:05:12.074 24438 24478 D PocketNet: streamChat: loop done, lines=89 data=44

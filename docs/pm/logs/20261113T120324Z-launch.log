@@ -1,0 +1,20 @@
+=== topResumedActivity ===
+    topResumedActivity=ActivityRecord{113722447 u0 com.sutliff.pocket/.MainActivity t29162}
+=== logcat FATAL/AndroidRuntime/Exception (after launch) ===
+11-13 07:03:35.082 13902 13902 E ScalingWorkspaceRevealAnim: java.lang.Exception
+11-13 07:03:35.186  3065  3427 W eujt    : InvalidInvocationTokenException(errorCode=1, message=apa:00001a1b6857e59)
+11-13 07:03:35.188 14074 14701 W euhn    : InvalidInvocationTokenException(errorCode=1, message=apa:00001a1b6857e59)
+11-13 07:03:35.189 14074 14392 I bbza    : InvalidInvocationTokenException(errorCode=1, message=apa:00001a1b6857e59)
+11-13 07:03:35.191 14074 14113 W azaa    : Exception while collecting S3 requests.
+11-13 07:03:35.191 14074 14113 W azaa    : java.util.concurrent.CancellationException: Invocation was invalidated during mic open
+11-13 07:03:35.191 14074 14113 W azaa    : Caused by: InvalidInvocationTokenException(errorCode=1, message=apa:00001a1b6857e59)
+11-13 07:03:35.370  2362  4336 W Binder  : Caught a RuntimeException from the binder stub implementation.
+11-13 07:03:35.370  2362  4336 W Binder  : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+11-13 07:03:35.411  1701  3322 W WindowManager: Exception thrown during dispatchAppVisibility Window{8de5eac u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity EXITING}
+11-13 07:03:35.411  1701  3322 W WindowManager: android.os.DeadObjectException
+
+=== QA RESULT ===
+topResumedActivity=com.sutliff.pocket/.MainActivity (PASS foreground is Pocket)
+FATAL lines: 0 (none)
+AndroidRuntime lines: 0 (none app crash)
+LAUNCH: PASS

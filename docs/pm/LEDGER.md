@@ -57,3 +57,22 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 
 ### Shipped
 - No code changes this run. HEAD 78c6ccf is docs-only ahead of CI/build SHA 519d4e7; store tip vc84 matches.
+
+## Run 2026-11-13T12:03Z (spot-check, vc84 `1.0.84-519d4e7`, CI run 1540 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc84 installed from store (sha e9298782…). Store version matches HEAD code SHA 519d4e7 (HEAD 9b02abe is docs-only ahead). Evidence: `docs/pm/logs/20261113T120324Z-identity.log`.
+- Device reachable this run at `192.168.1.147:45357` (Pixel 6a/bluejay). Prior transient unreachable reported by pre-run script.
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, `mCurrentFocus` stayed Pocket, no app FATAL/AndroidRuntime. Evidence: `docs/pm/logs/20261113T120324Z-launch.log`, `docs/pm/screenshots/20261113T120324Z-launch.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream … [DONE] after 13 lines (6 data), loop done, lines=13 data=6`. No gateway error. Evidence: `docs/pm/logs/20261113T120324Z-hello.logcat.txt`, `docs/pm/screenshots/20261113T120324Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=13 … response code=200 html_len=28766 duration_ms=893 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=893`. Follow-up stream healthy (no timeout/NetworkOnMainThread). Evidence: `docs/pm/logs/20261113T120324Z-websearch.logcat.txt`, `docs/pm/screenshots/20261113T120324Z-websearch.png`.
+- Permission/dialogs PASS: no system permission dialog observed; `mCurrentFocus` remained `com.sutliff.pocket/.MainActivity`. Evidence: `docs/pm/logs/20261113T120324Z-permission.log`.
+- OTEL not exercised this run (endpoint unset by default). Settings UI not captured in this spot-check set.
+- Additional spot-check evidence from earlier same day (untracked, now committed): `docs/pm/logs/20261113T000337Z_{identity,launch,hello,websearch}.log`, `docs/pm/screenshots/20261113T000337Z_{launch,hello,websearch}.png` (vc84, hello `lines=13 data=6`, web_search `result_count=8 duration_ms=1547` + follow-up `lines=89 data=44`).
+
+### Shipped
+- No code changes this run. HEAD `9b02abe` docs-only ahead of CI/build SHA `519d4e7`; store tip vc84 matches.
+
+### Open / Next
+- OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
+- `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
