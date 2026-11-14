@@ -76,3 +76,23 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 ### Open / Next
 - OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
 - `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
+
+## Run 2026-11-14T00:03Z (spot-check, vc84 `1.0.84-519d4e7`, CI run 1540 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc84 installed from store (sha e9298782…). Store version matches HEAD code SHA 519d4e7 (HEAD 4cdb20f is docs-only ahead). Evidence: `docs/pm/logs/20261114T000341Z-identity` (device/version captured inline this run).
+- Device reachable at `192.168.1.147:45357` (Pixel 6a/bluejay).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime for Pocket. Evidence: `docs/pm/logs/20261114T000341Z-launch.log`, `docs/pm/screenshots/20261114T000341Z-launch.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream … [DONE] after 13 lines (6 data), loop done, lines=13 data=6`. No gateway error. Evidence: `docs/pm/logs/20261114T000341Z-hello.log`, `docs/pm/screenshots/20261114T000341Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=6 … response code=200 html_len=32191 duration_ms=919 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=919`. Follow-up stream healthy (`loop done, lines=49 data=24`). No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261114T000341Z-websearch.log`, `docs/pm/screenshots/20261114T000341Z-websearch.png`.
+- Permission/dialogs PASS: no system permission dialog observed; `mCurrentFocus` remained Pocket.
+- OTEL not exercised this run (endpoint unset by default). No regression suspected.
+- Homelab MCP todo board: no open Pocket-related todos (open board scanned; #423/#424/#425 closed in prior run).
+
+### Shipped
+- No code changes this run. HEAD `4cdb20f` docs-only ahead of CI/build SHA `519d4e7`; store tip vc84 matches.
+
+### Open / Next
+- OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
+- `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
+- Untracked evidence from prior run (2026-11-13T18:14Z) committed with this update.

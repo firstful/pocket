@@ -1,0 +1,1293 @@
+--------- beginning of main
+11-13 19:03:30.468  2882  2895 W putmethod.latin: Reducing the number of considered missed Gc histogram windows from 160 to 100
+--------- beginning of system
+11-13 19:03:30.502  1701  2012 D ActivityManager: freezing 21105 com.google.android.apps.messaging
+11-13 19:03:31.794  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-13 19:03:31.913  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-13 19:03:31.914  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-13 19:03:31.914  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-13 19:03:31.975  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:am start -n com.sutliff.pocket/.MainActivity'
+11-13 19:03:32.023  1701  3260 W ActivityTaskManager: callingPackage for (uid=2000, pid=8476) has no WPC
+11-13 19:03:32.033  1701  3260 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@942e2680 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-13 19:03:32.037 13902 13902 D RecentsView: onTaskDisplayChanged: 29166, new displayId = 0
+11-13 19:03:32.039  2362  4336 W Binder  : Caught a RuntimeException from the binder stub implementation.
+11-13 19:03:32.039  2362  4336 W Binder  : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+11-13 19:03:32.039  2362  4336 W Binder  : 	at com.google.android.apps.pixel.impulse.statesources.AppTaskStateSource$AppTaskPlatformConnection$AppTaskListener.onTaskCreated(go/retraceme 4bc30d8d067a1f3650f5e99a47d5a1dea2f2b23e820917d6b31aa96b18eed416:0)
+11-13 19:03:32.039  2362  4336 W Binder  : 	at android.app.ITaskStackListener$Stub.onTransact(ITaskStackListener.java:443)
+11-13 19:03:32.039  2362  4336 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1328)
+11-13 19:03:32.039  2362  4336 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1282)
+11-13 19:03:32.043  1701  3260 D CorePackageUpdate: onRecentTaskRemoved Removing task: 29164
+11-13 19:03:32.043  1701  3260 D CorePackageUpdate: Couldn't find a persistent state for task= 29164
+11-13 19:03:32.043  1701  3260 V ActivityTaskManager: TaskLaunchParamsModifier: phase=2 task=Task{3111cbb #29166 type=standard A=10494:com.sutliff.pocket} activity=ActivityRecord{79340874 u0 com.sutliff.pocket/.MainActivity t-1} display-from-task=0 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@96050829 inherit-from-task=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@96050829 default-portrait freeform-size-mismatch=Rect(946, 145 - 1328, 1009)
+11-13 19:03:32.043  1701  3260 I ActivityTaskManager: START u0 {flg=0x10000000 xflg=0x5 cmp=com.sutliff.pocket/.MainActivity} with LAUNCH_MULTIPLE from uid 2000 (com.android.shell) (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+11-13 19:03:32.044  2199  2225 V WindowManagerShell: Transition requested (#137): android.os.BinderProxy@879b4a4 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29166 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=551077936 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@bb4120d} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(132, 0 - 0, 0) topActivityInfo=ActivityInfo{c39d5c2 com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(946, 145 - 1328, 1009) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(132, 0 - 2274, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 137 }
+11-13 19:03:32.044  2199  2225 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+11-13 19:03:32.045  1701  1788 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@942e2680 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-13 19:03:32.045  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-13 19:03:32.045 13902 13902 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-13 19:03:32.046  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-13 19:03:32.046 13902 13902 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-13 19:03:32.052  1701  3260 W InputChannel-JNI: Channel already disposed.
+11-13 19:03:32.056   985   985 D Zygote  : Forked child process 8479
+11-13 19:03:32.056  1701  1801 I ActivityManager: Start proc 8479:com.sutliff.pocket/u0a494 for next-top-activity {com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+11-13 19:03:32.059  8479  8479 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_8479
+11-13 19:03:32.062  2199  2234 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@103bd70
+11-13 19:03:32.063  2199  2236 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@103bd70
+11-13 19:03:32.063  8479  8479 I Zygote  : Process 8479 created for com.sutliff.pocket
+11-13 19:03:32.063  8479  8479 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-13 19:03:32.063  1701  3260 D CoreBackPreview: Window{60a93a2 u0 Splash Screen com.sutliff.pocket}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@7038169, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-13 19:03:32.063  1701  1889 D WindowManager: setClientSurface Surface(name=VRI-Splash Screen com.sutliff.pocket#1861)/@0xe2247ee for 60a93a2 Splash Screen com.sutliff.pocket
+11-13 19:03:32.064  2199  2234 I Surface : Creating surface for consumer unnamed-2199-332 with slotExpansion=1 for 64 slots
+11-13 19:03:32.065  2199  2234 I Surface : Creating surface for consumer VRI[pocket]#205(BLAST Consumer)205 with slotExpansion=1 for 64 slots
+11-13 19:03:32.066  1701  1889 I AppsFilter: interaction: PackageSetting{4abaa8b com.google.android.microdroid.empty_payload/10260} -> PackageSetting{697548f com.sutliff.pocket/10494} BLOCKED
+11-13 19:03:32.068  8479  8479 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-13 19:03:32.071  1701  1789 V SharedSurfaceAnimation: Checking SharedSurface matching for: ComponentInfo{com.reedsutliff.rooknotify/com.reedsutliff.rooknotify.MainActivity}, user= 0
+11-13 19:03:32.071  1701  1789 V SharedSurfaceAnimation:   No matching provider found.
+11-13 19:03:32.074  2199  2883 V WindowManagerShell: onTransitionReady(transaction=7305739403023)
+11-13 19:03:32.074  2199  2225 V WindowManagerShell: onTransitionReady (#137) android.os.BinderProxy@879b4a4: {id=137 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-13 19:03:32.074  2199  2225 V WindowManagerShell:         {m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29166#1858)/@0x404dc21 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-13 19:03:32.074  2199  2225 V WindowManagerShell:         {m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29165#1836)/@0x3a9f846 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}
+11-13 19:03:32.074  2199  2225 V WindowManagerShell:     ]}
+11-13 19:03:32.074  2199  2225 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #137
+11-13 19:03:32.074  2199  2225 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=29166
+11-13 19:03:32.074  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=29166, isFocusedOnDisplay=true, isFocusedGlobally=true
+11-13 19:03:32.074  2199  2225 V RecentTasksController: Notify recent tasks changed: 2
+11-13 19:03:32.074  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=29165, isFocusedOnDisplay=false, isFocusedGlobally=false
+11-13 19:03:32.074 13902 13902 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-13 19:03:32.083  1701  1785 V WindowManager: Sent Transition (#137) createdAt=11-13 19:03:32.034 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29166 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=551077936 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{e26889e Task{3111cbb #29166 type=standard A=10494:com.sutliff.pocket}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(132, 0 - 0, 0) topActivityInfo=ActivityInfo{c3c7f7f com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(946, 145 - 1328, 1009) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(132, 0 - 2274, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 137 }
+11-13 19:03:32.083  1701  1785 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+11-13 19:03:32.083  1701  1785 V WindowManager:     info={id=137 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-13 19:03:32.083  1701  1785 V WindowManager:         {WCT{RemoteToken{e26889e Task{3111cbb #29166 type=standard A=10494:com.sutliff.pocket}}} m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29166#1858)/@0x98739dd sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},
+11-13 19:03:32.083  1701  1785 V WindowManager:         {WCT{RemoteToken{193657b Task{e4293cb #29165 type=standard A=10501:com.reedsutliff.rooknotify}}} m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29165#1836)/@0xb57025f sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}
+11-13 19:03:32.083  1701  1785 V WindowManager:     ]}
+11-13 19:03:32.084  1701  2995 W InputChannel-JNI: Channel already disposed.
+11-13 19:03:32.084  2199  2225 V WindowManagerShell: Playing animation for (#137) android.os.BinderProxy@879b4a4@0
+11-13 19:03:32.084  2199  2225 D ShellSplitScreen: startAnimation: transition=137 isSplitActive=false
+11-13 19:03:32.084  2199  2225 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-13 19:03:32.084  2199  2225 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+11-13 19:03:32.084  2199  2225 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=137 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29166#1858)/@0x404dc21 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29165#1836)/@0x3a9f846 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}]}
+11-13 19:03:32.084  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@4fbee59 windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3b9ca1e, appThread = android.app.IApplicationThread$Stub$Proxy@2e462ff, debugName = overlayBackTransition, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@4fbee59 windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-13 19:03:32.084  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@1a208cc, appThread = android.app.IApplicationThread$Stub$Proxy@a741715, debugName = LauncherToDream, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-13 19:03:32.084  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@1b46a2a, appThread = android.app.IApplicationThread$Stub$Proxy@8a6301b, debugName = QuickstepDisplayMove, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} }}
+11-13 19:03:32.084  2199  2225 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@14ce5b8, appThread = android.app.IApplicationThread$Stub$Proxy@c0f91, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+11-13 19:03:32.084  2199  2225 V WindowManagerShell:  Delegate animation for (#137) to null
+11-13 19:03:32.084  2199  2225 V WindowManagerShell: start default transition animation, info = {id=137 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29166#1858)/@0x404dc21 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=29165#1836)/@0x3a9f846 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}]}
+11-13 19:03:32.085  2199  2225 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@4c6a564 animAttr=0x9 type=OPEN isEntrance=false
+11-13 19:03:32.087  1701  1888 W UserManagerService: Requested status bar icon for non-badged user 0
+11-13 19:03:32.088  8479  8479 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-13 19:03:32.095  2199  2225 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@77af6ce animAttr=0x8 type=OPEN isEntrance=true
+11-13 19:03:32.095  2199  2225 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@fdf7165
+11-13 19:03:32.095  2199  2225 V ShellTaskOrganizer: Task appeared taskId=29166 listener=FullscreenTaskListener
+11-13 19:03:32.095  2199  2225 V ShellTaskOrganizer: Fullscreen Task Appeared: #29166
+11-13 19:03:32.095  2199  2225 D ShellPackageUpdate: PackageUpdateController: Setting handlePackageUpdate for task: 29166
+11-13 19:03:32.096  1701  3062 E TransitionChain: Can't collect into a chain with no transition
+11-13 19:03:32.096  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-13 19:03:32.096 13902 13902 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-13 19:03:32.100   566   620 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+11-13 19:03:32.104  1701  2004 D ActivityManager: sync unfroze 18466 com.google.android.calendar for 6
+11-13 19:03:32.105   566   620 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-13 19:03:32.105   566   620 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-13 19:03:32.105   566   620 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-13 19:03:32.155  1701  1756 I system_server: NativeAlloc young concurrent mark compact GC freed 14MB AllocSpace bytes, 7(140KB) LOS objects, 84% free, 81MB/512MB, paused 1.106ms,6.055ms total 73.667ms
+11-13 19:03:32.169  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-13 19:03:32.170 13902 13902 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-13 19:03:32.171  2199  2225 V RecentTasksController: generateList(getRecentTasks)
+11-13 19:03:32.171  2199  2225 V RecentTasksController: initializeDesksMap - desktop windowing not available
+11-13 19:03:32.171  2199  2225 V RecentTasksController: Added fullscreen task: 29166
+11-13 19:03:32.171  2199  2225 V RecentTasksController: Added fullscreen task: 29165
+11-13 19:03:32.171  2199  2225 V RecentTasksController: Added fullscreen task: 29149
+11-13 19:03:32.171  2199  2225 V RecentTasksController: generateList - complete
+11-13 19:03:32.171 13902 13926 D PreloadThumbnailUseCase: Preloading thumbnails for task ids: [[id=29149 windowingMode=1 user=0 lastActiveTime=314257413 lastFocusedTime=0] null, [id=29165 windowingMode=1 user=0 lastActiveTime=551077935 lastFocusedTime=532785970] null, [id=29166 windowingMode=1 user=0 lastActiveTime=551077936 lastFocusedTime=551077967] null]
+11-13 19:03:32.178  8479  8479 D nativeloader: Configuring clns-9 for other apk /data/app/~~S1o9pzd7Qs5RDgKKU5gCMQ==/com.sutliff.pocket-AnLFnZnvnZXi0XlF9tobIA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~S1o9pzd7Qs5RDgKKU5gCMQ==/com.sutliff.pocket-AnLFnZnvnZXi0XlF9tobIA==/lib/arm64:/data/app/~~S1o9pzd7Qs5RDgKKU5gCMQ==/com.sutliff.pocket-AnLFnZnvnZXi0XlF9tobIA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+11-13 19:03:32.181   566   620 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+11-13 19:03:32.182   566   620 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-13 19:03:32.182   566   620 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-13 19:03:32.182   566   620 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-13 19:03:32.183  1701  1889 I Surface : Creating surface for consumer unnamed-1701-42 with slotExpansion=1 for 64 slots
+11-13 19:03:32.183  1701  1889 I Surface : Creating surface for consumer ImageReader-1920x864f1m1-1701-39 with slotExpansion=1 for 64 slots
+11-13 19:03:32.183  1701  1889 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+11-13 19:03:32.186  8479  8479 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment: Currently set values for:
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-13 19:03:32.188  8479  8479 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-13 19:03:32.189  1701  1889 E ConsumerBase: [ImageReader-1920x864f1m1-1701-39] abandonLocked: ConsumerBase is abandoned!
+11-13 19:03:32.195  8479  8479 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-13 19:03:32.197  8479  8479 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-13 19:03:32.197  8479  8479 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-13 19:03:32.198   566   620 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
+11-13 19:03:32.198   566   620 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-13 19:03:32.198   566   620 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-13 19:03:32.199   566   620 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-13 19:03:32.211  1701  1889 D CorePackageUpdate: Couldn't find a persistent state for task= 29166
+11-13 19:03:32.097   566   566 W HwBinder:566_1: type=1400 audit(0.0:12679): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.214  8479  8479 D BootReceiver: Boot completed, starting AgentBridgeService
+11-13 19:03:32.215  1701  3062 I BroadcastQueue: BOOT_COMPLETED_BROADCAST_COMPLETION_LATENCY_REPORTED action:android.intent.action.BOOT_COMPLETED dispatchLatency:0 completeLatency:127 dispatchRealLatency:0 completeRealLatency:127 receiversSize:1 userId:0 userType:android.os.usertype.full.SYSTEM
+11-13 19:03:32.216  1701  2003 D IntervalStats: Unable to parse usage stats packages: [307, 328, 329, 330, 340, 345, 350, 353, 354, 355, 356, 367, 380, 383, 393, 395, 402, 447, 449, 472, 503, 522, 563, 599, 625, 646, 649, 670, 682, 729, 761, 825, 833, 845, 851, 858, 859, 869, 879, 887, 888]
+11-13 19:03:32.101   566   566 W HwBinder:566_1: type=1400 audit(0.0:12680): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.177   566   566 W HwBinder:566_1: type=1400 audit(0.0:12681): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.177   566   566 W HwBinder:566_1: type=1400 audit(0.0:12682): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.193   566   566 W HwBinder:566_1: type=1400 audit(0.0:12683): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.193   566   566 W HwBinder:566_1: type=1400 audit(0.0:12684): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.216  1701  2003 D IntervalStats: Unable to parse event packages: [307, 328, 329, 330, 340, 345, 350, 353, 354, 355, 356, 367, 380, 383, 395, 402, 447, 449, 472, 503, 522, 563, 646, 649, 670, 682, 729, 761, 825, 833, 845, 851, 858, 859, 869, 879, 887, 888]
+11-13 19:03:32.216  8479  8505 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-13 19:03:32.217  8479  8505 D vulkan  : searching for layers in '/data/app/~~S1o9pzd7Qs5RDgKKU5gCMQ==/com.sutliff.pocket-AnLFnZnvnZXi0XlF9tobIA==/lib/arm64'
+11-13 19:03:32.217  8479  8505 D vulkan  : searching for layers in '/data/app/~~S1o9pzd7Qs5RDgKKU5gCMQ==/com.sutliff.pocket-AnLFnZnvnZXi0XlF9tobIA==/base.apk!/lib/arm64-v8a'
+11-13 19:03:32.217  1876  1876 I pixel-thermal: VIRTUAL-SKIN:24.0859 raw data: VIRTUAL-NEUTRAL:24085.8 VIRTUAL-NEUTRAL-SKIN2:23873.7 VIRTUAL-QUIET-NEUTRAL:23419.8 VIRTUAL-SKIN:24085.8 disp_therm:23708 gnss_tcxo_therm:24434 neutral_therm:23403 quiet_therm:23427 skin_therm1:24457 skin_therm2:24972 
+11-13 19:03:32.217  1876  1876 I pixel-thermal: cellular-emergency:24.0859 raw data: VIRTUAL-SKIN:24085.8 cellular-emergency:24085.8 
+11-13 19:03:32.217  1876  1876 I pixel-thermal: VIRTUAL-USB-UI:0 raw data: USB2-MINUS-CHG:-1850 VIRTUAL-USB-UI:0 charger_skin_therm:25113 usb_pwr_therm2:23263 
+11-13 19:03:32.220  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=8 err=0
+11-13 19:03:32.238  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=1 err=0
+11-13 19:03:32.241  1701  1888 W InputChannel-JNI: Channel already disposed.
+11-13 19:03:32.244  1701  1889 I ActivityManager: Background started FGS: Allowed [callingPackage: com.sutliff.pocket; callingUid: 10494; uidState: TOP ; uidBFSL: [BFSL]; BFGS denied: false; intent: Intent { xflg=0x4 cmp=com.sutliff.pocket/.bridge.AgentBridgeService }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null; isBindService:false]
+11-13 19:03:32.244  1701  1889 W ForegroundServiceTypeLoggerModule: Foreground service start for UID: 10494 does not have any types
+11-13 19:03:32.245  8479  8479 D AgentBridgeService: AgentBridgeService created
+11-13 19:03:32.250  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=6 err=0
+11-13 19:03:32.261  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=4 err=0
+11-13 19:03:32.274  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=3 err=0
+11-13 19:03:32.276  8479  8479 I HWUI    : Using FreeType backend (prop=Auto)
+11-13 19:03:32.288  8479  8479 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-13 19:03:32.296  1701  1889 D ConnectivityService: requestNetwork for uid/pid:10494/8479 activeRequest: null callbackRequest: 12997 [NetworkRequest [ REQUEST id=12998, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false declaredMethods: AVAIL|LOST|UNAVAIL
+11-13 19:03:32.297  1701  2086 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=12998, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-13 19:03:32.297  8479  8479 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-13 19:03:32.297  1701  2086 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=12998, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-13 19:03:32.297  1701  2086 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=12998, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-13 19:03:32.297  8479  8479 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@ac5395e
+11-13 19:03:32.297  1701  2086 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=12998, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10494 RequestorUid: 10494 RequestorPkg: com.sutliff.pocket UnderlyingNetworks: Null] ]
+11-13 19:03:32.297  1701  2098 D ConnectivityService: NetReassign [12998 : null → 104] [c 0] [a 0] [i 1]
+11-13 19:03:32.297  8479  8525 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@ac5395e
+11-13 19:03:32.297  1701  1889 D CoreBackPreview: Window{7bbac0a u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@b7ba84f, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-13 19:03:32.313 18466 18477 W ndroid.calendar: Reducing the number of considered missed Gc histogram windows from 130 to 100
+11-13 19:03:32.327  1701  1889 D WindowManager: setClientSurface Surface(name=VRI-com.sutliff.pocket/com.sutliff.pocket.MainActivity#1870)/@0xd08ebdc for 7bbac0a com.sutliff.pocket/com.sutliff.pocket.MainActivity
+11-13 19:03:32.329  8479  8479 I Surface : Creating surface for consumer unnamed-8479-0 with slotExpansion=1 for 64 slots
+11-13 19:03:32.330  8479  8479 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-13 19:03:32.448  1701  1785 I ActivityTaskManager: Displayed com.sutliff.pocket/.MainActivity for user 0: +424ms
+11-13 19:03:32.466  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=9 err=0
+11-13 19:03:32.482   566   620 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+11-13 19:03:32.477   566   566 W HwBinder:566_1: type=1400 audit(0.0:12685): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.477   566   566 W HwBinder:566_1: type=1400 audit(0.0:12686): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-13 19:03:32.482   566   620 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-13 19:03:32.482   566   620 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-13 19:03:32.482   566   620 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-13 19:03:32.490  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=104 dst=[192.168.1.2]:4318 latencyMs=2 err=0
+11-13 19:03:32.522  8479  8479 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-13 19:03:32.535  8479  8479 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-13 19:03:32.538  8479  8479 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-13 19:03:32.561  1701  3114 I AppSearchManagerService: Scheduling checkForOptimize for user: UserHandle{0}
+11-13 19:03:32.567  8479  8479 D InsetsController: show(ime())
+11-13 19:03:32.568  8479  8479 I ImeTracker: com.sutliff.pocket:eeca7b7d: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-13 19:03:32.568  8479  8479 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-13 19:03:32.569  1701  1889 I ImeTracker: com.sutliff.pocket:eeca7b7d: onFailed at PHASE_SERVER_UPDATE_CLIENT_VISIBILITY
+11-13 19:03:32.573  1701  1800 D ActivityManager: sync unfroze 7379 com.google.android.googlequicksearchbox:search for 3
+11-13 19:03:32.574  1701  1800 D ActivityManager: sync unfroze 7421 com.google.android.googlequicksearchbox:googleapp for 3
+11-13 19:03:32.574  1701  1800 D ActivityManager: sync unfroze 7976 com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 for 3
+11-13 19:03:32.575  7421  7452 D WM-SessionHandler: Unbinding service
+11-13 19:03:32.575  1701  2064 I ImeTracker: com.sutliff.pocket:f0e6bd58: onRequestShow at ORIGIN_SERVER reason SHOW_RESTORE_IME_VISIBILITY fromUser false userId 0 displayId 0
+11-13 19:03:32.577  7421  7452 D WM-RemoteWMgr.Connectio: Binding died
+11-13 19:03:32.577  7421  7452 D WM-RemoteWorkManagerCli: Cleaning up.
+11-13 19:03:32.578  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.579  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.579  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.579  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.579  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.579  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.580  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.580  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.580  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.580  7379  7425 D WM-WorkConstraintsTrack: NetworkRequestConstraintController onCapabilitiesChanged callback
+11-13 19:03:32.584  8479  8479 D InsetsController: show(ime())
+11-13 19:03:32.585  8479  8479 I ImeTracker: com.sutliff.pocket:f0e6bd58: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-13 19:03:32.591  7379  7489 I clmz    : (REDACTED) Updating user context. Event: %s
+11-13 19:03:32.593  2882  2882 I SubtypeOperator: SubtypeOperator$1.onUnbindInput():64 
+11-13 19:03:32.593 21085 21085 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.clearcut.sampler.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+11-13 19:03:32.594  1701  3062 I ImeTracker: com.sutliff.pocket:5999c09a: onRequestShow at ORIGIN_SERVER reason ATTACH_NEW_INPUT fromUser false userId 0 displayId 0
+11-13 19:03:32.594  2882  2882 I SubtypeOperator: SubtypeOperator$1.onBindInput():53 
+11-13 19:03:32.594  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-13 19:03:32.596  3065  4975 I fpwf    : (REDACTED) HDM. appOpsListener %s %s
+11-13 19:03:32.596  3065  4975 I fpwf    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-13 19:03:32.597  1701  3062 W InputChannel-JNI: Channel already disposed.
+11-13 19:03:32.599  1701  3260 I ImeTracker: system_server:1f9c3737: onRequestShow at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-13 19:03:32.600  1701  1788 I ImeTracker: system_server:1f9c3737: onCancelled at PHASE_SERVER_ALREADY_VISIBLE
+11-13 19:03:32.606  2882  8537 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-13 19:03:32.616  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=168], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-13 19:03:32.618  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=0
+11-13 19:03:32.628  2882  8542 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-13 19:03:32.628  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@eb5d76b, lastModifier=2, keyCodes=[56], actions=[0]}
+11-13 19:03:32.629  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@2d182c8, lastModifier=0, keyCodes=[317], actions=[0]}
+11-13 19:03:32.629  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@79ec94, lastModifier=2, keyCodes=[56], actions=[0]}
+11-13 19:03:32.629  2199  2225 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#137) android.os.BinderProxy@879b4a4@0
+11-13 19:03:32.629  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@877033d, lastModifier=0, keyCodes=[317], actions=[0]}
+11-13 19:03:32.633  1701  1785 V WindowManager: Finish Transition (#137): created at 11-13 19:03:32.034 collect-started=0.095ms request-sent=9.057ms started=9.95ms ready=36.747ms sent=38.066ms commit=24.278ms finished=598.145ms
+11-13 19:03:32.634  2199  2225 V WindowManagerShell: Track 0 became idle
+11-13 19:03:32.634  2199  2225 V WindowManagerShell: All active transition animations finished
+11-13 19:03:32.635  1701  3322 W UserManagerService: Requested status bar icon for non-badged user 0
+11-13 19:03:32.635  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-13 19:03:32.635  1701  3322 W UserManagerService: Requested status bar icon for non-badged user 0
+11-13 19:03:32.636  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-13 19:03:32.636  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-13 19:03:32.637  1701  1785 D HintManagerService: Sent cleanup message for uid 10501
+11-13 19:03:32.637  1701  1888 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-13 19:03:32.637  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=false
+11-13 19:03:32.638  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: en-US, ime_english_united_states
+11-13 19:03:32.638  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-13 19:03:32.638  2882  2882 I AbstractIme: AbstractIme.onActivate():111 LatinIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true}], hintText=null, hintLocales=[], initialToolType=0}, IncognitoMode = false, DeviceLocked = false
+11-13 19:03:32.641  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-13 19:03:32.642  2882  2882 I Delight5Facilitator: Delight5Facilitator.initializeForIme():748 initializeForIme() : Locale = [en_US], layout = qwerty
+11-13 19:03:32.643  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-13 19:03:32.643  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-13 19:03:32.658  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-13 19:03:32.663  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-13 19:03:32.678  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processBeginSession():292 Begin training cache session: /
+11-13 19:03:32.686  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-13 19:03:32.686  2882  2882 I LatinIme: LatinIme.resetInputContext():2700 resetInputContext(): reason=1, externalEditsInfo=ExternalEditsInfo{action=0, offset=-1, textLength=0, originalTextLength=0, hasEdits=false}
+11-13 19:03:32.686  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-13 19:03:32.688  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-13 19:03:32.688  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=ime_english_united_states, language=en-US, languageTag=en-US, processedConditions={device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row=false}, className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, label=0, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=US, displayAppCompletions=true, extraValues=pun{#0x7f0b02e7=TypedValue{t=0x3/d=0x0 "com.google.android.apps.inputmethod.libs.latin5.LatinIme"}}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=true, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=0, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@1), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=true}
+11-13 19:03:32.688  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=ime_english_united_states, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-13 19:03:32.690  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-13 19:03:32.690  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-13 19:03:32.690  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-13 19:03:32.690  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPrimeKeyboard@86d44d
+11-13 19:03:32.690  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-13 19:03:32.716  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.717  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.719  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.721  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=true, enable_scrub_move=true, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=true, enable_secondary_symbols=false, enable_number_row=false}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=2}, className=.latin.keyboard.LatinPrimeKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e03a5, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@5a3f418, BODY=pfv@dbe6e71, FLOATING_CANDIDATES=pfv@c21a456}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.37 fontWeightAdjustment=0}
+11-13 19:03:32.721  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.726  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-13 19:03:32.726  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=landscape_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@e533e00
+11-13 19:03:32.726  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-13 19:03:32.726  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-13 19:03:32.727  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-13 19:03:32.727  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.727  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.727  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.727  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.728  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.728  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.728  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-13 19:03:32.728  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-13 19:03:32.728  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-13 19:03:32.728  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-13 19:03:32.728  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-13 19:03:32.729  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-13 19:03:32.729  2882  2882 I OnBackCallbackManagerExtension: OnBackCallbackManagerExtension.updateDispositionForBack():226 setBackDisposition: 0
+11-13 19:03:32.729  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onActivate():63 onActivate() [UD]
+11-13 19:03:32.729  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@2a3416c, lastModifier=2, keyCodes=[56], actions=[0]}
+11-13 19:03:32.729  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@2f9f335, lastModifier=0, keyCodes=[317], actions=[0]}
+11-13 19:03:32.729  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@8fd5842, lastModifier=2, keyCodes=[56], actions=[0]}
+11-13 19:03:32.729  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@9cee053, lastModifier=0, keyCodes=[317], actions=[0]}
+11-13 19:03:32.730  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-13 19:03:32.730  2882  8541 I DictationHelper: DictationHelper.keyboardActiveSession():98 #keyboardActiveSession [SD]
+11-13 19:03:32.731  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@78dad46, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.731  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@c424b07, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.731  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@ad806cb, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.731  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@c0eeea8, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.732  2882  8548 I InteractionManager: InteractionManager.startInteraction$<anonymous>$<anonymous>():37 #startInteraction [SD]
+11-13 19:03:32.732  2882  8549 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-13 19:03:32.733  2882  8548 I Interaction: Interaction.start():56 Starting Interaction#64 [SD]
+11-13 19:03:32.734  2882  8537 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-13 19:03:32.734  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e2e90a3, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.734  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@af76fa0, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.734  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@2055f2, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.734  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@3208443, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.734  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-13 19:03:32.734  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-13 19:03:32.735  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-13 19:03:32.735  2882  2882 D ImeBackCallbackSender: Register OnBackInvokedCallback with priority=-1 at app window (packageName=com.sutliff.pocket)
+11-13 19:03:32.735  8479  8479 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@a14ca2e
+11-13 19:03:32.736  8479  8525 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@a14ca2e
+11-13 19:03:32.736  1701  2819 D CoreBackPreview: Window{7bbac0a u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@5ff0379, mPriority=0, mIsAnimationCallback=true, mOverrideBehavior=0}
+11-13 19:03:32.739  2882  2882 I Surface : Creating surface for consumer unnamed-2882-68 with slotExpansion=1 for 64 slots
+11-13 19:03:32.739  2882  2882 I Surface : Creating surface for consumer VRI[InputMethod]#68(BLAST Consumer)68 with slotExpansion=1 for 64 slots
+11-13 19:03:32.741  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.741  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.741  1701  3322 D WindowManager: setClientSurface Surface(name=VRI-InputMethod#1875)/@0x93988be for 1a6faa9 InputMethod
+11-13 19:03:32.741  1701  3314 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-13 19:03:32.741  1701  3314 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-13 19:03:32.743  2882  8546 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-13 19:03:32.743  2882  8542 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-13 19:03:32.744 21085 21941 I FontLog : (REDACTED) Received query %s, URI %s
+11-13 19:03:32.744 21085 21941 I FontLog : (REDACTED) Query [%s] resolved to %s
+11-13 19:03:32.750  2882  8548 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-13 19:03:32.750  2882  8548 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-13 19:03:32.750  2882  8548 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-13 19:03:32.751 21085 21941 I FontLog : (REDACTED) Fetch %s end status %s
+11-13 19:03:32.751  2882  8548 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-13 19:03:32.751  1701  2174 I Surface : Creating surface for consumer unnamed-1701-43 with slotExpansion=1 for 64 slots
+11-13 19:03:32.751  1701  2174 I Surface : Creating surface for consumer ImageReader-1920x864f1m1-1701-40 with slotExpansion=1 for 64 slots
+11-13 19:03:32.751  1701  2174 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+11-13 19:03:32.752 21085 21941 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+11-13 19:03:32.752  2882  8549 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-13 19:03:32.759  1701  2174 E ConsumerBase: [ImageReader-1920x864f1m1-1701-40] abandonLocked: ConsumerBase is abandoned!
+11-13 19:03:32.762  2882  8549 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-13 19:03:32.762  2882  8549 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-13 19:03:32.762  2882  8549 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-13 19:03:32.762  2882  8549 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():156 #onKeyboardShown scheduled [SD]
+11-13 19:03:32.763  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{1be5844 V.E...... ........ 0,0-2142,108}
+11-13 19:03:32.763  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.764  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{93a3ce9 V.E...... ........ 0,0-2142,452}
+11-13 19:03:32.764  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.764  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():98 Not show new language banner: no change in enabled input method entries
+11-13 19:03:32.764  2882  8549 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():159 #onKeyboardShown [SD]
+11-13 19:03:32.765  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.765  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:1006, header height:108 and isFullscreenMode:false, so the max keyboard body height is:617
+11-13 19:03:32.766  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-13 19:03:32.766  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-13 19:03:32.766  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-13 19:03:32.766  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-13 19:03:32.766  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-13 19:03:32.766  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-13 19:03:32.766  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@ad806cb, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.766  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@c0eeea8, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.766  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@8678725, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.766  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@ae000fa, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.767  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@2055f2, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.767  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@3208443, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.767  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@d08c6ab, lastModifier=2, keyCodes=[32], actions=[0]}
+11-13 19:03:32.767  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@c86e108, lastModifier=0, keyCodes=[319], actions=[0]}
+11-13 19:03:32.767  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-13 19:03:32.767  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-13 19:03:32.772 21085 21085 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.wallet.service.BIND xflg=0x4 pkg=com.google.android.gms }
+11-13 19:03:32.772 21085 21085 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.wallet.service.BIND xflg=0x4 pkg=com.google.android.gms }
+11-13 19:03:32.772 21085 21941 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+11-13 19:03:32.773 21085 21085 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+11-13 19:03:32.773 21085 21085 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+11-13 19:03:32.779  8479  8479 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-13 19:03:32.781  8479  8479 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-13 19:03:32.781  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-13 19:03:32.782  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 520, left: 132, bottom: 1080, right: 2274}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-13 19:03:32.783  1701  2819 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-13 19:03:32.783  1701  2819 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-13 19:03:32.828  7379  7411 I SS3PSurfacesSuggestAggr: Neither TNG Smartspace widget nor OEM is enabled.
+11-13 19:03:32.830  7379  7411 I BcSsSuggestionAgg: #handlePcpDataUpdate
+11-13 19:03:32.833  2199  2234 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-13 19:03:32.834  7379  7411 I duni    : (REDACTED) #entry Fetching proactive suggestions for [%s]
+11-13 19:03:32.836  7379  7411 I ably    : (REDACTED) %s getProactiveContent: %s
+11-13 19:03:32.837  7379  7463 I abnf    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.837  7379  7463 I abns    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.838  7379  7463 I abnf    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.838  7379  7463 I abns    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.838  7379  7463 I abnf    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.838  7379  7463 I abns    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.839  7379  7463 I abnf    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.839  7379  7463 I abns    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.839  7379  7409 I DebugExecutorService: execute() called with Runnable: djcl@eae6d16
+11-13 19:03:32.839  7379  7409 I DebugExecutorService: djcl@eae6d16 finished on thread
+11-13 19:03:32.839  7379  7463 I abns    : (REDACTED) #getLastReturnedProactiveData for client type %s and proactive data type %s
+11-13 19:03:32.839  7379  8166 I DebugExecutorService: execute() called with Runnable: djco@d62bc02
+11-13 19:03:32.839  7379  8166 I DebugExecutorService: djco@d62bc02 finished on thread
+11-13 19:03:32.839  7379  8166 I CrossProfileSender: tryMakeAsyncCalls
+11-13 19:03:32.839  7379  8166 I DebugExecutorService: execute() called with Runnable: djcm@3ded913
+11-13 19:03:32.839  7379  8166 I DebugExecutorService: djcm@3ded913 finished on thread
+11-13 19:03:32.839  7379  8166 I CrossProfileSender: Attempting to bind
+11-13 19:03:32.840  7379  8166 I CrossProfileSender: Binding attempt failed: Permission not granted
+11-13 19:03:32.840  7379  8166 I DebugExecutorService: execute() called with Runnable: djcp@cde8d49
+11-13 19:03:32.840  7379  8166 I DebugExecutorService: djcp@cde8d49 finished on thread
+11-13 19:03:32.840  7379  7411 W clka    : Triggering event does not contain a headphone connection.
+11-13 19:03:32.845  1701  2819 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-13 19:03:32.845  1701  2819 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-13 19:03:32.857  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.857  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_alert_key
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at cmhg.f(PG:114)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.857  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.858  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.858  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_air_quality_key
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at cmhg.f(PG:58)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.858  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.859  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.859  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_upcoming_key
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmhg.f(PG:166)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.859  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.859  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_upcoming_key
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmhg.f(PG:166)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.859  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.860  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.860  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_upcoming_key
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmhg.f(PG:166)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.860  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.860  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_upcoming_key
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmhg.f(PG:166)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.860  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.862  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.862  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_upcoming_key
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmhg.f(PG:166)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.862  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.862  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_commute_key
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmhg.f(PG:152)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.862  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.864  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.864  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_ttl_key
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmhg.f(PG:86)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.864  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.864  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_travel_key
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmhg.f(PG:138)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.864  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.865  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.865  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_travel_key
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at cmhg.f(PG:138)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.865  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.865  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.865  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.865  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.866  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.866  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.866  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.867  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.867  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.867  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.868  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.868  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.868  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.868  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.868  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.869  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.869  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.869  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.870  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.870  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.870  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.870  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.870  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.870  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.871  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.871  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_at_a_store_key
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at cmhg.f(PG:100)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.871  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.871  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.871  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.872  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.872  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.872  7379  7481 W cmhg    : (REDACTED) This card is not supported Settings.Secure and is disabled by default, cardType: %s
+11-13 19:03:32.873  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.873  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_grocery_key
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmhg.f(PG:72)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.873  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.873  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_grocery_key
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmhg.f(PG:72)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.873  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.874  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.874  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_cross_device_timer_key
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at cmhg.f(PG:44)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.874  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.875  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.875  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_travel_key
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at cmhg.f(PG:138)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.875  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.876  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.876  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_travel_key
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmhg.f(PG:138)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.876  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.876  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_travel_key
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmhg.f(PG:138)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.876  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.877  7379  7481 W cmhg    : (REDACTED) Failed to find key '%s' in Settings.secure
+11-13 19:03:32.877  7379  7481 W cmhg    : android.provider.Settings$SettingNotFoundException: smartspace_pref_cross_device_timer_key
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at android.provider.Settings.parseIntSetting(Settings.java:4341)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at android.provider.Settings.-$$Nest$smparseIntSetting(Settings.java:0)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getIntForUser(Settings.java:7777)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at android.provider.Settings$Secure.getInt(Settings.java:7769)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at cmhg.d(PG:8)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at cmhg.f(PG:44)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at cmha.test(PG:61)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.q.accept(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:74)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.Iterator$-EL.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.m1.forEachRemaining(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:24)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.a.f(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:21)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.a.D(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:8)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.p4.a(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:5)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.a.l(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:35)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at j$.util.stream.z5.collect(r8-map-id-103868dfc7b6717ebb1376aca9bd1f98cbf682ff77d623b6924a9fd540535b88:88)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at cnit.b(PG:77)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at cnjc.invokeSuspend(PG:54)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at hprl.resumeWith(PG:11)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at hqbo.run(PG:115)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at ggah.run(PG:3)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at dwko.run(PG:5)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at gsbs.run(PG:46)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at dwka.run(PG:81)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.877  7379  7481 W cmhg    : 	at dwlq.run(PG:62)
+11-13 19:03:32.880  7379  7409 I dvjt    : (REDACTED) getUpcomingEvents(%s, %s)
+11-13 19:03:32.884  7379  8557 E libbinder.IPCThreadState: Binder transaction failure. id: 52961315, cmd: BR_FROZEN_REPLY (29202), error: 0 (Success)
+11-13 19:03:32.884  1701  3322 W ActivityManager: pid 7379 com.google.android.googlequicksearchbox:search sent binder code 24 with flags 2 and got error -2147483639
+11-13 19:03:32.885  7379  8557 I ActivityThread: Removing dead content provider:android.content.ContentProviderProxy@f862966
+11-13 19:03:32.885  1701  3322 E libbinder.IPCThreadState: Binder transaction failure. id: 52961318, cmd: BR_FROZEN_REPLY (29202), error: 0 (Success)
+11-13 19:03:32.885  1701  3322 I ActivityManager: Process com.android.providers.calendar (pid 8167) early provider death
+11-13 19:03:32.885  1701  2012 I ActivityManager: binder error: kill 8167 Sync transaction while frozen
+11-13 19:03:32.885  1701  3322 I ActivityManager: Process com.android.providers.calendar (pid 8167) has died: cch CEM 
+11-13 19:03:32.888  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-13 19:03:32.893  7379  7489 I duao    : (REDACTED) remove request for trigger key: %s, isClientInitiated: %s
+11-13 19:03:32.894  7379  7463 W duhx    : Ignoring failed ProactiveSuggestionsResult
+11-13 19:03:32.894  7379  7463 W duhx    : gfvp: android.os.DeadObjectException
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.k(PG:64)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.d(PG:17)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at ggdo.a(PG:16)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at fuwe.c(PG:6)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at fuwg.run(PG:80)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at ghpr.run(PG:28)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwko.run(PG:5)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwju.run(PG:31)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwlq.run(PG:62)
+11-13 19:03:32.894  7379  7463 W duhx    : Caused by: android.os.DeadObjectException
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.os.BinderProxy.transactNative(Native Method)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.os.BinderProxy.transact(BinderProxy.java:674)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderProxy.createCancellationSignal(ContentProviderNative.java:833)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.prepareRemoteCancellationSignal(ContentProviderClient.java:726)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.execute(ContentProviderClient.java:768)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.query(ContentProviderClient.java:366)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.query(ContentProviderClient.java:357)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvi.a(PG:14)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.k(PG:13)
+11-13 19:03:32.894  7379  7463 W duhx    : 	... 11 more
+11-13 19:03:32.894  7379  7463 W duhx    : Ignoring failed ProactiveSuggestionsResult
+11-13 19:03:32.894  7379  7463 W duhx    : gfvp: android.os.DeadObjectException
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.k(PG:64)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.d(PG:17)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at ggdo.a(PG:16)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at fuwe.c(PG:6)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at fuwg.run(PG:80)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at ghpr.run(PG:28)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwko.run(PG:5)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwju.run(PG:31)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at java.lang.Thread.run(Thread.java:1571)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at dwlq.run(PG:62)
+11-13 19:03:32.894  7379  7463 W duhx    : Caused by: android.os.DeadObjectException
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.os.BinderProxy.transactNative(Native Method)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.os.BinderProxy.transact(BinderProxy.java:674)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderProxy.createCancellationSignal(ContentProviderNative.java:833)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.prepareRemoteCancellationSignal(ContentProviderClient.java:726)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.execute(ContentProviderClient.java:768)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.query(ContentProviderClient.java:366)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at android.content.ContentProviderClient.query(ContentProviderClient.java:357)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvi.a(PG:14)
+11-13 19:03:32.894  7379  7463 W duhx    : 	at gfvw.k(PG:13)
+11-13 19:03:32.894  7379  7463 W duhx    : 	... 11 more
+11-13 19:03:32.894  7379  7411 I <unknown class>: Cross Device Alarm is disabled via ProactiveSuggestions producer.
+11-13 19:03:32.895  7379  7411 I cmyd    : Commute time feature is disabled via ProactiveSuggestions producer.
+11-13 19:03:32.897  7379  7411 I cnfp    : Time to leave feature is disabled via ProactiveSuggestions producer.
+11-13 19:03:32.899  7379  7411 I A       : #Generate weather data.
+11-13 19:03:32.903  7379  7411 I cmkc    : Create Pixel Weather wrapped click intent.
+11-13 19:03:32.905  7379  7411 I cmkc    : Create TNG weather or weather daily forecast or weather timely reminder wrapped click intent.
+11-13 19:03:32.905  7379  7411 I cmsd    : #createWrappedClickIntent: Put account
+11-13 19:03:32.906  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.906  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.907  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.907  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.908  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.908  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.908  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.908  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.909  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.909  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.909  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.910  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.910  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.910  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.910  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.911  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.911  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.911  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.912  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.912  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.915  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.915  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.916  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.917  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.917  7379  7411 I cmkc    : Create card explanation intent
+11-13 19:03:32.917  7379  7411 I cmsd    : #createWrappedClickIntent: Account is missing
+11-13 19:03:32.918  7379  7411 I A       : (REDACTED) #TNG createSmartspaceCard enable_reminder: %b, enable_forecast: %b, showTimelyReminderForPrecipitationType presents: %b
+11-13 19:03:32.918  7379  7411 I A       : (REDACTED) #TNG high temperature: %s, low temperature: %s, show weather daily forecast: %b
+11-13 19:03:32.919  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.919  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.920  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.920  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.920  7379  7405 I cmkb    : load card icon from url
+11-13 19:03:32.920  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.920  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.920  7379  7399 I cmkb    : load card icon from url
+11-13 19:03:32.920  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.920  7379  7405 I cmkb    : load card icon from url
+11-13 19:03:32.920  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.920  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.920  7379  7405 I cmkb    : load card icon from url
+11-13 19:03:32.921  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.921  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.921  7379  7399 I cmkb    : load card icon from url
+11-13 19:03:32.921  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.921  7379  7411 I cmkb    : (REDACTED) #getIconFromCard: %s
+11-13 19:03:32.921  1701  1802 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10089/pid_8167
+11-13 19:03:32.921  7379  7399 I cmkb    : load card icon from url
+11-13 19:03:32.921  7379  7411 W cmkb    : (REDACTED) cardType: %s has no icon.
+11-13 19:03:32.921   985   985 I Zygote  : Process 8167 exited due to signal 9 (Killed)
+11-13 19:03:32.921  7379  7411 I A       : Generate weather tomorrow forecast data.
+11-13 19:03:32.921  7379  7405 I cmkb    : load card icon from url
+11-13 19:03:32.922  7379  7411 E A       : UI template failed to generate weather tomorrow forecast card
+11-13 19:03:32.923  7379  7481 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.923  7379  7489 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.923  7379  7411 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.923  7379  7481 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.924  7379  7410 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.924  7379  7409 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.925  7379  7409 I WeatherTempParser: (REDACTED) #getParsedCard: UI template weather card has been populated from the upstream, cardId: %s
+11-13 19:03:32.927  1701  3322 V ActivityManager: Got obituary of 8167:com.android.providers.calendar
+11-13 19:03:32.936  7379  7489 I duco    : (REDACTED) #remove: subTriggerId=%s
+11-13 19:03:32.951  7379  7407 I abzi    : #updateLastReturnedDatabase
+11-13 19:03:32.952  7379  7407 I abnf    : #putNewReturnedDataQuery
+11-13 19:03:32.953  7379  7407 I abns    : #putNewReturnedDataQuery
+11-13 19:03:32.953  7379  7481 I cncl    : OEM Device doesn't enable Smartspace Integration.
+11-13 19:03:32.954  7379  7481 I A       : Air Quality is disabled in TNG.
+11-13 19:03:32.954  7379  7481 I cmzt    : Hotel feature is disabled.
+11-13 19:03:32.954  7379  7481 I cnaa    : Hotel feature is disabled.
+11-13 19:03:32.954  7379  7481 I cnfp    : Time to leave feature is disabled via ProactiveDataList producer.
+11-13 19:03:32.954  7379  7481 I A       : Weather Alert is disabled in TNG via ProactiveDataList producer.
+11-13 19:03:32.956  7379  7481 I A       : Weather is disabled in TNG via ProactiveDataList producer.
+11-13 19:03:32.956  7379  7481 I cmhg    : #filterNoMapsConsentCards: Flag is off. Return UnfilteredCards
+11-13 19:03:32.959  7379  7399 I abnv    : #putNewReturnedDataQuery
+11-13 19:03:32.959  7379  7407 I abnf    : #putNewReturnedDataQuery
+11-13 19:03:32.959  7379  7407 I abns    : #putNewReturnedDataQuery
+11-13 19:03:32.959  7379  7399 I abns    : #putNewReturnedDataQuery
+11-13 19:03:32.961  7379  7405 I abnf    : #putNewReturnedDataQuery
+11-13 19:03:32.961  7379  7405 I abns    : #putNewReturnedDataQuery
+11-13 19:03:32.965  7379  7407 I abnf    : #putNewReturnedDataQuery
+11-13 19:03:32.965  7379  7407 I abns    : #putNewReturnedDataQuery
+11-13 19:03:32.968  7379  7409 I acxe    : TNG:MA eligibility is used in AssistantEligibilityCheckerTNGImpl.
+11-13 19:03:32.969  7379  7411 I apar    : (REDACTED) #FCF: Managed profile check status : %s
+11-13 19:03:32.969  7379  7409 I zta     : (REDACTED) #shareData for %s with pending task count: %d
+11-13 19:03:32.969  7379  7411 I apam    : (REDACTED) #FCF: Demo mode check status : %s
+11-13 19:03:32.969  7379  7411 I apdo    : (REDACTED) #FCF evaluate: %s
+11-13 19:03:32.969  7379  7411 I apdo    : (REDACTED) TngMaStatusChecker#evaluateInternal completed in %s millis
+11-13 19:03:32.970  7379  7411 I acxw    : (REDACTED) tngMaFeatureEnabled: %s
+11-13 19:03:32.970  7379  7411 I acxr    : (REDACTED) LocaleAssistantEligibilityCheckerImpl#isLocationAssistantEligible completed in %s millis
+11-13 19:03:32.970  7379  7411 I acxw    : (REDACTED) locationAssistantEligible: %s
+11-13 19:03:32.971  7379  7411 I acxp    : (REDACTED) GoogleKidsSpaceCheckerImpl#isGoogleKidsSpaceInstalled completed in %s millis
+11-13 19:03:32.971  7379  7411 I acxp    : (REDACTED) GoogleKidsSpaceCheckerImpl#isGoogleKidsSpaceActive completed in %s millis
+11-13 19:03:32.971  7379  7411 I acxw    : (REDACTED) googleKidsSpaceActive: %s
+11-13 19:03:32.971  7379  7411 I acxw    : (REDACTED) isTngMaEligible: %s
+11-13 19:03:32.971  7379  7411 I acxw    : (REDACTED) TngMaEligibilityCheckerImpl#isEligible completed in %s millis
+11-13 19:03:32.972  7379  7407 W clyy    : No feature type found for Smartspace card - not logging!
+11-13 19:03:32.973  3098  7665 I AiAiBesties: (REDACTED) [DataShare] canHandleRequest %s: [%s, %s]
+11-13 19:03:32.973  1701  3322 I ContentCaptureManagerService: Data share request accepted by Content Capture service
+11-13 19:03:32.974  3098  7665 I AiAiEcho: (REDACTED) EchoDataShareHandler starts to process file, locusId=%s
+11-13 19:03:32.974  7379  7399 I zta     : (REDACTED) #shareData onWrite success: %s
+11-13 19:03:32.975  7379  7399 I zta     : (REDACTED) %s completed with unretriable status %s on retry attempt %d
+11-13 19:03:32.975  7379  7399 I zta     : (REDACTED) #shareData for %s done
+11-13 19:03:32.975  1876  1876 I pixel-thermal: VIRTUAL-SKIN:24.0859 raw data: VIRTUAL-SKIN:24085.8 
+11-13 19:03:32.975  7379  7399 I clmp    : (REDACTED) Update sent successfully. locusId: %s
+11-13 19:03:32.975  2362  3768 D ImpulseStateSource: Notify clients: 55051
+11-13 19:03:32.976  3098  3531 I AiAiEcho: (REDACTED) From CCAPI, Echo received %s
+11-13 19:03:32.977  7379  7463 I BcSsSuggestionAgg: Smartspace card update to AiAi successfully
+11-13 19:03:32.977  7379  7463 I BcSsSuggestionAgg: (REDACTED) cardId: %d, card type: %s, pre event title: %s, event start time: %s, update time: %s, expireTime: %s, is from work profile: %b
+11-13 19:03:32.978  3098  3531 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-13 19:03:32.978  3098  3531 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-13 19:03:32.978  3098  3531 I AiAiEcho: Filtered by AiAi flag check: %s
+11-13 19:03:32.978  7379  7463 I <unknown class>: Weather Smartspace TNG not enabled.
+11-13 19:03:32.978  7379  7411 W AmbientPrefs: (REDACTED) SmartspaceCard: %s should not use MainPreferences setting!
+11-13 19:03:32.978  7379  7409 W AmbientPrefs: (REDACTED) SmartspaceCard: %s should not use MainPreferences setting!
+11-13 19:03:32.980  3098  3531 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-13 19:03:32.980  3098  3531 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-13 19:03:32.980  3098  3531 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-13 19:03:32.980  3098  3531 I AiAiEcho: Filtered by AiAi flag check: %s
+11-13 19:03:32.980  3098  3531 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-13 19:03:32.981  3098  3531 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-13 19:03:32.981  3098  3531 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-13 19:03:32.981  3098  3531 I AiAiEcho: Filtered by AiAi flag check: %s
+11-13 19:03:32.981  3098  3531 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-13 19:03:32.981  3098  3531 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-13 19:03:32.981  3098  3531 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-13 19:03:32.981  3098  3531 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-13 19:03:32.981  3098  3531 I AiAiEcho: Filtered by AiAi flag check: %s
+11-13 19:03:32.981  3098  3531 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-13 19:03:32.981  7379  7463 I bbkx    : #getOobeStatus: OptedIn [CONTEXT ratelimit_period="10 SECONDS" skipped=9 ]
+11-13 19:03:32.981  3098  3531 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-13 19:03:32.982  3098  3531 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-13 19:03:32.982  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-13 19:03:32.982  3098  3531 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-13 19:03:32.982  3098  3531 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-13 19:03:32.984  7379  7463 I duco    : (REDACTED) #maybeCreateTimeTrigger: time trigger= %s with start time=%d, stop time=%d in seconds.
+11-13 19:03:32.987  7379  8557 I dzdf    : (REDACTED) Writing data of size=%d bytes with N=%d keys to Geller corpus %s at ts=%d
+11-13 19:03:32.997  8479  8479 I ImeTracker: com.sutliff.pocket:5999c09a: onShown
+11-13 19:03:33.517  7379  7390 V ClearcutMetricXmitter: Transmission is done.
+11-13 19:03:33.519  7379  7390 V ClearcutMetricXmitter: Transmission is done.
+11-13 19:03:33.596  7379  7390 V ClearcutMetricXmitter: Transmission is done.
+11-13 19:03:33.598  7379  7390 V ClearcutMetricXmitter: Transmission is done.
+11-13 19:03:33.644  1701  2013 D HintManagerService: Starts cleaning for 10501
+11-13 19:03:33.841  7379  8166 I CrossProfileSender: Attempting to bind
+11-13 19:03:33.841  7379  8166 I CrossProfileSender: Binding attempt failed: Not trying to bind
+11-13 19:03:33.841  7379  8166 I CrossProfileSender: Unbind
+11-13 19:03:34.922  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-13 19:03:35.045  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-13 19:03:35.046  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-13 19:03:35.046  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-13 19:03:36.173  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-13 19:03:36.378  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1794597410811
+11-13 19:03:36.726  8566  8566 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-13 19:03:36.726  8566  8566 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-13 19:03:36.726  8566  8566 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-13 19:03:37.587  7379  7874 I libbinder.IPCThreadState: oneway function results for code 2 on binder at 0xb400007732eb5530 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-13 19:03:37.588  7379  7874 I libbinder.IPCThreadState: oneway function results for code 2 on binder at 0xb400007732eb6820 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-13 19:03:37.759  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-13 19:03:37.765  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-13 19:03:37.766  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10185} in 12ms
+11-13 19:03:37.771  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-13 19:03:37.777  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-13 19:03:37.777  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={20185} in 11ms
+11-13 19:03:38.054  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-13 19:03:38.136  8479  8568 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-13 19:03:38.141  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-13 19:03:38.142  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-13 19:03:38.142  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-13 19:03:38.636  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

@@ -1,0 +1,40 @@
+=== TIMESTAMP ===
+Fri 13 Nov 2026 06:17:11 PM UTC
+=== FOCUS ===
+  mCurrentFocus=Window{82cc7b u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== WEBSEARCHTOOL ===
+11-13 13:16:40.085 24687 24706 D WebSearchTool: start query_len=31 max_results=8
+11-13 13:16:41.110 24687 24706 D WebSearchTool: response code=200 html_len=30830 duration_ms=1022
+11-13 13:16:41.118 24687 24706 D WebSearchTool: parsed titles=10 snippets=10
+11-13 13:16:41.126 24687 24706 D WebSearchTool: done result_count=8 duration_ms=1022
+=== POCKETNET_TAIL ===
+11-13 13:15:49.698 24687 24706 D PocketNet: streamChat: first data (283 bytes): {"id":"chatcmpl-746c17c3c9b14e2eaa6580dca92dae28","object":"chat.completion.chunk","created":1794593748,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"Hello!","reasoning":null,"tool_calls":null}}],"usage":null}
+11-13 13:15:49.702 24687 24706 D PocketNet: streamChat: [DONE] after 11 lines (5 data)
+11-13 13:15:49.703 24687 24706 D PocketNet: streamChat: loop done, lines=11 data=5
+11-13 13:16:37.311 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:37.311 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:37.311 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:37.311 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:37.323 24687 24706 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-13 13:16:39.771 24687 24706 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-13 13:16:39.772 24687 24706 D PocketNet: streamChat: first data (287 bytes): {"id":"chatcmpl-636d6ae79f174cfa8537a4ef94b6b8eb","object":"chat.completion.chunk","created":1794593798,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning_content":"**","tool_calls":null}}],"usage":null}
+11-13 13:16:40.084 24687 24706 D PocketNet: streamChat: [DONE] after 171 lines (85 data)
+11-13 13:16:40.084 24687 24706 D PocketNet: streamChat: loop done, lines=171 data=85
+11-13 13:16:41.129 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:41.129 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:41.129 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:41.129 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:41.145 24687 24706 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-13 13:16:44.113 24687 24706 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-13 13:16:44.114 24687 24706 D PocketNet: streamChat: first data (287 bytes): {"id":"chatcmpl-f1150103a0d4421e8a1dcf79969f66bc","object":"chat.completion.chunk","created":1794593801,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning_content":"**","tool_calls":null}}],"usage":null}
+11-13 13:16:47.611 24687 24706 D PocketNet: streamChat: [DONE] after 451 lines (225 data)
+11-13 13:16:47.611 24687 24706 D PocketNet: streamChat: loop done, lines=451 data=225
+11-13 13:16:48.621 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:48.621 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:48.621 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:48.621 24687 24706 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-13 13:16:48.627 24687 24706 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-13 13:16:52.573 24687 24706 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-13 13:16:52.573 24687 24706 D PocketNet: streamChat: first data (287 bytes): {"id":"chatcmpl-dff4ff2a768848bea0951de1cb7dba55","object":"chat.completion.chunk","created":1794593809,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning_content":"**","tool_calls":null}}],"usage":null}
+11-13 13:17:02.401 24687 24706 D PocketNet: streamChat: [DONE] after 815 lines (407 data)
+11-13 13:17:02.401 24687 24706 D PocketNet: streamChat: loop done, lines=815 data=407

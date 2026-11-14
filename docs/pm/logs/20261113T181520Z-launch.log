@@ -1,0 +1,11 @@
+=== TIMESTAMP ===
+Fri 13 Nov 2026 06:15:18 PM UTC
+=== START_RESULT ===
+(started above)
+=== ACTIVITIES ===
+    topResumedActivity=ActivityRecord{21747436 u0 com.sutliff.pocket/.MainActivity t29163}
+=== FOCUS ===
+  mCurrentFocus=Window{82cc7b u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{21747436 u0 com.sutliff.pocket/.MainActivity t29163}
+=== FATAL ===
+NONE
