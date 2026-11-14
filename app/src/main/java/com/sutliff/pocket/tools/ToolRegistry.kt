@@ -229,6 +229,7 @@ fun DefaultToolRegistry(): ToolRegistry {
     registry.register(HealthCheckTool())
     registry.register(WebSearchTool())
     registry.register(WebFetchTool())
+    registry.register(WebRenderTool())
     return registry
 }
 

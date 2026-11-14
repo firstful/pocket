@@ -913,6 +913,7 @@ fun AndroidToolRegistry(ctx: ToolContext): ToolRegistry {
     // Web tools (ephemeral WebView, no context needed — uses AgentApp.instance)
     registry.register(WebSearchTool())
     registry.register(WebFetchTool())
+    registry.register(WebRenderTool())
 
     // Health check
     registry.register(object : Tool {
