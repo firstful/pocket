@@ -162,3 +162,23 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL telemetry end-to-end still not exercised (device endpoint stale at 192.168.1.2:4318). Verify by pointing device at https://telemetry.ffilt.us/ (Settings) and sending a web_fetch turn; service is up (405 on GET).
 - `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
 - New idea: add a one-tap "new chat" / session reset to recover from poisoned history (already in Ideas; still relevant).
+
+## Run 2026-11-15T18:04Z (PM cron, vc91 `1.0.91-38d9bf4`, CI run 1593 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc91 installed `1.0.91-38d9bf4` (dumpsys verified). Device reachable this run via mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` @ 192.168.1.127:38361 (pre-run script reported 192.168.1.147:45357 unreachable/stale). Evidence: live `adb devices -l` + `getprop ro.product.model`/`ro.serialno` + `dumpsys package com.sutliff.pocket` (captured in PM session, not saved to separate pm log this run).
+- Launch/state: foreground `com.sutliff.pocket/.MainActivity` (mCurrentFocus) at check time; no crash observed inline.
+- On-device QA delegated (3 parallel subagents, ts 20261115T180413Z): hello stream, web_search, settings/remote-agent UI + permission/dialog state. Expected evidence paths (to be produced/verified by subagents): `docs/pm/screenshots/20261115T180413Z-hello.png`, `docs/pm/logs/20261115T180413Z-hello.log`, `docs/pm/screenshots/20261115T180413Z-websearch.png`, `docs/pm/logs/20261115T180413Z-websearch.log`, `docs/pm/screenshots/20261115T180413Z-settings.png`, `docs/pm/screenshots/20261115T180413Z-permission-state.png`, `docs/pm/logs/20261115T180413Z-ui-perms.log`. **Pass/fail pending subagent results at report time; verify paths/log contents before treating as confirmed.**
+- CI/store: latest code build run 1593 `38d9bf4` success; store tip `1.0.91-38d9bf4` vc91 sha `e17d195da745`; device vc91 matches. HEAD `0746527`/origin `0746527` is docs-only ahead (no drift).
+- Homelab MCP todo board: no open Pocket-related todos found (scanned open todos for "pocket"; none matched). Gitea issues list returned 403 (Forbidden) — issue state unverified.
+- OTEL: not exercised this run (endpoint unset by default on prior checks; device telemetry endpoint previously observed stale per ledger). No regression action taken.
+
+### Shipped
+- No code changes this run. Docs-only ledger update (this entry).
+
+### Open / Next
+- Collect/verify delegated QA evidence for ts 20261115T180413Z and record definitive pass/fail in next run.
+- web_render visual PIP/output capture and LLM tool-selection bias (prefers web_fetch) remain open (per prior runs).
+- OTEL end-to-end verification still pending (point device to `https://telemetry.ffilt.us/` and observe ingest).
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Consider adding `Log.d` in WebRenderTool/WebRenderManager for agent-verifiable render evidence.
