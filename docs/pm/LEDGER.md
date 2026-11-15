@@ -97,6 +97,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
 - Untracked evidence from prior run (2026-11-13T18:14Z) committed with this update.
 
+## Run 2026-11-15T06:09Z (spot-check, vc91 `1.0.91-38d9bf4`, CI run 1593 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc91 installed from store (sha e17d195d…). Store version matches HEAD code SHA 38d9bf4 (HEAD 7a69652 is docs-only ahead). Evidence: device reported by pre-run script; `adb getprop ro.product.model` = Pixel 6a, serial 27271JEGR25574.
+- Device reachable at `192.168.1.147:45357` (Pixel 6a/bluejay). versionCode=91 matches store tip.
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime for Pocket. Evidence: `docs/pm/screenshots/20261115T060816Z-webrender-attempt.png`.
+- web_render (vc91 new feature) RUNTIME EXERCISED: two chat turns issued ("call web_render with url … mode outline"). WebViewFactory loaded `com.google.android.webview` 157.0.8103.38 in both runs (the only WebView creator in app code is `WebRenderManager.render()`), confirming the render path executed on-device with a foreground Activity (PIP overlay + outline extraction code path). No FATAL/AndroidRuntime crash in logcat. Stream completed (lines=43/121 data). Evidence: `docs/pm/logs/20261115T060816Z-webrender.log` (WebViewFactory line 88, streamChat loop done lines 138-139), screenshot `docs/pm/screenshots/20261115T060816Z-webrender-attempt.png`. Note: the LLM (ocg:beam-free) also issued web_fetch in the same turns (WebFetchTool logged); web_render itself emits no start log (WebRenderManager.render has no Log.d), so runtime confirmation relies on WebViewFactory loading. Visual PIP-preview confirmation not possible from agent side (screenshot not viewable); code path creates the top-right FrameLayout overlay and toggles visibility.
+- web_fetch PASS: `WebFetchTool: start … response code=200 html_len=639781 … done cleaned_len=59347 duration_ms=380` (Wikipedia JavaScript). No timeout/NetworkOnMainThread.
+- Permission/dialogs PASS: no system permission dialog observed; `mCurrentFocus` stayed Pocket.
+- Telemetry: client path exercised — `Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318` (graceful, no crash). Device endpoint is stale (192.168.1.2:4318, no listener); telemetry service at telemetry.ffilt.us returns 405 (up). Endpoint config on device not updated this run (no UI automation). Not a regression.
+- Homelab MCP todo board: 0 open Pocket-related todos (scanned all 166 open; #423/#424/#425 closed in prior runs). No actionable todos.
+- CI: latest run for code HEAD 38d9bf4 = run 1593 success. Store tip vc91 matches. Device vc91 matches. No drift.
+
+### Shipped
+- No code changes this run. HEAD 7a69652 (docs-only ahead of CI/build SHA 38d9bf4); store tip vc91 matches device.
+
+### Open / Next
+- web_render: runtime path verified via WebViewFactory loading (no crash, stream completed). Visual PIP confirmation + outline/find/section output capture still not agent-verifiable (screenshot not viewable, no WebRenderTool log). Consider (a) adding a `Log.d(tag, "start url=…")` to WebRenderTool.execute and `Log.d` in WebRenderManager.render for future verification, and (b) strengthening tool descriptions so ocg:beam-free selects web_render over web_fetch for JS/SPA pages (currently the LLM consistently picks web_fetch even when prompted for web_render).
+- OTEL telemetry end-to-end still not exercised (device endpoint stale at 192.168.1.2:4318). Verify by pointing device at https://telemetry.ffilt.us/ (Settings) and sending a web_fetch turn; service is up (405 on GET).
+- `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
+- New idea: add a one-tap "new chat" / session reset to recover from poisoned history (already in Ideas; still relevant).
+
 ## Run 2026-11-15T00:09:30Z (spot-check, vc91 `1.0.91-38d9bf4`, CI run 1593 success)
 
 ### QA Outcomes

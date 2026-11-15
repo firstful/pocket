@@ -1,0 +1,140 @@
+--------- beginning of main
+11-15 01:07:09.713 20504 20504 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_20504
+11-15 01:07:09.718 20504 20504 I Zygote  : Process 20504 created for com.sutliff.pocket
+11-15 01:07:09.718 20504 20504 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-15 01:07:09.722 20504 20504 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-15 01:07:09.737 20504 20504 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-15 01:07:09.790 20504 20504 D nativeloader: Configuring clns-9 for other apk /data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/lib/arm64:/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-15 01:07:09.805 20504 20504 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-15 01:07:09.805 20504 20504 V GraphicsEnvironment: Currently set values for:
+11-15 01:07:09.805 20504 20504 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-15 01:07:09.805 20504 20504 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-15 01:07:09.805 20504 20504 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-15 01:07:09.805 20504 20504 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-15 01:07:09.806 20504 20504 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-15 01:07:09.808 20504 20504 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-15 01:07:09.810 20504 20504 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-15 01:07:09.810 20504 20504 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-15 01:07:09.822 20504 20504 D BootReceiver: Boot completed, starting AgentBridgeService
+11-15 01:07:09.823 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.824 20504 20521 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-15 01:07:09.825 20504 20521 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/lib/arm64'
+11-15 01:07:09.827 20504 20521 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk!/lib/arm64-v8a'
+11-15 01:07:09.832 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.837 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.842 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.846 20504 20504 D AgentBridgeService: AgentBridgeService created
+11-15 01:07:09.850 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.868 20504 20504 I HWUI    : Using FreeType backend (prop=Auto)
+11-15 01:07:09.872 20504 20504 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-15 01:07:09.880 20504 20504 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-15 01:07:09.880 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:09.880 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:09.908 20504 20504 I Surface : Creating surface for consumer unnamed-20504-0 with slotExpansion=1 for 64 slots
+11-15 01:07:09.908 20504 20504 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-15 01:07:09.963 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:09.991 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:10.021 20504 20504 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 01:07:10.030 20504 20504 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 01:07:10.035 20504 20504 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 01:07:10.068 20504 20504 D InsetsController: show(ime())
+11-15 01:07:10.068 20504 20504 I ImeTracker: com.sutliff.pocket:a380c7aa: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-15 01:07:10.069 20504 20504 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 01:07:10.074 20504 20504 D InsetsController: hide(ime())
+11-15 01:07:10.074 20504 20504 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 01:07:10.079 20504 20504 I ImeTracker: com.sutliff.pocket:87b57fcb: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-15 01:07:10.079 20504 20504 D InsetsController: show(ime())
+11-15 01:07:10.079 20504 20504 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 01:07:10.089 20504 20504 D InsetsController: hide(ime())
+11-15 01:07:10.089 20504 20504 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 01:07:10.102 20504 20504 I ImeTracker: system_server:4b144124: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 01:07:10.102 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:10.102 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:10.102 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:10.119 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:10.120 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:10.120 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:10.128 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:10.129 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:10.131 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:10.131 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:14.393 20504 20504 D InsetsController: show(ime())
+11-15 01:07:14.393 20504 20504 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 01:07:14.414 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:14.417 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4283fe1
+11-15 01:07:14.458 20504 20504 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-15 01:07:14.463 20504 20504 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-15 01:07:14.670 20504 20504 I ImeTracker: com.google.android.inputmethod.latin:dbaf5b97: onShown
+11-15 01:07:15.278 20504 20567 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-15 01:07:21.994 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 01:07:22.049 20504 20518 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 01:07:22.107 20504 20504 D InsetsController: hide(ime())
+11-15 01:07:22.107 20504 20504 I ImeTracker: com.sutliff.pocket:d2951487: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-15 01:07:22.107 20504 20504 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:22.108 20504 20504 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 01:07:22.108 20504 20543 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 01:07:22.109 20504 20504 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-15 01:07:22.112 20504 20504 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-15 01:07:22.123 20504 20504 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-15 01:07:22.150 20504 20504 I ImeTracker: com.sutliff.pocket:31cebaf9: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 01:07:22.152 20504 20504 D InsetsController: hide(ime())
+11-15 01:07:22.152 20504 20504 I ImeTracker: com.google.android.inputmethod.latin:bec1843d: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-15 01:07:22.199 20504 20504 I ImeTracker: system_server:af576cd8: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 01:07:22.677 20504 20518 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 01:07:22.678 20504 20518 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-809517da-dadf-4ff6-9065-c86820bef364","object":"chat.completion.chunk","created":1794722842,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 01:07:22.739 20504 20518 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-15 01:07:22.739 20504 20518 D PocketNet: streamChat: loop done, lines=21 data=10
+11-15 01:07:22.770 20504 20504 I WebViewFactory: Loading com.google.android.webview version 157.0.8103.38 (code 810303803)
+11-15 01:07:22.771 20504 20504 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=71c0e84c mResDir=null mSplitDirs=[] mOverlayDirs=[] mLibDirs=[/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk,/system/framework/android.test.base.jar,/system_ext/framework/androidx.window.extensions.jar] mDisplayId=0 mOverrideConfig=v37 mCompatInfo={420dpi always-compat} mLoaders=[]}
+11-15 01:07:22.773 20504 20504 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-15 01:07:22.773 20504 20504 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-15 01:07:22.776 20504 20504 D nativeloader: Configuring clns-10 for other apk /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/lib/arm64:/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+11-15 01:07:22.790 20504 20504 I cr_WVCFactoryProvider: version=157.0.8103.38 (810303803) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
+11-15 01:07:22.792 20504 20504 D nativeloader: Load /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-15 01:07:22.794 20504 20504 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-15 01:07:22.797 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->isContentSafetyEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.797 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/webkit/WebViewDelegate;->isNativeWebViewZygoteEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.797 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;-><init>(Landroid/content/LocusId;Ljava/lang/String;)V (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.797 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setUri(Landroid/net/Uri;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.797 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setData(Landroid/os/ParcelFileDescriptor;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.797 20504 20601 E chromium: [1115/010722.795345:ERROR:android_webview/browser/variations/variations_seed_loader.cc:36] Seed missing signature.
+11-15 01:07:22.798 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->build()Landroid/app/contentsafety/ClassifiableContent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.798 20504 20504 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->createContentRestrictedIntent(Landroid/content/LocusId;)Landroid/content/Intent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-15 01:07:22.802 20504 20504 I cr_LibraryLoader: Successfully loaded native library
+11-15 01:07:22.803 20504 20504 I cr_CachingUmaRecorder: Flushed 47 samples from 22 histograms, 0 samples were dropped.
+11-15 01:07:22.804 20504 20504 I cr_ChildProcLH: ScopedServiceBindingBatch.tryActivate: false
+11-15 01:07:22.805 20504 20504 I cr_CombinedPProvider: #registerProvider() provider:WV.rj@fbee011 isPolicyCacheEnabled:false policyProvidersSize:0
+11-15 01:07:22.805 20504 20504 I cr_PolicyProvider: #setManagerAndSource() 0
+11-15 01:07:22.806 20504 20600 I cr_policy: registerReceiver succeeded after 1ms
+11-15 01:07:22.806 20504 20504 I cr_DisplayManager: Is Display Topology available: false
+11-15 01:07:22.815 20504 20504 I cr_CombinedPProvider: #linkNativeInternal() 1
+11-15 01:07:22.815 20504 20504 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-15 01:07:22.815 20504 20504 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-15 01:07:22.815 20504 20504 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-15 01:07:22.815 20504 20504 I cr_CombinedPProvider: #flushPolicies()
+11-15 01:07:22.859 20504 20617 W cr_media: BLUETOOTH_CONNECT permission is missing.
+11-15 01:07:22.859 20504 20617 W cr_media: getBluetoothAdapter() requires BLUETOOTH permission
+11-15 01:07:22.859 20504 20617 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+11-15 01:07:22.863 20504 20504 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-15 01:07:22.863 20504 20504 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-15 01:07:22.863 20504 20504 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-15 01:07:22.863 20504 20504 I cr_CombinedPProvider: #flushPolicies()
+11-15 01:07:22.865 20504 20637 I CameraManagerGlobal: Connecting to camera service
+11-15 01:07:22.865 20504 20617 D AudioSystem: onNewService: media.audio_policy service obtained 0xb400007752ea5140
+11-15 01:07:22.866 20504 20617 D AudioSystem: getService: IAudioPolicyService retrieved: 0xb400007752ea5140  cached: 0xb400007752ea5140
+11-15 01:07:22.967 20504 20624 W cr_VAUtil: Unknown profile: 8 for codec video/hevc
+11-15 01:07:25.169 20504 20518 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-15 01:07:25.227 20504 20518 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 01:07:26.290 20504 20518 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 01:07:26.291 20504 20518 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-0f6bc062-bfb2-480f-b840-f25184d1c080","object":"chat.completion.chunk","created":1794722845,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 01:07:26.292 20504 20518 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-15 01:07:26.292 20504 20518 D PocketNet: streamChat: loop done, lines=25 data=12
+11-15 01:07:46.308 20504 20518 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 01:07:46.329 20504 20594 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-15 01:07:46.329 20504 20594 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-15 01:07:46.947 20504 20518 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 01:07:46.948 20504 20518 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-c8764c9d-2ebf-4eee-81a0-5e433ed68615","object":"chat.completion.chunk","created":1794722866,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 01:07:47.365 20504 20518 D PocketNet: streamChat: [DONE] after 43 lines (21 data)
+11-15 01:07:47.365 20504 20518 D PocketNet: streamChat: loop done, lines=43 data=21
+11-15 01:07:47.386 20504 20518 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
