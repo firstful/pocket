@@ -1,0 +1,9 @@
+=== HELLO STREAM ===
+-- mCurrentFocus --
+  mCurrentFocus=Window{f3c9954 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+-- InferenceClient/streamChat/FATAL grep --
+11-14 19:03:15.796 28232 28250 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 19:03:16.385 28232 28250 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 19:03:16.386 28232 28250 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-8ce3d8ed-3a5f-4a49-be80-746c61aebd0b","object":"chat.completion.chunk","created":1794700993,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-14 19:03:16.453 28232 28250 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-14 19:03:16.453 28232 28250 D PocketNet: streamChat: loop done, lines=17 data=8

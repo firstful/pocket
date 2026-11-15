@@ -1,0 +1,57 @@
+=== WEB SEARCH ===
+-- mCurrentFocus --
+  mCurrentFocus=Window{2b1b3a6 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+-- WebSearchTool + streamChat grep --
+11-14 19:07:51.640   694   694 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-14 19:07:51.645   694   694 I AndroidRuntime: Using default boot image
+11-14 19:07:51.645   694   694 I AndroidRuntime: Leaving lock profiling enabled
+11-14 19:07:51.739   694   694 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-14 19:07:51.746   694   694 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-14 19:07:51.747   694   694 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-14 19:07:52.866   694   694 D AndroidRuntime: Shutting down VM
+11-14 19:07:52.866   694   709 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:52.866   694   705 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:52.866   694   706 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:52.972   712   712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-14 19:07:52.976   712   712 I AndroidRuntime: Using default boot image
+11-14 19:07:52.976   712   712 I AndroidRuntime: Leaving lock profiling enabled
+11-14 19:07:53.048   712   712 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-14 19:07:53.053   712   712 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-14 19:07:53.054   712   712 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-14 19:07:53.947 32657 32706 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 19:07:55.229 32657 32706 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 19:07:55.229 32657 32706 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-a26337fd-3400-47a5-98f1-eef81cb4b90d","object":"chat.completion.chunk","created":1794701272,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-14 19:07:55.340   712   754 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:55.340   712   712 D AndroidRuntime: Shutting down VM
+11-14 19:07:55.340   712   755 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:55.340   712   786 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:07:55.877 32657 32706 D PocketNet: streamChat: [DONE] after 45 lines (22 data)
+11-14 19:07:55.877 32657 32706 D PocketNet: streamChat: loop done, lines=45 data=22
+11-14 19:07:55.927 32657   797 E chromium: [1114/190755.927499:ERROR:android_webview/browser/variations/variations_seed_loader.cc:36] Seed missing signature.
+11-14 19:07:58.284 32657 32706 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 19:07:59.338 32657 32706 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 19:07:59.338 32657 32706 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-d81063ff-7590-44e3-8b55-fa77060f467a","object":"chat.completion.chunk","created":1794701276,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-14 19:07:59.741 32657 32706 D PocketNet: streamChat: [DONE] after 27 lines (13 data)
+11-14 19:07:59.741 32657 32706 D PocketNet: streamChat: loop done, lines=27 data=13
+11-14 19:08:01.498  1119  1119 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-14 19:08:01.502  1119  1119 I AndroidRuntime: Using default boot image
+11-14 19:08:01.502  1119  1119 I AndroidRuntime: Leaving lock profiling enabled
+11-14 19:08:01.580  1119  1119 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-14 19:08:01.585  1119  1119 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-14 19:08:01.586  1119  1119 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-14 19:08:02.716  1119  1142 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:02.716  1119  1134 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:02.717  1119  1133 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:02.718  1119  1119 D AndroidRuntime: Shutting down VM
+11-14 19:08:07.918 26675 32263 D GlanceSessionManager: Closing session appWidget-10 wasOpen=false hasError=false events=[]
+11-14 19:08:15.004  1183  1183 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-14 19:08:15.008  1183  1183 I AndroidRuntime: Using default boot image
+11-14 19:08:15.008  1183  1183 I AndroidRuntime: Leaving lock profiling enabled
+11-14 19:08:15.080  1183  1183 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-14 19:08:15.085  1183  1183 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-14 19:08:15.086  1183  1183 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-14 19:08:16.977  1183  1201 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:16.977  1183  1206 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:16.977  1183  1200 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-14 19:08:16.977  1183  1183 D AndroidRuntime: Shutting down VM
+11-14 19:08:16.977  1183  1212 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1

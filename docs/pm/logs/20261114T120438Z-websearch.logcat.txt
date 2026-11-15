@@ -1,0 +1,61 @@
+--------- beginning of system
+11-14 07:06:04.557 31723 31723 D InsetsController: show(ime())
+11-14 07:06:04.557 31723 31723 I ImeTracker: com.sutliff.pocket:7bda6025: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-14 07:06:04.558 31723 31723 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-14 07:06:04.563 31723 31723 I ImeTracker: com.sutliff.pocket:405bd65c: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-14 07:06:04.563 31723 31723 D InsetsController: show(ime())
+11-14 07:06:04.563 31723 31723 I ImeTracker: com.sutliff.pocket:405bd65c: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+--------- beginning of main
+11-14 07:06:04.591 31723 31723 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@990fb8a
+11-14 07:06:04.591 31723 31768 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@990fb8a
+11-14 07:06:04.634 31723 31723 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-14 07:06:04.861 31723 31723 I ImeTracker: com.sutliff.pocket:7bda6025: onShown
+11-14 07:06:12.673 31723 31739 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:06:12.674 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:12.674 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:12.674 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:12.674 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:12.711 31723 31739 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 07:06:12.724 31723 31723 D InsetsController: hide(ime())
+11-14 07:06:12.724 31723 31723 I ImeTracker: com.sutliff.pocket:88b0816b: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-14 07:06:12.725 31723 31723 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-14 07:06:12.725 31723 31723 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-14 07:06:12.725 31723 31768 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-14 07:06:12.726 31723 31723 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-14 07:06:12.738 31723 31723 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-14 07:06:12.738 31723 31723 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-14 07:06:12.764 31723 31723 I ImeTracker: com.sutliff.pocket:e82e57f8: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-14 07:06:12.783 31723 31723 D InsetsController: hide(ime())
+11-14 07:06:12.783 31723 31723 I ImeTracker: com.google.android.inputmethod.latin:2be4f19f: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-14 07:06:12.831 31723 31723 I ImeTracker: system_server:f8ed32f9: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-14 07:06:18.145 31723 31739 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 07:06:18.146 31723 31739 D PocketNet: streamChat: first data (399 bytes): {"id":"chatcmpl-7582e02bff8e4175818e16334759de63","object":"chat.completion.chunk","created":1794657975,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning":null,"tool_calls":[{"index":0,"id":"7cad504c-3854-429a-a5b0-8f715bab9cf3","type":"function","function":{"name":"web_search","arguments":"{"}}]}}],"usage":null}
+11-14 07:06:18.148 31723 31739 D PocketNet: streamChat: [DONE] after 9 lines (4 data)
+11-14 07:06:18.148 31723 31739 D PocketNet: streamChat: loop done, lines=9 data=4
+11-14 07:06:18.155 31723 31739 D WebSearchTool: start query_len=18 max_results=8
+11-14 07:06:18.168 31723 31738 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:06:19.185 31723 31739 D WebSearchTool: response code=200 html_len=28212 duration_ms=1028
+11-14 07:06:19.192 31723 31739 D WebSearchTool: parsed titles=10 snippets=10
+11-14 07:06:19.193 31723 31739 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-14 07:06:19.200 31723 31739 D WebSearchTool: done result_count=8 duration_ms=1028
+11-14 07:06:19.209 31723 31740 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:19.209 31723 31740 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:19.209 31723 31740 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:19.209 31723 31740 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:19.215 31723 31738 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:06:19.247 31723 31740 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 07:06:28.690 31723 31740 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 07:06:28.690 31723 31740 D PocketNet: streamChat: first data (287 bytes): {"id":"chatcmpl-0ccb82ed373b41f98a1d103101792c80","object":"chat.completion.chunk","created":1794657985,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning_content":"**","tool_calls":null}}],"usage":null}
+11-14 07:06:29.126 31723 31740 D PocketNet: streamChat: [DONE] after 169 lines (84 data)
+11-14 07:06:29.126 31723 31740 D PocketNet: streamChat: loop done, lines=169 data=84
+11-14 07:06:29.127 31723 31740 D WebFetchTool: start url=https://forecast.weather.gov/zipcity.php?inputstring=chicago%2CIL max_chars=4000
+11-14 07:06:29.135 31723 31738 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:06:29.974 31723 31740 D WebFetchTool: response code=200 html_len=48685 duration_ms=845
+11-14 07:06:30.016 31723 31740 D WebFetchTool: done cleaned_len=3794 duration_ms=845
+11-14 07:06:30.019 31723 31738 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:30.020 31723 31738 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:30.020 31723 31738 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:30.020 31723 31738 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:06:30.023 31723 31740 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:06:30.039 31723 31738 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 07:06:30.048 31723 31998 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);

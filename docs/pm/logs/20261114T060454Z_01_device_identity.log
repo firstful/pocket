@@ -1,0 +1,13 @@
+=== Device Identity + Version ===
+timestamp_utc: 20261114T060454Z
+model: Pixel 6a
+device: bluejay
+android: 17
+build: CP3A.261005.002.A1
+serial: 27271JEGR25574
+adb_serial: 192.168.1.147:45357
+--- package ---
+    versionCode=91 minSdk=26 targetSdk=34
+    versionName=1.0.91-38d9bf4
+    lastUpdateTime=2026-11-13 22:47:07
+      firstInstallTime=2026-10-14 16:37:12

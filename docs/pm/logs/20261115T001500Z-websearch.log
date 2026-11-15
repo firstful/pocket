@@ -1,0 +1,10 @@
+11-14 19:05:33.389 29804 29818 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 19:05:34.018 29804 29818 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 19:05:34.096 29804 29818 D PocketNet: streamChat: loop done, lines=21 data=10
+11-14 19:05:34.098 29804 29818 D WebSearchTool: start query_len=17 max_results=8
+11-14 19:05:34.983 29804 29818 D WebSearchTool: response code=200 html_len=28816 duration_ms=884
+11-14 19:05:34.989 29804 29818 D WebSearchTool: parsed titles=10 snippets=10
+11-14 19:05:34.994 29804 29818 D WebSearchTool: done result_count=8 duration_ms=884
+11-14 19:05:35.033 29804 29820 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 19:05:35.582 29804 29820 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 19:05:37.557 29804 29820 D PocketNet: streamChat: loop done, lines=107 data=53

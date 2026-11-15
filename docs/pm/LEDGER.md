@@ -96,3 +96,24 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
 - `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
 - Untracked evidence from prior run (2026-11-13T18:14Z) committed with this update.
+
+## Run 2026-11-15T00:09:30Z (spot-check, vc91 `1.0.91-38d9bf4`, CI run 1593 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc91 installed from store (sha e17d195d…). Store version matches HEAD code SHA 38d9bf4. Evidence: `docs/pm/logs/identity_20261115T000244Z.log`, `docs/pm/screenshots/20261115T000244Z-launch.png`.
+- Device reachable at `192.168.1.147:45357` (Pixel 6a/bluejay).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime for Pocket. Evidence: `docs/pm/logs/launch_20261115T000244Z.log`, `docs/pm/screenshots/launch_20261115T000244Z.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream … [DONE] after 17 lines (8 data), loop done, lines=17 data=8`. No gateway error. Evidence: `docs/pm/logs/hello_20261115T000244Z.log`, `docs/pm/screenshots/hello_20261115T000244Z.png`.
+- Web search PASS: `WebSearchTool: start query_len=17 … response code=200 html_len=28816 duration_ms=884 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=884`. Follow-up stream healthy (`loop done, lines=107 data=53`). No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261115T001500Z-websearch.log`, `docs/pm/screenshots/20261115T001500Z-websearch.png`.
+- Permission/dialogs PASS: no system permission dialog observed; mCurrentFocus remained Pocket throughout.
+- web_render not exercised this run (ADB input automation flaky for the new tool); compiles via CI run 1593. Deferred to next run.
+- OTEL not exercised this run (endpoint unset by default). No regression suspected.
+- Homelab MCP todo board: no open Pocket-related todos (#423/#424/#425 closed in prior runs).
+
+### Shipped
+- No code changes this run. HEAD `38d9bf4` (vc91) CI run 1593 success; store tip vc91 matches HEAD; device installed vc91.
+
+### Open / Next
+- web_render (vc91 new feature) needs on-device verification (tool invocation + top-right PIP preview + outline/find/section output).
+- OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
+- `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.

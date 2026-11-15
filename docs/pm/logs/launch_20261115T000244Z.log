@@ -1,0 +1,35 @@
+=== LAUNCH ===
+-- mCurrentFocus --
+  mCurrentFocus=Window{f3c9954 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+-- FATAL/AndroidRuntime grep --
+-- tail logcat --
+11-14 19:02:55.191  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-14 19:02:55.191  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-14 19:02:55.194  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-14 19:02:55.205  2035  2186 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-14 19:02:55.205  2035  2186 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 520, left: 132, bottom: 1080, right: 2274}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-14 19:02:55.217 28232 28232 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-14 19:02:55.218 28232 28232 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-14 19:02:55.220  1701  3319 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-14 19:02:55.220  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-14 19:02:55.240  2199  2234 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-14 19:02:55.286  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-14 19:02:55.301  1701  2812 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-14 19:02:55.301  1701  2812 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-14 19:02:55.356  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-14 19:02:55.435 28232 28232 I ImeTracker: com.sutliff.pocket:74e488c7: onShown
+11-14 19:02:55.862  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1794698337308
+11-14 19:02:56.985  1054  2964 I WifiHAL : Creating message to get link statistics; iface = 47
+11-14 19:02:57.081  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-14 19:02:57.081  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-14 19:02:57.081  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-14 19:02:57.441  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-14 19:02:57.946 28302 28302 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-14 19:02:57.946 28302 28302 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-14 19:02:57.946 28302 28302 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-14 19:02:58.166  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys window'
+11-14 19:02:58.224  1701  3319 I ImeTracker: system_server:89e974fa: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-14 19:02:58.294  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-14 19:02:58.350  3065 16252 I fpwf    : (REDACTED) HDM. appOpsListener %s %s
+11-14 19:02:58.351  3065 16252 I fpwf    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-14 19:02:58.355  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

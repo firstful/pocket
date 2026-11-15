@@ -1,0 +1,5 @@
+=== Launch / no-crash ===
+timestamp_utc: 20261114T060454Z
+pid: 22712
+app process alive after 6s: yes
+AndroidRuntime fatal/crash lines: none

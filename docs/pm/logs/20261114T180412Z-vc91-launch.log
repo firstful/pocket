@@ -1,0 +1,23 @@
+=== Timestamp (UTC) ===
+20261114T180412Z
+=== Device ===
+serial: 192.168.1.147:45357
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+    versionCode=91 minSdk=26 targetSdk=34
+    versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+    topResumedActivity=ActivityRecord{223318740 u0 com.sutliff.pocket/.MainActivity t29175}
+  ResumedActivity: ActivityRecord{223318740 u0 com.sutliff.pocket/.MainActivity t29175}
+=== Pocket FATAL/AndroidRuntime ===
+NO_POCKET_FATAL
+=== Logcat Excerpt (pocket/AndroidRuntime, tail 200) ===
+11-14 13:04:33.107 11918 12030 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-14 13:04:40.786 12056 12056 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-14 13:04:40.800 12056 12056 I AndroidRuntime: Using default boot image
+11-14 13:04:40.800 12056 12056 I AndroidRuntime: Leaving lock profiling enabled
+11-14 13:04:40.912 12056 12056 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-14 13:04:41.657  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys package com.sutliff.pocket'
+11-14 13:04:41.737 11769 11769 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/oat/arm64/base.odex) is kOatUpToDate with filter 'verify' executable 'false'
+11-14 13:04:41.737 11769 11769 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/oat/arm64/base.odex) is kOatUpToDate with filter 'verify' executable 'false'

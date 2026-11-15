@@ -1,0 +1,31 @@
+--------- beginning of system
+11-14 07:05:18.126 31723 31723 D InsetsController: show(ime())
+11-14 07:05:18.127 31723 31723 I ImeTracker: com.sutliff.pocket:0b098d6f: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-14 07:05:18.127 31723 31723 I ImeTracker: com.sutliff.pocket:0b098d6f: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-14 07:05:18.132 31723 31723 I ImeTracker: com.sutliff.pocket:92903b58: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-14 07:05:18.133 31723 31723 D InsetsController: show(ime())
+11-14 07:05:18.133 31723 31723 I ImeTracker: com.sutliff.pocket:92903b58: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+--------- beginning of main
+11-14 07:05:30.904 31723 31739 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-14 07:05:30.909 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:05:30.909 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:05:30.909 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:05:30.909 31723 31739 W PocketNet: wire: dropping malformed tool message (missing id/name)
+11-14 07:05:30.949 31723 31739 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-14 07:05:30.969 31723 31723 D InsetsController: hide(ime())
+11-14 07:05:30.969 31723 31723 I ImeTracker: com.sutliff.pocket:23efa479: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-14 07:05:30.970 31723 31723 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-14 07:05:30.970 31723 31723 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-14 07:05:30.970 31723 31768 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-14 07:05:30.970 31723 31723 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-14 07:05:30.974 31723 31723 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-14 07:05:30.979 31723 31723 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-14 07:05:31.006 31723 31723 I ImeTracker: com.sutliff.pocket:b96de83b: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-14 07:05:31.040 31723 31723 D InsetsController: hide(ime())
+11-14 07:05:31.040 31723 31723 I ImeTracker: com.google.android.inputmethod.latin:b8db7652: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-14 07:05:31.074 31723 31723 I ImeTracker: system_server:ff89f5b4: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-14 07:05:38.103 31723 31739 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-14 07:05:38.104 31723 31739 D PocketNet: streamChat: first data (287 bytes): {"id":"chatcmpl-b2ba342608554005a9f71264027520f2","object":"chat.completion.chunk","created":1794657935,"model":"ocg:iceman-contributor-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"reasoning_content":"**","tool_calls":null}}],"usage":null}
+11-14 07:05:38.129 31723 31739 D PocketNet: streamChat: [DONE] after 151 lines (75 data)
+11-14 07:05:38.129 31723 31739 D PocketNet: streamChat: loop done, lines=151 data=75
+11-14 07:05:38.181 31723 31739 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
