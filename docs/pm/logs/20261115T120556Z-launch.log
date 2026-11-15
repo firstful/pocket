@@ -1,0 +1,77 @@
+=== Timestamp (UTC) ===
+20261115T120556Z
+=== Device ===
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+versionCode=91 versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+  mCurrentFocus=Window{f990fe8 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{172427172 u0 com.sutliff.pocket/.MainActivity t29197}
+    topResumedActivity=ActivityRecord{172427172 u0 com.sutliff.pocket/.MainActivity t29197}
+  ResumedActivity: ActivityRecord{172427172 u0 com.sutliff.pocket/.MainActivity t29197}
+=== PID ===
+7425
+=== Pocket FATAL/AndroidRuntime/CRASH ===
+NO_POCKET_FATAL
+=== Logcat Excerpt (pocket, tail 60) ===
+--------- beginning of system
+11-15 07:06:10.730  7425  7425 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-15 07:06:10.736  7425  7425 V GraphicsEnvironment: Currently set values for:
+11-15 07:06:10.736  7425  7425 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-15 07:06:10.736  7425  7425 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-15 07:06:10.736  7425  7425 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-15 07:06:10.737  7425  7425 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-15 07:06:10.737  7425  7425 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-15 07:06:10.759  7425  7425 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-15 07:06:10.762  7425  7425 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-15 07:06:10.762  7425  7425 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-15 07:06:10.787  7425  7425 D BootReceiver: Boot completed, starting AgentBridgeService
+11-15 07:06:10.791  7425  7458 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-15 07:06:10.792  7425  7458 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/lib/arm64'
+11-15 07:06:10.792  7425  7458 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk!/lib/arm64-v8a'
+11-15 07:06:10.801  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:10.804  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:10.807  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:10.836  7425  7425 D AgentBridgeService: AgentBridgeService created
+11-15 07:06:10.853  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:10.857  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:10.878  7425  7425 I HWUI    : Using FreeType backend (prop=Auto)
+11-15 07:06:10.890  7425  7425 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-15 07:06:10.900  7425  7425 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-15 07:06:10.900  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:10.900  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:10.937  7425  7425 I Surface : Creating surface for consumer unnamed-7425-0 with slotExpansion=1 for 64 slots
+11-15 07:06:10.938  7425  7425 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-15 07:06:10.992  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:11.029  7425  7454 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:06:11.066  7425  7425 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 07:06:11.077  7425  7425 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 07:06:11.082  7425  7425 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-15 07:06:11.118  7425  7425 D InsetsController: show(ime())
+11-15 07:06:11.118  7425  7425 I ImeTracker: com.sutliff.pocket:180afcde: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-15 07:06:11.118  7425  7425 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 07:06:11.124  7425  7425 D InsetsController: hide(ime())
+11-15 07:06:11.124  7425  7425 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 07:06:11.130  7425  7425 I ImeTracker: com.sutliff.pocket:6ca42ee4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-15 07:06:11.131  7425  7425 D InsetsController: show(ime())
+11-15 07:06:11.131  7425  7425 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 07:06:11.141  7425  7425 D InsetsController: hide(ime())
+11-15 07:06:11.141  7425  7425 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 07:06:11.141  7425  7425 I ImeTracker: system_server:2c712834: onCancelled at PHASE_CLIENT_ANIMATION_CANCEL
+11-15 07:06:11.142  7425  7488 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-15 07:06:11.154  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.154  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.156  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:11.156  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:11.170  7425  7425 I ImeTracker: com.sutliff.pocket:180afcde: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 07:06:11.193  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.193  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.195  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:11.195  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:11.211  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.211  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:11.236  7425  7425 I ImeTracker: system_server:a0096228: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 07:06:11.365  7425  7425 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:11.366  7425  7482 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:16.687  7425  7503 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket

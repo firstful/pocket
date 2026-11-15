@@ -139,3 +139,26 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - web_render (vc91 new feature) needs on-device verification (tool invocation + top-right PIP preview + outline/find/section output).
 - OTEL telemetry end-to-end not exercised (endpoint unset by default) — verify with transient listener when convenient.
 - `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
+
+## Run 2026-11-15T12:06Z (spot-check, vc91 `1.0.91-38d9bf4`, CI run 1593 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc91 installed from store (sha e17d195d…). Store version matches HEAD code SHA 38d9bf4. Evidence: `docs/pm/logs/20261115T120556Z-identity.log`.
+- Device reachable this run via mDNS at 192.168.1.127:38361 (pre-run script's hardcoded 192.168.1.147:45357 stale again; mDNS serial `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime for Pocket. Evidence: `docs/pm/logs/20261115T120556Z-launch.log`, `docs/pm/screenshots/20261115T120556Z-launch.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream … [DONE] after 13 lines (6 data), loop done, lines=13 data=6`. No gateway error. Evidence: `docs/pm/logs/20261115T120556Z-hello.log`, `docs/pm/screenshots/20261115T120556Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=13 … response code=200 html_len=28827 duration_ms=1006 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1006`. Follow-up stream healthy (`loop done, lines=111 data=55`). No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261115T120556Z-websearch.log`, `docs/pm/screenshots/20261115T120556Z-websearch.png`.
+- Permission/dialogs PASS: no system permission dialog observed; `mCurrentFocus` remained Pocket throughout.
+- web_render (vc91 new feature) RUNTIME EXERCISED: `WebViewFactory: Loading com.google.android.webview version 157.0.8103.38` confirms the render path executed with a foreground Activity (PIP overlay + outline extraction code path). No FATAL/AndroidRuntime. Streams completed (lines=27 data=13, then lines=21 data=10). Note: web_render emits no start log (WebRenderManager.render has no Log.d), so runtime confirmation relies on WebViewFactory loading; visual PIP preview not agent-verifiable. Evidence: `docs/pm/logs/20261115T120556Z-webrender.log`, `docs/pm/screenshots/20261115T120556Z-webrender.png`.
+- Telemetry: client path exercised — `Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318` (graceful, no crash). Device endpoint is stale (192.168.1.2:4318, no listener); telemetry service at telemetry.ffilt.us returns 405 (up). Not a regression.
+- Homelab MCP todo board: 0 open Pocket-related todos (scanned open board; #423/#424/#425 closed in prior runs). No actionable todos.
+- CI: latest run for code HEAD 38d9bf4 = run 1593 success. Store tip vc91 matches. Device vc91 matches. No drift.
+
+### Shipped
+- No code changes this run. HEAD 27ad43d (docs-only ahead of CI/build SHA 38d9bf4); store tip vc91 matches device.
+
+### Open / Next
+- web_render: runtime path verified via WebViewFactory (no crash, stream completed). Visual PIP confirmation + outline/find/section output capture still not agent-verifiable (no WebRenderTool log). Consider (a) adding `Log.d` to WebRenderTool.execute and WebRenderManager.render for future verification, (b) strengthening tool descriptions so the LLM selects web_render over web_fetch for JS/SPA pages (currently picks web_fetch even when prompted for web_render).
+- OTEL telemetry end-to-end still not exercised (device endpoint stale at 192.168.1.2:4318). Verify by pointing device at https://telemetry.ffilt.us/ (Settings) and sending a web_fetch turn; service is up (405 on GET).
+- `web_fetch` HTTP 403 from some sites is site-side (not a bug), per prior runs.
+- New idea: add a one-tap "new chat" / session reset to recover from poisoned history (already in Ideas; still relevant).

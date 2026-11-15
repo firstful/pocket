@@ -1,0 +1,45 @@
+=== Timestamp (UTC) ===
+20261115T120556Z
+=== Device ===
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+versionCode=91 versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+  mCurrentFocus=Window{7a91d87 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== PID ===
+7808
+=== Pocket FATAL/AndroidRuntime/CRASH ===
+NO_POCKET_FATAL
+=== Key lines ===
+53:11-15 07:08:06.524  7808  7824 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+66:11-15 07:08:07.080  7808  7824 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+69:11-15 07:08:07.203  7808  7824 D PocketNet: streamChat: loop done, lines=19 data=9
+70:11-15 07:08:07.204  7808  7824 D WebSearchTool: start query_len=13 max_results=8
+72:11-15 07:08:08.212  7808  7824 D WebSearchTool: response code=200 html_len=28827 duration_ms=1006
+73:11-15 07:08:08.224  7808  7824 D WebSearchTool: parsed titles=10 snippets=10
+75:11-15 07:08:08.232  7808  7824 D WebSearchTool: done result_count=8 duration_ms=1006
+77:11-15 07:08:08.271  7808  7824 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+78:11-15 07:08:08.939  7808  7824 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+81:11-15 07:08:10.823  7808  7824 D PocketNet: streamChat: loop done, lines=111 data=55
+=== Logcat Excerpt (tail 20) ===
+11-15 07:08:06.594  7808  7808 D InsetsController: hide(ime())
+11-15 07:08:06.594  7808  7808 I ImeTracker: com.google.android.inputmethod.latin:9553e0d9: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-15 07:08:06.644  7808  7808 I ImeTracker: system_server:de5f078f: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 07:08:07.080  7808  7824 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 07:08:07.081  7808  7824 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-fce338e6-fb00-4d4a-ba58-fa16df9a3521","object":"chat.completion.chunk","created":1794744486,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 07:08:07.203  7808  7824 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-15 07:08:07.203  7808  7824 D PocketNet: streamChat: loop done, lines=19 data=9
+11-15 07:08:07.204  7808  7824 D WebSearchTool: start query_len=13 max_results=8
+11-15 07:08:07.221  7808  7822 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:08:08.212  7808  7824 D WebSearchTool: response code=200 html_len=28827 duration_ms=1006
+11-15 07:08:08.224  7808  7824 D WebSearchTool: parsed titles=10 snippets=10
+11-15 07:08:08.225  7808  7824 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-15 07:08:08.232  7808  7824 D WebSearchTool: done result_count=8 duration_ms=1006
+11-15 07:08:08.243  7808  7822 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:08:08.271  7808  7824 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 07:08:08.939  7808  7824 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 07:08:08.940  7808  7824 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-b0f2b8d3-8205-4fbe-8a47-1dd249ea2b66","object":"chat.completion.chunk","created":1794744487,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 07:08:10.823  7808  7824 D PocketNet: streamChat: [DONE] after 111 lines (55 data)
+11-15 07:08:10.823  7808  7824 D PocketNet: streamChat: loop done, lines=111 data=55
+11-15 07:08:10.855  7808  7824 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318

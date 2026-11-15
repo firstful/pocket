@@ -1,0 +1,58 @@
+=== Timestamp (UTC) ===
+20261115T120556Z
+=== Device ===
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+versionCode=91 versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+  mCurrentFocus=Window{e88f575 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== PID ===
+7569
+=== Pocket FATAL/AndroidRuntime/CRASH ===
+NO_POCKET_FATAL
+=== Key lines ===
+78:11-15 07:07:11.650  7569  7586 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+91:11-15 07:07:12.435  7569  7586 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+94:11-15 07:07:12.469  7569  7586 D PocketNet: streamChat: loop done, lines=13 data=6
+=== Logcat Excerpt (tail 40) ===
+11-15 07:06:31.860  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:31.860  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:31.868  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:31.869  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:31.869  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:31.870  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:31.879  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:31.879  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:32.074  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:32.075  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:06:37.348  7569  7663 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket
+11-15 07:06:45.603  7569  7569 D InsetsController: show(ime())
+11-15 07:06:45.604  7569  7569 I ImeTracker: com.sutliff.pocket:c6bbe0e1: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-15 07:06:45.604  7569  7569 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-15 07:06:45.609  7569  7569 I ImeTracker: com.sutliff.pocket:c6fe0557: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-15 07:06:45.609  7569  7569 D InsetsController: show(ime())
+11-15 07:06:45.609  7569  7569 I ImeTracker: com.sutliff.pocket:c6fe0557: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-15 07:06:45.625  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:45.626  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@4ba1792
+11-15 07:06:45.666  7569  7569 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-15 07:06:45.895  7569  7569 I ImeTracker: com.sutliff.pocket:c6bbe0e1: onShown
+11-15 07:07:11.627  7569  7587 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-15 07:07:11.650  7569  7586 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 07:07:11.701  7569  7569 D InsetsController: hide(ime())
+11-15 07:07:11.701  7569  7569 I ImeTracker: com.sutliff.pocket:2939e790: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-15 07:07:11.701  7569  7569 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:07:11.701  7569  7569 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-15 07:07:11.701  7569  7623 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-15 07:07:11.702  7569  7569 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-15 07:07:11.706  7569  7569 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-15 07:07:11.706  7569  7569 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-15 07:07:11.733  7569  7569 I ImeTracker: com.sutliff.pocket:56bb4295: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 07:07:11.777  7569  7569 D InsetsController: hide(ime())
+11-15 07:07:11.777  7569  7569 I ImeTracker: com.google.android.inputmethod.latin:2ad32431: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-15 07:07:11.813  7569  7569 I ImeTracker: system_server:19d9d580: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-15 07:07:12.435  7569  7586 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 07:07:12.435  7569  7586 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-0faee0f6-240c-49f2-a6e4-45091787c080","object":"chat.completion.chunk","created":1794744431,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 07:07:12.469  7569  7586 D PocketNet: streamChat: [DONE] after 13 lines (6 data)
+11-15 07:07:12.469  7569  7586 D PocketNet: streamChat: loop done, lines=13 data=6
+11-15 07:07:12.491  7569  7586 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318

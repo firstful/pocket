@@ -1,0 +1,47 @@
+=== Timestamp (UTC) ===
+20261115T120556Z
+=== Device ===
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+versionCode=91 versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+  mCurrentFocus=Window{20a5900 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== PID ===
+8395
+=== Pocket FATAL/AndroidRuntime/CRASH ===
+NO_POCKET_FATAL
+=== Key lines ===
+78:11-15 07:08:53.126  8395  8412 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+91:11-15 07:08:54.460  8395  8412 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+94:11-15 07:08:54.672  8395  8412 D PocketNet: streamChat: loop done, lines=27 data=13
+95:11-15 07:08:54.710  8395  8395 I WebViewFactory: Loading com.google.android.webview version 157.0.8103.38 (code 810303803)
+135:11-15 07:08:57.743  8395  8412 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+137:11-15 07:08:58.483  8395  8412 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+140:11-15 07:08:58.615  8395  8412 D PocketNet: streamChat: loop done, lines=21 data=10
+=== Logcat Excerpt (tail 25) ===
+11-15 07:08:54.778  8395  8395 I cr_CombinedPProvider: #linkNativeInternal() 1
+11-15 07:08:54.778  8395  8395 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-15 07:08:54.778  8395  8395 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-15 07:08:54.778  8395  8395 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-15 07:08:54.778  8395  8395 I cr_CombinedPProvider: #flushPolicies()
+11-15 07:08:54.868  8395  8681 W cr_media: BLUETOOTH_CONNECT permission is missing.
+11-15 07:08:54.869  8395  8681 W cr_media: getBluetoothAdapter() requires BLUETOOTH permission
+11-15 07:08:54.869  8395  8681 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+11-15 07:08:54.871  8395  8681 D AudioSystem: onNewService: media.audio_policy service obtained 0xb400007752ec1520
+11-15 07:08:54.872  8395  8681 D AudioSystem: getService: IAudioPolicyService retrieved: 0xb400007752ec1520  cached: 0xb400007752ec1520
+11-15 07:08:54.883  8395  8395 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-15 07:08:54.883  8395  8395 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-15 07:08:54.883  8395  8395 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-15 07:08:54.883  8395  8395 I cr_CombinedPProvider: #flushPolicies()
+11-15 07:08:54.883  8395  8712 I CameraManagerGlobal: Connecting to camera service
+11-15 07:08:54.977  8395  8688 W cr_VAUtil: Unknown profile: 8 for codec video/hevc
+11-15 07:08:57.677  8395  8412 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-15 07:08:57.743  8395  8412 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-15 07:08:57.759  8395  8649 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-15 07:08:58.483  8395  8412 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-15 07:08:58.483  8395  8412 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-c7e7698f-dace-49c9-acb2-0c667e045363","object":"chat.completion.chunk","created":1794744537,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-15 07:08:58.615  8395  8412 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-15 07:08:58.615  8395  8412 D PocketNet: streamChat: loop done, lines=21 data=10
+11-15 07:09:10.992  8395  8395 I cr_A11yState: Enabled accessibility services list updated. []
+11-15 07:09:10.994  8395  8395 I cr_A11yState: New AccessibilityState: State{isComplexUserInteractionServiceEnabled=false, isTouchExplorationEnabled=false, isPerformGesturesEnabled=false, isAnyAccessibilityServiceEnabled=false, isAccessibilityToolPresent=false, isTextShowPasswordEnabled=true, isOnlyAutofillRunning=false, isOnlyPasswordManagersEnabled=false, isKnownScreenReaderEnabled=false, isSamsungTalkBackEnabled=false}
