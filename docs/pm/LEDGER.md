@@ -228,8 +228,32 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 ### Shipped
 - No code changes this run. Evidence files from this run committed with this update.
 
-### Open / Next
+### Open / Next (as of 2026-11-16T12:12Z — RESOLVED in next run below)
 - Todo #697 remains open: on-device web_render log verification + tool-selection bias + OTEL E2E. ADB input fragility is the blocker for agent-driven chat sends; consider stabilizing send via the bottom-bar coordinates ([63,2148][274,2211] input, [965,2149][1028,2212] send) or a deep-link/test hook in a future change.
 - OTEL end-to-end still pending (point device to https://telemetry.ffilt.us/).
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - New idea (carried): one-tap "new chat"/session reset to recover from poisoned history.
+
+## Run 2026-11-16T18:02Z (PM cron, vc98 `1.0.98-bdb0296`, CI run 1636 success) — TODO #697 RESOLVED
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc98 `1.0.98-bdb0296` installed (dumpsys verified). Device reachable via stable mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (~192.168.1.127:38361); pre-run script's 192.168.1.147:45357 stale again. On-device QA delegated (1 subagent, device serialized); all evidence re-verified inline by Rook. Timestamp `20261116T180523Z`.
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no app FATAL. Evidence: `docs/pm/logs/20261116T180523Z-launch.log` (145441 B), `docs/pm/screenshots/20261116T180523Z-launch.png` (238198 B, valid 1080x2400 PNG).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 65 lines (32 data)`, `loop done, lines=65 data=32`, no gateway error. Evidence: `docs/pm/logs/20261116T180523Z-hello.log` (115629 B), `docs/pm/screenshots/20261116T180523Z-hello.png` (223092 B).
+- Web search PASS: `WebSearchTool: start query_len=11 … response code=200 html_len=26157 duration_ms=1023 … parsed titles=10 snippets=10 … done result_count=8`; follow-up stream `loop done, lines=149 data=74`. Evidence: `docs/pm/logs/20261116T180523Z-websearch.log` (116014 B), `...-websearch-tags.log` (2006 B), `docs/pm/screenshots/20261116T180523Z-websearch.png` (221595 B).
+- **web_render (todo #697) FULLY VERIFIED on vc98 — tool-selection bias RESOLVED + new log tags present.** The strengthened descriptions in `c2c421e` worked: LLM selected `web_render` (SSE tool_call `function.name=web_render`), NOT `web_fetch`. Complete render lifecycle captured: `WebRenderTool: start url=https://example.com mode=outline` → `WebRenderManager: start` → `WebViewFactory: Loading com.google.android.webview 157.0.8103.38` → `WebRenderManager: onPageFinished url=https://example.com/` → `await ok=true error=null html_len=2179` → `done html_len=2179` → `WebRenderTool: rendered html_len=2179 (activity=true)` → `done mode=outline result_len=2178`. Follow-up stream `loop done, lines=49 data=24`, no crash/error. Evidence: `docs/pm/logs/20261116T180523Z-webrender.log` (118154 B), `...-webrender-tags.log` (2314 B), `docs/pm/screenshots/20261116T180523Z-webrender.png` (222221 B).
+- **OTEL E2E VERIFIED (first real end-to-end proof).** Device telemetry endpoint (http://192.168.1.2:4318/, = this host) posted real OTLP Logs JSON to a transient listener Rook ran on port 4318. Captured lifecycle events (`app_create`, `boot_completed`, `main_activity_create/resume`, `bridge_service_create`, `network_available`, `session_resume` restored=88 msgs), interaction events (`chat_send` x3, `message_sent` x3), AND tool-level events (`web_search_start`, `web_search_done`) with `service.name=pocket`, `version=1.0.98-bdb0296`. Evidence: `docs/pm/logs/20261116T180440Z-otel-capture.log` (12108 B, capture listener `proc_616a825bb1e1`). NOT a regression; telemetry path is healthy. Note: this confirms device-side config is live; earlier runs' "endpoint unset/stale" observation was wrong for vc98.
+- Settings UI reachable: `docs/pm/screenshots/20261116T180523Z-settings.png` (130602 B), `docs/pm/logs/20261116T180523Z-settings.log` (216966 B).
+- Permission/dialogs PASS: no `EnhancedConfirmationDialogActivity`/grant dialog observed (`AconfigPackage … permissioncontroller.flags` lines are harmless flag-mapping, not dialogs). `mCurrentFocus` stayed Pocket.
+- CI/store: latest code build run 1636 `bdb0296e` (completed/success, workflow_dispatch); store tip `1.0.98-bdb0296` vc98 sha `4dc60906…` size 13504088, matches device. HEAD `a5c87d4` docs-only ahead. No drift.
+
+### Shipped
+- No code changes this run. All three sub-items of todo #697 (web_render logging verification, tool-selection bias, OTEL E2E) verified on already-shipped vc98 — no new build needed.
+- Host-side artifact verification (APK sha256 + DEX string check + CI run 1636 publish excerpt) delegated to a second subagent; see this run's report.
+
+### Open / Next
+- **Todo #697 resolved** (web_render logs + tool-selection + OTEL E2E all PASS) — claim released/completed this run.
+- Remaining web_render nit (non-blocking): visual PIP-preview confirmation not agent-verifiable from screenshots; runtime path + outline extraction fully proven via logs. Consider a future UI snapshot hook only if Reed wants pixel-level proof.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- New idea (carried): one-tap "new chat"/session reset to recover from poisoned history.
+- New idea: web_render succeeded for a static page (example.com); try a true JS/SPA page (e.g. a React app) in a future run to confirm the render path under real JS load.

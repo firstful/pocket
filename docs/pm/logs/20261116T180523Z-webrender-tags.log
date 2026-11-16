@@ -1,0 +1,18 @@
+--------- beginning of main
+11-16 13:12:09.224 26479 26494 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 13:12:13.580 26479 26494 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 13:12:13.581 26479 26494 D PocketNet: streamChat: first data (347 bytes): {"id":"gen-1794852729-fGgV9xO1odNLTlr2VQ80","object":"chat.completion.chunk","created":1794852729,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"tool_calls":[{"index":0,"id":"chatcmpl-tool-85ea72d72ce30958","type":"function","function":{"name":"web_render","arguments":""}}]}}]}
+11-16 13:12:13.728 26479 26494 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-16 13:12:13.728 26479 26494 D PocketNet: streamChat: loop done, lines=15 data=7
+11-16 13:12:13.729 26479 26494 D WebRenderTool: start url=https://example.com mode=outline max_chars=4000 timeout_ms=12000
+11-16 13:12:13.730 26479 26494 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-16 13:12:14.356 26479 26479 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 13:12:15.860 26479 26494 D WebRenderManager: await ok=true error=null html_len=2179
+11-16 13:12:15.860 26479 26494 D WebRenderManager: done html_len=2179 error=null
+11-16 13:12:15.860 26479 26494 D WebRenderTool: rendered html_len=2179 (activity=true)
+11-16 13:12:15.862 26479 26494 D WebRenderTool: done mode=outline result_len=2178
+11-16 13:12:15.891 26479 26494 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 13:12:18.794 26479 26494 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 13:12:18.795 26479 26494 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1794852736-vJOEPuHavVZUEP5c0zfo","object":"chat.completion.chunk","created":1794852736,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-16 13:12:19.225 26479 26494 D PocketNet: streamChat: [DONE] after 49 lines (24 data)
+11-16 13:12:19.225 26479 26494 D PocketNet: streamChat: loop done, lines=49 data=24

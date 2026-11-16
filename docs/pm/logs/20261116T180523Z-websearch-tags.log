@@ -1,0 +1,15 @@
+--------- beginning of main
+11-16 13:11:14.271 26479 26493 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 13:11:16.953 26479 26493 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 13:11:16.953 26479 26493 D PocketNet: streamChat: first data (347 bytes): {"id":"gen-1794852674-0KwesofRsIrDjnCX4Eby","object":"chat.completion.chunk","created":1794852674,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"tool_calls":[{"index":0,"id":"chatcmpl-tool-9e5be98dc7aa8db5","type":"function","function":{"name":"web_search","arguments":""}}]}}]}
+11-16 13:11:16.958 26479 26493 D PocketNet: streamChat: [DONE] after 11 lines (5 data)
+11-16 13:11:16.958 26479 26493 D PocketNet: streamChat: loop done, lines=11 data=5
+11-16 13:11:16.961 26479 26493 D WebSearchTool: start query_len=11 max_results=8
+11-16 13:11:17.985 26479 26493 D WebSearchTool: response code=200 html_len=26157 duration_ms=1023
+11-16 13:11:17.989 26479 26493 D WebSearchTool: parsed titles=10 snippets=10
+11-16 13:11:17.994 26479 26493 D WebSearchTool: done result_count=8 duration_ms=1023
+11-16 13:11:18.022 26479 26493 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 13:11:20.842 26479 26493 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 13:11:20.842 26479 26493 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1794852678-kOPOt2HKlqF2S6S5qt0N","object":"chat.completion.chunk","created":1794852678,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-16 13:11:21.966 26479 26493 D PocketNet: streamChat: [DONE] after 149 lines (74 data)
+11-16 13:11:21.966 26479 26493 D PocketNet: streamChat: loop done, lines=149 data=74
