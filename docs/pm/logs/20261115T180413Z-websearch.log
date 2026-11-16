@@ -1,0 +1,4 @@
+653:11-15 13:05:39.645  8395  8410 D WebSearchTool: start query_len=34 max_results=8
+660:11-15 13:05:40.739  8395  8410 D WebSearchTool: response code=200 html_len=28519 duration_ms=1092
+661:11-15 13:05:40.750  8395  8410 D WebSearchTool: parsed titles=10 snippets=10
+662:11-15 13:05:40.756  8395  8410 D WebSearchTool: done result_count=8 duration_ms=1092
