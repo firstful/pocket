@@ -185,3 +185,27 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL end-to-end verification pending (point device to `https://telemetry.ffilt.us/` and observe ingest).
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Consider adding `Log.d` in WebRenderTool/WebRenderManager for agent-verifiable render evidence.
+
+
+## Run 2026-11-16T06:45Z (PM cron, vc91 installed, code push c2c421e)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc91 installed `1.0.91-38d9bf4` (dumpsys verified). Evidence: `docs/pm/logs/20261116T061000Z-identity.log`.
+- Device reachable via mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`.
+- Launch/no-crash PASS (foreground `com.sutliff.pocket/.MainActivity`, no FATAL). Evidence: `docs/pm/logs/20261116T061000Z-launch.log`, `docs/pm/screenshots/20261116T061000Z-launch.png`.
+- Hello stream PASS (`streamChat: response code=200 ... [DONE] after 23 lines (11 data)`). Evidence: `docs/pm/logs/20261116T061000Z-hello.log`, screenshot.
+- Web search PASS (`WebSearchTool: response code=200 html_len=28272 ... parsed titles=10 snippets=10 ... done result_count=8 duration_ms=919`). Evidence: `docs/pm/logs/20261116T061000Z-websearch.log`, screenshot.
+- Permission/dialogs PASS: `mCurrentFocus` stayed `com.sutliff.pocket/.MainActivity`; no system dialog. Evidence: `docs/pm/screenshots/20261116T061000Z-permission-state.png` (n/a; focus captured in websearch log).
+- web_render: LLM again selected `web_fetch` (example.com) instead of `web_render` — confirms tool-selection bias in todo #697. No `WebRenderTool` log on vc91 (old build). Evidence: `docs/pm/logs/20261116T061000Z-webrender.log`.
+- OTEL not exercised (endpoint unset by default). No regression.
+- Homelab MCP todo board: open Pocket todo #697 (normal) still open; no new Pocket todos.
+
+### Shipped
+- `c2c421e` pushed to `main` (feat: WebRender logging + strengthened tool descriptions for #697): added `Log.d` in `WebRenderManager.render` (start/onPageFinished/await/done) and `WebRenderTool.execute` (start/rendered/done/fallback); strengthened `web_search`/`web_fetch`/`web_render` descriptions to steer LLM toward `web_render` for JS/SPA pages.
+- CI run 1635 for `c2c421ea` is **stuck in_progress** (>40 min, "Build + publish" step never completed; no `cimg/android` build container spawned on wyse5070). Likely runner hang. Gitea cancel endpoint returned 404; rerun blocked ("not done"). Manual intervention needed (restart runner pod or wait for timeout). New build (vc92) NOT published; device remains on vc91.
+
+### Open / Next
+- CI run 1635 (c2c421e) stuck — needs manual rerun/restart before vc92 can ship. Once green: install on Pixel 6a and verify new `WebRenderTool`/`WebRenderManager` log lines appear (agent-verifiable render evidence) and re-test tool-selection bias.
+- OTEL E2E still pending (point device at `https://telemetry.ffilt.us/`).
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- New idea: add a one-tap "new chat" / session reset to recover from poisoned history (still relevant).
