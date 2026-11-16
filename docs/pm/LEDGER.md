@@ -209,3 +209,7 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL E2E still pending (point device at `https://telemetry.ffilt.us/`).
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - New idea: add a one-tap "new chat" / session reset to recover from poisoned history (still relevant).
+
+### Update 2026-11-16T07:00Z
+- Restarted stuck runner pod; redispatched build via workflow_dispatch → run 1636 `bdb0296e` completed success (all 5 steps green). Store published `1.0.98-bdb0296` vc98 (sha 4dc60906…, built 2026-11-16T06:27:41Z, size 13504088).
+- Installed on Pixel 6a: versionCode=98, versionName=1.0.98-bdb0296. Launch PASS (foreground Pocket, no crash). New `WebRenderTool`/`WebRenderManager` Log.d tags present in code (verified by CI compile + build). On-device web_render verification (log evidence + tool-selection bias) deferred to next run.
