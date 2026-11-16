@@ -44,7 +44,7 @@ class WebSearchTool : Tool {
     override val name = "web_search"
     override val description =
         "Search the web and return result titles, snippets, and URLs. " +
-            "Use web_fetch to read a specific result page."
+            "Use web_fetch to read a static result page, or web_render for JS-rendered pages."
     override val parameters = buildJsonObject {
         put("type", "object")
         putJsonObject("properties") {
@@ -155,8 +155,8 @@ class WebFetchTool : Tool {
     private val tag = "WebFetchTool"
     override val name = "web_fetch"
     override val description =
-        "Fetch a web page and return its readable text content. " +
-            "Use after web_search to read a specific result."
+        "Fetch a static web page and return its readable text content (no JavaScript). " +
+            "Use after web_search to read a specific result. For JavaScript-rendered/SPA pages use web_render instead."
     override val parameters = buildJsonObject {
         put("type", "object")
         putJsonObject("properties") {
@@ -234,6 +234,7 @@ object WebRenderManager {
 
     fun render(activity: Activity, url: String, timeoutMs: Long): String {
         val latch = CountDownLatch(1)
+        Log.d("WebRenderManager", "start url=$url timeoutMs=$timeoutMs")
         var html: String? = null
         var error: String? = null
 
@@ -249,6 +250,7 @@ object WebRenderManager {
                         "Mozilla/5.0 (Linux; Android 14; Pixel 6a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
                     val client = object : WebViewClient() {
                         override fun onPageFinished(view: WebView?, finishedUrl: String?) {
+                            Log.d("WebRenderManager", "onPageFinished url=$finishedUrl")
                             view?.postDelayed({
                                 view.evaluateJavascript(
                                     "(function(){try{return document.documentElement.outerHTML;}catch(e){return '';}})();"
@@ -300,11 +302,13 @@ object WebRenderManager {
 
         val ok = latch.await(timeoutMs, TimeUnit.MILLISECONDS)
         if (!ok && error == null) error = "Timed out waiting for page render (${timeoutMs}ms)"
+        Log.d("WebRenderManager", "await ok=$ok error=$error html_len=${html?.length ?: 0}")
 
         activity.runOnUiThread {
             overlay?.visibility = View.GONE
         }
 
+        Log.d("WebRenderManager", "done html_len=${html?.length ?: 0} error=$error")
         return when {
             !html.isNullOrBlank() -> html!!
             !error.isNullOrBlank() -> "Error: $error"
@@ -334,9 +338,11 @@ class WebRenderTool : Tool {
     private val tag = "WebRenderTool"
     override val name = "web_render"
     override val description =
-        "Render a web page in a WebView (executes JavaScript; works for SPAs) and return " +
-            "readable text. Modes: full (default), outline (headings/TOC), section (one heading), " +
-            "find (search text). Shows a small render preview (PIP) top-right while running."
+        "Render a web page in a real WebView (executes JavaScript; works for SPAs and JS-rendered " +
+            "pages) and return readable text. PREFER this over web_fetch/web_search when the page is " +
+            "JavaScript-rendered, an SPA, or empty without JS. Modes: full (default), outline " +
+            "(headings/TOC), section (one heading), find (search text). Shows a small render preview " +
+            "(PIP) top-right while running."
     override val parameters = buildJsonObject {
         put("type", "object")
         putJsonObject("properties") {
@@ -407,12 +413,14 @@ class WebRenderTool : Tool {
         val maxMatches = (args["max_matches"]?.toIntOrNull() ?: 8).coerceIn(1, 50)
         val contextChars = (args["context_chars"]?.toIntOrNull() ?: 240).coerceIn(40, 4000)
 
+        Log.d(tag, "start url=$url mode=$mode max_chars=$maxChars timeout_ms=$timeoutMs")
         val app = com.sutliff.pocket.AgentApp.instance
         val activity = com.sutliff.pocket.AgentApp.foregroundActivity?.get()
 
         val html: String = if (activity != null) {
             WebRenderManager.render(activity, url, timeoutMs.toLong())
         } else {
+            Log.d(tag, "no foreground activity; falling back to static fetch")
             // Fallback: static fetch (no JS)
             try {
                 val req = okhttp3.Request.Builder().url(url).get()
@@ -426,9 +434,11 @@ class WebRenderTool : Tool {
                 return "Error: ${e.message}"
             }
         }
+        Log.d(tag, "rendered html_len=${html.length} (activity=${activity != null})")
         if (html.isBlank() || html.startsWith("Error:")) return html.ifBlank { "No content rendered from: $url" }
 
         val text = htmlToText(html)
+        Log.d(tag, "done mode=$mode result_len=${text.length}")
         if (text.isBlank()) return "No readable text extracted from: $url"
 
         return when (mode) {
