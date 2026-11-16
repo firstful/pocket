@@ -1,0 +1,8 @@
+=== FATAL/AndroidRuntime/crash lines (Pocket) ===
+rc=1 (1 = no matches)
+=== all FATAL/AndroidRuntime lines ===
+11-16 07:08:27.501  4533  4533 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-16 07:08:27.514  4533  4533 I AndroidRuntime: Using default boot image
+11-16 07:08:27.514  4533  4533 I AndroidRuntime: Leaving lock profiling enabled
+11-16 07:08:27.670  4533  4533 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+=== (end) ===

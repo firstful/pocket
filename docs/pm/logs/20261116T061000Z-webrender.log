@@ -1,0 +1,35 @@
+=== Timestamp (UTC) ===
+20261116T061000Z
+=== Device ===
+serial: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+model: Pixel 6a
+=== Package Version ===
+    versionCode=91 minSdk=26 targetSdk=34
+    versionName=1.0.91-38d9bf4
+=== web_render attempt (WebRenderTool/WebRenderManager/WebViewFactory) ===
+11-16 01:15:15.812 21758 21774 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:15:16.676 21758 21774 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:15:16.677 21758 21774 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-2c921593-0415-4814-9a80-40f609c68d72","object":"chat.completion.chunk","created":1794809714,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:15:16.679 21758 21774 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-16 01:15:16.679 21758 21774 D PocketNet: streamChat: loop done, lines=19 data=9
+11-16 01:15:16.713 21758 21758 I WebViewFactory: Loading com.google.android.webview version 157.0.8103.38 (code 810303803)
+11-16 01:15:18.848 21758 21774 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:15:19.853 21758 21774 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:15:19.854 21758 21774 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-60597afc-8f89-4541-a59f-e3cadf896287","object":"chat.completion.chunk","created":1794809717,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:15:19.887 21758 21774 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-16 01:15:19.887 21758 21774 D PocketNet: streamChat: loop done, lines=19 data=9
+11-16 01:15:31.930 21758 21774 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:15:33.616 21758 21774 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:15:33.617 21758 21774 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-aaf936ab-d3c4-44a3-8045-2687f90482e8","object":"chat.completion.chunk","created":1794809730,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:15:33.621 21758 21774 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-16 01:15:33.622 21758 21774 D PocketNet: streamChat: loop done, lines=15 data=7
+11-16 01:15:33.623 21758 21774 D WebFetchTool: start url=https://example.com max_chars=4000
+11-16 01:15:33.827 21758 21774 D WebFetchTool: response code=200 html_len=577 duration_ms=203
+11-16 01:15:33.832 21758 21774 D WebFetchTool: done cleaned_len=171 duration_ms=203
+11-16 01:15:33.875 21758 21772 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:15:34.624 21758 21772 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:15:34.624 21758 21772 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-3232d6c2-16b1-4213-bda4-84aeb992a7be","object":"chat.completion.chunk","created":1794809732,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:15:35.931 21758 21772 D PocketNet: streamChat: [DONE] after 79 lines (39 data)
+11-16 01:15:35.932 21758 21772 D PocketNet: streamChat: loop done, lines=79 data=39
+=== mCurrentFocus ===
+  mCurrentFocus=Window{ea8234 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}

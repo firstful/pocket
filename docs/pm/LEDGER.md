@@ -213,3 +213,23 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 ### Update 2026-11-16T07:00Z
 - Restarted stuck runner pod; redispatched build via workflow_dispatch → run 1636 `bdb0296e` completed success (all 5 steps green). Store published `1.0.98-bdb0296` vc98 (sha 4dc60906…, built 2026-11-16T06:27:41Z, size 13504088).
 - Installed on Pixel 6a: versionCode=98, versionName=1.0.98-bdb0296. Launch PASS (foreground Pocket, no crash). New `WebRenderTool`/`WebRenderManager` Log.d tags present in code (verified by CI compile + build). On-device web_render verification (log evidence + tool-selection bias) deferred to next run.
+## Run 2026-11-16T12:12Z (PM cron, vc98 `1.0.98-bdb0296`, CI run 1636 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc98 installed from store (sha 4dc60906…). Device reachable via mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (192.168.1.127:38361); hardcoded 192.168.1.147:45357 stale. Evidence: `docs/pm/logs/20261116T120602Z-device-identity.log` (versionCode=98, versionName=1.0.98-bdb0296).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no FATAL/AndroidRuntime for Pocket in captured logcat. Evidence: `docs/pm/logs/20261116T120602Z-launch-logcat.log`, `docs/pm/screenshots/20261116T120602Z-launch.png`.
+- Standard hello/web_search: NOT cleanly captured this run. ADB input-coordinate drift (chat input at [21,1081][765,1417] bottom bar, send button [965,2149][1028,2212]) and `NO_INPUT_CHANNEL`/IME state prevented a reproducible send; accumulated stale text in the field. No PocketNet stream lines captured. Prior vc91 QA evidence (2026-11-15) remains the last clean hello/web_search proof. Evidence attempt: `docs/pm/logs/20261116T120602Z-hello-logcat.log` (empty).
+- web_render (todo #697): vc98 logging verified in source — `WebRenderTool` (tag) + `WebRenderManager` Log.d (start/onPageFinished/await/done) in `app/src/main/java/com/sutliff/pocket/tools/WebTools.kt`. On-device invocation not captured this run due to ADB input fragility; runtime path previously verified on vc91 via WebViewFactory loading (no crash, stream completed). Evidence attempt: `docs/pm/logs/20261116T120600Z-webrender.log` (hello send captured, no WebRenderTool tag).
+- Permission/dialogs: no new system permission dialog observed (mCurrentFocus stayed Pocket during checks).
+- OTEL: not exercised (device endpoint stale at 192.168.1.2:4318; telemetry service at telemetry.ffilt.us returns 405/up). No regression.
+- CI/store: latest code build run 1636 `bdb0296` (completed/success, workflow_dispatch); store tip `1.0.98-bdb0296` vc98 sha `4dc60906…`; device vc98 matches. HEAD `0d8edd8` docs-only ahead. No drift.
+- Homelab MCP todo board: open Pocket todo #697 (normal) still open; no new Pocket todos.
+
+### Shipped
+- No code changes this run. Evidence files from this run committed with this update.
+
+### Open / Next
+- Todo #697 remains open: on-device web_render log verification + tool-selection bias + OTEL E2E. ADB input fragility is the blocker for agent-driven chat sends; consider stabilizing send via the bottom-bar coordinates ([63,2148][274,2211] input, [965,2149][1028,2212] send) or a deep-link/test hook in a future change.
+- OTEL end-to-end still pending (point device to https://telemetry.ffilt.us/).
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- New idea (carried): one-tap "new chat"/session reset to recover from poisoned history.

@@ -1,0 +1,73 @@
+=== Timestamp (UTC) ===
+20261116T061000Z
+=== Device ===
+serial: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Package Version ===
+    versionCode=91 minSdk=26 targetSdk=34
+    versionName=1.0.91-38d9bf4
+=== Foreground/Resumed ===
+    topResumedActivity=ActivityRecord{51939669 u0 com.sutliff.pocket/.MainActivity t29201}
+  ResumedActivity: ActivityRecord{51939669 u0 com.sutliff.pocket/.MainActivity t29201}
+  pid=21184
+=== Pocket FATAL/AndroidRuntime ===
+NO_POCKET_FATAL
+=== Logcat Excerpt (pocket/AndroidRuntime, tail 200) ===
+--------- beginning of main
+11-16 01:11:17.880 21184 21184 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_21184
+11-16 01:11:17.884 21184 21184 I Zygote  : Process 21184 created for com.sutliff.pocket
+11-16 01:11:17.884 21184 21184 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-16 01:11:17.889 21184 21184 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 01:11:17.906 21184 21184 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-16 01:11:18.000 21184 21184 D nativeloader: Configuring clns-9 for other apk /data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/lib/arm64:/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-16 01:11:18.003 21184 21184 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment: Currently set values for:
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-16 01:11:18.007 21184 21184 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 01:11:18.014 21184 21184 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-16 01:11:18.017 21184 21184 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-16 01:11:18.017 21184 21184 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-16 01:11:18.057 21184 21184 D BootReceiver: Boot completed, starting AgentBridgeService
+11-16 01:11:18.059 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.061 21184 21237 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-16 01:11:18.062 21184 21237 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/lib/arm64'
+11-16 01:11:18.062 21184 21237 D vulkan  : searching for layers in '/data/app/~~_0WTX0u6AuOwqx796BmcNA==/com.sutliff.pocket-j2GAxfDGK0KTgJh81__qag==/base.apk!/lib/arm64-v8a'
+11-16 01:11:18.064 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.075 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.097 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.105 21184 21184 D AgentBridgeService: AgentBridgeService created
+11-16 01:11:18.108 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.150 21184 21184 I HWUI    : Using FreeType backend (prop=Auto)
+11-16 01:11:18.169 21184 21184 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-16 01:11:18.179 21184 21184 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-16 01:11:18.179 21184 21184 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-16 01:11:18.181 21184 21267 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-16 01:11:18.218 21184 21184 I Surface : Creating surface for consumer unnamed-21184-0 with slotExpansion=1 for 64 slots
+11-16 01:11:18.218 21184 21184 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-16 01:11:18.259 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.295 21184 21236 D Telemetry: telemetry post failed: Failed to connect to /192.168.1.2:4318
+11-16 01:11:18.339 21184 21184 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-16 01:11:18.350 21184 21184 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-16 01:11:18.354 21184 21184 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-16 01:11:18.384 21184 21184 D InsetsController: show(ime())
+11-16 01:11:18.385 21184 21184 I ImeTracker: com.sutliff.pocket:70a91f56: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-16 01:11:18.385 21184 21184 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-16 01:11:18.403 21184 21184 D InsetsController: show(ime())
+11-16 01:11:18.404 21184 21184 I ImeTracker: com.sutliff.pocket:4f31f6ed: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-16 01:11:18.490 21184 21184 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-16 01:11:18.490 21184 21184 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@3275b3a
+11-16 01:11:18.490 21184 21267 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@3275b3a
+11-16 01:11:18.490 21184 21184 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-16 01:11:18.495 21184 21184 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-16 01:11:18.496 21184 21267 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-16 01:11:18.505 21184 21184 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@3275b3a
+11-16 01:11:18.506 21184 21267 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@3275b3a
+11-16 01:11:18.551 21184 21184 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-16 01:11:18.553 21184 21184 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-16 01:11:18.767 21184 21184 I ImeTracker: com.sutliff.pocket:86b48822: onShown
+11-16 01:11:23.339 21184 21301 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket

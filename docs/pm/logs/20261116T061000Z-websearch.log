@@ -1,0 +1,25 @@
+=== Timestamp (UTC) ===
+20261116T061000Z
+=== Device ===
+serial: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+model: Pixel 6a
+=== Package Version ===
+    versionCode=91 minSdk=26 targetSdk=34
+    versionName=1.0.91-38d9bf4
+=== WebSearchTool / PocketNet ===
+11-16 01:13:41.793 21758 21774 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:13:42.622 21758 21774 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:13:42.622 21758 21774 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-7de9e323-670c-45be-8dd1-70476545e751","object":"chat.completion.chunk","created":1794809620,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:13:42.785 21758 21774 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-16 01:13:42.785 21758 21774 D PocketNet: streamChat: loop done, lines=23 data=11
+11-16 01:13:42.786 21758 21774 D WebSearchTool: start query_len=26 max_results=8
+11-16 01:13:43.706 21758 21774 D WebSearchTool: response code=200 html_len=28272 duration_ms=919
+11-16 01:13:43.710 21758 21774 D WebSearchTool: parsed titles=10 snippets=10
+11-16 01:13:43.713 21758 21774 D WebSearchTool: done result_count=8 duration_ms=919
+11-16 01:13:43.729 21758 21811 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 01:13:44.313 21758 21811 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 01:13:44.314 21758 21811 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-53d64adc-3897-4600-a008-5c44b6449bcc","object":"chat.completion.chunk","created":1794809622,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 01:13:45.752 21758 21811 D PocketNet: streamChat: [DONE] after 87 lines (43 data)
+11-16 01:13:45.752 21758 21811 D PocketNet: streamChat: loop done, lines=87 data=43
+=== mCurrentFocus ===
+  mCurrentFocus=Window{ea8234 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
