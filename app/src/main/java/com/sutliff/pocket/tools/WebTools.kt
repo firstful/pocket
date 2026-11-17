@@ -368,11 +368,21 @@ object WebRenderManager {
             rightMargin = dp(activity, 12)
         }
 
-    private fun fullPipParams(): FrameLayout.LayoutParams =
+    private fun statusBarHeight(activity: Activity): Int {
+        val id = activity.resources.getIdentifier("status_bar_height", "dimen", "android")
+        return if (id > 0) activity.resources.getDimensionPixelSize(id) else dp(activity, 24)
+    }
+
+    private fun fullPipParams(activity: Activity): FrameLayout.LayoutParams =
         FrameLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
-        ).apply { gravity = Gravity.FILL }
+        ).apply {
+            gravity = Gravity.FILL
+            // Keep the fullscreen PiP below the system status bar so the
+            // top-right ✕ Exit button is actually visible and tappable.
+            topMargin = statusBarHeight(activity)
+        }
 
     // Must be called on the UI thread.
     private fun dismissPipOnUi() {
@@ -386,8 +396,9 @@ object WebRenderManager {
     private fun expandPipOnUi() {
         val pip = activePip ?: return
         if (pip.expanded) return
+        val activity = pip.container.context as? Activity ?: return
         pip.expanded = true
-        pip.container.layoutParams = fullPipParams()
+        pip.container.layoutParams = fullPipParams(activity)
         pip.container.bringToFront()
         pip.overlay.visibility = View.GONE
         pip.closeButton.visibility = View.GONE
