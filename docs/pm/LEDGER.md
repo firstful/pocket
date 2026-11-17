@@ -281,3 +281,24 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL end-to-end already proven (2026-11-16 run); no further action unless Reed wants endpoint re-pointed.
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Carried ideas: one-tap "new chat"/session reset to recover from poisoned history; try web_render on a true JS/SPA page.
+
+## Run 2026-11-17T12:33Z (PM cron, vc104 `1.0.104-c1511f6`, CI run 1672 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc104 `1.0.104-c1511f6` installed (dumpsys verified). Device reachable via mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (192.168.1.127:38361). Pre-run script's `192.168.1.147:45357` stale.
+- Launch/no-crash PASS: app launched, focused `com.sutliff.pocket/.MainActivity`, no FATAL.
+- **web_render full-mode fix VERIFIED (root cause: cached WebView reuse caused evaluateJavascript callback to silently never fire on 2nd+ loadUrl).** Two consecutive full renders both succeeded: `WebRenderManager: evaluateJs callback value_len=2242`, `await ok=true error=null html_len=2179`, `done mode=full result_len=2178`. No timeout. Evidence: `docs/pm/logs/20261117T123309Z-webrender-verify.log`. Fix ships in vc104 (fresh WebView per render + try/catch + destroy + container removal).
+- CI/store: run 1672 `c1511f68` completed/success (workflow_dispatch); store tip `1.0.104-c1511f6` vc104 sha `9b65d67e7bf8de5fb70429f1e69a0671093370229c0d36b41adf5201dc3c03b5` size 13504092, matches device. Run 1671 (same SHA) had completed/failure due to appstore scaled to 0 (503 publish); scaled appstore back to 1 replica, re-ran 1672 successfully.
+- Permission/dialogs: no new system permission dialog observed.
+
+### Shipped
+- Code fix: `app/.../tools/WebTools.kt` `WebRenderManager.render` now creates a fresh WebView per call (removed single-instance cache), wraps `evaluateJavascript` in try/catch with diagnostic logging, destroys the WebView and removes the container after render. Commit `c1511f6`. CI run 1672 success. Installed on Pixel 6a (vc104).
+- Infra: scaled `appstore` Deployment in ns `appstore` from 0 → 1 (was scaled down ~9 min before this run, causing 503 on apps.ffilt.us and blocking publish). Root cause of scale-down unknown (possible manual/keeper); monitor.
+
+### Open / Next
+- web_render on a true JS/SPA page still untested (carried idea).
+- ADB input automation fragility remains (coordinates drift); consider test hook.
+- web_render visual PIP-preview confirmation still not agent-verifiable.
+- OTEL E2E already proven (2026-11-16 run).
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Carried ideas: one-tap "new chat"/session reset; SMS opt-in gating.

@@ -1,0 +1,19 @@
+--------- beginning of main
+11-17 07:32:46.135 15475 15493 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-17 07:32:46.877 15475 15493 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-17 07:32:46.878 15475 15493 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-c83378a7-ed89-42a6-a55a-f95fa6ca6196","object":"chat.completion.chunk","created":1794918765,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-17 07:32:47.536 15475 15493 D PocketNet: streamChat: [DONE] after 47 lines (23 data)
+11-17 07:32:47.536 15475 15493 D PocketNet: streamChat: loop done, lines=47 data=23
+11-17 07:32:47.537 15475 15493 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=12000
+11-17 07:32:47.537 15475 15493 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-17 07:32:47.615 15475 15475 D WebRenderManager: onPageFinished url=https://example.com/
+11-17 07:32:49.118 15475 15475 D WebRenderManager: evaluateJs callback value_len=2242
+11-17 07:32:49.118 15475 15493 D WebRenderManager: await ok=true error=null html_len=2179
+11-17 07:32:49.118 15475 15493 D WebRenderManager: done html_len=2179 error=null
+11-17 07:32:49.118 15475 15493 D WebRenderTool: rendered html_len=2179 (activity=true)
+11-17 07:32:49.121 15475 15493 D WebRenderTool: done mode=full result_len=2178
+11-17 07:32:49.132 15475 15493 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-17 07:32:50.345 15475 15493 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-17 07:32:50.345 15475 15493 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-5732dc1c-fc34-4a04-b45b-68849d24e741","object":"chat.completion.chunk","created":1794918768,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-17 07:32:50.620 15475 15493 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-17 07:32:50.620 15475 15493 D PocketNet: streamChat: loop done, lines=25 data=12
