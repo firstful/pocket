@@ -48,6 +48,17 @@ data class SeedConfig(
 private val SEEDED_VERSION_KEY = stringPreferencesKey("applied_seed_version")
 
 /**
+ * Version key for passphrase-imported config. Deliberately SEPARATE from
+ * [SEEDED_VERSION_KEY]: the build-time seed path writes applied_seed_version,
+ * so reusing it would let either path silence the other.
+ */
+val IMPORTED_VERSION_KEY = stringPreferencesKey("applied_import_version")
+
+/** Version of the most recently applied imported config, or null if never. */
+suspend fun appliedImportVersion(context: Context): String? =
+    context.dataStore.data.first()[IMPORTED_VERSION_KEY]
+
+/**
  * Apply `assets/config.seed.json` if present and its seedVersion differs from the
  * version already applied. Safe to call on every launch; no-op when the asset is
  * missing or already applied.
@@ -85,4 +96,52 @@ suspend fun seedConfigIfPresent(context: Context) {
  */
 fun seedConfigBlocking(context: Context) {
     runBlocking { seedConfigIfPresent(context) }
+}
+
+/**
+ * Apply a passphrase-imported [SeedConfig] to DataStore.
+ *
+ * - Validates that at least one config block is present BEFORE writing
+ *   anything. Validation failure throws [IllegalArgumentException] and never
+ *   marks the version as applied.
+ * - Applies each present block via the normal `save*` helpers, which wrap
+ *   secrets through KeystoreWrap before persisting.
+ * - Writes [IMPORTED_VERSION_KEY] LAST, so a partial failure (e.g. Keystore
+ *   unavailable mid-way) leaves the previously applied version intact and
+ *   the import can be retried.
+ * - Skips re-apply when [SeedConfig.seedVersion] equals the already-applied
+ *   import version, unless [force] is true. Force is the escape hatch after a
+ *   device security change invalidated the hardware key: re-import the same
+ *   version to re-wrap its secrets.
+ *
+ * @return true if config was applied, false if skipped (same version).
+ */
+suspend fun applyImportedConfig(
+    context: Context,
+    seed: SeedConfig,
+    force: Boolean = false
+): Boolean {
+    // Validation first — no writes, no version key on failure.
+    val hasAnyBlock = seed.inference != null || seed.remoteAgents != null ||
+        seed.telemetry != null || seed.permissions != null
+    if (!hasAnyBlock) {
+        throw IllegalArgumentException("Imported config contains no config blocks to apply")
+    }
+
+    val version = seed.seedVersion ?: "1"
+    val applied = context.dataStore.data.first()[IMPORTED_VERSION_KEY] ?: ""
+    if (!force && applied == version) {
+        return false // already applied this imported version — no-op
+    }
+
+    seed.inference?.let { saveInferenceConfig(context, it) }
+    seed.remoteAgents?.let { saveRemoteAgents(context, it) }
+    seed.telemetry?.let { saveTelemetryConfig(context, it) }
+    seed.permissions?.let { savePermissionOptIns(context, it) }
+
+    // Mark applied LAST — any exception above leaves the old version intact.
+    context.dataStore.edit { prefs ->
+        prefs[IMPORTED_VERSION_KEY] = version
+    }
+    return true
 }

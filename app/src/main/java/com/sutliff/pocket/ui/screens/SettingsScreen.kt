@@ -26,12 +26,15 @@ import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.data.PermissionOptIns
 import com.sutliff.pocket.data.RemoteAgent
 import com.sutliff.pocket.data.TelemetryConfig
 import com.sutliff.pocket.datastore.BuiltinHermes
+import com.sutliff.pocket.datastore.SeedConfig
+import com.sutliff.pocket.datastore.applyImportedConfig
 import com.sutliff.pocket.datastore.getPermissionOptIns
 import com.sutliff.pocket.datastore.getRemoteAgents
 import com.sutliff.pocket.datastore.getTelemetryConfig
@@ -42,8 +45,15 @@ import com.sutliff.pocket.datastore.saveTelemetryConfig
 import com.sutliff.pocket.permissions.NotificationOptIns
 import com.sutliff.pocket.permissions.SmsPermissions
 import com.sutliff.pocket.telemetry.Telemetry
+import com.sutliff.pocket.network.ConfigImportClient
+import com.sutliff.pocket.network.ConfigImportResult
+import com.sutliff.pocket.network.InsecureConfigUrlException
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
 import com.sutliff.pocket.appContext
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -64,6 +74,17 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
     var optIns by remember { mutableStateOf(PermissionOptIns()) }
     var notifNotice by remember { mutableStateOf<String?>(null) }
     var notifListenerGranted by remember(context) { mutableStateOf(NotificationOptIns.isListenerEnabled(context)) }
+
+    // Config import (passphrase flow). The passphrase lives ONLY here in
+    // in-memory Compose state — never in SavedStateHandle, logcat, crash
+    // reports, or telemetry. It is cleared immediately after every attempt.
+    var importUrl by remember {
+        mutableStateOf("https://pocket-cfg.homelab.internal/config")
+    }
+    var importPassphrase by remember { mutableStateOf("") }
+    var importShowPassphrase by remember { mutableStateOf(false) }
+    var importNotice by remember { mutableStateOf<String?>(null) }
+    var importBusy by remember { mutableStateOf(false) }
 
     val locationPermissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -99,6 +120,59 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
     fun saveOptIns(newOptIns: PermissionOptIns) {
         optIns = newOptIns
         scope.launch { savePermissionOptIns(context, newOptIns) }
+    }
+
+    /** Fetch + apply the passphrase-protected config. Called from the button. */
+    fun runConfigImport() {
+        if (importBusy) return
+        val url = importUrl
+        val phrase = importPassphrase
+        importBusy = true
+        importNotice = null
+        scope.launch {
+            // Keep the passphrase out of Compose state/logs/telemetry — it is
+            // captured in a local val, used only for the POST body, and the
+            // state field is wiped in finally (success, failure, or cancel).
+            try {
+                val notice = withContext(Dispatchers.IO) {
+                    try {
+                        when (val result = ConfigImportClient.fetchConfig(url, phrase)) {
+                            is ConfigImportResult.Success -> {
+                                try {
+                                    val seed = Json { ignoreUnknownKeys = true }
+                                        .decodeFromString<SeedConfig>(result.configJson)
+                                    val applied = applyImportedConfig(context, seed)
+                                    if (applied) {
+                                        "Config imported successfully."
+                                    } else {
+                                        "Config already up to date (same version)."
+                                    }
+                                } catch (e: Exception) {
+                                    "Import failed: invalid config payload (${e.message ?: "unknown"})."
+                                }
+                            }
+                            ConfigImportResult.WrongPassphrase -> "Incorrect passphrase."
+                            ConfigImportResult.RateLimited -> "Too many attempts — please wait and try again."
+                            is ConfigImportResult.NetworkError ->
+                                "Network error: ${result.error.message ?: "unknown"}"
+                            ConfigImportResult.InvalidResponse ->
+                                "The endpoint returned an invalid response."
+                        }
+                    } catch (e: InsecureConfigUrlException) {
+                        "Import blocked: ${e.message}"
+                    } catch (e: Exception) {
+                        "Import failed: ${e.message ?: "unknown error"}"
+                    }
+                }
+                // Back on Main: publish result.
+                importNotice = notice
+            } finally {
+                // Wipe the passphrase immediately, whatever the outcome.
+                // Never persist it or log it.
+                importPassphrase = ""
+                importBusy = false
+            }
+        }
     }
 
     Scaffold(
@@ -458,6 +532,57 @@ fun SettingsScreen(onNavigateBack: () -> Unit) {
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // ── Config import (passphrase endpoint) ──
+            Text("Config import", style = MaterialTheme.typography.titleMedium)
+            Text(
+                text = "Fetch configuration from an HTTPS endpoint with a passphrase. " +
+                    "The passphrase is sent only in the request body and is cleared immediately after the attempt.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            OutlinedTextField(
+                value = importUrl,
+                onValueChange = { importUrl = it },
+                label = { Text("Config URL (HTTPS only)") },
+                placeholder = { Text("https://pocket-cfg.homelab.internal/config") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true
+            )
+            OutlinedTextField(
+                value = importPassphrase,
+                onValueChange = { importPassphrase = it },
+                label = { Text("Passphrase") },
+                visualTransformation = if (importShowPassphrase) {
+                    VisualTransformation.None
+                } else {
+                    PasswordVisualTransformation()
+                },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                trailingIcon = {
+                    IconButton(onClick = { importShowPassphrase = !importShowPassphrase }) {
+                        Icon(
+                            if (importShowPassphrase) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                            contentDescription = if (importShowPassphrase) "Hide" else "Show"
+                        )
+                    }
+                }
+            )
+            Button(
+                onClick = { runConfigImport() },
+                enabled = !importBusy && importPassphrase.isNotEmpty(),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(if (importBusy) "Importing…" else "Import config")
+            }
+            importNotice?.let { notice ->
+                Text(notice, style = MaterialTheme.typography.bodySmall)
+            }
 
             Spacer(modifier = Modifier.height(16.dp))
 

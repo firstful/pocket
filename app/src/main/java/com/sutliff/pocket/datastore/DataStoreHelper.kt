@@ -15,6 +15,7 @@ import com.sutliff.pocket.data.InferenceConfig
 import com.sutliff.pocket.data.TelemetryConfig
 import com.sutliff.pocket.data.PermissionOptIns
 import com.sutliff.pocket.data.RemoteAgent
+import com.sutliff.pocket.crypto.KeystoreWrap
 
 val Context.dataStore by preferencesDataStore(name = "agent_config")
 
@@ -24,8 +25,12 @@ private val TELEMETRY_CONFIG_KEY = stringPreferencesKey("telemetry_config")
 private val PERMISSION_OPT_INS_KEY = stringPreferencesKey("permission_opt_ins")
 
 suspend fun saveInferenceConfig(context: Context, config: InferenceConfig) {
+    // Wrap the secret before it is serialized to DataStore. KeystoreWrap is
+    // idempotent (already-wrapped values pass through) so a save of a value
+    // that came from a read can never double-wrap it.
+    val toPersist = config.copy(apiKey = KeystoreWrap.wrap(config.apiKey))
     val json = Json { ignoreUnknownKeys = true }
-    val jsonString = json.encodeToString(InferenceConfig.serializer(), config)
+    val jsonString = json.encodeToString(InferenceConfig.serializer(), toPersist)
     context.dataStore.edit { prefs ->
         prefs[INFERENCE_CONFIG_KEY] = jsonString
     }
@@ -38,7 +43,10 @@ suspend fun getInferenceConfig(context: Context): Flow<InferenceConfig> {
             InferenceConfig()
         } else {
             val json = Json { ignoreUnknownKeys = true }
-            json.decodeFromString(InferenceConfig.serializer(), jsonString)
+            val decoded = json.decodeFromString(InferenceConfig.serializer(), jsonString)
+            // Unwrap before any consumer uses the key for auth. Legacy
+            // plaintext (no enc:v1: prefix) is returned unchanged.
+            decoded.copy(apiKey = KeystoreWrap.unwrap(decoded.apiKey))
         }
     }
 }
@@ -76,8 +84,10 @@ suspend fun getRemoteAgents(context: Context): List<RemoteAgent> {
     val jsonString = context.dataStore.data.first()[REMOTE_AGENTS_KEY]
         ?: return emptyList()
     return try {
-        Json { ignoreUnknownKeys = true }
+        val decoded = Json { ignoreUnknownKeys = true }
             .decodeFromString<List<RemoteAgent>>(jsonString)
+        // Unwrap each stored secret; legacy plaintext passes through unchanged.
+        decoded.map { it.copy(apiKey = KeystoreWrap.unwrap(it.apiKey)) }
     } catch (e: Exception) {
         emptyList()
     }
@@ -101,8 +111,11 @@ suspend fun resolveRemoteAgent(context: Context, alias: String): RemoteAgent? {
 }
 
 suspend fun saveRemoteAgents(context: Context, agents: List<RemoteAgent>) {
+    // Wrap each agent secret before serialization. Idempotent for values that
+    // are already wrapped (e.g. an agent read from a prior getRemoteAgents).
+    val toPersist = agents.map { it.copy(apiKey = KeystoreWrap.wrap(it.apiKey)) }
     val jsonString = Json { ignoreUnknownKeys = true; encodeDefaults = true }
-        .encodeToString(agents)
+        .encodeToString(toPersist)
     context.dataStore.edit { prefs ->
         prefs[REMOTE_AGENTS_KEY] = jsonString
     }
