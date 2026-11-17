@@ -1,0 +1,195 @@
+--------- beginning of main
+11-16 19:09:31.489  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input keyevent KEYCODE_ENTER'
+11-16 19:09:31.590  2882  2882 I UndoStack: UndoStack.offer$mayClearStack():363 InputContext OTHER_TEXT_CHANGE with content updates to clear undo
+11-16 19:09:31.799  2882  2882 I LatinIme: LatinIme.resetInputContext():2700 resetInputContext(): reason=5, externalEditsInfo=ExternalEditsInfo{action=0, offset=-1, textLength=0, originalTextLength=0, hasEdits=false}
+11-16 19:09:31.960  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-16 19:09:31.960  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-16 19:09:31.960  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-16 19:09:31.960  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-16 19:09:32.560  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:32.640  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:32.640  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:32.640  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:34.112 20458 17498 I CastService: [instance-238] [com.google.android.apps.chromecast.app] onConnectionSuspended: status = Cast socket status code 2271
+11-16 19:09:34.113 20458 17498 I CDC     : [API-CSC-0487-CDC-0498-com.google.android.apps.chromecast.app] Creating a new CastDeviceController from com.google.android.apps.chromecast.app for "17r" (ca642807-a6ed-4e0f-a0aa-72d666eaa1cc) [static group]
+11-16 19:09:34.157 20458 17498 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onConnectionSuspended: status = Cast socket status code 2271
+11-16 19:09:34.158 20458 17498 I CDC     : [API-CSC-0474-CDC-0499-com.google.android.apps.chromecast.app] Creating a new CastDeviceController from com.google.android.apps.chromecast.app for "K13r" (2ecd15ec-8993-4e32-9e56-65450e496772) 
+11-16 19:09:34.259  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=107 dst=[192.168.1.135]:32195 latencyMs=98 err=0
+11-16 19:09:34.277 20458 17498 I CastService: [instance-241] [com.google.android.gms] onConnectionSuspended: status = Cast socket status code 2271
+11-16 19:09:34.278 20458 20458 E RCNRemoteClientAdaptor: CastClient connection suspended. Device = "K13r" (ee27fcc8ccb652280289f8a27580a993) 
+11-16 19:09:34.279 20458 17498 I CDC     : [API-CSC-0494-CDC-0500-com.google.android.gms] Creating a new CastDeviceController from com.google.android.gms for "K13r" (ee27fcc8ccb652280289f8a27580a993) 
+11-16 19:09:34.291 20458 17498 I CastService: [instance-241] [com.google.android.gms] Disconnecting
+11-16 19:09:34.292 20458 17498 I CastService: [instance-241] [com.google.android.gms] Disposing ConnectedClient; controller = CSC|[API-CSC-0494-CDC-0500-com.google.android.gms] .
+--------- beginning of system
+11-16 19:09:34.294  1701  2994 I MediaSessionStack: removeSession | record: com.google.android.gms/cast_rcn_media_session/956 (userId=0)
+11-16 19:09:34.296  1701  2994 D MediaSessionService: destroySessionLocked: record=com.google.android.gms/cast_rcn_media_session/956 (userId=0)
+11-16 19:09:34.297  1701  2148 D MediaSessionService: setFgsIfNoSessionIsLinkedToNotification: record=com.google.android.gms/cast_rcn_media_session/956 (userId=0)
+11-16 19:09:34.300  1701  2994 W MediaSessionRecord: Ignoring call to destroyed session
+11-16 19:09:34.300  2199  2239 D MediaDataProcessor: session destroyed for 0|com.google.android.gms|1577075868|CastRCN|10164
+11-16 19:09:34.301  2199  2239 D MediaDataProcessor: Removing still-active player 0|com.google.android.gms|1577075868|CastRCN|10164
+11-16 19:09:34.303  1701  2994 W MediaSessionRecord: Ignoring call to destroyed session
+11-16 19:09:34.304  2199  2199 D NotificationMediaManager: Not dismissing 0|com.google.android.gms|1577075868|CastRCN|10164 because it was removed by the system
+11-16 19:09:34.333  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=107 dst=[192.168.1.135]:8009 latencyMs=64 err=0
+11-16 19:09:34.344  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=107 dst=[192.168.1.135]:8009 latencyMs=28 err=0
+11-16 19:09:34.904 20458 17982 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-16 19:09:34.905 20458 17982 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-16 19:09:34.909 20458 18012 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x31 0x59 0x31 0x11 0x32 0xa1 0xc0 0x41 0xa5 0xef 0xb1 0x8f 0xb8 0x6e 0xfc 0x28 0x38 0x07 0x3d 0x28 0x75 ], deviceToken=[ 0x34 0x78 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@2a9834b size=2 contents="4x">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-16 19:09:34.909 20458 18012 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x31 0x59 0x31 0x11 0x32 0xa1 0xc0 0x41 0xa5 0xef 0xb1 0x8f 0xb8 0x6e 0xfc 0x28 0x38 0x07 0x3d 0x28 0x75 ], deviceToken=[ 0x34 0x78 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@2a9834b size=2 contents="4x">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 81Y1 and EndpointInfo [ 0x32 0xa1 0xc0 0x41 0xa5 0xef 0xb1 0x8f 0xb8 0x6e 0xfc 0x28 0x38 0x07 0x3d 0x28 0x75 ]).
+11-16 19:09:34.909  1876  1876 I pixel-thermal: VIRTUAL-SKIN:26.1378 raw data: VIRTUAL-NEUTRAL:26137.8 VIRTUAL-NEUTRAL-SKIN2:25846.1 VIRTUAL-QUIET-NEUTRAL:25080.3 VIRTUAL-SKIN:26137.8 disp_therm:24855 gnss_tcxo_therm:26823 neutral_therm:25277 quiet_therm:24996 skin_therm1:26823 skin_therm2:27174 
+11-16 19:09:34.909 20458 18012 I NearbyConnections: ClientProxy(43825327) reporting onEndpointLost(81Y1)
+11-16 19:09:34.911  2362  2675 D ImpulseStateSource: Notify clients: 80985
+11-16 19:09:34.912 20458 18013 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=81Y1)
+11-16 19:09:34.912 20458 17982 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Lost(endpointId=81Y1)
+11-16 19:09:35.416 20458 18014 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportLost(id=38).
+11-16 19:09:35.416 20458 18014 I NearbySharing: NearbySharing Internal event ReceiverLost(receiverId=38)
+11-16 19:09:35.418 20458 18015 I NearbySharing: SendProvider: SendManager event Lost(receiverId=38)
+11-16 19:09:35.418 20458 18013 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetLost()
+11-16 19:09:35.421 20458 20458 I NearbySharing: ShortcutInfoManager removed shortcut Reed's Pixel 8a
+11-16 19:09:35.422  1701  1799 W NotificationHistory: Attempted to remove conversation for locked/gone/disabled user 0
+11-16 19:09:35.644  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:35.725 20458 17498 I DeviceAuthChannel: [API-CSC-0487-CDC-0498-com.google.android.apps.chromecast.app] Reuse old nonce: [55, -58, -25, 109, -5, 95, -64, -99, 75, 112, 11, 64, -116, 87, -93, -67]
+11-16 19:09:35.727 20458 17498 I DeviceAuthChannel: [API-CSC-0474-CDC-0499-com.google.android.apps.chromecast.app] Reuse old nonce: [55, -58, -25, 109, -5, 95, -64, -99, 75, 112, 11, 64, -116, 87, -93, -67]
+11-16 19:09:35.751  1054  1149 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 106 ms
+11-16 19:09:35.777  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:35.777  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:35.777  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:36.376 20458 20458 I CastService: [instance-238] [com.google.android.apps.chromecast.app] Connected to device. rejoinedApp: true
+11-16 19:09:36.387 20458 17991 I CastService: [instance-241] [com.google.android.gms] onDisconnected: status = SUCCESS
+11-16 19:09:36.387 20458 17991 I CastService: [instance-241] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:36.473 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:36.481  1701  2812 I MediaSessionStack: addSession to bottom of stack | record: com.google.android.gms/cast_rcn_media_session/958 (userId=0)
+11-16 19:09:36.481 20458 20479 I CastService: [instance-243] [com.google.android.gms] follow session disabled, with outputSwitcher: disabled
+11-16 19:09:36.486  1701  3258 W PendingIntentHolder: Unresolvable implicit intent is set, pi=PendingIntent{5938f11: PendingIntentRecord{eb9dd7f com.google.android.gms/com.google.android.gms.cast broadcastIntent}}
+11-16 19:09:36.487  1701  3258 D MediaSessionService: onSessionPlaybackStateChanged: record=com.google.android.gms/cast_rcn_media_session/958 (userId=0) playbackState=PlaybackState {state=NONE(0), position=0, buffered position=0, speed=1.0, updated=810647019, actions=0, custom actions=[], active item id=-1, error=null}
+11-16 19:09:36.487  1701  2148 D MediaSessionService: setFgsIfSessionIsLinkedToNotification: record=com.google.android.gms/cast_rcn_media_session/958 (userId=0)
+11-16 19:09:36.481 20458 20479 I CastService: [instance-243] [com.google.android.gms] acquireDeviceController: Google Play services client: 264231000 and APK: 264231000
+11-16 19:09:36.495  1701  3258 D MediaSessionService: onSessionPlaybackTypeChanged: record=com.google.android.gms/cast_rcn_media_session/958 (userId=0) playbackType=REMOTE(volumeControlId=null)
+11-16 19:09:36.505 20458 20458 W ChimeraUtils: Module com.google.android.gms.cast missing resource cast_module_display_name(0)
+11-16 19:09:36.509 20458 17990 I CastService: [instance-243] [com.google.android.gms] Connecting to device ("K13r" (ee27fcc8ccb652280289f8a27580a993) )
+11-16 19:09:36.510 20458 17990 I CDC     : [API-CSC-0501-CDC-0502-com.google.android.gms] Creating a new CastDeviceController from com.google.android.gms for "K13r" (ee27fcc8ccb652280289f8a27580a993) 
+11-16 19:09:36.536  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=107 dst=[192.168.1.135]:8009 latencyMs=11 err=0
+11-16 19:09:36.624 20458 17991 I DeviceAuthChannel: [API-CSC-0501-CDC-0502-com.google.android.gms] Reuse old nonce: [55, -58, -25, 109, -5, 95, -64, -99, 75, 112, 11, 64, -116, 87, -93, -67]
+11-16 19:09:36.672 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:37.218 20458 17990 I DeviceScanner: [MDNS] Received response from "K13r" (ee27fcc8ccb652280289f8a27580a993)  with result "2 Updated device"
+11-16 19:09:37.222 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:37.363 20458 20458 I CastService: [instance-243] [com.google.android.gms] Connected to device. rejoinedApp: true
+11-16 19:09:37.391  1701  2994 I MediaSessionStack: removeSession | record: com.google.android.gms/cast_rcn_media_session/958 (userId=0)
+11-16 19:09:37.392  1701  2994 D MediaSessionService: destroySessionLocked: record=com.google.android.gms/cast_rcn_media_session/958 (userId=0)
+11-16 19:09:37.392  1701  2148 D MediaSessionService: setFgsIfNoSessionIsLinkedToNotification: record=com.google.android.gms/cast_rcn_media_session/958 (userId=0)
+11-16 19:09:37.393 20458 17498 I CastService: [instance-243] [com.google.android.gms] Disconnecting
+11-16 19:09:37.393 20458 17498 I CastService: [instance-243] [com.google.android.gms] Disposing ConnectedClient; controller = CSC|[API-CSC-0501-CDC-0502-com.google.android.gms] .
+11-16 19:09:37.418 20458 17990 I CastService: [instance-243] [com.google.android.gms] onDisconnected: status = SUCCESS
+11-16 19:09:37.418 20458 17990 I CastService: [instance-243] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:37.549 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:37.559  1701  2994 I MediaSessionStack: addSession to bottom of stack | record: com.google.android.gms/cast_rcn_media_session/959 (userId=0)
+11-16 19:09:37.563  1701  3258 W PendingIntentHolder: Unresolvable implicit intent is set, pi=PendingIntent{4431ae3: PendingIntentRecord{eb9dd7f com.google.android.gms/com.google.android.gms.cast broadcastIntent}}
+11-16 19:09:37.564  1701  3258 D MediaSessionService: onSessionPlaybackStateChanged: record=com.google.android.gms/cast_rcn_media_session/959 (userId=0) playbackState=PlaybackState {state=NONE(0), position=0, buffered position=0, speed=1.0, updated=810648097, actions=0, custom actions=[], active item id=-1, error=null}
+11-16 19:09:37.565  1701  2148 D MediaSessionService: setFgsIfSessionIsLinkedToNotification: record=com.google.android.gms/cast_rcn_media_session/959 (userId=0)
+11-16 19:09:37.566  1701  2994 D MediaSessionService: onSessionPlaybackTypeChanged: record=com.google.android.gms/cast_rcn_media_session/959 (userId=0) playbackType=REMOTE(volumeControlId=null)
+11-16 19:09:37.571 20458 20479 I CastService: [instance-244] [com.google.android.gms] follow session disabled, with outputSwitcher: disabled
+11-16 19:09:37.572 20458 20479 I CastService: [instance-244] [com.google.android.gms] acquireDeviceController: Google Play services client: 264231000 and APK: 264231000
+11-16 19:09:37.576 20458 20458 W ChimeraUtils: Module com.google.android.gms.cast missing resource cast_module_display_name(0)
+11-16 19:09:37.579 20458 17606 I CastService: [instance-244] [com.google.android.gms] Connecting to device ("K13r" (ee27fcc8ccb652280289f8a27580a993) )
+11-16 19:09:37.580 20458 17606 I CDC     : [API-CSC-0503-CDC-0504-com.google.android.gms] Creating a new CastDeviceController from com.google.android.gms for "K13r" (ee27fcc8ccb652280289f8a27580a993) 
+11-16 19:09:37.647  2951  2951 I pixelstats: MmMetrics: kernel: old PSI sysfs node.
+11-16 19:09:37.649 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:37.670  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=107 dst=[192.168.1.135]:8009 latencyMs=70 err=0
+11-16 19:09:37.721 20458 17606 I DeviceAuthChannel: [API-CSC-0503-CDC-0504-com.google.android.gms] Reuse old nonce: [55, -58, -25, 109, -5, 95, -64, -99, 75, 112, 11, 64, -116, 87, -93, -67]
+11-16 19:09:37.734 20458 17083 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onApplicationDisconnected: null Cast controller status code 2055
+11-16 19:09:37.748 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:37.848 20458 20458 I CastMediaRouteProvider: Published 5 routes
+11-16 19:09:38.016 20458 20458 I CastService: [instance-244] [com.google.android.gms] Connected to device. rejoinedApp: true
+11-16 19:09:38.052  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:38.067 20458 17990 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onApplicationDisconnected: null Cast controller status code 2055
+11-16 19:09:38.077 20458 17606 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onApplicationDisconnected: null Cast controller status code 2055
+11-16 19:09:38.250  1701  2996 I MediaSessionStack: removeSession | record: com.google.android.gms/cast_rcn_media_session/959 (userId=0)
+11-16 19:09:38.251 20458 18011 I CastService: [instance-244] [com.google.android.gms] Disconnecting
+11-16 19:09:38.251  1701  2996 D MediaSessionService: destroySessionLocked: record=com.google.android.gms/cast_rcn_media_session/959 (userId=0)
+11-16 19:09:38.251 20458 18011 I CastService: [instance-244] [com.google.android.gms] Disposing ConnectedClient; controller = CSC|[API-CSC-0503-CDC-0504-com.google.android.gms] .
+11-16 19:09:38.253  1701  2148 D MediaSessionService: setFgsIfNoSessionIsLinkedToNotification: record=com.google.android.gms/cast_rcn_media_session/959 (userId=0)
+11-16 19:09:38.257 20458 17990 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onApplicationDisconnected: null Cast controller status code 2055
+11-16 19:09:38.266 20458 17606 I CastService: [instance-232] [com.google.android.apps.chromecast.app] onApplicationDisconnected: null Cast controller status code 2055
+11-16 19:09:38.275 20458 17990 I CastService: [instance-244] [com.google.android.gms] onDisconnected: status = SUCCESS
+11-16 19:09:38.276 20458 17990 I CastService: [instance-244] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:38.780  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:38.873  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:38.875  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:38.875  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:39.211 20458 17606 I ChimeraPrvdrProxy: Shutting down chimera ContentProvider com.google.android.gms.reminders.provider.RemindersChimeraProvider
+11-16 19:09:39.908  2362  2675 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-16 19:09:39.908  2362  2675 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-16 19:09:40.633 15857 15885 W .sutliff.pocket: Cleared Reference was only reachable from finalizer (only reported once)
+11-16 19:09:41.882  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:42.011  1054  1149 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 129 ms
+11-16 19:09:42.048  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:42.049  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:42.049  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:43.305 32265 32295 I emsz    : (REDACTED) Updating recent voice session heartbeat time to %s.
+11-16 19:09:44.308 20458 17083 I CastService: [instance-241] [com.google.android.gms] Disconnecting
+11-16 19:09:44.308 20458 17083 I CastService: [instance-241] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:44.657  1701  3260 D ActivityManager: sync unfroze 15951 com.google.android.videos for 6
+11-16 19:09:44.911 20458 18015 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-16 19:09:44.911 20458 18015 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-16 19:09:44.915  1876  1876 I pixel-thermal: VIRTUAL-SKIN:26.1327 raw data: VIRTUAL-NEUTRAL:26132.6 VIRTUAL-NEUTRAL-SKIN2:25822.1 VIRTUAL-QUIET-NEUTRAL:25073.1 VIRTUAL-SKIN:26132.6 disp_therm:24832 gnss_tcxo_therm:26846 neutral_therm:25253 quiet_therm:24996 skin_therm1:26846 skin_therm2:27150 
+11-16 19:09:44.917  2362  2554 D ImpulseStateSource: Notify clients: 80986
+11-16 19:09:45.054  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:45.158  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:45.159  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:45.159  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:46.785  1876  1881 I pixel-thermal: VIRTUAL-USB-UI:0 raw data: USB2-MINUS-CHG:-2646 VIRTUAL-USB-UI:0 charger_skin_therm:27408 usb_pwr_therm2:24762 
+11-16 19:09:46.786  1876  1881 I pixel-thermal: VIRTUAL-USB-THROTTLING:0 raw data: USB2-MINUS-CHG:-2646 VIRTUAL-USB-THROTTLING:0 usb_pwr_therm2:24762 
+11-16 19:09:46.787  1876  1881 I pixel-thermal: Power rails total power: 378.30 mW for 60048 ms
+11-16 19:09:46.787  1876  1881 I pixel-thermal: Power rails [L8S_UFS_VCCQ: 12.11 mW] [S2S_VDD_G3D: 2.62 mW] [S10S_VDD2L: 12.69 mW] [S5S_VDDQ_MEM: 7.86 mW] [S4S_VDD2H_MEM: 23.47 mW] [S9S_VDD_AOC: 17.05 mW] 
+11-16 19:09:46.787  1876  1881 I pixel-thermal: Power rails [S10M_VDD_TPU: 10.55 mW] [L2S_VDD_AOC_RET: 6.53 mW] [L9S_GNSS_CORE: 3.43 mW] [S1M_VDD_MIF: 38.82 mW] [S5M_VDD_INT: 25.99 mW] [S4M_VDD_CPUCL0: 61.14 mW] 
+11-16 19:09:46.787  1876  1881 I pixel-thermal: Power rails [S2M_VDD_CPUCL2: 41.85 mW] [S3M_VDD_CPUCL1: 30.60 mW] [L15M_VDD_SLC_M: 15.01 mW] [VSYS_PWR_DISPLAY: 68.57 mW] 
+11-16 19:09:46.788  1876  1881 I pixel-thermal: CDEV log usbc-port state:0 fcc state:0 thermal-cpufreq-1 state:0 tpu_cooling state:0 thermal-gpufreq-0 state:0 thermal-cpufreq-2 state:0 thermal-cpufreq-0 state:0 
+11-16 19:09:47.408 20458 17083 I CastService: [instance-243] [com.google.android.gms] Disconnecting
+11-16 19:09:47.409 20458 17083 I CastService: [instance-243] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:48.166  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:48.258  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:48.258  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:48.258 20458 18011 I CastService: [instance-244] [com.google.android.gms] Disconnecting
+11-16 19:09:48.259 20458 18011 I CastService: [instance-244] [com.google.android.gms] Disposing ConnectedClient; controller = CSC.
+11-16 19:09:48.258  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:49.308  1032  1032 E android.hardware.power.stats-service.pixel: Failed to read uid_time_in_state for attribution, return default EnergyConsumer
+11-16 19:09:49.467  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1794873888913
+11-16 19:09:49.720  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 19:09:49.723  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 19:09:49.723  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10194} in 8ms
+11-16 19:09:49.724  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 19:09:49.727  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 19:09:49.727  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={20194} in 4ms
+11-16 19:09:49.951  1701  2012 D ActivityManager: freezing 30916 com.google.android.apps.turbo
+11-16 19:09:49.959  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 19:09:49.965  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 19:09:49.965  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10131} in 9ms
+11-16 19:09:50.003  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1794873888913
+11-16 19:09:51.263  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:51.366  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:51.367  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:51.367  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:54.375  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:54.490  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:54.492  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:54.492  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:09:54.915 20458 18015 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-16 19:09:54.915 20458 18015 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-16 19:09:54.925  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.9865 raw data: VIRTUAL-NEUTRAL:25986.5 VIRTUAL-NEUTRAL-SKIN2:25735.8 VIRTUAL-QUIET-NEUTRAL:25066.2 VIRTUAL-SKIN:25986.5 disp_therm:24832 gnss_tcxo_therm:26612 neutral_therm:25230 quiet_therm:24996 skin_therm1:26565 skin_therm2:26916 
+11-16 19:09:54.930  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.9865 raw data: VIRTUAL-SKIN:25986.5 
+11-16 19:09:54.931  2362  2491 I TemperatureStateSource: temperature was set
+11-16 19:09:54.931  2362  2491 D ImpulseStateSource: Notify clients: 80987
+11-16 19:09:54.932  2362  2675 D ImpulseConnection: bindService: com.google.android.apps.turbo
+11-16 19:09:54.957  1701  3252 D ActivityManager: sync unfroze 30916 com.google.android.apps.turbo for 6
+11-16 19:09:54.970  2362  2362 D ImpulseConnection: onServiceConnected: ComponentInfo{com.google.android.apps.turbo/com.google.android.apps.turbo.adaptiveplatform.impulse.ImpulseClientService} service is null false
+11-16 19:09:54.971  1701  3252 W ProcessStats: Tracking association SourceState{1d4816e com.google.android.pixelsystemservice/10284 ImpFg #597658} whose proc state 5 is better than process ProcessState{323edb2 com.google.android.apps.turbo/10131 pkg=com.google.android.apps.turbo} proc state 14 (9 skipped)
+11-16 19:09:57.495  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:09:57.578  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:09:57.579  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:09:57.579  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:10:00.067  2199  2199 D StatusBarBounds: Bounds changed! Triggered by layout of: startSideContent. Start side: REDUCED (width diff: -6px, height diff: 0px. Old: Rect(47, 1 - 437, 132) -> New: Rect(47, 1 - 431, 132)). End side: No change (remains Rect(774, 1 - 1016, 132))
+11-16 19:10:00.587  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:10:00.700  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-16 19:10:00.701  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-16 19:10:00.701  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-16 19:10:03.708  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-16 19:10:03.726  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

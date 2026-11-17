@@ -1,0 +1,13 @@
+=== Pocket QA Identity Verification ===
+UTC timestamp: 2026-11-17T00:04:34Z
+ADB serial used: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+=== Device props ===
+ro.product.model: Pixel 6a
+ro.serialno: 27271JEGR25574
+=== Installed package version (com.sutliff.pocket) ===
+    versionCode=98 minSdk=26 targetSdk=34
+    versionName=1.0.98-bdb0296
+=== adb devices -l ===
+List of devices attached
+adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp device product:bluejay model:Pixel_6a device:bluejay transport_id:1
+

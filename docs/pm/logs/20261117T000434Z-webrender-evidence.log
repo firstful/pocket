@@ -1,0 +1,49 @@
+11-16 19:11:07.024 15857 15896 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 19:11:07.696 15857 15896 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 19:11:07.697 15857 15896 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-41805b2c-de97-4e64-8bab-3e02c887e9f1","object":"chat.completion.chunk","created":1794874266,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 19:11:07.721 15857 15896 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-16 19:11:07.721 15857 15896 D PocketNet: streamChat: loop done, lines=19 data=9
+11-16 19:11:07.737 15857 15896 D WebRenderTool: start url=https://example.com mode=outline max_chars=4000 timeout_ms=12000
+11-16 19:11:07.738 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-16 19:11:07.761 15857 15857 I WebViewFactory: Loading com.google.android.webview version 157.0.8103.38 (code 810303803)
+11-16 19:11:07.762 15857 15857 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=71c0e84c mResDir=null mSplitDirs=[] mOverlayDirs=[] mLibDirs=[/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk,/system/framework/android.test.base.jar,/system_ext/framework/androidx.window.extensions.jar] mDisplayId=0 mOverrideConfig=v37 mCompatInfo={420dpi always-compat} mLoaders=[]}
+11-16 19:11:07.768 15857 15857 D nativeloader: Configuring clns-10 for other apk /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/lib/arm64:/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+11-16 19:11:07.796 15857 15857 D nativeloader: Load /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-16 19:11:07.797 15857 15857 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-10 (caller=/data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk): ok
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->isContentSafetyEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/webkit/WebViewDelegate;->isNativeWebViewZygoteEnabled()Z (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;-><init>(Landroid/content/LocusId;Ljava/lang/String;)V (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setUri(Landroid/net/Uri;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->setData(Landroid/os/ParcelFileDescriptor;)Landroid/app/contentsafety/ClassifiableContent$Builder; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.800 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ClassifiableContent$Builder;->build()Landroid/app/contentsafety/ClassifiableContent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.801 15857 15857 E .sutliff.pocket: hiddenapi: Accessing hidden method Landroid/app/contentsafety/ContentSafetyManager;->createContentRestrictedIntent(Landroid/content/LocusId;)Landroid/content/Intent; (runtime_flags=0, domain=platform, api=blocked) from /data/app/~~4nLebMoPhIDi26Mws8Ubfg==/com.google.android.webview-zbj_5L4NuvbCqFH8We7r1g==/base.apk (domain=app, TargetSdkVersion=34) using linking: denied
+11-16 19:11:07.845  1701  1801 I ActivityManager: Start proc 18634:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i112 for bound-service {com.sutliff.pocket/org.chromium.content.app.SandboxedProcessService0:0}
+11-16 19:11:07.850 18634 18634 I Zygote  : Process 18634 created for com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+11-16 19:11:07.876 18634 18634 I cr_WebViewApkApp: version= (810303803) minSdkVersion=29 processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 splits=<none>
+11-16 19:11:08.306 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 19:11:09.813 15857 15896 D WebRenderManager: await ok=true error=null html_len=2179
+11-16 19:11:09.814 15857 15896 D WebRenderManager: done html_len=2179 error=null
+11-16 19:11:09.814 15857 15896 D WebRenderTool: rendered html_len=2179 (activity=true)
+11-16 19:11:09.815 15857 15896 D WebRenderTool: done mode=outline result_len=2178
+11-16 19:11:09.821 15857 15896 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 19:11:10.334  1701  3252 D ActivityManager: sync unfroze 6351 com.google.android.webview:webview_service for 6
+11-16 19:11:10.345  1701  3252 W ProcessStats: Tracking association SourceState{b55bdba com.sutliff.pocket/10494 BTop #597702} whose proc state 2 is better than process ProcessState{aaa05fc com.google.android.webview:webview_service/10167 pkg=com.google.android.webview} proc state 14 (0 skipped)
+11-16 19:11:10.559 15857 15896 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 19:11:10.559 15857 15896 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-03548fb4-2074-4231-9916-9710ddb6474c","object":"chat.completion.chunk","created":1794874269,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 19:11:10.716 15857 15896 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-16 19:11:10.716 15857 15896 D PocketNet: streamChat: loop done, lines=23 data=11
+11-16 19:11:10.718 15857 15896 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=12000
+11-16 19:11:10.718 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-16 19:11:10.790 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 19:11:20.363  1701  2012 D ActivityManager: freezing 6351 com.google.android.webview:webview_service
+11-16 19:11:22.719 15857 15896 D WebRenderManager: await ok=false error=Timed out waiting for page render (12000ms) html_len=0
+11-16 19:11:22.719 15857 15896 D WebRenderManager: done html_len=0 error=Timed out waiting for page render (12000ms)
+11-16 19:11:22.719 15857 15896 D WebRenderTool: rendered html_len=50 (activity=true)
+11-16 19:11:22.732 15857 15896 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 19:11:23.420 15857 15896 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 19:11:23.421 15857 15896 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-b107456a-087a-4df8-a2f3-dce8361c6d6a","object":"chat.completion.chunk","created":1794874282,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-16 19:11:24.152 15857 15896 D PocketNet: streamChat: [DONE] after 43 lines (21 data)
+11-16 19:11:24.152 15857 15896 D PocketNet: streamChat: loop done, lines=43 data=21
+11-16 19:11:24.153 15857 15896 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=20000
+11-16 19:11:24.153 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=20000
+11-16 19:11:24.231 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/

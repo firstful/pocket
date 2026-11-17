@@ -1,0 +1,5 @@
+11-16 19:06:21.614 15857 15895 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-16 19:06:24.206 15857 15895 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-16 19:06:24.206 15857 15895 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1794873981-fvQJFO9dmvzy4QU4VBn9","object":"chat.completion.chunk","created":1794873981,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-16 19:06:24.422 15857 15895 D PocketNet: streamChat: [DONE] after 37 lines (18 data)
+11-16 19:06:24.423 15857 15895 D PocketNet: streamChat: loop done, lines=37 data=18
