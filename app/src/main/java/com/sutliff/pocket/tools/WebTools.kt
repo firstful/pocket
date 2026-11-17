@@ -228,72 +228,76 @@ class WebFetchTool : Tool {
 // ─── WebView renderer (JS-capable) + granular extraction ─────────────────────
 
 object WebRenderManager {
-    private var webView: WebView? = null
-    private var overlay: FrameLayout? = null
-    private val lock = Any()
-
+    // Fresh WebView per render: reusing a single cached WebView caused
+    // evaluateJavascript callbacks to silently never fire on subsequent
+    // loadUrl calls (onPageFinished fired but the 1500ms-delayed
+    // evaluateJavascript never invoked its result lambda), so full mode
+    // timed out on every call after the first. Fresh instance per call
+    // avoids the stale JS-context state. (2026-11-17 PM fix)
     fun render(activity: Activity, url: String, timeoutMs: Long): String {
         val latch = CountDownLatch(1)
         Log.d("WebRenderManager", "start url=$url timeoutMs=$timeoutMs")
         var html: String? = null
         var error: String? = null
+        val containerRef = java.util.concurrent.atomic.AtomicReference<FrameLayout?>(null)
 
         activity.runOnUiThread {
             try {
-                if (webView == null) {
-                    val wv = WebView(activity)
-                    wv.settings.javaScriptEnabled = true
-                    wv.settings.domStorageEnabled = true
-                    wv.settings.loadWithOverviewMode = true
-                    wv.settings.useWideViewPort = true
-                    wv.settings.userAgentString =
-                        "Mozilla/5.0 (Linux; Android 14; Pixel 6a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
-                    val client = object : WebViewClient() {
-                        override fun onPageFinished(view: WebView?, finishedUrl: String?) {
-                            Log.d("WebRenderManager", "onPageFinished url=$finishedUrl")
-                            view?.postDelayed({
+                val wv = WebView(activity)
+                wv.settings.javaScriptEnabled = true
+                wv.settings.domStorageEnabled = true
+                wv.settings.loadWithOverviewMode = true
+                wv.settings.useWideViewPort = true
+                wv.settings.userAgentString =
+                    "Mozilla/5.0 (Linux; Android 14; Pixel 6a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+                val client = object : WebViewClient() {
+                    override fun onPageFinished(view: WebView?, finishedUrl: String?) {
+                        Log.d("WebRenderManager", "onPageFinished url=$finishedUrl")
+                        view?.postDelayed({
+                            try {
                                 view.evaluateJavascript(
                                     "(function(){try{return document.documentElement.outerHTML;}catch(e){return '';}})();"
                                 ) { value ->
+                                    Log.d("WebRenderManager", "evaluateJs callback value_len=${value?.length ?: 0}")
                                     html = unquoteJs(value)
                                     latch.countDown()
                                 }
-                            }, 1500)
-                        }
-
-                        override fun onReceivedError(
-                            view: WebView?,
-                            errorCode: Int,
-                            description: String?,
-                            failingUrl: String?
-                        ) {
-                            if (error == null) error = "WebView error $errorCode: $description"
-                        }
+                            } catch (e: Exception) {
+                                Log.e("WebRenderManager", "evaluateJavascript threw", e)
+                                if (error == null) error = e.message
+                                latch.countDown()
+                            }
+                        }, 1500)
                     }
-                    wv.webViewClient = client
-                    wv.webChromeClient = WebChromeClient()
 
-                    val container = FrameLayout(activity)
-                    val lp = FrameLayout.LayoutParams(dp(activity, 260), dp(activity, 180))
-                    lp.gravity = Gravity.TOP or Gravity.END
-                    lp.topMargin = dp(activity, 72)
-                    lp.rightMargin = dp(activity, 12)
-                    container.addView(wv, FrameLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.MATCH_PARENT
-                    ))
-                    // rounded-ish background handled by elevation; keep simple
-                    container.elevation = 16f
-                    container.visibility = View.VISIBLE
-
-                    val root = activity.window.decorView as? ViewGroup
-                    root?.addView(container, lp)
-                    webView = wv
-                    overlay = container
-                } else {
-                    overlay?.visibility = View.VISIBLE
+                    override fun onReceivedError(
+                        view: WebView?,
+                        errorCode: Int,
+                        description: String?,
+                        failingUrl: String?
+                    ) {
+                        if (error == null) error = "WebView error $errorCode: $description"
+                    }
                 }
-                webView?.loadUrl(url)
+                wv.webViewClient = client
+                wv.webChromeClient = WebChromeClient()
+
+                val container = FrameLayout(activity)
+                val lp = FrameLayout.LayoutParams(dp(activity, 260), dp(activity, 180))
+                lp.gravity = Gravity.TOP or Gravity.END
+                lp.topMargin = dp(activity, 72)
+                lp.rightMargin = dp(activity, 12)
+                container.addView(wv, FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT
+                ))
+                container.elevation = 16f
+                container.visibility = View.VISIBLE
+
+                val root = activity.window.decorView as? ViewGroup
+                root?.addView(container, lp)
+                containerRef.set(container)
+                wv.loadUrl(url)
             } catch (e: Exception) {
                 error = e.message
                 latch.countDown()
@@ -305,7 +309,13 @@ object WebRenderManager {
         Log.d("WebRenderManager", "await ok=$ok error=$error html_len=${html?.length ?: 0}")
 
         activity.runOnUiThread {
-            overlay?.visibility = View.GONE
+            val c = containerRef.get()
+            val root = activity.window.decorView as? ViewGroup
+            if (c != null && c.parent === root) root?.removeView(c)
+            c?.visibility = View.GONE
+            // destroy the WebView to release its renderer process
+            val wv = c?.getChildAt(0) as? WebView
+            wv?.destroy()
         }
 
         Log.d("WebRenderManager", "done html_len=${html?.length ?: 0} error=$error")

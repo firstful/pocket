@@ -1,0 +1,19 @@
+11-16 19:11:07.737 15857 15896 D WebRenderTool: start url=https://example.com mode=outline max_chars=4000 timeout_ms=12000
+11-16 19:11:07.738 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-16 19:11:08.306 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 19:11:09.813 15857 15896 D WebRenderManager: await ok=true error=null html_len=2179
+11-16 19:11:09.814 15857 15896 D WebRenderManager: done html_len=2179 error=null
+11-16 19:11:09.814 15857 15896 D WebRenderTool: rendered html_len=2179 (activity=true)
+11-16 19:11:09.815 15857 15896 D WebRenderTool: done mode=outline result_len=2178
+11-16 19:11:10.718 15857 15896 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=12000
+11-16 19:11:10.718 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-16 19:11:10.790 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 19:11:22.719 15857 15896 D WebRenderManager: await ok=false error=Timed out waiting for page render (12000ms) html_len=0
+11-16 19:11:22.719 15857 15896 D WebRenderManager: done html_len=0 error=Timed out waiting for page render (12000ms)
+11-16 19:11:22.719 15857 15896 D WebRenderTool: rendered html_len=50 (activity=true)
+11-16 19:11:24.153 15857 15896 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=20000
+11-16 19:11:24.153 15857 15896 D WebRenderManager: start url=https://example.com timeoutMs=20000
+11-16 19:11:24.231 15857 15857 D WebRenderManager: onPageFinished url=https://example.com/
+11-16 19:11:44.154 15857 15896 D WebRenderManager: await ok=false error=Timed out waiting for page render (20000ms) html_len=0
+11-16 19:11:44.154 15857 15896 D WebRenderManager: done html_len=0 error=Timed out waiting for page render (20000ms)
+11-16 19:11:44.155 15857 15896 D WebRenderTool: rendered html_len=50 (activity=true)
