@@ -11,6 +11,7 @@ import kotlinx.serialization.json.put
 import kotlinx.serialization.json.putJsonObject
 import kotlinx.serialization.json.putJsonArray
 import kotlinx.serialization.json.JsonPrimitive
+import kotlinx.serialization.json.Json
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -228,6 +229,104 @@ class WebFetchTool : Tool {
 // ─── WebView renderer (JS-capable) + granular extraction ─────────────────────
 
 object WebRenderManager {
+    // JS runs INSIDE the rendered page and returns clean markdown (not raw HTML).
+    // Doing the DOM walk in-page avoids shipping ~700KB of markup (scripts,
+    // JSON-LD, ad blobs) across the evaluateJavascript bridge, and sidesteps the
+    // \u003c escaping bug that made Html.fromHtml a no-op on escaped markup.
+    // Strips nav/header/footer/aside/script/style/noise, promotes h1-h6 to
+    // markdown headings, keeps links/p/lists/br structure, de-dupes blank lines.
+    private val EXTRACT_JS = """
+        (function () {
+          try {
+            var doc = document;
+            var NOISE = 'script,style,noscript,svg,canvas,template,iframe,nav,header,footer,aside,form,button,select,textarea,.ads,.advertisement,.advert,.sidebar,.menu,.nav,.footer,.header,.cookie-banner,[role="navigation"],[role="banner"],[role="complementary"],[aria-hidden="true"]';
+            // Prefer the main content root when present.
+            var root = doc.querySelector('article, main, #mw-content-text, .mw-parser-output, #content, [role="main"]') || doc.body || doc.documentElement;
+            var clone = root.cloneNode(true);
+            // Remove noise from the clone (never mutate the live page).
+            var rm = clone.querySelectorAll(NOISE);
+            for (var i = 0; i < rm.length; i++) { if (rm[i].parentNode) rm[i].parentNode.removeChild(rm[i]); }
+
+            function inlineText(el) {
+              // Walk text nodes, expanding <a> to "text (href)" and <br> to newline.
+              var out = '';
+              function walk(n) {
+                if (n.nodeType === 3) { out += n.nodeValue; return; }
+                if (n.nodeType !== 1) return;
+                var tag = n.tagName.toLowerCase();
+                if (tag === 'br') { out += '\n'; return; }
+                if (tag === 'a') {
+                  var href = n.getAttribute('href') || '';
+                  var label = (n.textContent || '').replace(/\s+/g, ' ').trim();
+                  if (label) out += label + (href && href.charAt(0) !== '#' ? ' (' + href + ')' : '');
+                  return;
+                }
+                var kids = n.childNodes;
+                for (var j = 0; j < kids.length; j++) walk(kids[j]);
+              }
+              var c = el.childNodes;
+              for (var k = 0; k < c.length; k++) walk(c[k]);
+              return out;
+            }
+
+            var lines = [];
+            function push(s) { s = (s || '').replace(/\s+/g, ' ').trim(); if (s) lines.push(s); }
+
+            (function walk(el) {
+              if (!el || !el.childNodes) return;
+              var kids = el.childNodes;
+              for (var i = 0; i < kids.length; i++) {
+                var n = kids[i];
+                if (n.nodeType !== 1) continue;
+                var tag = n.tagName.toLowerCase();
+                var m = /^h([1-6])$/.exec(tag);
+                if (m) {
+                  lines.push('');
+                  push('#'.repeat(parseInt(m[1], 10)) + ' ' + inlineText(n));
+                  lines.push('');
+                } else if (tag === 'p' || tag === 'blockquote') {
+                  push(inlineText(n));
+                  lines.push('');
+                } else if (tag === 'li') {
+                  push('- ' + inlineText(n));
+                } else if (tag === 'pre' || tag === 'code') {
+                  // Indent code so lines like "# comment" aren't parsed as
+                  // markdown headings by the Kotlin outline/find layer.
+                  var codeText = (n.textContent || '').trim();
+                  codeText.split('\n').forEach(function (cl) { lines.push('    ' + cl); });
+                } else if (tag === 'tr') {
+                  var cells = n.querySelectorAll('th,td');
+                  var vals = [];
+                  for (var c = 0; c < cells.length; c++) vals.push((cells[c].textContent || '').replace(/\s+/g, ' ').trim());
+                  if (vals.length) lines.push(vals.join(' | '));
+                } else if (tag === 'table') {
+                  lines.push('');
+                  walk(n);
+                  lines.push('');
+                } else {
+                  walk(n);
+                }
+              }
+            })(clone);
+
+            // Collapse 3+ blank lines to one blank line, trim edges.
+            var text = lines.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+            return text;
+          } catch (e) {
+            return '';
+          }
+        })()
+    """.trimIndent()
+
+    private val json = Json { ignoreUnknownKeys = true }
+
+    // evaluateJavascript returns a JSON string literal: decode with a real
+    // JSON parser so \u003c / \n / \" are all handled correctly.
+    private fun decodeJsString(s: String?): String {
+        if (s.isNullOrBlank()) return ""
+        return try { json.decodeFromString<String>(s) } catch (e: Exception) { s }
+    }
+
     // Fresh WebView per render: reusing a single cached WebView caused
     // evaluateJavascript callbacks to silently never fire on subsequent
     // loadUrl calls (onPageFinished fired but the 1500ms-delayed
@@ -256,10 +355,10 @@ object WebRenderManager {
                         view?.postDelayed({
                             try {
                                 view.evaluateJavascript(
-                                    "(function(){try{return document.documentElement.outerHTML;}catch(e){return '';}})();"
+                                    EXTRACT_JS
                                 ) { value ->
                                     Log.d("WebRenderManager", "evaluateJs callback value_len=${value?.length ?: 0}")
-                                    html = unquoteJs(value)
+                                    html = decodeJsString(value)
                                     latch.countDown()
                                 }
                             } catch (e: Exception) {
@@ -427,12 +526,16 @@ class WebRenderTool : Tool {
         val app = com.sutliff.pocket.AgentApp.instance
         val activity = com.sutliff.pocket.AgentApp.foregroundActivity?.get()
 
-        val html: String = if (activity != null) {
-            WebRenderManager.render(activity, url, timeoutMs.toLong())
+        // WebView path returns CLEAN MARKDOWN directly (DOM-extracted in JS).
+        // Static fallback returns raw HTML and must be converted via htmlToText.
+        val renderedText: String
+        val fromWebView = activity != null
+        if (fromWebView) {
+            renderedText = WebRenderManager.render(activity!!, url, timeoutMs.toLong())
         } else {
             Log.d(tag, "no foreground activity; falling back to static fetch")
             // Fallback: static fetch (no JS)
-            try {
+            val rawHtml = try {
                 val req = okhttp3.Request.Builder().url(url).get()
                     .header("User-Agent", "Mozilla/5.0 (Linux; Android 14; Pixel 6a) AppleWebKit/537.36")
                     .build()
@@ -443,11 +546,16 @@ class WebRenderTool : Tool {
             } catch (e: Exception) {
                 return "Error: ${e.message}"
             }
+            renderedText = rawHtml
         }
-        Log.d(tag, "rendered html_len=${html.length} (activity=${activity != null})")
-        if (html.isBlank() || html.startsWith("Error:")) return html.ifBlank { "No content rendered from: $url" }
+        Log.d(tag, "rendered len=${renderedText.length} (webview=$fromWebView)")
+        if (renderedText.isBlank() || renderedText.startsWith("Error:")) {
+            return renderedText.ifBlank { "No content rendered from: $url" }
+        }
 
-        val text = htmlToText(html)
+        // Only strip HTML if we came from the static path; the WebView JS already
+        // produced clean markdown, so re-processing it would corrupt the output.
+        val text = if (fromWebView) renderedText else htmlToText(renderedText)
         Log.d(tag, "done mode=$mode result_len=${text.length}")
         if (text.isBlank()) return "No readable text extracted from: $url"
 
