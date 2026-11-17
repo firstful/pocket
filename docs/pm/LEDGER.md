@@ -257,3 +257,27 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - New idea (carried): one-tap "new chat"/session reset to recover from poisoned history.
 - New idea: web_render succeeded for a static page (example.com); try a true JS/SPA page (e.g. a React app) in a future run to confirm the render path under real JS load.
+
+## Run 2026-11-17T00:04Z (PM cron, vc98 `1.0.98-bdb0296`, CI run 1636 success)
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc98 `1.0.98-bdb0296` installed (dumpsys verified). Device reachable via stable mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`; pre-run script's `192.168.1.147:45357` stale (No route to host). Evidence: `docs/pm/logs/20261117T000434Z-identity.log` (Pixel 6a / 27271JEGR25574 / versionCode=98 / versionName=1.0.98-bdb0296).
+- Launch/no-crash PASS: monkey injected 1 event; `Displayed com.sutliff.pocket/.MainActivity ... +366ms`; no FATAL/AndroidRuntime for Pocket in captured logcat. Evidence: `docs/pm/logs/20261117T000434Z-launch-full.log`, `docs/pm/screenshots/20261117T000434Z-launch.png` (valid 1080x2400 PNG, 235516 B).
+- Hello stream PASS: `PocketNet: streamChat: response code=200 content-type=text/event-stream`, first SSE data chunk, `[DONE] after 11 lines (5 data)`, `loop done, lines=11 data=5`, no gateway error. Evidence: `docs/pm/logs/20261117T000434Z-hello-stream.log` (10207 B), `docs/pm/screenshots/20261117T000434Z-hello.png` (220389 B).
+- Web search NOT cleanly captured this run (ADB input automation fragility): first attempt's stream completed (`loop done, lines=37 data=18`) but no `WebSearchTool` tag appeared in the filtered log; second attempt never reached the app (no PocketNet lines at all). No crash/timeout observed. Prior proof from 2026-11-16T18:02Z run (`WebSearchTool: response code=200 html_len=26157 ... result_count=8`, follow-up `loop done, lines=149 data=74`) remains the last clean web_search evidence. Evidence attempts: `docs/pm/logs/20261117T000434Z-websearch-full.log`, `...-websearch-evidence.log`, `...-websearch2-full.log`, `...-websearch2-evidence.log`, screenshots `...-websearch.png`, `...-websearch2.png`.
+- web_render not re-exercised this run (no `WebRenderTool`/`WebRenderManager` tags in today's logs); prior proof from 2026-11-16T18:02Z stands (tool-selection bias resolved, full render lifecycle captured). vc98 bytecode confirms the new tags ship (`WebRenderTool` 17 hits, `WebRenderManager` 8 hits, `onPageFinished` 4 hits, `await ok=` in `classes2.dex`).
+- Permission/dialogs: no new system permission dialog observed in captured logs; `mCurrentFocus` stayed Pocket during hello turn. No `EnhancedConfirmationDialogActivity`.
+- OTEL not re-exercised this run (device endpoint historically stale at 192.168.1.2:4318); prior E2E proof from 2026-11-16T18:02Z stands (real OTLP Logs JSON captured on a transient listener, lifecycle + interaction + tool events, `service.name=pocket`, `version=1.0.98-bdb0296`).
+- CI/store: latest code build run 1636 `bdb0296e` (completed/success, workflow_dispatch); store tip `1.0.98-bdb0296` vc98 sha `4dc60906e09bf67b8398e8ee587a22bac34417afa345eded6d31933aa6e3e9c1` size 13504088, matches device. HEAD `21a17d0` is docs-only ahead (no code drift). APK sha256 verified against store listing.
+- Homelab MCP todo board: 0 open Pocket-related todos (scanned all 166 open; no "pocket"/"web_search"/"web_render"/"otel"/"sms" hits). Gitea issues returned 403 (Forbidden) — issue state unverified (pre-existing, not a regression).
+- Host-side artifact verification: APK sha256 `4dc60906...` matches `apps.json`; DEX string check confirms `WebRenderTool`/`WebRenderManager`/`onPageFinished`/`await ok=`/`rendered html_len`/`web_render` present in shipped bytecode; CI run 1636 publish excerpt confirms `publish -> http://apps.ffilt.us/publish/Pocket/app-release.apk (http 200)` and V2 signer `CN=Sutliff Homelab` SHA-256 `a27e8c1e...c3b68`.
+
+### Shipped
+- No code changes this run. HEAD `21a17d0` docs-only ahead of CI/build SHA `bdb0296e`; store tip vc98 matches device. Verified delegated QA evidence (ts 20261117T000434Z) and updated ledger.
+
+### Open / Next
+- ADB input automation remains fragile for chat sends (input coordinates drift / `NO_INPUT_CHANNEL` / IME state); consider stabilizing via a test hook or deep-link in a future change. This is the blocker for agent-verifiable web_search/web_render re-runs, not an app regression.
+- web_render visual PIP-preview confirmation still not agent-verifiable from screenshots; runtime path + outline extraction fully proven via logs (2026-11-16 run).
+- OTEL end-to-end already proven (2026-11-16 run); no further action unless Reed wants endpoint re-pointed.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Carried ideas: one-tap "new chat"/session reset to recover from poisoned history; try web_render on a true JS/SPA page.
