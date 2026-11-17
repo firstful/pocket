@@ -18,14 +18,18 @@ import okhttp3.Request
 import java.util.concurrent.TimeUnit
 
 import android.app.Activity
+import android.graphics.Outline
+import android.graphics.drawable.GradientDrawable
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewOutlineProvider
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.FrameLayout
+import android.widget.TextView
 import java.util.concurrent.CountDownLatch
 
 /**
@@ -327,26 +331,102 @@ object WebRenderManager {
         return try { json.decodeFromString<String>(s) } catch (e: Exception) { s }
     }
 
-    // Fresh WebView per render: reusing a single cached WebView caused
-    // evaluateJavascript callbacks to silently never fire on subsequent
-    // loadUrl calls (onPageFinished fired but the 1500ms-delayed
-    // evaluateJavascript never invoked its result lambda), so full mode
-    // timed out on every call after the first. Fresh instance per call
-    // avoids the stale JS-context state. (2026-11-17 PM fix)
+    // Handle for the one live web_render PiP. Process-wide singleton: a new
+    // render dismisses the previous PiP so they never stack up.
+    private class PipView(
+        val container: FrameLayout,
+        val webView: WebView,
+        val overlay: View,
+        val exitButton: TextView,
+        val closeButton: TextView,
+        var expanded: Boolean = false
+    )
+
+    @Volatile
+    private var activePip: PipView? = null
+
+    private fun pipButton(activity: Activity, label: String): TextView =
+        TextView(activity).apply {
+            text = label
+            textSize = 14f
+            setTextColor(0xFFFFFFFF.toInt())
+            gravity = Gravity.CENTER
+            val bg = GradientDrawable()
+            bg.setColor(0xCC000000.toInt())
+            bg.cornerRadius = dp(activity, 8).toFloat()
+            background = bg
+            val p = dp(activity, 6)
+            setPadding(p, p / 2, p, p / 2)
+            isClickable = true
+            elevation = 4f
+        }
+
+    private fun smallPipParams(activity: Activity): FrameLayout.LayoutParams =
+        FrameLayout.LayoutParams(dp(activity, 260), dp(activity, 180)).apply {
+            gravity = Gravity.TOP or Gravity.END
+            topMargin = dp(activity, 72)
+            rightMargin = dp(activity, 12)
+        }
+
+    private fun fullPipParams(): FrameLayout.LayoutParams =
+        FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        ).apply { gravity = Gravity.FILL }
+
+    // Must be called on the UI thread.
+    private fun dismissPipOnUi() {
+        val pip = activePip ?: return
+        pip.container.parent?.let { (it as? ViewGroup)?.removeView(pip.container) }
+        try { pip.webView.destroy() } catch (e: Exception) { Log.w("WebRenderManager", "destroy threw", e) }
+        activePip = null
+        Log.d("WebRenderManager", "pip_dismissed")
+    }
+
+    private fun expandPipOnUi() {
+        val pip = activePip ?: return
+        if (pip.expanded) return
+        pip.expanded = true
+        pip.container.layoutParams = fullPipParams()
+        pip.container.bringToFront()
+        pip.overlay.visibility = View.GONE
+        pip.closeButton.visibility = View.GONE
+        pip.exitButton.visibility = View.VISIBLE
+        Log.d("WebRenderManager", "pip_expanded")
+    }
+
+    private fun collapsePipOnUi(activity: Activity) {
+        val pip = activePip ?: return
+        if (!pip.expanded) return
+        pip.expanded = false
+        pip.container.layoutParams = smallPipParams(activity)
+        pip.exitButton.visibility = View.GONE
+        pip.closeButton.visibility = View.VISIBLE
+        pip.overlay.visibility = View.VISIBLE
+        Log.d("WebRenderManager", "pip_collapsed")
+    }
+
+    // Fresh WebView per render (stale JS-context state broke repeat renders).
+    // The PiP itself is now PERSISTENT: it stays on screen after extraction so
+    // the user can tap to expand it fullscreen, and dismiss it with the ✕.
     fun render(activity: Activity, url: String, timeoutMs: Long): String {
         val latch = CountDownLatch(1)
         Log.d("WebRenderManager", "start url=$url timeoutMs=$timeoutMs")
         var html: String? = null
         var error: String? = null
-        val containerRef = java.util.concurrent.atomic.AtomicReference<FrameLayout?>(null)
 
         activity.runOnUiThread {
             try {
+                // Replace any previous PiP before adding a new one.
+                dismissPipOnUi()
+
                 val wv = WebView(activity)
                 wv.settings.javaScriptEnabled = true
                 wv.settings.domStorageEnabled = true
                 wv.settings.loadWithOverviewMode = true
                 wv.settings.useWideViewPort = true
+                wv.settings.textZoom = 80
+                wv.setInitialScale(80)
                 wv.settings.userAgentString =
                     "Mozilla/5.0 (Linux; Android 14; Pixel 6a) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
                 val client = object : WebViewClient() {
@@ -382,20 +462,57 @@ object WebRenderManager {
                 wv.webChromeClient = WebChromeClient()
 
                 val container = FrameLayout(activity)
-                val lp = FrameLayout.LayoutParams(dp(activity, 260), dp(activity, 180))
-                lp.gravity = Gravity.TOP or Gravity.END
-                lp.topMargin = dp(activity, 72)
-                lp.rightMargin = dp(activity, 12)
+                container.tag = "webrender_pip"
+                val radius = dp(activity, 16).toFloat()
+                container.outlineProvider = object : ViewOutlineProvider() {
+                    override fun getOutline(view: View, outline: Outline) {
+                        outline.setRoundRect(0, 0, view.width, view.height, radius)
+                    }
+                }
+                container.clipToOutline = true
+                val bg = GradientDrawable()
+                bg.setColor(0xDD222222.toInt())
+                bg.cornerRadius = radius
+                container.background = bg
+                container.elevation = 16f
+
+                // WebView first (bottom), then a tap-catching overlay, then buttons on top.
                 container.addView(wv, FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT
                 ))
-                container.elevation = 16f
-                container.visibility = View.VISIBLE
+                val overlay = View(activity).apply {
+                    setBackgroundResource(android.R.color.transparent)
+                    setOnClickListener { expandPipOnUi() }
+                }
+                container.addView(overlay, FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT
+                ))
+
+                val closeButton = pipButton(activity, "✕").apply {
+                    visibility = View.VISIBLE
+                    setOnClickListener { dismissPipOnUi() }
+                }
+                container.addView(closeButton, FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.TOP or Gravity.END; topMargin = dp(activity, 4); rightMargin = dp(activity, 4) })
+
+                val exitButton = pipButton(activity, "✕ Exit").apply {
+                    visibility = View.GONE
+                    setOnClickListener { collapsePipOnUi(activity) }
+                }
+                container.addView(exitButton, FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply { gravity = Gravity.TOP or Gravity.END; topMargin = dp(activity, 12); rightMargin = dp(activity, 12) })
+
+                container.isClickable = true
+                container.setOnClickListener { expandPipOnUi() }
 
                 val root = activity.window.decorView as? ViewGroup
-                root?.addView(container, lp)
-                containerRef.set(container)
+                root?.addView(container, smallPipParams(activity))
+                activePip = PipView(container, wv, overlay, exitButton, closeButton)
+                Log.d("WebRenderManager", "pip_added rounded=true zoom=80")
                 wv.loadUrl(url)
             } catch (e: Exception) {
                 error = e.message
@@ -406,16 +523,7 @@ object WebRenderManager {
         val ok = latch.await(timeoutMs, TimeUnit.MILLISECONDS)
         if (!ok && error == null) error = "Timed out waiting for page render (${timeoutMs}ms)"
         Log.d("WebRenderManager", "await ok=$ok error=$error html_len=${html?.length ?: 0}")
-
-        activity.runOnUiThread {
-            val c = containerRef.get()
-            val root = activity.window.decorView as? ViewGroup
-            if (c != null && c.parent === root) root?.removeView(c)
-            c?.visibility = View.GONE
-            // destroy the WebView to release its renderer process
-            val wv = c?.getChildAt(0) as? WebView
-            wv?.destroy()
-        }
+        // PiP intentionally left visible — the WebView stays alive with the page loaded.
 
         Log.d("WebRenderManager", "done html_len=${html?.length ?: 0} error=$error")
         return when {
@@ -450,8 +558,9 @@ class WebRenderTool : Tool {
         "Render a web page in a real WebView (executes JavaScript; works for SPAs and JS-rendered " +
             "pages) and return readable text. PREFER this over web_fetch/web_search when the page is " +
             "JavaScript-rendered, an SPA, or empty without JS. Modes: full (default), outline " +
-            "(headings/TOC), section (one heading), find (search text). Shows a small render preview " +
-            "(PIP) top-right while running."
+            "(headings/TOC), section (one heading), find (search text). Shows a rounded picture-in-picture " +
+            "preview (PIP) top-right, zoomed out. Tap the PIP to expand it fullscreen; use the ✕ Exit " +
+            "button at the top to collapse, or the ✕ on the PIP to dismiss it."
     override val parameters = buildJsonObject {
         put("type", "object")
         putJsonObject("properties") {
