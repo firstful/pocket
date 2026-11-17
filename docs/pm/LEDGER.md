@@ -302,3 +302,31 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL E2E already proven (2026-11-16 run).
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Carried ideas: one-tap "new chat"/session reset; SMS opt-in gating.
+
+## Run 2026-11-17T18:31Z (PM cron, vc107 `1.0.107-f52f1ac`, CI run 1685 success) — 2-code-commit batch shipped + verified
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), freshly installed vc107 `1.0.107-f52f1ac` (dumpsys versionCode=107). Pre-run script's `192.168.1.147:45357` stale again; device reached via mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (~192.168.1.127:38361). Evidence: `docs/pm/logs/20261117T181158Z-01-launch.log`.
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`, no app FATAL/AndroidRuntime in captured logs. Evidence: `docs/pm/logs/20261117T181158Z-01-launch.log`, `docs/pm/screenshots/20261117T181158Z-01-launch.png` (valid 1080x2400 PNG).
+- Hello stream PASS: `PocketNet: streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 19 lines (9 data)`, `loop done, lines=19 data=9`, no gateway error. Evidence: `docs/pm/logs/20261117T181304Z-02-hello.log`, `docs/pm/screenshots/20261117T181304Z-02-hello.png`.
+- **web_render CLEAN-TEXT fix VERIFIED (f4b1161)**: in-page JS DOM→markdown extraction shrank example.com from vc104's raw-HTML `html_len=2179 result_len=2178` (no-op conversion) to `evaluateJs callback value_len=917` → `await ok=true error=null html_len=905` → `rendered len=905 (webview=true)` → `done mode=full result_len=905`. Zero raw-HTML markers (`&lt;`/`<html`/`<div`/`\u003c`) in the full log. Stream completed (`streamChat [DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`), no timeout. Evidence: `docs/pm/logs/20261117T181853Z-05-webrender-tags.log`, `...-webrender-full.log` (165 KB), `docs/pm/screenshots/20261117T181853Z-05-webrender-full.png` (294 KB). Outline mode also verified earlier same run (`result_len=905`, no timeout): `docs/pm/logs/20261117T181541Z-03-webrender-tags.log`.
+- **PiP rounded/zoom/fullscreen fix VERIFIED (f52f1ac)**: new marker `WebRenderManager: pip_added rounded=true zoom=80` present in both renders. Tap-to-expand confirmed via uiautomator UI dumps: "✕ Exit" button count 0 (small PiP) → 1 (after tap) → 1 (after exit tap landed on status bar at y=63, not the exit control, so collapse-by-tap not cleanly asserted this run). Code review confirms `expandPipOnUi`/`collapsePipOnUi` swap `fullPipParams`/`smallPipParams` layout params + toggle exit/close/overlay visibility. Evidence: `docs/pm/logs/20261117T181541Z-pip-ui.xml`, `20261117T181559Z-expanded-ui.xml`, `20261117T181620Z-after-exit-ui.xml`, screenshots `20261117T181559Z-04-pip-tap.png`, `20261117T181620Z-04-pip-collapsed.png`.
+- web_search NOT captured this run (ADB input-automation fragility — no `WebSearchTool` markers in today's logs). Not a regression; last clean proof from 2026-11-16T18:02Z (`result_count=8`). Flagged as QA-automation gap, not app bug.
+- Permission/dialogs: no FATAL or dialog observed in captured logs; no new permission prompt (did not tap through any system dialog).
+- Homelab MCP todo board: 0 open Pocket-related todos (scanned all 166 open; no pocket/web_search/web_render/otel/sms hits). Gitea issues API still 403 (pre-existing).
+- CI/store: run 1685 `f52f1ac3` completed/success (push); store tip `1.0.107-f52f1ac` vc107 sha `3960038fb07296faf59549d817b097f1f368aa78ef7c6826f38c9831e0a4bdf9` size 13504092, matches HEAD code SHA. APK downloaded + sha256 verified identical. V2 signer `CN=Sutliff Homelab` SHA-256 `a27e8c1e...c3b68`. DEX strings confirm all new markers shipped (`pip_added rounded=true zoom=80`, `pip_expanded`/`collapsed`/`dismissed`, `decodeFromString`, `EXTRACT_JS`, JS NOISE-strip walk).
+
+### Shipped
+- `f4b1161` — fix(pocket): web_render returns clean readable text, not raw HTML. In-page JS tree-walk extracts DOM→markdown (strips script/style/nav/header/footer/aside + ad/JSON-LD noise, promotes h1-h6, expands links/lists/tables); `kotlinx Json.decodeFromString` decodes `\uXXXX`/`\n`/`\"` correctly; static fallback still uses `htmlToText` once.
+- `f52f1ac` — feat(pocket): rounded web_render PiP (16dp corner radius), zoom 80%, top-right 260x180dp, tap-to-expand fullscreen with `✕ Exit` to collapse, `✕` to dismiss; new render dismisses prior PiP.
+- Both built+published in CI run 1685 (completed/success, 5m38s, V2-signed), installed on Pixel 6a (vc104→vc107).
+
+### Bugs / Infra notes
+- CI run 1684 (older SHA `f4b1161d`, push) FAILED — Gitea runner lost Docker daemon mid-job (`Cannot connect to the Docker daemon`). Transient runner/pod churn (runner pod restarted ~12 min before this run; runner-keeper cycling). Superseded by green 1685; no code issue.
+- CI run 1687 (duplicate workflow_dispatch for same HEAD `f52f1ac3`) was still in_progress at report time — redundant re-build, will republish same vc107 if it finishes. No action needed.
+
+### Open / Next
+- PiP collapse-by-tap not cleanly asserted (exit tap hit status bar); visual PIP preview not agent-verifiable from screenshots. Runtime path + expand fully proven via UI dumps + logs.
+- web_search on-device QA remains fragile (ADB input coordinates); last clean proof stands.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; web_render on a true JS/SPA page (not just static example.com); SMS opt-in gating.
+- `web_fetch` 403 from some sites is site-side (not a bug).

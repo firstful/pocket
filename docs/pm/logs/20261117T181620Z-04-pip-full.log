@@ -1,0 +1,20 @@
+--------- beginning of main
+11-17 13:16:20.321  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input tap 984 63'
+11-17 13:16:20.399  2199  2199 W PhoneStatusBarView: onTouch: No touch handler provided; eating gesture at (984,63)
+11-17 13:16:20.401  2199  2199 W PhoneStatusBarView: onTouch: No touch handler provided; eating gesture at (984,63)
+11-17 13:16:20.956  2298 31381 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 47 up
+11-17 13:16:21.172  2362  2491 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-17 13:16:22.120  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10166, 32749, 1)
+11-17 13:16:22.121  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10160, 31748, 1)
+11-17 13:16:22.121  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10160, 31621, 1)
+11-17 13:16:22.121  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10202, 31576, 1)
+11-17 13:16:22.127  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10312, 18487, 1)
+11-17 13:16:22.130  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10494, 9384, 1)
+11-17 13:16:22.134  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10166, 1530, 1)
+11-17 13:16:22.135  1701  1800 E libprocessgroup: Unable to find usable controller for (uid, pid, v2_path): (10399, 662, 1)
+11-17 13:16:22.381  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-17 13:16:22.492  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-17 13:16:22.493  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-17 13:16:22.493  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-17 13:16:22.496  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-17 13:16:22.541  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
