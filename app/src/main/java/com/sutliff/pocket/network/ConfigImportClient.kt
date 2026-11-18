@@ -7,6 +7,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
+import com.sutliff.pocket.BuildConfig
 import java.io.IOException
 import java.net.URL
 import java.security.KeyStore
@@ -54,6 +55,9 @@ object ConfigImportClient {
         val body = buildJsonObject { put("passphrase", passphrase) }.toString()
         val request = Request.Builder()
             .url(httpsUrl)
+            .header("X-Pocket-Version", BuildConfig.VERSION_NAME)
+            .header("X-Pocket-Version-Code", BuildConfig.VERSION_CODE.toString())
+            .header("X-Pocket-Git-Hash", BuildConfig.GIT_HASH)
             .post(body.toRequestBody("application/json".toMediaType()))
             .build()
 

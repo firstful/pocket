@@ -6,7 +6,6 @@ import android.security.keystore.KeyProperties
 import android.util.Base64
 import android.util.Log
 import java.security.KeyStore
-import java.security.SecureRandom
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
@@ -122,10 +121,16 @@ object KeystoreWrap {
     }
 
     private fun wrapWith(key: SecretKey, plain: String): String {
-        val iv = ByteArray(IV_BYTES).also { SecureRandom().nextBytes(it) }
         val cipher = Cipher.getInstance(TRANSFORMATION)
-        cipher.init(Cipher.ENCRYPT_MODE, key, GCMParameterSpec(TAG_BITS, iv))
-        val blob = iv + cipher.doFinal(plain.toByteArray(Charsets.UTF_8))
+        // The key is generated with setRandomizedEncryptionRequired(true), so
+        // supplying our own GCMParameterSpec on ENCRYPT throws
+        // "caller provided IV not permitted". Let the cipher generate a fresh
+        // random IV, then read it back via cipher.iv and prepend it to the
+        // ciphertext so unwrap() can reconstruct the GCMParameterSpec.
+        cipher.init(Cipher.ENCRYPT_MODE, key)
+        val iv = cipher.iv // 12 bytes for GCM
+        val ciphertext = cipher.doFinal(plain.toByteArray(Charsets.UTF_8))
+        val blob = iv + ciphertext
         return PREFIX + Base64.encodeToString(blob, Base64.NO_WRAP)
     }
 
