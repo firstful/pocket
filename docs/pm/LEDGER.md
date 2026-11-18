@@ -431,3 +431,8 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB web_search input fragility: this run had one transient TLS reset (self-recovered); no coordinate misses. Consider a test hook/deep-link to stabilize chat sends (carried idea).
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+### Incident (same run, 20261118T183900Z) — app store 503, self-healed
+- At ~18:33Z, `apps.ffilt.us/apps.json` began returning `503 no available server` (it was 200 and APK sha-verified earlier this run at 18:04–18:05Z). Root cause: `appstore/appstore` Deployment (ns `appstore`, image `reeds/appstore:8`, label `rook.io/lifecycle: persistent`) was parked at **0/0** — k8s event `Scaled down replica set appstore-7bf9fbb754 from 1 to 0` ~11m prior; appstore pod had been `Preempted` on node reed-a320ms2h and a `node-gatekeeper` job (ns node-scout) failed around the same window. GitOps source `/root/sutliff-cluster/apps/appstore/deployment.yaml` declares `replicas: 1`, so this was drift, not intended.
+- Fix applied (documented 503 triage): `kubectl -n appstore scale deploy appstore --replicas=1` → rollout succeeded, pod 1/1 Running on wyse5070. Re-verified `apps.json` 200 (3/3 polls, 1942 B), catalog row `com.sutliff.pocket 1.0.117-72e33fd vc=117` == HEAD == device. Store back to healthy.
+- Todo created to track the park mechanism (why a `persistent` appstore gets scaled to 0 / preempted) so it can be made keeper-aware; not reverted by Flux (source says 1).
