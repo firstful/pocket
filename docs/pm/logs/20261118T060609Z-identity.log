@@ -1,0 +1,7 @@
+Identity check — ts=20261118T060609Z
+Transport: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+ro.product.model: Pixel 6a
+ro.serialno: 27271JEGR25574
+package: com.sutliff.pocket
+    versionCode=113 minSdk=26 targetSdk=34
+    versionName=1.0.113-b7952a0

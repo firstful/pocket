@@ -1,0 +1,27 @@
+Pocket vc113 (1.0.113-b7952a0) on-device QA spot-check — ts=20261118T060609Z
+Device: Pixel 6a / 27271JEGR25574 (mDNS transport adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp)
+New vc113 feature: network security config trusting user-installed CAs
+
+=== vc113 new-feature marker in shipped APK ===
+Pulled APK: /tmp/vc113-base.apk (13521040 bytes)
+Binary string 'network_security_config' present @ offset 13207535 (resource table entry) — resource shipped in APK
+
+=== Artifact inventory ===
+OK         256  /root/pocket/docs/pm/logs/20261118T060609Z-identity.log
+OK         621  /root/pocket/docs/pm/logs/20261118T060609Z-launch.log
+OK      505602  /root/pocket/docs/pm/logs/20261118T060609Z-launch-full.logcat.txt
+OK         814  /root/pocket/docs/pm/logs/20261118T060609Z-hello.log
+OK      107816  /root/pocket/docs/pm/logs/20261118T060609Z-hello-full.log
+OK        1293  /root/pocket/docs/pm/logs/20261118T060609Z-websearch.log
+OK      219848  /root/pocket/docs/pm/logs/20261118T060609Z-websearch-full.log
+OK       13042  /root/pocket/docs/pm/logs/20261118T060609Z-settings-ui.xml
+OK       14561  /root/pocket/docs/pm/logs/20261118T060609Z-settings-scroll.xml
+OK       13596  /root/pocket/docs/pm/logs/20261118T060609Z-settings-scroll2.xml
+OK        2848  /root/pocket/docs/pm/logs/20261118T060609Z-permission.log
+OK      199874  /root/pocket/docs/pm/screenshots/20261118T060609Z-launch.png
+OK      186047  /root/pocket/docs/pm/screenshots/20261118T060609Z-hello.png
+OK      186493  /root/pocket/docs/pm/screenshots/20261118T060609Z-websearch.png
+OK      126875  /root/pocket/docs/pm/screenshots/20261118T060609Z-settings.png
+OK      245166  /root/pocket/docs/pm/screenshots/20261118T060609Z-settings-scroll.png
+OK      180547  /root/pocket/docs/pm/screenshots/20261118T060609Z-settings-scroll2.png
+OK      180547  /root/pocket/docs/pm/screenshots/20261118T060609Z-permission-state.png

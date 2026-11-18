@@ -1,0 +1,46 @@
+Permission/dialog state check — ts=20261118T060609Z
+=== mCurrentFocus / mFocusedApp ===
+  mCurrentFocus=Window{b8e36ce u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{63459853 u0 com.sutliff.pocket/.MainActivity t29228}
+=== Activity stack (top activities) ===
+    topResumedActivity=ActivityRecord{63459853 u0 com.sutliff.pocket/.MainActivity t29228}
+  ResumedActivity: ActivityRecord{63459853 u0 com.sutliff.pocket/.MainActivity t29228}
+=== runtime permissions for com.sutliff.pocket ===
+      runtime permissions:
+        android.permission.READ_SMS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.POST_NOTIFICATIONS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.ACCESS_FINE_LOCATION: granted=false, flags=[ USER_SET|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.ACCESS_LOCAL_NETWORK: granted=true, flags=[ REVOKE_WHEN_REQUESTED|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.RECEIVE_MMS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.RECEIVE_SMS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.ACCESS_COARSE_LOCATION: granted=false, flags=[ USER_SET|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.READ_PHONE_STATE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.SEND_SMS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.READ_CONTACTS: granted=false, flags=[ USER_SET|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+      enabledComponents:
+        androidx.work.impl.background.systemjob.SystemJobService
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.apps.camera.services:
+      com.sutliff.pocket
+    com.google.android.apps.diagnosticstool:
+      com.sutliff.pocket
+    com.google.android.settings.intelligence:
+      com.sutliff.pocket
+    com.google.android.as.oss:
+      com.sutliff.pocket
+    com.google.android.as:
+      com.sutliff.pocket
+    com.google.android.apps.accessibility.voiceaccess:
+      com.sutliff.pocket
+=== EnhancedConfirmationDialogActivity / system dialog markers in full logs ===
+-- /root/pocket/docs/pm/logs/20261118T060609Z-launch-full.logcat.txt --
+0
+-- /root/pocket/docs/pm/logs/20261118T060609Z-hello-full.log --
+0
+-- /root/pocket/docs/pm/logs/20261118T060609Z-websearch-full.log --
+0

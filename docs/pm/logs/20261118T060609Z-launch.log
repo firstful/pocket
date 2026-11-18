@@ -1,0 +1,9 @@
+Launch/no-crash check — ts=20261118T060609Z
+mCurrentFocus=Window{... com.sutliff.pocket/com.sutliff.pocket.MainActivity} (verified)
+FATAL count: 0
+AndroidRuntime exception count: 0
+--- FATAL/AndroidRuntime lines (should be empty except boot/runtime init) ---
+--- Pocket app process started ---
+1652:11-18 01:06:37.103  1701  1801 I ActivityManager: Start proc 16282:com.sutliff.pocket/u0a494 for next-top-activity {com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+--- Displayed MainActivity ---
+1822:11-18 01:06:37.311  1701  1785 I ActivityTaskManager: Displayed com.sutliff.pocket/.MainActivity for user 0: +233ms

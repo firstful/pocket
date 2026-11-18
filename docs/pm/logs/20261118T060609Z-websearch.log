@@ -1,0 +1,17 @@
+Web search check — ts=20261118T060609Z
+=== WebSearchTool evidence ===
+11-18 01:08:28.543 16282 16299 D WebSearchTool: start query_len=20 max_results=8
+11-18 01:08:29.773 16282 16299 D WebSearchTool: response code=200 html_len=28088 duration_ms=1229
+11-18 01:08:29.777 16282 16299 D WebSearchTool: parsed titles=10 snippets=10
+11-18 01:08:29.781 16282 16299 D WebSearchTool: done result_count=8 duration_ms=1229
+=== Follow-up streamChat evidence ===
+11-18 01:08:25.972 16282 16299 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 01:08:28.132 16282 16299 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 01:08:28.541 16282 16299 D PocketNet: streamChat: [DONE] after 29 lines (14 data)
+11-18 01:08:28.541 16282 16299 D PocketNet: streamChat: loop done, lines=29 data=14
+11-18 01:08:29.798 16282 16299 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 01:08:31.914 16282 16299 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 01:08:34.784 16282 16299 D PocketNet: streamChat: [DONE] after 265 lines (132 data)
+11-18 01:08:34.785 16282 16299 D PocketNet: streamChat: loop done, lines=265 data=132
+=== FATAL/Exception count ===
+0

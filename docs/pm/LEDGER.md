@@ -357,3 +357,27 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB multi-word input quirk this run (`adb shell input text` truncates at first space) — worked around with word-by-word + keyevent 62. Automation quirk, not app bug.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-18T06:04Z (PM cron, vc113 `1.0.113-b7952a0`, CI run 1702 success) — user-CA trust ship verified
+
+### QA Outcomes
+- Identity/device: Pixel 6a (27271JEGR25574), reached via mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`. Pre-run script's `192.168.1.147:45357` stale (`No route to host`). **Device was on vc111 at run start — Rook downloaded vc113 from store, sha256 verified `eda106d67202…3316` against `apps.json` (size 13521040, built 2026-11-18T01:32:28Z), `adb install -r` Success, post-install vc113.** Evidence: `docs/pm/logs/20261118T060609Z-identity.log`.
+- CI/store: run 1702 `b7952a054123` completed/success (push, job 2145 green); log confirms BUILD SUCCESSFUL 5m34s, `publish -> http://apps.ffilt.us/publish/Pocket/app-release.apk (http 200)`, V2 signer `CN=Sutliff Homelab` SHA-256 `a27e8c1e…c3b68`. Store tip `1.0.113-b7952a0` vc113 sha `eda106d67202…` == HEAD code SHA b7952a0. No drift. Host-side APK check: manifest binary XML contains `networkSecurityConfig` attr (UTF-16) + `resources.arsc` contains `network_security_config` — CA-trust change confirmed baked into shipped APK.
+- Launch/no-crash PASS: `Displayed com.sutliff.pocket/.MainActivity ... +233ms`, focus Pocket, FATAL=0, AndroidRuntime exceptions=0. Evidence: `docs/pm/logs/20261118T060609Z-launch.log`, `...-launch-full.logcat.txt` (505 KB), `docs/pm/screenshots/20261118T060609Z-launch.png` (valid 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`, no gateway error. Evidence: `docs/pm/logs/20261118T060609Z-hello.log`, `docs/pm/screenshots/20261118T060609Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=20 … response code=200 html_len=28088 duration_ms=1229 … parsed titles=10 snippets=10 … done result_count=8`; follow-up stream `loop done, lines=265 data=132`. No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261118T060609Z-websearch.log`, `docs/pm/screenshots/20261118T060609Z-websearch.png`.
+- Config-import UI (vc111 feature) still present, no regression: `Config import`, `Config URL (HTTPS only)`, `Passphrase`, `Import config` in scrolled settings hierarchy; endpoint preset `https://pocket-cfg.homelab.internal/config`. Evidence: `docs/pm/logs/20261118T060609Z-settings-scroll2.xml`, `docs/pm/screenshots/20261118T060609Z-settings.png`, `...-settings-scroll.png`, `...-settings-scroll2.png`.
+- Permission/dialogs PASS: no EnhancedConfirmationDialogActivity/grant dialog (0 markers in all full logs), `mCurrentFocus` stayed Pocket; opt-in dangerous perms (SMS/location/notifications/contacts/phone) all `granted=false`. Evidence: `docs/pm/logs/20261118T060609Z-permission.log`, screenshot `...-permission-state.png`.
+- New user-CA trust (vc113): no `CertPathValidatorException`/`Trust anchor not found` in any full log; app connects to internal HTTP endpoints cleanly. No HTTPS-to-internal-CA path exercised this run (config-import E2E still pending).
+- Homelab MCP todo board: scanned 172 open todos, 0 Pocket-related (pocket/web_search/web_render/otel/sms). No claimed Pocket todos. No actionable items.
+- On-device QA delegated (1 serialized subagent, ts `20261118T060609Z`); all artifact paths re-verified inline by Rook (byte sizes + log excerpts + PNG dimensions).
+
+### Shipped
+- `b7952a0` — feat(pocket): trust user-installed CAs for internal HTTPS. `AndroidManifest.xml` adds `android:networkSecurityConfig="@xml/network_security_config"`; new `res/xml/network_security_config.xml` with `<certificates src="system"/>` + `<certificates src="user"/>`, `cleartextTrafficPermitted=true`. Enables HTTPS to `*.homelab.internal` endpoints with the internal root CA installed (companion: reeds/appstore now serves `/ca.crt`). CI run 1702 success, store tip vc113, installed + verified on Pixel 6a this run.
+
+### Open / Next
+- Config-import END-TO-END still unexercised (needs live `reeds/pocket-cfg` endpoint [pod up in ns pocket-cfg] + real 6-word passphrase); only UI reachability/source/bytecode verified. `pocket-cfg.homelab.internal/config` preset present on device.
+- web_render on a true JS/SPA page still untested (carried idea; static example.com proven vc107).
+- ADB input automation fragility remains (coordinate drift); last several runs' web_search captures succeeded this run.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
+- `web_fetch` 403 from some sites is site-side (not a bug).

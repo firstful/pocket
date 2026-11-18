@@ -1,0 +1,9 @@
+Hello stream check — ts=20261118T060609Z
+=== PocketNet/streamChat evidence ===
+11-18 01:07:04.026 16282 16297 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 01:07:04.994 16282 16297 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 01:07:04.995 16282 16297 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-55191644-1395-4c0f-904b-c0e016d22f0c","object":"chat.completion.chunk","created":1794982024,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-18 01:07:04.998 16282 16297 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-18 01:07:04.998 16282 16297 D PocketNet: streamChat: loop done, lines=15 data=7
+=== FATAL/Exception count ===
+0
