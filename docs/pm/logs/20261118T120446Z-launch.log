@@ -1,0 +1,86 @@
+Starting: Intent { cmp=com.sutliff.pocket/.MainActivity }
+=== mCurrentFocus ===
+  mCurrentFocus=Window{87cfe2c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== FATAL|AndroidRuntime grep (logcat -d) ===
+(none)
+=== full logcat tail (last 80 lines) ===
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fff970) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fad7a0) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fbcb00) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813025b40) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fcdbf0) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fbe260) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fd5f40) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813019490) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813035f20) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fb7720) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fcd930) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fcc6a0) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fa7a20) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f4e790) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813044410) with descriptor: '(not cached)'
+11-18 07:04:51.034  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813006140) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813033b60) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fcf400) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813029190) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fe96b0) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb4000078130460f0) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f9f830) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f63500) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813000d60) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fdd210) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781304cef0) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fbb190) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813008450) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fb8900) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f58190) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812faf480) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781303da30) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb4000078130001b0) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f53d80) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813042100) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fc7f20) with descriptor: '(not cached)'
+11-18 07:04:51.035  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fd2bb0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fc3fe0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fc2720) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fc4f00) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813000f70) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f8a960) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f54250) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812ffa220) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fe10a0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813022f40) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f096c0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f86fa0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781303c9b0) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f56090) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812ff8120) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f55430) with descriptor: '(not cached)'
+11-18 07:04:51.036  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781304c340) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f5b050) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781303beb0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fc2e00) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f59000) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb40000781302d2e0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fe02e0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812e734a0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812fec780) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812faa8e0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812e8e670) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007812f330f0) with descriptor: '(not cached)'
+11-18 07:04:51.037  1701  1757 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0xb400007813012d70) with descriptor: '(not cached)'
+11-18 07:04:51.046  1701  1758 W System  : A resource failed to call release. 
+11-18 07:04:51.046  1701  1758 W System  : A resource failed to call release. 
+11-18 07:04:51.061  1701  1758 W System  : A resource failed to call release. 
+11-18 07:04:51.229 32167 30522 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-18 07:04:51.230 32167 30522 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 07:04:51.232 32167 30534 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x34 0x4b 0x59 0x4b 0x11 0x32 0x1e 0x6f 0x79 0x07 0x5c 0x64 0x6f 0x28 0xbe 0xfd 0xcb 0xc5 0xff 0xf3 0x08 0xca ], deviceToken=[ 0xd9 0x77 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@7c5a015 size=2 contents="\331w">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-18 07:04:51.232 32167 30534 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x34 0x4b 0x59 0x4b 0x11 0x32 0x1e 0x6f 0x79 0x07 0x5c 0x64 0x6f 0x28 0xbe 0xfd 0xcb 0xc5 0xff 0xf3 0x08 0xca ], deviceToken=[ 0xd9 0x77 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@7c5a015 size=2 contents="\331w">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 4KYK and EndpointInfo [ 0x32 0x1e 0x6f 0x79 0x07 0x5c 0x64 0x6f 0x28 0xbe 0xfd 0xcb 0xc5 0xff 0xf3 0x08 0xca ]).
+11-18 07:04:51.233 32167 30534 I NearbyConnections: ClientProxy(190125779) reporting onEndpointLost(4KYK)
+11-18 07:04:51.235 32167 30522 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=4KYK)
+11-18 07:04:51.929  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys window'
+11-18 07:04:52.043  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 07:04:52.063 28734 29509 V ClearcutMetricXmitter: Transmission is done.
+11-18 07:04:52.067 28734 29509 V ClearcutMetricXmitter: Transmission is done.
+11-18 07:04:52.067 28734 29509 V ClearcutMetricXmitter: Transmission is done.
+11-18 07:04:52.269  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

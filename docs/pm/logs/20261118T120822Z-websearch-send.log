@@ -1,0 +1,21 @@
+=== live Send node ===
+<node index="0" text="" resource-id="" class="android.view.View" package="com.sutliff.pocket" content-desc="Send" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[965,1281][1028,1344]" drawing-order="0" hint="" />
+=== composer text pre-send ===
+<node index="1" text="search web for Android 15 release date " resource-id="" class="android.widget.EditText" package="com.sutliff.pocket" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" scrollable="false" long-clickable="true" password="false" selected="false" bounds="[21,1207][765,1417]" drawing-order="0" hint="">
+=== tap coordinate: 996 1312 ===
+tap issued
+=== mCurrentFocus ===
+  mCurrentFocus=Window{87cfe2c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== WebSearchTool | PocketNet | FATAL | gateway | done excerpts ===
+11-18 07:08:25.733 30548 30593 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 07:08:32.395 30548 30593 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 07:08:32.396 30548 30593 D PocketNet: streamChat: first data (347 bytes): {"id":"gen-1795003705-8a7ZNGkcOyKqrmjNRiCK","object":"chat.completion.chunk","created":1795003705,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":null,"tool_calls":[{"index":0,"id":"chatcmpl-tool-aba40e0b42202d02","type":"function","function":{"name":"web_search","arguments":""}}]}}]}
+11-18 07:08:32.604 30548 30593 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-18 07:08:32.604 30548 30593 D PocketNet: streamChat: loop done, lines=15 data=7
+11-18 07:08:32.606 30548 30593 D WebSearchTool: start query_len=23 max_results=8
+11-18 07:08:34.041 30548 30593 D WebSearchTool: response code=200 html_len=29227 duration_ms=1434
+11-18 07:08:34.045 30548 30593 D WebSearchTool: parsed titles=10 snippets=10
+11-18 07:08:34.050 30548 30593 D WebSearchTool: done result_count=8 duration_ms=1434
+11-18 07:08:34.066 30548 30581 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 07:08:36.439 30548 30581 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 07:08:36.440 30548 30581 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795003713-s14RC4YoGQa3kM4UOCLi","object":"chat.completion.chunk","created":1795003713,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}

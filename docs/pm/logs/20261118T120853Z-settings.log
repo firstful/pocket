@@ -1,0 +1,12 @@
+=== mCurrentFocus ===
+  mCurrentFocus=Window{87cfe2c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== dialog / permission grep ===
+(none)
+=== FATAL grep ===
+(none)
+=== Settings UI labels check ===
+Config import: False
+Config URL (HTTPS only): False
+Passphrase: False
+Import config: False
+Settings: True

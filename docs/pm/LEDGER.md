@@ -381,3 +381,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); last several runs' web_search captures succeeded this run.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-18T12:04Z (PM cron, vc115 `1.0.115-60631b0`, CI run 1710 success) — keystore self-heal ship verified
+
+### QA Outcomes
+- Identity/device: Pixel 6a (27271JEGR25574), reached via stable mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`; pre-run script's `192.168.1.147:45357` stale (`No route to host`). **Device was on vc113 at run start (2 behind store tip vc115) — Rook downloaded vc115 from store, sha256 verified `9f9ec9dd6031…a852` against `apps.json` (size 13521040, built 2026-11-18T06:29:03Z), `adb install -r` Success, post-install vc115 / 1.0.115-60631b0.** Evidence: `docs/pm/logs/20261118T120404Z-vc115-install.log`, `...-120441Z-identity.log`.
+- CI/store: run 1710 `60631b05bdb3` completed/success (push, job 2156 green); log confirms `BUILD SUCCESSFUL in 5m 12s`, `publish -> http://apps.ffilt.us/publish/Pocket/app-release.apk (http 200)`, V2 signer `CN=Sutliff Homelab` SHA-256 `a27e8c1ec1e7…5c3b68`. Store tip `1.0.115-60631b0` vc115 sha `9f9ec9dd6031…` == HEAD code SHA 60631b0. No drift. Host-side DEX check of shipped APK confirms keystore-fix markers present: `PocketKeystore` (1), `wrap-after-regen` (1), `strongbox-unavailable` (1), `deleteEntry` (1), `SecretWrapException` (1).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity` (mCurrentFocus), no real FATAL EXCEPTION / AndroidRuntime crash in any this-run log (grep "FATAL" hits were only the literal grep-header strings written into logs). Evidence: `docs/pm/logs/20261118T120446Z-launch.log`, `docs/pm/screenshots/20261118T120446Z-launch.png` (valid 1080x2400 PNG, 199825 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 25 lines (12 data)`, `loop done, lines=25 data=12`, no gateway error. Evidence: `docs/pm/logs/20261118T120557Z-hello-send.log`, `docs/pm/screenshots/20261118T120557Z-hello.png` (189358 B).
+- Web search PASS (attempt 4; attempts 1-3 blocked by ADB input fragility, not app bug): `WebSearchTool: start query_len=23 max_results=8`, `response code=200 html_len=29227 duration_ms=1434`, `parsed titles=10 snippets=10`, `done result_count=8 duration_ms=1434`; follow-up stream healthy. Evidence: `docs/pm/logs/20261118T120822Z-websearch-send.log`, `docs/pm/screenshots/20261118T120822Z-websearch.png` (197790 B). Failed-attempt logs: `...120655Z-websearch-attempt1.log`, `...120733Z-attempt2.log`, `...120759Z-attempt3.log`.
+- Settings/UI reachable + config-import section intact (no regression from vc115's KeystoreWrap-only change): `Config import`, `Config URL (HTTPS only)`, `Passphrase`, `Import config`, preset `pocket-cfg.homelab.internal/config` in scrolled settings hierarchy. Evidence: `docs/pm/logs/20261118T121003Z-settings-bottom-ui.xml`, screenshots `...120853Z-settings.png`, `...120921Z-settings2.png`, `...121003Z-settings-bottom.png`.
+- Permission/dialogs PASS: `mCurrentFocus` stayed Pocket, no EnhancedConfirmationDialog/grant markers in any this-run log. Evidence: `docs/pm/logs/20261118T120921Z-settings2.log`.
+- Config endpoint (open item): pod `pocket-cfg-67d48c89dd-jjqxq` Running 1/1, 0 restarts, 10h age (ns `pocket-cfg`, node reed-a320ms2h). E2E import still needs a real 6-word passphrase — not exercised autonomously (credential).
+- Homelab MCP todo board: scanned 172 open todos, 0 Pocket-actionable (3 keyword hits unrelated: Jellyfin APK, HA companion fork, os-keystore OPNsense plugin). Gitea issues API still 403 (pre-existing). Services: apps.ffilt.us 200, telemetry.ffilt.us 405 (up).
+- On-device QA delegated (1 serialized subagent, ts `20261118T1204xx`–`121014Z`); all artifact paths re-verified inline by Rook (byte sizes + log excerpts + PNG dimensions + DEX markers). QA manifest: `docs/pm/logs/20261118T121014Z-summary-manifest.log`.
+
+### Shipped
+- `60631b0` — fix(keystore): surface real exception + self-heal key on wrap/unwrap failure (`crypto/KeystoreWrap.kt`, +115/-58). `SecretWrapException` now carries real cause class+message; new `PocketKeystore` Log.w on every failure (type+message only, never secret); `wrap()` drops + regenerates key and retries once on failure (new plaintext always recoverable); `unwrap()` on invalidated key drops bad key and installs a fresh one so the subsequent re-import wrap succeeds, then signals re-import; `newKey()`/`deleteKey()` clear stale/partial alias entries; StrongBox→platform fallback preserved. Built+published in CI run 1710 (completed/success, V2-signed), store tip vc115, installed + verified on Pixel 6a this run.
+
+### Open / Next
+- Config-import END-TO-END still unexercised (endpoint pod healthy; needs real 6-word passphrase — credential, not done autonomously). UI reachability/source/bytecode verified.
+- Keystore self-heal recovery paths (wrap retry / unwrap re-import signal) verified by source + shipped-bytecode markers, not by forcing a real key-invalidation on device (would need security-change simulation). No regression observed in normal launch/hello/web_search/settings.
+- web_render on a true JS/SPA page still untested (carried idea; static example.com proven vc107).
+- ADB web_search input fragility remains (attempts 1-3 failed, 4 succeeded) — automation issue, not app bug. Consider test hook/deep-link to stabilize chat sends.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
+- `web_fetch` 403 from some sites is site-side (not a bug).

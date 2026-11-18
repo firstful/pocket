@@ -1,0 +1,316 @@
+=== Pocket vc115 PM QA evidence manifest (2026-11-18T12:10:14Z) ===
+/root/pocket/docs/pm/logs/20261110T060753Z-hello.log  bytes=1432  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261110T060753Z-identity.log  bytes=113  type=ASCII text
+/root/pocket/docs/pm/logs/20261110T060753Z-launch.log  bytes=213  type=ASCII text
+/root/pocket/docs/pm/logs/20261110T060753Z-websearch.log  bytes=810  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261110T120615Z-vc75-launch.log  bytes=19443  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261110T120647Z-vc75-hello.log  bytes=2892  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261110T120736Z-vc75-websearch.log  bytes=2892  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T000255Z-hello.log  bytes=9717  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T000255Z-identity.log  bytes=158  type=ASCII text
+/root/pocket/docs/pm/logs/20261111T000255Z-launch.log  bytes=6525  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T000255Z-websearch.log  bytes=33895  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T061352Z-identity.log  bytes=42  type=ASCII text
+/root/pocket/docs/pm/logs/20261111T061359Z-launch.log  bytes=146847  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261111T061418Z-hello.log  bytes=703  type=ASCII text
+/root/pocket/docs/pm/logs/20261111T061436Z-websearch.log  bytes=4172  type=ASCII text
+/root/pocket/docs/pm/logs/20261111T121000Z-hello.log  bytes=9580  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T121000Z-identity.log  bytes=136  type=ASCII text
+/root/pocket/docs/pm/logs/20261111T121000Z-launch.log  bytes=6390  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T121000Z-websearch.log  bytes=46377  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T121541Z-launch.log  bytes=6525  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T121651Z-websearch.log  bytes=30836  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261111T122409Z-vc84-websearch.log  bytes=16732  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261112T060635Z-hello.log  bytes=3504  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T060635Z-identity.log  bytes=329  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T060635Z-launch.log  bytes=361  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T060635Z-websearch.log  bytes=467  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T120433Z_device.log  bytes=224  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T120433Z_hello.logcat.txt  bytes=1101  type=ASCII text
+/root/pocket/docs/pm/logs/20261112T120433Z_websearch_full.logcat.txt  bytes=199247  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261112T120433Z_websearch.logcat.txt  bytes=1746  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T000337Z_hello.log  bytes=2577  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T000337Z_identity.log  bytes=193  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T000337Z_launch.log  bytes=6562  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T000337Z_websearch.log  bytes=5570  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T060530Z-hello.logcat.txt  bytes=109967  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T060530Z-identity.log  bytes=219  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T060530Z-launch.log  bytes=92  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T060530Z-websearch.logcat.txt  bytes=127116  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T120324Z-hello.logcat.txt  bytes=81675  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T120324Z-identity.log  bytes=218  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T120324Z-launch.log  bytes=1666  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T120324Z-permission.log  bytes=418  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T120324Z-websearch.logcat.txt  bytes=543294  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T181454Z-identity.log  bytes=194  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T181520Z-launch.log  bytes=397  type=ASCII text
+/root/pocket/docs/pm/logs/20261113T181530Z-hello.log  bytes=21768  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261113T181620Z-otel-listener.out  bytes=26631  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T181620Z-web_search.log  bytes=4592  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261113T181640Z-settings-ui.log  bytes=173  type=ASCII text
+/root/pocket/docs/pm/logs/20261114T000326Z-launch.log  bytes=168463  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T000326Z-send.log  bytes=335542  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T000341Z-hello.log  bytes=334133  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T000341Z-launch.log  bytes=111425  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T000341Z-websearch.log  bytes=338318  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T060454Z_01_device_identity.log  bytes=362  type=ASCII text
+/root/pocket/docs/pm/logs/20261114T060454Z_02_launch_nocrash.log  bytes=140  type=ASCII text
+/root/pocket/docs/pm/logs/20261114T120438Z-hello.logcat.txt  bytes=3532  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261114T120438Z-identity.log  bytes=190  type=ASCII text
+/root/pocket/docs/pm/logs/20261114T120438Z-launch.log  bytes=154722  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261114T120438Z-websearch.logcat.txt  bytes=7180  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261114T180412Z-vc91-launch.log  bytes=1621  type=ASCII text
+/root/pocket/docs/pm/logs/20261114T180415Z-vc91-websearch.logcat.txt  bytes=270974  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261114T180438Z-vc91-hello.logcat.txt  bytes=57520  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261115T001500Z-websearch.log  bytes=970  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T060816Z-webrender.log  bytes=20335  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261115T120556Z-hello.log  bytes=5766  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T120556Z-identity.log  bytes=256  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T120556Z-launch.log  bytes=8106  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T120556Z-webrender.log  bytes=4307  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261115T120556Z-websearch.log  bytes=3779  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T180413Z-hello.log  bytes=1042  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261115T180413Z-ui-perms.log  bytes=157  type=ASCII text
+/root/pocket/docs/pm/logs/20261115T180413Z-websearch.log  bytes=357  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T061000Z-hello.log  bytes=1060  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T061000Z-identity.log  bytes=432  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T061000Z-launch.log  bytes=7846  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261116T061000Z-webrender.log  bytes=3606  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T061000Z-websearch.log  bytes=2111  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T120600Z-webrender.log  bytes=436698  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261116T120602Z-device-identity.log  bytes=190  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T120602Z-hello-logcat.log  bytes=0  type=empty
+/root/pocket/docs/pm/logs/20261116T120602Z-launch-logcat.log  bytes=503  type=ASCII text
+/root/pocket/docs/pm/logs/20261116T121139Z-webrender.log  bytes=436698  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180440Z-otel-capture.log  bytes=12108  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-hello.log  bytes=115629  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-launch.log  bytes=145441  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-settings.log  bytes=216966  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-webrender.log  bytes=118154  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-webrender-tags.log  bytes=2314  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-websearch.log  bytes=116014  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261116T180523Z-websearch-tags.log  bytes=2006  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-hello-full.log  bytes=171404  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-hello-stream.log  bytes=10207  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-identity.log  bytes=510  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T000434Z-launch-full.log  bytes=516678  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-webrender-evidence.log  bytes=9319  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-webrender-final-evidence.log  bytes=1925  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T000434Z-webrender-final-full.log  bytes=336203  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-webrender-full.log  bytes=211612  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch2-evidence.log  bytes=98  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch2-full.log  bytes=27314  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch3-evidence.log  bytes=1943  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch3-full.log  bytes=188836  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch-evidence.log  bytes=806  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T000434Z-websearch-full.log  bytes=205550  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T123309Z-webrender-verify.log  bytes=2165  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T181158Z-01-launch.log  bytes=92646  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T181158Z-typed2.xml  bytes=26663  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181158Z-typed.xml  bytes=26658  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181158Z-uiautomator.xml  bytes=27016  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181304Z-02-hello.log  bytes=109273  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261117T181304Z-afterhello-ui.xml  bytes=15097  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181418Z-input-crop.png  bytes=107854  type=PNG image data, 2160 x 280, 8-bit/color RGBA, non-interlaced
+/root/pocket/docs/pm/logs/20261117T181418Z-selmenu.xml  bytes=15139  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181541Z-03-webrender-attempt.log  bytes=211422  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T181541Z-03-webrender-tags.log  bytes=1097  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T181541Z-pip-ui.xml  bytes=27902  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181559Z-expanded-ui.xml  bytes=27549  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181620Z-04-pip-full.log  bytes=2201  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T181620Z-after-exit-ui.xml  bytes=27549  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181630Z-relaunch-ui.xml  bytes=21766  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261117T181853Z-05-webrender-full.log  bytes=165038  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261117T181853Z-05-webrender-tags.log  bytes=925  type=ASCII text
+/root/pocket/docs/pm/logs/20261117T181853Z-full-ui.xml  bytes=27579  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T000546Z-hello.log  bytes=2471  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T000546Z-launch.log  bytes=567  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T000546Z-pip.log  bytes=802  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T000546Z-pip-ui.xml  bytes=28194  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T000546Z-settings-scroll2.xml  bytes=13596  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T000546Z-settings-scroll.xml  bytes=14752  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T000546Z-settings-ui.xml  bytes=13042  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T000546Z-websearch.log  bytes=1963  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T060609Z-before-settings-ui.xml  bytes=26779  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-hello-full.log  bytes=107816  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T060609Z-hello.log  bytes=814  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-identity.log  bytes=256  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-launch-full.logcat.txt  bytes=505602  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261118T060609Z-launch.log  bytes=621  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-permission.log  bytes=2848  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-posthello-ui.xml  bytes=26779  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-prehello-ui.xml  bytes=26838  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-settings-scroll2.xml  bytes=13596  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-settings-scroll.xml  bytes=14561  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-settings-ui.xml  bytes=13042  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-summary.log  bytes=1890  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-websearch-full.log  bytes=219848  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261118T060609Z-websearch-kb-ui.xml  bytes=26836  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T060609Z-websearch.log  bytes=1293  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T060609Z-websearch-typed.xml  bytes=26119  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T120404Z-vc115-install.log  bytes=65  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T120441Z-identity.log  bytes=553  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T120446Z-launch.log  bytes=14018  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120507Z-hello-ui.log  bytes=404  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120557Z-hello-send.log  bytes=15034  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120627Z-websearch-ui.log  bytes=415  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120655Z-websearch-attempt1.log  bytes=416  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120733Z-websearch-attempt2.log  bytes=784  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120759Z-websearch-attempt3.log  bytes=795  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120759Z-websearch-attempt3-ui.xml  bytes=26118  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T120822Z-websearch-send.log  bytes=2813  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120853Z-settings.log  bytes=313  type=ASCII text
+/root/pocket/docs/pm/logs/20261118T120853Z-settings-ui.xml  bytes=26778  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T120921Z-settings2.log  bytes=1025  type=UTF-8 Unicode text, with very long lines
+/root/pocket/docs/pm/logs/20261118T120921Z-settings2-ui.xml  bytes=13042  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T121003Z-settings-bottom.log  bytes=1128  type=UTF-8 Unicode text
+/root/pocket/docs/pm/logs/20261118T121003Z-settings-bottom-ui.xml  bytes=13596  type=XML 1.0 document text
+/root/pocket/docs/pm/logs/20261118T121014Z-summary-manifest.log  bytes=16885  type=ASCII text
+/root/pocket/docs/pm/logs/hello_20261115T000244Z.log  bytes=872  type=ASCII text
+/root/pocket/docs/pm/logs/identity_20261115T000244Z.log  bytes=187  type=ASCII text
+/root/pocket/docs/pm/logs/launch_20261115T000244Z.log  bytes=4638  type=ASCII text, with very long lines
+/root/pocket/docs/pm/logs/websearch_20261115T000244Z.log  bytes=7159  type=ASCII text
+/root/pocket/docs/pm/screenshots/20261110T060753Z-hello.png  bytes=89095  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T060753Z-launch.png  bytes=126939  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T060753Z-settings.png  bytes=89020  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T060753Z-websearch.png  bytes=89020  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T120615Z-vc75-launch.png  bytes=128333  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T120647Z-vc75-hello.png  bytes=89601  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T120736Z-vc75-websearch.png  bytes=90309  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T120823Z-vc75-settings.png  bytes=90309  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261110T120844Z-vc75-settings-open.png  bytes=71410  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T000255Z-hello.png  bytes=92444  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T000255Z-launch.png  bytes=128368  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T000255Z-settings.png  bytes=71187  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T000255Z-websearch.png  bytes=91699  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T061359Z-launch.png  bytes=127936  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T061418Z-hello.png  bytes=91605  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T061436Z-websearch.png  bytes=101414  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T061728Z-settings.png  bytes=128195  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T061848Z-settings.png  bytes=71093  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T121000Z-hello.png  bytes=94288  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T121000Z-launch.png  bytes=129653  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T121000Z-websearch.png  bytes=93415  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T121541Z-launch.png  bytes=129707  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T121651Z-websearch.png  bytes=94247  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261111T122412Z-vc84-websearch.png  bytes=93986  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T060635Z-hello.png  bytes=93804  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T060635Z-launch.png  bytes=130083  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T060635Z-websearch.png  bytes=129580  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T120433Z_01_launch.png  bytes=105052  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T120433Z_02_hello_sent.png  bytes=172191  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261112T120433Z_03_websearch_sent.png  bytes=171460  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T000337Z_hello.png  bytes=94135  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T000337Z_launch.png  bytes=128563  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T000337Z_websearch.png  bytes=94448  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T060530Z-hello.png  bytes=99451  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T060530Z-launch.png  bytes=125012  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T060530Z-websearch.png  bytes=91575  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T120324Z-hello.png  bytes=89386  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T120324Z-launch.png  bytes=125312  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T120324Z-websearch.png  bytes=89573  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181520Z-launch.png  bytes=124307  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181530Z-hello.png  bytes=88822  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181620Z-web_search.png  bytes=88442  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-post-relaunch.png  bytes=124366  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings.png  bytes=66725  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-scroll2.png  bytes=102940  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-scroll3.png  bytes=122721  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-scroll.png  bytes=79608  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-telemetry-check.png  bytes=116588  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-telemetry.png  bytes=118910  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261113T181640Z-settings-telemetry-saved.png  bytes=143430  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T000326Z-launch.png  bytes=124148  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T000326Z-send.png  bytes=88541  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T000341Z-hello.png  bytes=88326  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T000341Z-launch.png  bytes=124148  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T000341Z-websearch.png  bytes=88541  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T060454Z_01_device_idle.png  bytes=231370  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T060454Z_02_launch.png  bytes=231370  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T060454Z_03_hello.png  bytes=88034  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T120438Z-hello.png  bytes=90793  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T120438Z-launch.png  bytes=126618  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T120438Z-websearch.png  bytes=97953  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T180412Z-vc91-launch.png  bytes=123502  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T180415Z-vc91-websearch.png  bytes=152144  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261114T180438Z-vc91-hello.png  bytes=109425  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T001500Z-websearch.png  bytes=141366  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T060816Z-webrender-attempt.png  bytes=101221  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T120556Z-hello.png  bytes=103002  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T120556Z-launch.png  bytes=103437  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T120556Z-webrender.png  bytes=118999  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T120556Z-websearch.png  bytes=103833  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T180413Z-hello.png  bytes=105127  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T180413Z-permission-state.png  bytes=102782  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T180413Z-settings.png  bytes=101029  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261115T180413Z-websearch.png  bytes=100668  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T061000Z-hello.png  bytes=98902  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T061000Z-launch.png  bytes=133561  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T061000Z-webrender.png  bytes=98876  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T061000Z-websearch.png  bytes=98739  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T120600Z-webrender.png  bytes=160325  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T120602Z-launch.png  bytes=235482  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T121139Z-webrender.png  bytes=160325  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T180523Z-hello.png  bytes=223092  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T180523Z-launch.png  bytes=238198  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T180523Z-settings.png  bytes=130602  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T180523Z-webrender.png  bytes=222221  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261116T180523Z-websearch.png  bytes=221595  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-hello.png  bytes=220389  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-launch.png  bytes=235516  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-settings.png  bytes=128013  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-webrender-final.png  bytes=174327  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-webrender.png  bytes=189939  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-websearch2.png  bytes=119693  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-websearch3.png  bytes=232259  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T000434Z-websearch.png  bytes=220389  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181158Z-01-launch.png  bytes=186747  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181304Z-02-hello.png  bytes=168587  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181418Z-03-before-send.png  bytes=120824  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181519Z-03-state.png  bytes=187507  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181559Z-04-pip-tap.png  bytes=223027  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181620Z-04-pip-collapsed.png  bytes=223027  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261117T181853Z-05-webrender-full.png  bytes=294172  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T000546Z-hello.png  bytes=182965  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T000546Z-identity.png  bytes=195183  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T000546Z-pip.png  bytes=213693  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T000546Z-settings.png  bytes=181729  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T000546Z-websearch.png  bytes=183084  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-hello.png  bytes=186047  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-launch.png  bytes=199874  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-permission-state.png  bytes=180547  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-settings.png  bytes=126875  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-settings-scroll2.png  bytes=180547  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-settings-scroll.png  bytes=245166  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T060609Z-websearch.png  bytes=186493  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120446Z-launch.png  bytes=199825  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120523Z-debug-after-type.png  bytes=194803  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120557Z-hello.png  bytes=189358  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120710Z-websearch-debug.png  bytes=190694  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120822Z-websearch.png  bytes=197790  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120853Z-settings.png  bytes=189305  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T120921Z-settings2.png  bytes=130131  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/20261118T121003Z-settings-bottom.png  bytes=184273  type=PNG image data, 1080 x 2400, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/hello_20261115T000244Z.png  bytes=98729  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/launch_20261115T000244Z.png  bytes=134182  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+/root/pocket/docs/pm/screenshots/websearch_20261115T000244Z.png  bytes=134769  type=PNG image data, 2400 x 1080, 8-bit/color RGBA, non-interlace
+=== KEY LOG LINES (verbatim) ===
+    versionCode=115 minSdk=26 targetSdk=34
+    versionName=1.0.115-60631b0
+11-18 07:06:03.213 30548 30581 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 07:06:03.600 30548 30581 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-18 07:06:03.600 30548 30581 D PocketNet: streamChat: loop done, lines=25 data=12
+11-18 07:08:32.395 30548 30593 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 07:08:32.604 30548 30593 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-18 07:08:32.604 30548 30593 D PocketNet: streamChat: loop done, lines=15 data=7
+11-18 07:08:32.606 30548 30593 D WebSearchTool: start query_len=23 max_results=8
+11-18 07:08:34.041 30548 30593 D WebSearchTool: response code=200 html_len=29227 duration_ms=1434
+11-18 07:08:34.045 30548 30593 D WebSearchTool: parsed titles=10 snippets=10
+11-18 07:08:34.050 30548 30593 D WebSearchTool: done result_count=8 duration_ms=1434
+11-18 07:08:36.439 30548 30581 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+=== Settings labels ===
+=== Config import label checks ===
+Config import: True
+Config URL (HTTPS only): True
+Passphrase: True
+Import config: True

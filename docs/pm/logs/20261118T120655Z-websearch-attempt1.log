@@ -1,0 +1,4 @@
+=== composer node post-type ===
+NONE
+=== Send node post-type ===
+<node index="0" text="" resource-id="" class="android.view.View" package="com.sutliff.pocket" content-desc="Send" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[965,2149][1028,2212]" drawing-order="0" hint="" />

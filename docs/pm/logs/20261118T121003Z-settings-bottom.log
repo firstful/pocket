@@ -1,0 +1,24 @@
+=== mCurrentFocus ===
+  mCurrentFocus=Window{87cfe2c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== dialog/permission grep ===
+(none)
+=== Config import label checks ===
+Config import: True
+Config URL (HTTPS only): True
+Passphrase: True
+Import config: True
+=== visible text nodes ===
+Blast radius: this grants system Notification Listener access — Pocket can read titles/bodies of notifications from ALL apps (not just Pocket's). Only messages matching the keyword rule reach the agent.
+Telemetry
+OTEL Logs JSON (otlp_json) — posts {resourceLogs: [{resource: {attributes: [{key: service.name, value: {stringValue: pocket}}]}, scopeLogs: [{logRecords: [...]}]}]} to the endpoint below. Empty endpoint = off (no-op). Fire-and-forget, bounded queue (128). No PII.
+http://192.168.1.2:4318/
+OTEL ingest endpoint
+Format: otlp_json (OTEL Logs)
+Config import
+Fetch configuration from an HTTPS endpoint with a passphrase. The passphrase is sent only in the request body and is cleared immediately after the attempt.
+https://pocket-cfg.homelab.internal/config
+Config URL (HTTPS only)
+Passphrase
+Import config
+Save
+Settings

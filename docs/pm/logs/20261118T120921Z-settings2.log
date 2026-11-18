@@ -1,0 +1,34 @@
+=== live Settings node ===
+<node index="0" text="" resource-id="" class="android.view.View" package="com.sutliff.pocket" content-desc="Settings" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[597,185][660,248]" drawing-order="0" hint="" />
+=== tap coord: 628 216 ===
+=== mCurrentFocus ===
+  mCurrentFocus=Window{87cfe2c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== dialog / permission grep ===
+(none)
+=== FATAL grep ===
+(none)
+=== Settings UI labels check ===
+Config import: False
+Config URL (HTTPS only): False
+Passphrase: False
+Import config: False
+Settings: True
+=== visible text nodes ===
+Inference Server
+http://llm.homelab.internal/v1
+Base URL
+•••••
+API Key
+auto
+Model
+Generation
+0.7
+Temperature
+4096
+Max Tokens
+System Prompt
+You are a helpful assistant running in an Alpine Linux environment on Android.
+System Prompt
+Stream responses
+Appearance
+Settings
