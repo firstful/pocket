@@ -1,0 +1,4 @@
+=== Crypto regression watch — patterns: IV not permitted | caller provided IV | KeyStoreException | AEADBadTagException | self-heal | InvalidKeyException | javax.crypto ===
+=== captured at 2026-11-18T18:22:39Z from 20261118T180529Z-crypto-full.log (349 lines) ===
+
+NO MATCHES for crypto regression patterns

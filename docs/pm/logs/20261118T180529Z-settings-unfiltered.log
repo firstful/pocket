@@ -1,0 +1,250 @@
+11-18 13:21:22.222 26279 26279 I AconfigPackage: android.graphics.pdf.flags is mapped to com.android.mediaprovider
+11-18 13:21:22.222 26279 26279 I AconfigPackage: android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+11-18 13:21:22.222 26279 26279 I AconfigPackage: com.android.adservices.flags is mapped to com.android.adservices
+11-18 13:21:22.222 26279 26279 I AconfigPackage: com.android.sdksandbox.flags is mapped to com.android.adservices
+11-18 13:21:22.222 26279 26279 I AconfigPackage: android.app.sdksandbox.flags is mapped to com.android.adservices
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.uprobestats.flags is mapped to com.android.uprobestats
+11-18 13:21:22.223 26279 26279 I AconfigPackage: android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.rkpd.flags is mapped to com.android.rkpd
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.os.statsd.flags is mapped to com.android.os.statsd
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.scheduling.flags is mapped to com.android.scheduling
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.art.flags is mapped to com.android.art
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.art.rw.flags is mapped to com.android.art
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.libcore is mapped to com.android.art
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.appsearch.flags is mapped to com.android.appsearch
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.media.extractor.flags is mapped to com.android.media
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.media.metrics.flags is mapped to com.android.media
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.media.mainline.flags is mapped to com.android.media
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.system.virtualmachine.flags is mapped to com.android.virt
+11-18 13:21:22.223 26279 26279 I AconfigPackage: com.android.adbd.flags is mapped to com.android.adbd
+11-18 13:21:22.224 26279 26279 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-18 13:21:22.226 26279 26279 D UiAutomationConnection: Created on user UserHandle{0}
+11-18 13:21:22.226 26279 26279 I UiAutomation: Initialized for user 0 on display 0
+11-18 13:21:22.226 26279 26279 W UiAutomation: Created with deprecatead constructor, assumes DEFAULT_DISPLAY
+--------- beginning of system
+11-18 13:21:22.228  1701  2369 D AccessibilityManagerService: changeCurrentUserForTestAutomationIfNeededLocked(0): ignoring because device doesn't support visible background users
+11-18 13:21:22.228  1701  2369 I UiAutomationManager: Registering UiTestAutomationService (id=com.android.server.accessibility/UiAutomation, flags=0x0) when called by user 0
+11-18 13:21:22.228  1701  2369 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:21:22.228  1701  2369 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:21:22.229 31621 32074 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:21:22.230 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.230 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.230 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.231 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.231 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.231 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.231 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.231 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.232  1701  1701 D BatterySaverPolicy: accessibility changed to true, updating policy.
+11-18 13:21:22.233 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.233 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.233 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.233 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:21:22.233 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.233 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.233 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.233 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.234 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.234 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.234 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.236  1701  2543 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:21:22.236 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:21:22.236  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:21:22.236  1701  2543 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:21:22.237 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.237 31621 31660 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:21:22.238 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.238 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.238 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.238  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:21:22.239 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.240 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.240 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.240 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.240 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.240 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.240 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.240 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.240 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:21:22.240 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.241 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:22.241 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:22.241 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:22.241 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:22.241 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.241 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.241 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.242 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:22.243  1701  3320 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=0, userId=0}
+11-18 13:21:22.243  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:21:22.264  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:22.357  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:22.358  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:22.358  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:22.701  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:21:21:697 - 13:21:22:701, duration: 1003, le_adv_count: 1, total_le_adv_count: 178939, total_event_count: 0
+11-18 13:21:22.948  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.5531 raw data: VIRTUAL-NEUTRAL:25553.1 VIRTUAL-NEUTRAL-SKIN2:25290.8 VIRTUAL-QUIET-NEUTRAL:24621.2 VIRTUAL-SKIN:25553.1 disp_therm:24551 gnss_tcxo_therm:26143 neutral_therm:24785 quiet_therm:24551 skin_therm1:26120 skin_therm2:26471 
+11-18 13:21:22.955  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.5531 raw data: VIRTUAL-SKIN:25553.1 
+11-18 13:21:22.957  2362  2491 I TemperatureStateSource: temperature was set
+11-18 13:21:22.957  2362  2491 D ImpulseStateSource: Notify clients: 96166
+11-18 13:21:22.958  2362  2491 D ImpulseConnection: bindService: com.google.android.apps.turbo
+11-18 13:21:22.978  1701  3319 D ActivityManager: sync unfroze 9026 com.google.android.apps.turbo for 6
+11-18 13:21:22.991  2362  2362 D ImpulseConnection: onServiceConnected: ComponentInfo{com.google.android.apps.turbo/com.google.android.apps.turbo.adaptiveplatform.impulse.ImpulseClientService} service is null false
+11-18 13:21:22.994  1701  3319 W ProcessStats: Tracking association SourceState{acedf30 com.google.android.pixelsystemservice/10284 ImpFg #710801} whose proc state 5 is better than process ProcessState{ca72e09 com.google.android.apps.turbo/10131 pkg=com.google.android.apps.turbo} proc state 14 (0 skipped)
+11-18 13:21:23.248 26279 26279 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-18 13:21:23.248 26279 26279 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-18 13:21:23.245 26279 26279 W uiautomator: type=1400 audit(0.0:15170): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:21:23.245 26279 26279 W uiautomator: type=1400 audit(0.0:15171): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:21:23.308 26279 26279 W AccessibilityNodeInfoDumper: Fetch time: 56ms
+11-18 13:21:23.310  1701  3319 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:21:23.311  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:21:23.312  1701  3319 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:21:23.312  1701  3319 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:21:23.312  1701  3319 D AccessibilityManagerService: restoreCurrentUserForTestAutomationIfNeededLocked(): ignoring because device doesn't support visible background users
+11-18 13:21:23.313 31621 31660 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:21:23.314 26279 26289 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:21:23.314 26279 26291 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:21:23.314 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:23.314 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:23.314 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:23.314 26279 26298 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:21:23.315 26279 26279 D AndroidRuntime: Shutting down VM
+11-18 13:21:23.315 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:23.315 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:23.315 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:23.315 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:23.315 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:23.316 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:23.316 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:23.316 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:23.316 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:21:23.316 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:23.316 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:21:23.316 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:21:23.316 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:21:23.317 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:21:23.317 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:23.318 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:23.318 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:23.318 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:21:23.318  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:21:23.319  1701  1701 D BatterySaverPolicy: accessibility changed to false, updating policy.
+11-18 13:21:24.292  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:cat /sdcard/w.xml'
+11-18 13:21:25.364  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:25.456  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:25.457  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:25.457  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:25.746 32167 26210 I NearbyMediums: Found Fast Ble Advertisements :
+11-18 13:21:25.746 32167 26210 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x41 0x51 0x43 0x11 0x32 0xd3 0x43 0x08 0x30 0xb6 0x06 0xc5 0xaf 0xd3 0x0a 0xf0 0xdf 0xb2 0x24 0x6c 0x2a ], deviceToken=[ 0x93 0x71 ], rxAdvertisement=null } : 1 times.
+11-18 13:21:25.746 32167 26210 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x42 0x53 0x49 0x36 0x11 0x32 0x56 0xc5 0x95 0xe7 0xe9 0x93 0x62 0xb3 0x6c 0xe0 0x8d 0x79 0x03 0x57 0xc8 0x49 ], deviceToken=[ 0x52 0xc3 ], rxAdvertisement=null } : 1 times.
+11-18 13:21:25.746 32167 26210 I NearbyMediums: Total 2 fast advertisements from 2 unique advertisers.
+11-18 13:21:25.747 32167 26210 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:21:25.750 32167 26301 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@94ae42e size=2 contents="\365\317">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-18 13:21:25.750 32167 26301 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@94ae42e size=2 contents="\365\317">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 8BY4 and EndpointInfo [ 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ]).
+11-18 13:21:25.751 32167 26301 I NearbyConnections: ClientProxy(190125779) reporting onEndpointLost(8BY4)
+11-18 13:21:25.752 32167 26301 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=8BY4)
+11-18 13:21:25.753 32167 26210 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Lost(endpointId=8BY4)
+11-18 13:21:26.257 32167 26210 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportLost(id=12).
+11-18 13:21:26.258 32167 26210 I NearbySharing: NearbySharing Internal event ReceiverLost(receiverId=12)
+11-18 13:21:26.258 32167 26302 I NearbySharing: SendProvider: SendManager event Lost(receiverId=12)
+11-18 13:21:26.259 32167 26301 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetLost()
+11-18 13:21:26.263 32167 32167 I NearbySharing: ShortcutInfoManager removed shortcut Reed's Pixel 8a
+11-18 13:21:26.268  1701  1799 W NotificationHistory: Attempted to remove conversation for locked/gone/disabled user 0
+11-18 13:21:28.040 32167 26301 I NearbyConnections: Found BleAdvertisement [ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ] (with EndpointId 8BY4 and EndpointInfo [ 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ])
+11-18 13:21:28.041 32167 26301 I NearbyConnections: ClientProxy(190125779 0p:com.google.android.gms.nearby.sharing) reporting onEndpointFound(8BY4)
+11-18 13:21:28.042 32167 26301 I NearbyConnections: ClientProxy(190125779) reporting onEndpointDistanceChanged(8BY4, UNKNOWN)
+11-18 13:21:28.045 32167 26301 I NearbySharing: NearbySharing Internal event EndpointDiscovered(endpointId=8BY4)
+11-18 13:21:28.069 32167 26303 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Discovered(endpointId=8BY4, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>))
+11-18 13:21:28.069 32167 26303 I NearbySharing: [NS_DEBUG] Dedupped: same endpoint ID 8BY4
+11-18 13:21:28.069 32167 26303 I NearbySharing: [NS_DEBUG] previous receiver info ReceiverInfo(endpointIds=[DiscoveryEndpoint(id=8BY4, origin=NEARBY_CONNECTIONS)], metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>), state=Tomb(delayedStateChangeJob=klgo{Active}@7d2d6bf))
+11-18 13:21:28.069 32167 26303 I NearbySharing: NearbySharing Internal event ReceiverEndpointMapping(endpointId=8BY4, receiverId=12)
+11-18 13:21:28.074 32167 26306 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportDiscovered(id=12, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>)).
+11-18 13:21:28.074 32167 26306 I NearbySharing: NearbySharing Internal event ReceiverDiscovered(receiverId=12, deviceName=Reed's Pixel 8a, isKnown=true, isSelfShare=true, deviceType=1, hasMatchingQrCode=false, isExternal=false, providerName=null, providerId=null, cloudReceiverSessionId=null, cloudSharingId=null)
+11-18 13:21:28.075 32167 26303 I NearbySharing: SendProvider: SendManager event Discovered(receiverId=12, receiverMetadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>))
+11-18 13:21:28.075 32167 26303 I NearbySharing: SendProvider: SendManager event DistanceChanged(receiverId=12, distance=1, rangingData=null)
+11-18 13:21:28.075 32167 26306 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDiscovered()
+11-18 13:21:28.075 32167 26306 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDistanceChanged() with distance: 1, rangingData: null
+11-18 13:21:28.094 32167 32167 I NearbySharing: ShortcutInfoManager added shortcut Reed's Pixel 8a
+11-18 13:21:28.464  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:28.581  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:28.582  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:28.583  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:29.027  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:21:28:026 - 13:21:29:027, duration: 1000, le_adv_count: 1, total_le_adv_count: 178940, total_event_count: 1
+11-18 13:21:31.590  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:31.715  1054  1149 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 125 ms
+11-18 13:21:31.756  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:31.757  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:31.757  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:32.915  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:32.960  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.5451 raw data: VIRTUAL-NEUTRAL:25545.1 VIRTUAL-NEUTRAL-SKIN2:25274.7 VIRTUAL-QUIET-NEUTRAL:24565.3 VIRTUAL-SKIN:25545.1 disp_therm:24551 gnss_tcxo_therm:26120 neutral_therm:24762 quiet_therm:24481 skin_therm1:26143 skin_therm2:26471 
+11-18 13:21:32.963  2362  3768 D ImpulseStateSource: Notify clients: 96167
+11-18 13:21:34.764  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:34.882  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:34.883  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:34.883  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:35.752 32167 26301 I NearbyMediums: Found Fast Ble Advertisements :
+11-18 13:21:35.752 32167 26301 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null } : 1 times.
+11-18 13:21:35.752 32167 26301 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x42 0x53 0x49 0x36 0x11 0x32 0x56 0xc5 0x95 0xe7 0xe9 0x93 0x62 0xb3 0x6c 0xe0 0x8d 0x79 0x03 0x57 0xc8 0x49 ], deviceToken=[ 0x52 0xc3 ], rxAdvertisement=null } : 1 times.
+11-18 13:21:35.752 32167 26301 I NearbyMediums: Total 2 fast advertisements from 2 unique advertisers.
+11-18 13:21:35.753 32167 26301 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:21:35.756 32167 26306 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x41 0x51 0x43 0x11 0x32 0xd3 0x43 0x08 0x30 0xb6 0x06 0xc5 0xaf 0xd3 0x0a 0xf0 0xdf 0xb2 0x24 0x6c 0x2a ], deviceToken=[ 0x93 0x71 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@444cdc0 size=2 contents="\223q">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-18 13:21:35.756 32167 26306 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x41 0x51 0x43 0x11 0x32 0xd3 0x43 0x08 0x30 0xb6 0x06 0xc5 0xaf 0xd3 0x0a 0xf0 0xdf 0xb2 0x24 0x6c 0x2a ], deviceToken=[ 0x93 0x71 ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@444cdc0 size=2 contents="\223q">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 8AQC and EndpointInfo [ 0x32 0xd3 0x43 0x08 0x30 0xb6 0x06 0xc5 0xaf 0xd3 0x0a 0xf0 0xdf 0xb2 0x24 0x6c 0x2a ]).
+11-18 13:21:35.757 32167 26306 I NearbyConnections: ClientProxy(190125779) reporting onEndpointLost(8AQC)
+11-18 13:21:35.760 32167 26303 I NearbySharing: NearbySharing Internal event EndpointLost(endpointId=8AQC)
+11-18 13:21:35.860 32167 26210 W QAWalletSvc: No wallet cards to return. [CONTEXT service_id=79 ]
+11-18 13:21:36.161  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:21:35:160 - 13:21:36:161, duration: 1000, le_adv_count: 1, total_le_adv_count: 178941, total_event_count: 1
+11-18 13:21:37.227  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input tap 628 216'
+11-18 13:21:37.291 23244 23244 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-18 13:21:37.291 23244 23244 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-18 13:21:37.308   557   557 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-18 13:21:37.356   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-18 13:21:37.356   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-18 13:21:37.356   557   557 I citadeld: Recorded atom for RPC call
+11-18 13:21:37.358   557   557 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-18 13:21:37.363   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-18 13:21:37.363   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-18 13:21:37.363   557   557 I citadeld: Recorded atom for RPC call
+11-18 13:21:37.367   557   557 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-18 13:21:37.379   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-18 13:21:37.380   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-18 13:21:37.380   557   557 I citadeld: Recorded atom for RPC call
+11-18 13:21:37.381   557   557 D libnos_datagram: Calling App 0x02 with params 0x000b
+11-18 13:21:37.385   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-18 13:21:37.385   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 11 app_status = 0
+11-18 13:21:37.385   557   557 I citadeld: Recorded atom for RPC call
+11-18 13:21:37.386   557   557 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-18 13:21:37.390   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-18 13:21:37.390   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-18 13:21:37.390   557   557 I citadeld: Recorded atom for RPC call
+11-18 13:21:37.890   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-18 13:21:37.891  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:37.924   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-18 13:21:37.969  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:21:37.970  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:21:37.970  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:21:37.993  2362  2675 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-18 13:21:37.993  2362  2675 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-18 13:21:40.437  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-18 13:21:40.593 26318 26318 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-18 13:21:40.594 26318 26318 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 13:21:40.594 26318 26318 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 13:21:40.902  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:21:40.975  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:21:40.976  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

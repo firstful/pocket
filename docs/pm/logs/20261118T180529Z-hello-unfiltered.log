@@ -1,0 +1,200 @@
+11-18 13:06:04.241  2882 22513 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-18 13:06:04.242  2882 22506 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:06:04.242  2882 22506 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:06:04.242  2882 22506 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:06:04.242  2882 22506 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:06:04.243  2882 22513 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-18 13:06:04.243  2882 22513 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-18 13:06:04.243  2882 22513 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:06:04.243  2882 22513 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:06:04.243  2882 22513 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-18 13:06:04.243  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:06:04.243  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.243  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.243  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:06:04.250  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:06:04.250  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:06:04.250  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:06:04.251  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:06:04.251  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:06:04.251  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.251  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:06:04.252  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.252  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:06:04.252  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:06:04.252  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:06:04.252  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:06:04.252  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:06:04.253  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.253  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{26099bf V.E...... ........ 0,0-1080,116}
+11-18 13:06:04.253  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.254  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{6d304d9 V.E...... ........ 0,0-1080,826}
+11-18 13:06:04.254  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.254  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-18 13:06:04.254  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.254  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-18 13:06:04.254  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:06:04.254  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-18 13:06:04.254  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@c91c9f0, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:06:04.254  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@53a4b69, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:06:04.254  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@a0b0a9e, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:06:04.254  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@823d97f, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:06:04.256  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@90249ee, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:06:04.256  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@4942e8f, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:06:04.256  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@4a68e9b, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:06:04.256  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@1402238, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:06:04.256  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.256  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:06:04.256  2882  2882 W NgaExtension: NgaExtension.handleUiCommand():1116 cannot update UI in state NgaState{connected=true, keyboardVisible=true, dictationEligible=false, currentFieldEligibilityUpToDate=true, dictating=false, languageIndicatorVisible=false, keyboardTypeSupported=true, config=# kqj@adbafd8a, clientType=1, eligibilityByLanguageTag={}, currentEligibility=10, autoStarted=false} [SDG]
+11-18 13:06:04.256  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-18 13:06:04.256  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:06:04.256  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-18 13:06:04.256  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.257  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:06:04.257  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.257  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.257  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:06:04.265  1701  1789 I ImeTracker: system_server:553d1505: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-18 13:06:04.285 22447 22447 I ImeTracker: system_server:553d1505: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-18 13:06:04.288  1701  2300 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:06:04.288  1701  2300 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:06:04.420  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1857 onFinishInputView(false)
+11-18 13:06:04.421  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-18 13:06:04.422  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-18 13:06:04.422  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:06:04.422  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-18 13:06:04.422  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-18 13:06:04.422  2882 22506 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-18 13:06:04.423  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-18 13:06:04.423  1701  1785 D HintManagerService: Sent cleanup message for uid 10192
+11-18 13:06:04.423  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@acc6904 was not registered for notification class qbc
+11-18 13:06:04.423  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-18 13:06:04.423  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-18 13:06:04.423  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-18 13:06:04.423  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 PasswordIme.onDeactivate()
+11-18 13:06:04.424  2882  2882 I PrimesLoggerHolder: FrameMetricServiceImpl.stopAsFuture():215 Measurement not found: OnConfigurationChanged
+11-18 13:06:04.424  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-18 13:06:04.424  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowHidden():2621 
+11-18 13:06:04.425  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-18 13:06:04.425  2882  2882 I ImeTracker: com.sutliff.pocket:4998fcda: onHidden
+11-18 13:06:04.430  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-18 13:06:04.440  1701  2300 I ImeTracker: system_server:e9d9a6de: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-18 13:06:04.440  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:06:04.440  1701  1788 I ImeTracker: system_server:e9d9a6de: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 13:06:04.440  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.440  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:06:04.440  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:06:04.595   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-18 13:06:04.628   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-18 13:06:04.703  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:06:04.778  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:06:04.778  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:06:04.778  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:06:05.023  2882 22504 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardHidden():289 Keyboard closed, ending dictation. [SD]
+11-18 13:06:05.147 32167 22406 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-18 13:06:05.147 32167 22406 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:06:05.425 32265  8028 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-18 13:06:05.425 32265  8028 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-18 13:06:05.426 32265  8028 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-18 13:06:05.426 32265  8028 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-18 13:06:05.426  2882 22514 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager.closeStream():110 Closing stream. [SDG]
+11-18 13:06:05.427  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-18 13:06:05.427  2882 22514 I Interaction: Interaction$KeyboardEventStreamObserver.onCompleted():143 Interaction#151 completed by the client [SD]
+11-18 13:06:05.428  2882 22429 I Interaction: Interaction.shutdownAndForget():91 Shutting down Interaction#151 [SD]
+11-18 13:06:05.428  2882 22429 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-18 13:06:05.428  2882 22429 I InteractionManager: InteractionManager.forgetInteraction$<anonymous>():50 Forgetting Interaction#151 [SD]
+11-18 13:06:05.866  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Device Pickup Sensor] requestSensorEvents: sensor 0x10001, period=20 latency=100m
+11-18 13:06:05.866  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:6).
+11-18 13:06:06.496  1701  2012 D ActivityManager: freezing 13617 com.google.android.settings.intelligence
+11-18 13:06:06.503  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-18 13:06:06.506  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-18 13:06:06.506  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10121} in 5ms
+11-18 13:06:06.809  2472  2489 W nnon.imsservice: Reducing the number of considered missed Gc histogram windows from 116 to 100
+11-18 13:06:06.831 22447 22465 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 13:06:06.832 22447 22465 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795025163-D0ZZH8tRxkkvg8SN15su","object":"chat.completion.chunk","created":1795025163,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-18 13:06:06.995  2362  2491 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-18 13:06:07.346 22447 22465 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-18 13:06:07.346 22447 22465 D PocketNet: streamChat: loop done, lines=21 data=10
+11-18 13:06:07.784  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:06:07.865  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 4: Enabled 0, odr_index 0.
+11-18 13:06:07.865  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 5 Intr: 60.
+11-18 13:06:07.865  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 430420ns.
+11-18 13:06:07.866  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Stationary Detect (active:-1).
+11-18 13:06:07.866  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 2037: USF: Sampling configuration 5849 not found.
+11-18 13:06:07.867  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 161: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:07.868  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:1).
+11-18 13:06:07.868  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 3: Enabled 1, odr_index 1.
+11-18 13:06:07.868  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 5 Intr: 60.
+11-18 13:06:07.868  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 512939ns.
+11-18 13:06:07.869  1278  1278 D AOC     : A3:MSG: motion_state_sensor.cc, 327: USF: MoSt: MotionDetect sampling started with sampling ID 5854.
+11-18 13:06:07.869  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:2).
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR FreeFall Detect (active:0).
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 5: Enabled 0, odr_index 0.
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 5 Intr: 60.
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 319336ns.
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Stationary Detect (active:-1).
+11-18 13:06:07.871  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 2037: USF: Sampling configuration 5852 not found.
+11-18 13:06:07.871  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 145: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:07.892  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:06:07.893  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:06:07.893  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:06:08.315  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Gyroscope (active:3).
+11-18 13:06:08.315  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 1: Enabled 1, odr_index 3.
+11-18 13:06:08.315  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/52/13/6 WM: 2 Intr: 52.
+11-18 13:06:08.315  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 428223ns.
+11-18 13:06:08.319  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for MMC56X3X Magnetometer (active:2).
+11-18 13:06:08.319  1278  1278 D AOC     : A3:MSG: mmc56x3x_device.cc, 409: USF: MMC56X3X0: mmc56x3x_enable_measure odr = 10.
+11-18 13:06:08.676  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795025139137
+11-18 13:06:09.268  1023  1085 D CHRE    : @ 961636.378: [ActivityPlatform] type 4, confidence 90
+11-18 13:06:09.903  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795025139137
+11-18 13:06:10.902  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:06:11.016  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:06:11.017  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:06:11.017  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:06:12.015  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.3283 raw data: VIRTUAL-NEUTRAL:25328.3 VIRTUAL-NEUTRAL-SKIN2:25014.2 VIRTUAL-QUIET-NEUTRAL:24230.1 VIRTUAL-SKIN:25328.3 disp_therm:24106 gnss_tcxo_therm:26003 neutral_therm:24410 quiet_therm:24153 skin_therm1:26050 skin_therm2:26424 
+11-18 13:06:12.018  2362  2675 D ImpulseStateSource: Notify clients: 96075
+11-18 13:06:12.193  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-18 13:06:12.344 22617 22617 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-18 13:06:12.345 22617 22617 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 13:06:12.345 22617 22617 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 13:06:12.448  1023  1085 D CHRE.HAL: Received a nanoapp message from 0x476f6f676c00100b endpoint 0x26: Type 0x401 size 219 
+11-18 13:06:12.449  1023  1085 I CHRE    : @ 961639.561: [AR] transition: walking exit
+11-18 13:06:12.449  1023  1085 I CHRE    : @ 961639.561: [AR] transition: still enter
+11-18 13:06:12.449  1023  1085 I CHRE    : @ 961639.561: [AR] send to host, reason=2, sampleSize=11, transitionSize=2, lastAccelTime = 961645175, lastAudioTime = 0 
+11-18 13:06:12.449  1023  1085 I CHRE    : @ 961639.561: [NanoMinion] sent MSG Type 0x72, Version 0, 211 bytes, MessageId 172
+11-18 13:06:12.449  1023  1085 D CHRE    : @ 961639.562: [ActivityPlatform] type 4, confidence 92
+11-18 13:06:12.470  1023  1085 D CHRE    : @ 961639.584: Nanoapp list request from client ID 1
+11-18 13:06:12.471  1023  1085 D CHRE.HAL: Received a nanoapp list response for client 1
+11-18 13:06:12.479  1701  3319 W AppOps  : Noting op not finished: uid 10112 pkg com.google.android.apps.scone code 79 startTime of in progress event=1795017294749
+11-18 13:06:12.487  1701  3323 W AppOps  : Noting op not finished: uid 10127 pkg com.google.android.apps.carrier.carrierwifi code 79 startTime of in progress event=1794934671219
+11-18 13:06:12.490 11291 11340 D SconeAwareness: Awareness received [com.google.android.apps.scone.action.ActivityTransitionAction] action.
+11-18 13:06:12.491 11291 11340 W Bundle  : Key com.google.android.location.internal.EXTRA_ACTIVITY_TRANSITION_RESULT expected android.os.Parcelable but value was of a different type.  The default value <null> was returned.
+11-18 13:06:12.492 11291 11340 W Bundle  : Attempt to cast generated internal exception:
+11-18 13:06:12.492 11291 11340 W Bundle  : java.lang.ClassCastException: Cannot cast [B to android.os.Parcelable
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at java.lang.Class.cast(Class.java:4190)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.os.BaseBundle.getValueAt(BaseBundle.java:434)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.os.BaseBundle.getValue(BaseBundle.java:396)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.os.BaseBundle.getValue(BaseBundle.java:380)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.os.BaseBundle.get(BaseBundle.java:773)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.os.Bundle.getParcelable(Bundle.java:1109)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at android.content.Intent.getParcelableExtra(Intent.java:9727)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at com.google.android.apps.scone.awareness.AwarenessReceiver.a(PG:17)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at caa.run(PG:1908)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at ikn.run(PG:7)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at kzp.run(PG:44)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at hvn.run(PG:589)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at java.lang.Thread.run(Thread.java:1571)
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at ilz.run(PG:58)
+11-18 13:06:12.492 15268 15268 I GWP-MobilityDetectionSe: ActivityTransition received: STILL
+11-18 13:06:12.493  1701  2086 D WifiConnectivityManager: PNO Scan Interval changed to 60000 ms.
+11-18 13:06:12.497 11291 11340 D SconeAwareness: Awareness received [com.google.android.apps.scone.action.ActivityTransitionAction] action and try to relay info
+11-18 13:06:12.497 11291 11340 W JobInfo : Job 'com.google.android.apps.scone/.awareness.AwarenessJobIntentService#188052156' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-18 13:06:12.498 11291 11358 D SconeAwareness: handleIntent com.google.android.apps.scone.action.ActivityTransitionAction
+11-18 13:06:12.499  1701  2543 W JobInfo : Job 'com.google.android.apps.scone/.awareness.AwarenessJobIntentService#188052156' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-18 13:06:12.512 11291 22032 E SconeAwareness: ActivityTransition extractResult return
+11-18 13:06:12.586  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Significant Motion] requestSensorEvents: sensor 0x20002, period=18446744073709 la
+11-18 13:06:12.586  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:3).
+11-18 13:06:12.587  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Significant Motion] stopSensorEvents: sensor 0x10001
+11-18 13:06:12.588  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:6).
+11-18 13:06:12.749  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:06:12.897  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

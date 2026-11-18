@@ -1,0 +1,19 @@
+Web search result observed on-device via uiautomator UI text dump during scroll
+(captured live 2026-11-18 ~18:14Z; this file transcribes what was displayed).
+
+From the web_search query "Use web_search to find who is the current US president":
+
+  TIER:ddg
+  1. President of the United States - Wikipedia
+     URL: https://en.wikipedia.org/wiki/President_of_the_United_States
+     The president of the Un...
+
+Corroborating logcat (20261118T180529Z-websearch-tool.log / -websearch.log):
+  11-18 13:10:15.345 D WebSearchTool: start query_len=38 max_results=8
+  11-18 13:10:16.555 D WebSearchTool: response code=200 html_len=30472 duration_ms=1207
+  11-18 13:10:16.571 D WebSearchTool: parsed titles=10 snippets=10
+  11-18 13:10:16.582 D WebSearchTool: done result_count=8 duration_ms=1207
+
+Note: a first web_search attempt hit a TLS "Connection reset" (java.net.SocketException)
+during handshake; the tool retried and the second attempt returned real titled/URL
+results (DuckDuckGo tier), shown above. No timeout, no "No results found".

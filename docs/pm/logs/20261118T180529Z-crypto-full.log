@@ -1,0 +1,349 @@
+--------- beginning of main
+11-18 13:22:28.003  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input tap 540 1728'
+--------- beginning of system
+11-18 13:22:28.070 23244 23244 D InsetsController: show(ime())
+11-18 13:22:28.070 23244 23244 I ImeTracker: com.sutliff.pocket:9560cb02: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-18 13:22:28.070 23244 23244 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-18 13:22:28.072  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-18 13:22:28.072  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-18 13:22:28.073  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=8081, inputTypeString=Password[AutoCorrect], enableLearning=false, autoCorrection=false, autoComplete=true, imeOptions=2000006, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=null, hintLocales=[], initialToolType=1}}, false)
+11-18 13:22:28.073  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=126
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=0, callback=cwj@6f11cad, lastModifier=0, keyCodes=[57, 57], actions=[1, 0]}
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=0, callback=cwj@6341be2, lastModifier=0, keyCodes=[58, 58], actions=[1, 0]}
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020441, callback=ggc@1057a30, lastModifier=2, keyCodes=[48], actions=[0]}
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020441, callback=ggc@c931109, lastModifier=2, keyCodes=[48], actions=[0]}
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020441, callback=ggc@bafd6a9, lastModifier=2, keyCodes=[48], actions=[0]}
+11-18 13:22:28.075  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020441, callback=ggc@fc52f0e, lastModifier=2, keyCodes=[48], actions=[0]}
+11-18 13:22:28.075  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:22:28.076 23244 23244 I ImeTracker: com.sutliff.pocket:ca4fc92b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-18 13:22:28.076 23244 23244 D InsetsController: show(ime())
+11-18 13:22:28.076 23244 23244 I ImeTracker: com.sutliff.pocket:ca4fc92b: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+11-18 13:22:28.076  2882 26442 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-18 13:22:28.076  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=8081, inputTypeString=Password[AutoCorrect], enableLearning=false, autoCorrection=false, autoComplete=true, imeOptions=2000006, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-18 13:22:28.076  2882  2882 W SessionManager: SessionManager.beginSession():73 Try to begin an already begun session [INPUT_SESSION], end it first
+11-18 13:22:28.077  1701  3323 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-18 13:22:28.077  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=126
+11-18 13:22:28.077  2882 26442 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-18 13:22:28.078  1701  3323 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-18 13:22:28.078  2882 26448 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-18 13:22:28.080 32265 32274 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-18 13:22:28.080 32265 32274 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-18 13:22:28.080  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-18 13:22:28.081  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=8081, inputTypeString=Password[AutoCorrect], enableLearning=false, autoCorrection=false, autoComplete=true, imeOptions=2000006, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=false, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}}, false)
+11-18 13:22:28.081  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-18 13:22:28.081  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-18 13:22:28.081  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-18 13:22:28.081  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-18 13:22:28.082  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=false
+11-18 13:22:28.082  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: und-Latn-x-password, password
+11-18 13:22:28.082  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-18 13:22:28.082  2882  2882 I AbstractIme: AbstractIme.onActivate():111 PasswordIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=8081, inputTypeString=Password[AutoCorrect], enableLearning=false, autoCorrection=false, autoComplete=true, imeOptions=2000006, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=false, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}, IncognitoMode = false, DeviceLocked = false
+11-18 13:22:28.082  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-18 13:22:28.082  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=password, language=und-Latn-x-password, languageTag=und-Latn-x-password, processedConditions={language=en-US, variant=qwerty, enable_number_row=true, device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row_in_password=true}, className=com.google.android.libraries.inputmethod.ime.password.PasswordIme, label=2132019290, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=null, displayAppCompletions=false, extraValues=pun{}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=false, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=2132083600, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@e0cd7d5a), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=false}
+11-18 13:22:28.082  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=password, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-18 13:22:28.082  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-18 13:22:28.082  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-18 13:22:28.082  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-18 13:22:28.082  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPasswordKeyboard@7120839
+11-18 13:22:28.082  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-18 13:22:28.083  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.084  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=false, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=false, enable_secondary_symbols=false, enable_number_row=true, show_suggestion_strip=true}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=1}, className=.latin.keyboard.LatinPasswordKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e02df, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@18509e3, BODY=pfv@73a8fe0, FLOATING_CANDIDATES=pfv@305b299}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.11 fontWeightAdjustment=0}
+11-18 13:22:28.084  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.088  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-18 13:22:28.088  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@6b0bd4b
+11-18 13:22:28.088  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-18 13:22:28.088  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-18 13:22:28.088  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-18 13:22:28.089  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.089  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-18 13:22:28.089  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+11-18 13:22:28.089  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-18 13:22:28.089  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:22:28.089  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-18 13:22:28.089  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-18 13:22:28.089  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-18 13:22:28.090  2882 26445 I DictationHelper: DictationHelper.keyboardActiveSession():98 #keyboardActiveSession [SD]
+11-18 13:22:28.090  2882  2882 I OnBackCallbackManagerExtension: OnBackCallbackManagerExtension.updateDispositionForBack():226 setBackDisposition: 0
+11-18 13:22:28.090  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onActivate():63 onActivate() [UD]
+11-18 13:22:28.090  2882 26451 I InteractionManager: InteractionManager.startInteraction$<anonymous>$<anonymous>():37 #startInteraction [SD]
+11-18 13:22:28.090  2882 26451 I Interaction: Interaction.start():56 Starting Interaction#156 [SD]
+11-18 13:22:28.091  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:22:28.091  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-18 13:22:28.091  2882 26442 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-18 13:22:28.091  2882  2882 D ImeBackCallbackSender: Register OnBackInvokedCallback with priority=-1 at app window (packageName=com.sutliff.pocket)
+11-18 13:22:28.091  2882 26453 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-18 13:22:28.091  2882 26452 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:22:28.091  2882 26442 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-18 13:22:28.093  2882 26454 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:22:28.093  2882  2882 I Surface : Creating surface for consumer unnamed-2882-192 with slotExpansion=1 for 64 slots
+11-18 13:22:28.093  2882 26454 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:22:28.093  2882 26454 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:22:28.093  2882  2882 I Surface : Creating surface for consumer VRI[InputMethod]#192(BLAST Consumer)192 with slotExpansion=1 for 64 slots
+11-18 13:22:28.093  1701  2995 D WindowManager: setClientSurface Surface(name=VRI-InputMethod#5336)/@0xf9d8944 for 1a6faa9 InputMethod
+11-18 13:22:28.093  2882 26454 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:22:28.094  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:22:28.094  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.094  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.094  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:22:28.094  2882 26442 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 3.3e+04 workprofile=false [SD]
+11-18 13:22:28.094  2882 26442 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:22:28.094  2882 26442 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:22:28.094 23244 23244 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@241ed6f
+11-18 13:22:28.094  2882 26442 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-18 13:22:28.094  2882 26442 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():156 #onKeyboardShown scheduled [SD]
+11-18 13:22:28.094  2882 26442 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():159 #onKeyboardShown [SD]
+11-18 13:22:28.095 23244 23290 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@241ed6f
+11-18 13:22:28.095  1701  2543 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:22:28.095  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:22:28.096  1701  3319 D CoreBackPreview: Window{8cc208 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@86824f3, mPriority=0, mIsAnimationCallback=true, mOverrideBehavior=0}
+11-18 13:22:28.104  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{26099bf V.E...... ........ 0,0-1080,116}
+11-18 13:22:28.105  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.105  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{6d304d9 V.E...... ........ 0,0-1080,826}
+11-18 13:22:28.105  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:22:28.105  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-18 13:22:28.105  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-18 13:22:28.105  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:22:28.105  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-18 13:22:28.105  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:22:28.105  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:22:28.106  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: PORTRAIT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-18 13:22:28.106  2035  2185 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: PORTRAIT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: true, top: 1316, left: 0, bottom: 2400, right: 1080}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-18 13:22:28.119  1701  2012 D ActivityManager: freezing 9026 com.google.android.apps.turbo
+11-18 13:22:28.121  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-18 13:22:28.122  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-18 13:22:28.122  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10131} in 1ms
+11-18 13:22:28.175 23244 23244 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,1084] 
+11-18 13:22:28.182  1701  2995 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:22:28.182  1701  2995 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:22:28.233  1701  2995 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:22:28.233  1701  2995 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:22:28.391 23244 23244 I ImeTracker: com.sutliff.pocket:9560cb02: onShown
+11-18 13:22:30.334  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:22:30.481  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys window'
+11-18 13:22:30.543  1701  2543 I ImeTracker: system_server:f41c2f65: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-18 13:22:30.628  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:uiautomator dump /sdcard/w.xml'
+11-18 13:22:30.755 26463 26463 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-18 13:22:30.761 26463 26463 I AndroidRuntime: Using default boot image
+11-18 13:22:30.761 26463 26463 I AndroidRuntime: Leaving lock profiling enabled
+11-18 13:22:30.763 26463 26463 I app_process: Core platform API enforcement disabled by runtime option
+11-18 13:22:30.763 26463 26463 I app_process: Using generational CollectorTypeCMC GC.
+11-18 13:22:30.805 26463 26463 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+11-18 13:22:30.813 26463 26463 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:22:30.813 26463 26463 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/10/icu") succeeded. 
+11-18 13:22:30.813 26463 26463 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt78l.dat
+11-18 13:22:30.814 26463 26463 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:22:30.814 26463 26463 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:22:30.815 26463 26463 I app_process: Priority-to-niceness mapping: 19, 16, 13, 10, 0, -2, -4, -5, -6, -8
+11-18 13:22:30.834 26463 26463 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-18 13:22:30.834 26463 26463 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-18 13:22:30.837 26463 26463 I AconfigPackage: com.android.devicelock.flags is mapped to com.android.devicelock
+11-18 13:22:30.837 26463 26463 I AconfigPackage: android.os.profiling is mapped to com.android.profiling
+11-18 13:22:30.837 26463 26463 I AconfigPackage: android.os.profiling.anomaly.beta.flags is mapped to com.android.profiling
+11-18 13:22:30.837 26463 26463 I AconfigPackage: android.os.profiling.anomaly.flags is mapped to com.android.profiling
+11-18 13:22:30.838 26463 26463 I AconfigPackage: android.provider.flags is mapped to com.android.configinfrastructure
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.server.deviceconfig is mapped to com.android.configinfrastructure
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.uwb.flags is mapped to com.android.uwb
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.ranging.flags is mapped to com.android.uwb
+11-18 13:22:30.838 26463 26463 I AconfigPackage: android.media.swcodec.flags is mapped to com.android.media.swcodec
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.ipsec.flags is mapped to com.android.ipsec
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.icu is mapped to com.android.i18n
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.adservices.ondevicepersonalization.flags is mapped to com.android.ondevicepersonalization
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.google.android.widevine.flags is mapped to com.google.android.widevine
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.healthfitness.flags is mapped to com.android.healthfitness
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.healthfitness.beta is mapped to com.android.healthfitness
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.wifi.flags is mapped to com.android.wifi
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.compos.flags is mapped to com.android.compos
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.bluetooth.beta.flags is mapped to com.android.bt
+11-18 13:22:30.838 26463 26463 I AconfigPackage: com.android.bluetooth.flags is mapped to com.android.bt
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.webapp.flags is mapped to com.android.webapp
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.cellbroadcastreceiver.flags is mapped to com.android.cellbroadcast
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.permission.flags is mapped to com.android.permission
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.nfc.module.flags is mapped to com.android.nfcservices
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.nfc.module.nonexported.flags is mapped to com.android.nfcservices
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.tethering.mainline.beta is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: android.net.http is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.tethering.readonly.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: android.net.vcn is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.net.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.tethering.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.tethering.beta.test is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.nearby.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.net.thread.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: android.net.http.flags is mapped to com.android.tethering
+11-18 13:22:30.839 26463 26463 I AconfigPackage: android.telecom.flags is mapped to com.android.telephonycore
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.internal.telecom.flags is mapped to com.android.telephonycore
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.telephony.flags is mapped to com.android.telephonycore
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.crashrecovery.flags is mapped to com.android.crashrecovery
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.org.conscrypt.flags is mapped to com.android.conscrypt
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.org.conscrypt.net.flags is mapped to com.android.conscrypt
+11-18 13:22:30.839 26463 26463 I AconfigPackage: com.android.npumanager is mapped to com.android.npumanager
+11-18 13:22:30.840 26463 26463 D nativeloader: Load libstats_jni.so using APEX ns com_android_os_statsd for caller /apex/com.android.os.statsd/javalib/framework-statsd.jar: ok
+11-18 13:22:30.840 26463 26463 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.signature.flags is mapped to com.android.mediaprovider
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.providers.media.flags is mapped to com.android.mediaprovider
+11-18 13:22:30.840 26463 26463 I AconfigPackage: android.graphics.pdf.flags is mapped to com.android.mediaprovider
+11-18 13:22:30.840 26463 26463 I AconfigPackage: android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.adservices.flags is mapped to com.android.adservices
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.sdksandbox.flags is mapped to com.android.adservices
+11-18 13:22:30.840 26463 26463 I AconfigPackage: android.app.sdksandbox.flags is mapped to com.android.adservices
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.uprobestats.flags is mapped to com.android.uprobestats
+11-18 13:22:30.840 26463 26463 I AconfigPackage: android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.rkpd.flags is mapped to com.android.rkpd
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.os.statsd.flags is mapped to com.android.os.statsd
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.scheduling.flags is mapped to com.android.scheduling
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.art.flags is mapped to com.android.art
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.art.rw.flags is mapped to com.android.art
+11-18 13:22:30.840 26463 26463 I AconfigPackage: com.android.libcore is mapped to com.android.art
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.appsearch.flags is mapped to com.android.appsearch
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.media.extractor.flags is mapped to com.android.media
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.media.metrics.flags is mapped to com.android.media
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.media.mainline.flags is mapped to com.android.media
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.system.virtualmachine.flags is mapped to com.android.virt
+11-18 13:22:30.841 26463 26463 I AconfigPackage: com.android.adbd.flags is mapped to com.android.adbd
+11-18 13:22:30.841 26463 26463 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-18 13:22:30.842  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:22:30.842 26463 26463 D UiAutomationConnection: Created on user UserHandle{0}
+11-18 13:22:30.842 26463 26463 I UiAutomation: Initialized for user 0 on display 0
+11-18 13:22:30.842 26463 26463 W UiAutomation: Created with deprecatead constructor, assumes DEFAULT_DISPLAY
+11-18 13:22:30.845  1701  2543 D AccessibilityManagerService: changeCurrentUserForTestAutomationIfNeededLocked(0): ignoring because device doesn't support visible background users
+11-18 13:22:30.845  1701  2543 I UiAutomationManager: Registering UiTestAutomationService (id=com.android.server.accessibility/UiAutomation, flags=0x0) when called by user 0
+11-18 13:22:30.845  1701  2543 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:22:30.845  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:22:30.845  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:22:30.845  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:22:30.846  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:22:30.846  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:22:30.846  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:22:30.846  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:22:30.846  1701  2543 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:22:30.847 31621 32074 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.848 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.848 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.848  1701  2543 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:22:30.848 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.849 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:22:30.849 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.849 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:22:30.849  1701  2543 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:22:30.849  1701  2543 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:22:30.849 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:22:30.849 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.849 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.849 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.849 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.849 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.850 31621 32074 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:22:30.850 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.850 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.851  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.851 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.851 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.851 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.851 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.852 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.852 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:22:30.852 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.852 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:30.852 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:30.853 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.853 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.853 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.853 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:30.853  1701  1701 D BatterySaverPolicy: accessibility changed to true, updating policy.
+11-18 13:22:30.854  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:22:30.854  1701  3260 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=0, userId=0}
+11-18 13:22:30.921  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:22:30.922  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:22:30.922  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:22:31.107  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:22:30:075 - 13:22:31:107, duration: 1032, le_adv_count: 2, total_le_adv_count: 178956, total_event_count: 2
+11-18 13:22:31.863 26463 26463 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-18 13:22:31.861 26463 26463 W uiautomator: type=1400 audit(0.0:15178): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:22:31.861 26463 26463 W uiautomator: type=1400 audit(0.0:15179): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:22:31.876 26463 26463 W AccessibilityNodeInfoDumper: Fetch time: 9ms
+11-18 13:22:31.881  1701  3260 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-18 13:22:31.883  1701  3260 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-18 13:22:31.883  1701  3260 D AccessibilityManagerService: restoreCurrentUserForTestAutomationIfNeededLocked(): ignoring because device doesn't support visible background users
+11-18 13:22:31.885 26463 26476 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:22:31.885 26463 26463 D AndroidRuntime: Shutting down VM
+11-18 13:22:31.885 26463 26472 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:22:31.886 26463 26473 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:22:31.889 31621 32074 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-18 13:22:31.892 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:31.892 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:31.892 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:31.892 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:31.893 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:31.893 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:31.893 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:31.893 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:31.893 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:31.894 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:31.894 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:31.894 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-18 13:22:31.894 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:31.894 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-18 13:22:31.894 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-18 13:22:31.894 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-18 13:22:31.895 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-18 13:22:31.895 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:31.896 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:31.896 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:31.897 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-18 13:22:31.900  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:22:31.900  1701  1701 D BatterySaverPolicy: accessibility changed to false, updating policy.
+11-18 13:22:32.867  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:cat /sdcard/w.xml'
+11-18 13:22:33.022  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.3871 raw data: VIRTUAL-NEUTRAL:25387.1 VIRTUAL-NEUTRAL-SKIN2:25178.8 VIRTUAL-QUIET-NEUTRAL:24600.2 VIRTUAL-SKIN:25387.1 disp_therm:24527 gnss_tcxo_therm:25839 neutral_therm:24715 quiet_therm:24551 skin_therm1:25886 skin_therm2:26261 
+11-18 13:22:33.024  2362  2491 D ImpulseStateSource: Notify clients: 96173
+11-18 13:22:33.925  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:22:34.003  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:22:34.003  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:22:34.003  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:22:35.798 32167 26399 I NearbyMediums: Found Fast Ble Advertisements :
+11-18 13:22:35.798 32167 26399 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x41 0x51 0x43 0x11 0x32 0xd3 0x43 0x08 0x30 0xb6 0x06 0xc5 0xaf 0xd3 0x0a 0xf0 0xdf 0xb2 0x24 0x6c 0x2a ], deviceToken=[ 0x93 0x71 ], rxAdvertisement=null } : 1 times.
+11-18 13:22:35.798 32167 26399 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x42 0x53 0x49 0x36 0x11 0x32 0x56 0xc5 0x95 0xe7 0xe9 0x93 0x62 0xb3 0x6c 0xe0 0x8d 0x79 0x03 0x57 0xc8 0x49 ], deviceToken=[ 0x52 0xc3 ], rxAdvertisement=null } : 1 times.
+11-18 13:22:35.798 32167 26399 I NearbyMediums: Total 2 fast advertisements from 2 unique advertisers.
+11-18 13:22:35.800 32167 26399 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:22:37.011  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:22:37.124  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:22:37.125  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:22:37.125  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:22:38.000  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:22:38.297  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:22:37:296 - 13:22:38:297, duration: 1000, le_adv_count: 1, total_le_adv_count: 178957, total_event_count: 1
+11-18 13:22:40.103  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:22:40.130  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47

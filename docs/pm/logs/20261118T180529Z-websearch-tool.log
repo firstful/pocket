@@ -1,0 +1,42 @@
+=== WebSearchTool lines from 20261118T180529Z-websearch.log ===
+11-18 13:10:11.731 23244 23261 D WebSearchTool: start query_len=31 max_results=8
+11-18 13:10:12.253 23244 23261 E WebSearchTool: exception: Connection reset
+11-18 13:10:12.253 23244 23261 E WebSearchTool: java.net.SocketException: Connection reset
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at java.net.SocketInputStream.read(SocketInputStream.java:191)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at java.net.SocketInputStream.read(SocketInputStream.java:143)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.readFromSocket(ConscryptEngineSocket.java:1023)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.processDataFromSocket(ConscryptEngineSocket.java:987)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.-$$Nest$mprocessDataFromSocket(ConscryptEngineSocket.java:0)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket.doHandshake(ConscryptEngineSocket.java:244)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket.startHandshake(ConscryptEngineSocket.java:226)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.connectTls(RealConnection.kt:379)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.establishProtocol(RealConnection.kt:337)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:209)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:93)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$result$1.invokeSuspend(AgentSessionManager.kt:304)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:113)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:589)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:823)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:720)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:707)
+11-18 13:10:15.345 23244 23260 D WebSearchTool: start query_len=38 max_results=8
+11-18 13:10:16.555 23244 23260 D WebSearchTool: response code=200 html_len=30472 duration_ms=1207
+11-18 13:10:16.571 23244 23260 D WebSearchTool: parsed titles=10 snippets=10
+11-18 13:10:16.582 23244 23260 D WebSearchTool: done result_count=8 duration_ms=1207

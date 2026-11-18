@@ -1,0 +1,200 @@
+11-18 13:05:33.183  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-18 13:05:33.184  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-18 13:05:33.184  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-18 13:05:33.184  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.184  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-18 13:05:33.184  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-18 13:05:33.184  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:05:33.184  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-18 13:05:33.184  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-18 13:05:33.184  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-18 13:05:33.184  2882  2882 I OnBackCallbackManagerExtension: OnBackCallbackManagerExtension.updateDispositionForBack():226 setBackDisposition: 0
+11-18 13:05:33.184  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onActivate():63 onActivate() [UD]
+11-18 13:05:33.185  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:05:33.185  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-18 13:05:33.185  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-18 13:05:33.185  2882  2882 D ImeBackCallbackSender: Register OnBackInvokedCallback with priority=-1 at app window (packageName=com.sutliff.pocket)
+11-18 13:05:33.185  2882 22429 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-18 13:05:33.187  2882  2882 W InputContextProxy: InputContextProxy.applyClientDiffInternal():915 Ignore [FetchSuggestions] diff due to stale request: 17539<17543, inputStateId=181, lastInputStateId=183
+11-18 13:05:33.187  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-18 13:05:33.188  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:05:33.188  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.188  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.188  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:05:33.191  1701  2993 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:05:33.191  1701  2993 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:05:33.193 22447 22447 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-18 13:05:33.195  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{753cae V.E...... ........ 0,0-1080,116}
+11-18 13:05:33.195  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.195  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{ea3d646 V.E...... ........ 0,0-1080,725}
+11-18 13:05:33.195  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:05:33.195  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():98 Not show new language banner: no change in enabled input method entries
+11-18 13:05:33.196  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-18 13:05:33.196 22447 22447 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-18 13:05:33.197 22447 22447 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@453c681
+11-18 13:05:33.197 22447 22496 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@453c681
+11-18 13:05:33.197  1701  2993 D CoreBackPreview: Window{5f36a63 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@b6a946f, mPriority=0, mIsAnimationCallback=true, mOverrideBehavior=0}
+11-18 13:05:33.203  8752  8788 I NGSA.GoogleAsrService: #checkModelAvailability
+11-18 13:05:33.204  8752  8788 I DefaultLPManager: #getAvailablePackages
+11-18 13:05:33.204  8752  8788 I huj     : #getDownloadableLanguagePacks
+11-18 13:05:33.208  1701  2813 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:05:33.208  1701  2813 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:05:33.209  8752  8788 I LanguagePackConfigImpl: Loaded languagepack (LP) flag value from latest config autogen_BatchV7071V7072V7075: [en-US3006, de-DE3002, es-ES3000, fr-FR3002, it-IT3000, ja-JP3003, en-AU3003, en-GB3002, en-IE3002, en-SG3001, de-DE3003, fr-FR3003, ja-JP3004, en-US3008, en-US7025, de-DE7012, ja-JP7013, en-AU7010, en-GB7010, en-IE7010, en-SG7010, en-CA7010, fr-FR7007, fr-CA7004, es-ES7002, es-US7002, it-IT7003, en-IN7001, en-US7017, de-DE7008, ja-JP7009, en-AU7005, en-GB7005, en-IE7005, en-SG7005, en-CA7005, en-US7019, de-DE7010, ja-JP7011, en-AU7007, en-GB7007, en-SG7007, en-IE7007, en-CA7007, fr-FR7006, fr-CA7003, es-ES7001, es-US7001, it-IT7002, de-DE7018, en-AU7016, en-CA7017, en-GB7017, en-IE7017, en-IN7008, en-SG7017, en-US7032, es-ES7008, es-US7008, fr-CA7010, fr-FR7013, it-IT7009, ja-JP7019, de-DE7044, en-CA7044, en-GB7044, en-IE7044, en-IN7044, en-SG7044, en-US7044, es-ES7044, es-US7044, fr-CA7044, fr-FR7044, it-IT7044, ja-JP7043, pt-BR3054, cmn-Hans-CN3056, cmn-Hant-TW3056, de-AT3056, de-BE3056, de-CH3056, de-DE3056, en-CA3056, en-IN3056, en-US3056, es-ES3056, es-US3056, fr-BE3056, fr-CA3056, fr-CH3056, fr-FR3056, hi-IN3056, id-ID3056, it-CH3056, it-IT3056, ja-JP3056, ko-KR3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hans-CN3056, id-ID3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hant-TW7054, de-AT7054, de-BE7054, de-CH7054, de-DE7054, en-AU7054, en-CA7054, en-GB7054, en-IE7054, en-IN7054, en-SG7054, en-US7054, es-ES7054, es-US7054, fr-BE7054, fr-CA7054, fr-CH7054, fr-FR7054, hi-IN7054, it-CH7054, it-IT7054, ja-JP7054, pt-BR3054, zh-Hant-TW7054, zh-TW7054, ja-JP3059, id-ID3059, ko-KR3061, pl-PL3059, ru-RU3059, th-TH3059, tr-TR3059, vi-VN3059, en-AU3071, en-CA3071, en-GB3071, en-IE3071, en-SG3071, en-US3072, hi-IN3072, cmn-Hant-TW7071, da-DK7071, de-AT7071, de-BE7071, de-CH7071, de-DE7072, en-AU7075, en-CA7075, en-GB7075, en-IE7075, en-IN7072, en-SG7075, en-US7075, es-ES7071, es-US7072, fr-BE7071, fr-CA7071, fr-CH7071, fr-FR7072, hi-IN7072, it-CH7071, it-IT7071, ja-JP7072, ko-KR7072, nb-NO7071, nl-NL7071, sv-SE7071, zh-Hant-TW7071, zh-TW7071]
+11-18 13:05:33.209  8752  8788 W SystemLPSourceImpl: #getAvailablePackages: Note there is not reason to call this method, as getInstalledPackages() returns the same LanguagePacks for this impl.
+11-18 13:05:33.209  8752  8788 I DefaultLPManager: #getRequestedPackages
+11-18 13:05:33.209  8752  8788 I ZipLPPopulator: #addNewFileGroups
+11-18 13:05:33.209  8752  8788 I huj     : #getDownloadableLanguagePacks
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.212  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.213  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.213  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.213  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.213  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.213  8752  8788 I LanguagePackConfigImpl: Loaded languagepack (LP) flag value from latest config autogen_BatchV7071V7072V7075: [en-US3006, de-DE3002, es-ES3000, fr-FR3002, it-IT3000, ja-JP3003, en-AU3003, en-GB3002, en-IE3002, en-SG3001, de-DE3003, fr-FR3003, ja-JP3004, en-US3008, en-US7025, de-DE7012, ja-JP7013, en-AU7010, en-GB7010, en-IE7010, en-SG7010, en-CA7010, fr-FR7007, fr-CA7004, es-ES7002, es-US7002, it-IT7003, en-IN7001, en-US7017, de-DE7008, ja-JP7009, en-AU7005, en-GB7005, en-IE7005, en-SG7005, en-CA7005, en-US7019, de-DE7010, ja-JP7011, en-AU7007, en-GB7007, en-SG7007, en-IE7007, en-CA7007, fr-FR7006, fr-CA7003, es-ES7001, es-US7001, it-IT7002, de-DE7018, en-AU7016, en-CA7017, en-GB7017, en-IE7017, en-IN7008, en-SG7017, en-US7032, es-ES7008, es-US7008, fr-CA7010, fr-FR7013, it-IT7009, ja-JP7019, de-DE7044, en-CA7044, en-GB7044, en-IE7044, en-IN7044, en-SG7044, en-US7044, es-ES7044, es-US7044, fr-CA7044, fr-FR7044, it-IT7044, ja-JP7043, pt-BR3054, cmn-Hans-CN3056, cmn-Hant-TW3056, de-AT3056, de-BE3056, de-CH3056, de-DE3056, en-CA3056, en-IN3056, en-US3056, es-ES3056, es-US3056, fr-BE3056, fr-CA3056, fr-CH3056, fr-FR3056, hi-IN3056, id-ID3056, it-CH3056, it-IT3056, ja-JP3056, ko-KR3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hans-CN3056, id-ID3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hant-TW7054, de-AT7054, de-BE7054, de-CH7054, de-DE7054, en-AU7054, en-CA7054, en-GB7054, en-IE7054, en-IN7054, en-SG7054, en-US7054, es-ES7054, es-US7054, fr-BE7054, fr-CA7054, fr-CH7054, fr-FR7054, hi-IN7054, it-CH7054, it-IT7054, ja-JP7054, pt-BR3054, zh-Hant-TW7054, zh-TW7054, ja-JP3059, id-ID3059, ko-KR3061, pl-PL3059, ru-RU3059, th-TH3059, tr-TR3059, vi-VN3059, en-AU3071, en-CA3071, en-GB3071, en-IE3071, en-SG3071, en-US3072, hi-IN3072, cmn-Hant-TW7071, da-DK7071, de-AT7071, de-BE7071, de-CH7071, de-DE7072, en-AU7075, en-CA7075, en-GB7075, en-IE7075, en-IN7072, en-SG7075, en-US7075, es-ES7071, es-US7072, fr-BE7071, fr-CA7071, fr-CH7071, fr-FR7072, hi-IN7072, it-CH7071, it-IT7071, ja-JP7072, ko-KR7072, nb-NO7071, nl-NL7071, sv-SE7071, zh-Hant-TW7071, zh-TW7071]
+11-18 13:05:33.213  8752  8788 W SystemLPSourceImpl: #getRequestedPackages: There is not reason to call this method, as the result is always empty.
+11-18 13:05:33.213  8752  8788 I DefaultLPManager: #getAvailablePackages
+11-18 13:05:33.213  8752  8788 I huj     : #getDownloadableLanguagePacks
+11-18 13:05:33.214  8752  8780 I SystemLPSourceImpl: Parsed system partition LanguagePack metadata file: /product/usr/srec/en-US/metadata
+11-18 13:05:33.214  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.214  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.214  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.214  8752  8786 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.216  8752  8788 I LanguagePackConfigImpl: Loaded languagepack (LP) flag value from latest config autogen_BatchV7071V7072V7075: [en-US3006, de-DE3002, es-ES3000, fr-FR3002, it-IT3000, ja-JP3003, en-AU3003, en-GB3002, en-IE3002, en-SG3001, de-DE3003, fr-FR3003, ja-JP3004, en-US3008, en-US7025, de-DE7012, ja-JP7013, en-AU7010, en-GB7010, en-IE7010, en-SG7010, en-CA7010, fr-FR7007, fr-CA7004, es-ES7002, es-US7002, it-IT7003, en-IN7001, en-US7017, de-DE7008, ja-JP7009, en-AU7005, en-GB7005, en-IE7005, en-SG7005, en-CA7005, en-US7019, de-DE7010, ja-JP7011, en-AU7007, en-GB7007, en-SG7007, en-IE7007, en-CA7007, fr-FR7006, fr-CA7003, es-ES7001, es-US7001, it-IT7002, de-DE7018, en-AU7016, en-CA7017, en-GB7017, en-IE7017, en-IN7008, en-SG7017, en-US7032, es-ES7008, es-US7008, fr-CA7010, fr-FR7013, it-IT7009, ja-JP7019, de-DE7044, en-CA7044, en-GB7044, en-IE7044, en-IN7044, en-SG7044, en-US7044, es-ES7044, es-US7044, fr-CA7044, fr-FR7044, it-IT7044, ja-JP7043, pt-BR3054, cmn-Hans-CN3056, cmn-Hant-TW3056, de-AT3056, de-BE3056, de-CH3056, de-DE3056, en-CA3056, en-IN3056, en-US3056, es-ES3056, es-US3056, fr-BE3056, fr-CA3056, fr-CH3056, fr-FR3056, hi-IN3056, id-ID3056, it-CH3056, it-IT3056, ja-JP3056, ko-KR3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hans-CN3056, id-ID3056, pl-PL3056, pt-BR3056, ru-RU3056, th-TH3056, tr-TR3056, vi-VN3056, cmn-Hant-TW7054, de-AT7054, de-BE7054, de-CH7054, de-DE7054, en-AU7054, en-CA7054, en-GB7054, en-IE7054, en-IN7054, en-SG7054, en-US7054, es-ES7054, es-US7054, fr-BE7054, fr-CA7054, fr-CH7054, fr-FR7054, hi-IN7054, it-CH7054, it-IT7054, ja-JP7054, pt-BR3054, zh-Hant-TW7054, zh-TW7054, ja-JP3059, id-ID3059, ko-KR3061, pl-PL3059, ru-RU3059, th-TH3059, tr-TR3059, vi-VN3059, en-AU3071, en-CA3071, en-GB3071, en-IE3071, en-SG3071, en-US3072, hi-IN3072, cmn-Hant-TW7071, da-DK7071, de-AT7071, de-BE7071, de-CH7071, de-DE7072, en-AU7075, en-CA7075, en-GB7075, en-IE7075, en-IN7072, en-SG7075, en-US7075, es-ES7071, es-US7072, fr-BE7071, fr-CA7071, fr-CH7071, fr-FR7072, hi-IN7072, it-CH7071, it-IT7071, ja-JP7072, ko-KR7072, nb-NO7071, nl-NL7071, sv-SE7071, zh-Hant-TW7071, zh-TW7071]
+11-18 13:05:33.216  8752  8788 W SystemLPSourceImpl: #getAvailablePackages: Note there is not reason to call this method, as getInstalledPackages() returns the same LanguagePacks for this impl.
+11-18 13:05:33.216  8752  8788 I DefaultLPManager: #getInstalledPackages
+11-18 13:05:33.216  8752  8788 I huj     : #getInstalledPackages from MDD
+11-18 13:05:33.216  8752  8788 I huj     : #GetLanguagePackList
+11-18 13:05:33.216  8752  8788 I huj     : MDD.getFileGroupsByFilter(langpack-domain_xx-XX_ver_zipfile)
+11-18 13:05:33.217  8752  8781 I SystemLPSourceImpl: Parsed system partition LanguagePack metadata file: /product/usr/srec/en-US/metadata
+11-18 13:05:33.218  8752  8780 I SystemLPSourceImpl: Parsed system partition LanguagePack metadata file: /product/usr/srec/en-US/metadata
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.219  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.220  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.221  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8788 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.222  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7054]: 41. Ignoring it and its associated features.
+11-18 13:05:33.225  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.226  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.226  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.226  8752  8784 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7075]: 41. Ignoring it and its associated features.
+11-18 13:05:33.229  8752  8784 I LPRequestState: [ZipfileRequests] #resolveDesiredLanguagePacks
+11-18 13:05:33.230  8752  8785 I LPRequestState: Assigning language pack Optional.of(LanguagePackDescriptor{locale=en_US, version=7075, installType=ZIPFILE_DOWNLOAD, applicationDomains=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11], featuresForDomains={1=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 2=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 3=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 4=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 5=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 6=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 7=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 9=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 10=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 11=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]}, sizeBytes=150040000, zipfileParams=Optional.of(ZipfileParams{downloadUrl=https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip, hashValueSha1=B1570A8D72B0FA0ED21A36811771BB3859555E33}), readOnlyParams=Optional.absent()}) for request # htt@f197170d
+11-18 13:05:33.231  8752  8786 I LPDownloadSettingsState: Defaulting LP download condition to 2 as user has not edited settings.
+11-18 13:05:33.231  8752  8786 I ZipLPPopulator: MDD.addFileGroup: LanguagePackDescriptor{locale=en_US, version=7075, installType=ZIPFILE_DOWNLOAD, applicationDomains=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11], featuresForDomains={1=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 2=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 3=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 4=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 5=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 6=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 7=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 9=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 10=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 11=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]}, sizeBytes=150040000, zipfileParams=Optional.of(ZipfileParams{downloadUrl=https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip, hashValueSha1=B1570A8D72B0FA0ED21A36811771BB3859555E33}), readOnlyParams=Optional.absent()}
+11-18 13:05:33.232  8752  8785 I ZipLPPopulator: #addNewFileGroups complete
+11-18 13:05:33.232  8752  8786 I ZipLPPopulator: Updated file group for group 'langpack-domain_en-US_7075_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip
+11-18 13:05:33.232  8752  8785 I huj     : #getPendingPackages from MDD
+11-18 13:05:33.232  8752  8785 I huj     : #GetLanguagePackList
+11-18 13:05:33.232  8752  8785 I huj     : MDD.getFileGroupsByFilter(langpack-domain_xx-XX_ver_zipfile)
+11-18 13:05:33.235  8752  8784 I ModelManagerImpl: ModelManager has support for: [de-DE_v7072, ja-JP_v7072, en-AU_v7075, en-GB_v7075, en-IE_v7075, en-SG_v7075, en-CA_v7075, fr-FR_v7072, fr-CA_v7071, es-ES_v7071, es-US_v7072, it-IT_v7071, en-IN_v7072, pt-BR_v3056, de-AT_v7071, de-BE_v7071, de-CH_v7071, fr-BE_v7071, fr-CH_v7071, it-CH_v7071, ru-RU_v3059, da-DK_v7071, nb-NO_v7071, nl-NL_v7071, sv-SE_v7071]
+11-18 13:05:33.235  8752  8784 I ModelManagerImpl: ModelManager pending download for: []
+11-18 13:05:33.235  8752  8784 I ModelManagerImpl: ModelManager has installed: [en-US_v7075]
+11-18 13:05:33.238  2882 22504 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:05:33.239  2882 22504 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:05:33.239  2882 22504 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:05:33.239  2882 22504 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:05:33.241  2882 22515 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:05:33.242  2882 22515 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:05:33.242  2882 22515 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:05:33.242  2882 22515 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-18 13:05:33.242  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:05:33.242  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:05:33.242  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:05:33.242  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:05:33.242  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:05:33.242  2882 22515 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():156 #onKeyboardShown scheduled [SD]
+11-18 13:05:33.242  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@3d5a7a1, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:05:33.242  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@2919dc6, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:05:33.242  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@7060a10, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:05:33.242  2882 22515 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-18 13:05:33.242  2882 22504 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():159 #onKeyboardShown [SD]
+11-18 13:05:33.242  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@d035909, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:05:33.242  2882 22425 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-18 13:05:33.243  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@5f9d052, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:05:33.243  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@a42df23, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:05:33.243  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@583d70e, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:05:33.243  2882 22506 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:05:33.243  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@77d052f, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:05:33.243  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:05:33.243  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:05:33.243  2882 22515 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-18 13:05:33.244  2882 22429 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:05:33.244  2882 22429 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:05:33.244  2882 22429 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:05:33.244  2882 22429 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:05:33.244  2882 22504 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:05:33.245  2882 22504 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:05:33.245  2882 22504 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:05:33.245  2882 22504 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-18 13:05:33.245  2882 22504 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-18 13:05:33.245  2882 22429 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-18 13:05:33.251  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:05:33.251  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:05:33.251  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:05:33.251  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:05:33.251  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:05:33.251  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:05:33.251  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:05:33.251  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:05:33.267  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-18 13:05:33.269  1701  2813 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:05:33.269  1701  2813 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:05:33.289   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-18 13:05:33.321   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-18 13:05:33.379  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-18 13:05:33.408 22447 22447 I ImeTracker: com.sutliff.pocket:ede111bf: onShown
+11-18 13:05:33.735  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:05:33.833  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:05:33.834  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:05:33.834  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:05:34.028  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-18 13:05:34.029  1701  2013 D HintManagerService: Starts cleaning for 10121
+11-18 13:05:34.152  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:05:32:298 - 13:05:34:152, duration: 1854, le_adv_count: 2, total_le_adv_count: 178852, total_event_count: 2
+11-18 13:05:35.137 32167 22406 I NearbyMediums: Found Fast Ble Advertisements :
+11-18 13:05:35.137 32167 22406 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0x34 0x84 0xdf 0x84 0x29 0xb9 0xf0 0xbf 0x6d 0x13 0x6a 0xe4 0xf5 0xb5 0xd4 0x3c ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null } : 5 times.
+11-18 13:05:35.137 32167 22406 I NearbyMediums: Total 5 fast advertisements from 1 unique advertisers.
+11-18 13:05:35.137 32167 22406 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:05:35.139 32167 22403 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xb5 0x22 0x0d 0xd7 0x67 0xf6 0x9f 0xbc 0x80 0x10 0xa0 0x51 0x62 0xbf 0xe8 0x35 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@c0717e2 size=2 contents="\365\317">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-18 13:05:35.227 32167 32167 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.GmsApiService }
+11-18 13:05:35.713  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:pidof com.sutliff.pocket'
+11-18 13:05:35.819  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-18 13:05:35.970 22529 22529 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-18 13:05:35.971 22529 22529 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 13:05:35.971 22529 22529 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 13:05:36.593  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:05:36.719  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

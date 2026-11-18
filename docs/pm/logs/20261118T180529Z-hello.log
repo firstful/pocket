@@ -1,0 +1,562 @@
+11-18 13:05:52.257 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.257 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.257 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.257 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.258 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.258 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.258 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.259 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.261 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.261 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.261 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.267 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.267 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.267 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.267 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.271 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.271 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.271 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.271 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.272 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.272 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.272 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.272 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.275 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.275 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.275 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.280 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.280 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.280 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.281 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.284 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.284 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.284 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.284 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.285 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.285 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.285 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.286 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.290 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.290 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.290 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.296 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.297 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.297 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.297 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.301 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.301 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.301 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.302 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.303 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.303 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.303 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.303 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.307 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.307 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.307 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.314 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.314 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.314 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.315 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.319 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.319 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.319 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.319 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.321 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.321 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.321 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.321 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.326 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.326 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.326 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.332 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.333 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.333 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.333 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.340 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.340 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.340 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.340 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.342 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.342 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.342 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.342 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.346 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.346 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.346 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.351 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.352 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.352 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.353 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.356 32167 22348 I AuthTokenManager: Failed to get auth token for log sources [[ANDROID_GROWTH]] because the account doesn't exist on the device.
+11-18 13:05:52.363 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.363 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.363 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.363 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.365 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.365 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.365 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.365 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.369 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.369 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.369 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.375 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.375 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.375 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.383 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.390 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.390 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.391 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.391 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.392 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.392 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.392 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.392 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.395 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.395 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.395 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.399 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.400 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.400 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.400 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.407 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.407 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.407 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.407 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.408 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.408 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.408 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.409 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.412 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.412 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.412 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.417 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.418 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.418 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.418 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.421 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.421 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.421 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.421 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.422 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.422 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.422 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.422 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.426 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.426 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.426 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.431 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.432 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.432 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.432 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.437 22447 22447 I ImeTracker: com.sutliff.pocket:213629bc: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-18 13:05:52.437 22447 22447 I ImeTracker: com.sutliff.pocket:213629bc: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-18 13:05:52.442 22447 22447 I ImeTracker: com.sutliff.pocket:733d817a: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-18 13:05:52.442 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.442 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.442 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.442 22447 22447 I ImeTracker: com.sutliff.pocket:733d817a: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-18 13:05:52.442 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.443 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.443 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.443 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.443 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.447 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.447 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.447 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.452 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.452 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.452 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.453 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.456 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.456 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.456 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.456 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.457 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.457 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.457 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.457 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.460 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.460 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.460 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.466 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.466 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.466 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.466 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.471 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.471 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.471 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.471 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.472 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.472 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.472 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.472 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.476 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.476 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.476 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.480 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.481 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.481 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.481 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.485 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.485 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.486 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.486 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.487 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.487 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.487 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.487 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.491 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.491 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.492 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.498 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.498 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.498 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.498 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.502 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.502 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.502 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.502 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.504 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.504 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.504 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.504 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.509 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.509 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.509 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.515 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.516 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.516 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.516 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.527 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.527 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.527 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.527 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.529 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.529 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.529 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.529 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.534 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.534 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.534 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.543 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.543 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.543 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.543 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.552 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.552 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.552 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.552 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.554 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.554 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.554 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.554 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.561 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.561 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.561 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.569 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.570 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.570 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.570 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.574 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.574 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.574 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.574 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.576 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.576 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.576 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.576 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.581 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.581 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.581 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.589 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.590 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.590 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.590 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.601 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.601 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.601 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.601 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.603 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.603 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.603 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.603 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.608 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.608 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.609 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.616 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.616 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.616 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.616 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.621 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.621 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.621 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.621 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.623 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.623 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.623 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.623 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.628 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.628 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.628 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.635 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.636 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.636 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.636 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.648 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.648 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.648 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.649 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.651 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.651 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.651 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.651 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.658 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.658 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.658 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.668 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.668 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.668 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.668 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.677 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.677 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.677 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.677 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.679 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.679 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.679 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.680 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.684 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.684 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.684 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.690 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.690 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.690 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.690 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.695 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.695 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.695 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.695 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.696 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.696 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.696 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.697 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.703 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.703 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.703 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.711 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.712 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.712 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.712 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.723 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.723 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.723 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.723 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.725 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.725 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.726 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.726 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.733 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.733 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.733 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.740 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.740 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.740 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.740 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.748 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.748 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.748 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.748 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.750 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.750 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.750 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.751 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.758 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.758 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.758 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.767 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.768 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.768 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.768 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.776 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.776 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.776 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.776 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.778 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.778 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.778 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.779 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.785 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.785 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.785 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.794 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.794 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.794 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.794 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:52.804 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/plus.me [CONTEXT service_id=343 ]
+11-18 13:05:52.804 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.804 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.804 32167 22348 I Auth    : (REDACTED) [AccountIdManager] Token response failed with status=%s
+11-18 13:05:52.807 32167 22348 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/account.capabilities https://www.googleapis.com/auth/account.service_flags [CONTEXT service_id=343 ]
+11-18 13:05:52.807 32167 22348 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.807 32167 22348 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.807 32167 22348 W Auth    : [AccountStateDownloader] Unable to look up account state from server: couldn't fetch accessToken [CONTEXT service_id=343 ]
+11-18 13:05:52.814 32167 26178 W Auth    : [RequestTokenManager] getToken() -> BAD_AUTHENTICATION. App: com.google.android.gms, Service: oauth2:https://www.googleapis.com/auth/cclog [CONTEXT service_id=343 ]
+11-18 13:05:52.814 32167 26178 W Auth    : broy: Long live credential not available.
+11-18 13:05:52.814 32167 26178 W Auth    : [RequestTokenManager] Message is Long live credential not available. [CONTEXT service_id=343 ]
+11-18 13:05:52.823 32167 26178 I Auth    : (REDACTED) [GetToken] GetToken failed for app=%s with userRecoverable status: %s 
+11-18 13:05:52.823 32167 26178 W Auth    : [GetTokenOperation] exception while trying to fetch auth tokens for app=com.google.android.gms [CONTEXT service_id=343 ]
+11-18 13:05:52.823 32167 26178 W Auth    : anai: GetToken failed with status code and recovery intent: BadAuthentication
+11-18 13:05:52.823 32167 22348 I AuthTokenManager: Failed to get auth token due to class com.google.android.gms.auth.UserRecoverableAuthException
+11-18 13:05:53.761  2882  3278 I native  : I0000 00:00:1795025153.759727    3278 input-context-store.cc:327] Ignoring stale client request for FetchSuggestions
+11-18 13:05:55.003 22584 22584 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+11-18 13:05:55.010 22584 22584 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:05:55.011 22584 22584 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:05:55.012 22584 22584 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-18 13:05:55.030 22584 22584 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-18 13:05:55.034 22584 22584 I AconfigPackage: com.android.cellbroadcastreceiver.flags is mapped to com.android.cellbroadcast
+11-18 13:05:55.035 22584 22584 D nativeloader: Load libstats_jni.so using APEX ns com_android_os_statsd for caller /apex/com.android.os.statsd/javalib/framework-statsd.jar: ok
+11-18 13:05:55.036 22584 22584 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-18 13:05:55.037 22584 22584 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-18 13:05:55.044  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:05:55.047  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:05:55.144 32167 22406 I NearbyConnections: Processing lost BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@d77479f size=2 contents="\365\317">, isSecondProfile=false, rxInstantConnectionAdv=null}.
+11-18 13:05:55.144 32167 22406 I NearbyConnections: Lost BleEndpoint for BlePeripheral BlePeripheral{advertisement=BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x38 0x42 0x59 0x34 0x11 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ], deviceToken=[ 0xf5 0xcf ], rxAdvertisement=null }, dctAdvertisement=null, address=null, psm=0, deviceToken=<ByteString@d77479f size=2 contents="\365\317">, isSecondProfile=false, rxInstantConnectionAdv=null} (with EndpointId 8BY4 and EndpointInfo [ 0x32 0xcd 0xfc 0x48 0x1e 0x8d 0x23 0xf9 0x39 0x32 0xf4 0xcb 0xfd 0xe8 0x5d 0xb9 0xe7 ]).
+11-18 13:05:55.649 32167 22600 I NearbySharing: NearbySharing Internal event ReceiverLost(receiverId=12)
+11-18 13:05:55.650 32167 22406 I NearbySharing: SendProvider: SendManager event Lost(receiverId=12)
+11-18 13:05:56.057 22584 22584 W uiautomator: type=1400 audit(0.0:14925): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:05:56.057 22584 22584 W uiautomator: type=1400 audit(0.0:14926): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-18 13:05:56.165 22584 22595 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:05:56.165 22584 22593 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:05:56.166 22584 22598 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-18 13:05:56.173  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-18 13:05:58.364  1023  1085 I CHRE    : @ 961625.472: [ImuCal] [GYRO_RPS] (s0) Temp Sensitivity: -.000032, -.000067, -.000125
+11-18 13:05:59.308  1701  2012 D ActivityManager: freezing 23420 com.google.android.gms.unstable
+11-18 13:06:02.755   553 22560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:371 - Watchdog thread idle -> terminating. Have a great day.
+11-18 13:06:02.848  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Motion Detect (active:-1).
+11-18 13:06:02.850  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Motion Detect (active:-1).
+11-18 13:06:02.850  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 145: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:02.851  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 161: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:02.851  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Stationary Detect (active:1).
+11-18 13:06:02.855  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:4).
+11-18 13:06:02.856  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:4).
+11-18 13:06:02.857  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:5).
+11-18 13:06:02.861  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:5).
+11-18 13:06:02.864  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Stationary Detect (active:2).
+11-18 13:06:02.865  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR FreeFall Detect (active:1).
+11-18 13:06:02.868  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Motion Detect (active:-1).
+11-18 13:06:02.869  1023  1085 D CHRE.HAL: Received a nanoapp message from 0x476f6f676c001016 endpoint 0x8: Type 0x8003 size 1 
+11-18 13:06:02.869  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 145: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:02.905  2383  2383 D GRIL-S  : [0718]> UPDATE_DEVICE_STATE DeviceState: Usb:1, Wifi: 1, Wifi AP: 0, Earpiece: 0, Bluetooth: 1, Wireless charging: 0, Screen: 1, Camera: 0, 0, -, -, Motion: 1, Bluetooth tethering: 0, Voice: 0, Wifi 2.4G: 1, Radio: 1, Bluetooth connected: 0, Bluetooth media: 0, Wifi Band: 1, Wifi AP Band: 0, Wifi call: 0, mmWave: 0, mCellBackhaul: 0, mHallSensor: 0, mDozeStatus: 0, mAppClassInfo: 0, mWifiCapSensorStatus: 0, mCellCapSensorStatus: 0, mBesideHeadHandStatus: 0, mSpeakerStatus: 0, mProtectiveCaseStatus: 0, mWifiSettingStatus: 0, mGpsStatus: 0
+11-18 13:06:02.934  2336  2748 I bluetooth: system/gd/hci/le_address_manager.cc:571 GetNextPrivateAddressIntervalRange: client=advertising_set_0, nonwake=7m34s, wake=13m50s
+11-18 13:06:03.258  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Gyroscope (active:2).
+11-18 13:06:03.263  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for MMC56X3X Magnetometer (active:2).
+11-18 13:06:04.132  1701  2064 I ImeTracker: com.sutliff.pocket:7cec08d2: onRequestShow at ORIGIN_SERVER reason ATTACH_NEW_INPUT fromUser false userId 0 displayId 0
+11-18 13:06:04.134  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-18 13:06:04.137 22447 22465 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 13:06:04.139  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-18 13:06:04.140  1701  3323 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-18 13:06:04.140  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-18 13:06:04.141  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 LatinIme.onDeactivate()
+11-18 13:06:04.184  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: en-US, ime_english_united_states
+11-18 13:06:04.184  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-18 13:06:04.184  2882  2882 I AbstractIme: AbstractIme.onActivate():111 LatinIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}, IncognitoMode = false, DeviceLocked = false
+11-18 13:06:04.187  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-18 13:06:04.188  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-18 13:06:04.188  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=ime_english_united_states, language=en-US, languageTag=en-US, processedConditions={device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row=false}, className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, label=0, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=US, displayAppCompletions=true, extraValues=pun{#0x7f0b02e7=TypedValue{t=0x3/d=0x0 "com.google.android.apps.inputmethod.libs.latin5.LatinIme"}}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=true, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=0, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@1), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=true}
+11-18 13:06:04.188  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-18 13:06:04.189  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-18 13:06:04.191  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=true, enable_scrub_move=true, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=true, enable_secondary_symbols=false, enable_number_row=false}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=1}, className=.latin.keyboard.LatinPrimeKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e03a5, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@6bd0ca9, BODY=pfv@c10122e, FLOATING_CANDIDATES=pfv@5f5f1cf}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.11 fontWeightAdjustment=0}
+11-18 13:06:04.191 22447 22447 I ImeTracker: com.sutliff.pocket:4998fcda: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-18 13:06:04.192  1701  2543 D CoreBackPreview: Window{5f36a63 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@3f5708a, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-18 13:06:04.192 22447 22447 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-18 13:06:04.192  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-18 13:06:04.194  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-18 13:06:04.194  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-18 13:06:04.195  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-18 13:06:04.195  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-18 13:06:04.195  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@92b91ff
+11-18 13:06:04.195  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-18 13:06:04.195  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-18 13:06:04.196  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-18 13:06:04.196  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-18 13:06:04.196  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-18 13:06:04.197  2035  2186 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: PORTRAIT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: false, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-18 13:06:04.197  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-18 13:06:04.198  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-18 13:06:04.201 22447 22447 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-18 13:06:04.204  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-18 13:06:04.204  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-18 13:06:04.204  2882 22506 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=1.6e+05, interactionType=FIELD_CHANGE [SD]
+11-18 13:06:04.205  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-18 13:06:04.205  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 LatinIme.onDeactivate()
+11-18 13:06:04.217 22447 22447 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-18 13:06:04.217  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: und-Latn-x-password, password
+11-18 13:06:04.218  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-18 13:06:04.218  2882  2882 I AbstractIme: AbstractIme.onActivate():111 PasswordIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}, IncognitoMode = false, DeviceLocked = false
+11-18 13:06:04.218  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-18 13:06:04.218  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=password, language=und-Latn-x-password, languageTag=und-Latn-x-password, processedConditions={language=en-US, variant=qwerty, enable_number_row=true, device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row_in_password=true}, className=com.google.android.libraries.inputmethod.ime.password.PasswordIme, label=2132019290, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=null, displayAppCompletions=false, extraValues=pun{}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=false, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=2132083600, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@e0cd7d5a), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=false}
+11-18 13:06:04.218  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-18 13:06:04.218  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-18 13:06:04.226  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=false, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=false, enable_secondary_symbols=false, enable_number_row=true, show_suggestion_strip=true}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=1}, className=.latin.keyboard.LatinPasswordKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e02df, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@18509e3, BODY=pfv@73a8fe0, FLOATING_CANDIDATES=pfv@305b299}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.11 fontWeightAdjustment=0}
+11-18 13:06:04.233 22447 22447 I ImeTracker: com.sutliff.pocket:7cec08d2: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-18 13:06:04.233  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-18 13:06:04.234  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-18 13:06:04.235  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-18 13:06:04.235  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-18 13:06:04.235  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-18 13:06:04.235  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@ad43d78
+11-18 13:06:04.236  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-18 13:06:04.236  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-18 13:06:04.237  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-18 13:06:04.237  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+11-18 13:06:04.237  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-18 13:06:04.237  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-18 13:06:04.238  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-18 13:06:04.239  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-18 13:06:04.241  2882 22506 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=0, interactionType=FIELD_CHANGE [SD]
+11-18 13:06:04.254  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-18 13:06:04.421  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-18 13:06:04.422  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-18 13:06:04.423  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-18 13:06:04.423  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-18 13:06:04.423  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-18 13:06:04.423  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-18 13:06:04.423  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 PasswordIme.onDeactivate()
+11-18 13:06:04.425  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-18 13:06:04.425  2882  2882 I ImeTracker: com.sutliff.pocket:4998fcda: onHidden
+11-18 13:06:05.426  2882 22514 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager.closeStream():110 Closing stream. [SDG]
+11-18 13:06:05.427  2882 22514 I Interaction: Interaction$KeyboardEventStreamObserver.onCompleted():143 Interaction#151 completed by the client [SD]
+11-18 13:06:05.428  2882 22429 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-18 13:06:05.866  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:6).
+11-18 13:06:06.496  1701  2012 D ActivityManager: freezing 13617 com.google.android.settings.intelligence
+11-18 13:06:06.506  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10121} in 5ms
+11-18 13:06:06.831 22447 22465 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 13:06:06.832 22447 22465 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795025163-D0ZZH8tRxkkvg8SN15su","object":"chat.completion.chunk","created":1795025163,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-18 13:06:07.346 22447 22465 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-18 13:06:07.346 22447 22465 D PocketNet: streamChat: loop done, lines=21 data=10
+11-18 13:06:07.866  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Stationary Detect (active:-1).
+11-18 13:06:07.867  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 161: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:07.868  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:1).
+11-18 13:06:07.869  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:2).
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR FreeFall Detect (active:0).
+11-18 13:06:07.870  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Stationary Detect (active:-1).
+11-18 13:06:07.871  1278  1278 D AOC     : A3:MSG: usf_sensor_client.cc, 145: USF: Received kErrNotFound when disabling one shot sensor.
+11-18 13:06:08.315  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Gyroscope (active:3).
+11-18 13:06:08.319  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for MMC56X3X Magnetometer (active:2).
+11-18 13:06:09.268  1023  1085 D CHRE    : @ 961636.378: [ActivityPlatform] type 4, confidence 90
+11-18 13:06:12.448  1023  1085 D CHRE.HAL: Received a nanoapp message from 0x476f6f676c00100b endpoint 0x26: Type 0x401 size 219 
+11-18 13:06:12.449  1023  1085 D CHRE    : @ 961639.562: [ActivityPlatform] type 4, confidence 92
+11-18 13:06:12.471  1023  1085 D CHRE.HAL: Received a nanoapp list response for client 1
+11-18 13:06:12.490 11291 11340 D SconeAwareness: Awareness received [com.google.android.apps.scone.action.ActivityTransitionAction] action.
+11-18 13:06:12.491 11291 11340 W Bundle  : Key com.google.android.location.internal.EXTRA_ACTIVITY_TRANSITION_RESULT expected android.os.Parcelable but value was of a different type.  The default value <null> was returned.
+11-18 13:06:12.492 11291 11340 W Bundle  : Attempt to cast generated internal exception:
+11-18 13:06:12.492 11291 11340 W Bundle  : java.lang.ClassCastException: Cannot cast [B to android.os.Parcelable
+11-18 13:06:12.492 11291 11340 W Bundle  : 	at com.google.android.apps.scone.awareness.AwarenessReceiver.a(PG:17)
+11-18 13:06:12.492 15268 15268 I GWP-MobilityDetectionSe: ActivityTransition received: STILL
+11-18 13:06:12.493  1701  2086 D WifiConnectivityManager: PNO Scan Interval changed to 60000 ms.
+11-18 13:06:12.497 11291 11340 D SconeAwareness: Awareness received [com.google.android.apps.scone.action.ActivityTransitionAction] action and try to relay info
+11-18 13:06:12.498 11291 11358 D SconeAwareness: handleIntent com.google.android.apps.scone.action.ActivityTransitionAction
+11-18 13:06:12.512 11291 22032 E SconeAwareness: ActivityTransition extractResult return
+11-18 13:06:12.586  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Motion Detect (active:3).
+11-18 13:06:12.588  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:6).

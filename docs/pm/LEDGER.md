@@ -406,3 +406,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB web_search input fragility remains (attempts 1-3 failed, 4 succeeded) — automation issue, not app bug. Consider test hook/deep-link to stabilize chat sends.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-18T18:03Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — keystore cipher-IV fix ship verified
+
+### QA Outcomes
+- Identity/device: Pixel 6a (27271JEGR25574), stable mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`. Pre-run script's `192.168.1.147:45357` stale (`No route to host`). **Device was already on vc117 at run start** (`versionCode=117 versionName=1.0.117-72e33fd`) — no install needed this run. Screen awake (timeout 600000), rotation locked portrait. Evidence: inline getprop/dumpsys.
+- CI/store: run 1717 `72e33fdc2259` completed/success (push, run_number 121); HEAD 72e33fd == store tip. Store `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358`. Host download `apps.ffilt.us/apk/Pocket/app-release.apk` -> 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog. DEX markers for vc117 code present: `X-Pocket-Version`, `X-Pocket-Git-Hash`, `setRandomizedEncryptionRequired`. No drift.
+- Launch/no-crash PASS: `monkey -p com.sutliff.pocket 1` VM exit 0, no FATAL EXCEPTION / AndroidRuntime crash in any this-run log. Evidence: `docs/pm/logs/20261118T180529Z-launch.log`, `...-launch-unfiltered.log`, screenshot `docs/pm/screenshots/20261118T180529Z-launch.png` (valid 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 21 lines (10 data)`, `loop done, lines=21 data=10`, no gateway error. Evidence: `docs/pm/logs/20261118T180529Z-hello.log`, screenshots `...-hello.png` / `...-hello-bottom.png`.
+- Web search PASS: `WebSearchTool: response code=200 html_len=30472 duration_ms=1207`, `parsed titles=10 snippets=10`, `done result_count=8`; follow-up stream `loop done, lines=135 data=67`. One transient TLS `Connection reset` on a first attempt (query_len=31) self-recovered on retry (query_len=38) — not a bug. Evidence: `docs/pm/logs/20261118T180529Z-websearch.log`, `...-websearch-ui-transcript.txt`, screenshots `...-websearch.png` / `...-websearch-result.png` / `...-websearch-result2.png`.
+- Settings/UI reachable PASS: settings screen + scrolled settings rendered, no crypto exception on entry. Evidence: `docs/pm/logs/20261118T180529Z-settings.log`, screenshots `...-settings.png` / `...-settings-scrolled.png` (both 1080x2400).
+- Crypto regression watch PASS (key for vc117): NO MATCHES across all this-run logs for `caller provided IV not permitted`, `caller provided IV`, `KeyStoreException`, `AEADBadTagException`, `InvalidKeyException`, `self-heal`, `javax.crypto` — the cipher-generated-IV fix holds, no keystore wrap/unwrap regression. Evidence: `docs/pm/logs/20261118T180529Z-crypto.log` (from `...-crypto-full.log`, 349 lines).
+- Permission/dialogs PASS: no `EnhancedConfirmationDialog` / grant markers; no new system dialog to tap past.
+- Services/open item: pocket-cfg pod `pocket-cfg-58664b7775-p55mv` Running 1/1, 0 restarts, 161m (ns pocket-cfg, node reed-a320ms2h); `pocket-cfg.homelab.internal/config` unreachable from server as expected (tailnet-only). apps.ffilt.us 200, telemetry.ffilt.us 405 (up). Config-import E2E still needs a real 6-word passphrase (credential — not done autonomously).
+- Homelab MCP todo board: 879 total, 31 keyword hits, **0 open Pocket-actionable** (3 open Android hits unrelated: Jellyfin APK #54, HA companion fork #264, os-keystore plugin #355). All Pocket todos (#423/424/425/459/697/795/815/816/817/818) completed.
+- On-device QA delegated (2 parallel subagents: on-device QA + independent CI/store verification); all 26 artifact paths re-verified inline by Rook (byte sizes + log excerpts + PNG dimensions + DEX markers).
+
+### Shipped
+- `72e33fd` — fix(keystore): use cipher-generated IV (randomized encryption); send version headers. `crypto/KeystoreWrap.kt`: `wrapWith()` now `cipher.init(ENCRYPT_MODE, key)` then reads `cipher.iv` (12 bytes) instead of supplying its own `GCMParameterSpec` — the old path threw `caller provided IV not permitted` because the key is generated with `setRandomizedEncryptionRequired(true)`; removed the now-unused `SecureRandom` import. `network/ConfigImportClient.kt`: config-import POST now sends `X-Pocket-Version` / `X-Pocket-Version-Code` / `X-Pocket-Git-Hash` headers. Built+published in CI run 1717 (completed/success, V2-signed), store tip vc117, verified on-device this run.
+
+### Open / Next
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug now fixed in vc117, so the fetch→unwrap→persist path should work — needs a real 6-word passphrase, credential, not done autonomously). UI reachability/source/bytecode verified.
+- web_render on a true JS/SPA page still untested (carried idea; static example.com proven vc107).
+- ADB web_search input fragility: this run had one transient TLS reset (self-recovered); no coordinate misses. Consider a test hook/deep-link to stabilize chat sends (carried idea).
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
+- `web_fetch` 403 from some sites is site-side (not a bug).

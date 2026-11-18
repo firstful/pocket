@@ -1,0 +1,250 @@
+11-18 13:10:03.877  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@a6a77d1, lastModifier=0, keyCodes=[317], actions=[0]}
+11-18 13:10:03.877  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@579b7b2, lastModifier=2, keyCodes=[56], actions=[0]}
+11-18 13:10:03.877  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@77a303, lastModifier=0, keyCodes=[317], actions=[0]}
+11-18 13:10:03.877  2882 22425 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-18 13:10:03.877  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.877  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.877  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-18 13:10:03.878  2882  2882 W InputContextProxy: InputContextProxy.applyClientDiffInternal():915 Ignore [FetchSuggestions] diff due to stale request: 17953<17954, inputStateId=518, lastInputStateId=519
+11-18 13:10:03.878  2882 22846 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:10:03.878  2882 22429 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-18 13:10:03.878  2882 22515 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-18 13:10:03.878  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:10:03.878  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:10:03.878  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:10:03.878  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:10:03.878  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:10:03.878  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.878  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:10:03.879  2882 22846 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:10:03.879  2882 22846 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:10:03.879  2882 22846 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:10:03.879  2882 22846 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:10:03.879  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:10:03.879  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.879  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.879  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:10:03.879  2882 22429 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-18 13:10:03.880  2882 22429 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-18 13:10:03.880  2882 22429 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:10:03.880  2882 22429 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:10:03.880  2882 22429 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-18 13:10:03.880  1701  2995 I ImeTracker: com.sutliff.pocket:bbc3553a: onCancelled at PHASE_SERVER_POST_LAYOUT_NOTIFY_CONTROLS_CHANGED
+11-18 13:10:03.880  2882 22429 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-18 13:10:03.881  2882 22846 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-18 13:10:03.881  2882 22429 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=0, interactionType=FIELD_CHANGE [SD]
+11-18 13:10:03.881  2882 22429 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-18 13:10:03.881  2882 22853 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-18 13:10:03.881  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.882  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-18 13:10:03.882  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:10:03.882  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-18 13:10:03.882  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-18 13:10:03.882  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-18 13:10:03.882  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.882  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{26099bf V.E...... ........ 0,0-1080,116}
+11-18 13:10:03.882  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.882  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{6d304d9 V.E...... ........ 0,0-1080,826}
+11-18 13:10:03.883  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.883  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-18 13:10:03.883  2882 22429 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-18 13:10:03.883  2882 22429 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-18 13:10:03.883  2882 22429 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-18 13:10:03.883  2882 22429 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-18 13:10:03.884  2882 22846 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-18 13:10:03.884  2882 22846 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-18 13:10:03.884  2882 22846 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-18 13:10:03.884  2882 22846 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-18 13:10:03.884  2882 22846 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-18 13:10:03.885  1701  1789 I ImeTracker: system_server:a7af9816: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-18 13:10:03.897  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:10:03.897  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.897  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.897  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:10:03.898  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.898  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-18 13:10:03.898  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:10:03.898  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-18 13:10:03.898  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@7324281, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:10:03.898  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@16fcf26, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:10:03.898  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@fcdf1, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:10:03.898  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@e04dd6, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:10:03.899  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@b1cf767, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:10:03.899  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@f60e914, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:10:03.899  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@2eb7162, lastModifier=2, keyCodes=[32], actions=[0]}
+11-18 13:10:03.899  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@e9752f3, lastModifier=0, keyCodes=[319], actions=[0]}
+11-18 13:10:03.899  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.899  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-18 13:10:03.900  2882  2882 W NgaExtension: NgaExtension.handleUiCommand():1116 cannot update UI in state NgaState{connected=true, keyboardVisible=true, dictationEligible=false, currentFieldEligibilityUpToDate=true, dictating=false, languageIndicatorVisible=false, keyboardTypeSupported=true, config=# kqj@adbafd8a, clientType=1, eligibilityByLanguageTag={}, currentEligibility=10, autoStarted=false} [SDG]
+11-18 13:10:03.900  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-18 13:10:03.900  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-18 13:10:03.900  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-18 13:10:03.900  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:03.900 23244 23244 I ImeTracker: system_server:a7af9816: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-18 13:10:03.914  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:10:03.914  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.914  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:03.914  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:10:03.937  1701  2369 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-18 13:10:03.937  1701  2369 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-18 13:10:04.071  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1857 onFinishInputView(false)
+11-18 13:10:04.072  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-18 13:10:04.073  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-18 13:10:04.073  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-18 13:10:04.073  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-18 13:10:04.073  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-18 13:10:04.073  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-18 13:10:04.073  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@acc6904 was not registered for notification class qbc
+11-18 13:10:04.073  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-18 13:10:04.073  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-18 13:10:04.073  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-18 13:10:04.073  2882 22425 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-18 13:10:04.074  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 PasswordIme.onDeactivate()
+11-18 13:10:04.074  2882  2882 I PrimesLoggerHolder: FrameMetricServiceImpl.stopAsFuture():215 Measurement not found: OnConfigurationChanged
+11-18 13:10:04.075  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-18 13:10:04.075  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowHidden():2621 
+11-18 13:10:04.075  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-18 13:10:04.076  1701  1785 D HintManagerService: Sent cleanup message for uid 10192
+11-18 13:10:04.076  2882  2882 I ImeTracker: com.sutliff.pocket:c8a169a2: onHidden
+11-18 13:10:04.080  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-18 13:10:04.089  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-18 13:10:04.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:04.090  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-18 13:10:04.090  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-18 13:10:04.091  1701  2369 I ImeTracker: system_server:9a0ba33c: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-18 13:10:04.091  1701  1788 I ImeTracker: system_server:9a0ba33c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-18 13:10:04.274   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-18 13:10:04.307   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-18 13:10:04.596  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:04.674  2882 22853 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardHidden():289 Keyboard closed, ending dictation. [SD]
+11-18 13:10:04.677  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:04.677  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:04.677  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:05.075  2882 22514 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager.closeStream():110 Closing stream. [SDG]
+11-18 13:10:05.076  2882 22514 I Interaction: Interaction$KeyboardEventStreamObserver.onCompleted():143 Interaction#155 completed by the client [SD]
+11-18 13:10:05.077  2882 22504 I Interaction: Interaction.shutdownAndForget():91 Shutting down Interaction#155 [SD]
+11-18 13:10:05.078  2882 22504 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-18 13:10:05.078  2882 22504 I InteractionManager: InteractionManager.forgetInteraction$<anonymous>():50 Forgetting Interaction#155 [SD]
+11-18 13:10:05.079 32265  8028 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-18 13:10:05.079  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-18 13:10:05.079 32265  8028 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-18 13:10:05.297 32167 23189 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-18 13:10:05.298 32167 23189 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:10:06.669  2199  2213 W System  : A resource failed to call release. 
+11-18 13:10:07.682  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:07.765  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:07.765  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:07.765  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:10.769  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:10.856  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:10.856  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:10.856  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:11.517 23244 23261 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 13:10:11.518 23244 23261 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795025403-QGm1t3o17oOVLuedaH4k","object":"chat.completion.chunk","created":1795025403,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-18 13:10:11.728 23244 23261 D PocketNet: streamChat: [DONE] after 27 lines (13 data)
+11-18 13:10:11.728 23244 23261 D PocketNet: streamChat: loop done, lines=27 data=13
+11-18 13:10:11.731 23244 23261 D WebSearchTool: start query_len=31 max_results=8
+11-18 13:10:12.136  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=107 dst=[52.149.246.39]:443 latencyMs=105 err=0
+11-18 13:10:12.253 23244 23261 E WebSearchTool: exception: Connection reset
+11-18 13:10:12.253 23244 23261 E WebSearchTool: java.net.SocketException: Connection reset
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at java.net.SocketInputStream.read(SocketInputStream.java:191)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at java.net.SocketInputStream.read(SocketInputStream.java:143)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.readFromSocket(ConscryptEngineSocket.java:1023)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.processDataFromSocket(ConscryptEngineSocket.java:987)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket$SSLInputStream.-$$Nest$mprocessDataFromSocket(ConscryptEngineSocket.java:0)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket.doHandshake(ConscryptEngineSocket.java:244)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.android.org.conscrypt.ConscryptEngineSocket.startHandshake(ConscryptEngineSocket.java:226)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.connectTls(RealConnection.kt:379)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.establishProtocol(RealConnection.kt:337)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:209)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.sutliff.pocket.tools.WebSearchTool.execute(WebTools.kt:93)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at com.sutliff.pocket.agent.AgentSessionManager$run$result$1.invokeSuspend(AgentSessionManager.kt:304)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:101)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:113)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:589)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:823)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:720)
+11-18 13:10:12.253 23244 23261 E WebSearchTool: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:707)
+11-18 13:10:12.255 23244 23261 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-18 13:10:12.259  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.4866 raw data: VIRTUAL-NEUTRAL:25486.6 VIRTUAL-NEUTRAL-SKIN2:25204.4 VIRTUAL-QUIET-NEUTRAL:24370.4 VIRTUAL-SKIN:25486.6 disp_therm:24270 gnss_tcxo_therm:26120 neutral_therm:24551 quiet_therm:24293 skin_therm1:26167 skin_therm2:26729 
+11-18 13:10:12.261  2362  3768 D ImpulseStateSource: Notify clients: 96099
+11-18 13:10:12.275 23244 23260 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 13:10:12.289  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=107 dst=[192.168.1.2]:80 latencyMs=9 err=0
+11-18 13:10:13.249  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795025389280
+11-18 13:10:13.775   553 23466 I keystore2: system/security/keystore2/watchdog/src/lib.rs:371 - Watchdog thread idle -> terminating. Have a great day.
+11-18 13:10:13.860  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:13.936  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:13.937  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:13.937  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:14.133  2882  3214 I ProtoxDbBufferWrapper: ProtoxDbBufferWrapper.flushToStorage():166 Flushed 36 data item(s) to storage.
+11-18 13:10:14.894 23244 23260 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 13:10:14.894 23244 23260 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795025411-hoyqfRarsKlwaLRADquN","object":"chat.completion.chunk","created":1795025411,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-18 13:10:15.301 32167 23189 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-18 13:10:15.301 32167 23189 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:10:15.344 23244 23260 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-18 13:10:15.344 23244 23260 D PocketNet: streamChat: loop done, lines=23 data=11
+11-18 13:10:15.345 23244 23260 D WebSearchTool: start query_len=38 max_results=8
+11-18 13:10:15.413  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=107 dst=[52.149.246.39]:443 latencyMs=56 err=0
+11-18 13:10:16.555 23244 23260 D WebSearchTool: response code=200 html_len=30472 duration_ms=1207
+11-18 13:10:16.571 23244 23260 D WebSearchTool: parsed titles=10 snippets=10
+11-18 13:10:16.582 23244 23260 D WebSearchTool: done result_count=8 duration_ms=1207
+11-18 13:10:16.601 23244 23261 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 13:10:16.608  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=107 dst=[192.168.1.2]:80 latencyMs=2 err=0
+11-18 13:10:16.609 23244 23284 W okhttp.OkHttpClient: A connection to http://llm.homelab.internal/ was leaked. Did you forget to close a response body? To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
+11-18 13:10:16.745  2298 31381 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 47 up
+11-18 13:10:16.939  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:17.015  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:17.016  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:17.016  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:17.274  2362  2554 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-18 13:10:17.274  2362  2554 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-18 13:10:17.367  1701  2012 D ActivityManager: freezing 13617 com.google.android.settings.intelligence
+11-18 13:10:17.375  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-18 13:10:17.377  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-18 13:10:17.377  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10121} in 7ms
+11-18 13:10:18.935 23244 23261 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 13:10:18.935 23244 23261 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795025415-62QCuvu6E8fSERByrSRX","object":"chat.completion.chunk","created":1795025415,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-18 13:10:19.993 32265 32301 I emsz    : (REDACTED) Updating recent voice session heartbeat time to %s.
+11-18 13:10:20.020  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:20.103  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:20.103  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:20.103  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:20.431 23244 23261 D PocketNet: streamChat: [DONE] after 135 lines (67 data)
+11-18 13:10:20.431 23244 23261 D PocketNet: streamChat: loop done, lines=135 data=67
+11-18 13:10:21.888  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-18 13:10:21.894  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-18 13:10:21.895  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10194} in 13ms
+11-18 13:10:21.900  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-18 13:10:21.906  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-18 13:10:21.906  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={20194} in 11ms
+11-18 13:10:22.269  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.5028 raw data: VIRTUAL-NEUTRAL:25502.8 VIRTUAL-NEUTRAL-SKIN2:25166.6 VIRTUAL-QUIET-NEUTRAL:24363.2 VIRTUAL-SKIN:25502.8 disp_therm:24293 gnss_tcxo_therm:26190 neutral_therm:24527 quiet_therm:24293 skin_therm1:26261 skin_therm2:26659 
+11-18 13:10:22.272  2362  2675 D ImpulseStateSource: Notify clients: 96100
+11-18 13:10:23.110  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-18 13:10:23.224  1054  1149 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 113 ms
+11-18 13:10:23.258  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-18 13:10:23.259  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-18 13:10:23.259  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-18 13:10:23.906  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-18 13:10:24.084 23491 23491 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-18 13:10:24.085 23491 23491 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-18 13:10:24.086 23491 23491 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-18 13:10:25.102  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-18 13:10:25.304 32167 23189 I NearbyMediums: No BLE Fast/GATT advertisements found in the latest cycle.
+11-18 13:10:25.304 32167 23189 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-18 13:10:25.435  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

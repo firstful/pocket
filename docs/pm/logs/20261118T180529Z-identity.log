@@ -1,0 +1,13 @@
+=== Device / build identity (captured 2026-11-18 ~18:05Z) ===
+Transport: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+adb devices: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp  device
+ro.product.model = Pixel 6a
+ro.serialno      = 27271JEGR25574
+
+dumpsys package com.sutliff.pocket:
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
+
+Device state at start: screen_off_timeout=600000, accelerometer_rotation=0
+Device state at end:   screen_off_timeout=600000, accelerometer_rotation=0
+(rotation had drifted to 1 mid-run; explicitly restored to 0 and verified.)

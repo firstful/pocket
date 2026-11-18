@@ -1,0 +1,159 @@
+STEP1|use www.example.com in web_render web_render show https://example.comoutline mode
+STEP1|1d ago
+STEP1|web_render
+STEP1|Done
+STEP1|Result
+STEP1|No headings found in: https://example.com
+STEP1|1d ago
+STEP1|use web_render to show https://example.com in full mode
+STEP1|1d ago
+STEP1|web_render
+STEP1|Done
+STEP2|Here's the full-mode render of https://example.com:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен пред
+STEP2|1d ago
+STEP2|use web_render to show https://example.com in full mode😗
+STEP2|0d ago
+STEP3|web_render
+STEP3|Done
+STEP3|Result
+STEP3|This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен для использования в примерах документации бе
+STEP3|Show more
+STEP3|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP4|use web_render to show https://example.com in full mode
+STEP4|0d ago
+STEP4|web_render
+STEP4|Done
+STEP4|Result
+STEP4|This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен для использования в примерах документации бе
+STEP4|Show more
+STEP4|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP5|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP5|0d ago
+STEP5|hello
+STEP5|0d ago
+STEP5|Hello! How can I help you today?
+STEP5|0d ago
+STEP5|search the web for latest Pixel 9 news
+STEP5|0d ago
+STEP5|web_search
+STEP5|Done
+STEP5|Result
+STEP5|TIER:ddg
+1. Google Pixel 9: Ultimate Buyers Guide - September 2026
+   URL: https://www.androidheadlines.com/google-pixel-9
+   UPDATE (September 30, 2026): Google is now pushing out the September 2026 Android update to the Pixel 9, which is a new Pixel Feature Drop. Read more about it at the end of the article. Summary ...
+
+2. Google Pixel 9 - Android Headlines
+   URL: https://www.androidheadlines.com/category/google-news/pixel-9
+   Google Pixel 9 Discover Google Pixel 9 News, Rumors, Leaks, Specs, Features, Design, Prices. Reviews with latest developments with our comprehensive coverage.
+
+3. 9
+STEP7|This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L’usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s’agit pas d’un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен для использования в примерах документации бе
+STEP7|Show more
+STEP7|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP8|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP9|Here's https://example.com in full mode:
+
+This domain is for use in documentation examples without needing permission. This is not a service; avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L'usage de ce domaine est réservé à des exemples de documentation, sans autorisation préalable. Il ne s'agit pas d'un service ; son utilisation à des fins de test ou de surveillance est à éviter.
+
+Данный домен предназначен дл
+STEP9|0d ago
+STEP9|hello
+STEP9|Hello! How can I help you today?
+STEP9|search the web for pixel 6a specs today
+STEP11|hello
+STEP11|Hello! How can I help you today?
+STEP11|search web for Android 15 release date
+STEP11|web_search
+STEP11|Done
+STEP11|Result
