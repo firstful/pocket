@@ -1,0 +1,9 @@
+11-17 19:10:11.183 31425 31439 D WebRenderTool: start url=https://example.com mode=full max_chars=4000 timeout_ms=12000
+11-17 19:10:11.183 31425 31439 D WebRenderManager: start url=https://example.com timeoutMs=12000
+11-17 19:10:11.365 31425 31425 D WebRenderManager: pip_added rounded=true zoom=80
+11-17 19:10:11.843 31425 31425 D WebRenderManager: onPageFinished url=https://example.com/
+11-17 19:10:13.357 31425 31425 D WebRenderManager: evaluateJs callback value_len=917
+11-17 19:10:13.358 31425 31439 D WebRenderManager: await ok=true error=null html_len=905
+11-17 19:10:13.358 31425 31439 D WebRenderManager: done html_len=905 error=null
+11-17 19:10:13.358 31425 31439 D WebRenderTool: rendered len=905 (webview=true)
+11-17 19:10:13.358 31425 31439 D WebRenderTool: done mode=full result_len=905

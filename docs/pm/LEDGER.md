@@ -330,3 +330,30 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - web_search on-device QA remains fragile (ADB input coordinates); last clean proof stands.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; web_render on a true JS/SPA page (not just static example.com); SMS opt-in gating.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-18T00:14Z (PM cron, vc111 `1.0.111-f3b855a`, CI run 1698 success) — config-import feature first on-device QA
+
+### QA Outcomes
+- Identity/device: Pixel 6a (27271JEGR25574), reached via mDNS `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp`. Pre-run script's `192.168.1.147:45357` stale again. **Device was on vc109 (`1.0.109-4617851`) at run start — 2 behind store tip vc111; Rook downloaded vc111 from store, sha256 verified `b8a3b2b85046…64d0` against `apps.json`, `adb install -r` Success, post-install dumpsys versionCode=111 / versionName=1.0.111-f3b855a.**
+- CI/store: run 1698 `f3b855aa` completed/success (push, build job 2140 green); log confirms BUILD SUCCESSFUL 5m34s, `publish -> http://apps.ffilt.us/publish/Pocket/app-release.apk (http 200)`, V2 signer `CN=Sutliff Homelab` SHA-256 `a27e8c1e…c3b68`. Store tip `1.0.111-f3b855a` vc111 sha `b8a3b2b8…` matches HEAD code SHA f3b855a. No drift.
+- Launch/no-crash PASS: `Displayed com.sutliff.pocket/.MainActivity ... +249ms`, focus Pocket, no FATAL/AndroidRuntime. Evidence: `docs/pm/logs/20261118T000546Z-launch.log`, `docs/pm/screenshots/20261118T000546Z-identity.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 13 lines (6 data)`, `loop done, lines=13 data=6`, no gateway error. Evidence: `docs/pm/logs/20261118T000546Z-hello.log`, `docs/pm/screenshots/20261118T000546Z-hello.png`.
+- Web search PASS: `WebSearchTool: start query_len=19 … response code=200 html_len=28229 duration_ms=1125 … parsed titles=10 snippets=10 … done result_count=8`; follow-up stream `loop done, lines=27 data=13`. No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261118T000546Z-websearch.log`, `docs/pm/screenshots/20261118T000546Z-websearch.png`.
+- **Config-import UI (NEW feature, first on-device check) PASS:** Settings reachable; new section present in UI hierarchy — `Config import`, hint `Config URL (HTTPS only)`, `Passphrase`, `Import config` (verified in `docs/pm/logs/20261118T000546Z-settings-scroll2.xml`); no crash. No real URL/passphrase submitted (reachability/inspection only). Evidence: `docs/pm/screenshots/20261118T000546Z-settings.png`, `docs/pm/logs/20261118T000546Z-settings-ui.xml`, `...-settings-scroll.xml`, `...-settings-scroll2.xml`.
+- **web_render PiP exit-button fix (4617851) VERIFIED:** `WebRenderManager: pip_added rounded=true zoom=80`, full render `… result_len=905`, and `✕` control bounds `[978,199][1039,263]` (top y=199) fully below `statusBarBackground [0,0][1080,132]` — old bug (exit at y≈63) gone. Evidence: `docs/pm/logs/20261118T000546Z-pip.log`, `...-pip-ui.xml`, `docs/pm/screenshots/20261118T000546Z-pip.png`.
+- Permission/dialogs PASS: no grant/enhanced-confirmation dialog, focus never left Pocket. Manifest diff f52f1ac..f3b855a adds no permission (only comment + `allowBackup true→false`) → no new startup dialog.
+- Homelab MCP todo board: scanned 167 open todos, 0 actionable Pocket items (#697 resolved earlier). 6 keyword hits all unrelated (Jellyfin APK, dash, outage hardening, HA companion, os-keystore, GitOps lifecycle).
+- On-device QA delegated (1 serialized subagent, ts `20261118T000546Z`); all artifact paths re-verified inline by Rook (byte sizes + log excerpts match). Host-side artifact/source check delegated to a parallel subagent: APK sha256 matches store; DEX markers `KeystoreWrap`/`ConfigImportClient`/`SeedConfig`/`setUserAuthenticationRequired`/`applied_import_version`/`pip_added` all present in shipped bytecode.
+
+### Shipped (3 code commits since last ledger run vc107)
+- `4617851` — fix(pocket): keep expanded web_render PiP exit button below status bar (verified this run).
+- `7697d56` — feat(pocket): config endpoint passphrase import with Keystore-wrapped secrets. New: `crypto/KeystoreWrap.kt` (AES-256-GCM, headless-safe `setUserAuthenticationRequired(false)`, StrongBox/TEE, non-exportable key), `network/ConfigImportClient.kt` (HTTPS-only + hostname verify, passphrase POSTed in body, server-side 401/429), `datastore/SeedConfig.kt` (`applied_import_version` tracking), Settings UI section, `docs/config-import.md`, `allowBackup=false`.
+- `f3b855a` — fix: KeystoreWrap import `javax.crypto.KeyGenerator` (CI run 1697 had failed on this; 1698 green).
+- All three built+published in CI run 1698 (completed/success, V2-signed), store tip vc111. On-device security audit: low risk — secrets wrapped before persistence, no logging, HTTPS enforced. Residual (per docs, intentional): no tailnet/private-IP host restriction on user-supplied HTTPS URL, empty cert-pinning hook, legacy plaintext compat path.
+
+### Open / Next
+- Config-import END-TO-END not exercised (needs a live `reeds/pocket-cfg` endpoint + real 6-word passphrase); only UI reachability + source/bytecode verified. Verify fetch→unwrap→persist on-device when endpoint is up.
+- web_render on a true JS/SPA page still untested (carried idea; static example.com proven).
+- ADB multi-word input quirk this run (`adb shell input text` truncates at first space) — worked around with word-by-word + keyevent 62. Automation quirk, not app bug.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating.
+- `web_fetch` 403 from some sites is site-side (not a bug).

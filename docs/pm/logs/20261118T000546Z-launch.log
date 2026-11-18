@@ -1,0 +1,6 @@
+11-17 19:05:59.918 29820 29820 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-17 19:05:59.923 29820 29820 I AndroidRuntime: Using default boot image
+11-17 19:05:59.923 29820 29820 I AndroidRuntime: Leaving lock profiling enabled
+11-17 19:06:00.087 29820 29820 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+11-17 19:06:00.173 29820 29820 I AndroidRuntime: VM exiting with result code 0.
+11-17 19:06:00.403  1701  1785 I ActivityTaskManager: Displayed com.sutliff.pocket/.MainActivity for user 0: +249ms

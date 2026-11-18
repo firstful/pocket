@@ -1,0 +1,16 @@
+11-17 19:06:08.512 29943 29943 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-17 19:06:08.514 29943 29943 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-17 19:06:08.916 32146  4214 V ClearcutMetricXmitter: Transmission is done.
+11-17 19:06:09.681 29943 29969 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:09.681 29943 29966 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:09.681 29943 29964 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:18.505 29999 29999 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-17 19:06:18.507 29999 29999 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-17 19:06:19.627 29999 30011 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:19.627 29999 30013 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:19.627 29999 30017 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-17 19:06:27.074 29870 29887 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-17 19:06:28.868 29870 29887 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-17 19:06:28.869 29870 29887 D PocketNet: streamChat: first data (219 bytes): {"id":"gen-1794960385-d9y2MUKS3j8NeECPUg54","object":"chat.completion.chunk","created":1794960385,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"Hello"}}]}
+11-17 19:06:28.889 29870 29887 D PocketNet: streamChat: [DONE] after 13 lines (6 data)
+11-17 19:06:28.889 29870 29887 D PocketNet: streamChat: loop done, lines=13 data=6
