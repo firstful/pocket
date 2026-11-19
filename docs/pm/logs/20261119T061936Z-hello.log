@@ -1,0 +1,10 @@
+TS=20261119T061936Z
+message sent: hello
+send tap: 996 1344 (rightmost button)
+screenshot: /root/pocket/docs/pm/screenshots/20261119T061936Z-hello.png
+=== streamChat lines ===
+11-19 01:20:36.767  9645  9671 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-19 01:20:38.244  9645  9671 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-19 01:20:38.244  9645  9671 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-44692020-585c-44d5-8447-76512833abc4","object":"chat.completion.chunk","created":1795069236,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-19 01:20:38.292  9645  9671 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-19 01:20:38.292  9645  9671 D PocketNet: streamChat: loop done, lines=15 data=7

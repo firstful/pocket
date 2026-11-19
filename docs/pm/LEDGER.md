@@ -459,7 +459,7 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); standard hello/web_search captures succeeded this run.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
-- Note: an identity-only partial run exists at ts 20261119T061936Z (vc117 confirmed, no full QA) and a delegated QA subagent (deleg_a85d8666) was in flight at ledger-write time; its evidence will be consolidated in a subsequent run.
+- Note: the delegated QA subagent (deleg_a85d8666) completed partial evidence at ts 20261119T061936Z: identity (Pixel 6a / 27271JEGR25574 / vc117 `1.0.117-72e33fd`), launch/no-crash PASS (docs/pm/logs/20261119T061936Z-launch.log, docs/pm/screenshots/20261119T061936Z-launch.png), hello stream PASS (`[DONE] after 15 lines (7 data)`, docs/pm/logs/20261119T061936Z-hello.log, docs/pm/screenshots/20261119T061936Z-hello.png). No web_search/settings/crypto captured in this partial run; web_search proof stands from the 00:10Z run (result_count=8).
 
 ### Shipped (infra, same day)
 - appstore Deployment recovered from 0 replicas (2026-11-18T18:33Z incident) and is 1/1 Running; apps.ffilt.us 200. Root-cause tracking todo for the park/preempt mechanism remains open in the lifecycle tiering cluster (see todos #373/#378/#380/#381).
