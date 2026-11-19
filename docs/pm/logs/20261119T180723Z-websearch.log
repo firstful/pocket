@@ -1,0 +1,20 @@
+11-19 13:07:31.979 32749   392 I native  : I0000 00:00:1795111651.979037     392 soda_async_impl.cc:676] SODA session starting (require_hotword:1, hotword_timeout_in_millis:3000, trigger_type:TRIGGER_TYPE_UNSPECIFIED, hybrid_asr_config.mode:MODE_DEFAULT)
+11-19 13:07:31.979 32749   392 I native  : I0000 00:00:1795111651.979075     392 hotword_processor.cc:504] Updated hotword timeout: 3000
+11-19 13:07:33.060 32749 20011 I native  : I0000 00:00:1795111653.060581   20011 soda_impl.cc:2132] Adding hotword timeout event
+11-19 13:07:33.201 32265 32321 I fjip    : HDM. Hotword timeout.
+11-19 13:07:40.236  2362  2675 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-19 13:07:44.250  2362  2554 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-19 13:07:48.502 32749   392 I native  : I0000 00:00:1795111668.502247     392 soda_async_impl.cc:676] SODA session starting (require_hotword:1, hotword_timeout_in_millis:3000, trigger_type:TRIGGER_TYPE_UNSPECIFIED, hybrid_asr_config.mode:MODE_DEFAULT)
+11-19 13:07:48.502 32749   392 I native  : I0000 00:00:1795111668.502287     392 hotword_processor.cc:504] Updated hotword timeout: 3000
+11-19 13:07:49.578 32749 20011 I native  : I0000 00:00:1795111669.578354   20011 soda_impl.cc:2132] Adding hotword timeout event
+11-19 13:07:49.711 32265 32323 I fjip    : HDM. Hotword timeout.
+11-19 13:07:50.205  2362  2554 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-19 13:08:00.240  2362  3768 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-19 13:08:17.447 14458 14472 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-19 13:08:53.059 14458 14472 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-19 13:08:53.310 14458 14472 D WebSearchTool: start query_len=29 max_results=8
+11-19 13:08:54.365 14458 14472 D WebSearchTool: response code=200 html_len=28781 duration_ms=1053
+11-19 13:08:54.368 14458 14472 D WebSearchTool: parsed titles=10 snippets=10
+11-19 13:08:54.373 14458 14472 D WebSearchTool: done result_count=8 duration_ms=1053
+11-19 13:08:56.948 14458 14472 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-19 13:09:00.293  2362  2491 D ImpulseConnection: timeout happen: com.google.android.apps.turbo

@@ -1,0 +1,317 @@
+--------- beginning of main
+11-19 13:09:46.445  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input tap 628 216'
+11-19 13:09:46.547 14458 14458 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-19 13:09:46.547 14458 14458 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-19 13:09:46.560   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-19 13:09:46.608   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-19 13:09:46.608   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-19 13:09:46.608   557 22497 I citadeld: Recorded atom for RPC call
+11-19 13:09:46.612   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-19 13:09:46.617   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-19 13:09:46.617   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-19 13:09:46.617   557 22497 I citadeld: Recorded atom for RPC call
+11-19 13:09:46.620   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-19 13:09:46.632   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-19 13:09:46.632   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-19 13:09:46.633   557 22497 I citadeld: Recorded atom for RPC call
+11-19 13:09:46.634   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000b
+11-19 13:09:46.638   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-19 13:09:46.638   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 11 app_status = 0
+11-19 13:09:46.638   557 22497 I citadeld: Recorded atom for RPC call
+11-19 13:09:46.639   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-19 13:09:46.643   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-19 13:09:46.643   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-19 13:09:46.643   557 22497 I citadeld: Recorded atom for RPC call
+11-19 13:09:47.144   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-19 13:09:47.177   557   575 D libnos_datagram: App 0x00 returning 0x0
+--------- beginning of system
+11-19 13:09:47.455  1701  2012 D ActivityManager: freezing 1220 com.google.android.apps.messaging
+11-19 13:09:48.401  9864 14991 I NearbyConnections: Found BleAdvertisement [ 0x23 0x51 0x58 0x43 0x36 0x11 0x32 0xdf 0xed 0xfd 0x65 0x90 0xe2 0x47 0x27 0xe7 0xe9 0x58 0xb8 0x86 0xba 0x21 0x9b ] (with EndpointId QXC6 and EndpointInfo [ 0x32 0xdf 0xed 0xfd 0x65 0x90 0xe2 0x47 0x27 0xe7 0xe9 0x58 0xb8 0x86 0xba 0x21 0x9b ])
+11-19 13:09:48.402  9864 14991 I NearbyConnections: ClientProxy(184550944 0p:com.google.android.gms.nearby.sharing) reporting onEndpointFound(QXC6)
+11-19 13:09:48.403  9864 14991 I NearbyConnections: ClientProxy(184550944) reporting onEndpointDistanceChanged(QXC6, UNKNOWN)
+11-19 13:09:48.405  9864 14992 I NearbySharing: NearbySharing Internal event EndpointDiscovered(endpointId=QXC6)
+11-19 13:09:48.624  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-19 13:09:48.726  1054  1054 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 101 ms
+11-19 13:09:48.759  1701  2131 I AdbWifiNetworkMonitor: Wi-Fi network available
+11-19 13:09:48.759  1701  2131 I AdbWifiNetworkMonitor: Received the same Wi-Fi SSID. Ignoring.
+11-19 13:09:48.771  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-19 13:09:48.771  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-19 13:09:48.771  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-19 13:09:48.788  2764  2803 D IwlanDataService: onCapabilitiesChanged: 107 [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=15347Kbps LinkDnBandwidth>=33431Kbps TransportInfo: <SSID: "SutliffSecure", BSSID: b4:fb:e4:f4:82:ea, MAC: 3a:87:33:4f:c4:a1, IP: /192.168.1.127, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -58, Link speed: 104Mbps, Tx Link speed: 104Mbps, Max Supported Tx Link speed: 144Mbps, Calculated Tx : 65Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Calculated Rx : 120Mbps, Frequency: 2412MHz, Net ID: 55, Metered hint: false, score: 100, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none>"SutliffSecure"wpa2-pskMLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -58 AdminUids: [10151] SSID: "SutliffSecure" UnderlyingNetworks: Null]
+11-19 13:09:48.789  2764  2803 D IwlanDataService: Network 107 connected using transport WIFI
+11-19 13:09:48.797  2764  3229 D IwlanNetworkService: onCapabilitiesChanged: 107
+11-19 13:09:48.801 11291 11416 I WifiSignalInfo: onCapabilitiesChanged: rssi:-58
+11-19 13:09:48.801 11291 11396 D DeviceStateHelper: Wifi freq: 2412
+11-19 13:09:48.806  1297  1380 I eoyr    : handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl:[1c9e2814-e7c4]>Handler" thread_id=174 ]
+11-19 13:09:48.806  1297  1372 I eoyr    : Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=170 ]
+11-19 13:09:48.807  2494  3894 E PhoneInterfaceManager: getCarrierPrivilegeStatusForUid: Invalid subId
+11-19 13:09:48.811  9864  9864 I MagicTether: (REDACTED) [ActiveNetworkTracker] setActiveNetwork: %s
+11-19 13:09:48.811  9864  9864 I MagicTether: (REDACTED) [TetherService] onActiveNetworkChanged: network=%s isLost=%s
+11-19 13:09:48.811  9864 14981 I MagicTether: [WifiConnectionHandler] Ignoring getWifiConfigurationByNetworkId when checking connected state [CONTEXT service_id=276 ]
+11-19 13:09:48.811  9864 14981 I MagicTether: [WifiConnectionHandler] No networkId set, can't be connected. [CONTEXT service_id=276 ]
+11-19 13:09:48.812  1701  2819 D ActivityManager: sync unfroze 1220 com.google.android.apps.messaging for 7
+11-19 13:09:48.814  9864 14981 I MagicTether: (REDACTED) [TetherService] TRANSPORT_CELLULAR [%s], TRANSPORT_ETHERNET [%s], TRANSPORT_WIFI [%s]
+11-19 13:09:48.815  9864 14981 I MagicTether: (REDACTED) [TetherService] setRoles hasActiveNetworkConnection=%s canActiveNetworkBeTethered=%s isConnectedToInstantTether=%s isWifiEnabled=%s isHosting=%s
+11-19 13:09:48.817  1701  2098 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 1]
+11-19 13:09:48.819  9864 14977 I NearbyMediums: Wifi changed new SSID: "SutliffSecure"
+11-19 13:09:48.819  9864 14977 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+11-19 13:09:48.825  1023  1085 D CHRE    : @ 1048258.203: Parsed nanoapp message from host: app ID 0x476f6f676c00100b endpoint 0x2c msgType 112 payload size 14
+11-19 13:09:48.825  1023  1085 I CHRE    : @ 1048258.204: [NanoMinion] received MSG Type 0x70, Version 1, 10 bytes
+11-19 13:09:48.825  1023  1085 I CHRE    : @ 1048258.205: [AR] context-signal: has_bt=0, bt=0, has_wifi=1, wifi=1
+11-19 13:09:48.826  9864  9864 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-19 13:09:48.826  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:48.826  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-19 13:09:48.826  9864  9864 I MagicTether: (REDACTED) [TetherService] startNearbyClientRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-19 13:09:48.826  9864  9864 I MagicTether: [TetherService] Stopping Nearby client role [CONTEXT service_id=276 ]
+11-19 13:09:48.826  9864  9864 I MagicTether: [ClientTetherRole] Client role already stopped [CONTEXT service_id=276 ]
+11-19 13:09:48.829  9864  9864 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-19 13:09:48.829  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:48.829  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-19 13:09:48.829  9864  9864 I MagicTether: (REDACTED) [TetherService] startNearbyHostRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-19 13:09:48.829  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:48.829  9864  9864 I MagicTether: [HostTetherRole] Nearby host role already started [CONTEXT service_id=276 ]
+11-19 13:09:49.313  9864 14977 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+11-19 13:09:49.318  9864 14977 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+11-19 13:09:49.387  1014  2766 I bthal.activity: bt_power: LeAdvStat: 13:09:48:385 - 13:09:49:386, duration: 1000, le_adv_count: 1, total_le_adv_count: 207421, total_event_count: 1
+11-19 13:09:49.713  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys window'
+11-19 13:09:49.853  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-19 13:09:49.993 15003 15003 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-19 13:09:49.994 15003 15003 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-19 13:09:49.994 15003 15003 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-19 13:09:50.309  1300  1300 I adbd    : adbd service requested 'exec:uiautomator 'dump' '/dev/tty''
+11-19 13:09:50.442 15007 15007 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-19 13:09:50.446 15007 15007 I AndroidRuntime: Using default boot image
+11-19 13:09:50.446 15007 15007 I AndroidRuntime: Leaving lock profiling enabled
+11-19 13:09:50.448 15007 15007 I app_process: Core platform API enforcement disabled by runtime option
+11-19 13:09:50.449 15007 15007 I app_process: Using generational CollectorTypeCMC GC.
+11-19 13:09:50.487  9864  9864 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS xflg=0x4 pkg=com.google.android.gms }
+11-19 13:09:50.491 15007 15007 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+11-19 13:09:50.499 15007 15007 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-19 13:09:50.499 15007 15007 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/10/icu") succeeded. 
+11-19 13:09:50.499 15007 15007 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt78l.dat
+11-19 13:09:50.500 15007 15007 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-19 13:09:50.500 15007 15007 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-19 13:09:50.501 15007 15007 I app_process: Priority-to-niceness mapping: 19, 16, 13, 10, 0, -2, -4, -5, -6, -8
+11-19 13:09:50.519 15007 15007 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-19 13:09:50.520 15007 15007 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-19 13:09:50.522 15007 15007 I AconfigPackage: com.android.devicelock.flags is mapped to com.android.devicelock
+11-19 13:09:50.522 15007 15007 I AconfigPackage: android.os.profiling is mapped to com.android.profiling
+11-19 13:09:50.522 15007 15007 I AconfigPackage: android.os.profiling.anomaly.beta.flags is mapped to com.android.profiling
+11-19 13:09:50.522 15007 15007 I AconfigPackage: android.os.profiling.anomaly.flags is mapped to com.android.profiling
+11-19 13:09:50.523 15007 15007 I AconfigPackage: android.provider.flags is mapped to com.android.configinfrastructure
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.server.deviceconfig is mapped to com.android.configinfrastructure
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.uwb.flags is mapped to com.android.uwb
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.ranging.flags is mapped to com.android.uwb
+11-19 13:09:50.523 15007 15007 I AconfigPackage: android.media.swcodec.flags is mapped to com.android.media.swcodec
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.ipsec.flags is mapped to com.android.ipsec
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.icu is mapped to com.android.i18n
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.adservices.ondevicepersonalization.flags is mapped to com.android.ondevicepersonalization
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.google.android.widevine.flags is mapped to com.google.android.widevine
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.healthfitness.flags is mapped to com.android.healthfitness
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.healthfitness.beta is mapped to com.android.healthfitness
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.wifi.flags is mapped to com.android.wifi
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.compos.flags is mapped to com.android.compos
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.bluetooth.beta.flags is mapped to com.android.bt
+11-19 13:09:50.523 15007 15007 I AconfigPackage: com.android.bluetooth.flags is mapped to com.android.bt
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.webapp.flags is mapped to com.android.webapp
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.cellbroadcastreceiver.flags is mapped to com.android.cellbroadcast
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.permission.flags is mapped to com.android.permission
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.nfc.module.flags is mapped to com.android.nfcservices
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.nfc.module.nonexported.flags is mapped to com.android.nfcservices
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.tethering.mainline.beta is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: android.net.http is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.tethering.readonly.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: android.net.vcn is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.net.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.tethering.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.tethering.beta.test is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.nearby.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.net.thread.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: android.net.http.flags is mapped to com.android.tethering
+11-19 13:09:50.524 15007 15007 I AconfigPackage: android.telecom.flags is mapped to com.android.telephonycore
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.internal.telecom.flags is mapped to com.android.telephonycore
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.telephony.flags is mapped to com.android.telephonycore
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.crashrecovery.flags is mapped to com.android.crashrecovery
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.org.conscrypt.flags is mapped to com.android.conscrypt
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.org.conscrypt.net.flags is mapped to com.android.conscrypt
+11-19 13:09:50.524 15007 15007 I AconfigPackage: com.android.npumanager is mapped to com.android.npumanager
+11-19 13:09:50.525 15007 15007 D nativeloader: Load libstats_jni.so using APEX ns com_android_os_statsd for caller /apex/com.android.os.statsd/javalib/framework-statsd.jar: ok
+11-19 13:09:50.525 15007 15007 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.signature.flags is mapped to com.android.mediaprovider
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.providers.media.flags is mapped to com.android.mediaprovider
+11-19 13:09:50.525 15007 15007 I AconfigPackage: android.graphics.pdf.flags is mapped to com.android.mediaprovider
+11-19 13:09:50.525 15007 15007 I AconfigPackage: android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.adservices.flags is mapped to com.android.adservices
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.sdksandbox.flags is mapped to com.android.adservices
+11-19 13:09:50.525 15007 15007 I AconfigPackage: android.app.sdksandbox.flags is mapped to com.android.adservices
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.uprobestats.flags is mapped to com.android.uprobestats
+11-19 13:09:50.525 15007 15007 I AconfigPackage: android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.rkpd.flags is mapped to com.android.rkpd
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.os.statsd.flags is mapped to com.android.os.statsd
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.scheduling.flags is mapped to com.android.scheduling
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.art.flags is mapped to com.android.art
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.art.rw.flags is mapped to com.android.art
+11-19 13:09:50.525 15007 15007 I AconfigPackage: com.android.libcore is mapped to com.android.art
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.appsearch.flags is mapped to com.android.appsearch
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.media.extractor.flags is mapped to com.android.media
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.media.metrics.flags is mapped to com.android.media
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.media.mainline.flags is mapped to com.android.media
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.system.virtualmachine.flags is mapped to com.android.virt
+11-19 13:09:50.526 15007 15007 I AconfigPackage: com.android.adbd.flags is mapped to com.android.adbd
+11-19 13:09:50.526 15007 15007 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-19 13:09:50.527 15007 15007 D UiAutomationConnection: Created on user UserHandle{0}
+11-19 13:09:50.527 15007 15007 I UiAutomation: Initialized for user 0 on display 0
+11-19 13:09:50.527 15007 15007 W UiAutomation: Created with deprecatead constructor, assumes DEFAULT_DISPLAY
+11-19 13:09:50.528  1701  3323 D AccessibilityManagerService: changeCurrentUserForTestAutomationIfNeededLocked(0): ignoring because device doesn't support visible background users
+11-19 13:09:50.528  1701  3323 I UiAutomationManager: Registering UiTestAutomationService (id=com.android.server.accessibility/UiAutomation, flags=0x0) when called by user 0
+11-19 13:09:50.528  1701  3323 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-19 13:09:50.529  1701  3323 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-19 13:09:50.530 31621 16125 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-19 13:09:50.530 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.530 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.530 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.531 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.531 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.531 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.531 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.531 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.532  1701  3323 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-19 13:09:50.532  1701  3323 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-19 13:09:50.532 31621 16125 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-19 13:09:50.532 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.532 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.532 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.533 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-19 13:09:50.533 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.533 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.533 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.533 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.533 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.533 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.534 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.534 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.534 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.534 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.534  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-19 13:09:50.534 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.534 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.535 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.535 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-19 13:09:50.535 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.535 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:50.535 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:50.536 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.536 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.536 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.536 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.537 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.537 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:50.537  1701  3323 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=0, userId=0}
+11-19 13:09:50.537  1701  1701 D BatterySaverPolicy: accessibility changed to true, updating policy.
+11-19 13:09:50.537  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-19 13:09:51.547 15007 15007 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-19 13:09:51.548 15007 15007 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-19 13:09:51.546 15007 15007 W uiautomator: type=1400 audit(0.0:15582): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-19 13:09:51.546 15007 15007 W uiautomator: type=1400 audit(0.0:15583): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-19 13:09:51.574 15007 15007 W AccessibilityNodeInfoDumper: Fetch time: 24ms
+11-19 13:09:51.575  1701  3323 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_shortcut_target_service, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_gesture_targets, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_qs_targets, current:{com.android.server.accessibility/ReduceBrightColors}, new:{com.android.server.accessibility/ReduceBrightColors}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_key_gesture_targets, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_top_row_key_targets, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 V AccessibilityUserState: updateShortcutTargets: type:accessibility_quick_access_targets, current:{}, new:{}
+11-19 13:09:51.576  1701  3323 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-19 13:09:51.576  1701  3323 D AccessibilityManagerService: restoreCurrentUserForTestAutomationIfNeededLocked(): ignoring because device doesn't support visible background users
+11-19 13:09:51.577 31621 16125 I AiAiEcho: (REDACTED) Settings changed for uri: %s
+11-19 13:09:51.578 15007 15025 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-19 13:09:51.578 15007 15015 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-19 13:09:51.578 15007 15016 W libbinder.IPCThreadState: call to talkWithDriver in joinThreadPool returned error: -9 (Bad file descriptor), FD: -1
+11-19 13:09:51.578 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:51.579 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:51.579 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:51.579 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:51.579 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:51.579 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:51.579 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:51.579 15007 15007 D AndroidRuntime: Shutting down VM
+11-19 13:09:51.579 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:51.580 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:51.580 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:51.580 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:51.580 31621 31649 I AiAiSmartspace: #weatherSecondaryCardTwiddler: don't change weather for the dream surface
+11-19 13:09:51.580 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:51.580 31621 31649 I AiAiEcho: (REDACTED) Predicting[%d]: %s
+11-19 13:09:51.580 31621 31649 I AiAiEcho: (REDACTED) EchoTargets: %s
+11-19 13:09:51.580 31621 31649 I AiAiEcho: Filtered by AiAi flag check: %s
+11-19 13:09:51.581 31621 31649 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-19 13:09:51.581 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:51.581 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:51.581  2199  2239 I AmbientCueRepository: Receiving SmartSpace targets # 0
+11-19 13:09:51.581 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:51.582 31621 31649 I AiAiEcho: (REDACTED) #postPredictionTargets: Sending updates to UISurface %s with targets# %s (types=[%s])
+11-19 13:09:51.583  1701  1701 D BatterySaverPolicy: accessibility changed to false, updating policy.
+11-19 13:09:51.784  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-19 13:09:51.870  1701  2131 I AdbWifiNetworkMonitor: Wi-Fi network available
+11-19 13:09:51.870  1701  2131 I AdbWifiNetworkMonitor: Received the same Wi-Fi SSID. Ignoring.
+11-19 13:09:51.873  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-19 13:09:51.874  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-19 13:09:51.874  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-19 13:09:51.882  2764  2803 D IwlanDataService: onCapabilitiesChanged: 107 [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=15347Kbps LinkDnBandwidth>=33431Kbps TransportInfo: <SSID: "SutliffSecure", BSSID: b4:fb:e4:f4:82:ea, MAC: 3a:87:33:4f:c4:a1, IP: /192.168.1.127, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11n, RSSI: -58, Link speed: 78Mbps, Tx Link speed: 78Mbps, Max Supported Tx Link speed: 144Mbps, Calculated Tx : 74Mbps, Rx Link speed: 144Mbps, Max Supported Rx Link speed: 144Mbps, Calculated Rx : 120Mbps, Frequency: 2412MHz, Net ID: 55, Metered hint: false, score: 100, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: 1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none>"SutliffSecure"wpa2-pskMLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -58 AdminUids: [10151] SSID: "SutliffSecure" UnderlyingNetworks: Null]
+11-19 13:09:51.882  2764  2803 D IwlanDataService: Network 107 connected using transport WIFI
+11-19 13:09:51.887  2764  3229 D IwlanNetworkService: onCapabilitiesChanged: 107
+11-19 13:09:51.891 11291 11396 D DeviceStateHelper: Wifi freq: 2412
+11-19 13:09:51.893 11291 11416 I WifiSignalInfo: onCapabilitiesChanged: rssi:-58
+11-19 13:09:51.899  1297  1380 I eoyr    : handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl:[1c9e2814-e7c4]>Handler" thread_id=174 ]
+11-19 13:09:51.900  1297  1372 I eoyr    : Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=170 ]
+11-19 13:09:51.901  2494 13109 E PhoneInterfaceManager: getCarrierPrivilegeStatusForUid: Invalid subId
+11-19 13:09:51.909  9864  9864 I MagicTether: (REDACTED) [ActiveNetworkTracker] setActiveNetwork: %s
+11-19 13:09:51.909  9864  9864 I MagicTether: (REDACTED) [TetherService] onActiveNetworkChanged: network=%s isLost=%s
+11-19 13:09:51.909  1701  2098 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 2]
+11-19 13:09:51.910  9864 14980 I MagicTether: [WifiConnectionHandler] Ignoring getWifiConfigurationByNetworkId when checking connected state [CONTEXT service_id=276 ]
+11-19 13:09:51.910  9864 14980 I MagicTether: [WifiConnectionHandler] No networkId set, can't be connected. [CONTEXT service_id=276 ]
+11-19 13:09:51.913  1023  1085 D CHRE    : @ 1048261.294: Parsed nanoapp message from host: app ID 0x476f6f676c00100b endpoint 0x2c msgType 112 payload size 14
+11-19 13:09:51.913  1023  1085 I CHRE    : @ 1048261.294: [NanoMinion] received MSG Type 0x70, Version 1, 10 bytes
+11-19 13:09:51.913  1023  1085 I CHRE    : @ 1048261.294: [AR] context-signal: has_bt=0, bt=0, has_wifi=1, wifi=1
+11-19 13:09:51.914  9864 14980 I MagicTether: (REDACTED) [TetherService] TRANSPORT_CELLULAR [%s], TRANSPORT_ETHERNET [%s], TRANSPORT_WIFI [%s]
+11-19 13:09:51.915  9864 14977 I NearbyMediums: Wifi changed new SSID: "SutliffSecure"
+11-19 13:09:51.915  9864 14977 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+11-19 13:09:51.915  9864 14980 I MagicTether: (REDACTED) [TetherService] setRoles hasActiveNetworkConnection=%s canActiveNetworkBeTethered=%s isConnectedToInstantTether=%s isWifiEnabled=%s isHosting=%s
+11-19 13:09:51.919  9864  9864 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-19 13:09:51.919  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:51.919  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-19 13:09:51.919  9864  9864 I MagicTether: (REDACTED) [TetherService] startNearbyClientRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-19 13:09:51.919  9864  9864 I MagicTether: [TetherService] Stopping Nearby client role [CONTEXT service_id=276 ]
+11-19 13:09:51.919  9864  9864 I MagicTether: [ClientTetherRole] Client role already stopped [CONTEXT service_id=276 ]
+11-19 13:09:51.921  9864  9864 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-19 13:09:51.921  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:51.921  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-19 13:09:51.921  9864  9864 I MagicTether: (REDACTED) [TetherService] startNearbyHostRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-19 13:09:51.922  9864  9864 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-19 13:09:51.922  9864  9864 I MagicTether: [HostTetherRole] Nearby host role already started [CONTEXT service_id=276 ]
+11-19 13:09:52.404  9864 14977 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+11-19 13:09:52.405  9864 14992 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+11-19 13:09:52.473  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

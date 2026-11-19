@@ -1,0 +1,6 @@
+# Crypto regression scan - TS=20261119T180723Z
+# Source: adb logcat -d on 192.168.1.127:38361 (Pixel 6a / 27271JEGR25574), logcat cleared at QA start
+# Full log: /tmp/pocket_full_all.log (4614 lines total scanned)
+# Pattern: caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException
+# MATCH COUNT: 0  (PASS - zero crypto regression matches)
+# --- matching lines (none) ---

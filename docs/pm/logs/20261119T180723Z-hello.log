@@ -1,0 +1,5 @@
+11-19 13:08:14.104 14458 14472 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-19 13:08:17.447 14458 14472 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-19 13:08:17.447 14458 14472 D PocketNet: streamChat: first data (246 bytes): {"id":"gen-1795111694-kqZ5Zv2Vpt6Qvha2UEny","object":"chat.completion.chunk","created":1795111694,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"Hello! How can I help you today?"}}]}
+11-19 13:08:17.450 14458 14472 D PocketNet: streamChat: [DONE] after 7 lines (3 data)
+11-19 13:08:17.450 14458 14472 D PocketNet: streamChat: loop done, lines=7 data=3
