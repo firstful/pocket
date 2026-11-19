@@ -1,0 +1,11 @@
+TS=20261119T061936Z
+message sent: search web for latest Android version
+screenshot: /root/pocket/docs/pm/screenshots/20261119T061936Z-websearch.png
+=== WebSearchTool ===
+11-19 01:21:47.074  9645  9672 D WebSearchTool: start query_len=22 max_results=8
+11-19 01:21:48.077  9645  9672 D WebSearchTool: response code=200 html_len=27734 duration_ms=1003
+11-19 01:21:48.083  9645  9672 D WebSearchTool: parsed titles=10 snippets=10
+11-19 01:21:48.087  9645  9672 D WebSearchTool: done result_count=8 duration_ms=1003
+=== streamChat ===
+11-19 01:21:47.072  9645  9671 D PocketNet: streamChat: loop done, lines=17 data=8
+11-19 01:21:50.087  9645  9671 D PocketNet: streamChat: loop done, lines=69 data=34

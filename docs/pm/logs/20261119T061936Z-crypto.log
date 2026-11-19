@@ -1,0 +1,11 @@
+TS=20261119T061936Z
+=== crypto/keystore grep across this-run logs (excluding crypto.log) ===
+(no crypto/keystore references in logs)
+
+=== crypto/keystore grep across full logcat ===
+11-19 01:21:56.695   553 10234 I keystore2: system/security/keystore2/watchdog/src/lib.rs:371 - Watchdog thread idle -> terminating. Have a great day.
+
+=== error-level lines in logcat (FATAL/AndroidRuntime/Exception) ===
+(none)
+
+RESULT: no IV/keystore/crypto errors observed during run.
