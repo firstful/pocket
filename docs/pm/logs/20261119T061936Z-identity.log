@@ -1,0 +1,14 @@
+TS=20261119T061936Z
+=== device ===
+Pixel 6a
+17
+27271JEGR25574
+=== package identity ===
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
+    lastUpdateTime=2026-11-18 10:33:01
+      firstInstallTime=2026-10-14 16:37:12
+=== expected ===
+versionCode=117 versionName=1.0.117-72e33fd
+=== git HEAD ===
+33a96ec5e3b91570c6044deb45077cb2b725eb18

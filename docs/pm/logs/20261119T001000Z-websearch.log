@@ -1,0 +1,19 @@
+11-18 19:15:33.818 16387 16420 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 19:15:34.755 16387 16420 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 19:15:34.755 16387 16420 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-34951c64-8c8d-4a70-b878-e7776af899b0","object":"chat.completion.chunk","created":1795047332,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-18 19:15:35.418 16387 16420 D PocketNet: streamChat: [DONE] after 49 lines (24 data)
+11-18 19:15:35.418 16387 16420 D PocketNet: streamChat: loop done, lines=49 data=24
+11-18 19:15:35.419 16387 16420 D WebSearchTool: start query_len=13 max_results=8
+11-18 19:15:36.298 16387 16420 D WebSearchTool: response code=200 html_len=28486 duration_ms=878
+11-18 19:15:36.301 16387 16420 D WebSearchTool: parsed titles=10 snippets=10
+11-18 19:15:36.304 16387 16420 D WebSearchTool: done result_count=8 duration_ms=878
+11-18 19:15:36.326 16387 16420 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 19:15:37.016 16387 16420 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 19:15:37.017 16387 16420 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-fd512918-3185-4c32-8192-e3f8c9ebab86","object":"chat.completion.chunk","created":1795047335,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-18 19:15:37.722 16387 16420 D PocketNet: streamChat: [DONE] after 45 lines (22 data)
+11-18 19:15:37.722 16387 16420 D PocketNet: streamChat: loop done, lines=45 data=22
+11-18 19:15:41.942 16387 16420 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-18 19:15:42.711 16387 16420 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-18 19:15:42.712 16387 16420 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-8e1f5e23-bc85-4fa1-a347-eb0edd1ec825","object":"chat.completion.chunk","created":1795047340,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-18 19:15:45.259 16387 16420 D PocketNet: streamChat: [DONE] after 133 lines (66 data)
+11-18 19:15:45.259 16387 16420 D PocketNet: streamChat: loop done, lines=133 data=66

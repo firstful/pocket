@@ -436,3 +436,30 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - At ~18:33Z, `apps.ffilt.us/apps.json` began returning `503 no available server` (it was 200 and APK sha-verified earlier this run at 18:04–18:05Z). Root cause: `appstore/appstore` Deployment (ns `appstore`, image `reeds/appstore:8`, label `rook.io/lifecycle: persistent`) was parked at **0/0** — k8s event `Scaled down replica set appstore-7bf9fbb754 from 1 to 0` ~11m prior; appstore pod had been `Preempted` on node reed-a320ms2h and a `node-gatekeeper` job (ns node-scout) failed around the same window. GitOps source `/root/sutliff-cluster/apps/appstore/deployment.yaml` declares `replicas: 1`, so this was drift, not intended.
 - Fix applied (documented 503 triage): `kubectl -n appstore scale deploy appstore --replicas=1` → rollout succeeded, pod 1/1 Running on wyse5070. Re-verified `apps.json` 200 (3/3 polls, 1942 B), catalog row `com.sutliff.pocket 1.0.117-72e33fd vc=117` == HEAD == device. Store back to healthy.
 - Todo created to track the park mechanism (why a `persistent` appstore gets scaled to 0 / preempted) so it can be made keeper-aware; not reverted by Flux (source says 1).
+
+## Run 2026-11-19T00:10Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — QA verified, ledger catch-up
+
+### QA Outcomes
+- Identity: Pixel 6a (27271JEGR25574), vc117 `1.0.117-72e33fd` installed from store (sha `1d9900e14631…e358`). Device reachable via mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (pre-run script's hardcoded `192.168.1.147:45357` stale, as usual). Evidence: `docs/pm/logs/20261119T001000Z-identity.log`, `docs/pm/screenshots/20261119T001000Z-launch.png` (device/version captured inline).
+- Launch/no-crash PASS: monkey injected 1 event, VM exited 0, no FATAL EXCEPTION / AndroidRuntime crash (the 6 `AndroidRuntime` lines are benign monkey bootstrap + VM exit 0). Evidence: `docs/pm/logs/20261119T001000Z-launch.log` (29,972 B), `docs/pm/screenshots/20261119T001000Z-launch.png` (128,653 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`, no gateway error. Evidence: `docs/pm/logs/20261119T001000Z-hello.log` (701 B), `docs/pm/screenshots/20261119T001000Z-hello.png` (101,061 B).
+- Web search PASS: `WebSearchTool: start query_len=13 … response code=200 html_len=28486 duration_ms=878 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=878`; follow-up stream `loop done, lines=133 data=66`. No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261119T001000Z-websearch.log` (2,450 B), `docs/pm/screenshots/20261119T001000Z-websearch.png` (180,415 B).
+- Crypto regression watch PASS (vc117 key): NO matches across all this-run logs for `caller provided IV`, `KeyStoreException`, `AEADBadTagException`, `InvalidKeyException`, `self-heal` — cipher-generated-IV fix holds, no keystore wrap/unwrap regression.
+- Permission/dialogs PASS: no EnhancedConfirmationDialog/grant markers; no new system dialog tapped past.
+- OTEL not re-exercised this run (endpoint unset by default on device); prior E2E proof from 2026-11-16T18:02Z stands.
+- CI/store: latest code build run 1717 `72e33fdc` completed/success (push); store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA 72e33fd; device vc117 matches. HEAD `33a96ec` is docs-only ahead. No drift. apps.ffilt.us 200, telemetry.ffilt.us 405 (up). pocket-cfg pod `pocket-cfg-58664b7775-8mgmj` Running 1/1. appstore Deployment 1/1 (self-healed from 0 after the 2026-11-18T18:33Z incident).
+- Homelab MCP todo board: 0 open Pocket-actionable todos (scanned open board; Pocket todos #423/#424/#425/#459/#697/#795/#815-#818 all completed). No actionable items.
+
+### Shipped
+- No code changes this run. HEAD `33a96ec` docs-only ahead of CI/build SHA `72e33fd`; store tip vc117 matches device. Verified delegated QA evidence (ts 20261119T001000Z) and updated ledger (catch-up from uncommitted 00:10Z run).
+
+### Open / Next
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI reachability/source/bytecode verified.
+- web_render on a true JS/SPA page still untested (carried idea; static example.com proven vc107).
+- ADB input automation fragility remains (coordinate drift); standard hello/web_search captures succeeded this run.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Note: an identity-only partial run exists at ts 20261119T061936Z (vc117 confirmed, no full QA) and a delegated QA subagent (deleg_a85d8666) was in flight at ledger-write time; its evidence will be consolidated in a subsequent run.
+
+### Shipped (infra, same day)
+- appstore Deployment recovered from 0 replicas (2026-11-18T18:33Z incident) and is 1/1 Running; apps.ffilt.us 200. Root-cause tracking todo for the park/preempt mechanism remains open in the lifecycle tiering cluster (see todos #373/#378/#380/#381).
