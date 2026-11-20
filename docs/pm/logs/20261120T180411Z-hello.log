@@ -1,0 +1,7 @@
+11-20 13:04:55.740  4329  4350 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-20 13:04:55.814  9864  4468 W Auth    : [GoogleAuthUtil] [GoogleAuthUtil] error status:BAD_AUTHENTICATION with method:getTokenWithDetails
+11-20 13:04:55.923  9864  4468 W Auth    : [GoogleAuthUtil] [GoogleAuthUtil] error status:BAD_AUTHENTICATION with method:getTokenWithDetails
+11-20 13:04:58.080  4329  4350 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-20 13:04:58.081  4329  4350 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795197894-34slmyFy7knDx7rHQH8n","object":"chat.completion.chunk","created":1795197894,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-20 13:04:58.293  4329  4350 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-20 13:04:58.293  4329  4350 D PocketNet: streamChat: loop done, lines=23 data=11

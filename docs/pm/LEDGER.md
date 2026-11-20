@@ -543,3 +543,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); this run's sends succeeded after retry.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-20T18:02Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean/proven, no code change
+
+### QA Outcomes
+- Identity/device: Pixel 6a (27271JEGR25574), vc117 `1.0.117-72e33fd` (dumpsys versionCode=117). Device NOT reachable at pre-run script's hardcoded `192.168.1.147:45357` (stale); found live via avahi mDNS `_adb-tls-connect._tcp` at transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (IP 192.168.1.127:38361), already connected. Foreground `com.sutliff.pocket/.MainActivity`. Rotation locked portrait, screen awake. Evidence: `docs/pm/logs/20261120T180411Z-identity.log`.
+- Launch/no-crash PASS: 0 `FATAL EXCEPTION`, 0 `has crashed` in 134,228 B launch log. Evidence: `docs/pm/logs/20261120T180411Z-launch-full.log`, `docs/pm/screenshots/20261120T180411Z-launch.png` (245,249 B, 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:hy4-flash-free`, `[DONE] after 23 lines (11 data)`, `loop done, lines=23 data=11`, no gateway error. Evidence: `docs/pm/logs/20261120T180411Z-hello.log` (1,088 B), `docs/pm/screenshots/20261120T180411Z-hello.png` (226,054 B, 1080x2400).
+- Web search PASS (retry): first attempt did not surface a `WebSearchTool` line (Send tap did not land — known ADB coordinate fragility); retry succeeded: `WebSearchTool: start query_len=29 max_results=8 … response code=200 html_len=29477 duration_ms=1334 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1334`; follow-up `streamChat … loop done, lines=65 data=32`. Real titled/URL results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261120T180411Z-websearch.log` (1,741 B), `docs/pm/screenshots/20261120T180411Z-websearch.png` (233,723 B, 1080x2400).
+- Settings/UI reachable PASS: fields rendered (Inference Server, Base URL, API Key, Model, Temperature, Max Tokens, System Prompt, Stream responses, Appearance). Evidence: `docs/pm/logs/20261120T180411Z-settings-ui.xml` (13,045 B), `docs/pm/screenshots/20261120T180411Z-settings.png` (128,246 B, 1080x2400).
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`. Evidence: `docs/pm/logs/20261120T180411Z-crypto.log` (0 B).
+- Permission/dialogs PASS: 0 `EnhancedConfirmationDialog|GrantPermissionsActivity|runtime permission` matches; no new system dialog tapped past. Evidence: `docs/pm/logs/20261120T180411Z-permission.log` (0 B).
+- OTEL not re-exercised this run; prior E2E proof from 2026-11-16T18:02Z stands. No regression.
+- On-device QA delegated (subagent `deleg_72e37d3f`, ts 20261120T180411Z); all 11 artifacts re-verified inline by Rook (byte sizes, PNG IHDR dims 1080x2400, log excerpts, crash/crypto/permission scans).
+- CI/store/services: latest code build run 1717 `72e33fdc` completed/success (push); store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA; device vc117 matches. HEAD `2934ecb` docs-only ahead (repo drift=no). apps.ffilt.us 200 (1942 B), telemetry.ffilt.us 405 (up), appstore Deployment 1/1 (`192.168.1.2:3000/reeds/appstore:8`), pocket-cfg pod `pocket-cfg-58664b7775-zv7x9` Running 1/1 0 restarts 3h (ns pocket-cfg).
+- Homelab MCP todo board: 173 open, 8 keyword hits, 0 Pocket-actionable (Jellyfin APK #54, dash #107, outage hardening #180, HA companion fork #264, profile reorg #311, os-keystore #355, lifecycle tiering #380, TERMINAL_CWD #326). No Pocket todos need action. reeds/pocket: 0 open PRs (issues API 403 — MCP token lacks repo-issue scope; todo board authoritative).
+
+### Shipped
+- No code changes this run. Clean and proven at vc117/72e33fd.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- web_render on a true JS/SPA page still untested (static example.com proven vc107).
+- ADB input automation fragility remains (coordinate drift); this run's first web_search tap did not land; retry succeeded.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
