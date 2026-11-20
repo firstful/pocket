@@ -1,0 +1,10 @@
+Scanned raw captured logs:
+  docs/pm/logs/20261120T060451Z-identity.log
+  docs/pm/logs/20261120T060451Z-launch.log
+  docs/pm/logs/20261120T060451Z-hello.log
+  docs/pm/logs/20261120T060451Z-websearch.log
+  docs/pm/logs/20261120T060451Z-settings-ui.log
+Pattern: caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException
+Match count: 0
+Matching lines:
+(zero matches)

@@ -1,0 +1,9 @@
+=== getprop ro.product.model ===
+Pixel 6a
+=== getprop ro.serialno ===
+27271JEGR25574
+=== dumpsys package com.sutliff.pocket (version) ===
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
+    lastUpdateTime=2026-11-18 10:33:01
+      firstInstallTime=2026-10-14 16:37:12

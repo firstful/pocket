@@ -1,0 +1,9 @@
+Scanned raw captured logs:
+  /root/pocket/docs/pm/logs/20261120T120525Z-identity.log
+  /root/pocket/docs/pm/logs/20261120T120525Z-launch.log
+  /root/pocket/docs/pm/logs/20261120T120525Z-hello.log
+  /root/pocket/docs/pm/logs/20261120T120525Z-websearch.log
+Pattern (case-insensitive): EnhancedConfirmationDialog|GrantPermissionsActivity
+Match count: 0
+Matching lines:
+(zero matches)

@@ -1,0 +1,6 @@
+=== logcat filtered PocketNet/streamChat ===
+11-20 01:05:50.915 32686 32705 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-20 01:05:51.998 32686 32705 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-20 01:05:51.999 32686 32705 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-e020ca1a-2fc5-40aa-a651-1216d9b10643","object":"chat.completion.chunk","created":1795154750,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-20 01:05:52.004 32686 32705 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-20 01:05:52.004 32686 32705 D PocketNet: streamChat: loop done, lines=15 data=7
