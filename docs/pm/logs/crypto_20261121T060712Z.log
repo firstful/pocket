@@ -1,0 +1,12 @@
+Scanned raw captured logs:
+  /root/pocket/docs/pm/logs/hello_logcat_filtered_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/hello_logcat_full_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/identity_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/launch_logcat_filtered_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/launch_logcat_full_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/websearch_logcat_filtered_20261121T060712Z.log
+  /root/pocket/docs/pm/logs/websearch_logcat_full_20261121T060712Z.log
+Pattern: caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException
+Match count: 0
+Matching lines:
+(zero matches)

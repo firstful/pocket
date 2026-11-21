@@ -1,0 +1,4 @@
+11-21 01:09:50.103 14142 14160 D WebSearchTool: start query_len=22 max_results=8
+11-21 01:09:51.177 14142 14160 D WebSearchTool: response code=200 html_len=42502 duration_ms=1073
+11-21 01:09:51.183 14142 14160 D WebSearchTool: parsed titles=12 snippets=12
+11-21 01:09:51.186 14142 14160 D WebSearchTool: done result_count=8 duration_ms=1073

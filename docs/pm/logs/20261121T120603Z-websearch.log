@@ -1,0 +1,490 @@
+--------- beginning of main
+11-21 07:11:21.770  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:21.847  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:21.848  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:21.848  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:21.868  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:input tap 996 1344'
+11-21 07:11:21.952   557   557 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-21 07:11:22.000   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-21 07:11:22.000   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-21 07:11:22.000   557   557 I citadeld: Recorded atom for RPC call
+11-21 07:11:22.001   557   557 D libnos_datagram: Calling App 0x02 with params 0x000b
+11-21 07:11:22.005   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-21 07:11:22.005   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 11 app_status = 0
+11-21 07:11:22.005   557   557 I citadeld: Recorded atom for RPC call
+11-21 07:11:22.006   557   557 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-21 07:11:22.010   557   557 D libnos_datagram: App 0x02 returning 0x0
+11-21 07:11:22.010   557   557 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-21 07:11:22.010   557   557 I citadeld: Recorded atom for RPC call
+11-21 07:11:22.019 29518 29533 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+--------- beginning of system
+11-21 07:11:22.025  1701  2064 I ImeTracker: com.sutliff.pocket:1d40cb05: onRequestShow at ORIGIN_SERVER reason ATTACH_NEW_INPUT fromUser false userId 0 displayId 0
+11-21 07:11:22.025  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-21 07:11:22.026  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-21 07:11:22.026  2882  2882 W SessionManager: SessionManager.beginSession():73 Try to begin an already begun session [INPUT_SESSION], end it first
+11-21 07:11:22.026  2882  2882 W SessionManager: SessionManager.endSession():121 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{INPUT_SESSION=1795263055786, INPUT_VIEW_SESSION=1795263055794, IME_SESSION=1795263055795, TRAINING_CACHE_SESSION=1795263055795}], ending it now.
+11-21 07:11:22.026  2882  2882 W SessionManager: SessionManager.endSession():121 Child session [IME_SESSION] is not ended while ending session [{INPUT_SESSION=1795263055786, INPUT_VIEW_SESSION=1795263055794, IME_SESSION=1795263055795, TRAINING_CACHE_SESSION=1795263055795}], ending it now.
+11-21 07:11:22.026  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=126
+11-21 07:11:22.027  1701  3314 W PackageConfigPersister: App-specific configuration not found for packageName: com.sutliff.pocket and userId: 0
+11-21 07:11:22.028  2882 29365 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-21 07:11:22.028  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-21 07:11:22.029  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-21 07:11:22.029  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 LatinIme.onDeactivate()
+11-21 07:11:22.029  2882  2882 W SessionManager: SessionManager.endSession():113 Try to end a not begun session [IME_SESSION].
+11-21 07:11:22.030  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-21 07:11:22.030  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-21 07:11:22.040  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():751 End training cache session: /
+11-21 07:11:22.041  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=114 dst=[192.168.1.2]:80 latencyMs=14 err=0
+11-21 07:11:22.045  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.logInputActionCollection():929 logInputActionCollection: 177
+11-21 07:11:22.048  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.resolveConversationId():1273 Use dominating conversation id:  with count 174 / 174, all conversation ids: []
+11-21 07:11:22.054 29518 29518 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-21 07:11:22.056  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-21 07:11:22.057  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-21 07:11:22.063 29518 29518 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-21 07:11:22.066  2882  3214 I OnDeviceWmrCalculator: OnDeviceWmrCalculator.calculateWmr():94 WMR: 0.4000 (2 / 5)
+11-21 07:11:22.080  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=true
+11-21 07:11:22.080  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: en-US, ime_english_united_states
+11-21 07:11:22.080  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-21 07:11:22.080  2882  2882 I AbstractIme: AbstractIme.onActivate():111 LatinIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=28001, inputTypeString=Normal[MultiLine|AutoCorrect], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=2000004, privateImeOptions=null, actionName=SEND, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=0, label=null, fieldId=-1, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=12, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=null, hintLocales=[], initialToolType=1}, IncognitoMode = false, DeviceLocked = false
+11-21 07:11:22.080  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processBeginSession():292 Begin training cache session: /
+11-21 07:11:22.080  2882  2882 I Delight5Facilitator: Delight5Facilitator.initializeForIme():748 initializeForIme() : Locale = [en_US], layout = qwerty
+11-21 07:11:22.081  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-21 07:11:22.081  2882  2882 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1331 inline flag updated to:false
+11-21 07:11:22.082 29518 29518 D InsetsController: hide(ime())
+11-21 07:11:22.082  2882  2882 I LatinIme: LatinIme.resetInputContext():2700 resetInputContext(): reason=1, externalEditsInfo=ExternalEditsInfo{action=0, offset=-1, textLength=0, originalTextLength=0, hasEdits=false}
+11-21 07:11:22.082  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-21 07:11:22.083 29518 29518 I ImeTracker: com.sutliff.pocket:32e64699: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-21 07:11:22.083 29518 29518 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@32ef55c
+11-21 07:11:22.083 29518 29518 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-21 07:11:22.083  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-21 07:11:22.083 29518 29560 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@32ef55c
+11-21 07:11:22.083  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=ime_english_united_states, language=en-US, languageTag=en-US, processedConditions={device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row=false}, className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, label=0, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=US, displayAppCompletions=true, extraValues=pun{#0x7f0b02e7=TypedValue{t=0x3/d=0x0 "com.google.android.apps.inputmethod.libs.latin5.LatinIme"}}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=true, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=0, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@1), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=true}
+11-21 07:11:22.083  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=ime_english_united_states, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-21 07:11:22.083  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-21 07:11:22.083  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-21 07:11:22.083 29518 29518 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-21 07:11:22.083  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-21 07:11:22.084  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPrimeKeyboard@f86ee5f
+11-21 07:11:22.084  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-21 07:11:22.084  1701  2813 I ImeTracker: system_server:2092baf9: onRequestShow at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-21 07:11:22.084  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.084  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-21 07:11:22.085  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=true, enable_scrub_move=true, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=true, enable_secondary_symbols=false, enable_number_row=false}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=1}, className=.latin.keyboard.LatinPrimeKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e03a5, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@3fa8db, BODY=pfv@4efcf78, FLOATING_CANDIDATES=pfv@a221651}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.11 fontWeightAdjustment=0}
+11-21 07:11:22.085  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.085  2035  2186 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: PORTRAIT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: false, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-21 07:11:22.086  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-21 07:11:22.086  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-21 07:11:22.086  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-21 07:11:22.086  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e7281b6, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.086  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@30adeb7, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.086  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@2e0fae, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.086  1701  2813 D CoreBackPreview: Window{d9f111c u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@2be3cf3, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-21 07:11:22.086  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@44b30dc, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.087  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@406c624, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.087  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@b19858d, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.087  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@54f78ba, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.087  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@37b436b, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.087  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.087  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-21 07:11:22.087  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-21 07:11:22.087  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-21 07:11:22.087  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@3192c69 was not registered for notification class qbc
+11-21 07:11:22.087  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-21 07:11:22.087  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-21 07:11:22.087  2882 29364 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-21 07:11:22.087  1701  1788 I ImeTracker: system_server:2092baf9: onCancelled at PHASE_SERVER_ALREADY_VISIBLE
+11-21 07:11:22.088  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@3a6b949
+11-21 07:11:22.088  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-21 07:11:22.088  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-21 07:11:22.088  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-21 07:11:22.088  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.088  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.088  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.089  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.089  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.089  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-21 07:11:22.089  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-21 07:11:22.089  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-21 07:11:22.089  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-21 07:11:22.089  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@2e0fae, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@44b30dc, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@9e10c9d, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@5186512, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@54f78ba, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@37b436b, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.089  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@81ab4e3, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.090  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@10e5ee0, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.090  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.090  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-21 07:11:22.090  2882 29365 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-21 07:11:22.090  2882 29385 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-21 07:11:22.090  2882 29383 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-21 07:11:22.092 29518 29518 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-21 07:11:22.092  9864 31189 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportLost(id=32).
+11-21 07:11:22.092  9864 31189 I NearbySharing: NearbySharing Internal event ReceiverLost(receiverId=32)
+11-21 07:11:22.092  9864 31162 I NearbySharing: SendProvider: SendManager event Lost(receiverId=32)
+11-21 07:11:22.092  9864 31189 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetLost()
+11-21 07:11:22.092  2882 29364 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-21 07:11:22.093  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.093  2882 29364 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-21 07:11:22.093  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-21 07:11:22.093  2882 29364 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-21 07:11:22.093  2882 29365 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-21 07:11:22.093  2882 29364 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-21 07:11:22.093  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowShown():2629 
+11-21 07:11:22.094  9864  9864 I NearbySharing: ShortcutInfoManager removed shortcut Reed's Pixel 8a
+11-21 07:11:22.094  2882 29385 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-21 07:11:22.094  2882 29385 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-21 07:11:22.094  2882 29385 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-21 07:11:22.094  2882 29385 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-21 07:11:22.094  2882 29385 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-21 07:11:22.094  2882 29385 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=1.6e+05, interactionType=FIELD_CHANGE [SD]
+11-21 07:11:22.094  2882 29375 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-21 07:11:22.095  2882 29384 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-21 07:11:22.095  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.095  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.095  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.095  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.096  1701  1799 W NotificationHistory: Attempted to remove conversation for locked/gone/disabled user 0
+11-21 07:11:22.097  2882 29364 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-21 07:11:22.097  2882 29364 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-21 07:11:22.097  2882 29364 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-21 07:11:22.097  2882 29364 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-21 07:11:22.098  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{2fa1e74 V.E...... ........ 0,0-1080,116}
+11-21 07:11:22.098  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.098  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{935b6a V.E...... ........ 0,0-1080,725}
+11-21 07:11:22.098  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.098  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():98 Not show new language banner: no change in enabled input method entries
+11-21 07:11:22.098  2882 29384 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-21 07:11:22.098  2882 29384 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-21 07:11:22.098  2882 29384 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-21 07:11:22.098  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-21 07:11:22.099  2882  2882 W SessionManager: SessionManager.beginSession():73 Try to begin an already begun session [INPUT_SESSION], end it first
+11-21 07:11:22.099  2882  2882 W SessionManager: SessionManager.endSession():121 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{INPUT_SESSION=1795263082026, INPUT_VIEW_SESSION=1795263082029, IME_SESSION=1795263082080, TRAINING_CACHE_SESSION=1795263082080}], ending it now.
+11-21 07:11:22.099  2882  2882 W SessionManager: SessionManager.endSession():121 Child session [IME_SESSION] is not ended while ending session [{INPUT_SESSION=1795263082026, INPUT_VIEW_SESSION=1795263082029, IME_SESSION=1795263082080, TRAINING_CACHE_SESSION=1795263082080}], ending it now.
+11-21 07:11:22.099  2882  2882 I LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():364 Update input view padding, isNavbarOverInputWindow=true, bottom inset=126
+11-21 07:11:22.099  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@39e92ff, lastModifier=2, keyCodes=[56], actions=[0]}
+11-21 07:11:22.099  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@b8878cc, lastModifier=0, keyCodes=[317], actions=[0]}
+11-21 07:11:22.099  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@bfd29f8, lastModifier=2, keyCodes=[56], actions=[0]}
+11-21 07:11:22.099  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@b649ed1, lastModifier=0, keyCodes=[317], actions=[0]}
+11-21 07:11:22.099  2882 29364 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-21 07:11:22.100  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1700 onStartInputView(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}}, true)
+11-21 07:11:22.100  2882  2882 I InputBundle: InputBundle.consumeEvent():1068 Skip consuming an event as keyboard status is INACTIVE
+11-21 07:11:22.100  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 LatinIme.onDeactivate()
+11-21 07:11:22.100  2882  2882 W SessionManager: SessionManager.endSession():113 Try to end a not begun session [IME_SESSION].
+11-21 07:11:22.100  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1715 onStartInputView() : Dummy InputConnection bound
+11-21 07:11:22.100  2882  2882 W ModuleManager: ModuleManager.loadModule():608 Module qzq is not available
+11-21 07:11:22.100  2882  2882 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():81 systemKeyboardHeightRatio:1.000000.
+11-21 07:11:22.100  2882  3278 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():688 setKeyboardLayout()
+11-21 07:11:22.102 29518 29518 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-21 07:11:22.105  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():751 End training cache session: /
+11-21 07:11:22.105  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.checkInputActions():1123 checkInputActions: no text change
+11-21 07:11:22.105  2882  3214 W NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.logInputActionCollection():913 checkInputActions failed
+11-21 07:11:22.105  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.resolveConversationId():1273 Use dominating conversation id:  with count 3 / 3, all conversation ids: []
+11-21 07:11:22.105  2882  3214 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():804 No input action collection / expression events / mozc commands in this session, skip logging.
+11-21 07:11:22.106  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-21 07:11:22.106  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-21 07:11:22.117  2882  2882 I InputContextChangeTracker: InputContextChangeTracker.fixLyingSelectionRangeFromSurroundingText():1683 fixLyingSelectionRangeFromSurroundingText(): [-1, -1]([-1, -1]) -> [0, 0]([0, 0])
+11-21 07:11:22.117  2882  2882 I InputBundleManager: InputBundleManager.startInput():356 startInput2 restarting=true
+11-21 07:11:22.117  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: und-Latn-x-password, password
+11-21 07:11:22.117  2882  2882 I InputBundle: InputBundle.activateIme():605 activateIme: INACTIVE, keyboardType=prime
+11-21 07:11:22.117  2882  2882 I AbstractIme: AbstractIme.onActivate():111 PasswordIme.onActivate() : EditorInfo = EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=1}, IncognitoMode = false, DeviceLocked = false
+11-21 07:11:22.117  2882  2882 I InputBundle: InputBundle.activateKeyboard():668 activateKeyboard: ACTIVE, type=KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-21 07:11:22.118  2882  2882 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():593 activateKeyboard(): type=prime, status=INACTIVE, imeDef=ImeDef{stringId=password, language=und-Latn-x-password, languageTag=und-Latn-x-password, processedConditions={language=en-US, variant=qwerty, enable_number_row=true, device=phone, enable_pk_simulator=false, true=true, writing_helper_enable_by_word_revert=false, enable_number_row_in_password=true}, className=com.google.android.libraries.inputmethod.ime.password.PasswordIme, label=2132019290, keyEventInterpreter=null, inlineComposing=true, autoCapital=true, announceAutoSelectedCandidate=true, statusIcon=0, indicatorIcon=0, indicatorLabel=null, displayAppCompletions=false, extraValues=pun{}, processors=com.google.android.libraries.inputmethod.metadata.ProcessorsDef@3c9301, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=false, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=KeyboardGroupDef(variant=qwerty, variantLabel=0, pkLanguageTag=, pkLayoutType=, dynamicLayout=null, layoutSpecificSettings=[], layoutSpecificTheme=2132083600, order=0, supportsSplitMode=true, supportsOneHandedMode=true, isVariantNameMandatory=false, keyboardDefInfos={prime=KeyboardDefInfo(kbType=prime, initialStates=0, keyboardSources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], extraValues=pun{}), digit=KeyboardDefInfo(kbType=digit, initialStates=0, keyboardSources=[Xml(resId=2132215748)], extraValues=pun{}), symbol=KeyboardDefInfo(kbType=symbol, initialStates=0, keyboardSources=[Xml(resId=2132215928)], extraValues=pun{})}, overrideKeyboardXmlConditions=com.google.android.libraries.inputmethod.metadata.OverrideKeyboardXmlConditionsDef@e0cd7d5a), phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=false}
+11-21 07:11:22.118  2882  2882 I KeyboardManager: KeyboardManager.requestKeyboard():250 Creating keyboard prime, imeId=password, cacheKey=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-21 07:11:22.118  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-21 07:11:22.118  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-21 07:11:22.118  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb, #0x7f170615], defIdsCacheKey=2132215125,2132215787,2132215317}
+11-21 07:11:22.118  2882  2882 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():226 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinPasswordKeyboard@5d06f13
+11-21 07:11:22.118  2882  2882 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():625 doActivateKeyboard(): prime
+11-21 07:11:22.124  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.124  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-21 07:11:22.125  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.125  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.125  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.126  2882  2882 W Keyboard: Keyboard.getKeyboardViewHelper():622 null helper is returned: keyboardDef=KeyboardDef{processedConditions={device=phone, enable_pk_simulator=false, free_cursor_del_swipe_delete=false, android_software_xr_api_spatial=false, free_cursor=false, enable_free_cursor_by_long_press_space=false, layout_9key_split=false, expressions=normal, language=en-US, variant=qwerty, free_cursor_in_split_keyboard_gap=false, show_comma_key=true, show_period_key=true, keyboard_mode=normal, pref_enable_flick_symbols=false, show_secondary_digits=false, enable_secondary_symbols=false, enable_number_row=true, show_suggestion_strip=true}, globalConditions={global_theme_key=theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.9809904,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,bottom4dp,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup, global_locale=en_US, global_density_dpi=420, global_orientation=1}, className=.latin.keyboard.LatinPasswordKeyboard, sources=[Xml(resId=2132215125), Xml(resId=2132215787), Xml(resId=2132215317)], initialStates=0, keyboardViewDefs=[KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=true, layoutId=#0x7f0e02df, type=BODY, touchable=true, defaultShow=true}, KeyboardViewDef{direction=null, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e0239, type=FLOATING_CANDIDATES, touchable=false, defaultShow=false}, KeyboardViewDef{direction=LOCALE, id=#0x7f0b0213, isScalable=false, layoutId=#0x7f0e053f, type=HEADER, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e0627, recentKeyLayoutId=#0x0, recentKeyPopupLayoutId=#0x0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=6597069766656}, type=WIDGET, helpersCreated={HEADER=pfv@17e2ee7, BODY=pfv@2ae8a94, FLOATING_CANDIDATES=pfv@502493d}, context.getResources().getConfiguration(): {1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.11 fontWeightAdjustment=0}
+11-21 07:11:22.126  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.126  2882  2882 I InputBundleManager: InputBundleManager.startInput():371 startInput() with KeyboardTypeAndPayload(keyboardType=prime, payload=null)
+11-21 07:11:22.126  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-21 07:11:22.126  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@9e10c9d, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@5186512, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@f820e04, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@5bd5fed, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@81ab4e3, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@10e5ee0, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@32a3e22, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.127  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@83700b3, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.127  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.127  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-21 07:11:22.127  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-21 07:11:22.127  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@3192c69 was not registered for notification class qbc
+11-21 07:11:22.127  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-21 07:11:22.127  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-21 07:11:22.128  2882  2882 I PkModeUpdater: PkModeUpdater.onActivate():95 End PK mode: disablePkMode=false, entry=oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}, editorInfo=android.view.inputmethod.EditorInfo@3674010
+11-21 07:11:22.128  2882  2882 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():331 Accessory input mode started: null
+11-21 07:11:22.128  2882  2882 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():162 keyboard accessory_candidates_consumer is not activated before!
+11-21 07:11:22.128  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onActivate():146 
+11-21 07:11:22.128  2882 29375 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-21 07:11:22.128  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.129  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-21 07:11:22.129  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+11-21 07:11:22.129  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-21 07:11:22.129  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-21 07:11:22.129  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-21 07:11:22.129  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@f820e04, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@5bd5fed, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@c8b199c, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@3af9fa5, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@32a3e22, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@83700b3, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@3096f7a, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.129  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@efe3388, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.129  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.130  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-21 07:11:22.130  2882 29364 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-21 07:11:22.130  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@26515c4, lastModifier=2, keyCodes=[56], actions=[0]}
+11-21 07:11:22.130  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@b442cad, lastModifier=0, keyCodes=[317], actions=[0]}
+11-21 07:11:22.130  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@91f9121, lastModifier=2, keyCodes=[56], actions=[0]}
+11-21 07:11:22.130  2882 29384 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-21 07:11:22.130  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@12f0946, lastModifier=0, keyCodes=[317], actions=[0]}
+11-21 07:11:22.130  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.130  2882 29383 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-21 07:11:22.130  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.130  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-21 07:11:22.131  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-21 07:11:22.131  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.131  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-21 07:11:22.131  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.131  2882 29365 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-21 07:11:22.131  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-21 07:11:22.131  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-21 07:11:22.131  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.133  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.133  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.133  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.133  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.133 29518 29518 I ImeTracker: com.sutliff.pocket:1d40cb05: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-21 07:11:22.135  2882 29375 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-21 07:11:22.135  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{7886df1 V.E...... ........ 0,0-1080,116}
+11-21 07:11:22.135  2882 29375 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-21 07:11:22.135  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.136  2882 29375 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-21 07:11:22.136  2882 29375 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-21 07:11:22.136  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{47f9f6c V.E...... ........ 0,0-1080,826}
+11-21 07:11:22.136  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.136  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-21 07:11:22.136  2882 29383 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-21 07:11:22.137  2882 29383 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-21 07:11:22.137  2882 29383 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-21 07:11:22.137  2882 29383 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-21 07:11:22.137  2882 29383 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-21 07:11:22.137  2882 29383 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-21 07:11:22.137  2882 29375 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-21 07:11:22.137  2882 29365 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=0, interactionType=FIELD_CHANGE [SD]
+11-21 07:11:22.138  2882 29365 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-21 07:11:22.138  2882 29384 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-21 07:11:22.140  2882 29385 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-21 07:11:22.140  2882 29385 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-21 07:11:22.140  2882 29385 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-21 07:11:22.140  2882 29385 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-21 07:11:22.140  2882 29375 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-21 07:11:22.140  2882 29375 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-21 07:11:22.140  2882 29375 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-21 07:11:22.140  2882 29375 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-21 07:11:22.140  2882 29375 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-21 07:11:22.147  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.148  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.148  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.148  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.149  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.149  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-21 07:11:22.149  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-21 07:11:22.149  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-21 07:11:22.150  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@c8b199c, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.150  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@3af9fa5, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.150  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@7817ca3, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.150  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@f2deba0, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.151  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@3096f7a, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.151  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@efe3388, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.151  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@61621cc, lastModifier=2, keyCodes=[32], actions=[0]}
+11-21 07:11:22.151  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@580bc15, lastModifier=0, keyCodes=[319], actions=[0]}
+11-21 07:11:22.151  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.151  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-21 07:11:22.151  2882  2882 W NgaExtension: NgaExtension.handleUiCommand():1116 cannot update UI in state NgaState{connected=true, keyboardVisible=true, dictationEligible=false, currentFieldEligibilityUpToDate=true, dictating=false, languageIndicatorVisible=false, keyboardTypeSupported=true, config=# kqj@adbafd8a, clientType=1, eligibilityByLanguageTag={}, currentEligibility=10, autoStarted=false} [SDG]
+11-21 07:11:22.152  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-21 07:11:22.152  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-21 07:11:22.152  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-21 07:11:22.152  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.165  1701  1789 I ImeTracker: system_server:c7afc3ee: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-21 07:11:22.165  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.165  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.166  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.166  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.168 29518 29518 I ImeTracker: system_server:c7afc3ee: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-21 07:11:22.188  1701  3316 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-21 07:11:22.188  1701  3316 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-21 07:11:22.243  1701  1756 I system_server: NativeAlloc young concurrent mark compact GC freed 8620KB AllocSpace bytes, 0(0B) LOS objects, 84% free, 79MB/512MB, paused 177us,13.065ms total 77.917ms
+11-21 07:11:22.318  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1857 onFinishInputView(false)
+11-21 07:11:22.319  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-21 07:11:22.319  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-21 07:11:22.319  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-21 07:11:22.319  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-21 07:11:22.320  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-21 07:11:22.320  2882 29384 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-21 07:11:22.320  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-21 07:11:22.320  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@3192c69 was not registered for notification class qbc
+11-21 07:11:22.320  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-21 07:11:22.320  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-21 07:11:22.320  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-21 07:11:22.320  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 PasswordIme.onDeactivate()
+11-21 07:11:22.320  1701  1785 D HintManagerService: Sent cleanup message for uid 10192
+11-21 07:11:22.321  2882  2882 I PrimesLoggerHolder: FrameMetricServiceImpl.stopAsFuture():215 Measurement not found: OnConfigurationChanged
+11-21 07:11:22.321  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-21 07:11:22.321  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowHidden():2621 
+11-21 07:11:22.322  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-21 07:11:22.322  2882  2882 I ImeTracker: com.sutliff.pocket:32e64699: onHidden
+11-21 07:11:22.331  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-21 07:11:22.337  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-21 07:11:22.337  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.337  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-21 07:11:22.338  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-21 07:11:22.338  1701  3316 I ImeTracker: system_server:8a022330: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-21 07:11:22.339  1701  1788 I ImeTracker: system_server:8a022330: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-21 07:11:22.510   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-21 07:11:22.544   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-21 07:11:22.920  2882 29365 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardHidden():289 Keyboard closed, ending dictation. [SD]
+11-21 07:11:23.321  2882 29390 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager.closeStream():110 Closing stream. [SDG]
+11-21 07:11:23.321  2882 29390 I Interaction: Interaction$KeyboardEventStreamObserver.onCompleted():143 Interaction#192 completed by the client [SD]
+11-21 07:11:23.321  2882 29375 I Interaction: Interaction.shutdownAndForget():91 Shutting down Interaction#192 [SD]
+11-21 07:11:23.322  2882 29375 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-21 07:11:23.322  2882 29375 I InteractionManager: InteractionManager.forgetInteraction$<anonymous>():50 Forgetting Interaction#192 [SD]
+11-21 07:11:23.324  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-21 07:11:23.324 32265  8028 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-21 07:11:23.325 32265  8028 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-21 07:11:23.342 29518 29533 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-21 07:11:23.342 29518 29533 D PocketNet: streamChat: first data (181 bytes): {"id":"df683ce6-be6c-428e-ac93-f0c522af9133","object":"chat.completion.chunk","created":1795263082,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-21 07:11:23.348 29518 29533 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-21 07:11:23.348 29518 29533 D PocketNet: streamChat: loop done, lines=17 data=8
+11-21 07:11:23.349 29518 29533 D WebSearchTool: start query_len=6 max_results=8
+11-21 07:11:23.372 29518 29518 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-21 07:11:23.377 29518 29518 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-21 07:11:23.536  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=114 dst=[52.149.246.39]:443 latencyMs=56 err=0
+11-21 07:11:23.662  9864 31190 I NearbyConnections: Found BleAdvertisement [ 0x23 0x49 0x33 0x43 0x58 0x11 0x32 0x35 0x21 0xbe 0x0d 0x6a 0x0c 0x77 0x78 0xaa 0xb8 0x86 0x7f 0x7a 0x55 0x2e 0x37 ] (with EndpointId I3CX and EndpointInfo [ 0x32 0x35 0x21 0xbe 0x0d 0x6a 0x0c 0x77 0x78 0xaa 0xb8 0x86 0x7f 0x7a 0x55 0x2e 0x37 ])
+11-21 07:11:23.663  9864 31190 I NearbyConnections: ClientProxy(184550944 0p:com.google.android.gms.nearby.sharing) reporting onEndpointFound(I3CX)
+11-21 07:11:23.664  9864 31190 I NearbyConnections: ClientProxy(184550944) reporting onEndpointDistanceChanged(I3CX, UNKNOWN)
+11-21 07:11:23.664  9864 31189 I NearbySharing: NearbySharing Internal event EndpointDiscovered(endpointId=I3CX)
+11-21 07:11:23.671  9864 30614 I NearbySharing: [NS_DISCOVERY] DiscoveryController reported Discovered(endpointId=I3CX, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>))
+11-21 07:11:23.671  9864 30614 I NearbySharing: [NS_DEBUG] Dedupped: same endpoint ID I3CX
+11-21 07:11:23.672  9864 30614 I NearbySharing: [NS_DEBUG] previous receiver info ReceiverInfo(endpointIds=[DiscoveryEndpoint(id=I3CX, origin=NEARBY_CONNECTIONS)], metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>), state=Tomb(delayedStateChangeJob=klgo{Active}@bfd5b4e))
+11-21 07:11:23.672  9864 30614 I NearbySharing: NearbySharing Internal event ReceiverEndpointMapping(endpointId=I3CX, receiverId=32)
+11-21 07:11:23.672  9864 31190 I NearbySharing: [NS_CONTROL] DiscoveryStateManager emitted ReportDiscovered(id=32, metadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>)).
+11-21 07:11:23.672  9864 31190 I NearbySharing: NearbySharing Internal event ReceiverDiscovered(receiverId=32, deviceName=Reed's Pixel 8a, isKnown=true, isSelfShare=true, deviceType=1, hasMatchingQrCode=false, isExternal=false, providerName=null, providerId=null, cloudReceiverSessionId=null, cloudSharingId=null)
+11-21 07:11:23.672  9864 31162 I NearbySharing: SendProvider: SendManager event Discovered(receiverId=32, receiverMetadata=DeviceMetadata(version=1, deviceType=1, deviceName=<redacted>, displayName=<redacted>, modelName=Pixel 8a, imageUri=<redacted>, isSelfShare=true, isFamilyShare=false, isKnown=true, bluetoothMacAddress=<redacted>, vendorId=0, matchesLocalQrCode=false, devicePairingBindingIds=<redacted>))
+11-21 07:11:23.672  9864 31162 I NearbySharing: SendProvider: SendManager event DistanceChanged(receiverId=32, distance=1, rangingData=null)
+11-21 07:11:23.673  9864 31190 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDiscovered()
+11-21 07:11:23.673  9864 31190 I NearbySharing: ShareTargetDiscoveredCallback: onShareTargetDistanceChanged() with distance: 1, rangingData: null
+11-21 07:11:23.690  9864  9864 I NearbySharing: ShortcutInfoManager added shortcut Reed's Pixel 8a
+11-21 07:11:24.656 29518 29533 D WebSearchTool: response code=200 html_len=27348 duration_ms=1306
+11-21 07:11:24.657  1014  2766 I bthal.activity: bt_power: LeAdvStat: 07:11:23:657 - 07:11:24:657, duration: 1000, le_adv_count: 1, total_le_adv_count: 275646, total_event_count: 1
+11-21 07:11:24.660 29518 29533 D WebSearchTool: parsed titles=10 snippets=10
+11-21 07:11:24.661 29518 29533 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-21 07:11:24.665 29518 29533 D WebSearchTool: done result_count=8 duration_ms=1306
+11-21 07:11:24.694 29518 29532 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-21 07:11:24.707  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=114 dst=[192.168.1.2]:80 latencyMs=7 err=0
+11-21 07:11:24.852  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:24.927  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:24.927  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:24.927  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:25.949  1876  1876 I pixel-thermal: VIRTUAL-SKIN:24.9679 raw data: VIRTUAL-NEUTRAL:24967.9 VIRTUAL-NEUTRAL-SKIN2:24691.4 VIRTUAL-QUIET-NEUTRAL:24075.8 VIRTUAL-SKIN:24967.9 disp_therm:24270 gnss_tcxo_therm:25488 neutral_therm:24059 quiet_therm:24083 skin_therm1:25488 skin_therm2:26167 
+11-21 07:11:25.950  2362  2554 D ImpulseStateSource: Notify clients: 119855
+11-21 07:11:26.107 29518 29532 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-21 07:11:26.107 29518 29532 D PocketNet: streamChat: first data (181 bytes): {"id":"80cdf453-00ab-426f-b571-e76466a40651","object":"chat.completion.chunk","created":1795263084,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-21 07:11:27.431 29518 29532 D PocketNet: streamChat: [DONE] after 191 lines (95 data)
+11-21 07:11:27.431 29518 29532 D PocketNet: streamChat: loop done, lines=191 data=95
+11-21 07:11:27.935  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:28.059  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:28.060  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:28.061  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:29.701  1701  2104 I MdnsReplySender: Sending {MdnsReplyInfo: /192.168.1.2:5353 to /224.0.0.251:5353, answers: 3, additionalAnswers: 1, knownAnswers: 0, sendDelayMs 24}
+11-21 07:11:30.949  2362  3768 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-21 07:11:30.950  2362  3768 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-21 07:11:31.066  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:31.162  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:31.162  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:31.162  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:31.593  9864 31162 I NearbyMediums: Found Fast Ble Advertisements :
+11-21 07:11:31.593  9864 31162 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x49 0x33 0x43 0x58 0x11 0x32 0x35 0x21 0xbe 0x0d 0x6a 0x0c 0x77 0x78 0xaa 0xb8 0x86 0x7f 0x7a 0x55 0x2e 0x37 ], deviceToken=[ 0x7d 0xc3 ], rxAdvertisement=null } : 1 times.
+11-21 07:11:31.593  9864 31162 I NearbyMediums: Total 1 fast advertisements from 1 unique advertisers.
+11-21 07:11:31.595  9864 31162 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-21 07:11:32.012   553 31199 I keystore2: system/security/keystore2/watchdog/src/lib.rs:371 - Watchdog thread idle -> terminating. Have a great day.
+11-21 07:11:32.252  2439  2468 D libnfc_nci: ART-GC black_dense_end:0x20d5000 mid_gen_end:0x20d5000 post_compact_end:0x20d6000 black_allocations_begin:0x2145000 young:1 performed_compaction:1
+11-21 07:11:32.366  2882  3214 I ProtoxDbBufferWrapper: ProtoxDbBufferWrapper.flushToStorage():166 Flushed 9 data item(s) to storage.
+11-21 07:11:34.170  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:34.292  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:34.293  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:34.293  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:35.959  1876  1876 I pixel-thermal: VIRTUAL-SKIN:25.0125 raw data: VIRTUAL-NEUTRAL:25012.5 VIRTUAL-NEUTRAL-SKIN2:24729.2 VIRTUAL-QUIET-NEUTRAL:24050.1 VIRTUAL-SKIN:25012.5 disp_therm:24293 gnss_tcxo_therm:25535 neutral_therm:24083 quiet_therm:24036 skin_therm1:25558 skin_therm2:26237 
+11-21 07:11:35.961  2362  2554 D ImpulseStateSource: Notify clients: 119856
+11-21 07:11:37.301  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:37.420  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:37.422  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:37.422  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:38.133  1014  2766 I bthal.activity: bt_power: LeAdvStat: 07:11:37:132 - 07:11:38:132, duration: 1000, le_adv_count: 1, total_le_adv_count: 275647, total_event_count: 1
+11-21 07:11:38.584  1220  1309 I duau    : reclaimMemory: Clearing caches
+11-21 07:11:38.585  1220  1309 I dzbt    : HadesBitmapStore: Purged 0 images during memory reclamation
+11-21 07:11:38.588  1220  1309 W dwkw    : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-21 07:11:40.431  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:40.547  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:40.549  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:40.549  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:41.019  1701  2012 D ActivityManager: freezing 9026 com.google.android.apps.turbo
+11-21 07:11:41.034  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-21 07:11:41.038  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-21 07:11:41.038  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10131} in 10ms
+11-21 07:11:41.604  9864 31162 I NearbyMediums: Found Fast Ble Advertisements :
+11-21 07:11:41.604  9864 31162 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x49 0x33 0x43 0x58 0x11 0x32 0x35 0x21 0xbe 0x0d 0x6a 0x0c 0x77 0x78 0xaa 0xb8 0x86 0x7f 0x7a 0x55 0x2e 0x37 ], deviceToken=[ 0x7d 0xc3 ], rxAdvertisement=null } : 1 times.
+11-21 07:11:41.604  9864 31162 I NearbyMediums: Total 1 fast advertisements from 1 unique advertisers.
+11-21 07:11:41.606  9864 31162 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-21 07:11:43.435  9864 31216 I ChimeraPrvdrProxy: Shutting down chimera ContentProvider com.google.android.gms.reminders.provider.RemindersChimeraProvider
+11-21 07:11:43.454  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795233073867
+11-21 07:11:43.557  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:43.652  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:43.653  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:43.653  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:45.970  1876  1876 I pixel-thermal: VIRTUAL-SKIN:24.9622 raw data: VIRTUAL-NEUTRAL:24962.2 VIRTUAL-NEUTRAL-SKIN2:24694.1 VIRTUAL-QUIET-NEUTRAL:24050.1 VIRTUAL-SKIN:24962.2 disp_therm:24293 gnss_tcxo_therm:25441 neutral_therm:24083 quiet_therm:24036 skin_therm1:25488 skin_therm2:26120 
+11-21 07:11:45.971  2362  3768 D ImpulseStateSource: Notify clients: 119857
+11-21 07:11:46.660  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-21 07:11:46.774  1054  1149 E libbinder.IPCThreadState: binder thread pool (1 threads) starved for 114 ms
+11-21 07:11:46.816  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-21 07:11:46.818  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-21 07:11:46.818  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-21 07:11:47.101  1300  1300 I adbd    : adbd service requested 'exec:screencap '-p''
+11-21 07:11:47.240 31219 31219 W libbinder.BackendUnifiedServiceManager: Thread Pool max thread count is 0. Cannot cache binder as linkToDeath cannot be implemented. serviceName: SurfaceFlingerAIDL
+11-21 07:11:47.241 31219 31219 W libbinder.BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-21 07:11:47.241 31219 31219 W libbinder.ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-21 07:11:47.861  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

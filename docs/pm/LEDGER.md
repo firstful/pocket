@@ -3,9 +3,9 @@
 Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top within each section is fine; prefer dated entries.
 
 ## Ideas / Fun Extras
-- 2026-11-10: Session-history sanitizer + "start fresh chat" recovery when gateway rejects malformed persisted tool history (auto-detect 4xx/5xx protocol errors like missing tool_call_id/name, offer one-tap reset of current session history). Low-med effort, high resilience.
-- 2026-11-10: Inline stream-error banner showing gateway error payload + "Retry" action (today a 200-with-error SSE becomes a silent 2-line response). Small UX win for debugging.
-- 2026-11-11: web_search reliability: ephemeral WebView never fires onPageFinished in this environment (even attached to Activity content view). Try (a) larger/invisible viewport + fixed-delay extraction fallback, (b) OkHttp fetch of a JS-light search endpoint, or (c) a search API. Also consider surfacing timeout as a clear tool error instead of a 30s hang.
+- 2026-11-10: Session-history sanitizer + "start fresh chat" recovery when gateway rejects malformed persisted tool history (auto-detect 4xx/5xx protocol errors like missing tool_call_id/name, offer one-tap reset of current session history). Low-med effort, high resilience. [STATUS 2026-11-21: SHIPPED — wire mapper drops malformed tool messages (InferenceClient.kt:239) + one-tap "New chat" reset (ChatScreen.kt:694 `newSession()`); both markers in vc117 DEX. The 4xx/5xx auto-detect banner specifically is NOT present (Retry banner is tied to generic `errorMessage`, not protocol-error detection).]
+- 2026-11-10: Inline stream-error banner showing gateway error payload + "Retry" action (today a 200-with-error SSE becomes a silent 2-line response). Small UX win for debugging. [STATUS 2026-11-21: SHIPPED — Retry banner in ChatScreen.kt:717-739 shows `errorMessage` + Retry button; vc117 DEX.]
+- 2026-11-11: web_search reliability: ephemeral WebView never fires onPageFinished in this environment (even attached to Activity content view). Try (a) larger/invisible viewport + fixed-delay extraction fallback, (b) OkHttp fetch of a JS-light search endpoint, or (c) a search API. Also consider surfacing timeout as a clear tool error instead of a 30s hang. [STATUS 2026-11-21: RESOLVED — web_search now uses OkHttp SERP fetch + parse (WebTools.kt:81-122); stable PASS across many recent runs including this one (result_count=8). No longer a WebView-onPageFinished dependency.]
 
 ## Bugs / Regressions
 - 2026-11-10 [fix pushed, CI pending]: Chat/streaming broken on vc 73 (`1.0.73-1cbd954`) for `hello` and web_search prompts — gateway returns SSE error `Cannot resolve tool name for tool_call_id=None. Either 'tool_calls[].function.name' in assistant message or 'name' in tool message must be provided.` (`streamChat: loop done, lines=2 data=1`). Evidence: `/root/pocket/docs/pm/logs/20261110T060753Z-hello.log`, `/root/pocket/docs/pm/logs/20261110T060753Z-websearch.log`, screenshots `/root/pocket/docs/pm/screenshots/20261110T060753Z-hello.png`, `/root/pocket/docs/pm/screenshots/20261110T060753Z-websearch.png`. Fix pushed `7211dd8` (wire mapper adds/resolves tool message `name`, drops malformed blank tool_call ids/names) — awaiting CI/build/store/device verify.
@@ -593,3 +593,50 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (multiple web_search typed-text retries this run before clean submit); last clean submits succeeded.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-21T06:07Z (reconciled 2026-11-21T12:xxZ — stranded all-PASS evidence, no code change)
+> This run executed on-device QA at 06:07–06:10Z but the cron session ended before ledger/commit; evidence was left untracked. Reconciled here from the preserved artifacts (all paths re-verified inline by Rook: byte sizes, PNG IHDR dims, crash/crypto/permission scans). No new device interaction in this reconciliation.
+
+### QA Outcomes (evidence re-verified inline)
+- Identity/device: Pixel 6a (27271JEGR25574), versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/identity_20261121T060712Z.log`.
+- Launch/no-crash PASS: monkey launcher launch, `Displayed com.sutliff.pocket/.MainActivity for user 0: +253ms`, `VM exiting with result code 0`; 0 `FATAL EXCEPTION` / `has crashed` / `ANR in com.sutliff.pocket` across all this-run full logs. Evidence: `docs/pm/logs/launch_logcat_{filtered,full}_20261121T060712Z.log` (filtered 17,953 B; full 169,925 B), `docs/pm/screenshots/launch_20261121T060712Z.png` (132,848 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:beam-free`, `[DONE] after 19 lines (9 data)`, `loop done, lines=19 data=9`; no gateway error. Evidence: `docs/pm/logs/hello_logcat_{filtered,full}_20261121T060712Z.log` (filtered 701 B; full 726,040 B), `docs/pm/screenshots/hello_20261121T060712Z.png` (122,771 B).
+- Web search PASS: `WebSearchTool: start query_len=22 max_results=8 ... response code=200 html_len=42502 duration_ms=1073 ... parsed titles=12 snippets=12 ... done result_count=8 duration_ms=1073`. Real titled results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/websearch_logcat_{filtered,full}_20261121T060712Z.log` (filtered 341 B; full 94,907 B), `docs/pm/screenshots/websearch_20261121T060712Z.png` (121,972 B).
+- Settings/UI reachable PASS (partial view): fields rendered — Inference Server, Base URL `http://llm.homelab.internal/v1`, API Key (`••••••`), Model (`auto`), Generation. Evidence: `docs/pm/logs/settings_ui_dump_20261121T060712Z.xml` (9,398 B), `docs/pm/screenshots/settings_20261121T060712Z.png` (65,880 B). Note: dump was scrolled to the Inference Server section; telemetry/remote-agent/config-import fields not asserted in this artifact (asserted in the 00:15Z run).
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`. Evidence: `docs/pm/logs/crypto_20261121T060712Z.log` (671 B report, match_count=0).
+- Permission/dialogs PASS: 0 case-insensitive matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`. Evidence: `docs/pm/logs/permission_20261121T060712Z.log` (635 B report, match_count=0).
+- Anomaly: all 4 screenshots are 2400x1080 (landscape) despite portrait lock — known ADB rotation fragility, not an app bug; functional checks unaffected.
+
+### Shipped
+- No code changes. vc117/72e33fd clean and proven.
+
+## Run 2026-11-21T12:04Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean/proven + bookkeeping reconciliation, no code change
+
+### QA Outcomes (delegated subagent `deleg_9439260b`, TS=20261121T120603Z; all 16 artifacts re-verified inline by Rook)
+- Device discovery: pre-run script's hardcoded `192.168.1.147:45357` stale; live via mDNS `_adb-tls-connect._tcp` at `192.168.1.127:42829`, transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (connected). Identity: Pixel 6a / 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261121T120603Z-identity.log`.
+- Launch/no-crash PASS: 0 `FATAL EXCEPTION` across all current-run logs; `docs/pm/logs/20261121T120603Z-launch-filtered.log` is 0 B (clean). Evidence: `...-launch.log` (299,564 B), `docs/pm/screenshots/20261121T120603Z-launch.png` (133,255 B, 2400x1080 — landscape flip, known fragility).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:hy4-flash-free`, `[DONE] after 17 lines (8 data)`, `loop done, lines=17 data=8`. Evidence: `docs/pm/logs/20261121T120603Z-hello-filtered.log` (663 B), `...-hello.log` (123,068 B), `docs/pm/screenshots/20261121T120603Z-hello.png` (73,838 B, 1080x2400).
+- Web search PASS: `WebSearchTool: start query_len=6 max_results=8 ... response code=200 html_len=27348 duration_ms=1306 ... parsed titles=10 snippets=10 ... done result_count=8 duration_ms=1306`; follow-up `streamChat ... loop done, lines=191 data=95` (rich result reply). Real titled/URL results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261121T120603Z-websearch-filtered.log` (1,670 B), `...-websearch.log` (95,640 B), `docs/pm/screenshots/20261121T120603Z-websearch.png` (209,998 B, 1080x2400).
+- Settings/UI reachable PASS: top fields rendered (Inference Server, Base URL `http://llm.homelab.internal/v1`, API Key, Model `auto`, Temperature `0.7`, Max Tokens `4096`, System Prompt, Stream responses, Appearance) AND scrolled section shows Config import / Passphrase / pocket-cfg / Telemetry / otlp / Remote Agent / SMS+Location "Disabled by default". Evidence: `docs/pm/logs/20261121T120603Z-settings-ui.xml` (60,575 B), `...-settings-filtered.log` (5,804 B), `...-settings.log` (151,660 B), `docs/pm/screenshots/20261121T120603Z-settings.png` (126,456 B, 1080x2400). 0 FATAL in settings.
+- Crypto regression watch PASS (vc117 key): 0 matches across all 6 captured files. Evidence: `docs/pm/logs/20261121T120603Z-crypto.log` (659 B, TOTAL MATCH COUNT: 0).
+- Permission/dialogs PASS: 0 matches; "New system dialogs observed on device: none". Evidence: `docs/pm/logs/20261121T120603Z-permission.log` (663 B).
+- OTEL not re-exercised this run. Telemetry service is distroless (no exec shell) and ingest-only (GET 405 by design — no readback endpoint), so no offline E2E proof path; prior E2E from 2026-11-16 stands. Service up (telemetry.ffilt.us 405 = method-not-allowed on GET = alive).
+
+### Bookkeeping / reconciliation
+- Reconciled the stranded 06:07Z all-PASS QA run (previous entry) — its 14 untracked evidence files now committed with this update.
+- Corrected stale "Ideas" status annotations: session sanitizer + New chat + Retry banner + OkHttp web_search are all confirmed SHIPPED in source and vc117 DEX (WebRender PiP rounded/zoom/exit also confirmed in DEX — closes todo #795 as already shipped); the specific "4xx/5xx auto-detect protocol banner" was NOT built (generic Retry banner exists). No code changes needed.
+
+### Infra verification (all green)
+- CI: latest code run 1717 `72e33fdc` completed/success (push); preceding 1710/1702/1698 success. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA; repo HEAD `d689770` docs-only, drift=no.
+- Host APK `apps.ffilt.us/apk/Pocket/app-release.apk` = 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog. DEX markers present: `X-Pocket-Version` 2, `setRandomizedEncryptionRequired` 2, `KeystoreWrap` 5, `WebRenderManager` 17, `pip_added` 1, version string `1.0.117-72e33fd` 1.
+- Services: apps.ffilt.us 200 (2,647 B), telemetry.ffilt.us 405 (up). Pods: appstore `appstore-7bf9fbb754-64wkd` 1/1 Running 9h; pocket-cfg `pocket-cfg-58664b7775-tqh6v` 1/1 Running 8h; telemetry `telemetry-658bd46fbd-7ls7f` 1/1 Running 8h.
+- Homelab MCP todo board: 174 open, 24 keyword hits; no NEW Pocket-actionable item this run (all are long-carried design/feature todos #423/#424/#425/#697/#795/#816-818 etc.; #795 web_render PiP confirmed already shipped in DEX). Logged this PM run as todo #1008 (claimed/completed).
+
+### Shipped
+- No code changes this run. Clean and proven at vc117/72e33fd.
+
+### Open / Next (carried)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands.
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107; WebRenderTool/Manager now emit Log.d + skills strengthened in current build).
+- ADB input automation fragility remains (landscape rotation on launch screenshot; coordinate drift) — functional checks unaffected.

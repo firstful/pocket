@@ -1,0 +1,11 @@
+Crypto regression scan — 20261121T120603Z
+Patterns (case-insensitive): caller provided IV | KeyStoreException | AEADBadTagException | InvalidKeyException | self-heal | SecretWrapException
+Files scanned:
+  /root/pocket/docs/pm/logs/20261121T120603Z-hello.log (123068 bytes)
+  /root/pocket/docs/pm/logs/20261121T120603Z-identity.log (509 bytes)
+  /root/pocket/docs/pm/logs/20261121T120603Z-launch.log (299564 bytes)
+  /root/pocket/docs/pm/logs/20261121T120603Z-settings.log (151660 bytes)
+  /root/pocket/docs/pm/logs/20261121T120603Z-settings-ui.xml (75712 bytes)
+  /root/pocket/docs/pm/logs/20261121T120603Z-websearch.log (95640 bytes)
+
+TOTAL MATCH COUNT: 0
