@@ -568,3 +568,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); this run's first web_search tap did not land; retry succeeded.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-21T00:15Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean/proven, no code change
+
+### QA Outcomes (delegated subagent `deleg_306acb1a` + inline verification by Rook)
+- Identity/device: Pixel 6a (27271JEGR25574), vc117 `1.0.117-72e33fd`. Pre-run script's hardcoded `192.168.1.147:45357` was stale/unreachable; subagent re-discovered via mDNS and drove device over Wi-Fi ADB successfully. UI shows version `1.0.117`. Foreground `com.sutliff.pocket`.
+- Launch/no-crash PASS: 0 `FATAL EXCEPTION`, 0 `has crashed` in launch log. Evidence: `docs/pm/logs/20261121T000619Z-launch.log` (211,136 B), `docs/pm/screenshots/20261121T000619Z-launch.png` (valid 1080x2400, 220,133 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 25 lines (12 data)`, `loop done, lines=25 data=12`, no gateway error. Reply text confirmed in UI dump. Evidence: `docs/pm/logs/20261121T000804Z-chat-hello.log` (223,498 B), `docs/pm/screenshots/20261121T000804Z-chat-hello.png` (257,584 B), `...000821Z-chat-hello-reply.png` (214,547 B).
+- Web search PASS: `WebSearchTool: start query_len=56 max_results=5 … response code=200 html_len=28268 duration_ms=841 … parsed titles=10 snippets=10 … done result_count=5 duration_ms=841`; follow-up `streamChat … loop done, lines=45 data=22`; WebFetchTool 200 html_len=63547. Real titled/URL results in UI (e.g. "Berlin - Official Website of the City of Berlin", "Paris - Wikipedia"), no timeout. Evidence: `docs/pm/logs/20261121T001410Z-web-search.log`, `docs/pm/screenshots/20261121T001410Z-web-search-results.png`, UI dumps `docs/pm/logs/uia-web-result.xml`.
+- Settings/UI reachable PASS: fields rendered (Inference Server, Telemetry `https://telemetry.ffilt.us/`, Format otlp_json, Config import `https://pocket-cfg.homelab.internal/config`, Passphrase, Import config, Save). Remote-agent opt-in section present (SMS/Location "Disabled by default", opt-in disabled). Evidence: `docs/pm/logs/20261121T001435Z-settings.log` (0 FATAL/crypto markers), `docs/pm/logs/uia-settings-bottom.xml`, `docs/pm/logs/uia-remote-agent-1.xml`.
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across all this-run logs.
+- Permission/dialogs PASS: 0 `EnhancedConfirmationDialog`/`GrantPermissionsActivity` markers; no new system dialog tapped past.
+- OTEL not re-exercised this run (endpoint now correctly set to `https://telemetry.ffilt.us/` in settings, but no post captured in logs; service returns 405/up). Prior E2E proof from 2026-11-16T18:02Z stands. No regression.
+- CI/store/host-artifact: latest code build run 1717 `72e33fdc` completed/success (push); store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA; repo HEAD `681674d` docs-only ahead, drift=no. Host download `apps.ffilt.us/apk/Pocket/app-release.apk` = 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog. DEX markers present (`X-Pocket-Version` 1, `setRandomizedEncryptionRequired` 1, `KeystoreWrap` 5, `WebRenderManager` 5, `pip_added` 1). apps.ffilt.us 200, telemetry.ffilt.us 405 (up), appstore pod `appstore-7bf9fbb754-f6c4k` 1/1 Running 16h, pocket-cfg pod `pocket-cfg-58664b7775-zv7x9` 1/1 Running 9h (node reed-a320ms2h).
+- Homelab MCP todo board: 173 open, 0 keyword hits for pocket/web_search/web_render/otel/sms/config-import — no Pocket-actionable todos.
+
+### Shipped
+- No code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E: device endpoint now correctly `https://telemetry.ffilt.us/` (no longer stale); no post captured this run, verify ingest landing when convenient.
+- web_render on a true JS/SPA page still untested (static example.com proven vc107).
+- ADB input automation fragility remains (multiple web_search typed-text retries this run before clean submit); last clean submits succeeded.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
+- `web_fetch` 403 from some sites is site-side (not a bug).

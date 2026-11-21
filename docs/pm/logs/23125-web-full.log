@@ -1,0 +1,17 @@
+--------- beginning of main
+11-20 19:10:00.085 23125 23139 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+--------- beginning of system
+11-20 19:10:00.125 23125 23125 D InsetsController: hide(ime())
+11-20 19:10:00.125 23125 23125 I ImeTracker: com.sutliff.pocket:c7d38f7d: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-20 19:10:00.125 23125 23125 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@bc7efc8
+11-20 19:10:00.125 23125 23125 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-20 19:10:00.125 23125 23167 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@bc7efc8
+11-20 19:10:00.126 23125 23125 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-20 19:10:00.132 23125 23125 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-20 19:10:00.132 23125 23125 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-20 19:10:00.164 23125 23125 I ImeTracker: com.sutliff.pocket:0856036c: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-20 19:10:00.198 23125 23125 I ImeTracker: system_server:f3362d4a: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-20 19:10:01.872 23125 23139 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-20 19:10:01.872 23125 23139 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795219798-SCepmHqpM0SuEHOwVhbQ","object":"chat.completion.chunk","created":1795219798,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-20 19:10:03.303 23125 23139 D PocketNet: streamChat: [DONE] after 179 lines (89 data)
+11-20 19:10:03.303 23125 23139 D PocketNet: streamChat: loop done, lines=179 data=89
