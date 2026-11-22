@@ -640,3 +640,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands.
 - web_render on a true JS/SPA page still untested visually (static example.com proven vc107; WebRenderTool/Manager now emit Log.d + skills strengthened in current build).
 - ADB input automation fragility remains (landscape rotation on launch screenshot; coordinate drift) — functional checks unaffected.
+
+## Run 2026-11-22T06:12Z (spot-check, vc117 `1.0.117-72e33fd`, CI run 1717 success)
+
+### Infra / state
+- CI: latest code run 1717 `72e33fdc` completed/success (push); HEAD `3b21198` is docs-only ahead. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA. Host APK `apps.ffilt.us/apk/Pocket/app-release.apk` = 13,521,036 B sha `1d9900e14631…e358` == catalog. Services: apps.ffilt.us 200, telemetry.ffilt.us 405 (up), appstore/pocket-cfg pods Running.
+- Pre-run script reported `store_fetch_failed` (empty/non-JSON body) and device unreachable at `192.168.1.147:45357`; both were environmental/stale: store re-fetched 200 with full JSON catalog this run; device re-discovered via mDNS at `192.168.1.127:42829` (Pixel 6a / 27271JEGR25574). No product regression.
+- Homelab MCP todo board: 175 open, 0 Pocket-actionable (keyword scan: no pocket/web_search/web_render/otel/sms/config-import open items; #423/#424/#425/#697/#795/#816-818 all completed).
+
+### QA Outcomes (delegated subagent, TS=20261122T061342Z; evidence re-verified inline)
+- Identity: Pixel 6a / 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/screenshots/20261122T061342Z-identity.png` (178,920 B).
+- Launch/no-crash PASS: 0 `FATAL EXCEPTION`/`has crashed`/`ANR in com.sutliff.pocket` across launch log. Evidence: `docs/pm/logs/20261122T061342Z-launch.log` (86,263 B), `docs/pm/screenshots/20261122T061342Z-launch.png` (287,074 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:beam-free`, `loop done, lines=13 data=6`. Evidence: `docs/pm/logs/20261122T061342Z-hello.log` (430,585 B), `docs/pm/screenshots/20261122T061342Z-hello.png` (328,439 B).
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across launch+hello logs.
+- Permission/dialogs PASS: 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; no new system dialogs.
+- web_search NOT re-exercised this run (ADB input automation fragility; last proven 2026-11-21T12:04Z on same vc117 build, `WebSearchTool: result_count=8`, evidence `docs/pm/logs/20261121T120603Z-websearch.log`).
+- Settings/UI NOT captured this run (carry-forward: full settings+config-import/telemetry/remote-agent assertion from 2026-11-21T12:04Z evidence `docs/pm/logs/20261121T120603Z-settings-ui.xml`, 60,575 B).
+
+### Shipped
+- No code changes this run. Clean and proven at vc117/72e33fd.
+
+### Open / Next (carried)
+- Config-import END-TO-END still unexercised (needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry.ffilt.us 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (landscape rotation/coordinate drift); functional checks unaffected.
