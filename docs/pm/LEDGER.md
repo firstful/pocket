@@ -654,8 +654,8 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:beam-free`, `loop done, lines=13 data=6`. Evidence: `docs/pm/logs/20261122T061342Z-hello.log` (430,585 B), `docs/pm/screenshots/20261122T061342Z-hello.png` (328,439 B).
 - Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across launch+hello logs.
 - Permission/dialogs PASS: 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; no new system dialogs.
-- web_search NOT re-exercised this run (ADB input automation fragility; last proven 2026-11-21T12:04Z on same vc117 build, `WebSearchTool: result_count=8`, evidence `docs/pm/logs/20261121T120603Z-websearch.log`).
-- Settings/UI NOT captured this run (carry-forward: full settings+config-import/telemetry/remote-agent assertion from 2026-11-21T12:04Z evidence `docs/pm/logs/20261121T120603Z-settings-ui.xml`, 60,575 B).
+- web_search PASS: `WebSearchTool: start query_len=25 max_results=8 ... response code=200 html_len=29817 duration_ms=948 ... parsed titles=10 snippets=10 ... done result_count=8 duration_ms=948`. Real titled/URL results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261122T061342Z-crypto-perm.log` (982,816 B, contains the WebSearchTool lines), `docs/pm/screenshots/20261122T061342Z-websearch.png` (295,093 B, 1080x2400).
+- Settings/UI reachable PASS: top fields rendered (Inference Server, Base URL, API Key, Model, Temperature, Max Tokens, System Prompt, Stream responses, Appearance) and scrolled section shows Config import / Passphrase / pocket-cfg / Telemetry / otlp / Remote Agent / SMS+Location "Disabled by default". Evidence: `docs/pm/logs/20261122T061342Z-crypto-perm.log` (uiautomator dump), `docs/pm/screenshots/20261122T061342Z-settings.png` (217,436 B, 1080x2400). 0 FATAL in settings.
 
 ### Shipped
 - No code changes this run. Clean and proven at vc117/72e33fd.
