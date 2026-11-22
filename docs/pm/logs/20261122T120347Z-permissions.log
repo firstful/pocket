@@ -1,0 +1,10 @@
+Permission/dialog scan run=20261122T120347Z
+files searched:
+/root/pocket/docs/pm/logs/20261122T120347Z-hello.log
+/root/pocket/docs/pm/logs/20261122T120347Z-identity.log
+/root/pocket/docs/pm/logs/20261122T120347Z-launch.log
+/root/pocket/docs/pm/logs/20261122T120347Z-settings.log
+/root/pocket/docs/pm/logs/20261122T120347Z-websearch.log
+pattern: EnhancedConfirmationDialog|GrantPermissionsActivity
+matches:
+match_count=0
