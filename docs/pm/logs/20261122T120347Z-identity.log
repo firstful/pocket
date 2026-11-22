@@ -1,0 +1,10 @@
+Identity log run=20261122T120347Z
+timestamp_utc=2026-11-22T12:04:05Z
+ro.product.model=Pixel 6a
+ro.serialno=27271JEGR25574
+--- dumpsys package com.sutliff.pocket (version lines) ---
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
+    installerPackageName=null
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null

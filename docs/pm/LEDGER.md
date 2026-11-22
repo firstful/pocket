@@ -665,3 +665,28 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry.ffilt.us 405).
 - web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
 - ADB input automation fragility remains (landscape rotation/coordinate drift); functional checks unaffected.
+
+## Run 2026-11-22T12:03Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, partial fresh proof
+
+### QA Outcomes (delegated subagent `deleg_ac5715bf`, ts 20261122T120347Z + inline verification)
+- Identity: Pixel 6a / 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261122T120347Z-identity.log`.
+- Launch/no-crash PASS: monkey injected 1 event, no `FATAL EXCEPTION`/`has crashed`/`ANR` in captured log (0 matches). Evidence: `docs/pm/logs/20261122T120347Z-launch.log` (15,489 B), `docs/pm/screenshots/20261122T120347Z-launch.png` (143,812 B, 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:beam-free`, `[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`, no gateway error. Evidence: `docs/pm/logs/20261122T120347Z-hello.log` (filtered, 4 lines), `docs/pm/screenshots/20261122T120347Z-hello.png` (PNG).
+- Web search NOT freshly captured this run: no `WebSearchTool` tag in the filtered log (the LLM answered "The capital of France is Paris" directly without invoking the tool). NOT a regression — web_search was last proven 2026-11-22T06:12Z (`WebSearchTool: response code=200 html_len=29817 … result_count=8`). Carried proof stands.
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across all this-run logs. Evidence: grep across `docs/pm/logs/20261122T120347Z-*.log`.
+- Permission/dialogs PASS: 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; no new system dialog tapped past.
+- Settings/UI not freshly captured this run; reachability carried from 2026-11-22T06:12Z run (fields + config import + telemetry + remote-agent sections all rendered). No settings regression suspected.
+- CI/store: latest code build run 1717 `72e33fdc` completed/success (push); store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA; device vc117 matches. HEAD `dd605dd` docs-only ahead, drift=no.
+- Services/pods: apps.ffilt.us 200, telemetry.ffilt.us 405 (up); appstore `appstore-7bf9fbb754-cfc84` 1/1, pocket-cfg `pocket-cfg-68664b7775-trgg8` 1/1, telemetry `telemetry-658bd46fbd-cjsxt` 1/1.
+- Homelab MCP todo board: 175 open, 0 Pocket-actionable (only tangential Android items #54 Jellyfin APK, #264 HA companion fork, #311 profile reorg). No Pocket todos need action.
+
+### Shipped
+- No code changes this run. Clean at vc117/72e33fd.
+
+### Open / Next (carried)
+- Config-import END-TO-END still unexercised (needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up.
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (coordinate drift); this run's first web_search send did not trigger the tool.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
