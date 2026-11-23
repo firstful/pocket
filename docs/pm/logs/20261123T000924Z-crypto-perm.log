@@ -1,0 +1,21 @@
+=== CRYPTO REGRESSION GREP (combined launch+hello+websearch+fresh logcat) ===
+caller provided IV = 0
+KeyStoreException = 0
+AEADBadTagException = 0
+InvalidKeyException = 0
+self-heal = 0
+SecretWrapException = 0
+=== PERMISSION/DIALOG GREP ===
+EnhancedConfirmationDialog = 0
+GrantPermissionsActivity = 0
+EnhancedConfirmation = 0
+permission granted = 0
+PERMISSION_GRANTED = 0
+=== CURRENT FOCUS ===
+  mCurrentFocus=Window{29c60e7 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== TOP RESUMED ACTIVITY ===
+    topResumedActivity=ActivityRecord{238325881 u0 com.sutliff.pocket/.MainActivity t29264}
+=== LAUNCH CRASH GREP ===
+FATAL EXCEPTION = 0
+ANR in com.sutliff.pocket = 0
+has crashed = 0

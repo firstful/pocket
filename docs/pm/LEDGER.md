@@ -718,3 +718,33 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); functional checks unaffected.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-23T00:07Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA + tooling fix
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success; its single `build` job (id 2166, label android) also success. HEAD `2cd6035` is docs-only ahead; `git diff 72e33fd..HEAD` = only `docs/pm/**`. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA. Device vc117 matches. No drift.
+- Store health: `apps.ffilt.us/apps.json` HTTP/2 200 with correct cache headers (`no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). Fresh APK download 13,521,036 B sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog. `telemetry.ffilt.us` 405 (up). Pods 1/1 Running: appstore `appstore-7bf9fbb754-cfc84` (17h), pocket-cfg `pocket-cfg-58664b7775-z7cnp` (5h49m), telemetry `telemetry-658bd46fbd-xx6kp` (21m).
+- Device: pre-run script again reported unreachable at stale `192.168.1.147:45357`; actual device live at `192.168.1.127:42829` (Pixel 6a / 27271JEGR25574). ROOT-CAUSE FIXED THIS RUN: stale IP was hardcoded in BOTH the pre-run script `~/.hermes/scripts/pocket-pm-status.sh` (device probe) and the cron job prompt (job `bde2b61e072c`). Script now discovers the live Pixel 6a via `adb devices -l` (`model:Pixel_6a` / `_adb-tls-connect` fallback); prompt now instructs QA subagents to re-discover and never trust a hardcoded IP. Verified: script now reports `device=Pixel 6a 192.168.1.127:42829`, vc117; prompt stale-IP count 0. Future runs should stop reporting false unreachable.
+
+### QA Outcomes (delegated subagent `deleg_fd808572`, ts 20261123T000924Z; evidence verified inline)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/screenshots/20261123T000924Z-identity.png` (202,230 B).
+- Launch/no-crash PASS: foreground `com.sutliff.pocket/.MainActivity`; 0 `FATAL EXCEPTION` / `ANR in com.sutliff.pocket` / `has crashed`. Evidence: `docs/pm/logs/20261123T000924Z-launch.log` (212,948 B), `docs/pm/screenshots/20261123T000924Z-launch.png` (202,314 B, 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:hy4-flash-free`, `[DONE] after 25 lines (12 data)`, `loop done, lines=25 data=12`, no gateway error. Evidence: `docs/pm/logs/20261123T000924Z-hello.log` (218,734 B), `docs/pm/screenshots/20261123T000924Z-hello.png` (181,642 B).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=25 max_results=8 … response code=200 html_len=27905 duration_ms=1192 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1192`. Real titled/URL results, no timeout/NetworkOnMainThread (only "timeout happen" is from `com.google.android.apps.turbo`, unrelated). Evidence: `docs/pm/logs/20261123T000924Z-websearch.log` (236,071 B), `docs/pm/screenshots/20261123T000924Z-websearch.png` (181,494 B).
+- Crypto regression watch PASS (vc117 key): 0 matches each for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`. Evidence: `docs/pm/logs/20261123T000924Z-crypto-perm.log`.
+- Permission/dialogs PASS: 0 `EnhancedConfirmationDialog|GrantPermissionsActivity`; `mCurrentFocus` + `topResumedActivity` stayed Pocket. No new system dialog tapped past.
+
+### Todo board
+- Homelab MCP todo board: 175 open, 0 Pocket-actionable (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent → only tangential #54 Jellyfin APK, #264 HA companion fork, #311 profile reorg, #107 dash, #180 outage hardening, #380 GitOps lifecycle tags). No Pocket todos need action. Created + claimed PM run todo #1039 (gitea issue 1260).
+
+### Shipped
+- No Pocket code changes this run. Clean at vc117/72e33fd.
+- Tooling (not Pocket repo): fixed stale device IP in `pocket-pm-status.sh` and cron prompt `bde2b61e072c` (see Infra/state above).
+
+### Open / Next (carried)
+- Config-import END-TO-END still unexercised (needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (landscape rotation/coordinate drift); functional checks unaffected.
+- New idea: add a debug-only `adb broadcast` test hook (receiver, gated to debug build) to trigger `hello`/`web_search` deterministically without fragile Compose-coordinate taps; would make QA spot-checks reliable and remove the recurring coordinate-drift false negatives. No such hook exists today (manifest receivers: SMS/call/boot only).
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
