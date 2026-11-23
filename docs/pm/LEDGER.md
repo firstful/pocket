@@ -776,3 +776,31 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-23T12:07Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA (web_search captured)
+
+### Infra / state
+- CI: latest code run 1717 `72e33fdc` completed/success (push); HEAD `ecaa249` docs-only ahead, drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == HEAD code SHA. Device vc117 matches.
+- Store health: `apps.ffilt.us/apps.json` HTTP/2 200 with correct cache headers. Fresh APK download 13,521,036 B sha256 `1d9900e14631…e358` == catalog. `telemetry.ffilt.us` 405 (up). Pods 1/1 Running: appstore `appstore-7bf9fbb754-cfc84` (29h), pocket-cfg `pocket-cfg-58664b7775-rxnf8` (5h), telemetry up.
+- Device: pre-run script reported stale `192.168.1.147:45357`; actual device live at mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / 27271JEGR25574, vc117). Not a product regression.
+- Homelab MCP todo board: 0 open Pocket-actionable todos (scanned open board; only tangential Android items #54 Jellyfin APK, #264 HA companion fork, #311 profile reorg). No Pocket todos need action.
+
+### QA Outcomes (delegated subagent `deleg_884bb327`, ts 20261123T120717Z; evidence verified inline)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261123T120717Z-identity.log`.
+- Launch/no-crash PASS: monkey injected 1 event, VM exited 0, no `FATAL EXCEPTION` / `has crashed` / `ANR in com.sutliff.pocket`. Evidence: `docs/pm/logs/20261123T120717Z-launch.log`, `docs/pm/screenshots/20261123T120717Z-launch.png` (valid 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:beam-free`, `[DONE] after 11 lines (5 data)`, `loop done, lines=11 data=5`, no gateway error. Evidence: `docs/pm/logs/20261123T120717Z-hello.log`, `docs/pm/screenshots/20261123T120717Z-hello.png` (valid 1080x2400).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=17 max_results=8 … response code=200 html_len=28483 duration_ms=1200 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1200`. Real titled/URL results, no timeout/NetworkOnMainThread (only "timeout happen" is from `com.google.android.apps.turbo`, unrelated). Evidence: `docs/pm/logs/20261123T120717Z-websearch.log`, `docs/pm/screenshots/20261123T120717Z-websearch.png` (valid 1080x2400).
+- Settings/UI reachable PASS: settings screen rendered (Inference Server, Base URL, API Key, Model, Temperature, Max Tokens, System Prompt, Stream responses, Appearance, Config import, Telemetry, Remote Agent). Evidence: `docs/pm/logs/20261123T120717Z-settings.xml` (uiautomator dump), `docs/pm/screenshots/20261123T120717Z-settings.png` (valid 1080x2400).
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across captured full logcat (`docs/pm/logs/20261123T120717Z-full.log`, 1521 lines). Evidence: `docs/pm/logs/20261123T120717Z-crypto.log` (match_count=0).
+- Permission/dialogs PASS: 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; `mCurrentFocus`/`topResumedActivity` stayed Pocket. No new system dialog tapped past. Evidence: `docs/pm/logs/20261123T120717Z-permission.log` (match_count=0).
+
+### Shipped
+- No code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
