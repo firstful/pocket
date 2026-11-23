@@ -1,0 +1,9 @@
+Device: Pixel 6a
+Serial: 27271JEGR25574
+Model: Pixel 6a
+ADB transport: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp (192.168.1.127:42829)
+Android: 17 (per context)
+App: com.sutliff.pocket
+versionCode: 117
+versionName: 1.0.117-72e33fd
+Timestamp: 20261123T061000Z

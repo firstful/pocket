@@ -1,0 +1,7 @@
+--------- beginning of system
+11-23 01:04:37.223  1701  1801 I ActivityManager: Start proc 13092:com.sutliff.pocket/u0a494 for next-top-activity {com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+11-23 01:04:37.355  1701  2463 I ActivityManager: Background started FGS: Allowed [callingPackage: com.sutliff.pocket; callingUid: 10494; uidState: TOP ; uidBFSL: [BFSL]; BFGS denied: false; intent: Intent { xflg=0x4 cmp=com.sutliff.pocket/.bridge.AgentBridgeService }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null; isBindService:false]
+--------- beginning of main
+11-23 01:04:37.356 13092 13092 D AgentBridgeService: AgentBridgeService created
+11-23 01:04:37.953  1701  3319 D ActivityManager: sync unfroze 8752 com.google.android.tts for 6
+11-23 01:04:46.113  1701  2012 D ActivityManager: freezing 3277 com.google.android.apps.weather
