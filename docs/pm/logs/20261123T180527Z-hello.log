@@ -1,0 +1,62 @@
+=== HELLO STREAM logcat excerpt (ts=20261123T180527Z) ===
+filter: streamChat|assistant reply|gateway errors|FATAL
+--- logcat -d | grep -iE 'streamChat|assistant|reply|lines=2 data=1|tool_call_id=None|gateway|FATAL|AndroidRuntime' ---
+11-23 13:06:36.066 19240 19240 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-23 13:06:36.070 19240 19240 I AndroidRuntime: Using default boot image
+11-23 13:06:36.070 19240 19240 I AndroidRuntime: Leaving lock profiling enabled
+11-23 13:06:36.148 19240 19240 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-23 13:06:37.263 19240 19240 D AndroidRuntime: Shutting down VM
+11-23 13:07:00.895 19038 19051 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-23 13:07:01.016  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-23 13:07:01.016  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-23 13:07:01.016  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-23 13:07:01.028  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-23 13:07:01.028  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-23 13:07:01.028  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-23 13:07:01.030  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-23 13:07:01.030  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-23 13:07:01.030  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-23 13:07:01.033  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-23 13:07:01.033  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-23 13:07:01.033  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-23 13:07:02.212  2882 19119 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-23 13:07:04.493 19038 19051 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-23 13:07:04.494 19038 19051 D PocketNet: streamChat: first data (181 bytes): {"id":"47cc8cb9-351f-4d6a-b5fa-4c60d35fed27","object":"chat.completion.chunk","created":1795457220,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-23 13:07:04.683 19038 19051 D PocketNet: streamChat: [DONE] after 31 lines (15 data)
+11-23 13:07:04.683 19038 19051 D PocketNet: streamChat: loop done, lines=31 data=15
+--- end ---
+
+=== UI text after send (for reply verification) ===
+',capital capital of France of france' [466,353][1016,402]
+'1d ago' [466,413][537,455]
+'The capital of France is Paris.' [64,540][542,589]
+'1d ago' [64,600][158,642]
+'hello' [864,727][942,776]
+'1d ago' [864,787][935,829]
+'Hello! How can I help you today?' [64,914][587,963]
+'1d ago' [64,974][158,1016]
+'Use w_web_search to find recent Kotlin release notes' [240,1101][1016,1202]
+'0d ago' [240,1213][311,1255]
+'web_search' [159,1474][337,1516]
+'Done' [914,1474][984,1516]
+'Result' [96,1595][183,1637]
+'TIER:ddg&#10;1. Kotlin release process | Kotlin Documentation&#10;   URL: https://kotlinlang.org/docs/releases.html&#10;   This page explains the Kotlin release cycle and the different types of releas' [96,1642][984,2006]
+'Ready' [111,2035][196,2077]
+'Message…' [63,2148][274,2211]
+'Pocket' [148,142][286,290]
+'1.0.117' [297,195][402,237]
+
+=== ADDENDUM: UI after tapping 'Jump to current' (latest messages) ===
+'TIER:ddg&#10;1. Paris - Wikipedia&#10;   URL: https://en.wikipedia.org/wiki/Paris&#10;   Capital city in Île-de-France, France Paris[b] is the capital and largest city of France, with an estimated cit' [96,300][984,1027]
+'Show more' [96,996][266,1122]
+'According to web search results, the capital of France is Paris — located on the Seine River in north-central France, with a city population of about 2.04 million (as of January 2026) and a metropolit' [64,1165][840,1526]
+'07:12' [64,1537][142,1579]
+'hello' [842,1664][920,1713]
+'just now' [842,1724][935,1766]
+'Hello! How can I help you today?' [64,1851][587,1900]
+'just now' [64,1911][180,1953]
+'Ready' [111,2035][196,2077]
+'Message…' [63,2148][274,2211]
+'Pocket' [148,142][286,290]
+'1.0.117' [297,195][402,237]
+=== END ADDENDUM ===

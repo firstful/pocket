@@ -1,0 +1,26 @@
+=== PERMISSION / ENHANCED-CONFIRMATION DIALOG LOG (ts=20261123T180527Z) ===
+timestamp: 2026-11-23T18:10:43Z
+
+mCurrentFocus observations recorded during QA (all inside Pocket):
+  [launch]       Window{de94897 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [hello pre]    Window{de94897 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [hello post]   Window{de94897 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [ws pre]       Window{241f776 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [ws post]      Window{241f776 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [settings pre] Window{241f776 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  [settings post]Window{241f776 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+
+=== logcat dialog scan (PermissionController|permission dialog|GrantPermission|enhanced confirm|PackageInstaller) ===
+11-23 13:09:36.184 19962 19962 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-23 13:10:02.817 20081 20081 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-23 13:10:13.562 20108 20108 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-23 13:10:21.709 20150 20150 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-23 13:10:26.650 20199 20199 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+--- (AconfigPackage permissioncontroller.flags lines are boot-time config, not dialogs) ---
+
+=== current window state ===
+  mCurrentFocus=Window{241f776 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{266565701 u0 com.sutliff.pocket/.MainActivity t29270}
+
+CONCLUSION: No new system permission or enhanced-confirmation dialog appeared.
+mCurrentFocus remained com.sutliff.pocket/.MainActivity for all interactions; no taps were blocked or skipped.

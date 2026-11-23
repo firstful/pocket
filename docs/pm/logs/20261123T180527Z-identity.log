@@ -1,0 +1,19 @@
+=== POCKET QA IDENTITY ===
+timestamp_utc: 2026-11-23T18:05:27Z
+adb transport: 192.168.1.127:42829
+
+--- adb devices -l ---
+List of devices attached
+192.168.1.127:42829    device product:bluejay model:Pixel_6a device:bluejay transport_id:1
+
+
+--- getprop ro.product.model ---
+Pixel 6a
+--- getprop ro.serialno ---
+27271JEGR25574
+--- getprop ro.product.device ---
+bluejay
+
+--- dumpsys package com.sutliff.pocket (versionName|versionCode) ---
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd

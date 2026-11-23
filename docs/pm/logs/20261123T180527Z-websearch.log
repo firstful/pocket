@@ -1,0 +1,66 @@
+=== WEB_SEARCH logcat excerpt (ts=20261123T180527Z) ===
+prompt sent: 'search the web for the capital of France'
+--- logcat -d | grep -iE 'WebSearchTool|web_search|PocketNet|NetworkOnMainThread|No results found|timeout|FATAL|AndroidRuntime' ---
+11-23 13:09:36.100 19962 19962 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-23 13:09:36.104 19962 19962 I AndroidRuntime: Using default boot image
+11-23 13:09:36.104 19962 19962 I AndroidRuntime: Leaving lock profiling enabled
+11-23 13:09:36.180 19962 19962 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-23 13:09:37.318 19962 19962 D AndroidRuntime: Shutting down VM
+11-23 13:09:43.848 19868 19885 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-23 13:09:43.968  2362  2554 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-23 13:09:46.002 19868 19885 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-23 13:09:46.003 19868 19885 D PocketNet: streamChat: first data (181 bytes): {"id":"c889d161-56b9-496c-ad5d-f411c203f382","object":"chat.completion.chunk","created":1795457383,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-23 13:09:46.156 19868 19885 D PocketNet: streamChat: [DONE] after 31 lines (15 data)
+11-23 13:09:46.156 19868 19885 D PocketNet: streamChat: loop done, lines=31 data=15
+11-23 13:09:46.158 19868 19885 D WebSearchTool: start query_len=17 max_results=8
+11-23 13:09:47.119 19868 19885 D WebSearchTool: response code=200 html_len=28483 duration_ms=961
+11-23 13:09:47.124 19868 19885 D WebSearchTool: parsed titles=10 snippets=10
+11-23 13:09:47.130 19868 19885 D WebSearchTool: done result_count=8 duration_ms=961
+11-23 13:09:47.142 19868 19926 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-23 13:09:50.290 19868 19926 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-23 13:09:50.290 19868 19926 D PocketNet: streamChat: first data (181 bytes): {"id":"ea1fc5a3-ddbd-4907-8db5-08f1c88f2838","object":"chat.completion.chunk","created":1795457387,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-23 13:09:50.798 19868 19926 D PocketNet: streamChat: [DONE] after 75 lines (37 data)
+11-23 13:09:50.799 19868 19926 D PocketNet: streamChat: loop done, lines=75 data=37
+11-23 13:09:53.593  1701  2064 I ImeTracker: system_server:5bd3812c: onTimeout at PHASE_SERVER_GET_CONTROL_WITH_LEASH
+11-23 13:09:59.472  2362  2554 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-23 13:10:02.732 20081 20081 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-23 13:10:02.739 20081 20081 I AndroidRuntime: Using default boot image
+11-23 13:10:02.739 20081 20081 I AndroidRuntime: Leaving lock profiling enabled
+11-23 13:10:02.813 20081 20081 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-23 13:10:04.005 20081 20081 D AndroidRuntime: Shutting down VM
+--- end filter ---
+
+=== UI text after web search ===
+',capital capital of France of france' [466,353][1016,402]
+'1d ago' [466,413][537,455]
+'The capital of France is Paris.' [64,540][542,589]
+'1d ago' [64,600][158,642]
+'hello' [864,727][942,776]
+'1d ago' [864,787][935,829]
+'Hello! How can I help you today?' [64,914][587,963]
+'1d ago' [64,974][158,1016]
+'Use w_web_search to find recent Kotlin release notes' [240,1101][1016,1202]
+'1d ago' [240,1213][311,1255]
+'web_search' [159,1474][337,1516]
+'Done' [914,1474][984,1516]
+'Result' [96,1595][183,1637]
+'TIER:ddg&#10;1. Kotlin release process | Kotlin Documentation&#10;   URL: https://kotlinlang.org/docs/releases.html&#10;   This page explains the Kotlin release cycle and the different types of releas' [96,1642][984,2006]
+'Ready' [111,2035][196,2077]
+'Message…' [63,2148][274,2211]
+'Pocket' [148,142][286,290]
+'1.0.117' [297,195][402,237]
+
+=== ADDENDUM: UI after 'Jump to current' (final web-search reply) ===
+'web_search' [159,301][337,343]
+'Done' [834,301][904,343]
+'1.0s' [925,301][984,343]
+'Result' [96,422][183,464]
+'TIER:ddg&#10;1. Paris - Wikipedia&#10;   URL: https://en.wikipedia.org/wiki/Paris&#10;   Capital city in Île-de-France, France Paris[b] is the capital and largest city of France, with an estimated cit' [96,469][984,1267]
+'Show more' [96,1236][266,1362]
+'According to web search results, the capital of France is Paris — located on the Seine River in north-central France, with a city population of about 2.04 million (as of January 2026) and a metropolit' [64,1539][840,1900]
+'just now' [64,1911][180,1953]
+'Ready' [111,2035][196,2077]
+'Message…' [63,2148][274,2211]
+'Pocket' [148,142][286,290]
+'1.0.117' [297,195][402,237]
+=== END ADDENDUM ===

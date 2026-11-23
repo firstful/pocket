@@ -1,0 +1,3 @@
+=== LAUNCH logcat filter: FATAL|AndroidRuntime (ts=20261123T180527Z) ===
+--- adb logcat -d | grep -iE 'FATAL|AndroidRuntime' ---
+--- end filter ---
