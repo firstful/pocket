@@ -1,0 +1,14 @@
+11-23 19:06:49.194  8927  8943 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-23 19:06:50.351  8927  8943 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-23 19:06:50.352  8927  8943 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-5641294e-8de1-43aa-887c-a62c72e752e8","object":"chat.completion.chunk","created":1795478807,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-23 19:06:50.441  8927  8943 D PocketNet: streamChat: [DONE] after 17 lines (8 data)
+11-23 19:06:50.441  8927  8943 D PocketNet: streamChat: loop done, lines=17 data=8
+11-23 19:06:50.443  8927  8943 D WebSearchTool: start query_len=19 max_results=8
+11-23 19:06:51.994  8927  8943 D WebSearchTool: response code=200 html_len=27393 duration_ms=1547
+11-23 19:06:52.002  8927  8943 D WebSearchTool: parsed titles=10 snippets=10
+11-23 19:06:52.011  8927  8943 D WebSearchTool: done result_count=8 duration_ms=1547
+11-23 19:06:52.042  8927  8943 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-23 19:06:52.804  8927  8943 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-23 19:06:52.804  8927  8943 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-ea23b102-6bc6-4f50-8643-dcabda3079ba","object":"chat.completion.chunk","created":1795478810,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-23 19:06:53.729  8927  8943 D PocketNet: streamChat: [DONE] after 43 lines (21 data)
+11-23 19:06:53.729  8927  8943 D PocketNet: streamChat: loop done, lines=43 data=21

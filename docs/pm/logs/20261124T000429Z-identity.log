@@ -1,0 +1,7 @@
+=== IDENTITY 20261124T000433Z ===
+SERIAL_TRANSPORT=adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+ro.product.model=Pixel 6a
+ro.serialno=27271JEGR25574
+--- dumpsys package version ---
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
