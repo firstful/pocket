@@ -1,0 +1,47 @@
+=== WEB SEARCH 20261124T180606Z ===
+--- WebSearchTool/streamChat grep ---
+11-24 13:06:23.685  2882  2882 I InputBundleManager: InputBundleManager.checkScreenRotation():490 Screen rotation timeout
+11-24 13:06:23.994  2362  2491 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-24 13:06:44.013  2362  2554 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-24 13:06:54.005  2362  2675 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-24 13:07:04.136 13779 13795 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: first data (181 bytes): {"id":"9a05d0df-95e9-43f3-9c72-ccf495fb6565","object":"chat.completion.chunk","created":1795543625,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: loop done, lines=23 data=11
+11-24 13:08:07.305 13779 13795 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:08:09.132 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:08:09.133 13779 13795 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795543686-56ofpFL6PINNymkxMhP9","object":"chat.completion.chunk","created":1795543686,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-24 13:08:09.240 13779 13795 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-24 13:08:09.240 13779 13795 D PocketNet: streamChat: loop done, lines=21 data=10
+11-24 13:08:14.122  2362  2491 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+
+=== WEB SEARCH (explicit tool request, attempt 2) ===
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: first data (181 bytes): {"id":"9a05d0df-95e9-43f3-9c72-ccf495fb6565","object":"chat.completion.chunk","created":1795543625,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: loop done, lines=23 data=11
+11-24 13:08:07.305 13779 13795 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:08:09.132 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:08:09.133 13779 13795 D PocketNet: streamChat: first data (322 bytes): {"id":"gen-1795543686-56ofpFL6PINNymkxMhP9","object":"chat.completion.chunk","created":1795543686,"model":"ocg:hy4-flash-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant","content":"","reasoning":"The","reasoning_details":[{"type":"reasoning.text","text":"The","format":"unknown","index":0}]}}]}
+11-24 13:08:09.240 13779 13795 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-24 13:08:09.240 13779 13795 D PocketNet: streamChat: loop done, lines=21 data=10
+11-24 13:09:41.650 13779 13796 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:09:43.483 13779 13796 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:09:43.484 13779 13796 D PocketNet: streamChat: first data (181 bytes): {"id":"2f3ba473-7cff-4b86-b6ba-09f83e8927a1","object":"chat.completion.chunk","created":1795543781,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:09:44.817 13779 13796 D PocketNet: streamChat: [DONE] after 131 lines (65 data)
+11-24 13:09:44.817 13779 13796 D PocketNet: streamChat: loop done, lines=131 data=65
+
+=== WEB SEARCH (attempt 3: 'web search kotlin release notes') ===
+11-24 13:11:09.649 13779 13795 D PocketNet: streamChat: first data (181 bytes): {"id":"4c282425-219e-459d-8606-1802cea8d9ba","object":"chat.completion.chunk","created":1795543866,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:11:09.799 13779 13795 D PocketNet: streamChat: [DONE] after 25 lines (12 data)
+11-24 13:11:09.799 13779 13795 D PocketNet: streamChat: loop done, lines=25 data=12
+11-24 13:11:09.803 13779 13795 D WebSearchTool: start query_len=20 max_results=8
+11-24 13:11:10.883 13779 13795 D WebSearchTool: response code=200 html_len=28577 duration_ms=1078
+11-24 13:11:10.888 13779 13795 D WebSearchTool: parsed titles=10 snippets=10
+11-24 13:11:10.893 13779 13795 D WebSearchTool: done result_count=8 duration_ms=1078
+11-24 13:11:10.902 13779 13795 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:11:12.517 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:11:12.517 13779 13795 D PocketNet: streamChat: first data (181 bytes): {"id":"c526e5d6-0131-4542-b99b-0dda97f7bc6f","object":"chat.completion.chunk","created":1795543870,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:11:14.129 13779 13795 D PocketNet: streamChat: [DONE] after 193 lines (96 data)
+11-24 13:11:14.129 13779 13795 D PocketNet: streamChat: loop done, lines=193 data=96

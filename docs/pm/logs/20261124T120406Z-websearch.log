@@ -1,0 +1,37 @@
+--------- beginning of system
+11-24 07:10:37.448 13242 13242 D InsetsController: show(ime())
+11-24 07:10:37.448 13242 13242 I ImeTracker: com.sutliff.pocket:c228e6e4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:10:37.449 13242 13242 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-24 07:10:37.457 13242 13242 I ImeTracker: com.sutliff.pocket:b9e36825: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-24 07:10:37.457 13242 13242 D InsetsController: show(ime())
+11-24 07:10:37.457 13242 13242 I ImeTracker: com.sutliff.pocket:b9e36825: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+--------- beginning of main
+11-24 07:10:37.484 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@25f6142
+11-24 07:10:37.485 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@25f6142
+11-24 07:10:37.538 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-24 07:10:37.754 13242 13242 I ImeTracker: com.sutliff.pocket:c228e6e4: onShown
+11-24 07:10:39.244 13242 13260 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 07:10:39.265 13242 13242 D InsetsController: hide(ime())
+11-24 07:10:39.265 13242 13242 I ImeTracker: com.sutliff.pocket:0d353186: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:10:39.265 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:10:39.265 13242 13242 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-24 07:10:39.265 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:10:39.265 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-24 07:10:39.289 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:10:39.289 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:10:39.290 13242 13242 I ImeTracker: com.sutliff.pocket:60246ed9: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 07:10:39.357 13242 13242 I ImeTracker: system_server:201d78a6: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 07:10:45.938 13242 13260 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 07:10:45.939 13242 13260 D PocketNet: streamChat: first data (181 bytes): {"id":"28a5d1c5-6a20-4158-88b2-40bac881c298","object":"chat.completion.chunk","created":1795522244,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 07:10:46.351 13242 13260 D PocketNet: streamChat: [DONE] after 31 lines (15 data)
+11-24 07:10:46.351 13242 13260 D PocketNet: streamChat: loop done, lines=31 data=15
+11-24 07:10:46.353 13242 13260 D WebSearchTool: start query_len=27 max_results=8
+11-24 07:10:47.584 13242 13260 D WebSearchTool: response code=200 html_len=29069 duration_ms=1229
+11-24 07:10:47.591 13242 13260 D WebSearchTool: parsed titles=10 snippets=10
+11-24 07:10:47.591 13242 13260 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-24 07:10:47.597 13242 13260 D WebSearchTool: done result_count=8 duration_ms=1229
+11-24 07:10:47.641 13242 13259 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 07:10:51.227 13242 13259 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 07:10:51.228 13242 13259 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-d301c34a-2240-4b15-90ca-133f9426d8fa","object":"chat.completion.chunk","created":1795522249,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-24 07:10:53.383 13242 13259 D PocketNet: streamChat: [DONE] after 119 lines (59 data)
+11-24 07:10:53.383 13242 13259 D PocketNet: streamChat: loop done, lines=119 data=59

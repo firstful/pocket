@@ -1,0 +1,7 @@
+=== CRYPTO WATCH 20261124T180606Z (all captured evidence) ===
+files scanned: 5
+pattern: caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException
+CRYPTO_MATCH_COUNT=0
+=== PERMISSIONS WATCH 20261124T180606Z (all captured evidence) ===
+pattern: EnhancedConfirmationDialog|GrantPermissionsActivity
+PERMISSION_MATCH_COUNT=0

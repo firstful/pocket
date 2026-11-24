@@ -1,0 +1,14 @@
+=== Device identity ===
+Pixel 6a
+CP3A.261005.002.A1
+17
+27271JEGR25574
+=== Package identity ===
+    codePath=/data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
+    lastUpdateTime=2026-11-18 10:33:01
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]
+      firstInstallTime=2026-10-14 16:37:12
+=== ADB transport ===
+device

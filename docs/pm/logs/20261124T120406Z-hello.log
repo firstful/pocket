@@ -1,0 +1,23 @@
+--------- beginning of system
+11-24 07:08:10.756 13242 13242 D InsetsController: show(ime())
+11-24 07:08:10.756 13242 13242 I ImeTracker: com.sutliff.pocket:c0e006e7: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:08:10.756 13242 13242 I ImeTracker: com.sutliff.pocket:c0e006e7: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-24 07:08:10.760 13242 13242 I ImeTracker: com.sutliff.pocket:39202eb1: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-24 07:08:10.760 13242 13242 D InsetsController: show(ime())
+11-24 07:08:10.760 13242 13242 I ImeTracker: com.sutliff.pocket:39202eb1: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+--------- beginning of main
+11-24 07:08:12.217 13242 13260 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 07:08:12.271 13242 13242 D InsetsController: hide(ime())
+11-24 07:08:12.271 13242 13242 I ImeTracker: com.sutliff.pocket:da868400: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:08:12.271 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:08:12.271 13242 13242 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-24 07:08:12.272 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:08:12.272 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-24 07:08:12.283 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:08:12.283 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:08:12.318 13242 13242 I ImeTracker: com.sutliff.pocket:8eb65880: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 07:08:12.368 13242 13242 I ImeTracker: system_server:0e25dc95: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 07:08:15.097 13242 13260 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 07:08:15.098 13242 13260 D PocketNet: streamChat: first data (219 bytes): {"id":"chatcmpl-19a850b6-dd0d-41eb-911b-2d5b54c5a95e","object":"chat.completion.chunk","created":1795522094,"model":"ocg:beam-free","choices":[{"index":0,"finish_reason":null,"delta":{"role":"assistant"}}],"usage":null}
+11-24 07:08:15.234 13242 13260 D PocketNet: streamChat: [DONE] after 15 lines (7 data)
+11-24 07:08:15.234 13242 13260 D PocketNet: streamChat: loop done, lines=15 data=7

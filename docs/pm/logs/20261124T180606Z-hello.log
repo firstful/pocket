@@ -1,0 +1,7 @@
+=== HELLO STREAM 20261124T180606Z ===
+--- stream/websearch grep ---
+11-24 13:07:04.136 13779 13795 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 13:07:07.114 13779 13795 D PocketNet: streamChat: first data (181 bytes): {"id":"9a05d0df-95e9-43f3-9c72-ccf495fb6565","object":"chat.completion.chunk","created":1795543625,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-24 13:07:07.239 13779 13795 D PocketNet: streamChat: loop done, lines=23 data=11

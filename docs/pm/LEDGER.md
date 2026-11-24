@@ -863,3 +863,38 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
+
+## Run 2026-11-24T18:04Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA + reconciled stranded evidence
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); HEAD `b6e7019` docs-only ahead of built SHA 72e33fdc (`git diff --name-only 72e33fdc..HEAD | grep -v ^docs/pm/ | wc -l` = 0). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified: `apps.ffilt.us/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). Fresh APK download 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (byte-level verify, not just catalog read). `telemetry.ffilt.us` 405 (up).
+- Device: live at mDNS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117) — re-discovered by QA subagent, no hardcoded IP.
+- ThemeUtils `CustomTextView ... AppCompat theme` E-level lines in launch log: longstanding library noise (present in 56 historical logs back to mid-Nov), NOT a regression.
+
+### Todo board
+- Homelab MCP todo board: 177 open scanned; 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #355 os-keystore, #380 lifecycle tags). Claimed this run's tracking todo #1097 (gitea issue 1318).
+
+### QA Outcomes (delegated subagent `deleg_d78955ac`, ts 20261124T180606Z; evidence verified inline)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261124T180606Z-identity.log` (202 B).
+- Launch/no-crash PASS: `topResumedActivity` + `mCurrentFocus` = `com.sutliff.pocket/.MainActivity`; CRASH_MATCH_COUNT=0 (`FATAL EXCEPTION|AndroidRuntime|has crashed|ANR in com.sutliff.pocket`). Evidence: `docs/pm/logs/20261124T180606Z-launch.log` (583 B), `docs/pm/screenshots/20261124T180606Z-launch.png` (208,803 B, 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first model `ocg:hy4-flash-free`, `[DONE] after 23 lines (11 data)`, `loop done, lines=23 data=11`, no gateway error. Evidence: `docs/pm/logs/20261124T180606Z-hello.log` (733 B), `docs/pm/screenshots/20261124T180606Z-hello.png` (183,729 B).
+- Web search PASS (freshly captured on attempt 3; first two prompts were simple trivia the model answered from knowledge without invoking the tool — tool-selection choice, not a failure): `WebSearchTool: start query_len=20 ... response code=200 html_len=28577 duration_ms=1078 ... parsed titles=10 snippets=10 ... done result_count=8 duration_ms=1078`, follow-up stream `loop done, lines=193 data=96`. No timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261124T180606Z-websearch.log` (5,642 B), `docs/pm/screenshots/20261124T180606Z-websearch.png` (224,625 B, 1080x2400).
+- Settings/UI reachable PASS: `Inference Server`, `Base URL`, `Model`, `Temperature`, `System Prompt`, `Appearance` visible. Evidence: `docs/pm/logs/20261124T180606Z-settings.xml` (13,045 B), `docs/pm/screenshots/20261124T180606Z-settings.png` (125,280 B).
+- Crypto regression watch PASS: CRYPTO_MATCH_COUNT=0 (`caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`). Evidence: `docs/pm/logs/20261124T180606Z-crypto.log`.
+- Permission/dialogs PASS: PERMISSION_MATCH_COUNT=0 (`EnhancedConfirmationDialog|GrantPermissionsActivity`); no new system dialog tapped past. Evidence: `docs/pm/logs/20261124T180606Z-permissions.log`.
+
+### Reconciled stranded evidence (two earlier 2026-11-24 runs whose artifacts were never ledgered)
+- `20261124T060637Z` — screenshots only (hello 183,536 B / launch 202,225 B / settings 128,344 B, all valid 1080x2400 PNG). No accompanying logs; visually captured only.
+- `20261124T120406Z` — logs hello/identity/launch/websearch + screenshots hello/launch/settings-pre/websearch/websearch-bottom. Logs confirm clean: hello `loop done, lines=15 data=7`; websearch `WebSearchTool: done result_count=8 duration_ms=1229` + follow-up `lines=119 data=59`; launch no FATAL; identity vc117. `settings-pre.png` (2400x1080) and `websearch-bottom.png` (1080x1200) were captured with the device in landscape — consistent with known ADB rotation/coordinate-drift fragility, not a product regression. All artifacts retained. No product issue surfaced by either run; both were clean at vc117.
+
+### Shipped
+- No Pocket code changes this run. HEAD `b6e7019` docs-only ahead of CI/build SHA `72e33fdc`; store tip vc117 matches device. Evidence files from all three 2026-11-24 runs committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- Model tool-selection: ocg:hy4-flash-free occasionally answers trivia from knowledge instead of calling web_search (2 of 3 prompts this run); web_search itself healthy when invoked. Consider stronger tool-use prompting only if this becomes a user-visible gap.
+- ADB input automation fragility remains (rotation/coordinate drift); functional checks unaffected.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
+- `web_fetch` 403 from some sites is site-side (not a bug), per prior runs.

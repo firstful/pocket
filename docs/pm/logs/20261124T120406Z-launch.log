@@ -1,0 +1,96 @@
+--------- beginning of main
+11-24 07:07:24.450 13242 13242 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10494/pid_13242
+11-24 07:07:24.454 13242 13242 I Zygote  : Process 13242 created for com.sutliff.pocket
+11-24 07:07:24.454 13242 13242 I .sutliff.pocket: Using generational CollectorTypeCMC GC.
+11-24 07:07:24.457 13242 13242 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-24 07:07:24.463 13242 13242 D CompatChangeReporter: Compat change id reported: 242716250; UID 10494; state: ENABLED
+11-24 07:07:24.493 13242 13242 D nativeloader: Configuring clns-9 for other apk /data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==/lib/arm64:/data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.sutliff.pocket
+--------- beginning of system
+11-24 07:07:24.517 13242 13242 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.sutliff.pocket/cache
+11-24 07:07:24.517 13242 13242 V GraphicsEnvironment: Currently set values for:
+11-24 07:07:24.517 13242 13242 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle]
+11-24 07:07:24.517 13242 13242 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle]
+11-24 07:07:24.517 13242 13242 V GraphicsEnvironment: com.sutliff.pocket is not listed in per-application setting
+11-24 07:07:24.517 13242 13242 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-24 07:07:24.518 13242 13242 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-24 07:07:24.519 13242 13242 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+11-24 07:07:24.521 13242 13242 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-24 07:07:24.521 13242 13242 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-24 07:07:24.534 13242 13242 D BootReceiver: Boot completed, starting AgentBridgeService
+11-24 07:07:24.537 13242 13264 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-24 07:07:24.537 13242 13264 D vulkan  : searching for layers in '/data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==/lib/arm64'
+11-24 07:07:24.537 13242 13264 D vulkan  : searching for layers in '/data/app/~~5GOalFjmvvrJyPJzk7lPPQ==/com.sutliff.pocket-CFB6LDYTSWp4wFP29cKOnQ==/base.apk!/lib/arm64-v8a'
+11-24 07:07:24.555 13242 13242 D AgentBridgeService: AgentBridgeService created
+11-24 07:07:24.575 13242 13242 I HWUI    : Using FreeType backend (prop=Auto)
+11-24 07:07:24.579 13242 13242 D CompatChangeReporter: Compat change id reported: 289878283; UID 10494; state: ENABLED
+11-24 07:07:24.587 13242 13242 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-24 07:07:24.587 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-24 07:07:24.588 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-24 07:07:24.615 13242 13242 I Surface : Creating surface for consumer unnamed-13242-0 with slotExpansion=1 for 64 slots
+11-24 07:07:24.615 13242 13242 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-24 07:07:24.815 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:24.824 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:24.830 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:24.861 13242 13242 D InsetsController: show(ime())
+11-24 07:07:24.861 13242 13242 I ImeTracker: com.sutliff.pocket:e6af3665: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:07:24.862 13242 13242 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-24 07:07:24.868 13242 13242 D InsetsController: hide(ime())
+11-24 07:07:24.868 13242 13242 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-24 07:07:24.873 13242 13242 I ImeTracker: com.sutliff.pocket:e4784cb4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-24 07:07:24.873 13242 13242 D InsetsController: show(ime())
+11-24 07:07:24.873 13242 13242 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-24 07:07:24.902 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9ae4eb4
+11-24 07:07:24.902 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9ae4eb4
+11-24 07:07:24.904 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-24 07:07:24.904 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@41f9047
+11-24 07:07:24.916 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@9ae4eb4
+11-24 07:07:24.918 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@9ae4eb4
+11-24 07:07:24.973 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,560] 
+11-24 07:07:24.977 13242 13242 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.sutliff.pocket
+11-24 07:07:25.190 13242 13242 I ImeTracker: system_server:c950bad1: onShown
+11-24 07:07:26.770 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-24 07:07:26.772 13242 13242 D ViewRootImpl: Skipping stats log for color mode
+11-24 07:07:26.785 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:07:26.787 13242 13242 W RemoteInputConnectionImpl: getSurroundingText on inactive InputConnection
+11-24 07:07:26.788 13242 13242 I ImeTracker: com.sutliff.pocket:c6c02884: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false userId 0 displayId 0
+11-24 07:07:26.788 13242 13242 I ImeTracker: com.sutliff.pocket:c6c02884: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-24 07:07:26.811 13242 13242 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,132,0,0] navigationBars:[0,0,0,126] mandatorySystemGestures:[0,164,0,126] 
+11-24 07:07:26.811 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:26.811 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:26.837 13242 13242 I Surface : Creating surface for consumer unnamed-13242-1 with slotExpansion=1 for 64 slots
+11-24 07:07:26.837 13242 13242 I Surface : Creating surface for consumer VRI[MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+11-24 07:07:27.011 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.016 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.019 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.023 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.027 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.031 13242 13242 E ThemeUtils: View class dev.jeziellago.compose.markdowntext.CustomTextView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+11-24 07:07:27.051 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:07:27.075 13242 13242 D InsetsController: show(ime())
+11-24 07:07:27.075 13242 13242 I ImeTracker: com.sutliff.pocket:cdc3769d: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT_BY_INSETS_API fromUser false userId 0 displayId 0
+11-24 07:07:27.075 13242 13242 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-24 07:07:27.077 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-24 07:07:27.083 13242 13242 D InsetsController: hide(ime())
+11-24 07:07:27.083 13242 13242 D InsetsController: Setting requestedVisibleTypes to 503 (was 511)
+11-24 07:07:27.083 13242 13242 W RemoteInputConnectionImpl: requestCursorUpdates on inactive InputConnection
+11-24 07:07:27.083 13242 13242 W ImeBackCallbackProxy: Ime callback not found. Ignoring unregisterReceivedCallback. callbackId: 114023090 remaining callbacks: 0
+11-24 07:07:27.087 13242 13242 I ImeTracker: com.sutliff.pocket:b5d5767e: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+11-24 07:07:27.088 13242 13242 D InsetsController: show(ime())
+11-24 07:07:27.088 13242 13242 D InsetsController: Setting requestedVisibleTypes to 511 (was 503)
+11-24 07:07:27.090 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-24 07:07:27.123 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-24 07:07:27.128 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@25f6142
+11-24 07:07:27.128 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:27.128 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:27.128 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:27.140 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:null 
+11-24 07:07:27.142 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@25f6142
+11-24 07:07:27.143 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@25f6142
+11-24 07:07:27.160 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:27.160 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@4a7b337
+11-24 07:07:27.177 13242 13242 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@25f6142
+11-24 07:07:27.177 13242 13288 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@25f6142
+11-24 07:07:27.210 13242 13242 I ImeTracker: com.google.android.inputmethod.latin:ce164ffd: onCancelled at PHASE_CLIENT_ANIMATION_CANCEL
+11-24 07:07:27.229 13242 13242 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-24 07:07:27.445 13242 13242 I ImeTracker: com.sutliff.pocket:b5d5767e: onShown
+11-24 07:07:30.163 13242 13321 D ProfileInstaller: Skipping profile installation for com.sutliff.pocket

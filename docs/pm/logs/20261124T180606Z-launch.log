@@ -1,0 +1,12 @@
+=== LAUNCH 20261124T180606Z ===
+--- am start ---
+Starting: Intent { cmp=com.sutliff.pocket/.MainActivity }
+--- mResumedActivity ---
+--- CRASH grep ---
+CRASH_MATCH_COUNT=0
+--- ResumedActivity (Android 14 key) ---
+    topResumedActivity=ActivityRecord{211539123 u0 com.sutliff.pocket/.MainActivity t29282}
+  ResumedActivity: ActivityRecord{211539123 u0 com.sutliff.pocket/.MainActivity t29282}
+--- mCurrentFocus ---
+  mCurrentFocus=Window{dcdd3a5 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{211539123 u0 com.sutliff.pocket/.MainActivity t29282}
