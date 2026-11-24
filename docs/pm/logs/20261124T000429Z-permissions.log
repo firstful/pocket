@@ -1,0 +1,6 @@
+=== permission pattern counts (over all logcat captured this run) ===
+EnhancedConfirmationDialog: 0
+GrantPermissionsActivity: 0
+TOTAL_PERM=0
+=== matching lines (if any) ===
+(none)
