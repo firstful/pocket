@@ -1,0 +1,11 @@
+=== permission/dialog watch across all this-run logs ===
+PATTERN: EnhancedConfirmationDialog|GrantPermissionsActivity
+TS=20261125T000357Z DEV=adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+LOGS_SCANNED:
+  /root/pocket/docs/pm/logs/20261125T000357Z-hello.log
+  /root/pocket/docs/pm/logs/20261125T000357Z-identity.log
+  /root/pocket/docs/pm/logs/20261125T000357Z-launch.log
+  /root/pocket/docs/pm/logs/20261125T000357Z-websearch.log
+COUNT=0
+MATCHES:
+(none)

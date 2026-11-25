@@ -1,0 +1,218 @@
+=== dumpsys activity activities (focus) ===
+    topResumedActivity=ActivityRecord{205887469 u0 com.sutliff.pocket/.MainActivity t29285}
+  mCurrentFocus=Window{a5f7c13 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== logcat crash scan (CRASH pattern count) ===
+CRASH_COUNT=0
+=== logcat tail (last 200 lines) ===
+--------- beginning of main
+11-24 19:04:11.063 25780 25827 I SystemLPSourceImpl: Parsed system partition LanguagePack metadata file: /product/usr/srec/en-US/metadata
+11-24 19:04:11.063 25780  5417 I kkj     : MDD.getFileGroupsByFilter(langpack-domain_xx-XX_ver_zipfile)
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.066 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 23. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [ja-JP, 3056]: 22. Ignoring it and its associated features.
+11-24 19:04:11.067 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.068 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.068 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.069 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.070 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.070 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.070 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.070 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7054]: 41. Ignoring it and its associated features.
+11-24 19:04:11.070 25780 25824 I SystemLPSourceImpl: Parsed system partition LanguagePack metadata file: /product/usr/srec/en-US/metadata
+11-24 19:04:11.071 25780 25925 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.074 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-AU, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.074 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-GB, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.074 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-IE, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.074 25780 28765 E VoiceSearchConfigUtils: Unrecognized recognizer for [en-SG, 7075]: 41. Ignoring it and its associated features.
+11-24 19:04:11.075 25780 28765 I LPRequestState: [ZipfileRequests] #resolveDesiredLanguagePacks
+11-24 19:04:11.075 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.076 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 25780 28765 I LPRequestState: Assigning language pack Optional.of(LanguagePackDescriptor{locale=en_US, version=7075, installType=ZIPFILE_DOWNLOAD, applicationDomains=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11], featuresForDomains={1=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 2=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 3=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 4=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 5=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 6=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 7=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 9=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 10=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 11=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]}, sizeBytes=150040000, zipfileParams=Optional.of(ZipfileParams{downloadUrl=https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip, hashValueSha1=B1570A8D72B0FA0ED21A36811771BB3859555E33}), readOnlyParams=Optional.absent()}) for request # kju@f197170d
+11-24 19:04:11.082 25780 28765 I LPDownloadSettingsState: Defaulting LP download condition to 2 as user has not edited settings.
+11-24 19:04:11.082 25780 28765 I ZipLPPopulator: MDD.addFileGroup: LanguagePackDescriptor{locale=en_US, version=7075, installType=ZIPFILE_DOWNLOAD, applicationDomains=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11], featuresForDomains={1=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 2=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 3=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 4=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 5=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 6=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 7=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 9=[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15], 10=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15], 11=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]}, sizeBytes=150040000, zipfileParams=Optional.of(ZipfileParams{downloadUrl=https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip, hashValueSha1=B1570A8D72B0FA0ED21A36811771BB3859555E33}), readOnlyParams=Optional.absent()}
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.082 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.083 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.083 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.083 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.085 25780 25925 I ZipLPPopulator: #addNewFileGroups complete
+11-24 19:04:11.086 25780 25925 I kkj     : #getPendingPackages from MDD
+11-24 19:04:11.086 25780 25925 I kkj     : #GetLanguagePackList
+11-24 19:04:11.086 25780 25925 I kkj     : MDD.getFileGroupsByFilter(langpack-domain_xx-XX_ver_zipfile)
+11-24 19:04:11.087 25780 28765 I ZipLPPopulator: Updated file group for group 'langpack-domain_en-US_7075_zipfile' from location: https://dl.google.com/android/voice/soda/en-US/v7075/soda-en-US-v7075.zip
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.092 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.094 25780  5417 I ModelManagerImpl: ModelManager has support for: [de-DE_v7072, ja-JP_v7072, en-AU_v7075, en-GB_v7075, en-IE_v7075, en-SG_v7075, en-CA_v7075, fr-FR_v7072, fr-CA_v7071, es-ES_v7071, es-US_v7072, it-IT_v7071, en-IN_v7072, pt-BR_v3056, de-AT_v7071, de-BE_v7071, de-CH_v7071, fr-BE_v7071, fr-CH_v7071, it-CH_v7071, ru-RU_v3059, da-DK_v7071, nb-NO_v7071, nl-NL_v7071, sv-SE_v7071]
+11-24 19:04:11.094 25780  5417 I ModelManagerImpl: ModelManager pending download for: []
+11-24 19:04:11.094 25780  5417 I ModelManagerImpl: ModelManager has installed: [en-US_v7075]
+11-24 19:04:11.097  2882 18895 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-24 19:04:11.098  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-24 19:04:11.098  2882 18895 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-24 19:04:11.099  2882 18895 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-24 19:04:11.099  2882 18879 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:04:11.100  2882 18879 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-24 19:04:11.100  2882 18879 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-24 19:04:11.100  2882 18879 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-24 19:04:11.100  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-24 19:04:11.100  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:04:11.100  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-24 19:04:11.100  2882 18879 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():156 #onKeyboardShown scheduled [SD]
+11-24 19:04:11.100  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-24 19:04:11.100  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:04:11.100  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-24 19:04:11.100  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-24 19:04:11.100  2882 18895 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShown():159 #onKeyboardShown [SD]
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e5411ea, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@c3d1cdb, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@f94a23b, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100  2882 18878 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@593d58, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:04:11.100  2882 18879 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@b929a8d, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:04:11.100  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e90f442, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:04:11.101  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@3212717, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:04:11.101  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@1d0d704, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:04:11.101  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:04:11.101  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-24 19:04:11.101  2882 18895 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-24 19:04:11.101  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-24 19:04:11.102  2882 18895 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-24 19:04:11.102  2882 18895 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-24 19:04:11.102  2882 18895 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:04:11.103  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-24 19:04:11.103  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-24 19:04:11.103  2882 18895 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-24 19:04:11.103  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:04:11.103  2882 18879 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-24 19:04:11.103  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-24 19:04:11.103  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:04:11.103  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-24 19:04:11.103  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-24 19:04:11.103  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-24 19:04:11.103  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:04:11.103  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-24 19:04:11.103  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:04:11.103  2882 18887 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-24 19:04:11.104  2882 18879 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-24 19:04:11.104  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-24 19:04:11.105  2882 18895 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:04:11.106  2882 18879 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-24 19:04:11.106  2882 18879 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-24 19:04:11.106  2882 18879 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-24 19:04:11.106  2882 18879 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-24 19:04:11.107  2882 18898 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-24 19:04:11.107  2882 18898 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-24 19:04:11.107  2882 18898 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=ELIGIBLE [SD]
+11-24 19:04:11.107  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:04:11.107  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-24 19:04:11.107  2882 18898 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-24 19:04:11.107  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:04:11.107  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-24 19:04:11.107  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-24 19:04:11.107  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:04:11.107  2882 18879 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-24 19:04:11.107  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:04:11.107  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-24 19:04:11.110 10770 10798 W AppFunctions: Unknown schema [category=intelligent_assist, name=invokeTextQueryIntelligentAssist, version=2]
+11-24 19:04:11.110 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.110 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.110 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.110 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.110 10770 10798 W AppFunctions: Unknown schema [category=remember_this, name=invokeRememberThis, version=1]
+11-24 19:04:11.110 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.116 10770 10798 D AppFunctions: Unable to resolve AppFunctionMetadata.
+11-24 19:04:11.119  4845  4865 D LauncherAmbientCueVM: Debounced empty action: updating state
+11-24 19:04:11.127 10770 10799 I amcf    : #bnb# Permission status: Not eligible for Bonobo
+11-24 19:04:11.131 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant setting: %s
+11-24 19:04:11.131 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant defaultComponentName: %s
+11-24 19:04:11.132 10770 10799 I ariq    : No telephony feature, or falcon call goal in call executor is disabled.
+11-24 19:04:11.132  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-24 19:04:11.135 10770 10799 I cfaw    : (REDACTED) updateIsHomeScreen - foregroundPackage : %s
+11-24 19:04:11.135 10770 10799 I cfaw    : (REDACTED) updateIsHomeScreen - homePackage : %s
+11-24 19:04:11.135 10770 10799 I cfaw    : (REDACTED) isHomeScreen : %s
+11-24 19:04:11.135 10770 10799 I cfvo    : [hasSecondaryDisplayAndMainDisplayIsDisabled] Main display is ON [CONTEXT ratelimit_period="1 SECONDS" skipped=30 ]
+11-24 19:04:11.135 10770 10799 I cfaw    : (REDACTED) isRenderingOnOuterScreen : %s
+11-24 19:04:11.135 10770 10799 I cfaw    : (REDACTED) isForegroundPackageDenyListed : %s
+11-24 19:04:11.135 10770 10799 I arzq    : (REDACTED) getRequiredCapabilities: Providing screen context, uiSource=%s
+11-24 19:04:11.138 10770 10799 I arwp    : PaicPrivateContextLookupRobinOpExecutor is not enabled.
+11-24 19:04:11.139 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant setting: %s
+11-24 19:04:11.139 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant defaultComponentName: %s
+11-24 19:04:11.143 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant setting: %s
+11-24 19:04:11.143 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant defaultComponentName: %s
+11-24 19:04:11.145 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant setting: %s
+11-24 19:04:11.145 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant defaultComponentName: %s
+11-24 19:04:11.148 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant setting: %s
+11-24 19:04:11.148 10770 10799 I emgr    : (REDACTED) isAppDefaultAssistant defaultComponentName: %s
+11-24 19:04:11.153 10770 10799 I amcf    : #bnb# Permission status: Not eligible for Bonobo
+11-24 19:04:11.155 10770 10799 I akez    : (REDACTED) #FCF: Managed profile check status : %s
+11-24 19:04:11.155 10770 10799 I aycn    : (REDACTED) Popping TimeUsageReport: duration=%s
+--------- beginning of system
+11-24 19:04:11.159 18907 18907 I ImeTracker: com.sutliff.pocket:fb4eb393: onShown
+11-24 19:04:11.175 18907 18907 D VRI[MainActivity]: WindowInsets changed: ime:[0,0,0,983] 
+11-24 19:04:11.483 10770 10798 I atwx    : (REDACTED) Network status %s
+11-24 19:04:11.701  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:04:11.702  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-24 19:04:11.774  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:04:11.775  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:04:11.775  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:04:12.153  1876  1876 I pixel-thermal: VIRTUAL-SKIN:27.2735 raw data: VIRTUAL-SKIN:27273.5 
+11-24 19:04:12.156  2362  3768 D ImpulseStateSource: Notify clients: 150038
+11-24 19:04:12.181 10770 18886 I FA      : Application backgrounded at: timestamp_millis: 1795565050177
+11-24 19:04:12.471  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:04:09:716 - 19:04:12:471, duration: 2754, le_adv_count: 5, total_le_adv_count: 415293, total_event_count: 5
+11-24 19:04:12.745 16326 18904 I NearbyMediums: Found Fast Ble Advertisements :
+11-24 19:04:12.745 16326 18904 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xf7 0x9a 0xa1 0x68 0xb1 0x18 0x08 0x1c 0xa5 0x8e 0xf1 0x01 0x59 0x55 0xb6 0xe5 ], deviceToken=[ 0x96 0xbb ], rxAdvertisement=null } : 8 times.
+11-24 19:04:12.745 16326 18904 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x4b 0x38 0x43 0x11 0x32 0x5d 0x11 0x4f 0x4f 0xfc 0xdd 0xd3 0x2a 0xeb 0x0a 0x8c 0xab 0xdb 0x57 0x6d 0xa5 ], deviceToken=[ 0xd7 0xcc ], rxAdvertisement=null } : 2 times.
+11-24 19:04:12.745 16326 18904 I NearbyMediums: Total 10 fast advertisements from 2 unique advertisers.
+11-24 19:04:12.747 16326 18904 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-24 19:04:12.907  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys activity activities'
+11-24 19:04:12.917  2298  6594 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 47 up
+11-24 19:04:12.981  1701  2300 I ImeTracker: system_server:69ea996b: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-24 19:04:13.073  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-24 19:04:13.512  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d' '-t' '200''
+
+=== FINAL VERIFICATION (post-run full buffer) ===
+FATAL EXCEPTION count: 0
+has crashed count: 0
+ANR in com.sutliff.pocket count: 0
+AndroidRuntime lines: 10 (all are benign uiautomator RuntimeInit/tooling D/I lines, no app crash)
+CRASH_COUNT (app crashes, FATAL/has crashed/ANR) = 0

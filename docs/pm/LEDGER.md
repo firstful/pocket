@@ -898,3 +898,32 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (rotation/coordinate drift); functional checks unaffected.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
 - `web_fetch` 403 from some sites is site-side (not a bug), per prior runs.
+
+## Run 2026-11-25T00:03:57Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA pass + byte-level store verify
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); single `build` job id 2166 (label android) also success. HEAD `9c7ce6e` docs-only ahead of built SHA 72e33fdc (`git diff --name-only 72e33fdc..HEAD | grep -v ^docs/pm/` = 0). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified BYTE-LEVEL this run: fresh APK download 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (APK_VERIFY=PASS). `/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). Pods 1/1 Running: appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-58664b7775-vkwv6`, telemetry `telemetry-658bd46fbd-zmp5h`.
+- Device: live at mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117). NOTE: scheduler pre-run script reported "device unreachable" but live `adb devices -l` found the transport — script status is unreliable for device presence; PM re-discovers independently each run.
+
+### Todo board
+- Homelab MCP todo board: 175 open scanned; 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #355 os-keystore, #380 lifecycle tags). Created + claimed tracking todo #1152 (gitea issue 1373).
+
+### QA Outcomes (delegated subagent `deleg_7d6c1c9c`, ts 20261125T000357Z; evidence paths + contents verified inline)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261125T000357Z-identity.log` (357 B).
+- Launch/no-crash PASS: `topResumedActivity` + `mCurrentFocus` = `com.sutliff.pocket/.MainActivity`; CRASH_MATCH_COUNT=0 (FATAL/has crashed/ANR all 0; the 10 `AndroidRuntime` lines are benign uiautomator tooling). Evidence: `docs/pm/logs/20261125T000357Z-launch.log` (28,674 B), `docs/pm/screenshots/20261125T000357Z-launch.png` (281,637 B, 1080x2400, PNG magic 89504e47).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 27 lines (13 data)`, `loop done, lines=27 data=13`, no gateway error. Evidence: `docs/pm/logs/20261125T000357Z-hello.log` (51,982 B), `docs/pm/screenshots/20261125T000357Z-hello.png` (335,821 B).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=31 max_results=8 … response code=200 html_len=28103 duration_ms=1037 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1037`. Real titled/URL results, no timeout/NetworkOnMainThread; follow-up streams + WebFetchTool 200s. Evidence: `docs/pm/logs/20261125T000357Z-websearch.log` (49,161 B), `docs/pm/screenshots/20261125T000357Z-websearch.png` (336,023 B, 1080x2400).
+- Settings/UI reachable PASS: all 8 fields present (Inference Server, Base URL, API Key, Model, Temperature, System Prompt, Stream responses, Appearance). Evidence: `docs/pm/logs/20261125T000357Z-settings.xml` (13,045 B), `docs/pm/screenshots/20261125T000357Z-settings.png` (130,833 B).
+- Crypto regression watch PASS (vc117 key): CRYPTO_MATCH_COUNT=0 across all four raw this-run logs (`caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`). Evidence: `docs/pm/logs/20261125T000357Z-crypto.log`.
+- Permission/dialogs PASS: PERMISSION_MATCH_COUNT=0 (`EnhancedConfirmationDialog|GrantPermissionsActivity`); no new system dialog tapped past. Evidence: `docs/pm/logs/20261125T000357Z-permissions.log`.
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry pod 1/1 Running).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (rotation/coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
+- Pre-run script's "device unreachable" status is unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).

@@ -1,0 +1,332 @@
+=== web_search logcat evidence ===
+11-24 19:06:30.529 18907 18926 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 19:06:32.998 18907 18926 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:32.999 18907 18926 D PocketNet: streamChat: first data (181 bytes): {"id":"24140ea5-3648-42b4-aaaf-1ece70e52817","object":"chat.completion.chunk","created":1795565190,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:33.508 18907 18926 D PocketNet: streamChat: [DONE] after 45 lines (22 data)
+11-24 19:06:33.508 18907 18926 D PocketNet: streamChat: loop done, lines=45 data=22
+11-24 19:06:33.510 18907 18926 D WebSearchTool: start query_len=31 max_results=8
+11-24 19:06:34.548 18907 18926 D WebSearchTool: response code=200 html_len=28103 duration_ms=1037
+11-24 19:06:34.552 18907 18926 D WebSearchTool: parsed titles=10 snippets=10
+11-24 19:06:34.557 18907 18926 D WebSearchTool: done result_count=8 duration_ms=1037
+11-24 19:06:34.607 18907 18925 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 19:06:36.512 18907 18925 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:36.513 18907 18925 D PocketNet: streamChat: first data (181 bytes): {"id":"15cb079e-d5c3-4e50-8d46-7a412d3f8fc4","object":"chat.completion.chunk","created":1795565194,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:37.298 18907 18925 D PocketNet: streamChat: [DONE] after 83 lines (41 data)
+11-24 19:06:37.298 18907 18925 D PocketNet: streamChat: loop done, lines=83 data=41
+11-24 19:06:39.592 18907 18925 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 19:06:41.712 18907 18925 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:41.712 18907 18925 D PocketNet: streamChat: first data (181 bytes): {"id":"d1e14b3f-6dba-4a26-8110-4648a2df4807","object":"chat.completion.chunk","created":1795565199,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:43.916 18907 18925 D PocketNet: streamChat: [DONE] after 269 lines (134 data)
+11-24 19:06:43.916 18907 18925 D PocketNet: streamChat: loop done, lines=269 data=134
+=== full logcat tail (last 300) ===
+--------- beginning of main
+11-24 19:06:30.624  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.624  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.624  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.624  2882  2882 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():956 interface pjr is not activate
+11-24 19:06:30.625  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+11-24 19:06:30.625  2882  2882 I NgaExtension: NgaExtension.onActivate():660 NgaExtension#onActivate [SDG]
+11-24 19:06:30.625  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:06:30.625  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.maybeCreateInputManager():261 VoiceInputHandler:activating [SDG]
+11-24 19:06:30.625  2882  2882 I ModelessCommandDetector: ModelessCommandDetector.<init>():86 Created modeless command detector with language code en [SDG]
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e229aa8, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@5cb39c1, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@f5416c0, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@e3c5ff9, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@f669566, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@316e0a7, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@888eb3e, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.625  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@9ed3d9f, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.625  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.625  2882  2882 I NgaExtension: NgaExtension.onActivate():687 NgaExtension: interaction type=4 [SDG]
+11-24 19:06:30.626  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@5759f37, lastModifier=2, keyCodes=[56], actions=[0]}
+11-24 19:06:30.626  2882 18895 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_OPENED [SD]
+11-24 19:06:30.626  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020435, callback=ggc@521bca4, lastModifier=0, keyCodes=[317], actions=[0]}
+11-24 19:06:30.626  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@ac3deec, lastModifier=2, keyCodes=[56], actions=[0]}
+11-24 19:06:30.626  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020435, callback=ggc@9da02b5, lastModifier=0, keyCodes=[317], actions=[0]}
+11-24 19:06:30.626  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.626  2882 18893 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:06:30.626  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.626  2882  2882 I VoiceImeUtils: VoiceImeUtils.shouldStartVoiceInputAutomaticallyInCurrentInputBox():152 No private IME option set to start voice input. [RD]
+11-24 19:06:30.627  2882 18895 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-24 19:06:30.627  2882 18878 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-24 19:06:30.627  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-24 19:06:30.627  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:06:30.627  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-24 19:06:30.627  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-24 19:06:30.627  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:06:30.627  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.627  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-24 19:06:30.628  2882 18893 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-24 19:06:30.628  2882 18893 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-24 19:06:30.628  2882 18893 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-24 19:06:30.628  2882 18893 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-24 19:06:30.629  2882 18879 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+--------- beginning of system
+11-24 19:06:30.629 18907 18907 I ImeTracker: com.sutliff.pocket:5d1aa6d8: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 19:06:30.629  2882 18879 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-24 19:06:30.629  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-24 19:06:30.629  2882 18879 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-24 19:06:30.629  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.629  2882 18879 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-24 19:06:30.629  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.629  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-24 19:06:30.629  2882 18879 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-24 19:06:30.629  2882 18879 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():170 #onKeyboardShownAgain scheduled [SD]
+11-24 19:06:30.629  2882 18879 I KeyboardUiManagerImpl: KeyboardUiManagerImpl.onKeyboardShownAgain():173 #onKeyboardShownAgain [SD]
+11-24 19:06:30.629  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleFieldChangedEvent():464 Handling FieldChangedEvent: fgPkg=com.sutliff.pocket, fieldType=0, interactionType=FIELD_CHANGE [SD]
+11-24 19:06:30.630  2882 18879 I PackageStatusChecker: PackageStatusChecker.isPackageSuspended():24 Current package suspended=false [SD]
+11-24 19:06:30.630  2882 18878 I SpeechEnhancementLogger: SpeechEnhancementLogger.logAtInfo():24 Speech enhancement is disabled because device model is not supported [SD]
+11-24 19:06:30.631  2882 18893 I SbgChecker: SbgChecker.updateLanguagePackVersion():510 updateLanguagePackVersion(): locale en-US [SD]
+11-24 19:06:30.631  2882 18893 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.onLangIdAvailable():131 Automatic language switching and lang-id is available [SD]
+11-24 19:06:30.631  2882 18893 I AsrProviderChoice: AsrProviderChoice.setChosenProvider():91 Setting chosen ASR provider to: 6 [SD]
+11-24 19:06:30.631  2882 18893 I EligibilityChecker: EligibilityChecker.getDictationConfigEligibilityForLocale():353 Dictation is enabled. workprofile=false [SD]
+11-24 19:06:30.632  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.632  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 1 [SDG]
+11-24 19:06:30.632  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:06:30.632  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 1 [SDG]
+11-24 19:06:30.632  2882  2882 I NgaInputHandlerFactory: NgaInputHandlerFactory.restorePrimary():138 restoring primary [SDG]
+11-24 19:06:30.632  2882  2882 I NgaVoiceInputHandlerSwitcher: NgaVoiceInputHandlerSwitcher.restorePrimary():251 not switching to primary. fallback is null [SDG]
+11-24 19:06:30.632  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.633  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{8787bd V.E...... ........ 0,0-1080,116}
+11-24 19:06:30.633  2882 18895 I EligibilityUtilKt: EligibilityUtilKt.isDictationSupportedInInputField():79 Field type is not set or TYPE_NULL. [SD]
+11-24 19:06:30.633  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.633  2882 18895 I EligibilityUtilKt: EligibilityUtilKt.getDictationInputFieldEligibility():28 Dictation is not enabled in the currently focused input field: 0.0e+00 workprofile=false [SD]
+11-24 19:06:30.633  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():59 Automatic switching disabled because Gboard setting is not shown [SD]
+11-24 19:06:30.633  2882 18895 I MultilangConditionManagerImpl: MultilangConditionManagerImpl.isAutomaticSwitchingEnabled():74 Automatic switching disabled because there aren't enough supported keyboard languages [SD]
+11-24 19:06:30.633  2882 18895 I KeyboardEligibilityNotifier: KeyboardEligibilityNotifier.notifyEligibility():76 Keyboard notified that eligibility=NON_ELIGIBLE_UNSUPPORTED_INPUT_FIELD [SD]
+11-24 19:06:30.633  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():359 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{9819527 V.E...... ........ 0,0-1080,826}
+11-24 19:06:30.633  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.633  2882  2882 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+11-24 19:06:30.634  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.634  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-24 19:06:30.634  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:06:30.634  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-24 19:06:30.634  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@f5416c0, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.634  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@e3c5ff9, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.634  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@2352416, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.634  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@a34197, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.635  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@888eb3e, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.635  2882  2882 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():259 Unregister key sequence qxb{labelResId=2132020442, callback=ggc@9ed3d9f, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.635  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@a506033, lastModifier=2, keyCodes=[32], actions=[0]}
+11-24 19:06:30.635  2882  2882 I HardKeyTracker: HardKeyTracker.registerKeySequence():201 Register key sequence qxb{labelResId=2132020442, callback=ggc@bfaaff0, lastModifier=0, keyCodes=[319], actions=[0]}
+11-24 19:06:30.635  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.635  2882  2882 I NgaExtension: NgaExtension.onDictatingStateChanged():976 Dictating state changed: dictating=false, status=0 [SDG]
+11-24 19:06:30.635  2882  2882 W NgaExtension: NgaExtension.handleUiCommand():1116 cannot update UI in state NgaState{connected=true, keyboardVisible=true, dictationEligible=false, currentFieldEligibilityUpToDate=true, dictating=false, languageIndicatorVisible=false, keyboardTypeSupported=true, config=# kqj@adbafd8a, clientType=1, eligibilityByLanguageTag={}, currentEligibility=10, autoStarted=false} [SDG]
+11-24 19:06:30.643  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-24 19:06:30.643  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.643  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.643  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-24 19:06:30.644  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():205 AssistantDictationEligibility = 10 [SDG]
+11-24 19:06:30.644  2882  2882 I NgaStateManager: NgaStateManager.buildConfigEligibilityPerLanguageTag():390 AssistantDictationEligibility(config, en-US) = 1 [SDG]
+11-24 19:06:30.644  2882  2882 I NgaStateManager: NgaStateManager.setAssistantDictationEligibility():213 AssistantDictationEligibility(inputField) = 10 [SDG]
+11-24 19:06:30.644  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.661  1701  1789 I ImeTracker: system_server:705ff25c: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-24 19:06:30.680 18907 18907 I ImeTracker: system_server:705ff25c: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+11-24 19:06:30.683  1701  2996 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-24 19:06:30.683  1701  2996 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-24 19:06:30.815  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1857 onFinishInputView(false)
+11-24 19:06:30.815  1701  1785 D HintManagerService: Sent cleanup message for uid 10192
+11-24 19:06:30.816  2882  2882 I EmojiAndGlobeKeyExtension: EmojiAndGlobeKeyExtension.onDeactivate():153 
+11-24 19:06:30.816  2882  2882 I NgaExtension: NgaExtension.onDeactivate():702 NgaExtension#onDeactivate [SDG]
+11-24 19:06:30.816  2882  2882 W AccessPointsManager: AccessPointsManager.addAccessPoint():1104 The holder controller #0x7f0b2925 is not registered
+11-24 19:06:30.816  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener ilk@d2a32fb was not registered for notification class oxq
+11-24 19:06:30.817  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-24 19:06:30.817  2882  2882 I NgaVoiceInputHandler: NgaVoiceInputHandler.shutdownInternalLegacy():349 VoiceInputHandler:deactivating with reason: SHUTDOWN_UNIVERSAL_EXTENSION_ON_DEACTIVATE [SDG]
+11-24 19:06:30.817  2882 18879 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardVisibilityEvent():210 Handling KeyboardVisibilityEvent: KEYBOARD_CLOSED [SD]
+11-24 19:06:30.817  2882  2882 W NotificationCenter: NotificationCenter.unregisterListener():474 Listener qbb@89b4ec1 was not registered for notification class qbc
+11-24 19:06:30.817  2882  2882 W SmartEdit: SmartEdit.setGenAiVoiceEditManager():827 Cannot set LC UI delegate: promotionManager is null
+11-24 19:06:30.817  2882  2882 I NgaInputManager: NgaInputManager.onDeactivate():483 SmartEdit: unloading models false [SDG]
+11-24 19:06:30.817  2882  2882 I UniversalDictationUiProvider: UniversalDictationUiProvider.onDeactivate():69 onDeactivate() [UD]
+11-24 19:06:30.817  2882  2882 I AbstractIme: AbstractIme.onDeactivate():229 PasswordIme.onDeactivate()
+11-24 19:06:30.818  2882  2882 I PrimesLoggerHolder: FrameMetricServiceImpl.stopAsFuture():215 Measurement not found: OnConfigurationChanged
+11-24 19:06:30.818  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-24 19:06:30.818  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onWindowHidden():2621 
+11-24 19:06:30.818  2882  2882 D ImeBackCallbackSender: Unregister OnBackInvokedCallback at app window (packageName=com.sutliff.pocket)
+11-24 19:06:30.819  2882  2882 I ImeTracker: com.sutliff.pocket:d673e297: onHidden
+11-24 19:06:30.827  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-24 19:06:30.832  2882  2882 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():450 inch: 0.000000 ydpi: 429.295013 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 420 defaultDensityDpi: 420 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -126 navBarHeight: 126
+11-24 19:06:30.833  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.833  2882  2882 I BaseKeyboardSizeHelper: BaseKeyboardSizeHelper.calculateMaxKeyboardBodyHeight():79 leave 281 height for app when ime window height:2142, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1745
+11-24 19:06:30.833  2882  2882 I KeyboardViewManager: KeyboardViewManager.updateKeyboardBottomFrame():491 Set bottomFrameHeight = 16 while holderPaddingBottom = 16; navigationHeight = 126
+11-24 19:06:30.834  1701  1997 I ImeTracker: system_server:6b903f9b: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-24 19:06:30.834  1701  1788 I ImeTracker: system_server:6b903f9b: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-24 19:06:30.859  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:24:597 - 19:06:30:859, duration: 6261, le_adv_count: 7, total_le_adv_count: 415431, total_event_count: 7
+11-24 19:06:31.022   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-24 19:06:31.055   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-24 19:06:31.345  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:31.417  2882 18898 I KeyboardEventHandler: KeyboardEventHandler.handleKeyboardHidden():289 Keyboard closed, ending dictation. [SD]
+11-24 19:06:31.425  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:31.425  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:31.426  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:31.817  2882 18900 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager.closeStream():110 Closing stream. [SDG]
+11-24 19:06:31.817  2882 18900 I Interaction: Interaction$KeyboardEventStreamObserver.onCompleted():143 Interaction#237 completed by the client [SD]
+11-24 19:06:31.818  2882 18893 I Interaction: Interaction.shutdownAndForget():91 Shutting down Interaction#237 [SD]
+11-24 19:06:31.818  1701  2013 D HintManagerService: Starts cleaning for 10192
+11-24 19:06:31.818  2882 18893 I KeyboardActiveSessionStreamManager: KeyboardActiveSessionStreamManager$AssistantEventObserver.onCompleted():240 Assistant event stream completed. [SDG]
+11-24 19:06:31.818  2882 18893 I InteractionManager: InteractionManager.forgetInteraction$<anonymous>():50 Forgetting Interaction#237 [SD]
+11-24 19:06:31.819 32265 32275 I fjaa    : (REDACTED) HDM. appOpsListener %s %s
+11-24 19:06:31.819 32265 32275 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
+11-24 19:06:31.901  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:30:901 - 19:06:31:901, duration: 1000, le_adv_count: 1, total_le_adv_count: 415432, total_event_count: 1
+11-24 19:06:32.294  1876  1876 I pixel-thermal: VIRTUAL-SKIN:27.4858 raw data: VIRTUAL-NEUTRAL:27485.8 VIRTUAL-NEUTRAL-SKIN2:27040.6 VIRTUAL-QUIET-NEUTRAL:25937.4 VIRTUAL-SKIN:27485.8 disp_therm:25745 gnss_tcxo_therm:28455 neutral_therm:26167 quiet_therm:25839 skin_therm1:28500 skin_therm2:29079 
+11-24 19:06:32.296  2362  2554 D ImpulseStateSource: Notify clients: 150052
+11-24 19:06:32.853 16326 20511 I NearbyMediums: Found Fast Ble Advertisements :
+11-24 19:06:32.853 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xf7 0x9a 0xa1 0x68 0xb1 0x18 0x08 0x1c 0xa5 0x8e 0xf1 0x01 0x59 0x55 0xb6 0xe5 ], deviceToken=[ 0x96 0xbb ], rxAdvertisement=null } : 8 times.
+11-24 19:06:32.853 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x4b 0x38 0x43 0x11 0x32 0x5d 0x11 0x4f 0x4f 0xfc 0xdd 0xd3 0x2a 0xeb 0x0a 0x8c 0xab 0xdb 0x57 0x6d 0xa5 ], deviceToken=[ 0xd7 0xcc ], rxAdvertisement=null } : 2 times.
+11-24 19:06:32.853 16326 20511 I NearbyMediums: Total 10 fast advertisements from 2 unique advertisers.
+11-24 19:06:32.855 16326 20511 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-24 19:06:32.998 18907 18926 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:32.999 18907 18926 D PocketNet: streamChat: first data (181 bytes): {"id":"24140ea5-3648-42b4-aaaf-1ece70e52817","object":"chat.completion.chunk","created":1795565190,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:33.508 18907 18926 D PocketNet: streamChat: [DONE] after 45 lines (22 data)
+11-24 19:06:33.508 18907 18926 D PocketNet: streamChat: loop done, lines=45 data=22
+11-24 19:06:33.510 18907 18926 D WebSearchTool: start query_len=31 max_results=8
+11-24 19:06:33.672  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[52.149.246.39]:443 latencyMs=48 err=0
+11-24 19:06:33.830  1035  1553 D usf_sensor_hal: accelerometer: Enter Batch. Period = 20000000, latency = 0.
+11-24 19:06:33.830  1035  1553 D usf_sensor_hal: IMU temperature: Enter Batch. Period = 615385000, latency = 0.
+11-24 19:06:34.025  1701  1997 D ActivityManager: sync unfroze 21154 com.google.android.gms.unstable for 6
+11-24 19:06:34.027 21154 21181 I id.gms.unstable: Waiting for a blocking GC Explicit
+11-24 19:06:34.039  1701  1997 W ProcessStats: Tracking association SourceState{56d0fd2 com.google.android.gms/10164 Fgs #1131348} whose proc state 3 is better than process ProcessState{d92270d com.google.android.gms.unstable/10164 pkg=com.google.android.gms} proc state 14 (0 skipped)
+11-24 19:06:34.053 21154 21181 I id.gms.unstable: WaitForGcToComplete blocked Explicit on Background for 26.089ms
+11-24 19:06:34.063  1035  1553 D usf_sensor_hal: linear acceleration: Enter Batch. Period = 20000000, latency = 0.
+11-24 19:06:34.063  1035  1553 D usf_sensor_hal: linear acceleration: Enter Activate. Enable = 1.
+11-24 19:06:34.064  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for Linear Acceleration Sensor (active:1).
+11-24 19:06:34.064  1278  1278 D AOC     : A3:MSG: vsc_sensor.cc, 37: VSC: [Linear Acceleration Sensor] enable: period 20000000, latency = 0
+11-24 19:06:34.065  1278  1278 D AOC     : A3:MSG: usf_vsc_log.cc, 44: USF: {Fusion} configure fusion 10 20000us 0us.
+11-24 19:06:34.065  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Linear Acceleration Sensor] requestSensorEvents: sensor 0x10001, period=20 latenc
+11-24 19:06:34.065  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Accelerometer (active:4).
+11-24 19:06:34.066  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Linear Acceleration Sensor] requestSensorEvents: sensor 0x10004, period=5 latency
+11-24 19:06:34.066  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for LSM6DSR Gyroscope (active:2).
+11-24 19:06:34.067  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 1: Enabled 1, odr_index 5.
+11-24 19:06:34.067  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 1 Intr: 208.
+11-24 19:06:34.067  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 509277ns.
+11-24 19:06:34.070  1035  1553 D usf_sensor_hal: rotation vector: Enter Batch. Period = 20000000, latency = 0.
+11-24 19:06:34.070  1035  1553 D usf_sensor_hal: rotation vector: Enter Activate. Enable = 1.
+11-24 19:06:34.070  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for Rotation Vector Sensor (active:1).
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: vsc_sensor.cc, 37: VSC: [Rotation Vector Sensor] enable: period 20000000, latency = 0
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: usf_vsc_log.cc, 44: USF: {Fusion} configure fusion 11 20000us 0us.
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Rotation Vector Sensor] requestSensorEvents: sensor 0x10001, period=20 latency=0m
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Rotation Vector Sensor] requestSensorEvents: sensor 0x10004, period=5 latency=0ms
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 532: VSC: [Rotation Vector Sensor] requestSensorEvents: sensor 0x10002, period=20 latency=0m
+11-24 19:06:34.071  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1573: USF: Received start sampling request for MMC56X3X Magnetometer (active:2).
+11-24 19:06:34.072  1278  1278 D AOC     : A3:MSG: mmc56x3x_device.cc, 409: USF: MMC56X3X0: mmc56x3x_enable_measure odr = 50.
+11-24 19:06:34.072  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 673: VSC: [Rotation Vector Sensor] requestSensorBiasEvents: sensor 0x10002, enable 1.
+11-24 19:06:34.089 21154 21181 I id.gms.unstable: Explicit concurrent mark compact GC freed 184KB AllocSpace bytes, 1(80KB) LOS objects, 98% free, 4770KB/256MB, paused 160us,2.418ms total 35.189ms
+11-24 19:06:34.092 21154 21163 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+11-24 19:06:34.092 21154 21163 W libc    : Access denied finding property "service.adb.tls.port"
+11-24 19:06:34.108  1701  2098 D TcpMetricsLogger: connect: uid=10164 netId=117 dst=[127.0.0.1]:7810 latencyMs=0 err=111
+11-24 19:06:34.218  1035  1553 D usf_sensor_hal: rotation vector: Enter Activate. Enable = 0.
+11-24 19:06:34.219  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for Rotation Vector Sensor (active:0).
+11-24 19:06:34.219  1278  1278 D AOC     : A3:MSG: vsc_sensor.cc, 68: VSC: [Rotation Vector Sensor] disable.
+11-24 19:06:34.219  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Rotation Vector Sensor] stopSensorEvents: sensor 0x10001
+11-24 19:06:34.220  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Rotation Vector Sensor] stopSensorEvents: sensor 0x10004
+11-24 19:06:34.220  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Rotation Vector Sensor] stopSensorEvents: sensor 0x10002
+11-24 19:06:34.223  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for MMC56X3X Magnetometer (active:1).
+11-24 19:06:34.223  1278  1278 D AOC     : A3:MSG: mmc56x3x_device.cc, 409: USF: MMC56X3X0: mmc56x3x_enable_measure odr = 10.
+11-24 19:06:34.226  1035  1553 D usf_sensor_hal: linear acceleration: Enter Activate. Enable = 0.
+11-24 19:06:34.227  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for Linear Acceleration Sensor (active:0).
+11-24 19:06:34.227  1278  1278 D AOC     : A3:MSG: vsc_sensor.cc, 68: VSC: [Linear Acceleration Sensor] disable.
+11-24 19:06:34.227  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Linear Acceleration Sensor] stopSensorEvents: sensor 0x10001
+11-24 19:06:34.227  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Accelerometer (active:3).
+11-24 19:06:34.228  1278  1278 D AOC     : A3:MSG: vsc_controller.cc, 550: VSC: [Linear Acceleration Sensor] stopSensorEvents: sensor 0x10004
+11-24 19:06:34.228  1278  1278 D AOC     : A3:MSG: usf_sensor.cc, 1581: USF: Received stop sampling request for LSM6DSR Gyroscope (active:1).
+11-24 19:06:34.228  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 763: USF: Lsm6dsrDevice: Sensor 1: Enabled 1, odr_index 3.
+11-24 19:06:34.229  1278  1278 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 750: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/52/13/6 WM: 2 Intr: 52.
+11-24 19:06:34.229  1278  1278 D AOC     : A3:MSG: lsm6dsr_device.cc, 671: USF: Lsm6dsrDevice: Fifo was disabled for 364502ns.
+11-24 19:06:34.429  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:34.504  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:34.505  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:34.505  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:34.548 18907 18926 D WebSearchTool: response code=200 html_len=28103 duration_ms=1037
+11-24 19:06:34.552 18907 18926 D WebSearchTool: parsed titles=10 snippets=10
+11-24 19:06:34.552 18907 18926 D CompatChangeReporter: Compat change id reported: 247079863; UID 10494; state: ENABLED
+11-24 19:06:34.557 18907 18926 D WebSearchTool: done result_count=8 duration_ms=1037
+11-24 19:06:34.607 18907 18925 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 19:06:34.633  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[192.168.1.2]:80 latencyMs=18 err=0
+11-24 19:06:34.667  2439  2468 D libnfc_nci: ART-GC black_dense_end:0x20a8000 mid_gen_end:0x20ac000 post_compact_end:0x20ac000 black_allocations_begin:0x20e6000 young:0 performed_compaction:1
+11-24 19:06:35.845  1220  1384 I duau    : reclaimMemory: Clearing caches
+11-24 19:06:35.846  1220  1384 I dzbt    : HadesBitmapStore: Purged 0 images during memory reclamation
+11-24 19:06:35.847  1220  1384 W dwkw    : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-24 19:06:36.512 18907 18925 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:36.513 18907 18925 D PocketNet: streamChat: first data (181 bytes): {"id":"15cb079e-d5c3-4e50-8d46-7a412d3f8fc4","object":"chat.completion.chunk","created":1795565194,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:36.722 32265 32311 I emsz    : (REDACTED) Updating recent voice session heartbeat time to %s.
+11-24 19:06:37.026 16326 16326 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.cloudmessaging.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-24 19:06:37.148  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:32:604 - 19:06:37:148, duration: 4543, le_adv_count: 5, total_le_adv_count: 415437, total_event_count: 5
+11-24 19:06:37.247  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:37.298 18907 18925 D PocketNet: streamChat: [DONE] after 83 lines (41 data)
+11-24 19:06:37.298 18907 18925 D PocketNet: streamChat: loop done, lines=83 data=41
+11-24 19:06:37.299 18907 18925 D WebFetchTool: start url=https://weather365.com/en/tomorrow/fr/paris max_chars=3000
+11-24 19:06:37.308  2362  2491 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-24 19:06:37.308  2362  2491 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-24 19:06:37.322  1014  1209 I bthal.flowcontrol: HciEventPreProcess: HCI Event 0xe Opcode 0xfd59 Length 22 unhandled by ControllerActivityWatcher
+11-24 19:06:37.485  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[104.26.1.117]:443 latencyMs=69 err=0
+11-24 19:06:37.507  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:37.577  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:37.578  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:37.578  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:37.889  1701  2104 I MdnsReplySender: Sending {MdnsReplyInfo: /192.168.1.2:5353 to /224.0.0.251:5353, answers: 3, additionalAnswers: 1, knownAnswers: 0, sendDelayMs 84}
+11-24 19:06:38.189 18907 18925 D WebFetchTool: response code=200 html_len=338062 duration_ms=869
+11-24 19:06:38.309 18907 18925 D WebFetchTool: done cleaned_len=7376 duration_ms=869
+11-24 19:06:38.311 18907 18926 D WebFetchTool: start url=https://www.meteo-paris.com/en/tomorrow max_chars=3000
+11-24 19:06:38.469  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[104.21.49.217]:443 latencyMs=49 err=0
+11-24 19:06:38.555  2298  6594 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 47 up
+11-24 19:06:39.512 18907 18926 D WebFetchTool: response code=200 html_len=328369 duration_ms=1096
+11-24 19:06:39.585 18907 18926 D WebFetchTool: done cleaned_len=5113 duration_ms=1096
+11-24 19:06:39.592 18907 18925 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-24 19:06:39.631  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[192.168.1.2]:80 latencyMs=36 err=0
+11-24 19:06:40.522   553 21385 I keystore2: system/security/keystore2/watchdog/src/lib.rs:371 - Watchdog thread idle -> terminating. Have a great day.
+11-24 19:06:40.582  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:40.653  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:40.653  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:40.653  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:41.214  1701  1756 I system_server: Background young concurrent mark compact GC freed 7113KB AllocSpace bytes, 1(24KB) LOS objects, 84% free, 79MB/512MB, paused 173us,11.952ms total 79.267ms
+11-24 19:06:41.712 18907 18925 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-24 19:06:41.712 18907 18925 D PocketNet: streamChat: first data (181 bytes): {"id":"d1e14b3f-6dba-4a26-8110-4648a2df4807","object":"chat.completion.chunk","created":1795565199,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-24 19:06:41.775  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795565056758
+11-24 19:06:42.298  1876  1876 I pixel-thermal: VIRTUAL-SKIN:27.4109 raw data: VIRTUAL-NEUTRAL:27410.9 VIRTUAL-NEUTRAL-SKIN2:27046.1 VIRTUAL-QUIET-NEUTRAL:25981.7 VIRTUAL-SKIN:27410.9 disp_therm:25769 gnss_tcxo_therm:28211 neutral_therm:26261 quiet_therm:25862 skin_therm1:28344 skin_therm2:28878 
+11-24 19:06:42.299  2362  2675 D ImpulseStateSource: Notify clients: 150053
+11-24 19:06:42.858 16326 20511 I NearbyMediums: Found Fast Ble Advertisements :
+11-24 19:06:42.858 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xf7 0x9a 0xa1 0x68 0xb1 0x18 0x08 0x1c 0xa5 0x8e 0xf1 0x01 0x59 0x55 0xb6 0xe5 ], deviceToken=[ 0x96 0xbb ], rxAdvertisement=null } : 8 times.
+11-24 19:06:42.858 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x4b 0x38 0x43 0x11 0x32 0x5d 0x11 0x4f 0x4f 0xfc 0xdd 0xd3 0x2a 0xeb 0x0a 0x8c 0xab 0xdb 0x57 0x6d 0xa5 ], deviceToken=[ 0xd7 0xcc ], rxAdvertisement=null } : 1 times.
+11-24 19:06:42.858 16326 20511 I NearbyMediums: Total 9 fast advertisements from 2 unique advertisers.
+11-24 19:06:42.859 16326 20511 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-24 19:06:43.468  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:39:766 - 19:06:43:468, duration: 3701, le_adv_count: 5, total_le_adv_count: 415442, total_event_count: 0
+11-24 19:06:43.655  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:43.725  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:43.726  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:43.726  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:43.916 18907 18925 D PocketNet: streamChat: [DONE] after 269 lines (134 data)
+11-24 19:06:43.916 18907 18925 D PocketNet: streamChat: loop done, lines=269 data=134
+11-24 19:06:45.887  1701  2012 D ActivityManager: freezing 1220 com.google.android.apps.messaging
+11-24 19:06:46.733  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:46.840  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:46.841  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:46.841  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:47.315  1701  2012 D ActivityManager: freezing 9026 com.google.android.apps.turbo
+11-24 19:06:47.330  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-24 19:06:47.336  1701  2098 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-24 19:06:47.336  1701  2098 D InetDiagMessage: Destroyed live tcp sockets for uids={10131} in 13ms
+11-24 19:06:49.227  1701  2012 D ActivityManager: freezing 21154 com.google.android.gms.unstable
+11-24 19:06:49.756  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:43:501 - 19:06:49:755, duration: 6254, le_adv_count: 9, total_le_adv_count: 415451, total_event_count: 9
+11-24 19:06:49.849  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:49.961  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:49.963  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:49.963  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:50.503  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-24 19:06:50.797  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:49:796 - 19:06:50:796, duration: 1000, le_adv_count: 1, total_le_adv_count: 415452, total_event_count: 1
+11-24 19:06:52.072  1028  1028 I BatteryDefender: Update Charge Levels: State=8 Time=345622 Stop=80 Start=70
+11-24 19:06:52.099  1028  1028 I BatteryDefender: Update Charge Levels: State=8 Time=345622 Stop=80 Start=70
+11-24 19:06:52.305  1876  1876 I pixel-thermal: VIRTUAL-SKIN:27.4516 raw data: VIRTUAL-NEUTRAL:27451.6 VIRTUAL-NEUTRAL-SKIN2:27042.8 VIRTUAL-QUIET-NEUTRAL:25991.3 VIRTUAL-SKIN:27451.6 disp_therm:25792 gnss_tcxo_therm:28411 neutral_therm:26237 quiet_therm:25886 skin_therm1:28344 skin_therm2:28923 
+11-24 19:06:52.307  2362  2675 D ImpulseStateSource: Notify clients: 150054
+11-24 19:06:52.506  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:51:504 - 19:06:52:505, duration: 1000, le_adv_count: 1, total_le_adv_count: 415453, total_event_count: 1
+11-24 19:06:52.865 16326 20511 I NearbyMediums: Found Fast Ble Advertisements :
+11-24 19:06:52.865 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xf7 0x9a 0xa1 0x68 0xb1 0x18 0x08 0x1c 0xa5 0x8e 0xf1 0x01 0x59 0x55 0xb6 0xe5 ], deviceToken=[ 0x96 0xbb ], rxAdvertisement=null } : 10 times.
+11-24 19:06:52.865 16326 20511 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x4b 0x38 0x43 0x11 0x32 0x5d 0x11 0x4f 0x4f 0xfc 0xdd 0xd3 0x2a 0xeb 0x0a 0x8c 0xab 0xdb 0x57 0x6d 0xa5 ], deviceToken=[ 0xd7 0xcc ], rxAdvertisement=null } : 1 times.
+11-24 19:06:52.865 16326 20511 I NearbyMediums: Total 11 fast advertisements from 2 unique advertisers.
+11-24 19:06:52.868 16326 20511 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-24 19:06:52.971  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-24 19:06:53.065  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-24 19:06:53.066  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-24 19:06:53.066  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-24 19:06:54.392  2336  2741 I bt_btm_pm: system/stack/acl/btm_pm.cc:642 btm_pm_proc_mode_change: Power mode switched from immediate:sniff[2] to immediate:active[0]
+11-24 19:06:54.909  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-24 19:06:55.081  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d' '-t' '300''
