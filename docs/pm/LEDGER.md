@@ -961,3 +961,35 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Scheduler pre-run script's "device unreachable" status remains unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).
+
+## Run 2026-11-25T18:04Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA (all checks PASS)
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); single `build` job id 2166 (label android) also success (verified via `gitea_get_action_run` this run). HEAD `1a526e0` docs-only ahead of built SHA 72e33fdc (`git diff --name-only 72e33fdc..HEAD | grep -v ^docs/pm/` = 0). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified BYTE-LEVEL this run: fresh APK download 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (APK_VERIFY=PASS). `/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). `telemetry.ffilt.us` 405 (up). Pods 1/1 Running (0 restarts): appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-58664b7775-vkwv6`, telemetry `telemetry-658bd46fbd-zmp5h`.
+- Device: live at mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117), re-discovered fresh by QA subagent (no hardcoded IP).
+
+### Todo board
+- Homelab MCP todo board: 175 open at run start; 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #39 apps.ffilt.us frontend, #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #355 os-keystore, #380 lifecycle tags). Created + claimed tracking todo #1178 (gitea issue 1399). Gitea issues API returned 403 (token scope) — todo board is the coordination point.
+- Idea-status source check: one-tap "New chat"/session reset is SHIPPED in source (`ChatScreen.kt:478 newSession()`, icon at :693-694) — the carried-ideas note is stale; SMS opt-in gate present (`permissions/SmsPermissions.kt`); no debug-only ADB broadcast QA hook found (still an idea).
+
+### QA Outcomes (delegated subagent `deleg_9529131e`, ts 20261125T180429Z; evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117 minSdk=26 targetSdk=34, versionName `1.0.117-72e33fd`, package present. Evidence: `docs/pm/logs/20261125T180429Z-identity.log` (305 B), `docs/pm/logs/20261125T180429Z-discovery.log` (220 B).
+- Launch/no-crash PASS: `monkey` launcher entry VM exit 0; no `FATAL EXCEPTION`/`has crashed`/`ANR in com.sutliff.pocket` in launch log. Evidence: `docs/pm/logs/20261125T180429Z-launch.log` (451 B), `docs/pm/screenshots/20261125T180429Z-launch.png` (75,375 B, 2400x1080 landscape — known ADB rotation fragility, not a product regression).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first SSE model `ocg:hy4-flash-free`, `[DONE] after 29 lines (14 data)`, `loop done, lines=29 data=14`, no gateway error. Evidence: `docs/pm/logs/20261125T180429Z-hello.log` (665 B), `docs/pm/screenshots/20261125T180429Z-hello.png` (216,735 B, 1080x2400, PNG magic 89504e47).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=20 max_results=8 … response code=200 html_len=30410 duration_ms=1066 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1066`; follow-up streams `loop done, lines=21 data=10` and `lines=19 data=9`. Real titled/URL results, no timeout/NetworkOnMainThread/No-results. Evidence: `docs/pm/logs/20261125T180429Z-websearch.log` (2,334 B), `docs/pm/screenshots/20261125T180429Z-websearch.png` (226,113 B, 1080x2400).
+- Settings/UI reachable PASS: all fields present (Inference Server, `http://llm.homelab.internal/v1`, Base URL, API Key masked, Model `auto`, Temperature 0.7, Max Tokens 4096, System Prompt, Stream responses, Appearance). Evidence: `docs/pm/logs/20261125T180429Z-settings.xml` (13,045 B), `docs/pm/screenshots/20261125T180429Z-settings.png` (128,250 B, 1080x2400).
+- Crypto regression watch PASS (vc117 key): `docs/pm/logs/20261125T180429Z-crypto.log` = 0 B (0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`).
+- Permission/dialogs PASS: `docs/pm/logs/20261125T180429Z-permissions.log` = 0 B (0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`); no new system dialog tapped past.
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- Debug-only adb broadcast QA hook (deterministic QA) — still an idea, not in source.
+- Carried ideas: SMS opt-in gating refinement; web_render on JS/SPA; debug-only adb broadcast test hook. (One-tap "New chat"/session reset is now SHIPPED in source — remove from carried list.)
+- ADB input automation fragility remains (rotation/coordinate drift); this run's launch screenshot was landscape but functional checks all passed.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Scheduler pre-run script's "device unreachable" status unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).

@@ -1,0 +1,19 @@
+11-25 13:08:13.032 12197 12214 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-25 13:08:16.321 12197 12214 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-25 13:08:16.322 12197 12214 D PocketNet: streamChat: first data (181 bytes): {"id":"8cb1d210-a2d1-4438-b7e3-a5d26b1c28ce","object":"chat.completion.chunk","created":1795630094,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-25 13:08:16.567 12197 12214 D PocketNet: streamChat: [DONE] after 29 lines (14 data)
+11-25 13:08:16.567 12197 12214 D PocketNet: streamChat: loop done, lines=29 data=14
+11-25 13:08:16.567 12197 12214 D WebSearchTool: start query_len=20 max_results=8
+11-25 13:08:17.634 12197 12214 D WebSearchTool: response code=200 html_len=30410 duration_ms=1066
+11-25 13:08:17.638 12197 12214 D WebSearchTool: parsed titles=10 snippets=10
+11-25 13:08:17.649 12197 12214 D WebSearchTool: done result_count=8 duration_ms=1066
+11-25 13:08:17.668 12197 12214 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-25 13:08:20.438 12197 12214 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-25 13:08:20.439 12197 12214 D PocketNet: streamChat: first data (181 bytes): {"id":"9bce9106-af2c-4491-ab2f-d334089ad3d1","object":"chat.completion.chunk","created":1795630098,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-25 13:08:20.441 12197 12214 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-25 13:08:20.441 12197 12214 D PocketNet: streamChat: loop done, lines=21 data=10
+11-25 13:08:21.579 12197 12213 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-25 13:08:24.645 12197 12213 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-25 13:08:24.645 12197 12213 D PocketNet: streamChat: first data (181 bytes): {"id":"b1fb69ab-f600-4b7d-8ed4-bd50477d73ba","object":"chat.completion.chunk","created":1795630103,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-25 13:08:24.890 12197 12213 D PocketNet: streamChat: [DONE] after 19 lines (9 data)
+11-25 13:08:24.890 12197 12213 D PocketNet: streamChat: loop done, lines=19 data=9

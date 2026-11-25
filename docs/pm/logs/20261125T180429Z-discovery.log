@@ -1,0 +1,8 @@
+=== adb devices -l ===
+List of devices attached
+adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp device product:bluejay model:Pixel_6a device:bluejay transport_id:1
+
+=== model ===
+Pixel 6a
+=== serialno ===
+27271JEGR25574
