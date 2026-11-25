@@ -1,0 +1,5 @@
+671:11-25 01:11:55.973 18907 18925 D WebSearchTool: start query_len=24 max_results=8
+680:11-25 01:11:57.092 18907 18925 D WebSearchTool: response code=200 html_len=28446 duration_ms=1117
+681:11-25 01:11:57.094 18907 18925 D WebSearchTool: parsed titles=10 snippets=10
+682:11-25 01:11:57.097 18907 18925 D WebSearchTool: done result_count=8 duration_ms=1117
+816:11-25 01:12:07.881 18907 18926 D PocketNet: streamChat: loop done, lines=169 data=84

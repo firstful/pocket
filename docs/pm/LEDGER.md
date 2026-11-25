@@ -927,3 +927,37 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (rotation/coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
 - Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
 - Pre-run script's "device unreachable" status is unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).
+
+## Run 2026-11-25T12:04Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA + reconciled stranded 06:05 evidence
+
+### Infra / state
+- CI: latest code run 1717 `72e33fdc` completed/success (push); HEAD `2d0caea` docs-only ahead of built SHA `72e33fdc` (`git diff --name-only 72e33fdc..HEAD` = only `docs/pm/**`). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified BYTE-LEVEL this run: fresh APK download 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (size 13521036). `/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). `telemetry.ffilt.us` 405 (up). Pods 1/1 Running: appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-58664b7775-vkwv6`, telemetry `telemetry-658bd46fbd-zmp5h`.
+- Device: live at mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117). Scheduler pre-run script reported "device unreachable" but live `adb devices -l` found the transport — script status unreliable; PM re-discovers independently.
+
+### Todo board
+- Homelab MCP todo board: 176 open at run start; 0 open Pocket-actionable todos besides the stranded tracking todo #1159 (this run's predecessor, now completed) and this run's #1161 (completed). Tangential Android items only (#54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #311 profile reorg, #355 os-keystore, #380 lifecycle tags). Created + claimed + completed tracking todos #1159 (reconciled) and #1161 (this run).
+
+### Reconciled stranded 06:05 evidence (untracked from the 06:04Z run)
+- All artifacts present under `docs/pm/{logs,screenshots}/20261125T060544Z..061340Z-*`. Verified inline: hello `[DONE] after 19 lines (9 data)` (`docs/pm/logs/20261125T060735Z-hello-full.log`); web_search `WebSearchTool: done result_count=8 duration_ms=1117` x3 (`docs/pm/logs/20261125T061340Z-full-scan.log`); launch 0 `FATAL EXCEPTION`/`has crashed`/`ANR` across 5,414-line full logcat; crypto scan 0 matches (`caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`); permission scan 0 matches (`EnhancedConfirmationDialog|GrantPermissionsActivity`). No product regression. Evidence retained and committed with this update.
+
+### QA Outcomes (delegated subagent `deleg_561311ed`, ts 20261125T1204; settings/crypto/perm captured inline by Rook after subagent stalled on settings navigation)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261125T1204-identity.log`.
+- Launch/no-crash PASS: 0 `FATAL EXCEPTION`/`has crashed`/`ANR in com.sutliff.pocket` across `docs/pm/logs/20261125T1204-launch.log` (2,168,426 B). Evidence: `docs/pm/screenshots/20261125T1204-launch.png` (131,996 B).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, `[DONE] after 19 lines (9 data)`, `loop done, lines=19 data=9`, no gateway error. Evidence: `docs/pm/logs/20261125T1204-hello.log` (701 B), `docs/pm/screenshots/20261125T1204-hello.png` (93,278 B).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=... response code=200 html_len=27741 duration_ms=... parsed titles=... snippets=... done result_count=8 duration_ms=929`. Real titled/URL results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261125T1204-websearch.log` (3,275 B), `docs/pm/screenshots/20261125T1204-websearch.png` (98,388 B).
+- Settings/UI reachable PASS: settings screen rendered (UI dump `docs/pm/logs/20261125T1204-settings.xml` shows `Settings` title + `Back` + `Remote Agents` section with Base URL/API key/Model/Enabled/Remove); screenshot `docs/pm/screenshots/20261125T1204-settings.png` (81,841 B, 2400x1080). Reachability proven; full field list (Inference Server/Base URL/API Key/Model/Temperature/Max Tokens/System Prompt/Appearance/Config import/Telemetry/Remote Agent) carried from prior runs' dumps (e.g. 2026-11-25T00:0357Z settings.xml, 13,045 B).
+- Crypto regression watch PASS (vc117 key): CRYPTO_MATCH_COUNT=0 across all 1204 logs (`caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`). Evidence: `docs/pm/logs/20261125T1204-crypto.log`.
+- Permission/dialogs PASS: PERMISSION_MATCH_COUNT=0 (`EnhancedConfirmationDialog|GrantPermissionsActivity`); no new system dialog tapped past. Evidence: `docs/pm/logs/20261125T1204-permissions.log`.
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run (7 from delegated subagent + settings screenshot + crypto/perm scans captured inline) committed with this update. Stranded 06:05 evidence (30+ files) also committed.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (endpoint pod healthy; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- ADB input automation fragility remains (rotation/coordinate drift); this run's web_search Send tap landed (WebSearchTool fired). Functional checks unaffected.
+- Carried ideas: one-tap "new chat"/session reset for poisoned history; SMS opt-in gating; web_render on JS/SPA; debug-only adb broadcast test hook for deterministic QA.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Scheduler pre-run script's "device unreachable" status remains unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).

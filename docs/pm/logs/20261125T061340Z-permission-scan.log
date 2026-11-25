@@ -1,0 +1,2 @@
+Permission scan during QA session (Pixel 6a, com.sutliff.pocket). No GrantPermissions/PermissionDialog/request for com.sutliff.pocket detected.
+11-25 01:11:55.155 32265 32274 I fjaa    : (REDACTED) HDM. Ignoring irrelevant audio permission changes for package %s
