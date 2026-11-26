@@ -993,3 +993,42 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - ADB input automation fragility remains (rotation/coordinate drift); this run's launch screenshot was landscape but functional checks all passed.
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Scheduler pre-run script's "device unreachable" status unreliable — PM's live `adb devices -l` is ground truth (re-discover every run).
+
+## Run 20261126T180438Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean; reconciled three stranded 2026-11-26 evidence sets
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); single `build` job id 2166 (label android) also success (verified via `gitea_get_action_run`). HEAD `f8072a3` docs-only ahead of built SHA 72e33fdc (`git diff --name-only 72e33fdc..HEAD | grep -v ^docs/pm/` = 0). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified BYTE-LEVEL this run: fresh APK download from catalog path `apk/Pocket/app-release.apk` = 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (APK_VERIFY=PASS). NOTE: lowercase path `apk/pocket/...` returns a 22-byte non-APK stub (sha e18daaf1…) — always use the catalog-provided `apk/Pocket/...` path. `/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). Pods 1/1 Running (0 restarts): appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-58664b7775-7p7k7`, telemetry `telemetry-658bd46fbd-mrrc2`.
+- Device: live at freshly-discovered mDNS TLS transport `192.168.1.127:37009` (mDNS `_adb-tls-connect` txt name=Pixel 6a / serial=27271JEGR25574, adb product:bluejay). Scheduler pre-run script reported "device unreachable" but live `avahi-browse -rt _adb-tls-connect._tcp` + `adb connect` found it — script status unreliable; PM re-discovers independently. Stale IP 192.168.1.147:45357 does not respond (100% packet loss) — do not trust it.
+
+### Todo board
+- Homelab MCP todo board: 177 open at run start; 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #311 profile reorg, #355 os-keystore, #380 lifecycle tags). Created + claimed tracking todo #1202 (gitea issue 1423).
+
+### Reconciled stranded evidence (three earlier untracked 2026-11-26 runs — all clean at vc117, no regression)
+- `20261126T000552Z*` (logs hello/identity/launch/websearch + crypto/perm/launch-crash scans, settings screenshot): hello `streamChat: response code=200 content-type=text/event-stream … [DONE] after 27 lines (13 data), loop done, lines=27 data=13`; web_search `WebSearchTool: start query_len=17 … response code=200 html_len=28877 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1430`; identity vc117 `1.0.117-72e33fd`; crypto scan 0 matches, permission scan 0 matches, launch crash scan 0 matches. Settings PNG valid (2400x1080, 67,974 B).
+- `20261126T060700Z*` (logs identity/launch/hello/web + settings screenshots): identity vc117; hello `[DONE] after 19 lines (9 data), loop done, lines=19 data=9`; web turn `WebSearchTool: response code=200 html_len=28707 … done result_count=8 duration_ms=1121` + follow-up stream `loop done, lines=33 data=16`; 5 settings screenshots valid PNG (2400x1080) + web-result.png valid. All settings captures landscape — known ADB rotation fragility, not a product regression.
+- `20261126T120535Z*` (logs identity/launch/hello, hello+launch screenshots): identity vc117; hello `response code=200 … [DONE] after 11 lines (5 data), loop done, lines=11 data=5`; screenshots valid PNG (2400x1080). No web log captured in this set; functional hello PASS.
+- All captured screenshots verified valid PNG via `file` (PNG image data, 2400x1080). All artifacts retained. No product issue surfaced by any of the three stranded runs.
+
+### QA Outcomes (delegated subagent `deleg_7e5860e2`, ts 20261126T180402Z; all evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117 minSdk=26 targetSdk=34, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261126T180402Z-identity.log` (266 B).
+- Launch/no-crash PASS: `monkey` launch exit 0; `topResumedActivity` + `mCurrentFocus` = `com.sutliff.pocket/.MainActivity`; crash scan `FATAL EXCEPTION|has crashed|ANR in com.sutliff.pocket` = 0 matches. Evidence: `docs/pm/logs/20261126T180402Z-launch.log` (931 B), `docs/pm/screenshots/20261126T180402Z-launch.png` (94298 B, 2400x1080 PNG).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first model `ocg:hy4-flash-free`, `[DONE] after 23 lines (11 data)`, `loop done, lines=23 data=11`, no gateway error. Evidence: `docs/pm/logs/20261126T180402Z-hello.log` (756 B), `docs/pm/screenshots/20261126T180402Z-hello.png` (94685 B, 2400x1080 PNG).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=19 max_results=10 … response code=200 html_len=27270 duration_ms=1012 … parsed titles=10 snippets=10 … done result_count=10 duration_ms=1012`. Real titled/URL results, no timeout/NetworkOnMainThread/No-results; follow-up WebFetchTool 200s (androidcentral, bleepingcomputer). Evidence: `docs/pm/logs/20261126T180402Z-websearch.log` (1510 B), `docs/pm/screenshots/20261126T180402Z-websearch.png` (135429 B, 2400x1080 PNG).
+- Settings/UI reachable PASS: all fields present (Inference Server, Base URL, API Key, Model, Temperature, Max Tokens, System Prompt, Stream responses, Appearance). Evidence: `docs/pm/logs/20261126T180402Z-settings.xml` (767880 B), `docs/pm/screenshots/20261126T180402Z-settings.png` (234241 B, 2400x1080 PNG).
+- Crypto regression watch PASS (vc117 key): `docs/pm/logs/20261126T180402Z-crypto.log` (192 B) = 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`.
+- Permission/dialogs PASS: `docs/pm/logs/20261126T180402Z-permissions.log` (141 B) = 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; no new system dialog tapped past.
+- All four 180402 screenshots verified valid PNG via `file` (PNG image data, 2400x1080, 8-bit RGBA).
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run + three reconciled stranded 2026-11-26 sets committed with this update.
+- Source note: `WebRenderManager` now emits `start url=…` / `onPageFinished` / pip logs (WebTools.kt:425/445) — prior carried "add WebRender start log" idea is now present in vc117 source.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (pocket-cfg pod 1/1 Up; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405 this run).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107); start/onPageFinish logs now in source aid future verification.
+- Debug-only adb broadcast QA hook (deterministic QA) — still an idea, not in source (grep found no debug/test broadcast receiver).
+- Carried ideas: SMS opt-in gating refinement; web_render on JS/SPA; debug-only adb broadcast test hook.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Scheduler pre-run script's "device unreachable" status unreliable — PM's live mDNS rediscovery + `adb connect` is ground truth (re-discover every run).
+- Store APK path is CASE-SENSITIVE: use catalog-provided `apk/Pocket/app-release.apk` (lowercase `apk/pocket/...` returns a 22-byte stub).

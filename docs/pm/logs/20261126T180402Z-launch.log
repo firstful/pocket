@@ -1,0 +1,22 @@
+=== TS: 20261126T180402Z ===
+=== launch: monkey -p com.sutliff.pocket -c android.intent.category.LAUNCHER 1 ===
+  bash arg: -p
+  bash arg: com.sutliff.pocket
+  bash arg: -c
+  bash arg: android.intent.category.LAUNCHER
+  bash arg: 1
+args: [-p, com.sutliff.pocket, -c, android.intent.category.LAUNCHER, 1]
+ arg: "-p"
+ arg: "com.sutliff.pocket"
+ arg: "-c"
+ arg: "android.intent.category.LAUNCHER"
+ arg: "1"
+data="com.sutliff.pocket"
+data="android.intent.category.LAUNCHER"
+Events injected: 1
+## Network stats: elapsed time=12ms (0ms mobile, 0ms wifi, 12ms not connected)
+=== dumpsys activity activities | grep -E 'topResumedActivity|mCurrentFocus' ===
+    topResumedActivity=ActivityRecord{223136806 u0 com.sutliff.pocket/.MainActivity t29295}
+  mCurrentFocus=Window{9abb575 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== logcat crash scan: FATAL EXCEPTION|has crashed|ANR in com.sutliff.pocket ===
+=== END crash scan ===

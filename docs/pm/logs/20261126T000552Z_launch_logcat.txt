@@ -1,0 +1,762 @@
+--------- beginning of main
+11-25 19:06:05.681  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:monkey -p com.sutliff.pocket -c android.intent.category.LAUNCHER 1'
+11-25 19:06:06.069  2298  6594 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 47 up
+11-25 19:06:06.231  1216  1216 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-25 19:06:06.239  1216  1216 I AndroidRuntime: Using default boot image
+11-25 19:06:06.239  1216  1216 I AndroidRuntime: Leaving lock profiling enabled
+11-25 19:06:06.245  1216  1216 I app_process: Core platform API enforcement disabled by runtime option
+11-25 19:06:06.246  1216  1216 I app_process: Using generational CollectorTypeCMC GC.
+11-25 19:06:06.338  1216  1216 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+11-25 19:06:06.367  1216  1216 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-25 19:06:06.367  1216  1216 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/10/icu") succeeded. 
+11-25 19:06:06.367  1216  1216 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt78l.dat
+11-25 19:06:06.383  1216  1216 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-25 19:06:06.385  1216  1216 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+11-25 19:06:06.386  1216  1216 I app_process: Priority-to-niceness mapping: 19, 16, 13, 10, 0, -2, -4, -5, -6, -8
+11-25 19:06:06.437  1216  1216 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-25 19:06:06.438  1216  1216 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+11-25 19:06:06.440  1216  1216 D nativeloader: Load /system/lib64/libmonkey_jni.so using ns default for caller /system/framework/monkey.jar in same partition (is_bridged=0): ok
+11-25 19:06:06.441  1216  1216 W Monkey  : args: [-p, com.sutliff.pocket, -c, android.intent.category.LAUNCHER, 1]
+11-25 19:06:06.447  1216  1216 I AconfigPackage: com.android.devicelock.flags is mapped to com.android.devicelock
+11-25 19:06:06.448  1216  1216 I AconfigPackage: android.os.profiling is mapped to com.android.profiling
+11-25 19:06:06.448  1216  1216 I AconfigPackage: android.os.profiling.anomaly.beta.flags is mapped to com.android.profiling
+11-25 19:06:06.448  1216  1216 I AconfigPackage: android.os.profiling.anomaly.flags is mapped to com.android.profiling
+11-25 19:06:06.449  1216  1216 I AconfigPackage: android.provider.flags is mapped to com.android.configinfrastructure
+11-25 19:06:06.449  1216  1216 I AconfigPackage: com.android.server.deviceconfig is mapped to com.android.configinfrastructure
+11-25 19:06:06.449  1216  1216 I AconfigPackage: com.android.uwb.flags is mapped to com.android.uwb
+11-25 19:06:06.449  1216  1216 I AconfigPackage: com.android.ranging.flags is mapped to com.android.uwb
+11-25 19:06:06.450  1216  1216 I AconfigPackage: android.media.swcodec.flags is mapped to com.android.media.swcodec
+11-25 19:06:06.450  1216  1216 I AconfigPackage: com.android.ipsec.flags is mapped to com.android.ipsec
+11-25 19:06:06.451  1216  1216 I AconfigPackage: com.android.icu is mapped to com.android.i18n
+11-25 19:06:06.452  1216  1216 I AconfigPackage: com.android.adservices.ondevicepersonalization.flags is mapped to com.android.ondevicepersonalization
+11-25 19:06:06.452  1216  1216 I AconfigPackage: com.google.android.widevine.flags is mapped to com.google.android.widevine
+11-25 19:06:06.453  1216  1216 I AconfigPackage: com.android.healthfitness.flags is mapped to com.android.healthfitness
+11-25 19:06:06.453  1216  1216 I AconfigPackage: com.android.healthfitness.beta is mapped to com.android.healthfitness
+11-25 19:06:06.453  1216  1216 I AconfigPackage: com.android.wifi.flags is mapped to com.android.wifi
+11-25 19:06:06.454  1216  1216 I AconfigPackage: com.android.compos.flags is mapped to com.android.compos
+11-25 19:06:06.456  1216  1216 I AconfigPackage: com.android.bluetooth.beta.flags is mapped to com.android.bt
+11-25 19:06:06.456  1216  1216 I AconfigPackage: com.android.bluetooth.flags is mapped to com.android.bt
+11-25 19:06:06.456  1216  1216 I AconfigPackage: com.android.webapp.flags is mapped to com.android.webapp
+11-25 19:06:06.457  1216  1216 I AconfigPackage: com.android.cellbroadcastreceiver.flags is mapped to com.android.cellbroadcast
+11-25 19:06:06.458  1216  1216 I AconfigPackage: com.android.permission.flags is mapped to com.android.permission
+11-25 19:06:06.458  1216  1216 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-25 19:06:06.458  1216  1216 I AconfigPackage: com.android.nfc.module.flags is mapped to com.android.nfcservices
+11-25 19:06:06.458  1216  1216 I AconfigPackage: com.android.nfc.module.nonexported.flags is mapped to com.android.nfcservices
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.tethering.mainline.beta is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: android.net.http is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.tethering.readonly.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: android.net.vcn is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.net.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.tethering.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.tethering.beta.test is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.nearby.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.net.thread.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: android.net.http.flags is mapped to com.android.tethering
+11-25 19:06:06.459  1216  1216 I AconfigPackage: android.telecom.flags is mapped to com.android.telephonycore
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.internal.telecom.flags is mapped to com.android.telephonycore
+11-25 19:06:06.459  1216  1216 I AconfigPackage: com.android.telephony.flags is mapped to com.android.telephonycore
+11-25 19:06:06.460  1216  1216 I AconfigPackage: com.android.crashrecovery.flags is mapped to com.android.crashrecovery
+11-25 19:06:06.461  1216  1216 I AconfigPackage: com.android.org.conscrypt.flags is mapped to com.android.conscrypt
+11-25 19:06:06.461  1216  1216 I AconfigPackage: com.android.org.conscrypt.net.flags is mapped to com.android.conscrypt
+11-25 19:06:06.461  1216  1216 I AconfigPackage: com.android.npumanager is mapped to com.android.npumanager
+11-25 19:06:06.463  1216  1216 D nativeloader: Load libstats_jni.so using APEX ns com_android_os_statsd for caller /apex/com.android.os.statsd/javalib/framework-statsd.jar: ok
+11-25 19:06:06.464  1216  1216 W AconfigPackage: failed to map some package from com.android.btservices.package.map: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+11-25 19:06:06.464  1216  1216 I AconfigPackage: com.android.signature.flags is mapped to com.android.mediaprovider
+11-25 19:06:06.464  1216  1216 I AconfigPackage: com.android.providers.media.flags is mapped to com.android.mediaprovider
+11-25 19:06:06.464  1216  1216 I AconfigPackage: android.graphics.pdf.flags is mapped to com.android.mediaprovider
+11-25 19:06:06.464  1216  1216 I AconfigPackage: android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+11-25 19:06:06.465  1216  1216 I AconfigPackage: com.android.adservices.flags is mapped to com.android.adservices
+11-25 19:06:06.465  1216  1216 I AconfigPackage: com.android.sdksandbox.flags is mapped to com.android.adservices
+11-25 19:06:06.465  1216  1216 I AconfigPackage: android.app.sdksandbox.flags is mapped to com.android.adservices
+11-25 19:06:06.466  1216  1216 I AconfigPackage: com.android.uprobestats.flags is mapped to com.android.uprobestats
+11-25 19:06:06.466  1216  1216 I AconfigPackage: android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+11-25 19:06:06.466  1216  1216 I AconfigPackage: com.android.rkpd.flags is mapped to com.android.rkpd
+11-25 19:06:06.467  1216  1216 I AconfigPackage: com.android.os.statsd.flags is mapped to com.android.os.statsd
+11-25 19:06:06.467  1216  1216 I AconfigPackage: com.android.scheduling.flags is mapped to com.android.scheduling
+11-25 19:06:06.468  1216  1216 I AconfigPackage: com.android.art.flags is mapped to com.android.art
+11-25 19:06:06.468  1216  1216 I AconfigPackage: com.android.art.rw.flags is mapped to com.android.art
+11-25 19:06:06.468  1216  1216 I AconfigPackage: com.android.libcore is mapped to com.android.art
+11-25 19:06:06.469  1216  1216 I AconfigPackage: com.android.appsearch.flags is mapped to com.android.appsearch
+11-25 19:06:06.469  1216  1216 I AconfigPackage: com.android.media.extractor.flags is mapped to com.android.media
+11-25 19:06:06.469  1216  1216 I AconfigPackage: com.android.media.metrics.flags is mapped to com.android.media
+11-25 19:06:06.469  1216  1216 I AconfigPackage: com.android.media.mainline.flags is mapped to com.android.media
+11-25 19:06:06.470  1216  1216 I AconfigPackage: com.android.system.virtualmachine.flags is mapped to com.android.virt
+11-25 19:06:06.471  1216  1216 I AconfigPackage: com.android.adbd.flags is mapped to com.android.adbd
+11-25 19:06:06.471  1216  1216 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+11-25 19:06:06.472  1216  1216 W commands.monkey: type=1400 audit(0.0:17334): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-25 19:06:06.472  1216  1216 W commands.monkey: type=1400 audit(0.0:17335): avc:  denied  { read } for  name="u:object_r:qemu_sf_lcd_density_prop:s0" dev="tmpfs" ino=349 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_sf_lcd_density_prop:s0 tclass=file permissive=0 bug=b/481140519
+11-25 19:06:06.474  1216  1216 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-25 19:06:06.474  1216  1216 W libc    : Access denied finding property "qemu.sf.lcd_density"
+11-25 19:06:06.481  1216  1216 W Monkey  :  arg: "-p"
+11-25 19:06:06.481  1216  1216 W Monkey  :  arg: "com.sutliff.pocket"
+11-25 19:06:06.481  1216  1216 W Monkey  :  arg: "-c"
+11-25 19:06:06.482  1216  1216 W Monkey  :  arg: "android.intent.category.LAUNCHER"
+11-25 19:06:06.482  1216  1216 W Monkey  :  arg: "1"
+11-25 19:06:06.482  1216  1216 W Monkey  : data="com.sutliff.pocket"
+11-25 19:06:06.482  1216  1216 W Monkey  : data="android.intent.category.LAUNCHER"
+11-25 19:06:06.503  1701  2054 D EventHub: No input device configuration file found for device 'Monkey touch'.
+11-25 19:06:06.504  1701  2054 E EventHub: Could not open directory /sys/devices/virtual/power_supply: No such file or directory
+11-25 19:06:06.504  1701  2054 E EventHub: Could not open directory /sys/devices/power_supply: No such file or directory
+11-25 19:06:06.505  1701  2054 E EventHub: Could not open directory /sys/power_supply: No such file or directory
+11-25 19:06:06.505  1701  2054 E EventHub: Could not open directory /sys/devices/virtual/leds: No such file or directory
+11-25 19:06:06.505  1701  2054 E EventHub: Could not open directory /sys/devices/leds: No such file or directory
+11-25 19:06:06.505  1701  2054 E EventHub: Could not open directory /sys/leds: No such file or directory
+11-25 19:06:06.506  1701  2054 I EventHub: usingClockIoctl=true
+11-25 19:06:06.506  1701  2054 I EventHub: New device: id=53, fd=552, path='/dev/input/event4', name='Monkey touch', classes=TOUCH | TOUCH_MT, configuration='', keyLayout='', keyCharacterMap='', builtinKeyboard=false, 
+11-25 19:06:06.513  1701  2054 I InputReader: Device reconfigured: id=53, name='Monkey touch', size 1080x2400, orientation Rotation0, mode DIRECT, display id 0
+11-25 19:06:06.514  1701  2054 I InputReader: Device added: id=53, eventHubId=53, name='Monkey touch', descriptor='e1fe28b90f915c7d1febbd52c1ef84b3c4cbed9f',sources=TOUCHSCREEN
+--------- beginning of system
+11-25 19:06:06.523  1701  2819 W ActivityManager: registerReceiverWithFeature: no app for null
+11-25 19:06:06.534  1701  2819 W ActivityTaskManager: callingPackage for (uid=2000, pid=1216) has no WPC
+11-25 19:06:06.540  1701  2819 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@942e2680 does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-25 19:06:06.546  1701  2819 V ActivityTaskManager: TaskLaunchParamsModifier: phase=2 task=Task{6b8b79b #29288 type=standard A=10494:com.sutliff.pocket} activity=ActivityRecord{180473198 u0 com.sutliff.pocket/.MainActivity t-1} display-from-task=0 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@96050829 inherit-from-task=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@96050829 default-portrait freeform-size-mismatch=Rect(268, 663 - 812, 1743)
+11-25 19:06:06.546  1701  2819 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sutliff.pocket/.MainActivity} with LAUNCH_MULTIPLE from uid 2000 (com.android.shell) (BAL_ALLOW_ALLOWLISTED_UID) result code=2
+11-25 19:06:06.546  1216  1216 I Monkey  : Events injected: 1
+11-25 19:06:06.546  2199  2225 V WindowManagerShell: Transition requested (#591): android.os.BinderProxy@4c34818 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29288 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=1579045164 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@ce871e5} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{1ad3271 com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(268, 663 - 812, 1743) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=0 topActivityLetterboxHeight=0 topActivityAppBounds=Rect(0, 132 - 1080, 2274) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=Rect(0, 0 - 0, 0) topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 591 }
+11-25 19:06:06.546  2199  2225 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+11-25 19:06:06.548  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-25 19:06:06.548  2199  2225 D WindowManagerShell: onActivityRestartAttempt: topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity}, wasVisible=true, displayId=0, pipDisplayLayoutState#displayId=0
+11-25 19:06:06.549  4845  4845 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-25 19:06:06.551  1701  1786 I WindowManager: Display id=0 rotation changed to 1 from 0, lastOrientation=-1 userRotationMode=0 userRotation=0 lastSensorRotation=1
+11-25 19:06:06.551  1216  1216 I Monkey  : ## Network stats: elapsed time=18ms (0ms mobile, 0ms wifi, 18ms not connected)
+11-25 19:06:06.551  1701  1786 W TransitionChain: Combining updateRot into #591(OPEN|R|0x0) from startAct
+11-25 19:06:06.551  1216  1216 I app_process: System.exit called, status: 0
+11-25 19:06:06.552  1216  1216 I AndroidRuntime: VM exiting with result code 0.
+11-25 19:06:06.555  1701  1788 I DisplayTopology: Display with ID 0 updated, new logical width: 2400, new logicalHeight: 1080, new density: 420
+11-25 19:06:06.555  1701  1833 D BrightnessThermalClamper: Thermal status observer already started
+11-25 19:06:06.556 21783 21783 I bqva    : #onUserLeaveHint (FloatyActivityPeer)
+11-25 19:06:06.557 21783 21783 I bsoy    : #onUserLeaveHint - FloatyNavigatorV2FragmentPeer
+11-25 19:06:06.557 21783 21783 I bsqf    : #onUserLeaveHint - FloatyPageContainerFragmentPeer
+11-25 19:06:06.559  1701  1788 I ActivityTaskManager: Config changes=20000480 {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15009 fontWeightAdjustment=0}
+11-25 19:06:06.559  2882  2882 I PkModeUpdater: PkModeUpdater.refreshDevices():212 refreshing devices
+11-25 19:06:06.566  1701  1788 I WindowManager: Override config changes=20000480 {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15009 fontWeightAdjustment=0} for displayId=0
+11-25 19:06:06.566  1701  1788 W TransitionChain: Combining dispOverCfg into #591(OPEN|R|0x0) from startAct
+11-25 19:06:06.571  3133  3145 W RestartDetector: Reducing the number of considered missed Gc histogram windows from 145 to 100
+11-25 19:06:06.581  1701  1788 I Surface : Creating surface for consumer unnamed-1701-328 with slotExpansion=1 for 64 slots
+11-25 19:06:06.581  1701  1788 I Surface : Creating surface for consumer ImageReader-1080x2400f1m1-1701-324 with slotExpansion=1 for 64 slots
+11-25 19:06:06.581  1701  1788 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+11-25 19:06:06.582  1701  1788 E ConsumerBase: [ImageReader-1080x2400f1m1-1701-324] abandonLocked: ConsumerBase is abandoned!
+11-25 19:06:06.584  2199  2225 V WindowManagerShell: PipDisplayReconnectHandler: handlePotentialReconnect: displayId=0, userId=0, reason= display area changed
+11-25 19:06:06.585  2199  2225 V WindowManagerShell: PipDisplayReconnectHandler: handlePotentialReconnect: No preserved display found for uniqueDisplayId=local:4619827677550801152; aborting.
+11-25 19:06:06.585  2483  2504 W elephony.oemril: Reducing the number of considered missed Gc histogram windows from 220 to 100
+11-25 19:06:06.585  1701  2054 I EventHub: Removing device '/dev/input/event4' due to inotify event
+11-25 19:06:06.585  1701  2054 I EventHub: Removed device: path=/dev/input/event4 name=Monkey touch id=53 fd=552 classes=TOUCH | TOUCH_MT
+11-25 19:06:06.586  1701  1788 E EventHub: Invalid device id=53 provided to isDeviceEnabled
+11-25 19:06:06.586  1701  1788 W InputReader: Ignoring disabled device Monkey touch
+11-25 19:06:06.587  2199  2225 V WindowManagerShell: PipDisplayReconnectHandler: handlePotentialReconnect: displayId=0, userId=0, reason= display config changed
+11-25 19:06:06.587  1701  2054 I InputReader: Device removed: id=53, eventHubId=53, name='Monkey touch', descriptor='e1fe28b90f915c7d1febbd52c1ef84b3c4cbed9f', sources=TOUCHSCREEN
+11-25 19:06:06.587  2199  2225 V WindowManagerShell: PipDisplayReconnectHandler: handlePotentialReconnect: No preserved display found for uniqueDisplayId=local:4619827677550801152; aborting.
+11-25 19:06:06.587  2199  2225 V ShellDragAndDrop: Display changed: 0
+11-25 19:06:06.589  1701  1788 I InputManager-JNI: Viewport [0] to add: local:4619827677550801152, isActive: true
+11-25 19:06:06.591  2199  2225 D ShellSplitScreen: onTaskInfoChanged: taskId=5 taskAct=null stageId=MAIN displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: onConfigurationChanged: {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15009 fontWeightAdjustment=0} displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: onConfigurationChanged: | configDiff={} displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: onConfigurationChanged: isTaskbarEnabled()=True displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: onConfigurationChanged: call recreateTaskbars displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: getting device profile displayId=0
+11-25 19:06:06.593  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: destroying taskbar displayId=0
+11-25 19:06:06.594  4845  4865 D PerDisplayTaskbarResource: destroyTaskbarForDisplay displayId=0
+11-25 19:06:06.594  2882  2882 I AppBase : AppBase.onConfigurationChanged():283 onConfigurationChanged() : NewConfig = {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15133 fontWeightAdjustment=0}
+11-25 19:06:06.596  4845  4865 D CueBarController: CuebarController destroy
+11-25 19:06:06.597  1701  1761 W ApplicationInfo: Large ApplicationInfo parcel: size=22016 package=com.google.android.googlequicksearchbox splits=5 sharedLibs=8 resDirs=1 overlayPaths=1
+11-25 19:06:06.597  4845  4865 D TaskbarOverlayController: onDestroy: 	at com.android.launcher3.taskbar.PerDisplayTaskbarResource.destroyTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:486)
+11-25 19:06:06.597  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl.recreateTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:171)
+11-25 19:06:06.597  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl$$ExternalSyntheticLambda24.invoke(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:45)
+11-25 19:06:06.597  4845  4865 D TaskbarOverlayController: onDestroy: Was window already present? false
+11-25 19:06:06.598  1701  1788 D DisplayManagerService: Sending topology graph to Input Manager: DisplayTopologyGraph{mPrimaryDisplayId=0}
+11-25 19:06:06.598  1701  1788 D DisplayManagerService:   DisplayNode{displayId=0, density=420, bounds=RectF(0.0, 0.0, 914.2857, 411.42856)}
+11-25 19:06:06.599  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: isTaskbarEnabled=true [dp != null]=true mUserUnlocked=true dp.isTaskbarPresent=false isTaskbarEnabled=true displayExists=true displayId=0
+11-25 19:06:06.599  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: creating taskbar displayId=0
+11-25 19:06:06.602 21783 22924 V ClearcutMetricXmitter: Transmission is done.
+11-25 19:06:06.603  2199  2225 D ShellSplitScreen: Updating status bar override leftRight=false currentSplit=1 splitVisible=false overridden=false
+11-25 19:06:06.603  2199  2225 D ShellSplitScreen: No change in status bar override state
+11-25 19:06:06.603  2199  2225 V ShellSplitScreen: Updating status bar for split, no change in state
+11-25 19:06:06.603  2199  2199 I NoBackGesture: Config changed: newConfig={1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15152 fontWeightAdjustment=0} lastReportedConfig={1.0 ?mcc0mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long compactNeeded hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.14998 fontWeightAdjustment=0}
+11-25 19:06:06.603  2199  2199 I NoBackGesture: NavbarController: newConfig={1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15152 fontWeightAdjustment=0} mTaskbarDelegate initialized=true willApplyConfigToNavbars=false navBarCount=0
+11-25 19:06:06.603  2199  2225 V ShellSplitScreen: Updating status bar for split, no change in state
+11-25 19:06:06.605 21783 21783 I apcq    : (REDACTED) #onPause %s
+11-25 19:06:06.607  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1251 onConfigurationChanged() : NewConfig = {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.15009 fontWeightAdjustment=0}
+11-25 19:06:06.608  2199  2199 D UdfpsOverlayInteractor: udfpsOverlayParams updated UdfpsOverlayParams(sensorBounds=Rect(425, 1600 - 655, 1830), overlayBounds=Rect(0, 1200 - 1080, 2400), naturalDisplayWidth=1080, naturalDisplayHeight=2400, scaleFactor=1.0, rotation=1, sensorType=3)
+11-25 19:06:06.610  2199  2225 D Bubbles : BubblePositioner.update() insets=Insets{left=132, top=74, right=126, bottom=0} largeScreen=false smallTablet=false isBubbleBar=false bounds=Rect(0, 0 - 2400, 1080)
+11-25 19:06:06.610  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1252 device real metrics: DisplayMetrics{density=2.625, width=2400, height=1080, scaledDensity=2.625, xdpi=428.625, ydpi=429.295}
+11-25 19:06:06.612  1701  2054 I InputReader: Reconfiguring input devices, changes=DISPLAY_INFO
+11-25 19:06:06.614  1007  1813 D audio_hw: adev_set_parameters: enter: screen_state=on
+11-25 19:06:06.615  2882  1379 I DeviceStatusMonitor: DeviceStatusMonitor.onDisplayChanged():442 Display 0 rotation changed: 0 -> 1
+11-25 19:06:06.615  2882  1365 I DeviceStatusMonitor: DeviceStatusMonitor.onDisplayChanged():442 Display 0 rotation changed: 0 -> 1
+11-25 19:06:06.615  2882  1365 W putmethod.latin: Monitor::Inflate: Install failed 0x23cd310
+11-25 19:06:06.620 21783 21783 I bsqf    : #onPause (PageContainer)
+11-25 19:06:06.620  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1276 Maybe update OEM conditional config because of configuration change
+11-25 19:06:06.621  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.notifyCurrentInputMethodEntryOnContextChanged():608 notifyCurrentInputMethodEntryOnContextChanged()
+11-25 19:06:06.621  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.notifyCurrentInputMethodEntryOnContextChanged():625 Notify current input method entry changed on context change
+11-25 19:06:06.623  4845  4845 D IDP     : After initGrid:gridName:fixed_landscape_mode, dbFile:launcher_8_by_3.db, LauncherPrefs GRID_NAME:fixed_landscape_mode, LauncherPrefs DB_FILE:launcher_8_by_3.db
+11-25 19:06:06.623  2199  2199 D ShadeStateTraceLogger: New configuration change from Shade window. smallestScreenWidthDp: 411, densityDpi: 420
+11-25 19:06:06.624  2199  2199 D ShadeStateTraceLogger: New shadeHeaderHeight: 0, displayId: 0
+11-25 19:06:06.625  2035  2186 I twoshay.TouchContextService: Got new packet! ContextPacket{orientation: LANDSCAPE_LEFT, audioMode: NORMAL, adaptiveTouchSensitivity: OFF, screenProtectorMode: OFF, imeState: ImeState{displayId: 0, visible: false, top: 0, left: 0, bottom: 0, right: 0}, audioDeviceInfo: TYPE_BUILTIN_EARPIECE}
+11-25 19:06:06.625  2882  2882 I KeyboardContextProvider: KeyboardContextProvider$KeyboardContextCache.createKeyboardContext():290 createKeyboardContext(): en-US, npd@35c2f55(com.android.inputmethod.latin.LatinIME@bbc3fe7), {1.0 ?mcc0mnc [en_US] ldltr sw411dp w914dp h411dp 420dpi nrml long compactNeeded hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90} as.2 s.37 fontWeightAdjustment=0}
+11-25 19:06:06.625  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onCurrentInputMethodEntryChanged():2744 onCurrentInputMethodEntryChanged(): imeDefsChanged=false, entryLanguageVariantChanged=false, keyboardContextChanged=true
+11-25 19:06:06.626  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.626  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.626  4845  4845 D b/475447538: Rotation Helper = [mStateHandlerRequest=0, mCurrentStateRequest=0, mLastActivityFlags=11, mIgnoreAutoRotateSettings=false, mForceAllowRotationForTesting=false, mDestroyed=false, mIsFixedLandscape=true]
+11-25 19:06:06.627  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.627  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.627  4845  4845 D ConnectorProvider: Connector disabled by gantry flag.
+11-25 19:06:06.627  1701  3258 W ApplicationInfo: Large ApplicationInfo parcel: size=22016 package=com.google.android.googlequicksearchbox splits=5 sharedLibs=8 resDirs=1 overlayPaths=1
+11-25 19:06:06.628  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.628  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.628  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.629  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.629  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.630  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.630  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.630  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.631  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.631  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.631  2199  2199 D DrawExpandable: expandable check detail:
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - isAnimating=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - showDialog=false
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - overlayView=null (isAttached=null)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - localView=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - composeViewRoot=androidx.compose.ui.platform.AndroidComposeView{ee2b148 VFED..... ......ID 0,0-1080,2400 aid=8} (isAttached=true)
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - dynamicTargetResolutionEnabled=true
+11-25 19:06:06.631  2199  2199 D DrawExpandable:  - controller.overlay=null
+11-25 19:06:06.632  1876  1876 I pixel-thermal: VIRTUAL-SKIN:29.3908 raw data: VIRTUAL-NEUTRAL:29390.8 VIRTUAL-NEUTRAL-SKIN2:28925.1 VIRTUAL-QUIET-NEUTRAL:27656.3 VIRTUAL-SKIN:29390.8 disp_therm:27314 gnss_tcxo_therm:30503 neutral_therm:28077 quiet_therm:27476 skin_therm1:30481 skin_therm2:30904 
+11-25 19:06:06.632  1876  1876 I pixel-thermal: cellular-emergency:29.3908 raw data: VIRTUAL-SKIN:29390.8 cellular-emergency:29390.8 
+11-25 19:06:06.632 21783 21783 I emxt    : #onConfigurationChanged
+11-25 19:06:06.632  1876  1876 I pixel-thermal: VIRTUAL-USB-UI:0 raw data: USB2-MINUS-CHG:-4377 VIRTUAL-USB-UI:0 charger_skin_therm:31527 usb_pwr_therm2:27150 
+11-25 19:06:06.632  2882  2882 I PkModeUpdater: PkModeUpdater.refreshDevices():212 refreshing devices
+11-25 19:06:06.633  2439  2439 D NfcService: applyScreenState: screenState = ON_UNLOCKED
+11-25 19:06:06.634  4845  4865 W SystemServiceRegistry: No service published for: personal_context
+11-25 19:06:06.634  4845  4865 W AmbientCueRepository: spoonBarOptedIn not found, default to enabled
+11-25 19:06:06.634  4845  4865 D LauncherAmbientCueVM: onUnfilteredActionsChange: AmbientCueActions(actions=[], loggingContext=null)
+11-25 19:06:06.637 21783 21816 I eocd    : #onConfigurationChanged
+11-25 19:06:06.637 21783 21816 I enhw    : (REDACTED) Listener was null, %s is not propagated
+11-25 19:06:06.638  1007  4906 D audio_hw: adev_set_parameters: enter: rotation=90
+11-25 19:06:06.638  4845  4845 D LauncherStateManager: StateManager.cancelAnimation: animation ongoing: false, partial trace:
+11-25 19:06:06.638  4845  4845 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.reapplyState(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:39)
+11-25 19:06:06.638  4845  4845 D LauncherStateManager: 	at com.android.launcher3.statemanager.StatefulActivity.reapplyUi(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:12)
+11-25 19:06:06.638  4845  4845 D LauncherStateManager: 	at com.android.launcher3.Launcher.onHandleConfigurationChanged(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:25)
+11-25 19:06:06.638  4845  4845 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: false state: Normal stateManager.getState(): Normal
+11-25 19:06:06.638  4845  4845 D KeyboardInsetsHandler: setState, toState:Normal StateManager(mLastStableState:Normal, mCurrentStableState:Normal, mState:Normal, mRestState:null, isInTransition:false)
+11-25 19:06:06.638  4845  4845 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+11-25 19:06:06.638  4845  4845 D KeyboardStateManager: hideKeyboard
+11-25 19:06:06.638  4845  4845 D KeyboardStateManager: isImeShown: false
+11-25 19:06:06.638  4845  4845 D StatsLog: LAUNCHER_GOOGLE_SEARCH_RESTORE_LIST_SIZE_AFTER_ACTIVITY_RESTART
+11-25 19:06:06.640  2882  2882 I SystemSubtypesReportModule: SystemSubtypesReportModule$2.onCurrentInputMethodEntryChanged():168 entry: en-US, source: UNSPECIFIED
+11-25 19:06:06.640  2882  2882 I KeyboardContextProvider: KeyboardContextProvider.updateBaseContextAndInvalidateKeyboardContextCache():112 updateBaseContextAndInvalidateKeyboardContextCache(): com.android.inputmethod.latin.LatinIME@bbc3fe7
+11-25 19:06:06.640  1007  4906 D audio_hw_35l41: update rotation 90, enabled 0
+11-25 19:06:06.640  4845  4845 D ModelCallbacks: startBinding: hotseat layout was vertical: false and is setting to false
+11-25 19:06:06.642  1701  2994 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.642  1701  2994 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.642  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.resetLanguages():2916 resetLanguages() debounced: languages=null, conditionName=orientation
+11-25 19:06:06.643  2882  2882 I DeviceModeModule: DeviceModeModule.calculateAndNotify():243 Device mode 'phone' from display metrics 'DisplayMetrics{density=0.0, width=1080, height=2400, scaledDensity=0.0, xdpi=428.625, ydpi=429.295}' or smallestScreenWidthDp: 411
+11-25 19:06:06.643  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1294 changedMask : 20000480
+11-25 19:06:06.643  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.clearInputMethodServiceData():1237 clearInputMethodServiceData for configurationChange
+11-25 19:06:06.644  4845  4865 D AmbientCueRepository: connectToAce: connecting TO ACE and registering
+11-25 19:06:06.645  4845  4865 D AllAppsStore: setApps: apps.length=64
+11-25 19:06:06.645  4845  4865 D AllAppsStore: notifyUpdate: notifying listeners
+11-25 19:06:06.645  4845  4845 D SsCardRecyclerViewAdapter: Updating Smartspace targets to targets for Lockscreen
+11-25 19:06:06.647  1701  2913 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.647  1701  2913 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.647 21783 21783 I cfvo    : [hasSecondaryDisplayAndMainDisplayIsDisabled] Main display is ON [CONTEXT ratelimit_period="1 SECONDS" ]
+11-25 19:06:06.648  4845  4865 D TaskbarManager: createTaskbarUIControllerForRecentsViewContainer displayId=0 mPrimaryDisplayId=0
+11-25 19:06:06.648  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding rootView displayId=0
+11-25 19:06:06.648  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding root layout displayId=0
+11-25 19:06:06.648  4845  4865 D BubbleBarView: BubbleBar RTL properties changed, new layoutDirection=0 previous layoutDirection=-1
+11-25 19:06:06.649  4845  4845 D SsCardRecyclerViewAdapter: Updating Smartspace targets to targets for Lockscreen
+11-25 19:06:06.649  4845  4845 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+11-25 19:06:06.649  4845  4845 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 0 and y = 0
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{91b9ee VFED..C.. ......ID 0,0-0,0 #1}
+11-25 19:06:06.649  4845  4845 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 1 and y = 0
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{c6de8f VFED..C.. ......ID 0,0-0,0 #2}
+11-25 19:06:06.649  4845  4845 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 2 and y = 0
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{e16851c VFED..C.. ......ID 0,0-0,0 #3}
+11-25 19:06:06.649  4845  4845 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 3 and y = 0
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{bcd6525 VFED..C.. ......ID 0,0-0,0 #4}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{ae386fa VFED..C.. ......ID 0,0-0,0 #5}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{55cd4ab VFED..C.. ......ID 0,0-0,0 #8}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{894d708 VFED..C.. ......ID 0,0-0,0 #9}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{9142ea1 VFED..C.. ......ID 0,0-0,0 #a}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{55318c6 VFED..C.. ......ID 0,0-0,0 #b}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{5121087 VFED..C.. ......ID 0,0-0,0 #c}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{9245bb4 VFED..C.. ......ID 0,0-0,0 #d}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{9a413dd VFED..C.. ......ID 0,0-0,0 #f}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{2d7fb52 VFED..C.. ......ID 0,0-0,0 #11}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{7f52e23 VFED..C.. ......ID 0,0-0,0 #13}
+11-25 19:06:06.649  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.google.android.apps.nexuslauncher.qsb.SmartspaceViewContainer{9857f20 V.E...... ......I. 0,0-0,0 #7f0a0356 app:id/search_container_workspace}
+11-25 19:06:06.651  4845  4845 D ConnectorProvider: Connector disabled by gantry flag.
+11-25 19:06:06.654  4845  4845 D SmartspaceInteractor: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=SmartspaceTarget{mSmartspaceTargetId='date_card_794317_92634', mHeaderAction=null, mBaseAction=null, mCreationTimeMillis=0, mExpiryTimeMillis=0, mScore=0.0, mActionChips=[], mIconGrid=[], mFeatureType=1, mSensitive=false, mShouldShowExpanded=false, mSourceNotificationKey='null', mComponentName=ComponentInfo{com.google.android.apps.nexuslauncher/kb.x}, mUserHandle=UserHandle{0}, mAssociatedSmartspaceTargetId='null', mSliceUri=null, mWidget=null, mTemplateData=BaseTemplateData{mTemplateType=1, mPrimaryItem=null, mSubtitleItem=null, mSubtitleSupplementalItem=null, mSupplementalLineItem=null, mSupplementalAlarmItem=null, mLayoutWeight=0}, mRemoteViews=null}, mSmartspaceActionId='null', mEventType=8}
+11-25 19:06:06.659  4845  4865 D PerDisplayTaskbarResource: recreateTaskbars displayId=0
+11-25 19:06:06.659  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay displayId=0
+11-25 19:06:06.659  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: getting device profile displayId=0
+11-25 19:06:06.659  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: destroying taskbar displayId=0
+11-25 19:06:06.659  4845  4865 D PerDisplayTaskbarResource: destroyTaskbarForDisplay displayId=0
+11-25 19:06:06.660  4845  4865 D CueBarController: CuebarController destroy
+11-25 19:06:06.660  4845  4865 D TaskbarOverlayController: onDestroy: 	at com.android.launcher3.taskbar.PerDisplayTaskbarResource.destroyTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:486)
+11-25 19:06:06.660  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl.recreateTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:171)
+11-25 19:06:06.660  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl$$ExternalSyntheticLambda0.accept(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:138)
+11-25 19:06:06.660  4845  4865 D TaskbarOverlayController: onDestroy: Was window already present? false
+11-25 19:06:06.660  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: isTaskbarEnabled=true [dp != null]=true mUserUnlocked=true dp.isTaskbarPresent=false isTaskbarEnabled=true displayExists=true displayId=0
+11-25 19:06:06.660  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: creating taskbar displayId=0
+11-25 19:06:06.665  1701  3062 I WindowManager: finishDrawing of orientation change: Window{a794095 u0 ScreenDecorOverlay} 76ms
+11-25 19:06:06.665  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.discardAllKeyboardViewAndInputView():1524 discardAllKeyboardViewAndInputView()
+11-25 19:06:06.666 31621 31649 I AiAiEcho: (REDACTED) %s No tracked ambient data found for ID: %s; for event type: %d, skipping event processing.
+11-25 19:06:06.666  1701  3062 I WindowManager: finishDrawing of orientation change: Window{570176f u0 ScreenDecorOverlayBottom} 78ms
+11-25 19:06:06.668 21783 21783 I brtz    : (REDACTED) Setting floaty + banner max height to: %s (the maximumContentHeight is: %s, and the extraAllowedHeight is: %s)
+11-25 19:06:06.668  4845  4865 W SystemServiceRegistry: No service published for: personal_context
+11-25 19:06:06.669  4845  4865 W AmbientCueRepository: spoonBarOptedIn not found, default to enabled
+11-25 19:06:06.669  4845  4865 D LauncherAmbientCueVM: onUnfilteredActionsChange: AmbientCueActions(actions=[], loggingContext=null)
+11-25 19:06:06.671  1701  2994 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.671  1701  2994 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.672  4845  4865 D AmbientCueRepository: connectToAce: connecting TO ACE and registering
+11-25 19:06:06.673  4845  4865 D AllAppsStore: setApps: apps.length=64
+11-25 19:06:06.673  4845  4865 D AllAppsStore: notifyUpdate: notifying listeners
+11-25 19:06:06.673  1701  3062 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.673  1701  3062 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.674  4845  4865 D TaskbarManager: createTaskbarUIControllerForRecentsViewContainer displayId=0 mPrimaryDisplayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding rootView displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding root layout displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: onDisplayInfoChanged: Rotation changed displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: getting device profile displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: destroying taskbar displayId=0
+11-25 19:06:06.674  4845  4865 D PerDisplayTaskbarResource: destroyTaskbarForDisplay displayId=0
+11-25 19:06:06.675  4845  4865 D CueBarController: CuebarController destroy
+11-25 19:06:06.676  4845  4865 D TaskbarOverlayController: onDestroy: 	at com.android.launcher3.taskbar.PerDisplayTaskbarResource.destroyTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:486)
+11-25 19:06:06.676  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl.recreateTaskbarForDisplay(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:171)
+11-25 19:06:06.676  4845  4865 D TaskbarOverlayController: 	at com.android.launcher3.taskbar.TaskbarManagerImpl$$ExternalSyntheticLambda29.accept(go/retraceme df6afd6ddbfb97877b5bbd6671f1dcc462abdd74820aeec8fe554f5d5a0e7f88:76)
+11-25 19:06:06.676  4845  4865 D TaskbarOverlayController: onDestroy: Was window already present? false
+11-25 19:06:06.676  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: isTaskbarEnabled=true [dp != null]=true mUserUnlocked=true dp.isTaskbarPresent=false isTaskbarEnabled=true displayExists=true displayId=0
+11-25 19:06:06.676  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: creating taskbar displayId=0
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{ce18ba VFED..C.. ......ID 0,0-0,0 #20}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.folder.FolderIcon{d25636b VFE...C.. ......I. 0,0-0,0 #21}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.folder.FolderIcon{cf81ec8 VFE...C.. ......I. 0,0-0,0 #33}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{2d45f74 VFED..C.. ......ID 0,0-0,0 #47}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{691fee0 VFED..C.. ......ID 0,0-0,0 #77}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{2d0605e VFED..C.. ......ID 0,0-0,0 #81}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{6c9dc3f VFED..C.. ......ID 0,0-0,0 #82}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{cc8290c VFED..C.. ......ID 0,0-0,0 #83}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{9035255 VFED..C.. ......ID 0,0-0,0 #86}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{c3e246a VFED..C.. ......ID 0,0-0,0 #87}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{989fd5b VFED..C.. ......ID 0,0-0,0 #8b}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{a54c9f8 VFED..C.. ......ID 0,0-0,0 #97}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{1121d36 VFED..C.. ......ID 0,0-0,0 #9a}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{7611437 VFED..C.. ......ID 0,0-0,0 #9d}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{1ae7709 VFED..C.. ......ID 0,0-0,0 #a0}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{db8532f VFED..C.. ......ID 0,0-0,0 #a3}
+11-25 19:06:06.678  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{83e7ac5 VFED..C.. ......ID 0,0-0,0 #a4}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{5607c1a VFED..C.. ......ID 0,0-0,0 #a7}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{600f34b VFED..C.. ......ID 0,0-0,0 #ac}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{f8aa128 VFED..C.. ......ID 0,0-0,0 #af}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{810fe41 VFED..C.. ......ID 0,0-0,0 #b3}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{3fa3fe6 VFED..C.. ......ID 0,0-0,0 #b4}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{2e97927 VFED..C.. ......ID 0,0-0,0 #b5}
+11-25 19:06:06.679  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.DoubleShadowBubbleTextView{b7ca7d4 VFED..C.. ......ID 0,0-0,0 #b8}
+11-25 19:06:06.681 21783 21783 I btpd    : #showDragHandler
+11-25 19:06:06.681 21783 21783 I bsto    : #enableDragHandler
+11-25 19:06:06.681 21783 21783 I btpu    : Not setting up DragToFull again, since we already set it up
+11-25 19:06:06.681  4845  4845 D b/387844520: getOutlineOffsetX: measured width = 0, mNormalizedIconSize = 138, last updated width = 0
+11-25 19:06:06.681 21783 21783 I btpd    : #showDragHandler
+11-25 19:06:06.681 21783 21783 I bsto    : #enableDragHandler
+11-25 19:06:06.681 21783 21783 I btpu    : Not setting up DragToFull again, since we already set it up
+11-25 19:06:06.681  4845  4845 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 4 and y = 0
+11-25 19:06:06.681  4845  4845 D CellLayout: Adding view to ShortcutsAndWidgetsContainer: com.android.launcher3.views.PredictedAppIcon{9d9453b VFED..C.. ......ID 0,0-0,0}
+11-25 19:06:06.684  4845  4865 W SystemServiceRegistry: No service published for: personal_context
+11-25 19:06:06.684  4845  4865 W AmbientCueRepository: spoonBarOptedIn not found, default to enabled
+11-25 19:06:06.685  4845  4865 D LauncherAmbientCueVM: onUnfilteredActionsChange: AmbientCueActions(actions=[], loggingContext=null)
+11-25 19:06:06.688  1701  3310 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.688  1701  3310 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.690  4845  4865 D AmbientCueRepository: connectToAce: connecting TO ACE and registering
+11-25 19:06:06.690  4845  4865 D AllAppsStore: setApps: apps.length=64
+11-25 19:06:06.690  4845  4865 D AllAppsStore: notifyUpdate: notifying listeners
+11-25 19:06:06.691  1701  3062 D AccessibilityManagerService: .getAccessibilityShortcutTargets {shortcutType=1, userId=0}
+11-25 19:06:06.692  1701  3062 V AccessibilityUserState: updateShortcutTargets: type:accessibility_button_targets, current:{}, new:[]
+11-25 19:06:06.692  4845  4865 D TaskbarManager: createTaskbarUIControllerForRecentsViewContainer displayId=0 mPrimaryDisplayId=0
+11-25 19:06:06.692  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding rootView displayId=0
+11-25 19:06:06.692  4845  4865 D PerDisplayTaskbarResource: recreateTaskbarForDisplay: adding root layout displayId=0
+11-25 19:06:06.693  4845  4865 D BubbleBarView: BubbleBar RTL properties changed, new layoutDirection=0 previous layoutDirection=-1
+11-25 19:06:06.704  1701  2994 I WindowManager: finishDrawing of orientation change: Window{9d73b33 u0 Taskbar} 116ms
+11-25 19:06:06.712  2882  2882 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():152 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():552 Destroy existing keyboard group manager in jao
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():572 KeyboardGroupManager destroyed in jao.
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():122 Create keyboard group manager listenable future in jao
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():552 Destroy existing keyboard group manager in gla
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():572 KeyboardGroupManager destroyed in gla.
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():122 Create keyboard group manager listenable future in gla
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():552 Destroy existing keyboard group manager in jek
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():572 KeyboardGroupManager destroyed in jek.
+11-25 19:06:06.714  2882  2882 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():122 Create keyboard group manager listenable future in jek
+11-25 19:06:06.714  2882  2882 I WindowMetricsHelper: WindowMetricsHelper.predictAndNotify():121 Window metrics predicted by cache.
+11-25 19:06:06.714  2882  2882 I DeviceModeModule: DeviceModeModule.calculateAndNotify():243 Device mode 'phone' from display metrics 'DisplayMetrics{density=0.0, width=2400, height=1080, scaledDensity=0.0, xdpi=428.625, ydpi=429.295}' or smallestScreenWidthDp: 411
+11-25 19:06:06.715  9828  1446 D AdvertisingIdClient: AdvertisingIdClient already created.
+11-25 19:06:06.715  9828  1446 D AdvertisingIdClient: AdvertisingIdClient is not bounded. Starting to bind it...
+11-25 19:06:06.716  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-25 19:06:06.722  2882  1450 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():72 parseKeyboardGroupDef() 2132213834 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 8 ms
+11-25 19:06:06.722  2882  1448 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():72 parseKeyboardGroupDef() 2132213830 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 8 ms
+11-25 19:06:06.722  2882  1449 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():72 parseKeyboardGroupDef() 2132213833 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 8 ms
+11-25 19:06:06.725  2199  2225 V RecentTasksController: Notify recent tasks changed: 1
+11-25 19:06:06.725  4845  4845 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-25 19:06:06.726  2199  2225 V RecentTasksController: generateList(getRecentTasks)
+11-25 19:06:06.726  2199  2225 V RecentTasksController: initializeDesksMap - desktop windowing not available
+11-25 19:06:06.726  2199  2225 V RecentTasksController: Added fullscreen task: 29288
+11-25 19:06:06.726  2199  2225 V RecentTasksController: Added fullscreen task: 29255
+11-25 19:06:06.726  2199  2225 V RecentTasksController: Added fullscreen task: 29233
+11-25 19:06:06.726  2199  2225 V RecentTasksController: generateList - complete
+11-25 19:06:06.727  4845  4866 D PreloadThumbnailUseCase: Preloading thumbnails for task ids: [[id=29233 windowingMode=1 user=0 lastActiveTime=961855391 lastFocusedTime=961854084] null, [id=29255 windowingMode=1 user=0 lastActiveTime=1156206319 lastFocusedTime=0] null, [id=29288 windowingMode=1 user=0 lastActiveTime=1588050707 lastFocusedTime=1578845323] null]
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.730  2882  2882 I GoogleInputMethodService: GoogleInputMethodService$8.onWindowMetricsChanged():872 windowMetrics: bounds() = Rect(132, 74 - 2274, 1080), insets() = Rect(0, 0 - 0, 0)
+11-25 19:06:06.730  2882  2882 W LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():369 Null input view, cannot update padding!
+11-25 19:06:06.731  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.initializeInputMethodServiceData():927 initializeInputMethodServiceData for oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=portrait_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-25 19:06:06.732  2882  2882 I ThemeUtil: ThemeUtil.isDynamicColorHigherContrastMode():340 Detected higher contrast mode: 67.349419
+11-25 19:06:06.741  2882  2882 I KeyboardThemeProvider: KeyboardThemeProvider.applyKeyboardTheme():27 Apply keyboard theme: theme,!gsf,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,KEYBOARD_MODE=1,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LANDSCAPE,LIGHT_THEME=false,ORIENTATION=2,PHYSICAL_DIAGONAL=5.6344624,POPUP,SCREEN_SHORTEST_WIDTH=411,SCREEN_SHORTEST_WIDTH_NO_SCALE=411,SW400DP,XXHDPI,density_2.625,enable_popup_on_keypress=true,font_scale_1.0,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff0c082e-ffe3e3ff-27d72ef6077ef8eb26b388f5c036b740,pgsans,silkpopup
+11-25 19:06:06.742  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.getAdditionalImeDefs():2571 getAdditionalImeDefs() called, flag enabled: true, isUserUnlocked: true
+11-25 19:06:06.742  2882  2882 I InputBundle: InputBundle.prefetchKeyboard():685 prefetchKeyboard: prime
+11-25 19:06:06.743  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():143 requestKeyboardDef(): type=prime, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-25 19:06:06.743  2882  2882 I KeyboardDefManager: KeyboardDefManager.requestKeyboardDef():232 requestKeyboardDef(): getOrCreate from cache, info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-25 19:06:06.744  2882  2882 I KeyboardDefManager: KeyboardDefManager$Companion$addFutureCallbackForKeyboardDefReceiver$<anonymous>.onSuccess():524 requestKeyboardDef onSuccess(): info=pvy{defIds=[#0x7f170555, #0x7f1707eb], defIdsCacheKey=2132215125,2132215787}
+11-25 19:06:06.748  2199  2199 D StatusBarBounds: Bounds changed! Triggered by layout of: startSideContent. Start side: REDUCED (width diff: 0px, height diff: -57px. Old: Rect(47, 1 - 437, 132) -> New: Rect(153, 0 - 543, 74)). End side: No change (remains Rect(729, 1 - 1016, 132))
+11-25 19:06:06.749  2199  2199 D StatusBarBounds: Bounds changed! Triggered by layout of: endSideContent. Start side: No change (remains Rect(153, 0 - 543, 74)). End side: REDUCED (width diff: 0px, height diff: -57px. Old: Rect(814, 1 - 1101, 132) -> New: Rect(1913, 0 - 2200, 74))
+11-25 19:06:06.751  2882  2882 I KeyboardInterfacePrivate: IKeyboard.createKeyboard():71 Keyboard created from HiltKeyboardFactory: com.google.android.apps.inputmethod.latin.keyboard.LatinPrimeKeyboard
+11-25 19:06:06.751  2882  2882 I InputBundleManager: InputBundleManager.loadActiveInputBundleId():552 loadActiveInputBundleId: und-Latn-x-password, password
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  2882  2882 I ThemeUtil: ThemeUtil.applyThemeStyle():149 Theme style FocusRingsOverride is applied dynamically
+11-25 19:06:06.752  1701  2994 I WindowManager: finishDrawing of orientation change: Window{d7f0974 u0 StatusBar} 164ms
+11-25 19:06:06.755  2199  2199 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+11-25 19:06:06.755  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.googlequicksearchbox, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=0}}, true)
+11-25 19:06:06.755  2882  2882 W SessionManager: SessionManager.beginSession():73 Try to begin an already begun session [INPUT_SESSION], end it first
+11-25 19:06:06.755 12197 12197 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-25 19:06:06.755  2882  2882 W LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():369 Null input view, cannot update padding!
+11-25 19:06:06.756  2882  1379 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-25 19:06:06.757  2882  2882 I ImeDefCache: ImeDefCache.clearCacheForLanguages():340 clearCacheForLanguages: languagesToClear=null, conditionName=orientation
+11-25 19:06:06.758  2882  2882 I AdditionalImeDefCache: AdditionalImeDefCache.clearAdditionalImeDefsForCondition():303 clearAdditionalImeDefsForCondition() clear additional ImeDefs: []
+11-25 19:06:06.758  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.startLoadingInputMethodEntrySettings():815 Start loading input method entry settings: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}]
+11-25 19:06:06.758  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.updateInputMethodEntrySettingsLoadingTask():944 update loading task with resetImplicitlyEnabledEntries is false
+11-25 19:06:06.758  2882  2882 I InputMethodEntryManager: InputMethodEntryManager$4.onSuccess():966 Success load entries: [LanguageTagVariantTuple{languageTag=en-US, variant=qwerty}], resetImplicitlyEnabledEntries=false, initialized=true
+11-25 19:06:06.759 12197 12197 D ViewRootImpl: Skipping stats log for color mode
+11-25 19:06:06.763  2882  1451 I PerLanguageDataDownloader: PerLanguageDataDownloader.downloadDataInternal():168 downloading Data for en
+11-25 19:06:06.763  2882  1451 I ManifestedDataDownloader: ManifestedDataDownloader.download():67 downloading manifest https://www.gstatic.com/android/keyboard/modelpack/proactiveek/embedding_gemma/2025120304/en_manifest.json
+11-25 19:06:06.764  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.changeCurrentInputMethodEntry():3191 Set current input method entry: source=UNSPECIFIED, entryChanged=false, enablePersist=true, oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=landscape_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-25 19:06:06.764  2882  2882 I InputMethodEntryManager: InputMethodEntryManager.loadAdditionalImeDefsForCurrentEntry():3224 loadAdditionalImeDefsForCurrentEntry(): oyz{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_android_software_xr_api_spatial=false_device=phone_device_size=default_enable_free_cursor_by_long_press_space=true_enable_number_row=false_enable_number_row_in_password=true_enable_pk_simulator=false_enable_pk_simulator_setting=false_enable_scrub_move=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_simplified_expression_keyboard=false_expressions=normal_four_or_more_letter_rows=false_free_cursor=false_free_cursor_del_swipe_delete=false_free_cursor_in_split_keyboard_gap=false_keyboard_font_size_setting=_keyboard_mode=normal_language=en-US_layout_9key_split=false_orientation=landscape_physical_keyboard=nokeys_pk_simulator_vk_ready=false_pref_enable_flick_symbols=false_rtl_layout=false_show_comma_key=true_show_period_key=true_show_secondary_digits=true_show_suggestion_strip=true_show_suggestions=true_split_with_duplicate_keys=true_true=true_variant=qwerty_writing_helper_enable_by_word_revert=false, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-25 19:06:06.764  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onCurrentInputMethodEntryChanged():2744 onCurrentInputMethodEntryChanged(): imeDefsChanged=false, entryLanguageVariantChanged=false, keyboardContextChanged=false
+11-25 19:06:06.764  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onCurrentInputMethodEntryChanged():2771 Skip the entry change as the input method entry is consider as not changed.
+11-25 19:06:06.764  2882  2882 I SystemSubtypesReportModule: SystemSubtypesReportModule$2.onCurrentInputMethodEntryChanged():168 entry: en-US, source: UNSPECIFIED
+11-25 19:06:06.765  2882  3238 I SP      : Registering emoticon_content_description.2022081613, url: https://www.gstatic.com/android/keyboard/emoticon_content_desc/202208161305/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2022081613, current: 2022081613
+11-25 19:06:06.766  9828  9828 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-25 19:06:06.767  2882  3214 E UserFeatureCache: UserFeatureCache.getStore():769 Wrong feature id provided -1 for protobuf rwh.
+11-25 19:06:06.767  2882  3214 E UserFeatureCache: UserFeatureCache.getProto():691 Feature not enabled should not called: 19
+11-25 19:06:06.768  9828  1446 D AdvertisingIdClient: AdvertisingIdClient is bounded
+11-25 19:06:06.770  9828  1446 I AdvertisingIdClient: shouldSendLog 1586962792
+11-25 19:06:06.770  9828  1446 I AdvertisingIdClient: GetInfoInternal elapse 56ms
+11-25 19:06:06.771  2882  3214 W LatinCommonMetricsProcessor: LatinCommonMetricsProcessor.processInputMethodEntryChanged():2680 The new entry is equal to the old entry
+11-25 19:06:06.773  2882  3238 I SP      : Registering content_cache.2024032915, url: https://www.gstatic.com/android/keyboard/modelpack/contentcache/202403291544/superpacks_manifest.json, constraints: W:*:*:*, flags: bg, requested: 2024032915, current: 2024032915
+11-25 19:06:06.773  2882  3238 I SuperpacksManagerImpl: SuperpacksManagerImpl$3$1.onSuccess():536 emoticon_content_description.registerManifest() succeeded
+11-25 19:06:06.773  2882  3238 I SuperpacksManagerImpl: SuperpacksManagerImpl$3$1.onSuccess():536 content_cache.registerManifest() succeeded
+11-25 19:06:06.774  2882  3238 I SP      : Syncing emoticon_content_description (2022081613) with slices: [7a635888cb828dfa2fc744b7b9b50f04], metadata: false
+11-25 19:06:06.775  9828  9828 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-25 19:06:06.776  9828  9828 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-25 19:06:06.782  1701  1788 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-25 19:06:06.784  1701  2913 W InputChannel-JNI: Channel already disposed.
+11-25 19:06:06.789  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-25 19:06:06.789  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-25 19:06:06.789  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-25 19:06:06.793  1701  2098 D TcpMetricsLogger: connect: uid=10494 netId=117 dst=[192.168.1.2]:443 latencyMs=3 err=0
+11-25 19:06:06.821   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-25 19:06:06.821  2882  3238 I SP      : Syncing content_cache (2024032915) with slices: [74ed8b2e38ec1bc8af70aa63d8ec49de, 8722425f4121ffdea802b1066df73991, fa1da98da1212aad6fb9a8efaff48148], metadata: true
+11-25 19:06:06.847  2882  3238 I SP      : Sync for emoticon_content_description succeeded in 73 ms: no changes
+11-25 19:06:06.847  2882  3238 I SP      : GC for 'emoticon_content_description' (10) with ttl of 0 ms took 0 ms (0/0/0)
+11-25 19:06:06.865  2882  3238 I SuperpacksManagerImpl: SuperpacksManagerImpl$19.onSyncSuccess():931 emoticon_content_description.sync() succeeded
+11-25 19:06:06.866  2882  3238 I SP      : Sync for content_cache succeeded in 44 ms: no changes
+11-25 19:06:06.866  2882  3238 I SP      : GC for 'content_cache' (10) with ttl of 0 ms took 0 ms (0/0/0)
+11-25 19:06:06.866  2882  3238 I SuperpacksManagerImpl: SuperpacksManagerImpl$19.onSyncSuccess():931 content_cache.sync() succeeded
+11-25 19:06:06.869  2882  3244 I DownloadManager: DownloadManager.completeDownload():504 Download for __PEKB_manifest_pek_blocklist__en scheduled with params psl[allowMetered=true, requireCharging=false, foreground=false, immediately=true, priority=0]
+11-25 19:06:06.869  2882  3244 I DownloadManager: DownloadManager.startDownload():604 start download of __PEKB_manifest_pek_blocklist__en
+11-25 19:06:06.869   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.869   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-25 19:06:06.869   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.869  2882  3244 I DownloadManager: DownloadManager$4.onSuccess():672 download for __PEKB_manifest_pek_blocklist__en is finished with files # tkm@1c72a75d
+11-25 19:06:06.870  2882  1451 I ManifestedDataDownloader: ManifestedDataDownloader.checkVersionAndDownload():98 filegroup __PEKB_pek_blocklist__en with version 2025120304 is already downloaded
+11-25 19:06:06.870  2882  1451 I PerLanguageDataDownloader: PerLanguageDataDownloader$2.onSuccess():188 Data en downloaded with version 2025120304
+11-25 19:06:06.875   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-25 19:06:06.879   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.879   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-25 19:06:06.880   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.883   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-25 19:06:06.896   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.896   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-25 19:06:06.896   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.896   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000b
+11-25 19:06:06.900   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.900   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 11 app_status = 0
+11-25 19:06:06.900   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.900   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-25 19:06:06.905   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.905   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-25 19:06:06.905   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.907 12197 12197 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-25 19:06:06.907 12197 12197 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-25 19:06:06.908 12197 12197 D VRI[MainActivity]: WindowInsets changed: 2268x1080 statusBars:[0,74,0,0] navigationBars:[0,0,126,0] mandatorySystemGestures:[0,74,126,0] 
+11-25 19:06:06.908 12197 12197 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.view.ViewRootImpl$$ExternalSyntheticLambda14@76f24d5
+11-25 19:06:06.908 12197 12237 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.view.ViewRootImpl$$ExternalSyntheticLambda14@76f24d5
+11-25 19:06:06.908  1701  2913 D CoreBackPreview: Window{c74f189 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@5321d45, mPriority=0, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-25 19:06:06.958  1701  2913 D WindowManager: setClientSurface Surface(name=VRI-com.sutliff.pocket/com.sutliff.pocket.MainActivity#8237)/@0x39fac9a for c74f189 com.sutliff.pocket/com.sutliff.pocket.MainActivity
+11-25 19:06:06.960 12197 12197 I Surface : Creating surface for consumer unnamed-12197-2 with slotExpansion=1 for 64 slots
+11-25 19:06:06.960 12197 12197 I Surface : Creating surface for consumer VRI[MainActivity]#2(BLAST Consumer)2 with slotExpansion=1 for 64 slots
+11-25 19:06:06.980  1701  2913 I WindowManager: finishDrawing of relaunch: Window{c74f189 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity} 396ms
+11-25 19:06:06.982   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000a
+11-25 19:06:06.983  1701  1789 V SharedSurfaceAnimation: Checking SharedSurface matching for: ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.ui.floaty.activity.FloatyActivity}, user= 0
+11-25 19:06:06.983  1701  1789 V SharedSurfaceAnimation:   No matching provider found.
+11-25 19:06:06.985  4845  4865 D LauncherAmbientCueVM: Debounced empty action: updating state
+11-25 19:06:06.986  2199  2365 V WindowManagerShell: onTransitionReady(transaction=7305739490981)
+11-25 19:06:06.986  2199  2225 V WindowManagerShell: onTransitionReady (#591) android.os.BinderProxy@4c34818: {id=591 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=CHANGE f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE p=WCT{android.os.BinderProxy@431706d} leash=Surface(name=Task=29288#8123)/@0x9d230e0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=TO_BACK f=TRANSLUCENT|FLAG_CHANGED_INTERACTIVE p=WCT{android.os.BinderProxy@431706d} leash=Surface(name=Task=29291#8215)/@0x6a33f99 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=CHANGE f=FLAG_IS_TASK_DISPLAY_AREA p=WCT{android.os.BinderProxy@68e1acd} leash=Surface(name=DefaultTaskDisplayArea#10)/@0xa38e25e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=CHANGE f=NONE p=WCT{android.os.BinderProxy@b44a6d0} leash=Surface(name=AppZoomOut:2:14#9)/@0x1e5363f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=CHANGE f=NONE p=WCT{android.os.BinderProxy@a9c44a2} leash=Surface(name=WindowedMagnification:0:31#3)/@0x8d97b0c sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:         {m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31#3)/@0xf5f3c55 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1 snapshot=Surface(name=RotationLayer#8231)/@0xeacc66a}
+11-25 19:06:06.986  2199  2225 V WindowManagerShell:     ]}
+11-25 19:06:06.986  2199  2225 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #591
+11-25 19:06:06.986  2199  2225 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=29288
+11-25 19:06:06.987  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=29291, isFocusedOnDisplay=false, isFocusedGlobally=false
+11-25 19:06:06.987  2199  2225 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=29288, isFocusedOnDisplay=true, isFocusedGlobally=true
+11-25 19:06:06.987  2199  2225 V RecentTasksController: Notify recent tasks changed: 2
+11-25 19:06:06.987  4845  4845 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+11-25 19:06:06.987  2199  2225 V WindowManagerShell: Playing animation for (#591) android.os.BinderProxy@4c34818@0
+11-25 19:06:06.987  2199  2225 D ShellSplitScreen: startAnimation: transition=591 isSplitActive=false
+11-25 19:06:06.987  2199  2225 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-25 19:06:06.987  2199  2225 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+11-25 19:06:06.988  2199  2225 V WindowManagerShell: start default transition animation, info = {id=591 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=CHANGE f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE p=WCT{android.os.BinderProxy@431706d} leash=Surface(name=Task=29288#8123)/@0x9d230e0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=TRANSLUCENT|FLAG_CHANGED_INTERACTIVE p=WCT{android.os.BinderProxy@431706d} leash=Surface(name=Task=29291#8215)/@0x6a33f99 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},{m=CHANGE f=FLAG_IS_TASK_DISPLAY_AREA p=WCT{android.os.BinderProxy@68e1acd} leash=Surface(name=DefaultTaskDisplayArea#10)/@0xa38e25e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},{m=CHANGE f=NONE p=WCT{android.os.BinderProxy@b44a6d0} leash=Surface(name=AppZoomOut:2:14#9)/@0x1e5363f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},{m=CHANGE f=NONE p=WCT{android.os.BinderProxy@a9c44a2} leash=Surface(name=WindowedMagnification:0:31#3)/@0x8d97b0c sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},{m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31#3)/@0xf5f3c55 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1 snapshot=Surface(name=RotationLayer#8231)/@0xeacc66a}]}
+11-25 19:06:06.988  2199  2225 V WindowManagerShell: Display is changing, resolve the animation hint.
+11-25 19:06:06.988  2199  2225 V WindowManagerShell:   task 29288 isn't requesting seamless, so not seamless.
+11-25 19:06:06.990  1701  1785 V WindowManager: Sent Transition (#591) createdAt=11-25 19:06:06.540 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=29288 effectiveUid=10494 seqId=0 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sutliff.pocket/.MainActivity } baseActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} topActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} origActivity=null realActivity=ComponentInfo{com.sutliff.pocket/com.sutliff.pocket.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=1579045164 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{824e25e Task{6b8b79b #29288 type=standard A=10494:com.sutliff.pocket}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{761363f com.sutliff.pocket.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(268, 663 - 812, 1743) leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=0 topActivityLetterboxHeight=0 topActivityAppBounds=Rect(0, 132 - 1080, 2274) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=Rect(0, 0 - 0, 0) topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 591 }
+11-25 19:06:06.990  1701  1785 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+11-25 19:06:06.990  1701  1785 V WindowManager:     info={id=591 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{824e25e Task{6b8b79b #29288 type=standard A=10494:com.sutliff.pocket}}} m=CHANGE f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE p=WCT{RemoteToken{6cee0da DefaultTaskDisplayArea@96050829}} leash=Surface(name=Task=29288#8123)/@0xac5dd6b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{31463fe Task{b013e9e #29291 type=standard I=com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.ui.floaty.activity.FloatyActivity}}} m=TO_BACK f=TRANSLUCENT|FLAG_CHANGED_INTERACTIVE p=WCT{RemoteToken{6cee0da DefaultTaskDisplayArea@96050829}} leash=Surface(name=Task=29291#8215)/@0xdd53180 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:0 taskParent=-1 winMode=1 userId=0},
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{6cee0da DefaultTaskDisplayArea@96050829}} m=CHANGE f=FLAG_IS_TASK_DISPLAY_AREA p=WCT{RemoteToken{a8354c3 AppZoomOut:2:14@64843345}} leash=Surface(name=DefaultTaskDisplayArea#10)/@0x2942a93 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{a8354c3 AppZoomOut:2:14@64843345}} m=CHANGE f=NONE p=WCT{RemoteToken{f90b140 WindowedMagnification:0:31@71849564}} leash=Surface(name=AppZoomOut:2:14#9)/@0xd23474b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{f90b140 WindowedMagnification:0:31@71849564}} m=CHANGE f=NONE p=WCT{RemoteToken{a5a9d7d Display{#0 state=ON size=2400x1080 ROTATION_90}}} leash=Surface(name=WindowedMagnification:0:31#3)/@0x5f3f344 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1},
+11-25 19:06:06.990  1701  1785 V WindowManager:         {WCT{RemoteToken{a5a9d7d Display{#0 state=ON size=2400x1080 ROTATION_90}}} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31#3)/@0x5f3f344 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 r=0->1:-1}
+11-25 19:06:06.990  1701  1785 V WindowManager:     ]}
+11-25 19:06:06.991  1701  2994 W UserManagerService: Requested status bar icon for non-badged user 0
+11-25 19:06:06.992  2199  2225 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@fdf7165
+11-25 19:06:06.995   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:06.995   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 10 app_status = 0
+11-25 19:06:06.995   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:06.996   557 22497 D libnos_datagram: Calling App 0x02 with params 0x000c
+11-25 19:06:07.001   557 22497 D libnos_datagram: App 0x02 returning 0x0
+11-25 19:06:07.001   557 22497 I citadeld: reportCitadelAppCalled app_id =  2 arg = 12 app_status = 0
+11-25 19:06:07.001   557 22497 I citadeld: Recorded atom for RPC call
+11-25 19:06:07.009  1701  1788 W ProcessStats: Tracking association SourceState{59fadae com.android.settings/1000 Service #1192672} whose proc state 8 is better than process ProcessState{f9c68e3 com.google.android.apps.wellbeing/10140 pkg=com.google.android.apps.wellbeing} proc state 15 (143 skipped)
+11-25 19:06:07.018  1701  2064 I ImeTracker: com.sutliff.pocket:782a8892: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false userId 0 displayId 0
+11-25 19:06:07.019 12197 12197 D InsetsController: hide(ime())
+11-25 19:06:07.019 12197 12197 I ImeTracker: com.sutliff.pocket:782a8892: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-25 19:06:07.019  2882  2882 I SubtypeOperator: SubtypeOperator$1.onUnbindInput():64 
+11-25 19:06:07.020  2882  2882 I SubtypeOperator: SubtypeOperator$1.onBindInput():53 
+11-25 19:06:07.020  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2477 
+11-25 19:06:07.021  1701  2064 W InputChannel-JNI: Channel already disposed.
+11-25 19:06:07.021  2882  2882 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1614 onStartInput(EditorInfo{EditorInfo{packageName=com.sutliff.pocket, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[], initialToolType=0}}, false)
+11-25 19:06:07.021  2882  2882 W LatinInputMethodServiceBase: LatinInputMethodServiceBase.updateInputViewCoverNavigation():369 Null input view, cannot update padding!
+11-25 19:06:07.022  1701  2994 I ImeTracker: system_server:05599e00: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false displayId 0
+11-25 19:06:07.022  2882  1433 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+11-25 19:06:07.022  2882  1433 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+11-25 19:06:07.023  1701  1788 I ImeTracker: system_server:05599e00: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-25 19:06:07.032   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+11-25 19:06:07.032   566   566 W HwBinder:566_3: type=1400 audit(0.0:17336): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-25 19:06:07.034   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-25 19:06:07.034   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-25 19:06:07.034   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-25 19:06:07.032   566   566 W HwBinder:566_3: type=1400 audit(0.0:17337): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-25 19:06:07.116   566   566 W HwBinder:566_3: type=1400 audit(0.0:17338): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-25 19:06:07.116   566   566 W HwBinder:566_3: type=1400 audit(0.0:17339): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-25 19:06:07.117   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=1 error(-22)
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-25 19:06:07.118   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-25 19:06:07.118   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=2 error(-22)
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-25 19:06:07.118   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-25 19:06:07.118   566   928 E hwc-display: [PrimaryDisplay] resetColorMappingInfoForClientComp:: resetColorMappingInfo() idx=3 error(-22)
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/vendor/log/hwc/PrimaryDisplay_hwc_error_log0.txt, error: Permission denied
+11-25 19:06:07.118   566   928 E hwc-display: Fail to open file /data/log/PrimaryDisplay_hwc_error_log0.txt, error: No such file or directory
+11-25 19:06:07.118   566   928 E hwc-display: Unable to open log file for PrimaryDisplay_hwc_error_log0.txt
+11-25 19:06:07.116   566   566 W HwBinder:566_3: type=1400 audit(0.0:17340): avc:  denied  { search } for  name="log" dev="dm-61" ino=352 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:vendor_log_file:s0 tclass=dir permissive=0
+11-25 19:06:07.232  9828  1134 I NearbyMediums: This GATT advertisement BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xd9 0x7a 0x75 0xe8 0x04 0x83 0xb0 0x54 0x21 0xeb 0x76 0xce 0xf8 0x03 0xb8 0x95 ], deviceToken=[ 0x2f 0x42 ], rxAdvertisement=null } is a Fast Advertisement and matched UUID 0000fef3-0000-1000-8000-00805f9b34fb in fastAdvertisementServiceUuids map with serviceID NearbySharing
+11-25 19:06:07.233  9828  1463 I NearbyConnections: Found BleAdvertisement [ 0x23 0x46 0x38 0x59 0x36 0x11 0x32 0xd9 0x7a 0x75 0xe8 0x04 0x83 0xb0 0x54 0x21 0xeb 0x76 0xce 0xf8 0x03 0xb8 0x95 ] (with EndpointId F8Y6 and EndpointInfo [ 0x32 0xd9 0x7a 0x75 0xe8 0x04 0x83 0xb0 0x54 0x21 0xeb 0x76 0xce 0xf8 0x03 0xb8 0x95 ])
+11-25 19:06:07.234  9828  1463 I NearbyConnections: ClientProxy(115582863 0p:com.google.android.gms.nearby.sharing) reporting onEndpointFound(F8Y6)
+11-25 19:06:07.234  9828  1463 I NearbyConnections: ClientProxy(115582863) reporting onEndpointDistanceChanged(F8Y6, UNKNOWN)
+11-25 19:06:07.236  9828  1460 I NearbySharing: NearbySharing Internal event EndpointDiscovered(endpointId=F8Y6)
+11-25 19:06:07.297  2199  2225 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#591) android.os.BinderProxy@4c34818@0
+11-25 19:06:07.302 21783 22924 V ClearcutMetricXmitter: Transmission is done.
+11-25 19:06:07.305  1701  1785 V WindowManager: Finish Transition (#591): created at 11-25 19:06:06.540 collect-started=0.039ms request-sent=4.844ms started=7.292ms ready=83.705ms sent=442.948ms commit=13.097ms finished=763.427ms
+11-25 19:06:07.306 21783 21783 D VRI[FloatyActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-25 19:06:07.308  2199  2225 V WindowManagerShell: Track 0 became idle
+11-25 19:06:07.308  2199  2225 V WindowManagerShell: All active transition animations finished
+11-25 19:06:07.309  1701  3310 W UserManagerService: Requested status bar icon for non-badged user 0
+11-25 19:06:07.310  1701  2174 I Surface : Creating surface for consumer unnamed-1701-329 with slotExpansion=1 for 64 slots
+11-25 19:06:07.310  1701  2174 I Surface : Creating surface for consumer ImageReader-864x1920f1m1-1701-325 with slotExpansion=1 for 64 slots
+11-25 19:06:07.311  1701  2174 W ImageReader_JNI: Unable to acquire a buffer item, very likely client tried to acquire more than maxImages buffers
+11-25 19:06:07.325  1701  2174 E ConsumerBase: [ImageReader-864x1920f1m1-1701-325] abandonLocked: ConsumerBase is abandoned!
+11-25 19:06:07.336 21783 21783 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@4b1fcef
+11-25 19:06:07.336 21783 21799 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@4b1fcef
+11-25 19:06:07.336  1701  2994 D CoreBackPreview: Window{1d53649 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.ui.floaty.activity.FloatyActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@6c02897, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+11-25 19:06:07.336 21783 21783 I apjf    : onStop; removing activeUi
+11-25 19:06:07.337 21783 21783 I aoit    : App goes background
+11-25 19:06:07.337 21783 24530 I gpiy    : (REDACTED) Updating channel creation state from %s to %s
+11-25 19:06:07.338 21783 21783 I brwp    : #onStop - FloatyInputFragmentPeer
+11-25 19:06:07.338 21783 24532 I gpjd    : (REDACTED) Sending HTTP %s request via HttpClient: %s to url: %s with headers: %s
+11-25 19:06:07.339 21783 24532 I gqwe    : (REDACTED) %s
+11-25 19:06:07.339 21783 24530 I gpiy    : (REDACTED) onChannelBroken
+11-25 19:06:07.339 21783 24532 W gpjd    : HTTP channel request via HttpClient failed
+11-25 19:06:07.339 21783 24532 W gpjd    : java.util.concurrent.CancellationException: Task was cancelled.
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at glml.g(PG:31)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at glmm.r(PG:24)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at glml.get(PG:1)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at hehs.u(PG:2)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at glox.run(PG:31)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-25 19:06:07.339 21783 24532 W gpjd    : 	at java.lang.Thread.run(Thread.java:1571)
+11-25 19:06:07.354 21783 21783 I Ma-Robin-ScreenContextViewModel: (REDACTED) screenContextAttachmentState: %s
+11-25 19:06:07.356 21783 21783 I Ma-Robin-ScreenContextViewModel: (REDACTED) buttonVisibilityStatus: %s
+11-25 19:06:07.357 21783 21783 I bsqf    : #onStop (PageContainer)
+11-25 19:06:07.357 21783 21783 I bsqf    : Activity stopping, saving floaty's state
+11-25 19:06:07.359 21783 21827 I bqwd    : #createPersistedState
+11-25 19:06:07.359 21783 21827 I bqwd    : #savePersistedState
+11-25 19:06:07.368 21783 21783 I Ma-Robin-ScreenContextViewModel: Setting screen context in thread flag to false
+11-25 19:06:07.368 21783 21783 I bfgz    : ScreenContext is cleared
+11-25 19:06:07.368 21783 21783 I bfgz    : (REDACTED) Updating screen context button click state with action: %s
+11-25 19:06:07.368 21783 21783 I Ma-Robin-ScreenContextViewModel: (REDACTED) screenContextAttachmentState: %s
+11-25 19:06:07.369 21783 21783 I Ma-Robin-ScreenContextViewModel: (REDACTED) buttonVisibilityStatus: %s
+11-25 19:06:07.369 21783 21783 I bfgz    : (REDACTED) Clear - suggestionMetadata in clear: %s
+11-25 19:06:07.370 21783 21783 I avlc    : Not stopping. No query to stop
+11-25 19:06:07.371 21783 21783 I astx    : (REDACTED) Gemini backgrounded from %s, clearing foreground state
+11-25 19:06:07.372 21783 21783 I atem    : (REDACTED) onActivityStopped(%s): remainingSurface=%d, remainingForeground=%d
+11-25 19:06:07.372 21783 21783 I atem    : (REDACTED) Emitting RobinAppEndReport: sessionId=%s, sessionCounter=%d, reason=%s, physicalEndMs=%d, durationMs=%d
+11-25 19:06:07.381 21783 21827 I awtz    : #getOobeStatus: OptedIn [CONTEXT ratelimit_period="10 SECONDS" skipped=3 ]
+11-25 19:06:07.381 21783 21783 I bkfe    : reset
+11-25 19:06:07.401 21783 21783 I axke    : (REDACTED) #onStop, shouldExtendTts: %s
+11-25 19:06:07.401 21783 21783 I axke    : Pausing TTS from SpeechViewModel
+11-25 19:06:07.402 21783 21783 I axrz    : TTS Pause requested
+11-25 19:06:07.402 21783 21783 I axrz    : TTS Pause completed
+11-25 19:06:07.501   557   575 D libnos_datagram: Calling App 0x00 with params 0x0200
+11-25 19:06:07.534   557   575 D libnos_datagram: App 0x00 returning 0x0
+11-25 19:06:07.788  2362  3768 D ImpulseConnection: timeout didn't happen: com.google.android.apps.turbo
+11-25 19:06:08.013  1701  2098 W AppOps  : Noting op not finished: uid 10164 pkg com.google.android.gms code 169 startTime of in progress event=1795651567312
+11-25 19:06:08.227  1014  2766 I bthal.activity: bt_power: LeAdvStat: 19:06:07:226 - 19:06:08:227, duration: 1001, le_adv_count: 1, total_le_adv_count: 471788, total_event_count: 1
+11-25 19:06:08.631 21783  1426 I FA      : Application backgrounded at: timestamp_millis: 1795651566629
+11-25 19:06:09.795  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-25 19:06:09.898  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-25 19:06:09.900  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-25 19:06:09.900  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-25 19:06:10.933  1056 29218 D AudioFlinger: onStateChanged: pid:17562  uid:10500  state:unfrozen - no freeze activity
+11-25 19:06:10.934  1054  1054 I WifiHAL : Creating message to get link statistics; iface = 47
+11-25 19:06:10.942  1701  1800 D ActivityManager: sync unfroze 17562 com.discord for 3
+11-25 19:06:10.962 17562 17562 I TTIFactory: Receiver: com.google.firebase.iid.FirebaseInstanceIdReceiver, intent=Intent { act=com.google.android.c2dm.intent.RECEIVE flg=0x11000010 xflg=0x4 pkg=com.discord cmp=com.discord/com.google.firebase.iid.FirebaseInstanceIdReceiver (has extras) }
+11-25 19:06:10.969 17562  1498 I SentryBreadcrumb: Kotlin NotificationClient received Notification.
+11-25 19:06:10.983 17562  1498 E AudioAttributes: Invalid stream type -1 for AudioAttributes
+11-25 19:06:11.009  1701  3062 W Utils   : The vibration Uri is null.
+11-25 19:06:11.019  2199  2239 D PeopleSpaceWidgetMgr: No app widget ids returned
+11-25 19:06:11.021 31621 31661 I AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-25 19:06:11.104  1701  1756 I system_server: NativeAlloc young concurrent mark compact GC freed 11MB AllocSpace bytes, 2(40KB) LOS objects, 84% free, 81MB/512MB, paused 232us,10.485ms total 93.805ms
+11-25 19:06:11.781  9828  9828 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-25 19:06:11.919  9828  9828 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+11-25 19:06:12.625 21783 21808 I earchbox:search: Explicit concurrent mark compact GC freed 6244KB AllocSpace bytes, 36(1328KB) LOS objects, 95% free, 23MB/512MB, paused 148us,6.896ms total 290.563ms
+11-25 19:06:12.635 21783 22924 V ClearcutMetricXmitter: Transmission is done.
+11-25 19:06:12.710  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''

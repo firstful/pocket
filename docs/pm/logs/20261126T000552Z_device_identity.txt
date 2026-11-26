@@ -1,0 +1,6 @@
+TS=20261126T000552Z
+ro.product.model=Pixel 6a
+ro.serialno=27271JEGR25574
+dumpsys package com.sutliff.pocket:
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd

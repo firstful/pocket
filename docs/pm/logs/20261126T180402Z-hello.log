@@ -1,0 +1,8 @@
+=== TS: 20261126T180402Z ===
+=== hello send; logcat grep streamChat|[DONE] ===
+11-26 13:04:56.588  6146  6163 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-26 13:04:58.594  6146  6163 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-26 13:04:58.594  6146  6163 D PocketNet: streamChat: first data (181 bytes): {"id":"5e5454d8-f1b4-4dc3-a170-de48fb3a96f1","object":"chat.completion.chunk","created":1795716296,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-26 13:04:58.643  6146  6163 D PocketNet: streamChat: [DONE] after 23 lines (11 data)
+11-26 13:04:58.643  6146  6163 D PocketNet: streamChat: loop done, lines=23 data=11
+=== END ===

@@ -1,0 +1,5 @@
+TS=20261126T000552Z
+Patterns: FATAL EXCEPTION|has crashed|ANR
+Scope: /root/pocket/docs/pm/logs/20261126T000552Z_launch_logcat.txt
+Matches: 0
+Result: PASS (0 matches)

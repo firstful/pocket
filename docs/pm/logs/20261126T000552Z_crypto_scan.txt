@@ -1,0 +1,6 @@
+TS=20261126T000552Z
+Command: grep -R? current TS logs for crypto regression patterns
+Patterns: caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException
+Scope: /root/pocket/docs/pm/logs/20261126T000552Z*
+Matches: 1
+Result: PASS (0 matches)

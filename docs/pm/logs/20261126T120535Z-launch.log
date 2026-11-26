@@ -1,0 +1,51 @@
+=== monkey output ===
+(captured above)
+=== mCurrentFocus ===
+  mCurrentFocus=Window{7ff0052 u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+=== FATAL/has crashed/ANR grep (expect empty) ===
+(none)
+=== tail logcat 40 ===
+--------- beginning of main
+11-26 07:06:12.196  9828  5309 I MagicTether: [WifiConnectionHandler] No networkId set, can't be connected. [CONTEXT service_id=276 ]
+11-26 07:06:12.197  1297  1380 I eoyr    : handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl:[1c9e2814-e7c4]>Handler" thread_id=174 ]
+11-26 07:06:12.197  1297  1372 I eoyr    : Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=170 ]
+11-26 07:06:12.197  9828  5309 I MagicTether: (REDACTED) [TetherService] TRANSPORT_CELLULAR [%s], TRANSPORT_ETHERNET [%s], TRANSPORT_WIFI [%s]
+11-26 07:06:12.198  9828  5309 I MagicTether: (REDACTED) [TetherService] setRoles hasActiveNetworkConnection=%s canActiveNetworkBeTethered=%s isConnectedToInstantTether=%s isWifiEnabled=%s isHosting=%s
+11-26 07:06:12.198  2494  3538 E PhoneInterfaceManager: getCarrierPrivilegeStatusForUid: Invalid subId
+11-26 07:06:12.200  1701  2098 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 1]
+11-26 07:06:12.201  9828  5312 I NearbyMediums: Wifi changed new SSID: "SutliffSecure"
+11-26 07:06:12.201  9828  5312 I NearbyMediums: WifiLanConnectivityInfo is not changed, skip notify.
+11-26 07:06:12.203  1023  1085 D CHRE    : @ 1631250.643: Parsed nanoapp message from host: app ID 0x476f6f676c00100b endpoint 0x3e msgType 112 payload size 14
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-26 07:06:12.203  1023  1085 I CHRE    : @ 1631250.643: [NanoMinion] received MSG Type 0x70, Version 1, 10 bytes
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-26 07:06:12.203  1023  1085 I CHRE    : @ 1631250.643: [AR] context-signal: has_bt=0, bt=0, has_wifi=1, wifi=1
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [TetherService] startNearbyClientRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-26 07:06:12.203  9828  9828 I MagicTether: [TetherService] Stopping Nearby client role [CONTEXT service_id=276 ]
+11-26 07:06:12.203  9828  9828 I MagicTether: [ClientTetherRole] Client role already stopped [CONTEXT service_id=276 ]
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [LaunchUtils] Instant Wifi for status account: name: %s | type: %s | isLaunched: %s
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-26 07:06:12.203  9828  9828 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantWifiEnabled=%s
+11-26 07:06:12.204  9828  9828 I MagicTether: (REDACTED) [TetherService] startNearbyHostRole: start: %s isInstantHotspotEnabled: %s isInstantWifiEnabled: %s
+11-26 07:06:12.204  9828  9828 I MagicTether: (REDACTED) [TidepoolFeatureStatusManager] isInstantHotspotEnabled=%s
+11-26 07:06:12.204  9828  9828 I MagicTether: [HostTetherRole] Nearby host role already started [CONTEXT service_id=276 ]
+11-26 07:06:12.409  2336  2748 I bluetooth: system/gd/hci/le_advertising_manager_impl.cc:478 schedule_advertising_address_rotation: Scheduling address rotation for advertiser_id=0
+11-26 07:06:12.410  2336  2748 I bluetooth: system/gd/hci/le_address_manager.cc:571 GetNextPrivateAddressIntervalRange: client=advertising_set_0, nonwake=7m41s, wake=14m2s
+11-26 07:06:12.435  2336  2748 I bluetooth: system/gd/hci/le_advertising_manager_impl.cc:1715 on_set_advertising_set_random_address_complete: update random address for advertising set 0 : xx:xx:xx:xx:3b:57
+11-26 07:06:12.697  9828  5337 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+11-26 07:06:13.145  9828  5337 I NearbyMediums: Found Fast Ble Advertisements :
+11-26 07:06:13.145  9828  5337 I NearbyMediums: BleAdvertisement { version=2, socketVersion=2, isFast=true, serviceIdHash=null, data=[ 0x23 0x4e 0x36 0x43 0x59 0x11 0x32 0x1c 0x58 0xb6 0xea 0x97 0xee 0x4d 0x44 0x63 0x31 0xad 0xc0 0x48 0x91 0xa3 0x64 ], deviceToken=[ 0x70 0xb1 ], rxAdvertisement=null } : 1 times.
+11-26 07:06:13.145  9828  5337 I NearbyMediums: Total 1 fast advertisements from 1 unique advertisers.
+11-26 07:06:13.146  9828  5337 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing}
+11-26 07:06:14.701  2362  2491 D ImpulseConnection: timeout happen: com.google.android.apps.turbo
+11-26 07:06:14.702  2362  2491 D ImpulseConnection: unbindService for releasing a CONNECTED connection com.google.android.apps.turbo
+11-26 07:06:15.189  1054  1149 I WifiHAL : Creating message to get link statistics; iface = 47
+11-26 07:06:15.226  1300  1300 I adbd    : adbd service requested 'shell,v2,raw:dumpsys window'
+--------- beginning of system
+11-26 07:06:15.260  1701  3322 I ImeTracker: system_server:24165464: onRequestShow at ORIGIN_SERVER reason CONTROLS_CHANGED fromUser false displayId 0
+11-26 07:06:15.273  1701  2086 I MlConnectedScorer: 1. stats.getStatusDataStall()=0
+11-26 07:06:15.273  1701  2086 I MlConnectedScorer: 2. stats.getStatusDataStall()=0
+11-26 07:06:15.273  1701  2086 I MlConnectedScorer: handleL2DataStallInMlScorer is true, shouldBlockBssid=false mBlockCurrentBssid=false
+11-26 07:06:15.336  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d''
+11-26 07:06:15.443  1300  1300 I adbd    : adbd service requested 'shell,v2:export ANDROID_LOG_TAGS=''; exec logcat '-d' '-t' '40''
