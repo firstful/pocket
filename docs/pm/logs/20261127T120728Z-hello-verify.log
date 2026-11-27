@@ -1,0 +1,6 @@
+UI: user=hello reply="Hello! How can I help you today?"
+11-27 07:06:32.875 14342 14357 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:06:36.052 14342 14357 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:06:36.053 14342 14357 D PocketNet: streamChat: first data (181 bytes): {"id":"452142a1-6a48-47df-b518-f4018199cfa7","object":"chat.completion.chunk","created":1795781193,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:06:36.073 14342 14357 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-27 07:06:36.073 14342 14357 D PocketNet: streamChat: loop done, lines=21 data=10

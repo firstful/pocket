@@ -1,0 +1,25 @@
+11-27 07:06:18.158 14521 14521 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-27 07:06:18.163 14521 14521 I AndroidRuntime: Using default boot image
+11-27 07:06:18.163 14521 14521 I AndroidRuntime: Leaving lock profiling enabled
+11-27 07:06:18.237 14521 14521 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-27 07:06:19.368 14521 14521 D AndroidRuntime: Shutting down VM
+11-27 07:06:22.977 14564 14564 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-27 07:06:22.981 14564 14564 I AndroidRuntime: Using default boot image
+11-27 07:06:22.981 14564 14564 I AndroidRuntime: Leaving lock profiling enabled
+11-27 07:06:23.056 14564 14564 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-27 07:06:24.142 14564 14564 D AndroidRuntime: Shutting down VM
+11-27 07:06:30.470 14583 14583 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-27 07:06:30.474 14583 14583 I AndroidRuntime: Using default boot image
+11-27 07:06:30.474 14583 14583 I AndroidRuntime: Leaving lock profiling enabled
+11-27 07:06:30.547 14583 14583 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-27 07:06:31.652 14583 14583 D AndroidRuntime: Shutting down VM
+11-27 07:06:32.875 14342 14357 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:06:36.052 14342 14357 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:06:36.053 14342 14357 D PocketNet: streamChat: first data (181 bytes): {"id":"452142a1-6a48-47df-b518-f4018199cfa7","object":"chat.completion.chunk","created":1795781193,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:06:36.073 14342 14357 D PocketNet: streamChat: [DONE] after 21 lines (10 data)
+11-27 07:06:36.073 14342 14357 D PocketNet: streamChat: loop done, lines=21 data=10
+11-27 07:06:40.992 14616 14616 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+11-27 07:06:40.996 14616 14616 I AndroidRuntime: Using default boot image
+11-27 07:06:40.996 14616 14616 I AndroidRuntime: Leaving lock profiling enabled
+11-27 07:06:41.071 14616 14616 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+11-27 07:06:42.180 14616 14616 D AndroidRuntime: Shutting down VM

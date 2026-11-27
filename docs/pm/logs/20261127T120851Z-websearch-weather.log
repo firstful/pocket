@@ -1,0 +1,30 @@
+11-27 07:08:06.005 14342 14614 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:08:08.832 14342 14614 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:08:08.832 14342 14614 D PocketNet: streamChat: first data (181 bytes): {"id":"5953e6e7-a545-4ede-952d-0d63d41be347","object":"chat.completion.chunk","created":1795781286,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:08:09.552 14342 14614 D PocketNet: streamChat: [DONE] after 77 lines (38 data)
+11-27 07:08:09.552 14342 14614 D PocketNet: streamChat: loop done, lines=77 data=38
+11-27 07:08:09.553 14342 14614 D WebSearchTool: start query_len=22 max_results=8
+11-27 07:08:10.578 14342 14614 D WebSearchTool: response code=200 html_len=29639 duration_ms=1024
+11-27 07:08:10.584 14342 14614 D WebSearchTool: parsed titles=10 snippets=10
+11-27 07:08:10.589 14342 14614 D WebSearchTool: done result_count=8 duration_ms=1024
+11-27 07:08:10.604 14342 14614 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:08:12.928 14342 14614 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:08:12.929 14342 14614 D PocketNet: streamChat: first data (181 bytes): {"id":"7117987a-c812-49b8-a8ce-5769d3cde616","object":"chat.completion.chunk","created":1795781291,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:08:14.175 14342 14614 D PocketNet: streamChat: [DONE] after 83 lines (41 data)
+11-27 07:08:14.175 14342 14614 D PocketNet: streamChat: loop done, lines=83 data=41
+11-27 07:08:14.177 14342 14614 D WebFetchTool: start url=https://weather.com/weather/today/l/ab81c5619a853bc79cc62bc2c2e04afbad312949e097b8c3dece94a41e3b1475 max_chars=2500
+11-27 07:08:14.789 14342 14614 D WebFetchTool: response code=200 html_len=342023 duration_ms=573
+11-27 07:08:14.846 14342 14614 D WebFetchTool: done cleaned_len=1535 duration_ms=573
+11-27 07:08:14.860 14342 14614 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:08:17.331 14342 14614 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:08:17.332 14342 14614 D PocketNet: streamChat: first data (181 bytes): {"id":"aad795fc-70c8-41b0-b766-c0fd8b7d1e2e","object":"chat.completion.chunk","created":1795781295,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:08:17.847 14342 14614 D PocketNet: streamChat: [DONE] after 65 lines (32 data)
+11-27 07:08:17.847 14342 14614 D PocketNet: streamChat: loop done, lines=65 data=32
+11-27 07:08:17.848 14342 14614 D WebRenderTool: start url=https://forecast.weather.gov/zipcity.php?inputstring=Canal_Winchester mode=full max_chars=3500 timeout_ms=12000
+11-27 07:08:22.439 14342 14614 D WebRenderTool: rendered len=3022 (webview=true)
+11-27 07:08:22.439 14342 14614 D WebRenderTool: done mode=full result_len=3022
+11-27 07:08:22.452 14342 14614 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 07:08:25.420 14342 14614 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 07:08:25.420 14342 14614 D PocketNet: streamChat: first data (181 bytes): {"id":"2afacee7-4d7e-4611-ad2b-786ea1ea3857","object":"chat.completion.chunk","created":1795781303,"model":"ocg:hy4-flash-free","choices":[{"index":0,"delta":{"role":"assistant"}}]}
+11-27 07:08:27.346 14342 14614 D PocketNet: streamChat: [DONE] after 201 lines (100 data)
+11-27 07:08:27.346 14342 14614 D PocketNet: streamChat: loop done, lines=201 data=100

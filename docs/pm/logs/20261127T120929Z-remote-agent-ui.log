@@ -1,0 +1,13 @@
+Focus: com.sutliff.sessiondrop/.MainActivity (remote-agent UI reached from Pocket)
+UI fields: Sid, URL (https://...), buttons: OPEN, DEPOSIT SESSION
+Permission dialogs observed: NONE
+11-27 07:07:35.410 14709 14709 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:07:40.283 14746 14746 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:07:52.322 14932 14932 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:07:56.557 14967 14967 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:08:03.617 14985 14985 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:08:33.411 15196 15196 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:08:42.542 15219 15219 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:08:58.152 15248 15248 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:09:08.082 15330 15330 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission
+11-27 07:09:13.771 15355 15355 I AconfigPackage: com.android.permissioncontroller.flags is mapped to com.android.permission

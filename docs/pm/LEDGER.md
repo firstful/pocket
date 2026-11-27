@@ -1063,3 +1063,35 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - Carried ideas: SMS opt-in gating refinement; web_render on JS/SPA; debug-only adb broadcast test hook.
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Scheduler pre-run script's "device unreachable" status unreliable — PM's live mDNS rediscovery + `adb connect` is ground truth.
+
+## Run 2026-11-27T12:02Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — QA PASS on-device; CLUSTER NETWORK OUTAGE blocks store/telemetry delivery
+
+### Infra / state
+- CI: HEAD `4b0618f` (docs-only); code HEAD `72e33fdc`, latest code run 1717 completed/success. `git status` clean at start. Store origin catalog (read in-pod via python3, since edge path down) Pocket row = `1.0.117-72e33fd` vc117 sha `1d9900e146…e358` size 13,521,036 B == device vc117. No Pocket code drift.
+- Device: live via freshly-discovered mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / serial 27271JEGR25574, vc117). Pre-run script again falsely reported "device unreachable" — PM live `adb devices -l` found it. Ground truth = live rediscovery.
+
+### CLUSTER NETWORK OUTAGE (core infra, NOT a Pocket regression — not fixed in this unattended run)
+- Symptom: external `https://apps.ffilt.us/apps.json` connects (TCP 4ms) + TLSv1.3 OK, GET sent, then 0 bytes / timeout (3x 12s + 1x 20s + final 15s, code 000). `telemetry.ffilt.us` similarly code 000. Pre-run script flagged `store_fetch_failed` — confirmed real and ongoing, not transient.
+- Scope = cross-node pod network: Traefik access logs show apps store (10.42.2.22:8080), telemetry (10.42.2.129:8080), Jellyfin (10.42.1.119:8096), embeddings/Longhorn webhook (10.42.x:9502) ALL timing out (DownstreamStatus 499/503/504). The one local-host-backed service (`llm` → 192.168.1.2:8088) returns 200 — so Traefik itself is fine.
+- Root cause: `flannel.1` VXLAN iface is UP but `UNKNOWN` state, and control-plane route table has ONLY `10.42.0.0/24 dev cni0` — no routes to peer pod CIDRs 10.42.1.0/24 (reed-a320ms2h) / 10.42.2.0/24 (wyse5070). Cross-node pod traffic blackholed. CoreDNS (on reed) resolving OK via its own node, but control-plane→worker pod IPs unreachable.
+- Node status: `hub` NotReady (longstanding OCI node); sutliffserver / reed-a320ms2h / wyse5070 all Ready; workers ping 0% loss. Longhorn webhook + CSI attach/detach failing cluster-wide (context deadline exceeded) as a consequence.
+- NOT fixed here: restarting k3s/flannel / rewriting routes is a core-infra change with pod-restart + volume-attach blast radius; deliberately deferred from an unattended PM cron run. Needs an operator decision. Do NOT confuse with last night's (00:08Z) byte-level store PASS — network broke since.
+
+### QA Outcomes (delegated subagent, ts 20261127T1205–1209Z; evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117, versionName `1.0.117-72e33fd`. Launch/no-crash PASS: `com.sutliff.pocket/.MainActivity` resumed, no FATAL/ANR. Evidence: `docs/pm/logs/20261127T120544Z-launch.log` (12,219 B), `docs/pm/screenshots/20261127T120544Z-launch.png` (valid PNG 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, model `ocg:hy4-flash-free`, `[DONE] after 21 lines (10 data)`, `loop done, lines=21 data=10`. Evidence: `docs/pm/logs/20261127T120659Z-hello-stream.log`, `docs/pm/logs/20261127T120728Z-hello-verify.log`, `docs/pm/screenshots/20261127T120659Z-hello-stream.png`, `...120728Z-hello-reply-visible.png` (all valid PNG).
+- Web search PASS (fresh): `WebSearchTool: start query_len=22 max_results=8 … response code=200 html_len=29639 duration_ms=1024 … parsed titles=10 snippets=10 … done result_count=8`; follow-up `WebFetchTool` 200 (weather.com html_len=342023) + `WebRenderTool start`. Real titled/URL results, no timeout/No-results. Evidence: `docs/pm/logs/20261127T120851Z-websearch-weather.log`, `docs/pm/screenshots/20261127T120851Z-websearch-weather.png` (valid PNG).
+- Remote-agent UI reachable PASS: SessionDrop `com.sutliff.sessiondrop/.MainActivity` opened from Pocket; fields Sid/URL, buttons OPEN/DEPOSIT SESSION; no permission dialogs. Evidence: `docs/pm/logs/20261127T120929Z-remote-agent-ui.log`, `docs/pm/screenshots/20261127T120929Z-remote-agent-ui.png` (valid PNG 113,388 B).
+- Crypto regression watch PASS: 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|SecretWrapException`; permission dialogs 0 matches (`EnhancedConfirmationDialog|GrantPermissionsActivity`) across 3.88 MB qa-full log. Evidence: `docs/pm/logs/20261127T120544Z-qa-full.log`.
+- All five 20261127T120* screenshots verified valid PNG via `file` (1080x2400 RGBA).
+
+### Shipped
+- No Pocket code changes this run. App itself clean and proven at vc117/72e33fd (all on-device flows PASS). Store/telemetry delivery outage is infra, not app.
+
+### Open / Next
+- **PRIORITY — cluster cross-node pod network down** (flannel.1 no peer CIDR routes): needs operator to restore (inspect/restart flannel on control-plane, verify 10.42.1.0/24 + 10.42.2.0/24 routes return). Until fixed, store catalog fetch / APK download via apps.ffilt.us and telemetry ingest are broken for all clients; in-pod origin itself is healthy.
+- Config-import END-TO-END still unexercised (needs real 6-word passphrase — credential, not done autonomously).
+- OTEL E2E readback blocked (ingest-only distroless service); prior 2026-11-16 proof stands — currently unreachable anyway due to outage.
+- web_render on a true JS/SPA page still visually untested. Debug-only adb broadcast QA hook still an idea.
+- Carried ideas: SMS opt-in gating refinement; web_render JS/SPA; debug-only adb broadcast test hook.
+- Scheduler pre-run script "device unreachable" remains unreliable — live mDNS rediscovery is ground truth.
