@@ -1,0 +1,5 @@
+Settings/remote-agent UI reachability check
+Remote-agent UI (com.sutliff.sessiondrop/.MainActivity) reached from Pocket toolbar; fields Sid / URL / OPEN / DEPOSIT SESSION observed.
+No NEW system permission dialogs (SMS/notifications/location) appeared; no dialog tapped through.
+Pocket toolbar Settings icon present in UI dump (content-desc=Settings); collapsed offscreen after chat scroll.
+--- crash scan ---
