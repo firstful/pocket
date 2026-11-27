@@ -1095,3 +1095,37 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - web_render on a true JS/SPA page still visually untested. Debug-only adb broadcast QA hook still an idea.
 - Carried ideas: SMS opt-in gating refinement; web_render JS/SPA; debug-only adb broadcast test hook.
 - Scheduler pre-run script "device unreachable" remains unreliable — live mDNS rediscovery is ground truth.
+
+## Run 2026-11-27T18:11Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — QA PASS on-device; cross-node flannel outage persists (6h+, core infra, deferred)
+Timestamp: 20261127T181137Z
+
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); job 2166 (label android) success. repo_head=origin_main=b91fac9 (docs-only ahead of built SHA 72e33fdc); drift=no. Store origin catalog read IN-POD (edge path down): Pocket row `1.0.117-72e33fd` vc117 sha `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` size 13,521,036 B == device vc117. No Pocket code drift.
+- Device: live at freshly-discovered mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117). Pre-run script again reported store_fetch_failed + unreliable device status; PM live rediscovery is ground truth.
+
+### CLUSTER NETWORK OUTAGE — root cause pinned down this run (core infra, NOT fixed in unattended cron)
+- Symptom: `https://apps.ffilt.us/apps.json` TCP connect + TLSv1.3 OK, GET sent, then 0 bytes/timeout (code 000). In-pod origin healthy (catalog read via `kubectl exec` localhost:8080). Store/telemetry/MCP HTTP path all down; local-host llm service still 200 (Traefik fine).
+- Root cause: control-plane flannel route-controller stall. sutliffserver route table has ONLY `10.42.0.0/24 dev cni0` — no peer CIDR routes (10.42.1.0/24 reed, 10.42.2.0/24 wyse, 10.42.5.0/24 hub). `flannel.1` is UP/UNKNOWN with correct VTEP FDB entries (ca:9f:64:41:23:e8→192.168.1.150; 12:6b:df:40:90:78→192.168.1.50; 26:c8:41:36:e6:58→10.99.0.1) but EMPTY neigh table + 37,591 TX drops. No VXLAN conntrack entries. nftables NOT installed (documented nft-drop playbook does not apply). Underlay LAN pings to .50/.150 = 0 loss; 10.99.0.1 (hub WireGuard) unreachable, hub NotReady. k3s up since Nov22, NRestarts=0 (no flannel restart to explain the flush). No separate flannel process (embedded in k3s). Docs subagent: no doc authorizes manual route/FDB surgery; restore via operator decision.
+- NOT fixed here: restarting k3s / rewriting routes has pod-restart + 17 running Longhorn engine volume-attach blast radius; deliberately deferred from unattended PM cron (same call as 12:02Z run, 6h ago). Needs Reed operator action.
+- Recommended operator remediation (NOT applied): inspect/restart flannel on control plane (bounce k3s during a maintenance window), verify `ip route` peer CIDRs via flannel.1 return; alternatively force a flannel watch reconcile by touching a node subnet annotation. Confirm apps.ffilt.us + telemetry.ffilt.us return HTTP 200 after.
+
+### Todo board
+- Homelab MCP todo board (via `kubectl port-forward -n mcp svc/mcp 18650:8650` fallback; direct mcp.ffilt.us down): 180 open, 0 claimed, 1060 completed. Keyword scan pocket/web_search/sms/otel/android/store → 0 open Pocket-actionable todos. Pocket-adjacent open/unassigned: #39 apps.ffilt.us web frontend, #54 Jellyfin APK, #264 HA companion fork, #1223 CI→store→ADB E2E verify.
+
+### QA Outcomes (delegated subagent; evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117 minSdk=26 targetSdk=34, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261127T180900Z-identity-version.log`.
+- Launch/no-crash PASS: monkey launch VM exit 0; no FATAL EXCEPTION / ANR / `has crashed` for com.sutliff.pocket. Evidence: `docs/pm/logs/20261127T180447Z-launch-crash.log`, `docs/pm/screenshots/20261127T180447Z-launch.png`.
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, model `ocg:hy4-flash-free`, `[DONE] after 23 lines (11 data)`, `loop done, lines=23 data=11`, no gateway error. Evidence: `docs/pm/logs/20261127T180617Z-hello-stream-full.log`, `docs/pm/screenshots/20261127T180617Z-hello-stream.png`.
+- Web search PASS: `WebSearchTool: start query_len=28 max_results=8 … response code=200 html_len=27446 duration_ms=1222 … parsed titles=10 snippets=10 … done result_count=8`; follow-up `WebFetchTool: response code=200 html_len=158262` + `WebRenderTool start url=https://www.cnn.com/markets/stocks/TSLA mode=find`. Real titled/URL results, no timeout/No-results. Evidence: `docs/pm/logs/20261127T180709Z-web-search-evidence.log`, `docs/pm/screenshots/20261127T180709Z-web-search.png`.
+- Settings/remote-agent UI reachable PASS: settings + remote-agents screens captured. Evidence: `docs/pm/screenshots/20261127T180807Z-settings.png`, `...180837Z-settings-scrolled.png`, `...180852Z-remote-agents.png`.
+- Permission/dialogs PASS: `mCurrentFocus=com.sutliff.pocket/.MainActivity`, permission-related windows = none. Evidence: `docs/pm/logs/20261127T180837Z-permission-focus.log`.
+- All 6 screenshots verified valid PNG (2400x1080 RGBA). Crypto regression watch: no KeyStore IV/AEAD/SecretWrap errors in captured logs.
+
+### Shipped
+- No Pocket code changes this run. App clean and proven at vc117/72e33fd (all on-device flows PASS). Store/telemetry delivery outage is infra, not app.
+
+### Open / Next
+- **PRIORITY — cluster cross-node pod network down (flannel route-controller stall on control plane)**: operator remediation needed; blocks store catalog/APK delivery + telemetry ingest for all clients. Origin pods healthy.
+- Config-import E2E unexercised (needs real 6-word passphrase — credential, not done autonomously); OTEL E2E readback blocked (ingest-only distroless).
+- web_render on a true JS/SPA page still visually untested (static proven); debug-only adb broadcast QA hook still an idea.
+- Scheduler pre-run script "store_fetch_failed"/device status unreliable — live rediscovery + in-pod origin is ground truth.

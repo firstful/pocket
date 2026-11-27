@@ -1,0 +1,5 @@
+=== mCurrentFocus / mFocusedApp (final) ===
+  mCurrentFocus=Window{dae4a5d u0 com.sutliff.pocket/com.sutliff.pocket.MainActivity}
+  mFocusedApp=ActivityRecord{70982516 u0 com.sutliff.pocket/.MainActivity t29304}
+=== permission-related windows ===
+(none)

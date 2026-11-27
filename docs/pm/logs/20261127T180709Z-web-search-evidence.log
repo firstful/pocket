@@ -1,0 +1,18 @@
+11-27 13:07:00.290  3104  3128 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 13:07:04.035  3104  3128 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 13:07:04.357  3104  3128 D PocketNet: streamChat: [DONE] after 39 lines (19 data)
+11-27 13:07:04.357  3104  3128 D PocketNet: streamChat: loop done, lines=39 data=19
+11-27 13:07:04.358  3104  3128 D WebSearchTool: start query_len=28 max_results=8
+11-27 13:07:05.581  3104  3128 D WebSearchTool: response code=200 html_len=27446 duration_ms=1222
+11-27 13:07:05.585  3104  3128 D WebSearchTool: parsed titles=10 snippets=10
+11-27 13:07:05.588  3104  3128 D WebSearchTool: done result_count=8 duration_ms=1222
+11-27 13:07:05.611  3104  3128 D PocketNet: streamChat: executing request url=http://llm.homelab.internal/v1/chat/completions
+11-27 13:07:09.264  3104  3128 D PocketNet: streamChat: response code=200 content-type=text/event-stream
+11-27 13:07:09.449  3104  3128 D PocketNet: streamChat: [DONE] after 35 lines (17 data)
+11-27 13:07:09.449  3104  3128 D PocketNet: streamChat: loop done, lines=35 data=17
+11-27 13:07:09.451  3104  3128 D WebFetchTool: start url=https://stockanalysis.com/stocks/tsla/ max_chars=3000
+11-27 13:07:10.127  3104  3128 D WebFetchTool: response code=200 html_len=158262 duration_ms=670
+11-27 13:07:10.229  3104  3128 D WebFetchTool: done cleaned_len=10383 duration_ms=670
+11-27 13:07:10.231  3104  3128 D WebRenderTool: start url=https://www.cnn.com/markets/stocks/TSLA mode=find max_chars=2000 timeout_ms=12000
+11-27 13:07:10.231  3104  3128 D WebRenderManager: start url=https://www.cnn.com/markets/stocks/TSLA timeoutMs=12000
+11-27 13:07:10.354  3104  3104 D WebRenderManager: pip_added rounded=true zoom=80
