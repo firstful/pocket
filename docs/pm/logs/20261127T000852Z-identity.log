@@ -1,0 +1,8 @@
+TS=20261127T000852Z
+DEVICE=adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+=== getprop model/serial ===
+Pixel 6a
+27271JEGR25574
+=== dumpsys package versionCode/versionName ===
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd

@@ -1032,3 +1032,34 @@ Append-only log of ideas, bugs, QA runs, and shipped changes. Newest at top with
 - `web_fetch` 403 from some sites is site-side (not a bug).
 - Scheduler pre-run script's "device unreachable" status unreliable — PM's live mDNS rediscovery + `adb connect` is ground truth (re-discover every run).
 - Store APK path is CASE-SENSITIVE: use catalog-provided `apk/Pocket/app-release.apk` (lowercase `apk/pocket/...` returns a 22-byte stub).
+
+## Run 2026-11-27T00:08Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — clean, fresh QA (identity/launch/hello/web_search/settings captured)
+
+### Infra / state
+- CI: latest code run 1717 `72e33fdc22595040598268e08d7760a07efad888` completed/success (push); single `build` job id 2166 (label android) also success. HEAD `c446814` docs-only ahead of built SHA `72e33fdc` (`git diff --name-only 72e33fdc..HEAD` = only `docs/pm/**`). drift=no. Store tip `1.0.117-72e33fd` vc117 sha `1d9900e14631…e358` == built code SHA. Device vc117 matches.
+- Store health verified BYTE-LEVEL this run: fresh APK download from catalog path `apk/Pocket/app-release.apk` = 13,521,036 B, sha256 `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` == catalog (APK_VERIFY=PASS). `/apps.json` + `/version/com.sutliff.pocket.json` HTTP/2 200 with correct no-cache headers (`cache-control: no-store, no-cache, must-revalidate` / `expires: 0` / `pragma: no-cache`). `telemetry.ffilt.us` 405 (up). Pods 1/1 Running (0 restarts): appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-58664b7775-7p7k7`, telemetry `telemetry-658bd46fbd-mrrc2`.
+- Device: live at freshly-discovered mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117). Scheduler pre-run script reported "device unreachable" but live `adb devices -l` found the transport — script status unreliable; PM re-discovers independently.
+
+### Todo board
+- Homelab MCP todo board: 177 open at run start; 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #311 profile reorg, #355 os-keystore, #380 lifecycle tags). Created + claimed + completed tracking todo #1224 (gitea issue 1445).
+
+### QA Outcomes (delegated subagent `deleg_5f764c46`, ts 20261127T000852Z; evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117 minSdk=26 targetSdk=34, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261127T000852Z-identity.log` (251 B).
+- Launch/no-crash PASS: monkey launch exit 0; `topResumedActivity` + `mCurrentFocus` = `com.sutliff.pocket/.MainActivity`; crash scan `FATAL EXCEPTION|has crashed|ANR in com.sutliff.pocket` = 0 matches across 94,349 B launch log. Evidence: `docs/pm/logs/20261127T000852Z-launch.log`, `docs/pm/screenshots/20261127T000852Z-launch.png` (valid PNG, 2400x1080).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first model `ocg:beam-free`, `[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`, no gateway error. Evidence: `docs/pm/logs/20261127T000852Z-hello.log` (701 B), `docs/pm/screenshots/20261127T000852Z-hello.png` (valid PNG, 2400x1080).
+- Web search PASS (freshly captured): `WebSearchTool: start query_len=16 max_results=8 … response code=200 html_len=29906 duration_ms=1060 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1060`. Real titled/URL results, no timeout/NetworkOnMainThread. Evidence: `docs/pm/logs/20261127T000852Z-websearch.log` (703 B), `docs/pm/screenshots/20261127T000852Z-websearch.png` (valid PNG, 2400x1080).
+- Settings/UI reachable PASS: settings screen rendered (Inference Server, Base URL, API Key, Model, Temperature, Max Tokens, System Prompt, Stream responses, Appearance). Evidence: `docs/pm/logs/20261127T000852Z-settings.xml` (9,398 B), `docs/pm/screenshots/20261127T000852Z-settings.png` (valid PNG, 2400x1080).
+- Crypto regression watch PASS (vc117 key): CRYPTO_MATCH_COUNT=0 across all this-run logs (`caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException`). Evidence: `docs/pm/logs/20261127T000852Z-crypto.log`.
+- Permission/dialogs PASS: PERMISSION_MATCH_COUNT=0 (`EnhancedConfirmationDialog|GrantPermissionsActivity`); no new system dialog tapped past. Evidence: `docs/pm/logs/20261127T000852Z-permission.log`.
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run committed with this update.
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (pocket-cfg pod 1/1 Up; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification blocked by ingest-only distroless service (no readback); prior 2026-11-16 proof stands. Service up (telemetry 405).
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- Debug-only adb broadcast QA hook (deterministic QA) — still an idea, not in source.
+- Carried ideas: SMS opt-in gating refinement; web_render on JS/SPA; debug-only adb broadcast test hook.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Scheduler pre-run script's "device unreachable" status unreliable — PM's live mDNS rediscovery + `adb connect` is ground truth.
