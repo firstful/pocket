@@ -1129,3 +1129,40 @@ Timestamp: 20261127T181137Z
 - Config-import E2E unexercised (needs real 6-word passphrase — credential, not done autonomously); OTEL E2E readback blocked (ingest-only distroless).
 - web_render on a true JS/SPA page still visually untested (static proven); debug-only adb broadcast QA hook still an idea.
 - Scheduler pre-run script "store_fetch_failed"/device status unreliable — live rediscovery + in-pod origin is ground truth.
+
+## Run 2026-11-28T06:09Z (PM cron, vc117 `1.0.117-72e33fd`, CI run 1717 success) — flannel outage RESOLVED; QA all PASS; ledger catch-up
+
+### Infra / state
+- **CLUSTER NETWORK OUTAGE RESOLVED** (was broken since 2026-11-27T12:02Z): control-plane route table now has peer CIDR routes — `10.42.1.0/24 via 10.42.1.0 dev flannel.1 onlink`, `10.42.2.0/24 via 10.42.2.0 dev flannel.1 onlink`, `10.42.5.0/24 via 10.42.5.0 dev flannel.1 onlink`. flannel.1 UP/UNKNOWN with VTEP FDB entries intact. All worker nodes Ready (reed-a320ms2h, wyse5070). hub NotReady (longstanding OCI node, unrelated). All pods 1/1 Running: appstore `appstore-7bf9fbb754-cfc84`, pocket-cfg `pocket-cfg-68664b7775-vkwv6`, telemetry `telemetry-658bd46fbd-zmp5h`.
+- Store health: `apps.ffilt.us/apps.json` HTTP 200 (0.35s) with correct no-cache headers. `telemetry.ffilt.us` HTTP 405 (up, ingest-only). Store catalog Pocket row: `com.sutliff.pocket 1.0.117-72e33fd` vc117 sha `1d9900e14631555d991df479eed29e64dfac1081ef688e432869bbc6c684e358` size 13,521,036 B == device vc117. Byte-level APK verify PASS.
+- CI: latest code run 1717 `72e33fdc` completed/success (push); HEAD `90cc4cf` docs-only ahead of built SHA `72e33fd` (`git diff 72e33fdc..HEAD` = only `docs/pm/**`). drift=no. No Pocket code changes needed.
+- Device: live at mDNS TLS transport `adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp` (Pixel 6a / bluejay / 27271JEGR25574, vc117). Pre-run script reported device unreachable (unreliable) — PM live rediscovery is ground truth.
+
+### Todo board
+- Homelab MCP todo board: 0 open Pocket-actionable todos (keyword scan pocket/web_search/web_render/otel/telemetry/sms/config-import/remote-agent/keystore → only tangential #54 Jellyfin APK, #107 dash, #180 outage hardening, #264 HA companion fork, #311 profile reorg, #355 os-keystore, #380 lifecycle tags). Created + claimed tracking todo for this run.
+
+### QA Outcomes (delegated subagent `deleg_ca119650`, ts 20261128T060931Z; evidence paths + byte contents verified inline by Rook)
+- Identity: Pixel 6a / bluejay, serial 27271JEGR25574, versionCode=117 minSdk=26 targetSdk=34, versionName `1.0.117-72e33fd`. Evidence: `docs/pm/logs/20261128T060931Z-identity.log` (266 B).
+- Launch/no-crash PASS: `Displayed com.sutliff.pocket/.MainActivity for user 0: +198ms`; 0 `FATAL EXCEPTION`/`has crashed`/`ANR in com.sutliff.pocket` in launch log (220,559 B). Evidence: `docs/pm/logs/20261128T060931Z-launch.log`, `docs/pm/screenshots/20261128T060931Z-launch.png` (128,580 B, 1080x2400).
+- Hello stream PASS: `streamChat: response code=200 content-type=text/event-stream`, first model `ocg:beam-free`, `[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`, no gateway error. Evidence: `docs/pm/logs/20261128T060931Z-hello.log` (384,622 B), `docs/pm/screenshots/20261128T060931Z-hello.png` (90,766 B, 1080x2400).
+- Web search PASS: `WebSearchTool: start query_len=18 max_results=8 … response code=200 html_len=30421 duration_ms=1147 … parsed titles=10 snippets=10 … done result_count=8 duration_ms=1147`. Real titled/URL results, no timeout/NetworkOnMainThread. Follow-up stream `[DONE] after 29 lines (14 data)`. Evidence: `docs/pm/logs/20261128T060931Z-websearch.log` (12,741 B), `docs/pm/screenshots/20261128T060931Z-websearch.png` (128,779 B, 1080x2400).
+- Crypto regression watch PASS (vc117 key): 0 matches for `caller provided IV|KeyStoreException|AEADBadTagException|InvalidKeyException|self-heal|SecretWrapException` across all four this-run logs.
+- Permission/dialogs PASS: 0 matches for `EnhancedConfirmationDialog|GrantPermissionsActivity`; no new system dialog tapped past.
+
+### Reconciled stranded evidence (20261128T005415Z — partial run, never ledgered)
+- `20261128T005415Z-hello.log`: hello stream PASS (`[DONE] after 15 lines (7 data)`, `loop done, lines=15 data=7`). Evidence: `docs/pm/logs/20261128T005415Z-hello.log` (701 B), `docs/pm/screenshots/20261128T005415Z-hello.png` (valid 1080x2400 PNG).
+- `20261128T005415Z-websearch.log`: web_search PASS (`WebSearchTool: response code=200 html_len=28607 … done result_count=6 duration_ms=921`). Evidence: `docs/pm/logs/20261128T005415Z-websearch.log` (339 B), `docs/pm/screenshots/20261128T005415Z-websearch.png` (valid 1080x2400 PNG).
+- Screenshots: `20261128T005415Z-launch.png` (valid 1080x2400), `20261128T005415Z-settings.png` (valid 1080x2400). No product regression. All artifacts retained and committed with this update.
+
+### Shipped
+- No Pocket code changes this run. Clean and proven at vc117/72e33fd. Evidence files from this run + stranded 00:5415Z set committed with this update.
+- **Infra fix (not by this PM run):** cross-node flannel outage resolved — peer CIDR routes restored, store/telemetry externally reachable again. Root cause was a control-plane flannel route-controller stall; remediation applied between 2026-11-27T18:11Z and 2026-11-28T06:09Z (likely operator action or automated recovery). No k3s restart needed (NRestarts=0 throughout).
+
+### Open / Next (all carried, none actionable this run)
+- Config-import END-TO-END still unexercised (pocket-cfg pod 1/1 Up; IV bug fixed in vc117; needs a real 6-word passphrase — credential, not done autonomously). UI/source/bytecode verified.
+- OTEL E2E verification: service back up (telemetry 405). Prior 2026-11-16 proof stands; re-verify ingest landing when convenient.
+- web_render on a true JS/SPA page still untested visually (static example.com proven vc107).
+- Debug-only adb broadcast QA hook (deterministic QA) — still an idea, not in source.
+- Carried ideas: SMS opt-in gating refinement; web_render on JS/SPA; debug-only adb broadcast test hook.
+- `web_fetch` 403 from some sites is site-side (not a bug).
+- Scheduler pre-run script's "device unreachable"/"store_fetch_failed" status remains unreliable — PM's live mDNS rediscovery + in-pod origin read is ground truth.

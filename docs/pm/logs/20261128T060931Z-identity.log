@@ -1,0 +1,8 @@
+=== Device Identity ===
+timestamp: 20261128T060931Z
+adb serial: adb-27271JEGR25574-WKjTlT._adb-tls-connect._tcp
+ro.product.model: Pixel 6a
+ro.serialno: 27271JEGR25574
+--- dumpsys package ---
+    versionCode=117 minSdk=26 targetSdk=34
+    versionName=1.0.117-72e33fd
